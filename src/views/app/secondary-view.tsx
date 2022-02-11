@@ -6,14 +6,28 @@
 
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container, Text } from '@zextras/carbonio-design-system';
+import { Container, Text, Button } from '@zextras/carbonio-design-system';
+import { pushHistory } from '@zextras/carbonio-shell-ui';
+import { MAIN_ROUTE } from '../../constants';
 
 const SecondaryAppView: FC = () => {
-	console.log('secondary app');
 	const [t] = useTranslation();
 	return (
-		<Container background="info">
+		<Container
+			width="fill"
+			height="fill"
+			padding={{ all: 'large' }}
+			orientation="vertical"
+			mainAlignment="flex-start"
+			crossAlignment="flex-start"
+		>
 			<Text>{t('label.view', 'This is a view')}</Text>
+			<Button
+				label="go to primary"
+				onClick={(): void => {
+					pushHistory({ route: MAIN_ROUTE, path: 'hello' });
+				}}
+			/>
 		</Container>
 	);
 };

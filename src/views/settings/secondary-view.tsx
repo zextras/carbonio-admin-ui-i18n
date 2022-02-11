@@ -9,10 +9,9 @@ import { useTranslation } from 'react-i18next';
 import { Container, Text } from '@zextras/carbonio-design-system';
 
 const SecondarySettingsView: FC = () => {
-	console.log('secondary settings');
 	const [t] = useTranslation();
 	return (
-		<Container background="info">
+		<Container >
 			<Text>{t('label.view', 'This is a view')}</Text>
 		</Container>
 	);

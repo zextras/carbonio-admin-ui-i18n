@@ -8,92 +8,145 @@ import React, { FC, useEffect } from 'react';
 import {
 	addRoute,
 	addSettingsView,
-	addSearchView,
 	addBoardView,
-	setAppContext
+	addUtilityView,
+	addSecondaryAccessoryView,
+	addPrimaryAccessoryView,
+	setAppContext,
+	registerActions,
+	ACTION_TYPES,
+	getBridgedFunctions
 } from '@zextras/carbonio-shell-ui';
+import { Container, Text } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
+import { map } from 'lodash';
 import { MAIN_ROUTE, SECONDARY_ROUTE } from './constants';
-import MainAppView from './views/app/main-view';
-import SecondaryAppView from './views/app/secondary-view';
-import MainSecondaryBarView from './views/secondary-bar/main-view';
-import SecondaryPrimaryView from './views/primary-bar/secondary-view';
-import SecondarySecondaryBarView from './views/secondary-bar/secondary-view';
-import MainSettingsView from './views/settings/main-view';
-import SecondarySettingsView from './views/settings/secondary-view';
-import MainSearchView from './views/search/main-view';
-import SecondarySearchView from './views/search/secondary-view';
-import MainBoardView from './views/board/main-view';
-import SecondaryBoardView from './views/board/secondary-view';
+import SecondaryRouteIconView from './views/primary-bar/secondary-route';
+
+const PlaceholderComponent: FC = (props) => (
+	<Container mainAlignment="flex-start" crossAlignment="flex-start" padding={{ all: 'medium' }}>
+		<Text>Placeholder Component</Text>
+		{map(props, (p, k) => (
+			<Text>{`${k}: ${p}`}</Text>
+		))}
+	</Container>
+);
 
 const App: FC = () => {
 	const [t] = useTranslation();
 	useEffect(() => {
 		const label1 = t('label.app_name', 'Example App');
-		const label2 = t('label.secondary_app', 'App Example');
+		const label2 = t('label.secondary_app', 'Example Secondary');
 		addRoute({
 			route: MAIN_ROUTE,
 			position: 1,
 			visible: true,
 			label: label1,
 			primaryBar: 'CubeOutline',
-			secondaryBar: MainSecondaryBarView,
-			appView: MainAppView
+			secondaryBar: PlaceholderComponent,
+			appView: PlaceholderComponent
 		});
 		addRoute({
 			route: SECONDARY_ROUTE,
 			position: 2,
 			visible: true,
 			label: label2,
-			primaryBar: SecondaryPrimaryView,
-			secondaryBar: SecondarySecondaryBarView,
-			appView: SecondaryAppView
+			primaryBar: SecondaryRouteIconView,
+			secondaryBar: PlaceholderComponent,
+			appView: PlaceholderComponent
 		});
 		addSettingsView({
 			route: MAIN_ROUTE,
 			label: label1,
-			component: MainSettingsView
+			component: PlaceholderComponent
 		});
 		addSettingsView({
 			route: SECONDARY_ROUTE,
 			label: label2,
-			component: SecondarySettingsView
-		});
-		addSearchView({
-			route: MAIN_ROUTE,
-			component: MainSearchView
-		});
-		addSearchView({
-			route: SECONDARY_ROUTE,
-			component: SecondarySearchView
+			component: PlaceholderComponent
 		});
 		addBoardView({
 			route: MAIN_ROUTE,
-			component: MainBoardView
+			component: PlaceholderComponent
 		});
 		addBoardView({
 			route: SECONDARY_ROUTE,
-			component: SecondaryBoardView
+			component: PlaceholderComponent
 		});
-		setAppContext({ isMessageView: false });
+		addUtilityView({
+			id: 'utility-1',
+			blacklistRoutes: [MAIN_ROUTE],
+			button: 'AdminPanelOutline',
+			label: t('label.utility_view', 'Test utility view 1'),
+			component: PlaceholderComponent
+		});
+		addUtilityView({
+			id: 'utility-2',
+			blacklistRoutes: [SECONDARY_ROUTE],
+			button: 'AwardOutline',
+			label: t('label.utility_view2', 'Test utility view 2'),
+			component: PlaceholderComponent
+		});
+		addUtilityView({
+			id: 'utility-3',
+			whitelistRoutes: [SECONDARY_ROUTE],
+			button: 'ColorPickerOutline',
+			label: t('label.utility_view', 'Test utility view 1'),
+			component: PlaceholderComponent
+		});
+		addUtilityView({
+			id: 'utility-4',
+			whitelistRoutes: [SECONDARY_ROUTE],
+			button: 'CrownOutline',
+			label: t('label.utility_view2', 'Test utility view 2'),
+			component: PlaceholderComponent
+		});
+		addUtilityView({
+			id: 'utility-5',
+			button: 'CompassOutline',
+			label: t('label.utility_view3', 'Test utility view 3'),
+			component: PlaceholderComponent
+		});
+		addSecondaryAccessoryView({
+			id: 'secondary-1',
+			blacklistRoutes: [SECONDARY_ROUTE],
+			component: PlaceholderComponent
+		});
+		addSecondaryAccessoryView({
+			id: 'secondary-2',
+			blacklistRoutes: [MAIN_ROUTE],
+			component: PlaceholderComponent
+		});
+		addPrimaryAccessoryView({
+			id: 'primary-1',
+			blacklistRoutes: [SECONDARY_ROUTE],
+			component: 'CodeDownloadOutline'
+		});
+		addPrimaryAccessoryView({
+			id: 'primary-2',
+			blacklistRoutes: [MAIN_ROUTE],
+			component: 'ColorPaletteOutline'
+		});
+		setAppContext({ hello: 'world' });
 	}, [t]);
 
 	useEffect(() => {
-		// registerActions({
-		// id: 'new-mail',
-		// type: ACTION_TYPES.NEW,
-		// action: (route) => ({
-		// 	id: 'new-mail',
-		// 	label: t('messages.new_email', 'New e-mail'),
-		// 	icon: 'CubeOutline',
-		// 	click: () => {
-		// 		getBridgedFunctions().addBoard(`${MAIN_ROUTE}/new?action=new`);
-		// 	},
-		// 	disabled: false,
-		// 	primary: true,
-		// 	group: MAIN_ROUTE
-		// })
-		// });
+		registerActions({
+			id: 'new-example',
+			type: ACTION_TYPES.NEW,
+			action: (route) => ({
+				id: 'new-example',
+				label: t('label.example_new', 'New Example'),
+				icon: 'CubeOutline',
+				click: (): void => {
+					getBridgedFunctions().addBoard(MAIN_ROUTE);
+				},
+				disabled: false,
+				primary: true,
+				group: MAIN_ROUTE,
+				type: ACTION_TYPES.NEW
+			})
+		});
 	}, [t]);
 
 	return null;

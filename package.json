@@ -1,8 +1,8 @@
 {
-	"name": "carbonio-mails-ui",
+	"name": "carbonio-boilerplate-ui",
 	"version": "0.1.9-rc.2",
-	"description": "Mails module for Zextras Carbonio",
-	"main": "src/app.jsx",
+	"description": "Example module for Zextras Carbonio",
+	"main": "src/app.tsx",
 	"scripts": {
 		"build": "sdk build",
 		"deploy": "sdk deploy",
@@ -79,12 +79,11 @@
 		"not dead"
 	],
 	"carbonio": {
-		"translations_repository": "git@bitbucket.org:zextras/com_zextras_zapp_mails.git",
-		"name": "carbonio-mails-ui",
-		"priority": 5,
-		"type": "app",
-		"attrKey": "zimbraFeatureMailEnabled",
-		"display": "Mails",
-		"icon": "MailModOutline"
+		"translations_repository": "<Insert Repo Here>",
+		"name": "carbonio-boilerplate-ui",
+		"priority": 1,
+		"type": "carbonioAdmin",
+		"display": "Example App",
+		"icon": "CubeOutline"
 	}
 }

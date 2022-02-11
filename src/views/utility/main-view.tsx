@@ -9,10 +9,9 @@ import { useTranslation } from 'react-i18next';
 import { Container, Text } from '@zextras/carbonio-design-system';
 
 const MainUtilityView: FC = () => {
-	console.log('main utility');
 	const [t] = useTranslation();
 	return (
-		<Container background="primary">
+		<Container >
 			<Text>{t('label.view', 'This is a view')}</Text>
 		</Container>
 	);
