@@ -6,11 +6,12 @@
 import React, { FC, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { GAL, GENERAL_INFORMATION, GENERAL_SETTINGS } from '../../constants';
+import { GAL, GENERAL_INFORMATION, GENERAL_SETTINGS, VIRTUAL_HOSTS } from '../../constants';
 import { getDomainInformation } from '../../services/domain-information-service';
 import { searchDirectory } from '../../services/search-directory-service';
 import DomainGalSettings from './domain-gal-settings';
 import DomainGeneralSettings from './domain-general-settings';
+import DomainVirtualHosts from './domain-virtual-hosts';
 
 const DomainOperations: FC = () => {
 	const [t] = useTranslation();
@@ -63,6 +64,8 @@ const DomainOperations: FC = () => {
 						);
 					case GAL:
 						return <DomainGalSettings domainInformation={domainInformation} cosList={cosList} />;
+					case VIRTUAL_HOSTS:
+						return <DomainVirtualHosts domainInformation={domainInformation} />;
 					default:
 						return null;
 				}
