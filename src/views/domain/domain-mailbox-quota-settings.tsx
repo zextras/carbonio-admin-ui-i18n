@@ -21,6 +21,7 @@ import { ALLOW_SEND_RECEIVE, BLOCK_SEND, BLOCK_SEND_RECEIVE, BYTE_PER_MB } from 
 import { modifyDomain } from '../../services/modify-domain-service';
 import { getQuotaUsage } from '../../services/get-quota-usage-service';
 import Paginig from '../components/paging';
+import { useDomainStore } from '../../store/domain/store';
 
 const SettingRow: FC<{ children?: any; wrap?: any }> = ({ children, wrap }) => (
 	<Row
@@ -33,9 +34,11 @@ const SettingRow: FC<{ children?: any; wrap?: any }> = ({ children, wrap }) => (
 		{children}
 	</Row>
 );
-const DomainMailboxQuotaSetting: FC<{ domainInformation: any }> = ({ domainInformation }) => {
+const DomainMailboxQuotaSetting: FC = () => {
 	const [t] = useTranslation();
 	const createSnackbar: any = useContext(SnackbarManagerContext);
+	const domainInformation = useDomainStore((state) => state.domain?.a);
+	const setDomain = useDomainStore((state) => state.setDomain);
 	const quotaPolicy: any = useMemo(
 		() => [
 			{
@@ -305,55 +308,10 @@ const DomainMailboxQuotaSetting: FC<{ domainInformation: any }> = ({ domainInfor
 					hideButton: true,
 					replace: true
 				});
-				const domainInfo: any = data?.Body?.ModifyDomainResponse?.domain[0]?.a;
-
-				const obj: any = {};
-				domainInfo.map((item: any) => {
-					obj[item?.n] = item._content;
-					return '';
-				});
-				if (obj.zimbraMailDomainQuota) {
-					setZimbraMailDomainQuota(obj.zimbraMailDomainQuota);
-				} else {
-					obj.zimbraMailDomainQuota = '';
-					setZimbraMailDomainQuota(obj.zimbraMailDomainQuota);
+				const domain: any = data?.Body?.ModifyDomainResponse?.domain[0];
+				if (domain) {
+					setDomain(domain);
 				}
-
-				if (obj.zimbraDomainAggregateQuota) {
-					setZimbraDomainAggregateQuota(obj.zimbraDomainAggregateQuota);
-				} else {
-					obj.zimbraDomainAggregateQuota = '';
-					setZimbraDomainAggregateQuota(obj.zimbraDomainAggregateQuota);
-				}
-
-				if (obj.zimbraDomainAggregateQuotaWarnPercent) {
-					setZimbraDomainAggregateQuotaWarnPercent(obj.zimbraDomainAggregateQuotaWarnPercent);
-				} else {
-					obj.zimbraDomainAggregateQuotaWarnPercent = '';
-					setZimbraDomainAggregateQuotaWarnPercent(obj.zimbraDomainAggregateQuotaWarnPercent);
-				}
-
-				if (obj.zimbraDomainAggregateQuotaWarnEmailRecipient) {
-					setZimbraDomainAggregateQuotaWarnEmailRecipient(
-						obj.zimbraDomainAggregateQuotaWarnEmailRecipient
-					);
-				} else {
-					obj.zimbraDomainAggregateQuotaWarnEmailRecipient = '';
-					setZimbraDomainAggregateQuotaWarnEmailRecipient(
-						obj.zimbraDomainAggregateQuotaWarnEmailRecipient
-					);
-				}
-
-				if (obj.zimbraDomainAggregateQuotaPolicy) {
-					setZimbraDomainAggregateQuotaPolicy(
-						quotaPolicy.find((item: any) => item.value === obj.zimbraDomainAggregateQuotaPolicy)
-					);
-				} else {
-					obj.zimbraDomainAggregateQuotaPolicy = ALLOW_SEND_RECEIVE;
-					setZimbraDomainAggregateQuotaPolicy(quotaPolicy[0]);
-				}
-				setDomainData(obj);
-				setIsDirty(false);
 			});
 	};
 
