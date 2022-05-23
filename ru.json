@@ -9,7 +9,21 @@
         "general_information": "Общая информация",
         "general_settings": "Общие настройки",
         "mailbox_quota": "Лимит почтового ящика",
-        "most_result_return_gal_search": "Большинство результатов поиска по GAL"
+        "most_result_return_gal_search": "Большинство результатов поиска по GAL",
+        "account_gal_synchronization": "Имя учетной записи синхронизации GAL",
+        "aggregated_domain_space": "Агрегированное пространство домена (байт)",
+        "create_new_domain": "СОЗДАТЬ НОВЫЙ ДОМЕН",
+        "domain_space_byte": "Доменное пространство (байт)",
+        "gal_mode": "Режим GAL",
+        "mail_server": "Почтовый сервер",
+        "mailbox_space": "Размер почтового ящика",
+        "range": "Диапазон",
+        "search_domain": "Поиск домена",
+        "select_domain_or_create_new": "Выберите домен для управления или нажмите кнопку «Создать», чтобы создать новый.",
+        "send_the_warning_to": "Отправить предупреждение",
+        "source_name_internal_gal": "Исходное имя внутреннего GAL",
+        "warn_when_reach_space_quota": "Предупредить меня, когда я достигну этой совокупной квоты пространства",
+        "many_domain_info_msg": "Много доменов! Какой из них вы хотели бы увидеть? Начните печатать, чтобы отфильтровать."
     },
     "label": {
         "account": "Учетная запись",
@@ -69,7 +83,12 @@
         "timezone": "Часовой пояс",
         "unlimited": "Неограниченно",
         "url": "Ссылка",
-        "web_client": "Веб-клиент"
+        "web_client": "Веб-клиент",
+        "active_sync": "ActiveSync",
+        "add_regex": "ДОБАВИТЬ REGEX",
+        "admin_help_url": "URL справки для администратора",
+        "admins": "Администраторы",
+        "aggrigated_space_criteria": "Совокупные пространственные критерии"
     },
     "timezone": {
         "europe_bucharest": "{{value}} Бухарест",
@@ -213,7 +232,17 @@
     "buckets": {
         "connection": {
             "access_key": "ключ доступа",
-            "notes": "Заметки"
+            "notes": "Заметки",
+            "arn_name": "Арн / Имя",
+            "descriptive_name": "Описательное имя",
+            "secret_key": "Секретный ключ",
+            "verify_connector": "ПРОВЕРИТЬ КОННЕКТОР"
+        },
+        "bucket_list": "Список Бакетов",
+        "bucket_type": "Тип Бакетов",
+        "connect_buckets": "Подключить Бакеты",
+        "new": {
+            "bucket_connection": "Соединение с Бакетом"
         }
     },
     "core": {
@@ -234,7 +263,15 @@
             "subscription_last_check": "Последняя проверка подписки",
             "subscription_type": "Тип подписки",
             "token": "Токен",
-            "version": "Версия Zextras"
+            "version": "Версия Zextras",
+            "deactive": "Деактивировать",
+            "modal": {
+                "cancel": "НЕТ",
+                "confirm": "Вы уверены, что хотите продолжить?",
+                "deactivate": "Да, деактивировать",
+                "label": "Деактивировать токен",
+                "warning": "Вы пытаетесь деактивировать текущий токен. Это приведет к отключению всех включенных функций."
+            }
         }
     },
     "message": {
@@ -243,5 +280,10 @@
                 "accepted": "Вы приняли права общего доступа"
             }
         }
-    }
+    },
+    "commons": {
+        "confirm_connection": "ПОДТВЕРДИТЕ СОЕДИНЕНИЕ"
+    },
+    "create_new_bucket": "НОВЫЙ БАКЕТ",
+    "create_new_domain": "Создать новый домен"
 }
