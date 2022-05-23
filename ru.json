@@ -101,7 +101,8 @@
         "auth_method": "Метод авторизации",
         "auto_logout_users": "Автоматический выход пользователей из системы",
         "bind_dn_template": "Привязать шаблон DN",
-        "block_send": "Заблокировать отправку"
+        "block_send": "Заблокировать отправку",
+        "no": "НЕТ"
     },
     "timezone": {
         "europe_bucharest": "{{value}} Бухарест",
