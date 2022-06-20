@@ -11,7 +11,7 @@ import { VerticalWizard } from '../app/component/hwizard';
 import Connection from './connection';
 import { Section } from '../app/component/section';
 
-const WizardInSection: FC<any> = ({ wizard, wizardFooter, setToggleBucket, setVerifyCheck }) => {
+const WizardInSection: FC<any> = ({ wizard, wizardFooter, setToggleBucket }) => {
 	const { t } = useTranslation();
 	return (
 		<Section
@@ -21,7 +21,6 @@ const WizardInSection: FC<any> = ({ wizard, wizardFooter, setToggleBucket, setVe
 			divider
 			showClose
 			onClose={(): void => {
-				setVerifyCheck('');
 				setToggleBucket(false);
 			}}
 		>

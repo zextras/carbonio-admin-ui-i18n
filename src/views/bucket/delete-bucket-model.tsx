@@ -19,7 +19,7 @@ const DeleteBucketModel: FC<{
 			<Modal
 				size="medium"
 				title={t('label.delet_bucket_header', 'Removing {{name}}', {
-					// name: bucketselection.bucketName
+					name: BucketDetail.bucketName
 				})}
 				open={open}
 				customFooter={
@@ -56,7 +56,7 @@ const DeleteBucketModel: FC<{
 							'label.delet_content',
 							'You are deleting {{name}}. This will {{name}}. Are you sure you want to delete {{name}} ?',
 							{
-								// name: bucketselection.bucketName
+								name: BucketDetail.bucketName
 							}
 						)}
 					</Text>

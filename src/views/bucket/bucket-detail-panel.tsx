@@ -281,7 +281,7 @@ const BucketDetailPanel: FC = () => {
 								onClick={clickHandler}
 							/>
 						</Row>
-						{bucketList.length !== 0 && (
+						{bucketList?.length !== 0 && (
 							<>
 								<Row width="100%" padding="3px 13px">
 									<Input
