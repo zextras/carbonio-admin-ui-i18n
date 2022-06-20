@@ -21,6 +21,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import logo from '../../../assets/gardian.svg';
 import Paginig from '../../components/paging';
 import { searchDirectory } from '../../../services/search-directory-service';
+import MailingListDetailView from './mailing-list-detail-view';
 
 const DomainMailingList: FC = () => {
 	const [t] = useTranslation();
@@ -29,6 +30,8 @@ const DomainMailingList: FC = () => {
 	const [offset, setOffset] = useState<number>(0);
 	const [limit, setLimit] = useState<number>(50);
 	const [totalAccount, setTotalAccount] = useState<number>(0);
+	const [selectedMailingList, setSelectedMailingList] = useState<any>({});
+	const [showMailingListDetailView, setShowMailingListDetailView] = useState<boolean>(false);
 	const headers: any[] = useMemo(
 		() => [
 			{
@@ -90,10 +93,30 @@ const DomainMailingList: FC = () => {
 						mList.push({
 							id: item?.id,
 							columns: [
-								<Text size="small" weight="light" key={item?.id} color="gray0">
+								<Text
+									size="small"
+									weight="light"
+									key={item?.id}
+									color="gray0"
+									onClick={(event: { stopPropagation: () => void }): void => {
+										event.stopPropagation();
+										setSelectedMailingList(item);
+										setShowMailingListDetailView(true);
+									}}
+								>
 									{item?.a?.find((a: any) => a?.n === 'displayName')?._content}
 								</Text>,
-								<Text size="medium" weight="light" key={item?.id} color="gray0">
+								<Text
+									size="medium"
+									weight="light"
+									key={item?.id}
+									color="gray0"
+									onClick={(event: { stopPropagation: () => void }): void => {
+										event.stopPropagation();
+										setSelectedMailingList(item);
+										setShowMailingListDetailView(true);
+									}}
+								>
 									{item?.name}
 								</Text>,
 								<Text size="medium" weight="light" key={item?.id} color="gray0">
@@ -258,6 +281,12 @@ const DomainMailingList: FC = () => {
 					</Container>
 				</Row>
 			</Container>
+			{showMailingListDetailView && (
+				<MailingListDetailView
+					selectedMailingList={selectedMailingList}
+					setShowMailingListDetailView={setShowMailingListDetailView}
+				/>
+			)}
 		</Container>
 	);
 };
