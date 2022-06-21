@@ -159,7 +159,8 @@
         "main_view": "Вид",
         "example_new": "Новый образец",
         "public_service_protocol": "Протокол публичной службы",
-        "external_password_change_listener": "Детектор смены внешнего пароля"
+        "external_password_change_listener": "Детектор смены внешнего пароля",
+        "view": "Вид"
     },
     "timezone": {
         "europe_bucharest": "{{value}} Бухарест",
