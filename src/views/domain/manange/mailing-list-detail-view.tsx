@@ -10,15 +10,17 @@ import {
 	Row,
 	IconButton,
 	Divider,
+	Modal,
 	Padding,
 	Input,
 	Table,
 	Text,
 	Select,
 	Switch,
-	ChipInput
+	ChipInput,
+	Button
 } from '@zextras/carbonio-design-system';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import moment from 'moment';
 import ListRow from '../../list/list-row';
 import Paginig from '../../components/paging';
@@ -80,6 +82,10 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 	const [selectedDistributionListMember, setSelectedDistributionListMember] = useState<any[]>([]);
 	const [selectedOwnerListMember, setSelectedOwnerListMember] = useState<any[]>([]);
 	const [searchMemberList, setSearchMemberList] = useState<any[]>([]);
+	const [openAddMailingListDialog, setOpenAddMailingListDialog] = useState<boolean>(false);
+	const [isRequstInProgress, setIsRequstInProgress] = useState<boolean>(false);
+	const [isAddToOwnerList, setIsAddToOwnerList] = useState<boolean>(false);
+	const [searchMailingListOrUser, setSearchMailingListOrUser] = useState<string>('');
 
 	const dlCreateDate = useMemo(
 		() =>
@@ -322,6 +328,31 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 		setDlMembershipList(e);
 	}, []);
 
+	const onAddToList = useCallback((): void => {
+		const attrs = '';
+		const types = 'distributionlists,aliases,accounts,resources,dynamicgroups';
+		const query = `(mail=${searchMailingListOrUser})`;
+		searchDirectory(attrs, types, '', query, 0, 2)
+			.then((response) => response.json())
+			.then((data) => {
+				const accountExists =
+					data?.Body?.SearchDirectoryResponse?.dl || data?.Body?.SearchDirectoryResponse?.account;
+
+				if (accountExists[0]) {
+					if (isAddToOwnerList) {
+						setOwnersList(
+							ownersList.concat({ id: accountExists[0]?.id, name: accountExists[0]?.name })
+						);
+					} else {
+						setOwnersList(
+							ownersList.concat({ id: accountExists[0]?.id, name: accountExists[0]?.name })
+						);
+						setDlm(dlm.concat(accountExists[0]?.name));
+					}
+				}
+			});
+	}, [isAddToOwnerList, searchMailingListOrUser, dlm, ownersList]);
+
 	return (
 		<MailingListDetailContainer background="gray5" mainAlignment="flex-start">
 			<Row
@@ -413,7 +444,7 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 				<ListRow>
 					<Switch
 						value={zimbraDistributionListSendShareMessageToNewMembers}
-						label={t('backup.share_manages_to_new_members', 'Share messages to new members')}
+						label={t('label.share_manages_to_new_members', 'Share messages to new members')}
 						onClick={(): void =>
 							setZimbraDistributionListSendShareMessageToNewMembers(
 								!zimbraDistributionListSendShareMessageToNewMembers
@@ -422,7 +453,7 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 					/>
 					<Switch
 						value={zimbraHideInGal}
-						label={t('backup.this_is_hidden_from_gal', 'This list is hidden from GAL')}
+						label={t('label.this_is_hidden_from_gal', 'This list is hidden from GAL')}
 						onClick={(): void => setZimbraHideInGal(!zimbraHideInGal)}
 					/>
 				</ListRow>
@@ -494,6 +525,9 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 										icon="Plus"
 										height={36}
 										width={36}
+										onClick={(): void => {
+											setOpenAddMailingListDialog(true);
+										}}
 									/>
 								</Padding>
 								<Padding right="medium">
@@ -557,6 +591,76 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 					</Container>
 				</ListRow>
 			</Container>
+			<Modal
+				title={
+					<Trans
+						i18nKey="label.would_you_like_to_add_ml"
+						defaults="<bold>What would you like to add to the Mailing List?</bod>"
+						components={{ bold: <strong /> }}
+					/>
+				}
+				open={openAddMailingListDialog}
+				showCloseIcon
+				onClose={(): void => {
+					setOpenAddMailingListDialog(false);
+				}}
+				size="medium"
+				customFooter={
+					<Container orientation="horizontal" mainAlignment="space-between">
+						<Button label={t('label.help', 'Help')} type="outlined" color="primary" isSmall />
+						<Container orientation="horizontal" mainAlignment="flex-end">
+							<Padding all="small">
+								<Button
+									label={t('label.go_back', 'Go Back')}
+									color="secondary"
+									size="fill"
+									onClick={(): void => {
+										setOpenAddMailingListDialog(false);
+									}}
+								/>
+							</Padding>
+							<Button
+								label={t('label.add_it_to_list', 'Add it to the list')}
+								color="primary"
+								onClick={onAddToList}
+								disabled={isRequstInProgress}
+							/>
+						</Container>
+					</Container>
+				}
+			>
+				<Container mainAlignment="flex-start" crossAlignment="flex-start" className="ddddd">
+					<Text overflow="break-word" weight="regular">
+						{t(
+							'label.add_in_mailing_list_or_both',
+							'You add another Mailing List or a User. Both of them can be a Owner of the list.'
+						)}
+					</Text>
+
+					<Container mainAlignment="flex-start" crossAlignment="flex-start" width="fill">
+						<Input
+							value={searchMailingListOrUser}
+							background="gray5"
+							onChange={(e: any): void => {
+								setSearchMailingListOrUser(e.target.value);
+							}}
+						/>
+					</Container>
+
+					<Container mainAlignment="flex-start" crossAlignment="flex-start">
+						<Switch
+							value={isAddToOwnerList}
+							label={t(
+								'label.this_account_owner_of_the_list',
+								'this account will be a Owner of the list'
+							)}
+							onClick={(): void => {
+								setIsAddToOwnerList(!isAddToOwnerList);
+							}}
+						/>
+					</Container>
+				</Container>
+			</Modal>
 		</MailingListDetailContainer>
 	);
 };
