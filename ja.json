@@ -3,7 +3,7 @@
         "subscription": {
             "more_info": "詳細",
             "renew": "更新する",
-            "status": "状態",
+            "status": "ステータス",
             "subscription_Accounts": "サブスクリプションアカウント",
             "subscription_last_check": "サブスクリプションの最終確認",
             "token": "トークン",
@@ -14,7 +14,7 @@
             "email_buyer": "メール購入者",
             "emissionDate": "発行日",
             "features": "その他の機能",
-            "hide": "非表示にする",
+            "hide": "非表示",
             "less_info": "不十分な情報",
             "subscription_type": "サブスクリプションタイプ",
             "version": "Zextrasバージョン"
@@ -162,56 +162,78 @@
     "buckets": {
         "connection": {
             "access_key": "アクセスキー",
-            "notes": "注釈"
+            "notes": "備考"
         }
     },
     "domain": {
-        "advanced": "高度",
+        "advanced": "詳細設定",
         "free_busy": "空いている/忙しい",
         "general_settings": "一般設定",
-        "theme": "テーマ"
+        "theme": "テーマ",
+        "authentication": "認証",
+        "gal": "GAL",
+        "general_information": "全般情報",
+        "mailbox_quota": "メールボックスの割り当て容量",
+        "most_result_return_gal_search": "GAL検索で取得できる結果の最大件数",
+        "virtual_hosts": "仮想ホスト"
     },
     "label": {
         "account": "アカウント",
         "accounts": "アカウント",
         "active": "アクティブ",
-        "add": "追加する",
+        "add": "追加",
         "app_clicked": "共有リクエストを承認しました",
-        "app_name": "管理する",
+        "app_name": "管理",
         "available_space": "利用可能なスペース",
         "backup": "バックアップ",
         "cancel": "キャンセル",
-        "configuration": "構成",
+        "configuration": "設定",
         "core": "Core",
         "days": "日",
-        "delete": "削除する",
-        "description": "概要",
+        "delete": "削除",
+        "description": "説明",
         "discard_changes": "変更履歴を削除する",
         "external": "外部",
         "hours": "時間",
         "mb": "MB",
         "minutes": "分",
         "name": "名前",
-        "not_set": "設定なし",
+        "not_set": "未設定",
         "note": "メモ",
         "notification": "通知",
         "of": "の",
         "page ": "共有リクエストを承認しました",
         "page_": "共有リクエストを承認しました",
         "privacy": "プライバシー",
-        "remove": "削除する",
-        "save": "保存する",
+        "remove": "削除",
+        "save": "保存",
         "signature_required": "署名の情報が必要です。",
         "snackbar": {
             "share": {
                 "accepted": "共有リクエストを承認しました"
             }
         },
-        "status": "状態",
-        "suspended": "サスペンド済み",
+        "status": "ステータス",
+        "suspended": "保留",
         "timezone": "タイムゾーン",
         "unlimited": "無制限",
-        "url": "URL"
+        "url": "URL",
+        "domains": "ドメイン",
+        "enable_start_tls": "StartTLSを有効にする",
+        "external_active_directory": "外部Active Directory",
+        "external_ldap": "外部LDAP",
+        "features": "機能",
+        "filter": "フィルター",
+        "general_information": "全般情報",
+        "id": "ID",
+        "internal": "内部",
+        "locked": "ロック",
+        "maintenance": "メンテナンス",
+        "services": "サービス",
+        "web_client": "ウェブクライアント",
+        "authentication": "認証",
+        "certificate": "証明書",
+        "closed": "閉鎖"
     },
     "message": {
         "snackbar": {

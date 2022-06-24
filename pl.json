@@ -141,19 +141,41 @@
     "buckets": {
         "connection": {
             "access_key": "Klucz dostępu",
-            "notes": "Notki"
+            "notes": "Notatki"
         }
     },
     "core": {
         "subscription": {
             "hide": "Ukryj",
-            "status": "Status"
+            "status": "Status",
+            "active": "Aktywne",
+            "bundle": "Zestaw",
+            "company_name": "Nazwa firmy",
+            "customer": "Klient",
+            "email_buyer": "E-mail kupującego",
+            "emissionDate": "Data emisji",
+            "features": "Inne funkcje",
+            "less_info": "Mniej informacji",
+            "more_info": "Więcej informacji",
+            "renew": "Odnów",
+            "subscription_Accounts": "Konta subskrypcji",
+            "subscription_last_check": "Ostatnie sprawdzenie subskrypcji",
+            "subscription_type": "Typ subskrypcji",
+            "token": "Token",
+            "version": "Wersja Zextras"
         }
     },
     "domain": {
         "free_busy": "Wolny/Zajęty",
         "general_settings": "Ustawienia ogólne",
-        "theme": "Motyw"
+        "theme": "Motyw",
+        "advanced": "Zaawansowane",
+        "authentication": "Uwierzytelnianie",
+        "gal": "GLA",
+        "general_information": "Informacje ogólne",
+        "mailbox_quota": "Limit pojemności skrzynki pocztowej",
+        "most_result_return_gal_search": "Najwięcej wyników zwróconych przez wyszukiwanie GAL",
+        "virtual_hosts": "Serwery wirtualne"
     },
     "label": {
         "account": "Konto",
@@ -189,10 +211,29 @@
             }
         },
         "status": "Status",
-        "suspended": "Zawieszone",
-        "timezone": "Strefa Czasowa",
+        "suspended": "Zawieszona",
+        "timezone": "Strefa czasowa",
         "unlimited": "Nielimitowane",
-        "url": "URL"
+        "url": "Adres URL",
+        "active": "Aktywne",
+        "authentication": "Uwierzytelnianie",
+        "available_space": "Dostęne miejsce",
+        "certificate": "Certyfikat:",
+        "closed": "Zamknięta",
+        "configuration": "Konfiguracja",
+        "domains": "Domeny",
+        "enable_start_tls": "Włącz StartTLS",
+        "external_active_directory": "Zewnętrzny katalog aktywny",
+        "external_ldap": "Zewnętrzny LDAP",
+        "features": "Funkcji",
+        "filter": "Filtr",
+        "general_information": "Informacje ogólne",
+        "id": "Identyfikator",
+        "internal": "Wewnętrzne",
+        "locked": "Zablokowany",
+        "maintenance": "Konserwacja",
+        "services": "Usługi",
+        "web_client": "Klient sieci"
     },
     "message": {
         "snackbar": {

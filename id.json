@@ -166,21 +166,27 @@
         }
     },
     "domain": {
-        "advanced": "Lanjutan",
+        "advanced": "Canggih",
         "free_busy": "Senggang/Sibuk",
         "general_settings": "Pengaturan Umum",
-        "theme": "Tema"
+        "theme": "Tema",
+        "authentication": "Autentikasi",
+        "gal": "GAL",
+        "general_information": "Informasi Umum",
+        "mailbox_quota": "Kuota Kotak Email",
+        "most_result_return_gal_search": "Sebagian besar hasil diberikan oleh pencarian GAL",
+        "virtual_hosts": "Host Virtual"
     },
     "label": {
         "account": "Akun",
         "accounts": "Akun",
         "active": "Aktif",
-        "add": "Tambahkan",
+        "add": "Tambah",
         "app_clicked": "Anda telah menerima permintaan berbagi",
         "app_name": "Kelola",
         "available_space": "Ruang Tersedia",
         "backup": "Backup",
-        "cancel": "Batal",
+        "cancel": "Batalkan",
         "configuration": "Konfigurasi",
         "core": "Core",
         "days": "Hari",
@@ -211,7 +217,23 @@
         "suspended": "Ditangguhkan",
         "timezone": "Zona Waktu",
         "unlimited": "Tidak terbatas",
-        "url": "URL"
+        "url": "URL",
+        "authentication": "Autentikasi",
+        "certificate": "Sertifikat",
+        "closed": "Ditutup",
+        "domains": "Domain",
+        "enable_start_tls": "Aktifkan StartTLS",
+        "external_active_directory": "Active Directory Eksternal",
+        "external_ldap": "LDAP Eksternal",
+        "features": "Fitur",
+        "filter": "Filter",
+        "general_information": "Informasi Umum",
+        "id": "Id",
+        "internal": "Internal",
+        "locked": "Dikunci",
+        "maintenance": "Pemeliharaan",
+        "services": "Layanan",
+        "web_client": "Klien Web"
     },
     "message": {
         "snackbar": {

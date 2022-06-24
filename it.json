@@ -2,7 +2,16 @@
     "buckets": {
         "connection": {
             "notes": "Note",
-            "access_key": "Chiave d'Accesso"
+            "access_key": "Chiave d'Accesso",
+            "descriptive_name": "Nome Descrittivo",
+            "secret_key": "Chiave Segreta",
+            "verify_connector": "VERIFICA CONNETTORE"
+        },
+        "bucket_list": "Bucket List",
+        "bucket_type": "Tipologia Bucket",
+        "connect_buckets": "Connetti Bucket",
+        "new": {
+            "bucket_connection": "Connessione Bucket"
         }
     },
     "core": {
@@ -23,26 +32,45 @@
             "subscription_last_check": "Ultimo Controllo sulla Subscription",
             "subscription_type": "Tip di Subscription",
             "token": "Token",
-            "version": "Versione Zextras"
+            "version": "Versione Zextras",
+            "modal": {
+                "cancel": "NO",
+                "confirm": "Vuoi procedere?",
+                "deactivate": "Sì, Disattiva",
+                "label": "Disattiva Token",
+                "warning": "Stai provando a disattivare l'attuale token. Proseguendo, tutte le funzionalità abilitate verranno disattivate."
+            }
         }
     },
     "domain": {
         "advanced": "Avanzate",
         "theme": "Tema",
         "free_busy": "Libero/Occupato",
-        "general_settings": "Impostazioni Generali"
+        "general_settings": "Impostazioni Generali",
+        "search_domain": "Cerca un dominio",
+        "send_the_warning_to": "Manda avviso a",
+        "virtual_hosts": "Host virtuali",
+        "select_domain_or_create_new": "Seleziona una dominio per gestirlo oppure seleziona il tasto Crea per crearne uno nuovo.",
+        "authentication": "Autenticazione",
+        "general_information": "Informazioni generali",
+        "mail_server": "Mail Server",
+        "create_new_domain": "CREA NUOVO DOMINIO",
+        "gal": "GAL",
+        "mailbox_quota": "Spazio casella di posta",
+        "many_domain_info_msg": "Sembrano esserci molti domini! Quale vuoi visualizzare? Inizia a digitare il nome per filtrarli.",
+        "most_result_return_gal_search": "La maggior parte dei risultati riportati dalla ricerca GAL"
     },
     "label": {
-        "account": "Profilo",
+        "account": "Account",
         "accounts": "Account",
-        "cancel": "Elimina",
+        "cancel": "Annulla",
         "configuration": "Configurazione",
         "core": "Core",
         "days": "Giorni",
         "delete": "Elimina",
         "description": "Descrizione",
         "discard_changes": "ELIMINA MODIFICHE",
-        "external": "Esterno",
+        "external": "Esterna",
         "hours": "Ore",
         "active": "Attivo",
         "add": "Aggiungi",
@@ -69,10 +97,58 @@
             }
         },
         "status": "Stato",
-        "suspended": "Sospesa",
-        "timezone": "Fuso Orario",
+        "suspended": "Sospeso",
+        "timezone": "Fuso orario",
         "unlimited": "Illimitato",
-        "url": "URL"
+        "url": "URL",
+        "active_sync": "ActiveSync",
+        "admins": "Amministratori",
+        "allow_send_receive": "Consenti Invia/Ricevi",
+        "authentication": "Autenticazione",
+        "buckets": "Bucket",
+        "change_save_success_msg": "La modifica è stata salvata con successo",
+        "closed": "Chiuso",
+        "cos": "CoS",
+        "default_class_of_service": "Classe di Servizio predefinita",
+        "delete_domain": "Elimina Dominio",
+        "delete_domain_error_msg": "Stai eliminando {{domainName}}. Vuoi eliminare {{domainName}}?",
+        "delete_domain_success_msg": "Il dominio è stato eliminato correttamente",
+        "domain_quota_settings": "Impostazioni Quota Dominio",
+        "domains": "Domains",
+        "example_new": "Nuovo Esempio",
+        "features": "Funzioni",
+        "general_information": "Informazioni generali",
+        "http": "http",
+        "https": "https",
+        "id": "ID",
+        "locked": "Bloccato",
+        "log": "Log",
+        "mail_size": "Dimensione E-mail",
+        "need_help": "HAI BISOGNO DI AIUTO?",
+        "no": "NO",
+        "no_virtual_host_msg": "Non ci sono host virtuali.",
+        "seconds": "Secondi",
+        "serverl_and_volumes": "Server & Volumi",
+        "services": "Servizi",
+        "something_wrong_error_msg": "Qualcosa è andato storto. Riprova.",
+        "subscriptions": "Sottoscrizioni",
+        "virtual_host": "host virtuale",
+        "virtual_host_enable_info_msg": "Clicca il tasto AGGIUNGI per abilitarne uno nuovo.",
+        "virtual_host_name": "Nome Host Virtuale",
+        "virtual_host_note": "Si tenga presente che la rimozione dell'host virtuale è effettiva solo dopo il riavvio del mailbox server.",
+        "web_client": "Client Web",
+        "your_auth_method_is": "Il tuo Metodo di Autenticazione è",
+        "block_send_receive": "Blocca Invia/Ricevi",
+        "force_delete": "Eliminazione Forzata",
+        "maintenance": "Manutenzione",
+        "certificate": "Certificato",
+        "certificates": "Certificati",
+        "internal": "Interna",
+        "virtual_host_user_msg": "Qualsiasi utente che effettua il login utilizzando un URL che contiene uno degli hostname qui elencati, sarà considerato come utente di questo dominio, {{domainName}}",
+        "enable_start_tls": "Attiva StartTLS",
+        "external_active_directory": "Directory attiva esterna",
+        "external_ldap": "LDAP esterno",
+        "filter": "Filtro"
     },
     "message": {
         "snackbar": {
@@ -219,5 +295,15 @@
         "pacific_norfolk": "{{value}} Norfolk",
         "pacific_tongatapu": "{{value}} Nuku’alofa",
         "utc": "{{value}} Tempo Coordinato Universale"
-    }
+    },
+    "commons": {
+        "confirm_connection": "CONFERMA CONNESSIONE"
+    },
+    "create_new_bucket": "NUOVO BUCKET",
+    "log": "Log",
+    "select_domain_or_create_new": "Seleziona una dominio per gestirlo oppure seleziona il tasto Crea per crearne uno nuovo.",
+    "new_bucket_connection": "CONNESSIONE",
+    "create_new_domain": "Crea Nuovo Dominio",
+    "select_bucket_or_create_new_bucket": "sembra che tu non abbia ancora impostato un tipo di bucket. Clicca il bottone NUOVO BUCKET per crearne uno nuovo.",
+    "many_domain_info_msg": "Sembrano esserci molti domini! Quale vuoi visualizzare? Inizia a digitare il nome per filtrarli."
 }
