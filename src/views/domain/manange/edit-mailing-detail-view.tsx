@@ -167,10 +167,7 @@ const EditMailingListView: FC<any> = ({ selectedMailingList, setShowMailingListD
 		[t]
 	);
 
-	const [previousDetail, setPreviousDetail] = useState<any>({
-		zimbraDistributionListSubscriptionPolicy: subscriptionUnsubscriptionRequestOptions[0],
-		subscriptionUnsubscriptionRequestOptions: subscriptionUnsubscriptionRequestOptions[0]
-	});
+	const [previousDetail, setPreviousDetail] = useState<any>({});
 
 	const [zimbraDistributionListSubscriptionPolicy, setZimbraDistributionListSubscriptionPolicy] =
 		useState<any>(subscriptionUnsubscriptionRequestOptions[0]);
@@ -279,10 +276,6 @@ const EditMailingListView: FC<any> = ({ selectedMailingList, setShowMailingListD
 								}));
 							} else {
 								setZimbraDistributionListSendShareMessageToNewMembers(false);
-								setPreviousDetail((prevState: any) => ({
-									...prevState,
-									zimbraDistributionListSendShareMessageToNewMembers: false
-								}));
 							}
 
 							const _zimbraMailAlias = distributionListMembers?.a?.filter(
@@ -540,12 +533,16 @@ const EditMailingListView: FC<any> = ({ selectedMailingList, setShowMailingListD
 		previousDetail?.zimbraDistributionListSendShareMessageToNewMembers
 			? setZimbraDistributionListSendShareMessageToNewMembers(true)
 			: setZimbraDistributionListSendShareMessageToNewMembers(false);
-		setZimbraDistributionListUnsubscriptionPolicy(
-			previousDetail?.zimbraDistributionListUnsubscriptionPolicy
-		);
-		setZimbraDistributionListSubscriptionPolicy(
-			previousDetail?.zimbraDistributionListSubscriptionPolicy
-		);
+		previousDetail?.zimbraDistributionListUnsubscriptionPolicy
+			? setZimbraDistributionListUnsubscriptionPolicy(
+					previousDetail?.zimbraDistributionListUnsubscriptionPolicy
+			  )
+			: setZimbraDistributionListUnsubscriptionPolicy(subscriptionUnsubscriptionRequestOptions[0]);
+		previousDetail?.zimbraDistributionListSubscriptionPolicy
+			? setZimbraDistributionListSubscriptionPolicy(
+					previousDetail?.zimbraDistributionListSubscriptionPolicy
+			  )
+			: setZimbraDistributionListSubscriptionPolicy(subscriptionUnsubscriptionRequestOptions[0]);
 		setIsDirty(false);
 	};
 
