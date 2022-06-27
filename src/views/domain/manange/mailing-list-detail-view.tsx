@@ -23,7 +23,7 @@ import {
 } from '@zextras/carbonio-design-system';
 import { Trans, useTranslation } from 'react-i18next';
 import moment from 'moment';
-import { differenceBy, isEqual } from 'lodash';
+import { isEqual } from 'lodash';
 import ListRow from '../../list/list-row';
 import Paginig from '../../components/paging';
 import { getDistributionList } from '../../../services/get-distribution-list';
@@ -96,9 +96,6 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 	const [searchMailingListOrUser, setSearchMailingListOrUser] = useState<string>('');
 	const [isShowError, setIsShowError] = useState<boolean>(false);
 	const [isDirty, setIsDirty] = useState<boolean>(false);
-	const [previousDetail, setPreviousDetail] = useState<any>({
-		ownersList: []
-	});
 
 	const dlCreateDate = useMemo(
 		() =>
@@ -138,6 +135,67 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 		[t]
 	);
 
+	const subscriptionUnsubscriptionRequestOptions: any[] = useMemo(
+		() => [
+			{
+				label: t('label.automatically_accept', 'Automatically accept'),
+				value: SUBSCRIBE_UNSUBSCRIBE.ACCEPT
+			},
+			{
+				label: t('label.require_list_owner_approval', 'Require list owner approval'),
+				value: SUBSCRIBE_UNSUBSCRIBE.APPROVAL
+			},
+			{
+				label: t('label.automatically_reject', 'Automatically reject'),
+				value: SUBSCRIBE_UNSUBSCRIBE.REJECT
+			}
+		],
+		[t]
+	);
+
+	const rightsOptions: any[] = useMemo(
+		() => [
+			{
+				label: t('label.can_send_receiver', 'Can Send & Receive'),
+				value: TRUE_FALSE.TRUE
+			},
+			{
+				label: t('label.not_send_receive', 'Not Send & Receive'),
+				value: TRUE_FALSE.FALSE
+			}
+		],
+		[t]
+	);
+
+	const [previousDetail, setPreviousDetail] = useState<any>({
+		zimbraDistributionListSubscriptionPolicy: subscriptionUnsubscriptionRequestOptions[0],
+		subscriptionUnsubscriptionRequestOptions: subscriptionUnsubscriptionRequestOptions[0]
+	});
+
+	const [zimbraDistributionListSubscriptionPolicy, setZimbraDistributionListSubscriptionPolicy] =
+		useState<any>(subscriptionUnsubscriptionRequestOptions[0]);
+
+	const [
+		zimbraDistributionListUnsubscriptionPolicy,
+		setZimbraDistributionListUnsubscriptionPolicy
+	] = useState<any>(subscriptionUnsubscriptionRequestOptions[0]);
+
+	const onSubscriptionChange = useCallback(
+		(v: any): any => {
+			const it = subscriptionUnsubscriptionRequestOptions.find((item: any) => item.value === v);
+			setZimbraDistributionListSubscriptionPolicy(it);
+		},
+		[subscriptionUnsubscriptionRequestOptions]
+	);
+
+	const onUnSubscriptionChange = useCallback(
+		(v: any): any => {
+			const it = subscriptionUnsubscriptionRequestOptions.find((item: any) => item.value === v);
+			setZimbraDistributionListUnsubscriptionPolicy(it);
+		},
+		[subscriptionUnsubscriptionRequestOptions]
+	);
+
 	const getMailingList = useCallback(
 		(id: string, name: string): void => {
 			getDistributionList(id, name)
@@ -155,12 +213,22 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 								...prevState,
 								dlm: _dlm
 							}));
+						} else {
+							setPreviousDetail((prevState: any) => ({
+								...prevState,
+								dlm: []
+							}));
 						}
 						if (distributionListMembers?.owners && distributionListMembers?.owners[0]?.owner) {
 							setOwnersList(distributionListMembers?.owners[0]?.owner);
 							setPreviousDetail((prevState: any) => ({
 								...prevState,
 								ownersList: distributionListMembers?.owners[0]?.owner
+							}));
+						} else {
+							setPreviousDetail((prevState: any) => ({
+								...prevState,
+								ownersList: []
 							}));
 						}
 						if (distributionListMembers?.a) {
@@ -233,11 +301,44 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 							_zimbraCreateTimestamp
 								? setZimbraCreateTimestamp(_zimbraCreateTimestamp)
 								: setZimbraCreateTimestamp('');
+
+							const _zimbraDistributionListSubscriptionPolicy = distributionListMembers?.a?.find(
+								(a: any) => a?.n === 'zimbraDistributionListSubscriptionPolicy'
+							)?._content;
+							if (_zimbraDistributionListSubscriptionPolicy) {
+								onSubscriptionChange(_zimbraDistributionListSubscriptionPolicy);
+								const it = subscriptionUnsubscriptionRequestOptions.find(
+									(item: any) => item.value === _zimbraDistributionListSubscriptionPolicy
+								);
+								setPreviousDetail((prevState: any) => ({
+									...prevState,
+									zimbraDistributionListSubscriptionPolicy: it
+								}));
+							}
+
+							const _zimbraDistributionListUnsubscriptionPolicy = distributionListMembers?.a?.find(
+								(a: any) => a?.n === 'zimbraDistributionListUnsubscriptionPolicy'
+							)?._content;
+							if (_zimbraDistributionListUnsubscriptionPolicy) {
+								onUnSubscriptionChange(_zimbraDistributionListUnsubscriptionPolicy);
+								const it = subscriptionUnsubscriptionRequestOptions.find(
+									(item: any) => item.value === _zimbraDistributionListUnsubscriptionPolicy
+								);
+								setPreviousDetail((prevState: any) => ({
+									...prevState,
+									zimbraDistributionListUnsubscriptionPolicy: it
+								}));
+							}
 						}
 					}
 				});
 		},
-		[selectedMailingList?.name]
+		[
+			selectedMailingList?.name,
+			subscriptionUnsubscriptionRequestOptions,
+			onSubscriptionChange,
+			onUnSubscriptionChange
+		]
 	);
 
 	const getDistributionListMembershipList = useCallback((id: string): void => {
@@ -322,57 +423,7 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 		}
 	}, [ownersList]);
 
-	const subscriptionUnsubscriptionRequestOptions: any[] = useMemo(
-		() => [
-			{
-				label: t('label.automatically_accept', 'Automatically accept'),
-				value: SUBSCRIBE_UNSUBSCRIBE.ACCEPT
-			},
-			{
-				label: t('label.require_list_owner_approval', 'Require list owner approval'),
-				value: SUBSCRIBE_UNSUBSCRIBE.APPROVAL
-			},
-			{
-				label: t('label.automatically_reject', 'Automatically reject'),
-				value: SUBSCRIBE_UNSUBSCRIBE.REJECT
-			}
-		],
-		[t]
-	);
-
-	const rightsOptions: any[] = useMemo(
-		() => [
-			{
-				label: t('label.can_send_receiver', 'Can Send & Receive'),
-				value: TRUE_FALSE.TRUE
-			},
-			{
-				label: t('label.not_send_receive', 'Not Send & Receive'),
-				value: TRUE_FALSE.FALSE
-			}
-		],
-		[t]
-	);
-
-	const [zimbraDistributionListSubscriptionPolicy, setZimbraDistributionListSubscriptionPolicy] =
-		useState<any>(subscriptionUnsubscriptionRequestOptions[0]);
-
-	const [
-		zimbraDistributionListUnsubscriptionPolicy,
-		setZimbraDistributionListUnsubscriptionPolicy
-	] = useState<any>(subscriptionUnsubscriptionRequestOptions[0]);
-
 	const [zimbraMailStatus, setZimbraMailStatus] = useState<any>(rightsOptions[1]);
-
-	const onSubscriptionChange = (v: any): any => {
-		const it = subscriptionUnsubscriptionRequestOptions.find((item: any) => item.value === v);
-		setZimbraDistributionListSubscriptionPolicy(it);
-	};
-
-	const onUnSubscriptionChange = (v: any): any => {
-		const it = subscriptionUnsubscriptionRequestOptions.find((item: any) => item.value === v);
-		setZimbraDistributionListUnsubscriptionPolicy(it);
-	};
 
 	const onRightsChange = (v: any): any => {
 		const it = rightsOptions.find((item: any) => item.value === v);
@@ -431,9 +482,6 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 							ownersList.concat({ id: accountExists[0]?.id, name: accountExists[0]?.name })
 						);
 					} else {
-						setOwnersList(
-							ownersList.concat({ id: accountExists[0]?.id, name: accountExists[0]?.name })
-						);
 						setDlm(dlm.concat(accountExists[0]?.name));
 					}
 					setOpenAddMailingListDialog(false);
@@ -457,7 +505,27 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 	};
 
 	const onUndo = (): void => {
-		console.log('cancel');
+		previousDetail?.displayName ? setDisplayName(previousDetail?.displayName) : setDisplayName('');
+		setDistributionName(previousDetail?.distributionName);
+		previousDetail?.zimbraHideInGal ? setZimbraHideInGal(true) : setZimbraHideInGal(false);
+		previousDetail?.dlm !== undefined ? setDlm(previousDetail?.dlm) : setDlm([]);
+		previousDetail?.ownersList !== undefined
+			? setOwnersList(previousDetail?.ownersList)
+			: setOwnersList([]);
+		previousDetail?.dlMembershipList !== undefined
+			? setDlMembershipList(previousDetail?.dlMembershipList)
+			: setDlMembershipList([]);
+		previousDetail?.zimbraNotes ? setZimbraNotes(previousDetail?.zimbraNotes) : setZimbraNotes('');
+		previousDetail?.zimbraDistributionListSendShareMessageToNewMembers
+			? setZimbraDistributionListSendShareMessageToNewMembers(true)
+			: setZimbraDistributionListSendShareMessageToNewMembers(false);
+		setZimbraDistributionListUnsubscriptionPolicy(
+			previousDetail?.zimbraDistributionListUnsubscriptionPolicy
+		);
+		setZimbraDistributionListSubscriptionPolicy(
+			previousDetail?.zimbraDistributionListSubscriptionPolicy
+		);
+		setIsDirty(false);
 	};
 
 	const callAllRequest = (requests: any): void => {
@@ -735,6 +803,32 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 	}, [
 		previousDetail?.zimbraDistributionListSendShareMessageToNewMembers,
 		zimbraDistributionListSendShareMessageToNewMembers
+	]);
+
+	useEffect(() => {
+		if (
+			previousDetail?.zimbraDistributionListSubscriptionPolicy !== undefined &&
+			previousDetail?.zimbraDistributionListSubscriptionPolicy.value !==
+				zimbraDistributionListSubscriptionPolicy.value
+		) {
+			setIsDirty(true);
+		}
+	}, [
+		previousDetail?.zimbraDistributionListSubscriptionPolicy,
+		zimbraDistributionListSubscriptionPolicy
+	]);
+
+	useEffect(() => {
+		if (
+			previousDetail?.zimbraDistributionListUnsubscriptionPolicy !== undefined &&
+			previousDetail?.zimbraDistributionListUnsubscriptionPolicy.value !==
+				zimbraDistributionListUnsubscriptionPolicy.value
+		) {
+			setIsDirty(true);
+		}
+	}, [
+		previousDetail?.zimbraDistributionListUnsubscriptionPolicy,
+		zimbraDistributionListUnsubscriptionPolicy
 	]);
 
 	useEffect(() => {
