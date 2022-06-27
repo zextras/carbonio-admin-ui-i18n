@@ -65,7 +65,7 @@ export enum TRUE_FALSE {
 	FALSE = 'FALSE'
 }
 
-const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingListDetailView }) => {
+const EditMailingListView: FC<any> = ({ selectedMailingList, setShowMailingListDetailView }) => {
 	const [t] = useTranslation();
 	const createSnackbar: any = useContext(SnackbarManagerContext);
 	const [memberOffset, setMemberOffset] = useState<number>(0);
@@ -1263,4 +1263,4 @@ const MailingListDetailView: FC<any> = ({ selectedMailingList, setShowMailingLis
 		</MailingListDetailContainer>
 	);
 };
-export default MailingListDetailView;
+export default EditMailingListView;

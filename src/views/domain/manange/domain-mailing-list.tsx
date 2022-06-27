@@ -21,7 +21,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import logo from '../../../assets/gardian.svg';
 import Paginig from '../../components/paging';
 import { searchDirectory } from '../../../services/search-directory-service';
-import MailingListDetailView from './mailing-list-detail-view';
+import EditMailingListView from './edit-mailing-detail-view';
 
 const DomainMailingList: FC = () => {
 	const [t] = useTranslation();
@@ -282,7 +282,7 @@ const DomainMailingList: FC = () => {
 				</Row>
 			</Container>
 			{showMailingListDetailView && (
-				<MailingListDetailView
+				<EditMailingListView
 					selectedMailingList={selectedMailingList}
 					setShowMailingListDetailView={setShowMailingListDetailView}
 				/>
