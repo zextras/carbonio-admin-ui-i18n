@@ -19,7 +19,8 @@ import { useTranslation } from 'react-i18next';
 const CreateAccountDetailSection: FC<{
 	domainName: string | undefined;
 	setUserName: any;
-}> = ({ domainName, setUserName }) => {
+	setDescription: any;
+}> = ({ domainName, setUserName, setDescription }) => {
 	const [t] = useTranslation();
 	const [isCheck, setIsCheck] = useState(true);
 	return (
@@ -201,6 +202,9 @@ const CreateAccountDetailSection: FC<{
 						height="85px"
 						label={t('label.description', 'Description')}
 						name="ArnName"
+						onChange={(e: any): any => {
+							setDescription(e.target.value);
+						}}
 					/>
 				</Row>
 			</Row>

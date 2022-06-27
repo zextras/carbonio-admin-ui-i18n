@@ -58,9 +58,16 @@ const CreateAccount: FC<{
 	const [wizardData, setWizardData] = useState();
 	const [userName, setUserName] = useState('');
 	const [password, setPassword] = useState('password');
+	const [description, setDescription] = useState('');
 
 	const CreateAccountDetailSectionCB = useCallback(
-		() => <CreateAccountDetailSection domainName={domainName} setUserName={setUserName} />,
+		() => (
+			<CreateAccountDetailSection
+				domainName={domainName}
+				setUserName={setUserName}
+				setDescription={setDescription}
+			/>
+		),
 		[domainName]
 	);
 	const CreateAccountSectionCB = useCallback(
@@ -124,7 +131,7 @@ const CreateAccount: FC<{
 					onClick={(): void => {
 						setShowCreateAccountView(false);
 						setSnackBarData(true);
-						createAccountReq({}, `${userName}@${domainName}`, password);
+						createAccountReq({ description }, `${userName}@${domainName}`, password);
 					}}
 				/>
 			)
