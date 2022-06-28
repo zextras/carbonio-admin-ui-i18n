@@ -214,6 +214,12 @@ const DomainMailingList: FC = () => {
 		searchMailingListQuery(searchString);
 	}, [searchString, searchMailingListQuery]);
 
+	useEffect(() => {
+		if (showMailingListDetailView !== undefined && !showMailingListDetailView) {
+			getMailingList();
+		}
+	}, [showMailingListDetailView, getMailingList]);
+
 	return (
 		<Container padding={{ all: 'large' }} mainAlignment="flex-start" background="gray6">
 			<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
