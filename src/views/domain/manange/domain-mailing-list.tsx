@@ -37,6 +37,7 @@ const DomainMailingList: FC = () => {
 	const [totalAccount, setTotalAccount] = useState<number>(0);
 	const [selectedMailingList, setSelectedMailingList] = useState<any>({});
 	const [showMailingListDetailView, setShowMailingListDetailView] = useState<any>();
+	const [showEditMailingView, setShowEditMailingView] = useState<any>();
 	const [searchString, setSearchString] = useState<string>('');
 	const [searchQuery, setSearchQuery] = useState<string>('');
 	const headers: any[] = useMemo(
@@ -100,86 +101,92 @@ const DomainMailingList: FC = () => {
 						mList.push({
 							id: item?.id,
 							columns: [
-								<Text
-									size="small"
-									weight="light"
+								<Row
+									mainAlignment="flex-start"
+									crossAlignment="flex-start"
 									key={item?.id}
-									color="gray0"
-									onClick={(event: { stopPropagation: () => void }): void => {
+									onDoubleClick={(event: { stopPropagation: () => void }): void => {
 										event.stopPropagation();
 										setSelectedMailingList(item);
-										setShowMailingListDetailView(true);
+										setShowEditMailingView(true);
 									}}
 								>
-									{item?.a?.find((a: any) => a?.n === 'displayName')?._content}
-								</Text>,
-								<Text
-									size="medium"
-									weight="light"
+									<Text size="small" weight="light" key={item?.id} color="gray0">
+										{item?.a?.find((a: any) => a?.n === 'displayName')?._content}
+									</Text>
+								</Row>,
+								<Row
+									mainAlignment="flex-start"
+									crossAlignment="flex-start"
 									key={item?.id}
-									color="gray0"
-									onClick={(event: { stopPropagation: () => void }): void => {
+									onDoubleClick={(event: { stopPropagation: () => void }): void => {
 										event.stopPropagation();
 										setSelectedMailingList(item);
-										setShowMailingListDetailView(true);
+										setShowEditMailingView(true);
 									}}
 								>
-									{item?.name}
-								</Text>,
-								<Text
-									size="medium"
-									weight="light"
+									<Text size="medium" weight="light" key={item?.id} color="gray0">
+										{item?.name}
+									</Text>
+								</Row>,
+								<Row
+									mainAlignment="flex-start"
+									crossAlignment="flex-start"
 									key={item?.id}
-									color="gray0"
-									onClick={(event: { stopPropagation: () => void }): void => {
+									onDoubleClick={(event: { stopPropagation: () => void }): void => {
 										event.stopPropagation();
 										setSelectedMailingList(item);
-										setShowMailingListDetailView(true);
+										setShowEditMailingView(true);
 									}}
 								>
-									{''}
-								</Text>,
-								<Text
-									size="medium"
-									weight="light"
+									<Text size="medium" weight="light" key={item?.id} color="gray0">
+										{''}
+									</Text>
+								</Row>,
+								<Row
+									mainAlignment="flex-start"
+									crossAlignment="flex-start"
 									key={item?.id}
-									color="gray0"
-									onClick={(event: { stopPropagation: () => void }): void => {
+									onDoubleClick={(event: { stopPropagation: () => void }): void => {
 										event.stopPropagation();
 										setSelectedMailingList(item);
-										setShowMailingListDetailView(true);
+										setShowEditMailingView(true);
 									}}
 								>
-									{item?.a?.find((a: any) => a?.n === 'zimbraMailStatus')?._content === 'enabled'
-										? t('label.can_receive', 'Can receive')
-										: ''}
-								</Text>,
-								<Text
-									size="medium"
-									weight="light"
+									<Text size="medium" weight="light" key={item?.id} color="gray0">
+										{item?.a?.find((a: any) => a?.n === 'zimbraMailStatus')?._content === 'enabled'
+											? t('label.can_receive', 'Can receive')
+											: ''}
+									</Text>
+								</Row>,
+								<Row
+									mainAlignment="flex-start"
+									crossAlignment="flex-start"
 									key={item?.id}
-									color="gray0"
-									onClick={(event: { stopPropagation: () => void }): void => {
+									onDoubleClick={(event: { stopPropagation: () => void }): void => {
 										event.stopPropagation();
 										setSelectedMailingList(item);
-										setShowMailingListDetailView(true);
+										setShowEditMailingView(true);
 									}}
 								>
-									{''}
-								</Text>,
-								<Text
-									size="medium"
-									weight="light"
+									<Text size="medium" weight="light" key={item?.id} color="gray0">
+										{''}
+									</Text>
+								</Row>,
+								<Row
+									mainAlignment="flex-start"
+									crossAlignment="flex-start"
 									key={item?.id}
-									color="gray0"
-									onClick={(event: { stopPropagation: () => void }): void => {
+									onDoubleClick={(event: { stopPropagation: () => void }): void => {
 										event.stopPropagation();
 										setSelectedMailingList(item);
-										setShowMailingListDetailView(true);
+										setShowEditMailingView(true);
 									}}
 								>
-									{item?.a?.find((a: any) => a?.n === 'description')?._content}
-								</Text>
+									<Text size="medium" weight="light" key={item?.id} color="gray0">
+										{item?.a?.find((a: any) => a?.n === 'description')?._content}
+									</Text>
+								</Row>
 							]
 						});
 					});
@@ -216,10 +223,10 @@ const DomainMailingList: FC = () => {
 	}, [searchString, searchMailingListQuery]);
 
 	useEffect(() => {
-		if (showMailingListDetailView !== undefined && !showMailingListDetailView) {
+		if (showEditMailingView !== undefined && !showEditMailingView) {
 			getMailingList();
 		}
-	}, [showMailingListDetailView, getMailingList]);
+	}, [showEditMailingView, getMailingList]);
 
 	return (
 		<Container padding={{ all: 'large' }} mainAlignment="flex-start" background="gray6">
@@ -361,12 +368,12 @@ const DomainMailingList: FC = () => {
 					</Container>
 				</Row>
 			</Container>
-			{/* {showMailingListDetailView && (
+			{showEditMailingView && (
 				<EditMailingListView
 					selectedMailingList={selectedMailingList}
-					setShowMailingListDetailView={setShowMailingListDetailView}
+					setShowMailingListDetailView={setShowEditMailingView}
 				/>
-			)} */}
+			)}
 
 			{showMailingListDetailView && (
 				<MailingListDetail
