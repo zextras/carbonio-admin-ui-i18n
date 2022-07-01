@@ -95,7 +95,7 @@ const CreateAccountDetailSection: FC = () => {
 			padding={{ left: 'large', right: 'extralarge', bottom: 'large' }}
 		>
 			<Row mainAlignment="flex-start" padding={{ left: 'small' }} width="100%">
-				<Text size="small" color="Gray0" weight="bold">
+				<Text size="small" color="gray0" weight="bold">
 					{t('label.account', 'Account')}
 				</Text>
 				<Row padding={{ top: 'large', left: 'large' }} width="100%">
@@ -226,7 +226,7 @@ const CreateAccountDetailSection: FC = () => {
 			</Row>
 			<Row mainAlignment="flex-start" padding={{ top: 'large', left: 'small' }} width="100%">
 				<Row padding={{ top: 'large' }}>
-					<Text size="small" color="Gray0" weight="bold">
+					<Text size="small" color="gray0" weight="bold">
 						Settings
 					</Text>
 				</Row>
@@ -296,7 +296,7 @@ const CreateAccountDetailSection: FC = () => {
 			</Row>
 			<Row mainAlignment="flex-start" padding={{ top: 'large', left: 'small' }} width="100%">
 				<Row padding={{ top: 'large' }}>
-					<Text size="small" color="Gray0" weight="bold">
+					<Text size="small" color="gray0" weight="bold">
 						Notes
 					</Text>
 				</Row>
