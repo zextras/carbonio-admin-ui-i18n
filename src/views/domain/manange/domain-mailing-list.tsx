@@ -261,8 +261,12 @@ const DomainMailingList: FC = () => {
 	}, [showEditMailingView, getMailingList]);
 
 	const onDetailClick = useCallback(() => {
+		const selectedTableItem = mailingListItem.find((item: any) => selectedDlRow[0] === item?.id);
+		setSelectedFromRow(selectedTableItem);
+		setSelectedMailingList(selectedTableItem);
 		setShowMailingListDetailView(true);
-	}, []);
+		setShowMailingListDetailView(true);
+	}, [selectedDlRow, mailingListItem]);
 
 	useEffect(() => {
 		if (showMailingListDetailView !== undefined && !showMailingListDetailView) {
