@@ -590,7 +590,9 @@
         "save_index": "Сохранить индекс",
         "max_waiting_time": "Максимальное время ожидания",
         "max_operations_account": "Максимальное количество операций / учетная запись",
-        "metatdata_size": "Размер метаданных"
+        "metatdata_size": "Размер метаданных",
+        "latency_low_threshold": "Низкий порог задержки",
+        "latency_high_threshold": "Верхний порог задержки"
     },
     "welcome_to_carbonio": "Добро пожаловать, {{adminName}}, в Carbonio {{carbonioVersion}}!",
     "select_section_from_left_menu": "Пожалуйста, выберите раздел в меню слева",
