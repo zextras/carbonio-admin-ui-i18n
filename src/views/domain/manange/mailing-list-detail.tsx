@@ -460,7 +460,6 @@ const MailingListDetail: FC<any> = ({
 							value={displayName}
 							background="gray6"
 							readOnly
-							disabled
 						/>
 					</Container>
 					<Container width="64px" padding={{ right: 'small' }}>
@@ -471,7 +470,6 @@ const MailingListDetail: FC<any> = ({
 							label={t('label.address', 'Address')}
 							value={distributionName}
 							background="gray6"
-							disabled
 						/>
 					</Container>
 				</ListRow>
@@ -484,7 +482,6 @@ const MailingListDetail: FC<any> = ({
 						<Input
 							background="gray6"
 							label={t('label.new_subscription_requests', 'New subscriptions requests')}
-							disabled
 							readOnly
 							value={zimbraDistributionListSubscriptionPolicy?.label}
 						/>
@@ -498,7 +495,6 @@ const MailingListDetail: FC<any> = ({
 							background="gray6"
 							label={t('label.unsubscribe_request', 'Unsubscription requests')}
 							readOnly
-							disabled
 							value={zimbraDistributionListUnsubscriptionPolicy?.label}
 						/>
 					</Container>
@@ -512,7 +508,6 @@ const MailingListDetail: FC<any> = ({
 							background="gray6"
 							label={t('label.rights', 'Rights')}
 							readOnly
-							disabled
 							value={zimbraMailStatus?.label}
 						/>
 					</Container>
@@ -550,7 +545,7 @@ const MailingListDetail: FC<any> = ({
 							label={t('label.members', 'Members')}
 							value={dlm.length}
 							background="gray6"
-							disabled
+							readOnly
 						/>
 					</Container>
 					<Container width="64px" padding={{ right: 'small' }}>
@@ -561,7 +556,7 @@ const MailingListDetail: FC<any> = ({
 							label={t('label.alias_in_the_list', 'Alias in the List')}
 							value={zimbraMailAlias.length}
 							background="gray6"
-							disabled
+							readOnly
 						/>
 					</Container>
 				</ListRow>
@@ -570,7 +565,7 @@ const MailingListDetail: FC<any> = ({
 						<Icon icon={'FingerPrintOutline'} size="large" />
 					</Container>
 					<Container padding={{ all: 'small' }}>
-						<Input label={t('label.id_lbl', 'ID')} value={dlId} background="gray5" disabled />
+						<Input label={t('label.id_lbl', 'ID')} value={dlId} background="gray5" readOnly />
 					</Container>
 					<Container width="64px" padding={{ right: 'small' }}>
 						<Icon icon={'CalendarOutline'} size="large" />
@@ -580,7 +575,7 @@ const MailingListDetail: FC<any> = ({
 							label={t('label.creation_date', 'Creation Date')}
 							value={dlCreateDate}
 							background="gray6"
-							disabled
+							readOnly
 						/>
 					</Container>
 				</ListRow>
@@ -626,7 +621,7 @@ const MailingListDetail: FC<any> = ({
 							value={zimbraNotes}
 							label={t('label.notes', 'Notes')}
 							background="gray6"
-							disabled
+							readOnly
 						/>
 					</Container>
 				</ListRow>
