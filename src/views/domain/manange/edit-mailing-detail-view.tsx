@@ -86,6 +86,9 @@ const EditMailingListView: FC<any> = ({
 	const [isShowError, setIsShowError] = useState<boolean>(false);
 	const [isDirty, setIsDirty] = useState<boolean>(false);
 	const [searchMember, setSearchMember] = useState<string>();
+	const [memberURL, setMemberURL] = useState<string>();
+	const [ownerOfList, setOwnerOfList] = useState<any[]>([]);
+	const [searchOwnerMemberOfList, setSearchOwnerMemberOfList] = useState<any[]>([]);
 
 	const dlCreateDate = useMemo(
 		() =>
@@ -217,15 +220,35 @@ const EditMailingListView: FC<any> = ({
 							}));
 						}
 						if (distributionListMembers?.owners && distributionListMembers?.owners[0]?.owner) {
-							setOwnersList(distributionListMembers?.owners[0]?.owner);
-							setPreviousDetail((prevState: any) => ({
-								...prevState,
-								ownersList: distributionListMembers?.owners[0]?.owner
-							}));
-						} else {
+							if (!selectedMailingList?.dynamic) {
+								setOwnersList(distributionListMembers?.owners[0]?.owner);
+								setPreviousDetail((prevState: any) => ({
+									...prevState,
+									ownersList: distributionListMembers?.owners[0]?.owner
+								}));
+							} else if (selectedMailingList?.dynamic) {
+								const dataItem = distributionListMembers?.owners[0]?.owner.map((item: any) => ({
+									label: item?.name,
+									background: 'gray3',
+									color: 'text',
+									id: item?.id,
+									name: item?.name
+								}));
+								setOwnerOfList(dataItem);
+								setPreviousDetail((prevState: any) => ({
+									...prevState,
+									ownerOfList: dataItem
+								}));
+							}
+						} else if (!selectedMailingList?.dynamic) {
 							setPreviousDetail((prevState: any) => ({
 								...prevState,
 								ownersList: []
+							}));
+						} else if (selectedMailingList?.dynamic) {
+							setPreviousDetail((prevState: any) => ({
+								...prevState,
+								ownerOfList: []
 							}));
 						}
 						if (distributionListMembers?.a) {
@@ -355,6 +378,23 @@ const EditMailingListView: FC<any> = ({
 									zimbraMailStatus: rightsOptions[1]
 								}));
 							}
+
+							const _memberURL = distributionListMembers?.a?.find(
+								(a: any) => a?.n === 'memberURL'
+							)?._content;
+
+							if (_memberURL) {
+								setMemberURL(_memberURL);
+								setPreviousDetail((prevState: any) => ({
+									...prevState,
+									memberURL: _memberURL
+								}));
+							} else if (selectedMailingList?.dynamic) {
+								setPreviousDetail((prevState: any) => ({
+									...prevState,
+									memberURL: ''
+								}));
+							}
 						}
 					}
 				});
@@ -365,7 +405,8 @@ const EditMailingListView: FC<any> = ({
 			onSubscriptionChange,
 			onUnSubscriptionChange,
 			rightsOptions,
-			onRightsChange
+			onRightsChange,
+			selectedMailingList?.dynamic
 		]
 	);
 
@@ -419,7 +460,9 @@ const EditMailingListView: FC<any> = ({
 			distributionName: selectedMailingList?.name
 		}));
 		getMailingList(selectedMailingList?.id, selectedMailingList?.name);
-		getDistributionListMembershipList(selectedMailingList?.id);
+		if (!selectedMailingList?.dynamic) {
+			getDistributionListMembershipList(selectedMailingList?.id);
+		}
 	}, [selectedMailingList, getMailingList, getDistributionListMembershipList]);
 
 	useEffect(() => {
@@ -464,8 +507,6 @@ const EditMailingListView: FC<any> = ({
 			.then((data) => {
 				const result = data?.Body?.SearchDirectoryResponse?.dl;
 				if (result && result.length > 0) {
-					// setSearchMemberList(result);
-
 					const allResult = result.map((item: any) => {
 						// eslint-disable-next-line no-param-reassign
 						item.label = item?.name;
@@ -482,8 +523,54 @@ const EditMailingListView: FC<any> = ({
 			});
 	}, []);
 
+	const getOwnerOfListSearch = useCallback(
+		(value: string) => {
+			const attrs =
+				'displayName,zimbraId,zimbraAliasTargetId,cn,sn,zimbraMailHost,uid,zimbraCOSId,zimbraAccountStatus,zimbraLastLogonTimestamp,description,zimbraIsSystemAccount,zimbraIsDelegatedAdminAccount,zimbraIsAdminAccount,zimbraIsSystemResource,zimbraAuthTokenValidityValue,zimbraIsExternalVirtualAccount,zimbraMailStatus,zimbraIsAdminGroup,zimbraCalResType,zimbraDomainType,zimbraDomainName,zimbraDomainStatus';
+			const types = 'accounts,distributionlists,aliases';
+			const query = `(&(&(!(zimbraAccountStatus=closed))(|(mail=*${value}*)(cn=*${value}*)(sn=*${value}*)(gn=*${value}*)(displayName=*${value}*)(zimbraMailDeliveryAddress=*${value}*)(zimbraMailAlias=*${value}*)(uid=*${value}*)(zimbraDomainName=*${value}*)(uid=*${value}*)))(&(!(mail=${distributionName}))(!(zimbraMailAddress=${distributionName}))(!(zimbraMailDeliveryAddress=${distributionName}))(!(zimbraMailForwardingAddress=${distributionName}))(!(zimbraMemberOf=${distributionName}))))`;
+			searchDirectory(attrs, types, '', query)
+				.then((response) => response.json())
+				.then((data) => {
+					const result: any[] = [];
+
+					const dl = data?.Body?.SearchDirectoryResponse?.dl;
+					const account = data?.Body?.SearchDirectoryResponse?.account;
+					const alias = data?.Body?.SearchDirectoryResponse?.alias;
+					if (dl) {
+						dl.map((item: any) => result.push(item));
+					}
+					if (account) {
+						account.map((item: any) => result.push(item));
+					}
+					if (alias) {
+						alias.map((item: any) => result.push(item));
+					}
+					if (result && result.length > 0) {
+						const allResult = result.map((item: any) => {
+							// eslint-disable-next-line no-param-reassign
+							item.label = item?.name;
+							// eslint-disable-next-line no-param-reassign
+							item.value = {
+								label: item?.name,
+								id: item?.id
+							};
+							// eslint-disable-next-line no-param-reassign
+							return item;
+						});
+						setSearchOwnerMemberOfList(allResult);
+					}
+				});
+		},
+		[distributionName]
+	);
+
 	const onChangeChipInput = useCallback((e: any): void => {
 		setDlMembershipList(e);
+	}, []);
+
+	const onChangeOwnerOfListChipInput = useCallback((e: any): void => {
+		setOwnerOfList(e);
 	}, []);
 
 	const isEnableDeleteButton = useMemo(
@@ -550,12 +637,20 @@ const EditMailingListView: FC<any> = ({
 		latestData.zimbraDistributionListSubscriptionPolicy = zimbraDistributionListSubscriptionPolicy;
 		latestData.zimbraMailStatus = zimbraMailStatus;
 
+		if (selectedMailingList?.dynamic) {
+			latestData.memberURL = memberURL;
+			ownerOfList ? (latestData.ownerOffset = ownerOfList) : (latestData.ownerOffset = []);
+		}
+
 		setPreviousDetail(latestData);
 		setIsDirty(false);
 	};
 
 	const onUndo = (): void => {
 		previousDetail?.displayName ? setDisplayName(previousDetail?.displayName) : setDisplayName('');
+		if (selectedMailingList?.dynamic) {
+			previousDetail?.memberURL ? setMemberURL(previousDetail?.memberURL) : setMemberURL('');
+		}
 		setDistributionName(previousDetail?.distributionName);
 		previousDetail?.zimbraHideInGal ? setZimbraHideInGal(true) : setZimbraHideInGal(false);
 		previousDetail?.dlm !== undefined ? setDlm(previousDetail?.dlm) : setDlm([]);
@@ -582,6 +677,11 @@ const EditMailingListView: FC<any> = ({
 		previousDetail?.zimbraMailStatus !== undefined
 			? setZimbraMailStatus(previousDetail?.zimbraMailStatus)
 			: setZimbraMailStatus(rightsOptions[1]);
+		if (selectedMailingList?.dynamic) {
+			previousDetail?.ownerOfList !== undefined
+				? setOwnerOfList(previousDetail?.ownerOfList)
+				: setOwnerOfList([]);
+		}
 		setIsDirty(false);
 	};
 
@@ -829,6 +929,15 @@ const EditMailingListView: FC<any> = ({
 
 	useEffect(() => {
 		if (
+			previousDetail?.ownerOfList !== undefined &&
+			!isEqual(previousDetail?.ownerOfList, ownerOfList)
+		) {
+			setIsDirty(true);
+		}
+	}, [previousDetail?.ownerOfList, ownerOfList]);
+
+	useEffect(() => {
+		if (
 			previousDetail?.ownersList !== undefined &&
 			!isEqual(previousDetail?.ownersList, ownersList)
 		) {
@@ -900,6 +1009,12 @@ const EditMailingListView: FC<any> = ({
 	}, [previousDetail?.zimbraMailStatus, zimbraMailStatus]);
 
 	useEffect(() => {
+		if (previousDetail?.memberURL !== undefined && previousDetail?.memberURL !== memberURL) {
+			setIsDirty(true);
+		}
+	}, [previousDetail?.memberURL, memberURL]);
+
+	useEffect(() => {
 		if (openAddMailingListDialog) {
 			setSearchMailingListOrUser('');
 		}
@@ -960,7 +1075,11 @@ const EditMailingListView: FC<any> = ({
 				<Row padding={{ horizontal: 'small' }}></Row>
 				<Row takeAvailableSpace mainAlignment="flex-start">
 					<Text size="medium" overflow="ellipsis" weight="bold">
-						{selectedMailingList?.name}
+						{selectedMailingList?.name} (
+						{selectedMailingList?.dynamic
+							? t('label.dynamic', 'Dynamic')
+							: t('label.standard', 'Standard')}
+						)
 					</Text>
 				</Row>
 				<Row padding={{ right: 'extrasmall' }}>
@@ -1106,6 +1225,23 @@ const EditMailingListView: FC<any> = ({
 						/>
 					</Container>
 				</ListRow>
+				{selectedMailingList?.dynamic && (
+					<ListRow>
+						<Container width="fit" padding={{ right: 'small' }}>
+							<Icon icon={'Link2Outline'} size="large" />
+						</Container>
+						<Container>
+							<Input
+								label={t('label.list_url', 'List URL')}
+								value={memberURL}
+								background="gray5"
+								onChange={(e: any): any => {
+									setMemberURL(e.target.value);
+								}}
+							/>
+						</Container>
+					</ListRow>
+				)}
 				<ListRow>
 					<Container width="64px" padding={{ right: 'small' }}>
 						<Icon icon={'PeopleOutline'} size="large" />
@@ -1155,22 +1291,43 @@ const EditMailingListView: FC<any> = ({
 						{t('label.manage_list', 'Manage List')}
 					</Text>
 				</Row>
-				<ListRow>
-					<Container padding={{ top: 'small', bottom: 'small' }}>
-						<ChipInput
-							placeholder={t('label.this_list_is_member_of', 'This List is member of')}
-							value={dlMembershipList}
-							onInputType={(e: any): void => {
-								if (e.textContent && e.textContent !== '') {
-									getSearchMembers(e.textContent);
-								}
-							}}
-							options={searchMemberList}
-							onChange={onChangeChipInput}
-							requireUniqueChips
-						/>
-					</Container>
-				</ListRow>
+				{!selectedMailingList?.dynamic && (
+					<ListRow>
+						<Container padding={{ top: 'small', bottom: 'small' }}>
+							<ChipInput
+								placeholder={t('label.this_list_is_member_of', 'This List is member of')}
+								value={dlMembershipList}
+								onInputType={(e: any): void => {
+									if (e.textContent && e.textContent !== '') {
+										getSearchMembers(e.textContent);
+									}
+								}}
+								options={searchMemberList}
+								onChange={onChangeChipInput}
+								requireUniqueChips
+							/>
+						</Container>
+					</ListRow>
+				)}
+
+				{selectedMailingList?.dynamic && (
+					<ListRow>
+						<Container padding={{ top: 'small', bottom: 'small' }}>
+							<ChipInput
+								placeholder={t('label.owners_of_the_list', 'Owners of the List')}
+								value={ownerOfList}
+								onInputType={(e: any): void => {
+									if (e.textContent && e.textContent !== '') {
+										getOwnerOfListSearch(e.textContent);
+									}
+								}}
+								options={searchOwnerMemberOfList}
+								onChange={onChangeOwnerOfListChipInput}
+								requireUniqueChips
+							/>
+						</Container>
+					</ListRow>
+				)}
 				<Row
 					takeAvwidth="fill"
 					mainAlignment="flex-start"
@@ -1236,17 +1393,20 @@ const EditMailingListView: FC<any> = ({
 					</Container>
 				</Row>
 				<ListRow>
-					<Container mainAlignment="flex-start" padding={{ top: 'small', bottom: 'small' }}>
-						<Table
-							rows={dlmTableRows}
-							headers={memberHeaders}
-							showCheckbox={false}
-							selectedRows={selectedDistributionListMember}
-							onSelectionChange={(selected: any): void =>
-								setSelectedDistributionListMember(selected)
-							}
-						/>
-					</Container>
+					{!selectedMailingList?.dynamic && (
+						<Container mainAlignment="flex-start" padding={{ top: 'small', bottom: 'small' }}>
+							<Table
+								rows={dlmTableRows}
+								headers={memberHeaders}
+								showCheckbox={false}
+								selectedRows={selectedDistributionListMember}
+								onSelectionChange={(selected: any): void =>
+									setSelectedDistributionListMember(selected)
+								}
+							/>
+						</Container>
+					)}
+
 					<Container
 						padding={{ left: 'small', top: 'small', bottom: 'small' }}
 						mainAlignment="flex-start"
