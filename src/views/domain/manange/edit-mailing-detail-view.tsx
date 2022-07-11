@@ -208,47 +208,43 @@ const EditMailingListView: FC<any> = ({
 						}
 						if (distributionListMembers?.dlm) {
 							const _dlm = distributionListMembers?.dlm.map((item: any) => item?._content);
-							setDlm(_dlm);
-							setPreviousDetail((prevState: any) => ({
-								...prevState,
-								dlm: _dlm
-							}));
-						} else {
-							setPreviousDetail((prevState: any) => ({
-								...prevState,
-								dlm: []
-							}));
-						}
-						if (distributionListMembers?.owners && distributionListMembers?.owners[0]?.owner) {
 							if (!selectedMailingList?.dynamic) {
-								setOwnersList(distributionListMembers?.owners[0]?.owner);
+								setDlm(_dlm);
 								setPreviousDetail((prevState: any) => ({
 									...prevState,
-									ownersList: distributionListMembers?.owners[0]?.owner
+									dlm: _dlm
 								}));
-							} else if (selectedMailingList?.dynamic) {
-								const dataItem = distributionListMembers?.owners[0]?.owner.map((item: any) => ({
-									label: item?.name,
+							} else {
+								const allMembers = _dlm.map((item: any) => ({
+									label: item,
 									background: 'gray3',
 									color: 'text',
-									id: item?.id,
-									name: item?.name
+									id: item,
+									name: item
 								}));
-								setOwnerOfList(dataItem);
-								setPreviousDetail((prevState: any) => ({
-									...prevState,
-									ownerOfList: dataItem
-								}));
+								setOwnerOfList(allMembers);
 							}
 						} else if (!selectedMailingList?.dynamic) {
 							setPreviousDetail((prevState: any) => ({
 								...prevState,
-								ownersList: []
+								dlm: []
 							}));
 						} else if (selectedMailingList?.dynamic) {
 							setPreviousDetail((prevState: any) => ({
 								...prevState,
 								ownerOfList: []
+							}));
+						}
+						if (distributionListMembers?.owners && distributionListMembers?.owners[0]?.owner) {
+							setOwnersList(distributionListMembers?.owners[0]?.owner);
+							setPreviousDetail((prevState: any) => ({
+								...prevState,
+								ownersList: distributionListMembers?.owners[0]?.owner
+							}));
+						} else {
+							setPreviousDetail((prevState: any) => ({
+								...prevState,
+								ownersList: []
 							}));
 						}
 						if (distributionListMembers?.a) {
@@ -686,18 +682,41 @@ const EditMailingListView: FC<any> = ({
 	};
 
 	const callAllRequest = (requests: any): void => {
-		Promise.all(requests).then((response: any) => {
-			createSnackbar({
-				key: 'success',
-				type: 'success',
-				label: t('label.changes_have_been_saved', 'The changes have been saved'),
-				autoHideTimeout: 3000,
-				hideButton: true,
-				replace: true
+		Promise.all(requests)
+			.then((response: any) => Promise.all(response.map((res: any) => res.json())))
+			.then((data: any) => {
+				let isError = false;
+				let errorMessage = '';
+				data.forEach((item: any) => {
+					if (item?.Body?.Fault) {
+						isError = true;
+						errorMessage = item?.Body?.Fault?.Reason?.Text;
+					}
+				});
+				if (isError) {
+					createSnackbar({
+						key: 'error',
+						type: 'error',
+						label: errorMessage,
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+					updatePreviousDetail();
+					setIsUpdateRecord(true);
+				} else {
+					createSnackbar({
+						key: 'success',
+						type: 'success',
+						label: t('label.changes_have_been_saved', 'The changes have been saved'),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+					updatePreviousDetail();
+					setIsUpdateRecord(true);
+				}
 			});
-			updatePreviousDetail();
-			setIsUpdateRecord(true);
-		});
 	};
 
 	const onSave = (): void => {
@@ -732,13 +751,21 @@ const EditMailingListView: FC<any> = ({
 			n: 'zimbraHideInGal',
 			_content: zimbraHideInGal ? 'TRUE' : 'FALSE'
 		});
+		if (!selectedMailingList?.dynamic) {
+			attributes.push({
+				n: 'zimbraDistributionListSendShareMessageToNewMembers',
+				_content: zimbraDistributionListSendShareMessageToNewMembers ? 'TRUE' : 'FALSE'
+			});
+		}
 
-		attributes.push({
-			n: 'zimbraDistributionListSendShareMessageToNewMembers',
-			_content: zimbraDistributionListSendShareMessageToNewMembers ? 'TRUE' : 'FALSE'
-		});
+		if (selectedMailingList?.dynamic) {
+			attributes.push({
+				n: 'memberURL',
+				_content: memberURL
+			});
+		}
+
 		request.push(modifyDistributionList(selectedMailingList?.id, attributes));
-
 		if (
 			previousDetail?.distributionName !== undefined &&
 			previousDetail?.distributionName !== distributionName
@@ -889,6 +916,55 @@ const EditMailingListView: FC<any> = ({
 						}
 					};
 					request.push(distributionListAction(dl, action));
+				});
+			}
+		}
+
+		/* Dynamic Member List */
+		if (
+			selectedMailingList?.dynamic &&
+			previousDetail?.ownerOfList !== undefined &&
+			!isEqual(previousDetail?.ownerOfList, ownerOfList)
+		) {
+			const newAddedMember: any[] = [];
+			ownerOfList.forEach((item: any) => {
+				if (!previousDetail?.ownerOfList.map((i: any) => i?.id).includes(item?.id)) {
+					newAddedMember.push(item);
+				}
+			});
+
+			const removeMember: any[] = [];
+			previousDetail?.ownerOfList.forEach((item: any) => {
+				if (!ownerOfList.map((i: any) => i?.id).includes(item?.id)) {
+					removeMember.push(item);
+				}
+			});
+
+			if (newAddedMember.length > 0) {
+				newAddedMember.forEach((item: any) => {
+					const id: any = {
+						n: 'id',
+						_content: selectedMailingList?.id
+					};
+					const dlmItem: any = {
+						n: 'dlm',
+						_content: distributionName
+					};
+					request.push(addDistributionListMember(id, dlmItem));
+				});
+			}
+
+			if (removeMember.length > 0) {
+				removeMember.forEach((item: any) => {
+					const id: any = {
+						n: 'id',
+						_content: selectedMailingList?.id
+					};
+					const dlmItem: any = {
+						n: 'dlm',
+						_content: distributionName
+					};
+					request.push(removeDistributionListMember(id, dlmItem));
 				});
 			}
 		}
@@ -1286,6 +1362,24 @@ const EditMailingListView: FC<any> = ({
 						/>
 					</Container>
 				</ListRow>
+				{selectedMailingList?.dynamic && (
+					<ListRow>
+						<Container padding={{ top: 'small', bottom: 'small' }}>
+							<ChipInput
+								placeholder={t('label.owners_of_the_list', 'Owners of the List')}
+								value={ownerOfList}
+								onInputType={(e: any): void => {
+									if (e.textContent && e.textContent !== '') {
+										getOwnerOfListSearch(e.textContent);
+									}
+								}}
+								options={searchOwnerMemberOfList}
+								onChange={onChangeOwnerOfListChipInput}
+								requireUniqueChips
+							/>
+						</Container>
+					</ListRow>
+				)}
 				<Row padding={{ top: 'small', bottom: 'small' }}>
 					<Text size="medium" weight="bold" color="gray0">
 						{t('label.manage_list', 'Manage List')}
@@ -1310,24 +1404,6 @@ const EditMailingListView: FC<any> = ({
 					</ListRow>
 				)}
 
-				{selectedMailingList?.dynamic && (
-					<ListRow>
-						<Container padding={{ top: 'small', bottom: 'small' }}>
-							<ChipInput
-								placeholder={t('label.owners_of_the_list', 'Owners of the List')}
-								value={ownerOfList}
-								onInputType={(e: any): void => {
-									if (e.textContent && e.textContent !== '') {
-										getOwnerOfListSearch(e.textContent);
-									}
-								}}
-								options={searchOwnerMemberOfList}
-								onChange={onChangeOwnerOfListChipInput}
-								requireUniqueChips
-							/>
-						</Container>
-					</ListRow>
-				)}
 				<Row
 					takeAvwidth="fill"
 					mainAlignment="flex-start"
