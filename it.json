@@ -386,7 +386,12 @@
         "deleteing": "Cancellazione ",
         "delete_domain_with_account_content_msg": "{{domainName}} non è vuoto: contiene {{domainAccounts}} account di sistema e {{domainAccounts}} account normali. Vuoi procedere con l'eliminazione?",
         "delete_cos_succeess": "{{cosname}} è stata eliminata con successo",
-        "delete_cos_instruction_msg": "Se clicchi il bottone SÌ, ELIMINA, la COS predefinita sostituirà la COS eliminata."
+        "delete_cos_instruction_msg": "Se clicchi il bottone SÌ, ELIMINA, la COS predefinita sostituirà la COS eliminata.",
+        "enter_email_address": "Inserisci indirizzo e-mail",
+        "enable_toaster_notification_for_new_calendar_events": "Abilita notifiche per i nuovi eventi in calendario",
+        "edit_signature": "<bold>Modifica Firma</bold>",
+        "deligated_admin_help_url": "Delegated Admin Help URL",
+        "deleting_cos_msg": "Cancellazione {{cosname}}"
     },
     "message": {
         "snackbar": {
