@@ -110,7 +110,11 @@
         "resource": "Resursă",
         "signatures": "Semnături",
         "standard": "Standard",
-        "user": "Utilizator"
+        "user": "Utilizator",
+        "deleteing": "In curs de stergere",
+        "enable_toaster_notification_for_new_calendar_events": "Activare notificare prin Toaster pentru evenimente de calendar noi",
+        "range_time": "Moment",
+        "search_dot": "Cauta…"
     },
     "core": {
         "subscription": {
@@ -175,7 +179,10 @@
         "s_mime_features": "Caracteristici S/MIME",
         "search_features": "Caracteristicile căutare",
         "show_selection_checkbox_for_selecting_email_contact_voicemail_items_in_a_list_view_for_batch_operations": "Afişare casetă pentru selectarea mesajelor, a persoanelor de contact şi a mesajelor vocale într-o listă pentru operaţii în lot",
-        "view_mail_as_html": "Afişare mesaj ca HTML (când este posibil)"
+        "view_mail_as_html": "Afişare mesaj ca HTML (când este posibil)",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Afişare avertisment când administratorii încearcă să părăsească consola de administrare Carbonio",
+        "group_mail": "Grupare mesaje după:",
+        "range_time": "Moment"
     },
     "locale": {
         "English": "engleză",
