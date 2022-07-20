@@ -162,7 +162,7 @@
     "buckets": {
         "connection": {
             "access_key": "アクセスキー",
-            "notes": "備考"
+            "notes": "注釈"
         }
     },
     "domain": {
@@ -258,7 +258,7 @@
         "new_domain": "新しいドメイン",
         "new_email": "新規メール",
         "no_subject": "件名なし",
-        "notes": "備考",
+        "notes": "注釈",
         "notify_of_changes_made_via_delegated_access": "委任アクセスを通じて行われた変更を通知",
         "out_of_office_cache_lifetime": "社内不在時のキャッシュ有効期間",
         "pending": "保留",
@@ -285,7 +285,7 @@
         "use_the_gal_when_autocompleting_addresses": "アドレスをオートコンプリートするときにGALを使用",
         "virtual_hosts": "仮想ホスト",
         "volumes": "ボリューム",
-        "Notes": "備考",
+        "Notes": "注釈",
         "access_key": "アクセスキー",
         "account_scan": "AccountScan",
         "actions": "操作",
@@ -304,7 +304,7 @@
         "default_appointment_visibility": "デフォルトの予定表示",
         "details": "詳細設定",
         "draft_auto_save_interval": "下書きとして自動保存する間隔",
-        "email": "メール",
+        "email": "メールアドレス",
         "enable_automatic_adding_of_contacts": "連絡先の自動追加を有効にする",
         "enable_mandatory_spell_check": "スペルチェックを強制的に実行する",
         "enable_past_due_reminders": "期限切れリマインダーを有効にする",
@@ -405,7 +405,10 @@
         "s_mime_features": "S/MIMEの機能",
         "search_features": "検索の機能",
         "show_selection_checkbox_for_selecting_email_contact_voicemail_items_in_a_list_view_for_batch_operations": "バッチ操作用のリストビューにメール、連絡先、ボイスメールの項目を選択するためのチェックボックス表示",
-        "view_mail_as_html": "メールをHTML形式で表示（可能な場合）"
+        "view_mail_as_html": "メールをHTML形式で表示（可能な場合）",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "管理者が管理コンソール画面から他のページヘ移動しようとするときに警告を表示",
+        "group_mail": "メールのグループ分け：",
+        "range_time": "時間"
     },
     "locale": {
         "English": "英語",
