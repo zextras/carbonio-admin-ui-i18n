@@ -345,7 +345,8 @@
         "deleteing": "削除",
         "enable_toaster_notification_for_new_calendar_events": "新着カレンダーイベントのためのToaster通知を有効にする",
         "range_time": "時間",
-        "search_dot": "検索…"
+        "search_dot": "検索…",
+        "create_button": "作成"
     },
     "message": {
         "snackbar": {
