@@ -391,7 +391,12 @@
         "enable_toaster_notification_for_new_calendar_events": "Abilita notifiche per i nuovi eventi in calendario",
         "edit_signature": "<bold>Modifica Firma</bold>",
         "deligated_admin_help_url": "Delegated Admin Help URL",
-        "deleting_cos_msg": "Cancellazione {{cosname}}"
+        "deleting_cos_msg": "Cancellazione {{cosname}}",
+        "mx_record_information_msg": "If your MX records point to a spam-relay or any other external server, enter the name of that server in \"Inbound SMTP Host Name\" field.",
+        "manage_list": "Gestisci Lista",
+        "login": "ACCEDI",
+        "initial_mail_serach": "Inizia Ricerca E-mail",
+        "general": "GENERALE"
     },
     "message": {
         "snackbar": {
