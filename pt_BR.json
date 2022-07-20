@@ -339,7 +339,7 @@
         "password_to_bind_external_server_msg": "Quero usar DN/senha para vincular ao servidor externo",
         "no_virtual_host_msg": "Aqui não há hosts virtuais.",
         "need_help": "PRECISA DE AJUDA?",
-        "mx_record_information_msg": "Se seus registros MX apontam para um spam-relay ou qualquer outro servidor externo que não for zimbra, digite o nome desse servidor no campo \"Nome do host SMTP de entrada\".",
+        "mx_record_information_msg": "Se seus registros MX apontam para um spam-relay ou qualquer outro servidor externo que não for Carbonio, digite o nome desse servidor no campo \"Nome do host SMTP de entrada\".",
         "mail_size": "Tamanho do email",
         "management": "Gerenciamento",
         "main_view": "Esta é uma vista",
@@ -612,7 +612,7 @@
         "main_features": "Funcionalidades principais",
         "i_want_to_see_this_cos": "Quero visualizar esta COS",
         "group_mail": "Mail de grupo",
-        "display_a_warning_when_administrators_try_to_navigate_away_from_Zimbra_Administration_Console": "Mostrar um aviso quando os administradores tentam navegar para fora do Console de Administração do Zimbra",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Mostrar um aviso quando os administradores tentam navegar para fora do Console de Administração do Carbonio",
         "composing_mail": "Composição de email"
     },
     "welcome_to_carbonio": "Bem-vindo {{adminName}}, a Carbonio {{carbonioVersion}}!",

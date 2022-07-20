@@ -175,7 +175,7 @@
         "your_auth_method_is": "Votre méthode d'authentification est",
         "inbound_smtp_host_name": "Nom d'hôte SMTP entrant",
         "login_redirect_url": "URL de redirection du Login",
-        "mx_record_information_msg": "Si vous enregistrement MX pointent vers un relay anti-spam ou autre serveur externe non Zimbra, entrez le nom de ce serveur dans le champ \"Inbound SMTP Host Name\".",
+        "mx_record_information_msg": "Si vous enregistrement MX pointent vers un relay anti-spam ou autre serveur externe non Carbonio, entrez le nom de ce serveur dans le champ \"Inbound SMTP Host Name\".",
         "password_to_bind_external_server_msg": "Je souhaite utiliser DN/Mot de passe pour le lier à un serveur externe",
         "logout_allowed_ip": "Déconnexion IP autorisée",
         "allow_sending_cancellation_email_to_organizer": "Autoriser l’envoi d’un mail d’annulation à l’organisateur",
@@ -600,7 +600,7 @@
         "range_time": "Plage de temps",
         "main_features": "Fonctionnalités principales",
         "i_want_to_see_this_cos": "Je souhaite consulter cette COS",
-        "display_a_warning_when_administrators_try_to_navigate_away_from_Zimbra_Administration_Console": "Afficher un avertissement lorsqu'un administrateur tente de naviguer hors de la console d'administration de Zimbra",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Afficher un avertissement lorsqu'un administrateur tente de naviguer hors de la console d'administration de Carbonio",
         "composing_mail": "Rédiger un email",
         "sending_mail": "email en cours d'envoi"
     },
