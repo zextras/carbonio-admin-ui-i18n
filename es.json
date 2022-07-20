@@ -313,7 +313,7 @@
         "domain_status": "Estado del dominio",
         "domain_name": "Nombre de dominio",
         "detail_button": "DETALLES",
-        "deleting_cos_msg": "Eliminando <bold>{{cosname}}</bod>",
+        "deleting_cos_msg": "Eliminando <bold>{{cosname}}</bold>",
         "delete_bucket_sucess": "{{name}} ha sido eliminado",
         "delete_cos_succeess": "{{cosname}} ha sido eliminada correctamente",
         "delete_cos_instruction_msg": "Si hace clic en SÍ, ELIMINAR, la COS por defecto sustituirá a la COS eliminada.",

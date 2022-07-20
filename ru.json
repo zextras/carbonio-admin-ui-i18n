@@ -289,7 +289,7 @@
         "domain_status": "Статус домена",
         "domain_name": "Имя домена",
         "detail_button": "Подробности",
-        "deleting_cos_msg": "Удаление <bold>{{cosname}}</bod>",
+        "deleting_cos_msg": "Удаление <bold>{{cosname}}</bold>",
         "delete_cos_succeess": "{{cosname}} успешно удален",
         "delete_bucket_sucess": "{{name}} был удален",
         "delete_bucket_message_2": "Вы уверены, что хотите удалить соединение с {{bucket_name}}?",

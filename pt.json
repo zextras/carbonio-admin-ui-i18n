@@ -114,7 +114,7 @@
         "space": "Espaços",
         "time_zone": "Fuso horário",
         "type": "Tipo",
-        "deleting_cos_msg": "A eliminar <bold>{{cosname}}</bod>",
+        "deleting_cos_msg": "A eliminar <bold>{{cosname}}</bold>",
         "delet_bucket_header": "A remover {{name}}",
         "auto": "Auto",
         "automatically_accept": "Aceitar automaticamente",
