@@ -84,7 +84,9 @@
         "restore_deleted_email": "Ripristina E-mail eliminate",
         "source_name_internal_gal": "Nome sorgente della GAL interna",
         "type_here_a_domain": "Digita un dominio",
-        "warn_when_reach_space_quota": "Avvisami quando raggiungo lo spazio aggregato di questa quota"
+        "warn_when_reach_space_quota": "Avvisami quando raggiungo lo spazio aggregato di questa quota",
+        "mailbox_space": "Spazio casella di posta",
+        "account_list": "Lista degli account"
     },
     "label": {
         "account": "Account",
@@ -373,7 +375,9 @@
         "surname": "Cognome",
         "user": "Utente",
         "wizard_cancel_button": "CANCELLA",
-        "yes": "Sì"
+        "yes": "Sì",
+        "connector_is_created_by_verification_failed": "CONNETTORE CREATO MA LA VERIFICA È FALLITA",
+        "configration": "CONFIGURAZIONE"
     },
     "message": {
         "snackbar": {
@@ -605,7 +609,10 @@
         "show_IMAP_search_folder": "Mostra le Cartella di ricerca IMAP",
         "show_search_string": "Mostra Stringa di ricerca",
         "standard_html_client": "Client (HTML) Standard",
-        "type_of_UI": "Tipo di UI"
+        "type_of_UI": "Tipo di UI",
+        "range_time": "Tempo",
+        "group_mail": "Raggruppa e-mail per:",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Avvisa l'amministratore quando cerca di navigare al di fuori del pannello amministrativo di Carbonio"
     },
     "lable": {
         "delete_button": "ELIMINA"
@@ -654,5 +661,6 @@
         "label_dutch": "Olandese - {{value}}",
         "label_english": "Inglese - {{value}}",
         "label_french": "Francese - {{value}}"
-    }
+    },
+    "create_new_cos": "CREA NUOVA COS"
 }
