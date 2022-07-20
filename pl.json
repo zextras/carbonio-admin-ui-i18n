@@ -339,7 +339,11 @@
         "surname": "Nazwisko",
         "user": "Użytkownik",
         "wizard_cancel_button": "ANULUJ",
-        "yes": "Tak"
+        "yes": "Tak",
+        "deleteing": "Usuwanie",
+        "enable_toaster_notification_for_new_calendar_events": "Włącz powiadomienia alarmowe dla nowych zdarzeń kalendarza",
+        "range_time": "Czas",
+        "search_dot": "Wyszukaj…"
     },
     "message": {
         "snackbar": {
@@ -400,7 +404,10 @@
         "s_mime_features": "Funkcje S/MIME",
         "search_features": "Funkcje wyszukiwania",
         "show_selection_checkbox_for_selecting_email_contact_voicemail_items_in_a_list_view_for_batch_operations": "Pokaż pole wyboru zaznaczania wiadomości e-mail, kontaktów, wiadomości głosowych w widoku listy na potrzeby operacji wsadowych",
-        "view_mail_as_html": "Oglądaj pocztę jako HTML (jeśli możliwe)"
+        "view_mail_as_html": "Oglądaj pocztę jako HTML (jeśli możliwe)",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Wyświetlaj ostrzeżenie, gdy administratorzy próbują wyjść poza Konsolę administratora programu Carbonio",
+        "group_mail": "Grupuj pocztę według:",
+        "range_time": "Czas"
     },
     "lable": {
         "delete_button": "USUŃ"
