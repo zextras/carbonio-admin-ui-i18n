@@ -341,7 +341,11 @@
         "mail": "Email",
         "no": "Tidak",
         "owners": "Pemilik",
-        "password": "Kata Sandi"
+        "password": "Kata Sandi",
+        "deleteing": "Menghapus",
+        "enable_toaster_notification_for_new_calendar_events": "Aktifkan notifikasi toaster untuk acara kalender baru",
+        "range_time": "Waktu",
+        "search_dot": "Cari…"
     },
     "message": {
         "snackbar": {
