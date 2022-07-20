@@ -270,7 +270,7 @@
         "delet_bucket_header": "Rimozione {{name}}",
         "delete_bucket_message": "Stai rimuovendo la connessione a {{bucket_name}}. Stai rimuovendo solo la connessione, mentre i dati contenuti nel bucket resteranno tali. Se vuoi eliminare i dati contenuti devi fare riferimento alla sorgente del bucket.",
         "delete_bucket_message_2": "Vuoi eliminare la connessione a {{bucket_name}}?",
-        "I_am_looking_for_this_account": "Sto cercando questo account...",
+        "I_am_looking_for_this_account": "Sto cercando questo account…",
         "I_want_to_see_this_COS": "Voglio vedere questa COS",
         "activate_and_update": "Attiva & Aggiorna",
         "add_regex": "AGGIUNGI REGEX",
@@ -299,7 +299,7 @@
         "gal_settings": "Impostazioni GAL",
         "gay_sync_account_name": "Nome Account della GAL",
         "here_you_will_find": "Qui troverai",
-        "i_am_looking_for_this_account": "Sto cercando questo account...",
+        "i_am_looking_for_this_account": "Sto cercando questo account…",
         "import_an_external_backup": "Importa un Backup Esterno",
         "import_external_backup": "Importa Backup Esterno",
         "inbound_smtp_host_name": "SMPT Host Name in ingresso",
@@ -587,7 +587,8 @@
         "set_backup_forever_msg": "Se imposti 0, i dati verranno tenuti nel backup per sempre",
         "smart_scan_scheduling": "Programmazione Smart Scan",
         "threads_for_account": "Thread per Account",
-        "threads_for_items": "Thread per oggetto"
+        "threads_for_items": "Thread per oggetto",
+        "max_operations_account": "Numero massimo di operazioni per account"
     },
     "cos": {
         "maximum_number_of_items_to_display_per_page": "Numero massimo di elementi da visualizzare per pagina",
@@ -643,7 +644,8 @@
         "default_COS": "COS Predefinita",
         "change_password_for_next_login": "La password dev'essere modificata al prossimo accesso",
         "hide_in_gal": "Nascondi in GAL",
-        "prevent_user_from_changing_password": "Impedisci all’utente di modificare la password"
+        "prevent_user_from_changing_password": "Impedisci all’utente di modificare la password",
+        "enable_activeSync_remote_access": "Abilita accesso remoto ActiveSync"
     },
     "many_cos_info_msg": "Sembrano esserci molte COS! Quale vuoi visualizzare? Inizia a digitare il nome per filtrarle.",
     "new_bucket_summary": "RIEPILOGO",
