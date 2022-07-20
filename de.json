@@ -19,7 +19,7 @@
         "restore_account": "Konto wiederherstellen"
     },
     "label": {
-        "account": "Account",
+        "account": "Konto",
         "days": "Tage",
         "accounts": "Accounts",
         "add": "Hinzufügen",
@@ -36,7 +36,7 @@
         "mb": "MB",
         "minutes": "Minuten",
         "name": "Name",
-        "not_set": "Nicht gesetzt",
+        "not_set": "Nicht einstellen",
         "note": "Notizen",
         "notification": "Benachrichtigung",
         "of": "von",
@@ -402,7 +402,8 @@
         "s_mime_features": "S/MIME-Funktionen",
         "search_features": "Suchfunktionen",
         "show_selection_checkbox_for_selecting_email_contact_voicemail_items_in_a_list_view_for_batch_operations": "Kontrollkästchen für die Auswahl von Mails, Kontakten, Sprachnachrichten in einer Listenanzeige für Stapeloperationen anzeigen",
-        "view_mail_as_html": "Mail als HTML anzeigen (falls möglich)"
+        "view_mail_as_html": "Mail als HTML anzeigen (falls möglich)",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Warnung anzeigen, wenn Administratoren von der Carbonio-Verwaltungskonsole weg navigieren"
     },
     "lable": {
         "delete_button": "LÖSCHEN"
