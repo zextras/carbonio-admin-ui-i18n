@@ -348,7 +348,7 @@
         "external_active_directory": "External Active Directory",
         "external_gal": "ExternalGAL",
         "external_ldap": "External LDAP",
-        "external_password_change_listener": "External Password change listener",
+        "external_password_change_listener": "Endpoint to be used for password change",
         "fall_back_to_local_msg": "Fall back to local password management in case of failure",
         "feature": "FEATURE",
         "features": "Features",
