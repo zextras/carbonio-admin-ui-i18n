@@ -40,7 +40,7 @@
         "account_list": "Список учетных записей"
     },
     "label": {
-        "account": "Учетная запись",
+        "account": "Аккаунт",
         "accounts": "Учетные записи",
         "active": "Активно",
         "add": "Добавить",
@@ -320,7 +320,7 @@
         "bucket_need_help_button": "НУЖНА ПОМОЩЬ?",
         "class_of_Service": "Класс Обслуживания",
         "class_of_service": "Класс Обслуживания",
-        "content": "Содержание",
+        "content": "Содержимое",
         "detail": "Подробности",
         "device": "Устройство",
         "edit": "Редактировать",
@@ -583,9 +583,11 @@
         "sending_mail": "Отправка письма",
         "send_read_receipts": "Отправлять уведомления о прочтении",
         "search_class_of_service": "Выберите класс сервиса",
-        "range_time": "Диапазон времени",
+        "range_time": "Время",
         "main_features": "Основные функции",
-        "i_want_to_see_this_cos": "Я хочу увидеть этот COS"
+        "i_want_to_see_this_cos": "Я хочу увидеть этот COS",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Отображать предупреждение при попытке администраторов переместиться из консоли управления Carbonio",
+        "group_mail": "Группировать почту по:"
     },
     "lable": {
         "delete_button": "УДАЛИТЬ"
