@@ -383,12 +383,12 @@
         "delet_content": "Stai eliminando {{name}}. Vuoi continuare?",
         "create_new_cos": "Crea Nuova COS",
         "connector_is_not_created_and_verification_failed": "CONNETTORE NON CREATO E VERIFICA FALLITA",
-        "deleteing": "Cancellazione",
+        "deleteing": "Eliminazione",
         "delete_domain_with_account_content_msg": "{{domainName}} non è vuoto: contiene {{domainAccounts}} account di sistema e {{domainAccounts}} account normali. Vuoi procedere con l'eliminazione?",
         "delete_cos_succeess": "{{cosname}} è stata eliminata con successo",
         "delete_cos_instruction_msg": "Se clicchi il bottone SÌ, ELIMINA, la COS predefinita sostituirà la COS eliminata.",
         "enter_email_address": "Inserisci indirizzo e-mail",
-        "enable_toaster_notification_for_new_calendar_events": "Abilita notifiche per i nuovi eventi in calendario",
+        "enable_toaster_notification_for_new_calendar_events": "Permetti la notifica toaster per nuovi eventi di Agenda",
         "edit_signature": "<bold>Modifica Firma</bold>",
         "deligated_admin_help_url": "Delegated Admin Help URL",
         "deleting_cos_msg": "Cancellazione {{cosname}}",
@@ -645,9 +645,9 @@
         "show_search_string": "Mostra Stringa di ricerca",
         "standard_html_client": "Client (HTML) Standard",
         "type_of_UI": "Tipo di UI",
-        "range_time": "Tempo",
+        "range_time": "Periodo",
         "group_mail": "Raggruppa e-mail per:",
-        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Avvisa l'amministratore quando cerca di navigare al di fuori del pannello amministrativo di Carbonio"
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Carbonio_Administration_Console": "Visualizza un’avvertenza quando gli amministratori tentano di uscire dalla Console di amministrazione Carbonio"
     },
     "lable": {
         "delete_button": "ELIMINA"
