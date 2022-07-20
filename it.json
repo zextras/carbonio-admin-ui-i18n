@@ -9,7 +9,7 @@
             "create_and_verify_connector": "CREA E VERIFICA CONNETTORE",
             "arn_name": "Arn / Nome"
         },
-        "bucket_list": "Bucket List",
+        "bucket_list": "Lista Bucket",
         "bucket_type": "Tipologia Bucket",
         "connect_buckets": "Connetti Bucket",
         "new": {
@@ -86,7 +86,8 @@
         "type_here_a_domain": "Digita un dominio",
         "warn_when_reach_space_quota": "Avvisami quando raggiungo lo spazio aggregato di questa quota",
         "mailbox_space": "Spazio casella di posta",
-        "account_list": "Lista degli account"
+        "account_list": "Lista degli account",
+        "list_details": "Dettagli Lista"
     },
     "label": {
         "account": "Account",
@@ -411,7 +412,28 @@
         "password_lenght_msg": "La password deve essere composta da più di 5 caratteri",
         "password_and repeat_password_not_match": "Le password non corrispondono",
         "owners_of_the_list": "Proprietari della Lista",
-        "undo": "annulla"
+        "undo": "annulla",
+        "utility_view3": "test",
+        "this_is_hidden_from_gal": "Questa lista è nascosta dalla GAL",
+        "this_account_owner_of_the_list": "questo account sarà proprietario della lista",
+        "restart_replica": "RIAVVIA REPLICA",
+        "next_step": "SUCCESSIVO",
+        "new_signature": "<bold>Nuova Firma</bold>",
+        "name_of_signature": "Nome della Firma",
+        "feature": "FUNZIONALITÀ",
+        "fall_back_to_local_msg": "Ripiega su gestione locale della password in caso di errore",
+        "dynamic": "Dinamico",
+        "displayed_name": "Nome Visualizzato",
+        "delete_content": "Stai eliminando {{name}}.\nSei sicuro di voler continuare?",
+        "create_resource_msg": "Puoi creare una nuova risorsa cliccando sul pulsante <bold>Crea</bold> (angolo in alto a sinistra) o sul pulsante Aggiungi (<bold>+</bold>) qui in alto",
+        "create_account_list_msg": "Puoi creare un nuovo Account cliccando sul pulsante <bold>Crea</bold> (angolo in alto a sinistra) o sul pulsante Aggiungi (<bold>+</bold>) qui in alto",
+        "connection_is_created_verify_connector_fail": "CONNETTORE CREATO MA VERIFICA FALLITA",
+        "changes_have_been_saved": "Modifiche salvate",
+        "bucket_view_details_button": "MOSTRA DETTAGLI",
+        "alias_in_the_list": "Alias nella Lista",
+        "add_to_the_list": "Aggiungi alla lista",
+        "add_it_to_list": "Aggiungi alla lista",
+        "account_created_successfully": "L'account è stato creato con successo"
     },
     "message": {
         "snackbar": {
