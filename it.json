@@ -433,7 +433,17 @@
         "alias_in_the_list": "Alias nella Lista",
         "add_to_the_list": "Aggiungi alla lista",
         "add_it_to_list": "Aggiungi alla lista",
-        "account_created_successfully": "L'account è stato creato con successo"
+        "account_created_successfully": "L'account è stato creato con successo",
+        "wizard_previous_button": "SUCCESSIVO",
+        "viewed_name_auto_fill": "Nome Visualizzato (Auto completamento)",
+        "viewed_name": "Nome Visualizzato (Auto completamento)",
+        "view_mail": "VEDI E-MAIL",
+        "verify_error": "{{name}}",
+        "verify_connector_fail": "VERIFICA FALLITA",
+        "user_preferences": "PREFERENZE UTENTE",
+        "userName_auto_fill": "nome utente (Auto completamento)",
+        "userName": "nome utente (Auto completamento)",
+        "use_the_QuickAdd_dialog_when_creating_new_appointments": "Use the QuickAdd dialog when creating new appointments"
     },
     "message": {
         "snackbar": {
@@ -635,7 +645,7 @@
         "preferences": "Preferenze",
         "receiving_mail": "Ricezione messaggi",
         "s_mime_features": "Funzioni S/MIME",
-        "search_features": "Funzioni di ricerca",
+        "search_features": "Cerca funzionalità",
         "show_selection_checkbox_for_selecting_email_contact_voicemail_items_in_a_list_view_for_batch_operations": "Mostra la casella di controllo per la selezione di mail, contatti e messaggi vocali in un elenco per le operazioni batch.",
         "view_mail_as_html": "Visualizza mail come HTML (quando possibile)",
         "calendar_options": "Opzioni Agenda",
@@ -718,7 +728,9 @@
         "label_chinese": "Cinese (Cina) - {{value}}",
         "label_dutch": "Olandese - {{value}}",
         "label_english": "Inglese - {{value}}",
-        "label_french": "Francese - {{value}}"
+        "label_french": "Francese - {{value}}",
+        "vietnamese": "Vietnamita"
     },
-    "create_new_cos": "CREA NUOVA COS"
+    "create_new_cos": "CREA NUOVA COS",
+    "welcome_to_carbonio": "Benvenuto {{adminName}} su Carbonio {{carbonioVersion}}!"
 }
