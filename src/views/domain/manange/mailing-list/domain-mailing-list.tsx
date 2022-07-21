@@ -24,9 +24,10 @@ import Paginig from '../../../components/paging';
 import { searchDirectory } from '../../../../services/search-directory-service';
 import EditMailingListView from './edit-mailing-detail-view';
 import { useDomainStore } from '../../../../store/domain/store';
-import { RECORD_DISPLAY_LIMIT } from '../../../../constants';
+import { FALSE, RECORD_DISPLAY_LIMIT, TRUE } from '../../../../constants';
 import MailingListDetail from './mailing-list-detail';
 import CreateMailingList from './create-mailing-list';
+import { createMailingList } from '../../../../services/create-mailing-list-service';
 
 const DomainMailingList: FC = () => {
 	const [t] = useTranslation();
@@ -312,6 +313,101 @@ const DomainMailingList: FC = () => {
 		setShowCreateMailingListView(true);
 	}, []);
 
+	const createMailingListReq = useCallback(
+		(
+			name,
+			description,
+			dynamic,
+			displayName,
+			zimbraHideInGal,
+			zimbraIsACLGroup,
+			zimbraMailStatus,
+			zimbraNotes,
+			memberURL,
+			members,
+			zimbraDistributionListSendShareMessageToNewMembers,
+			owners,
+			zimbraDistributionListSubscriptionPolicy,
+			zimbraDistributionListUnsubscriptionPolicy
+		) => {
+			const attributes: any[] = [];
+			attributes.push({
+				n: 'displayName',
+				_content: displayName
+			});
+			attributes.push({
+				n: 'zimbraNotes',
+				_content: zimbraNotes
+			});
+			attributes.push({
+				n: 'zimbraHideInGal',
+				_content: zimbraHideInGal ? TRUE : FALSE
+			});
+			attributes.push({
+				n: 'zimbraMailStatus',
+				_content: zimbraMailStatus ? 'enabled' : 'disabled'
+			});
+			if (dynamic) {
+				attributes.push({
+					n: 'zimbraIsACLGroup',
+					_content: memberURL !== '' ? 'FALSE' : 'TRUE'
+				});
+				attributes.push({
+					n: 'memberURL',
+					_content: memberURL
+				});
+			} else {
+				attributes.push({
+					n: 'description',
+					_content: description
+				});
+				attributes.push({
+					n: 'zimbraDistributionListSendShareMessageToNewMembers',
+					_content: zimbraDistributionListSendShareMessageToNewMembers ? TRUE : FALSE
+				});
+				attributes.push({
+					n: 'zimbraDistributionListUnsubscriptionPolicy',
+					_content: zimbraDistributionListUnsubscriptionPolicy?.value
+				});
+
+				attributes.push({
+					n: 'zimbraDistributionListSubscriptionPolicy',
+					_content: zimbraDistributionListSubscriptionPolicy?.value
+				});
+			}
+			createMailingList(dynamic, name, attributes)
+				.then((response) => response.json())
+				.then((data) => {
+					let type = 'success';
+					let message = '';
+					if (data?.Body?.Fault?.Reason?.Text) {
+						type = 'error';
+						const text = data?.Body?.Fault?.Reason?.Text;
+						if (text.contains('no such domain')) {
+							message = t('label.specified_domain_not_exist', 'Specified domain does not exist');
+						} else {
+							message = text;
+						}
+					} else {
+						setShowCreateMailingListView(false);
+						message = t('label.the_has_been_created_success', {
+							name,
+							defaultValue: 'The {{name}} has been created successfull'
+						});
+					}
+					createSnackbar({
+						key: type,
+						type,
+						label: message,
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				});
+		},
+		[createSnackbar, t]
+	);
+
 	return (
 		<Container padding={{ all: 'large' }} mainAlignment="flex-start" background="gray6">
 			<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
@@ -478,7 +574,10 @@ const DomainMailingList: FC = () => {
 			)}
 
 			{showCreateMailingListView && (
-				<CreateMailingList setShowCreateMailingListView={setShowCreateMailingListView} />
+				<CreateMailingList
+					setShowCreateMailingListView={setShowCreateMailingListView}
+					createMailingListReq={createMailingListReq}
+				/>
 			)}
 		</Container>
 	);

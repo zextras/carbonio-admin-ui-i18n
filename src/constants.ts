@@ -71,3 +71,5 @@ export const SERVER_CONFIG = 'server_config';
 export const IMPORT_EXTERNAL_BACKUP = 'import_an_external_backup';
 export const SERVERS_LIST = 'servers_list';
 export const RECORD_DISPLAY_LIMIT = 20;
+export const TRUE = 'TRUE';
+export const FALSE = 'FALSE';

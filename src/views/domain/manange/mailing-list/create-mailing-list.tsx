@@ -62,7 +62,8 @@ const WizardInSection: FC<any> = ({ wizard, wizardFooter, setToggleWizardSection
 // eslint-disable-next-line no-empty-pattern
 const CreateMailingList: FC<{
 	setShowCreateMailingListView: any;
-}> = ({ setShowCreateMailingListView }) => {
+	createMailingListReq: any;
+}> = ({ setShowCreateMailingListView, createMailingListReq }) => {
 	const { t } = useTranslation();
 	const [wizardData, setWizardData] = useState();
 
@@ -90,6 +91,25 @@ const CreateMailingList: FC<{
 		prefixName: '',
 		suffixName: ''
 	});
+
+	const onCreate = useCallback(() => {
+		createMailingListReq(
+			`${mailingListDetail?.prefixName}@${mailingListDetail?.suffixName}`,
+			mailingListDetail?.description,
+			mailingListDetail?.dynamic,
+			mailingListDetail?.displayName,
+			mailingListDetail?.zimbraHideInGal,
+			mailingListDetail?.zimbraIsACLGroup,
+			mailingListDetail?.zimbraMailStatus,
+			mailingListDetail?.zimbraNotes,
+			mailingListDetail?.memberURL,
+			mailingListDetail?.members,
+			mailingListDetail?.zimbraDistributionListSendShareMessageToNewMembers,
+			mailingListDetail?.owners,
+			mailingListDetail?.zimbraDistributionListSubscriptionPolicy,
+			mailingListDetail?.zimbraDistributionListUnsubscriptionPolicy
+		);
+	}, [createMailingListReq, mailingListDetail]);
 
 	const standardMailingListSizardSteps = useMemo(
 		() => [
@@ -231,11 +251,18 @@ const CreateMailingList: FC<{
 						icon="PowerOutline"
 						iconPlacement="right"
 						disabled={!mailingListDetail?.prefixName || !mailingListDetail?.suffixName}
+						onClick={onCreate}
 					/>
 				)
 			}
 		],
-		[t, setShowCreateMailingListView, mailingListDetail?.prefixName, mailingListDetail?.suffixName]
+		[
+			t,
+			setShowCreateMailingListView,
+			mailingListDetail?.prefixName,
+			mailingListDetail?.suffixName,
+			onCreate
+		]
 	);
 
 	const dynamicMailingListSizardSteps = useMemo(
@@ -304,20 +331,23 @@ const CreateMailingList: FC<{
 						icon="PowerOutline"
 						iconPlacement="right"
 						disabled={!mailingListDetail?.prefixName || !mailingListDetail?.suffixName}
+						onClick={onCreate}
 					/>
 				)
 			}
 		],
-		[t, setShowCreateMailingListView, mailingListDetail?.prefixName, mailingListDetail?.suffixName]
+		[
+			t,
+			setShowCreateMailingListView,
+			mailingListDetail?.prefixName,
+			mailingListDetail?.suffixName,
+			onCreate
+		]
 	);
 
 	const onComplete = useCallback(() => {
 		setShowCreateMailingListView(false);
 	}, [setShowCreateMailingListView]);
-
-	useEffect(() => {
-		console.log('#########', mailingListDetail);
-	}, [mailingListDetail]);
 
 	return (
 		<Container
