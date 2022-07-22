@@ -319,6 +319,7 @@ const DomainMailingList: FC = () => {
 			Promise.all(requests)
 				.then((response: any) => Promise.all(response.map((res: any) => res.json())))
 				.then((data: any) => {
+					setIsUpdateRecord(true);
 					// eslint-disable-next-line no-shadow
 					let isError = false;
 					let errorMessage = '';
@@ -346,7 +347,6 @@ const DomainMailingList: FC = () => {
 	const addMemberToMailingList = useCallback(
 		(members: any, owners: any, mlId: string): void => {
 			const request: any[] = [];
-
 			if (members.length > 0 && mlId) {
 				members.forEach((item: any) => {
 					const id: any = {
@@ -381,6 +381,8 @@ const DomainMailingList: FC = () => {
 
 			if (request.length > 0) {
 				callAllRequest(request);
+			} else {
+				setIsUpdateRecord(true);
 			}
 		},
 		[callAllRequest]
