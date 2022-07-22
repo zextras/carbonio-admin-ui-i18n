@@ -28,6 +28,8 @@ import { FALSE, RECORD_DISPLAY_LIMIT, TRUE } from '../../../../constants';
 import MailingListDetail from './mailing-list-detail';
 import CreateMailingList from './create-mailing-list';
 import { createMailingList } from '../../../../services/create-mailing-list-service';
+import { distributionListAction } from '../../../../services/distribution-list-action-service';
+import { addDistributionListMember } from '../../../../services/add-distributionlist-member-service';
 
 const DomainMailingList: FC = () => {
 	const [t] = useTranslation();
@@ -45,7 +47,6 @@ const DomainMailingList: FC = () => {
 	const [selectedDlRow, setSelectedDlRow] = useState<any>([]);
 	const [mailingListItem, setMailingListItem] = useState([]);
 	const [selectedFromRow, setSelectedFromRow] = useState<any>({});
-	const [prevent, setPrevent] = useState<boolean>(false);
 	const [editMailingList, setEditMailingList] = useState<boolean>(false);
 	const [isUpdateRecord, setIsUpdateRecord] = useState<boolean>(false);
 	const [showCreateMailingListView, setShowCreateMailingListView] = useState<boolean>(false);
@@ -313,6 +314,78 @@ const DomainMailingList: FC = () => {
 		setShowCreateMailingListView(true);
 	}, []);
 
+	const callAllRequest = useCallback(
+		(requests: any): void => {
+			Promise.all(requests)
+				.then((response: any) => Promise.all(response.map((res: any) => res.json())))
+				.then((data: any) => {
+					// eslint-disable-next-line no-shadow
+					let isError = false;
+					let errorMessage = '';
+					data.forEach((item: any) => {
+						if (item?.Body?.Fault) {
+							isError = true;
+							errorMessage = item?.Body?.Fault?.Reason?.Text;
+						}
+					});
+					if (isError) {
+						createSnackbar({
+							key: 'error',
+							type: 'error',
+							label: errorMessage,
+							autoHideTimeout: 3000,
+							hideButton: true,
+							replace: true
+						});
+					}
+				});
+		},
+		[createSnackbar]
+	);
+
+	const addMemberToMailingList = useCallback(
+		(members: any, owners: any, mlId: string): void => {
+			const request: any[] = [];
+
+			if (members.length > 0 && mlId) {
+				members.forEach((item: any) => {
+					const id: any = {
+						n: 'id',
+						_content: mlId
+					};
+					const dlmItem: any = {
+						n: 'dlm',
+						_content: item
+					};
+					request.push(addDistributionListMember(id, dlmItem));
+				});
+			}
+
+			if (owners.length > 0 && mlId) {
+				owners.forEach((item: any) => {
+					const dl: any = {
+						by: 'id',
+						_content: mlId
+					};
+					const action: any = {
+						op: 'addOwners',
+						owner: {
+							by: 'name',
+							type: 'usr',
+							_content: item
+						}
+					};
+					request.push(distributionListAction(dl, action));
+				});
+			}
+
+			if (request.length > 0) {
+				callAllRequest(request);
+			}
+		},
+		[callAllRequest]
+	);
+
 	const createMailingListReq = useCallback(
 		(
 			name,
@@ -389,6 +462,8 @@ const DomainMailingList: FC = () => {
 							message = text;
 						}
 					} else {
+						const mlId = data?.Body?.CreateDistributionListResponse?.dl[0]?.id;
+						addMemberToMailingList(members, owners, mlId);
 						setShowCreateMailingListView(false);
 						message = t('label.the_has_been_created_success', {
 							name,
@@ -405,7 +480,7 @@ const DomainMailingList: FC = () => {
 					});
 				});
 		},
-		[createSnackbar, t]
+		[createSnackbar, t, addMemberToMailingList]
 	);
 
 	return (
