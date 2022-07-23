@@ -58,7 +58,8 @@
         "restore_deleted_email": "Restaurar correos eliminados",
         "i_want_to_see_this_domain": "Quiero ver este dominio",
         "admin_delegates": "Administradores delegados",
-        "account_list": "Lista de cuentas"
+        "account_list": "Lista de cuentas",
+        "list_details": "Detalles de lista"
     },
     "label": {
         "account": "Cuenta",
@@ -320,7 +321,7 @@
         "delete_bucket_message_2": "¿Está seguro de querer eliminar la conexión de {{bucket_name}}?",
         "delete_bucket_message": "Está eliminando la conexión a {{bucket_name}}. Solo la conexión está siendo eliminada; los datos almacenados en el Bucket seguirán estando seguros. Si quieree eliminar los datos, consulte la fuente del Bucket.",
         "delete_bucket_fail": "El {{name}} no ha sido removido",
-        "delet_content": "Está a punto de eliminar {name}}. Esto hará {{name}}. ¿Está seguro que quiere eliminar {{name}}?",
+        "delet_content": "Estás a punto de eliminar {{name}}. ¿Estás seguro que quieres eliminarlo?",
         "delet_bucket_header": "Removiendo {{name}}",
         "default_settings": "Configuraciones por defecto",
         "default_font_size": "Tamaño de fuente por defecto",
@@ -336,7 +337,7 @@
         "create_cos_success_msg": "{{cosName}} ha sido creada correctamente",
         "create_button": "CREAR",
         "cos_name": "Nombre de la COS",
-        "connector_is_created_by_verification_failed": "EL CONECTOR HA SIDO CREADO PERO LA VERIFICACIÓN FALLÓ",
+        "connector_is_created_by_verification_failed": "EL CONECTOR ESTÁ CREADO PERO LA VERIFICACIÓN HA FALLADO",
         "connector_is_create_and_verified": "EL CONECTOR HA SIDO CREADO Y VERIFICADO",
         "can_receive": "Puede recibir",
         "bulk_actions": "Acciones en masa",
@@ -345,7 +346,7 @@
         "admin_delegates": "Administradores delegados",
         "activate_and_update": "Activar y actualizar",
         "I_want_to_see_this_COS": "Quiero ver esta COS",
-        "I_am_looking_for_this_account": "Estoy buscando esta cuenta...",
+        "I_am_looking_for_this_account": "Estoy buscando esta cuenta…",
         "account_status": "Estado de la cuenta",
         "auto": "Auto",
         "automatically_accept": "Aceptar automáticamente",
@@ -374,7 +375,25 @@
         "surname": "Apellido",
         "user": "Usuario",
         "wizard_cancel_button": "CANCELAR",
-        "yes": "Sí"
+        "yes": "Sí",
+        "create_resource_msg": "Puedes crear un nuevo recurso haciendo clic en el botón <bold>Crear</bold> (esquina superior izquierda) o sobre el botón Añadir (<bold>+</bold>) aquí arriba",
+        "create_account_list_msg": "Puedes crear una cuenta nueva haciendo clic en el botón <bold>Crear</bold> (en la esquina superior izquierda) o en el botón Añadir <bold>+</bold> aquí arriba",
+        "connector_is_not_created_and_verification_failed": "EL CONECTOR NO ESTÁ CREADO Y LA VERIFICACIÓN HA FALLADO",
+        "connection_is_created_verify_connector_fail": "EL CONECTOR ESTÁ CREADO PERO LA VERIFICACIÓN FALLÓ",
+        "configration": "CONFIGURACIÓN",
+        "changes_have_been_saved": "Los cambios se han guardado",
+        "can_send_receiver": "Puede enviar y recibir",
+        "bucket_view_details_button": "VER DETALLES",
+        "auto_refuse": "Rechazo-automático",
+        "auto_negation": "Negación-automática",
+        "auto_accept_auto_decline_on_conflict": "Siempre aceptación automática si está disponible, negación automática en caso de conflicto",
+        "auto_accept_always": "Siempre aceptación automática si está disponible",
+        "auto_accept": "Auto-aceptar",
+        "alias_in_the_list": "Alias en la lista",
+        "add_to_the_list": "Añadir a la lista",
+        "add_it_to_list": "Añadir a la lista",
+        "add_in_mailing_list_or_both": "Añade otra lista de correo o usuario. ambos pueden ser un propietario de la lista.",
+        "account_created_successfully": "La cuenta ha sido creada con éxito"
     },
     "timezone": {
         "indian_mauritius": "{{value}} Port Louis",
@@ -552,7 +571,8 @@
         }
     },
     "commons": {
-        "confirm_connection": "CONFIRMAR CONEXIÓN"
+        "confirm_connection": "CONFIRMAR CONEXIÓN",
+        "create_with_there_data": "CREAR CON ESOS DATOS"
     },
     "create_new_bucket": "NUEVO BUCKET",
     "create_new_domain": "Crear un nuevo dominio",
@@ -590,10 +610,10 @@
         "save_index": "Salvar el índice",
         "metatdata_size": "Tamaño de los metadatos",
         "max_waiting_time": "Tiempo máximo de espera",
-        "max_operations_account": "Operaciones máximas / Cuenta",
+        "max_operations_account": "Operaciones máximas por cuenta",
         "latency_low_threshold": "Umbral de latencia mínimo",
         "latency_high_threshold": "Umbral de latencia máximo",
-        "threads_for_items": "Threads por Items",
+        "threads_for_items": "Hilos para elementos",
         "threads_for_account": "Threads por cuenta",
         "smart_scan_scheduling": "Programación de SmartScan"
     },
@@ -651,7 +671,13 @@
     "welcome_to_carbonio": "¡Bienvenido {{adminName}}, a Carbonio {{carbonioVersion}}!",
     "accountDetails": {
         "hide_in_gal": "Ocultar en GAL",
-        "prevent_user_from_changing_password": "Evitar que el usuario cambie la contraseña"
+        "prevent_user_from_changing_password": "Evitar que el usuario cambie la contraseña",
+        "this_user_must_change_password": "Este usuario debe cambiar la contraseña",
+        "this_is_global_administrator": "Es un administrador global",
+        "generate_first_2FA_token": "Generar primer token 2FA",
+        "enable_activeSync_remote_access": "Activar acceso remoto ActiveSync",
+        "default_COS": "COS por defecto",
+        "change_password_for_next_login": "Se debe cambiar la contraseña en el próximo inicio de sesión"
     },
     "locale": {
         "English": "Inglés",
@@ -685,5 +711,13 @@
         "thai": "Tailandés",
         "turkish": "Turco",
         "vietnamese": "Vietnamita"
+    },
+    "account": {
+        "new": {
+            "create_account_wizard": "Crear asistente de la cuenta"
+        },
+        "edit": {
+            "edit_account_wizard": "Editar asistente de la cuenta"
+        }
     }
 }
