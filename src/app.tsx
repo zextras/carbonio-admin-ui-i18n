@@ -221,7 +221,7 @@ const App: FC = () => {
 	const storagesTooltipItems = useMemo(
 		() => [
 			{
-				header: t('label.storages', 'STORAGES'),
+				header: t('label.mail_stores', 'Mailstores'),
 				options: [
 					{
 						label: t('label.here_you_will_find', 'Here you will find')
@@ -329,7 +329,7 @@ const App: FC = () => {
 			route: STORAGES_ROUTE_ID,
 			position: 2,
 			visible: true,
-			label: t('label.storages', 'Storages'),
+			label: t('label.mail_stores', 'Mailstores'),
 			primaryBar: 'HardDriveOutline',
 			appView: AppView,
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
