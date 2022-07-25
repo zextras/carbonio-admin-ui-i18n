@@ -361,7 +361,8 @@
         "global": {
             "headers": {
                 "advanced": "Erweitert",
-                "service_status": "Service Status"
+                "service_status": "Service Status",
+                "server_config": "Server Konfiguration"
             }
         },
         "keep_delete_accounts_in_backup": "Gelöschte Konto im Backup behalten",
@@ -375,7 +376,14 @@
         "purge_old_configurations": "Alte Konfigurationen löschen",
         "realtime_scanner": "RealTime Scanner",
         "schedule": "Planung",
-        "smart_scan_at_startup": "SmartScan bei Start"
+        "smart_scan_at_startup": "SmartScan bei Start",
+        "server_configurations": "Server Konfigurationen",
+        "save_index": "Inhaltsverzeichnis speichern",
+        "metatdata_size": "Größe Metdadaten",
+        "max_waiting_time": "Max Wartezeit",
+        "max_operations_account": "Max. Anzahl der Vorgänge pro Konto",
+        "latency_low_threshold": "Wartezeit niedriger Schwellenwert",
+        "latency_high_threshold": "Wartezeit hoher Schwellenwert"
     },
     "cos": {
         "calendar_options": "Kalenderoptionen",
@@ -448,6 +456,20 @@
     },
     "accountDetails": {
         "hide_in_gal": "In GAL verstecken",
-        "prevent_user_from_changing_password": "Änderung des Passworts durch Nutzer verhindern"
+        "prevent_user_from_changing_password": "Änderung des Passworts durch Nutzer verhindern",
+        "this_user_must_change_password": "Dieser Nutzer muss das Passwort ändern",
+        "this_is_global_administrator": "Das ist ein globaler Administrator",
+        "generate_first_2FA_token": "Ersten 2-Faktor Token generieren",
+        "enable_activeSync_remote_access": "ActiveSync Fernsteuerung aktivieren",
+        "default_COS": "Standard COS",
+        "change_password_for_next_login": "Das Passwort muss beim nächsten Login geändert werden"
+    },
+    "account": {
+        "new": {
+            "create_account_wizard": "Konten Assistent erstellen"
+        },
+        "edit": {
+            "edit_account_wizard": "Konten Assistent bearbeiten"
+        }
     }
 }
