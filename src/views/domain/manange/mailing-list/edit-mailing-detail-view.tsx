@@ -86,7 +86,8 @@ const EditMailingListView: FC<any> = ({
 	const [searchMailingListOrUser, setSearchMailingListOrUser] = useState<string>('');
 	const [isShowError, setIsShowError] = useState<boolean>(false);
 	const [isDirty, setIsDirty] = useState<boolean>(false);
-	const [searchMember, setSearchMember] = useState<string>();
+	const [searchMember, setSearchMember] = useState<string>('');
+	const [searchOwner, setSearchOwner] = useState<string>('');
 	const [memberURL, setMemberURL] = useState<string>();
 	const [ownerOfList, setOwnerOfList] = useState<any[]>([]);
 	const [searchOwnerMemberOfList, setSearchOwnerMemberOfList] = useState<any[]>([]);
@@ -646,6 +647,9 @@ const EditMailingListView: FC<any> = ({
 			setDlm(_dlm);
 			setSelectedDistributionListMember([]);
 		}
+	};
+
+	const onDeleteFromOwnerList = useCallback(() => {
 		if (selectedOwnerListMember.length > 0) {
 			const _ownersList = ownersList.filter(
 				(item: any) => !selectedOwnerListMember.includes(item?.name)
@@ -653,7 +657,7 @@ const EditMailingListView: FC<any> = ({
 			setOwnersList(_ownersList);
 			setSelectedOwnerListMember([]);
 		}
-	};
+	}, [selectedOwnerListMember, ownersList]);
 
 	const updatePreviousDetail = (): void => {
 		const latestData: any = {};
@@ -1145,7 +1149,7 @@ const EditMailingListView: FC<any> = ({
 	}, [openAddMailingListDialog]);
 
 	useEffect(() => {
-		if (searchMember && dlm && dlm.length > 0) {
+		if (searchMember?.length >= 0 && dlm && dlm.length > 0) {
 			const allRows = dlm.filter((item: any) => item.includes(searchMember));
 			const searchDlRows = allRows.map((item: any) => ({
 				id: item,
@@ -1158,8 +1162,11 @@ const EditMailingListView: FC<any> = ({
 			}));
 			setDlmTableRows(searchDlRows);
 		}
-		if (searchMember && ownersList && ownersList.length > 0) {
-			const allRows = ownersList.filter((item: any) => item?.name.includes(searchMember));
+	}, [searchMember, dlm]);
+
+	useEffect(() => {
+		if (searchOwner?.length >= 0 && ownersList && ownersList.length > 0) {
+			const allRows = ownersList.filter((item: any) => item?.name.includes(searchOwner));
 			const searchOwnerRows = allRows.map((item: any) => ({
 				id: item?.name,
 				columns: [
@@ -1170,7 +1177,7 @@ const EditMailingListView: FC<any> = ({
 			}));
 			setOwnerTableRows(searchOwnerRows);
 		}
-	}, [searchMember, dlm, ownersList]);
+	}, [searchOwner, ownersList]);
 
 	useEffect(() => {
 		if (selectedMailingList?.dynamic) {
@@ -1497,7 +1504,10 @@ const EditMailingListView: FC<any> = ({
 						>
 							<Row mainAlignment="flex-start" width="60%" crossAlignment="flex-start">
 								<Input
-									label={t('label.i_am_looking_for_member', 'I’m looking for the member...')}
+									label={t(
+										'label.type_accounts_paste_them_here',
+										'Type the Accounts or paste them here'
+									)}
 									value={searchMember}
 									background="gray5"
 									onChange={(e: any): any => {
@@ -1528,10 +1538,7 @@ const EditMailingListView: FC<any> = ({
 									color="error"
 									icon="Trash2Outline"
 									iconPlacement="right"
-									disabled={
-										selectedDistributionListMember.length === 0 &&
-										selectedOwnerListMember.length === 0
-									}
+									disabled={selectedDistributionListMember.length === 0}
 									height={44}
 									onClick={onDeleteFromList}
 								/>
@@ -1592,11 +1599,14 @@ const EditMailingListView: FC<any> = ({
 						>
 							<Row mainAlignment="flex-start" width="60%" crossAlignment="flex-start">
 								<Input
-									label={t('label.i_am_looking_for_member', 'I’m looking for the member...')}
-									value={searchMember}
+									label={t(
+										'label.type_accounts_paste_them_here',
+										'Type the Accounts or paste them here'
+									)}
+									value={searchOwner}
 									background="gray5"
 									onChange={(e: any): any => {
-										setSearchMember(e.target.value);
+										setSearchOwner(e.target.value);
 									}}
 								/>
 							</Row>
@@ -1611,6 +1621,7 @@ const EditMailingListView: FC<any> = ({
 										height={44}
 										iconPlacement="right"
 										onClick={(): void => {
+											setIsAddToOwnerList(true);
 											setOpenAddMailingListDialog(true);
 										}}
 									/>
@@ -1623,12 +1634,9 @@ const EditMailingListView: FC<any> = ({
 									color="error"
 									icon="Trash2Outline"
 									iconPlacement="right"
-									disabled={
-										selectedDistributionListMember.length === 0 &&
-										selectedOwnerListMember.length === 0
-									}
+									disabled={selectedOwnerListMember.length === 0}
 									height={44}
-									onClick={onDeleteFromList}
+									onClick={onDeleteFromOwnerList}
 								/>
 							</Row>
 						</Row>

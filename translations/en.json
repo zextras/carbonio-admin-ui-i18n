@@ -641,6 +641,7 @@
         "time_zone": "Time Zone",
         "timezone": "Time Zone",
         "type": "Type",
+        "type_accounts_paste_them_here": "Type the Accounts or paste them here",
         "type_an_account_dot": "Type an account ...",
         "undo": "undo",
         "unlimited": "Unlimited",
