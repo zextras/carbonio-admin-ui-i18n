@@ -36,8 +36,10 @@ const MailingListSettingsSection: FC<any> = () => {
 	const context = useContext(MailingListContext);
 	const { mailingListDetail, setMailingListDetail } = context;
 	const [member, setMember] = useState<string>('');
-	const [ownerTableRows, setOwnerTableRows] = useState<Array<any>>(mailingListDetail?.owners);
-	const [ownersList, setOwnersList] = useState<Array<any>>([]);
+	const [ownerTableRows, setOwnerTableRows] = useState<Array<any>>([]);
+	const [ownersList, setOwnersList] = useState<Array<any>>(
+		mailingListDetail?.owners ? mailingListDetail?.owners : []
+	);
 	const [selectedDistributionListOwner, setSelectedDistributionListOwner] = useState<Array<any>>(
 		[]
 	);
@@ -175,10 +177,9 @@ const MailingListSettingsSection: FC<any> = () => {
 			searchMemberCall(member);
 		}
 	}, [member, searchMemberCall]);
-
 	const items = searchMemberResult.map((item: any, index) => ({
-		id: item.id,
-		label: item.name,
+		id: item?.id,
+		label: item?.name,
 		customComponent: (
 			<Row
 				top="9px"
@@ -373,6 +374,7 @@ const MailingListSettingsSection: FC<any> = () => {
 							iconPlacement="right"
 							height={44}
 							onClick={onAdd}
+							disabled={member === ''}
 						/>
 					</Container>
 					<Container
@@ -390,6 +392,7 @@ const MailingListSettingsSection: FC<any> = () => {
 							iconPlacement="right"
 							height={44}
 							onClick={onDeleteFromList}
+							disabled={selectedDistributionListOwner && selectedDistributionListOwner.length === 0}
 						/>
 					</Container>
 				</ListRow>

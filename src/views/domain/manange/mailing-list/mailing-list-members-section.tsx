@@ -71,7 +71,7 @@ const MailingListMembersSection: FC<any> = () => {
 			setDlmTableRows([]);
 			setMailingListDetail((prev: any) => ({
 				...prev,
-				members: dlm
+				members: []
 			}));
 		}
 	}, [dlm, setMailingListDetail]);
@@ -237,6 +237,7 @@ const MailingListMembersSection: FC<any> = () => {
 							icon="PlusOutline"
 							iconPlacement="right"
 							height={44}
+							disabled={member === ''}
 							onClick={onAdd}
 						/>
 					</Container>
@@ -254,6 +255,9 @@ const MailingListMembersSection: FC<any> = () => {
 							icon="PlusOutline"
 							iconPlacement="right"
 							height={44}
+							disabled={
+								selectedDistributionListMember && selectedDistributionListMember.length === 0
+							}
 							onClick={onDeleteFromList}
 						/>
 					</Container>
