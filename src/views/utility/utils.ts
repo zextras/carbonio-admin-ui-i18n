@@ -1102,11 +1102,11 @@ export const getFormatedDate = (date: Date): any => {
 };
 
 export const isValidEmail = (email: string): boolean => {
-	const re = /\S+@\S+\.\S+/;
+	const re = /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/;
 	return re.test(email);
 };
 
 export const getAllEmailFromString = (str: string): any =>
-	str.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi);
+	str.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+(.))/gi);
 
 export const getEmailDisplayNameFromString = (str: string): any => str.match(/".*?"|'.*?'/g);

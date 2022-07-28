@@ -11,7 +11,8 @@ import {
 	Input,
 	Button,
 	Table,
-	Dropdown
+	Dropdown,
+	SnackbarManagerContext
 } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { debounce, sortedUniq } from 'lodash';
@@ -36,6 +37,7 @@ const MailingListMembersSection: FC<any> = () => {
 	);
 	const [member, setMember] = useState<string>('');
 	const [searchMemberResult, setSearchMemberResult] = useState<Array<any>>([]);
+	const createSnackbar: any = useContext(SnackbarManagerContext);
 
 	const memberHeaders: any[] = useMemo(
 		() => [
@@ -76,13 +78,27 @@ const MailingListMembersSection: FC<any> = () => {
 
 	const onAdd = useCallback((): void => {
 		if (member !== '') {
-			const allEmails = getAllEmailFromString(member);
+			const allEmails: any[] = getAllEmailFromString(member);
 			if (allEmails !== null) {
-				const sortedList = sortedUniq(allEmails);
-				setDlm(sortedList);
+				const inValidEmailAddress = allEmails.filter((item: any) => !isValidEmail(item));
+				if (inValidEmailAddress && inValidEmailAddress.length > 0) {
+					createSnackbar({
+						key: 'error',
+						type: 'error',
+						label: `${t('label.invalid_email_address', 'Invalid email address')} ${
+							inValidEmailAddress[0]
+						}`,
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				} else {
+					const sortedList = sortedUniq(allEmails);
+					setDlm(sortedList);
+				}
 			}
 		}
-	}, [member]);
+	}, [member, createSnackbar, t]);
 
 	const onDeleteFromList = useCallback((): void => {
 		if (selectedDistributionListMember.length > 0) {
