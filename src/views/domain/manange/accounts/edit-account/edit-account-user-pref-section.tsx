@@ -15,6 +15,7 @@ import {
 } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { AccountContext } from '../account-context';
+import { SignatureDetail } from './signature-detail';
 import {
 	timeZoneList,
 	conversationGroupBy,
@@ -25,7 +26,7 @@ import {
 const EditAccountUserPrefrencesSection: FC = () => {
 	const conext = useContext(AccountContext);
 	const [t] = useTranslation();
-	const { accountDetail, setAccountDetail } = conext;
+	const { accountDetail, setAccountDetail, setSignatureItems, setSignatureList } = conext;
 	const [zimbraPrefMailPollingIntervalNum, setZimbraPrefMailPollingIntervalNum] = useState(
 		accountDetail?.zimbraPrefMailPollingInterval?.slice(0, -1)
 	);
@@ -508,6 +509,14 @@ const EditAccountUserPrefrencesSection: FC = () => {
 					/>
 				</Row>
 			</Row>
+			<SignatureDetail
+				isEditable
+				signatureList={[]}
+				setSignatureList={setSignatureList}
+				signatureItems={[]}
+				setSignatureItems={setSignatureItems}
+				accountId={accountDetail?.zimbraId}
+			/>
 			<Row width="100%" padding={{ top: 'medium' }}>
 				<Divider color="gray2" />
 			</Row>
