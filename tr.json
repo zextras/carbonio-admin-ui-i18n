@@ -362,7 +362,26 @@
         "activate_and_update": "Etkinleştir ve Güncelle",
         "account_created_successfully": "Hesap başarıyla oluşturuldu",
         "I_want_to_see_this_COS": "Bu Servis Paketini görmek istiyorum",
-        "I_am_looking_for_this_account": "Bu hesabı arıyorum…"
+        "I_am_looking_for_this_account": "Bu hesabı arıyorum…",
+        "virtual_host_user_msg": "Aşağıdaki host adlarından birisini kullanan URL bağlantısından giriş yapan kullanıcıların, {{domainName}} alanadına ait oldukları varsayılacak",
+        "virtual_host_note": "Lütfen dikkat, sanal host kaldırma işlemi sadece posta sunucusu yeniden başlatıldıktan sonra geçerli olur.",
+        "virtual_host_name": "Sanal Host Adı",
+        "virtual_host_info_msg": "Sanal host bilgisi kullanıcı girişinde varsayılan alanadı kullanılmasına olanak sağlar.",
+        "virtual_host_enable_info_msg": "Yeni eklemek için EKLE simgesine tıklayın.",
+        "virtual_host": "sanal host",
+        "viewed_name_auto_fill": "Görünen Ad (Otomatik doldur)",
+        "viewed_name": "Görünen Ad (Otomatik doldur)",
+        "view": "Görünüm",
+        "uuid": "uuid",
+        "utility_view3": "Gmrünüm 3 deneme",
+        "utility_view2": "Gmrünüm 2 deneme",
+        "utility_view": "Görünüm 1 deneme",
+        "this_list_is_member_of": "Bu liste parçasıdır",
+        "start_tls": "StartTLS",
+        "not_send_receive": "Gönderemez ve Alamaz",
+        "no_virtual_host_msg": "Sanal host bulunmuyor.",
+        "no_auto_accept_or_decline": "Uygunsa her zaman Otomatik Kabul Etme",
+        "add_regex": "REGEX EKLE"
     },
     "timezone": {
         "asia_gaza": "{{value}} Gaza",
@@ -632,7 +651,9 @@
         "max_waiting_time": "Maks Bekleme Süresi",
         "max_operations_account": "Hesap başına Maksimum İşlemler",
         "latency_low_threshold": "Gecikme Alt Eşiği",
-        "latency_high_threshold": "Gecikme Üst Eşiği"
+        "latency_high_threshold": "Gecikme Üst Eşiği",
+        "threads_for_items": "Öğeler için Treads",
+        "threads_for_account": "Hesap için Threads"
     },
     "cos": {
         "calendar_options": "Takvim Seçenekleri",
