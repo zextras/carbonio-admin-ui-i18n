@@ -41,7 +41,7 @@ const RestoreDeleteAccount: FC = () => {
 			doRestoreDeleteAccount(body)
 				.then((response) => response.json())
 				.then((data) => {
-					const error = data?.error?.details?.cause;
+					const error = data?.error?.details?.cause || data?.error?.message;
 					if (error) {
 						createSnackbar({
 							key: 'error',

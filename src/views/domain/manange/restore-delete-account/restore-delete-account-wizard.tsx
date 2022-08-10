@@ -196,12 +196,18 @@ const RestoreDeleteAccountWizard: FC<{
 						icon="PowerOutline"
 						iconPlacement="right"
 						onClick={onRestoreAccount}
-						disabled={restoreAccountDetail?.name === ''}
+						disabled={restoreAccountDetail?.name === '' || restoreAccountDetail?.copyAccount === ''}
 					/>
 				)
 			}
 		],
-		[t, setShowRestoreAccountWizard, onRestoreAccount, restoreAccountDetail?.name]
+		[
+			t,
+			setShowRestoreAccountWizard,
+			onRestoreAccount,
+			restoreAccountDetail?.name,
+			restoreAccountDetail?.copyAccount
+		]
 	);
 
 	return (
