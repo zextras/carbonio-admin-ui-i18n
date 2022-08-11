@@ -35,15 +35,15 @@ const RestoreDeleteAccountStartSection: FC<any> = () => {
 						<ListRow>
 							<Container padding={{ right: 'medium', bottom: 'medium' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.account', 'Account')}
 									value={restoreAccountDetail?.name}
 									readOnly
 								/>
 							</Container>
-							<Container padding={{ right: 'medium', bottom: 'medium' }}>
+							<Container padding={{ bottom: 'medium' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.destination_account', 'Destination Account')}
 									value={restoreAccountDetail?.copyAccount}
 									readOnly
@@ -53,7 +53,7 @@ const RestoreDeleteAccountStartSection: FC<any> = () => {
 						<ListRow>
 							<Container padding={{ bottom: 'large' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.use_last_available_status', 'Use last available status')}
 									value={
 										restoreAccountDetail?.lastAvailableStatus
@@ -67,7 +67,7 @@ const RestoreDeleteAccountStartSection: FC<any> = () => {
 						<ListRow>
 							<Container padding={{ bottom: 'large' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.date_and_hour', 'Date & Hour')}
 									value={
 										restoreAccountDetail?.dateTime === null
@@ -79,9 +79,9 @@ const RestoreDeleteAccountStartSection: FC<any> = () => {
 							</Container>
 						</ListRow>
 						<ListRow>
-							<Container padding={{ bottom: 'large' }}>
+							<Container padding={{ right: 'medium', bottom: 'medium' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.hsm_apply', 'HSM Apply')}
 									value={
 										restoreAccountDetail?.hsmApply ? t('label.yes', 'Yes') : t('label.no', 'NO')
@@ -89,9 +89,9 @@ const RestoreDeleteAccountStartSection: FC<any> = () => {
 									readOnly
 								/>
 							</Container>
-							<Container padding={{ bottom: 'large' }}>
+							<Container padding={{ right: 'medium', bottom: 'medium' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.restore_data_source', 'Restore Data Source')}
 									value={
 										restoreAccountDetail?.dataSource ? t('label.yes', 'Yes') : t('label.no', 'NO')
@@ -103,7 +103,7 @@ const RestoreDeleteAccountStartSection: FC<any> = () => {
 						<ListRow>
 							<Container padding={{ bottom: 'large' }}>
 								<Input
-									backgroundColor="gray5"
+									backgroundColor="gray6"
 									label={t('label.mail_notifications', 'Email Notifications')}
 									value={
 										restoreAccountDetail?.notificationReceiver === ''
