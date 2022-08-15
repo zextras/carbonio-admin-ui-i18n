@@ -135,6 +135,7 @@
         "new": {
             "bucket_connection": "Bucket Connection"
         },
+        "serverName#1_volumes": "ServerName#1 Volumes",
         "servers_list": "Servers List",
         "summary": {
             "access_key": "Access Key",
@@ -341,6 +342,7 @@
     "have_not_setup_bucket_type": "It seems like you haven't setup a bucket type",
     "label": {
         "\"max_email_quota_you_can_manage_is": "The max email quota you can manage is...",
+        "I_want_to_see_this_server_details": "i want to see this server’s details",
         "access_key": "Access Key",
         "account": "Account",
         "account_created_successfully": "The account has been created successfully",
@@ -467,6 +469,7 @@
         "delete": "Delete",
         "delete_bucket_fail": "The {{name}} has not removerd",
         "delete_bucket_sucess": "The {{name}} has been removerd",
+        "delete_button": "DELETE",
         "delete_content": "You are deleting {{name}}. This will {{name}}. \n Are you sure you want to delete {{name}} ?",
         "delete_cos_instruction_msg": "If you click YES, DELETE the DefaultCOS will be replace the deleted COS.",
         "delete_cos_succeess": "The {{cosname}} has been deleted successfull",
@@ -496,6 +499,7 @@
         "dynamic": "Dynamic",
         "dynamic_mode": "Dynamic Mode",
         "edit": "Edit",
+        "edit_button": "EDIT",
         "edit_signature": "<bold>Edit Signature</bod>",
         "email": "Email",
         "email_notification": "E-mail Notifications",
@@ -619,6 +623,8 @@
         "new_mailing_list": "New Mailing List",
         "new_signature": "<bold>New Signature</bod>",
         "new_subscription_requests": "New subscriptions requests",
+        "new_volume_button": "NEW VOLUME",
+        "new_volumeset_as_primary_button": "NEW VOLUMESET AS PRIMARY",
         "next": "NEXT",
         "next_step": "NEXT STEP",
         "no": "NO",
@@ -707,6 +713,7 @@
         "servers_list": "Servers List",
         "service_status": "Service Status",
         "services": "Services",
+        "set_as_secondary_button": "SET AS SECONDARY",
         "settings": "Settings",
         "share_manages_to_new_members": "Share messages to new members",
         "share_message_to_new_member": "Share message to new members",
@@ -854,7 +861,7 @@
         "minute": "{{count}} minute",
         "minute_plural": ""
     },
-    "select_bucket_or_create_new_bucket": "it seems like you haven't setup a bucket type.Click NEW BUCKET button to create a new one.",
+    "select_bucket_or_create_new_bucket": "It seems like you haven't setup a bucket type. \n Click NEW BUCKET button to create a new one.",
     "select_cos_or_create_new_cos": "Please select a Class of Service to manage it or click Create button to create a new one.",
     "select_domain_or_create_new": "Please select a domain to manage it or click Create button to create a new one.",
     "select_section_from_left_menu": "Please select a section from the left menu",

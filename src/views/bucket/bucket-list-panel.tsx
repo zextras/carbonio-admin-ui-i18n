@@ -4,21 +4,70 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useState, useMemo, useEffect } from 'react';
-import { Container, Icon, Padding, List, Text } from '@zextras/carbonio-design-system';
+import React, { FC, useState, useMemo, useEffect, useCallback } from 'react';
+import { Container, Icon, Input, Dropdown, Row } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { replaceHistory } from '@zextras/carbonio-shell-ui';
+import styled from 'styled-components';
 import ListPanelItem from '../list/list-panel-item';
 import ListItems from '../list/list-items';
 import { BUCKET_LIST, SERVERS_LIST, VOLUME, HMS_SETTINGS, INDEXER_SETTINGS } from '../../constants';
+
+const SelectItem = styled(Row)``;
 
 const BucketListPanel: FC = () => {
 	const [isstoreselect, setIsStoreSelect] = useState(false);
 	const [selectedOperationItem, setSelectedOperationItem] = useState('');
 	const [isServerListExpand, setIsServerListExpand] = useState(true);
 	const [isServerSpecificListExpand, setIsServerSpecificListExpand] = useState(true);
+	const [searchVolumeName, setSearchVolumeName] = useState('');
+	const [isVolumeListExpand, setIsVolumeListExpand] = useState(false);
 
 	const [t] = useTranslation();
+
+	const volumeList = [
+		{
+			id: '1',
+			name: 'Servername#1'
+		},
+		{
+			id: '2',
+			name: 'Servername#2'
+		}
+	];
+
+	const selectedVolume = useCallback((volume: any) => {
+		setIsStoreSelect(true);
+		setSearchVolumeName(volume?.name);
+		setSelectedOperationItem(VOLUME);
+		setIsVolumeListExpand(false);
+	}, []);
+
+	const itemsVolume = volumeList.map((volume: any, index) => ({
+		id: volume.id,
+		label: volume.name,
+		customComponent: (
+			<SelectItem
+				top="9px"
+				right="large"
+				bottom="9px"
+				left="large"
+				style={{
+					fontFamily: 'roboto',
+					display: 'block',
+					textAlign: 'left',
+					height: 'inherit',
+					padding: '3px',
+					width: 'inherit'
+				}}
+				onClick={(): void => {
+					selectedVolume(volume);
+				}}
+			>
+				{volume?.name}
+			</SelectItem>
+		)
+	}));
 
 	const globalServerOption = useMemo(
 		() => [
@@ -108,11 +157,46 @@ const BucketListPanel: FC = () => {
 					setToggleView={toggleServerSpecific}
 				/>
 				{isServerSpecificListExpand && (
-					<ListItems
-						items={serverSpecificOption}
-						selectedOperationItem={selectedOperationItem}
-						setSelectedOperationItem={setSelectedOperationItem}
-					/>
+					<>
+						<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
+							<Dropdown
+								items={itemsVolume}
+								placement="bottom-start"
+								maxWidth="300px"
+								disableAutoFocus
+								width="265px"
+								style={{
+									width: '100%'
+								}}
+							>
+								<Input
+									label={t(
+										'label.I_want_to_see_this_server_details',
+										`i want to see this server’s details`
+									)}
+									CustomIcon={(): any => (
+										<Icon
+											icon="HardDriveOutline"
+											size="large"
+											onClick={(): void => {
+												setIsVolumeListExpand(!isVolumeListExpand);
+											}}
+										/>
+									)}
+									onChange={(ev: any): void => {
+										setSearchVolumeName(ev.target.value);
+									}}
+									value={searchVolumeName}
+									backgroundColor="gray5"
+								/>
+							</Dropdown>
+						</Row>
+						<ListItems
+							items={serverSpecificOption}
+							selectedOperationItem={selectedOperationItem}
+							setSelectedOperationItem={setSelectedOperationItem}
+						/>
+					</>
 				)}
 			</Container>
 		</Container>
