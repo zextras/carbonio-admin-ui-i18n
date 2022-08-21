@@ -153,7 +153,7 @@
         },
         "filter_buckets_list": "รายการกรอง Bucket",
         "create_new_bucket": "Bucket ใหม่",
-        "connect_buckets": "เชื่อมต่อ Bucket",
+        "connect_buckets": "เชื่อมต่อสิ่งที่ต้องทำ",
         "bucket_type": "ประเภท Bucket",
         "bucket_list": "รายการ Bucket",
         "connector_used": "ตัวเชื่อมต่อที่ใช้เป็น"
@@ -303,7 +303,7 @@
         "help": "วิธีใช้",
         "home": "หน้าแรก",
         "hsm_policies": "นโยบาย HSM",
-        "index_volumes": "ปริมาณวอลุ่ม",
+        "index_volumes": "ปริมาณดัชนี",
         "indexer_settings": "การตั้งค่าตัวสร้างดัชนี",
         "initial_calendar_view": "มุมมองปฏิทินเริ่มต้น",
         "last_access": "การเข้าถึงล่าสุด",
