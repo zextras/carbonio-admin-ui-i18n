@@ -210,87 +210,85 @@ const ManageAccounts: FC = () => {
 		const type = 'accounts';
 		const attrs =
 			'displayName,zimbraId,zimbraAliasTargetId,cn,sn,zimbraMailHost,uid,zimbraCOSId,zimbraAccountStatus,zimbraLastLogonTimestamp,description,zimbraIsSystemAccount,zimbraIsDelegatedAdminAccount,zimbraIsAdminAccount,zimbraIsSystemResource,zimbraAuthTokenValidityValue,zimbraIsExternalVirtualAccount,zimbraMailStatus,zimbraIsAdminGroup,zimbraCalResType,zimbraDomainType,zimbraDomainName,zimbraDomainStatus,zimbraIsDelegatedAdminAccount,zimbraIsAdminAccount,zimbraIsSystemResource,zimbraIsSystemAccount,zimbraIsExternalVirtualAccount,zimbraCreateTimestamp,zimbraLastLogonTimestamp,zimbraMailQuota,zimbraNotes';
-		accountListDirectory(attrs, type, domainName, searchQuery, offset, limit)
-			.then((response) => response.json())
-			.then((data) => {
-				const accountListResponse: any = data?.Body?.SearchDirectoryResponse?.account || [];
-				if (accountListResponse && Array.isArray(accountListResponse)) {
-					const accountListArr: any = [];
-					setTotalAccount(data?.Body?.SearchDirectoryResponse?.searchTotal || 0);
-					accountListResponse.map((item: any): any => {
-						item?.a?.map((ele: any) => {
-							// eslint-disable-next-line no-param-reassign
-							item[ele?.n] = ele._content;
-							return '';
-						});
-						accountListArr.push({
-							id: item?.id,
-							columns: [
-								<Text
-									size="medium"
-									key={item?.id}
-									color="#414141"
-									onClick={(event: { stopPropagation: () => void }): void => {
-										event.stopPropagation();
-										openDetailView(item);
-									}}
-								>
-									{item?.name || ' '}
-								</Text>,
-								<Text
-									size="medium"
-									key={item?.id}
-									color="#414141"
-									onClick={(event: { stopPropagation: () => void }): void => {
-										event.stopPropagation();
-										openDetailView(item);
-									}}
-								>
-									{item?.displayName || <>&nbsp;</>}
-								</Text>,
-								<Text
-									size="medium"
-									key={item?.id}
-									color="#828282"
-									onClick={(event: { stopPropagation: () => void }): void => {
-										event.stopPropagation();
-										openDetailView(item);
-									}}
-								>
-									{accountUserType(item)}
-								</Text>,
-								<Text
-									size="medium"
-									key={item?.id}
-									color={STATUS_COLOR[item?.zimbraAccountStatus]?.color}
-									onClick={(event: { stopPropagation: () => void }): void => {
-										event.stopPropagation();
-										openDetailView(item);
-									}}
-								>
-									{STATUS_COLOR[item?.zimbraAccountStatus]?.label}
-								</Text>,
-								<Text
-									size="medium"
-									key={item?.id}
-									color="#414141"
-									onClick={(event: { stopPropagation: () => void }): void => {
-										event.stopPropagation();
-										openDetailView(item);
-									}}
-								>
-									{item?.description || <>&nbsp;</>}
-								</Text>
-							],
-							item,
-							clickable: true
-						});
+		accountListDirectory(attrs, type, domainName, searchQuery, offset, limit).then((data) => {
+			const accountListResponse: any = data?.account || [];
+			if (accountListResponse && Array.isArray(accountListResponse)) {
+				const accountListArr: any = [];
+				setTotalAccount(data.searchTotal || 0);
+				accountListResponse.map((item: any): any => {
+					item?.a?.map((ele: any) => {
+						// eslint-disable-next-line no-param-reassign
+						item[ele?.n] = ele._content;
 						return '';
 					});
-					// setAccountList([]);
-					setAccountList(accountListArr);
-				}
-			});
+					accountListArr.push({
+						id: item?.id,
+						columns: [
+							<Text
+								size="medium"
+								key={item?.id}
+								color="#414141"
+								onClick={(event: { stopPropagation: () => void }): void => {
+									event.stopPropagation();
+									openDetailView(item);
+								}}
+							>
+								{item?.name || ' '}
+							</Text>,
+							<Text
+								size="medium"
+								key={item?.id}
+								color="#414141"
+								onClick={(event: { stopPropagation: () => void }): void => {
+									event.stopPropagation();
+									openDetailView(item);
+								}}
+							>
+								{item?.displayName || <>&nbsp;</>}
+							</Text>,
+							<Text
+								size="medium"
+								key={item?.id}
+								color="#828282"
+								onClick={(event: { stopPropagation: () => void }): void => {
+									event.stopPropagation();
+									openDetailView(item);
+								}}
+							>
+								{accountUserType(item)}
+							</Text>,
+							<Text
+								size="medium"
+								key={item?.id}
+								color={STATUS_COLOR[item?.zimbraAccountStatus]?.color}
+								onClick={(event: { stopPropagation: () => void }): void => {
+									event.stopPropagation();
+									openDetailView(item);
+								}}
+							>
+								{STATUS_COLOR[item?.zimbraAccountStatus]?.label}
+							</Text>,
+							<Text
+								size="medium"
+								key={item?.id}
+								color="#414141"
+								onClick={(event: { stopPropagation: () => void }): void => {
+									event.stopPropagation();
+									openDetailView(item);
+								}}
+							>
+								{item?.description || <>&nbsp;</>}
+							</Text>
+						],
+						item,
+						clickable: true
+					});
+					return '';
+				});
+				// setAccountList([]);
+				setAccountList(accountListArr);
+			}
+		});
 	}, [STATUS_COLOR, accountUserType, domainName, limit, offset, openDetailView, searchQuery]);
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const searchAccountList = useCallback(
