@@ -282,7 +282,7 @@
         "always_compose_mail_using": "Toujours composer un email en utilisant",
         "activate_and_update": "Activer et mettre à jour",
         "I_want_to_see_this_COS": "Je souhaite consulter cette COS",
-        "I_am_looking_for_this_account": "Je recherche ce compte...",
+        "I_am_looking_for_this_account": "Je recherche ce compte…",
         "you_are_deleting": "Vous êtes sur le point de supprimer {{cosname}}",
         "yes_delete": "Oui, Supprimer",
         "verify_error": "{{name}}",
@@ -541,10 +541,13 @@
         "restore_deleted_email": "Restaurer l'email supprimé",
         "mailing_list": "Mailing Liste",
         "i_want_to_see_this_domain": "Je souhaite consulter ce domaine",
-        "account_list": "Liste des comptes"
+        "account_list": "Liste des comptes",
+        "list_details": "Liste des détails",
+        "admin_delegates": "Délégation admin"
     },
     "commons": {
-        "confirm_connection": "CONFIRMER LA CONNEXION"
+        "confirm_connection": "CONFIRMER LA CONNEXION",
+        "create_with_there_data": "CRÉER AVEC CES DONNÉES"
     },
     "create_new_bucket": "NOUVEAU BUCKET",
     "create_new_domain": "Créer un nouveau domaine",
@@ -617,7 +620,7 @@
         "preferences": "Préférences",
         "receiving_mail": "Réception de mail",
         "s_mime_features": "Fonctions S/MIME",
-        "search_features": "Fonctions de recherche",
+        "search_features": "Recherche de fonctionnalités",
         "show_selection_checkbox_for_selecting_email_contact_voicemail_items_in_a_list_view_for_batch_operations": "Afficher des cases à cocher permettant de sélectionner des mails, des contacts, des objets vocaux (dans un affichage en liste) pour les opérations en batch",
         "view_mail_as_html": "Afficher le mail au format HTML (si possible)",
         "type_of_UI": "Type d'IHM",
@@ -673,6 +676,20 @@
     },
     "accountDetails": {
         "hide_in_gal": "Masquer la GAL",
-        "prevent_user_from_changing_password": "Empêcher l’utilisateur de modifier le mot de passe"
+        "prevent_user_from_changing_password": "Empêcher l’utilisateur de modifier le mot de passe",
+        "this_user_must_change_password": "Cet utilisateur doit changer son mot de passe",
+        "this_is_global_administrator": "C'est un Administrateur Global",
+        "generate_first_2FA_token": "Génération du premier jeton 2FA",
+        "enable_activeSync_remote_access": "Activer l'accès distant ActiveSync",
+        "default_COS": "COS par défaut",
+        "change_password_for_next_login": "Doit changer son mot de passe à la prochaine connexion"
+    },
+    "account": {
+        "new": {
+            "create_account_wizard": "Assistant de création de compte"
+        },
+        "edit": {
+            "edit_account_wizard": "Assistant de modification de compte"
+        }
     }
 }
