@@ -12,36 +12,32 @@ import styled from 'styled-components';
 import ListPanelItem from '../list/list-panel-item';
 import ListItems from '../list/list-items';
 import { BUCKET_LIST, SERVERS_LIST, VOLUME, HMS_SETTINGS, INDEXER_SETTINGS } from '../../constants';
+import { fetchSoap } from '../../services/bucket-service';
+import { useBucketVolumeStore } from '../../store/bucket-volume/store';
 
 const SelectItem = styled(Row)``;
 
 const BucketListPanel: FC = () => {
+	const [t] = useTranslation();
+	const setSelectedServerName = useBucketVolumeStore((state) => state.setSelectedServerName);
 	const [isstoreselect, setIsStoreSelect] = useState(false);
 	const [selectedOperationItem, setSelectedOperationItem] = useState('');
 	const [isServerListExpand, setIsServerListExpand] = useState(true);
 	const [isServerSpecificListExpand, setIsServerSpecificListExpand] = useState(true);
 	const [searchVolumeName, setSearchVolumeName] = useState('');
 	const [isVolumeListExpand, setIsVolumeListExpand] = useState(false);
+	const [volumeList, setVolumeList] = useState([]);
 
-	const [t] = useTranslation();
-
-	const volumeList = [
-		{
-			id: '1',
-			name: 'Servername#1'
+	const selectedVolume = useCallback(
+		(volume: any) => {
+			setIsStoreSelect(true);
+			setSelectedServerName(volume?.name);
+			setSearchVolumeName(volume?.name);
+			setSelectedOperationItem(VOLUME);
+			setIsVolumeListExpand(false);
 		},
-		{
-			id: '2',
-			name: 'Servername#2'
-		}
-	];
-
-	const selectedVolume = useCallback((volume: any) => {
-		setIsStoreSelect(true);
-		setSearchVolumeName(volume?.name);
-		setSelectedOperationItem(VOLUME);
-		setIsVolumeListExpand(false);
-	}, []);
+		[setSelectedServerName]
+	);
 
 	const itemsVolume = volumeList.map((volume: any, index) => ({
 		id: volume.id,
@@ -104,9 +100,6 @@ const BucketListPanel: FC = () => {
 		],
 		[t, isstoreselect]
 	);
-	useEffect(() => {
-		setIsStoreSelect(true);
-	}, []);
 
 	useEffect(() => {
 		setSelectedOperationItem(SERVERS_LIST);
@@ -128,6 +121,21 @@ const BucketListPanel: FC = () => {
 	const toggleServerSpecific = (): void => {
 		setIsServerSpecificListExpand(!isServerSpecificListExpand);
 	};
+
+	const getServersListType = useCallback((service): void => {
+		fetchSoap('GetAllServersRequest', {
+			...(!service ? { _jsns: 'urn:zimbraAdmin' } : { _jsns: 'urn:zimbraAdmin', service })
+		}).then((response) => {
+			const serverResponseData = response.GetAllServersResponse.server;
+			if (serverResponseData.length !== 0) {
+				setVolumeList(serverResponseData);
+			}
+		});
+	}, []);
+
+	useEffect(() => {
+		getServersListType('mailbox');
+	}, [getServersListType]);
 
 	return (
 		<Container

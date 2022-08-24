@@ -193,11 +193,7 @@ const Connection: FC<{
 
 	useEffect(() => {
 		if (bucketTypeData !== '') {
-			if (
-				bucketTypeData === undefined ||
-				bucketTypeData === AMAZON_WEB_SERVICE_S3 ||
-				bucketType === AMAZON_WEB_SERVICE_S3
-			) {
+			if (bucketTypeData === undefined) {
 				setShowPrefix(false);
 			} else {
 				setShowPrefix(true);

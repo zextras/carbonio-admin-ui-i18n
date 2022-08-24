@@ -860,6 +860,81 @@ export const BucketTypeItems = [
 	}
 ];
 
+export const tableHeader = [
+	{
+		id: 'name',
+		label: 'Name',
+		width: '62%',
+		bold: true,
+		align: 'left',
+		items: [
+			{ label: 'Volumename_1', value: '1' },
+			{ label: 'Volumename_2', value: '2' }
+		]
+	},
+	{
+		id: 'allocation',
+		label: 'Allocation',
+		width: '12%',
+		align: 'center',
+		bold: true,
+		items: [
+			{ label: 'Allocation_1', value: '1' },
+			{ label: 'Allocation_2', value: '2' }
+		]
+	},
+	{
+		id: 'current',
+		label: 'Current',
+		width: '12%',
+		align: 'center',
+		bold: true
+	},
+	{
+		id: 'compression',
+		label: 'Compression',
+		i18nAllLabel: 'All',
+		width: '14%',
+		align: 'center',
+		bold: true
+	}
+];
+
+export const indexerHeaders = [
+	{
+		id: 'name',
+		label: 'Name',
+		width: '62%',
+		bold: true,
+		align: 'left',
+		items: [
+			{ label: 'Volumename_1', value: '1' },
+			{ label: 'Volumename_2', value: '2' }
+		]
+	},
+	{
+		id: 'path',
+		label: 'Path',
+		width: '12%',
+		align: 'center',
+		bold: true,
+		items: [
+			{ label: 'Allocation_1', value: '1' },
+			{ label: 'Allocation_2', value: '2' }
+		]
+	},
+	{
+		id: 'current',
+		label: 'Current',
+		width: '12%',
+		align: 'center',
+		bold: true
+	},
+	{
+		width: '14%'
+	}
+];
+
 export const localeList = (
 	t: TFunction
 ): Array<{ id: string; name: string; localName: string; value: string; label: string }> => [

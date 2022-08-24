@@ -3,13 +3,17 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { Container, Row, Text, Divider, Table, Button } from '@zextras/carbonio-design-system';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { NO } from '../../../constants';
+import { NO, YES } from '../../../constants';
 import { AbsoluteContainer } from '../../components/styled';
 import ServerVolumeDetailsPanel from './server-volume-details-panel';
+import { fetchSoap } from '../../../services/bucket-service';
+import IndexerVolumeTable from './indexer-volume-table';
+import { tableHeader, indexerHeaders } from '../../utility/utils';
+import { useBucketVolumeStore } from '../../../store/bucket-volume/store';
 
 const RelativeContainer = styled(Container)`
 	position: relative;
@@ -27,16 +31,16 @@ const VolumeListTable: FC<{
 				id: i,
 				columns: [
 					<Row key={i} style={{ textAlign: 'left', justifyContent: 'flex-start' }}>
-						{v.item1}
+						{v.name}
 					</Row>,
 					<Row key={i} style={{ textAlign: 'center' }}>
-						{v.item2}
-					</Row>,
-					<Row key={i} color={v.current === NO ? 'error' : 'text'} style={{ textAlign: 'center' }}>
-						<Text color={v.item3 === NO ? 'error' : 'text'}>{v.item3}</Text>
+						{v.storeType}
 					</Row>,
 					<Row key={i} style={{ textAlign: 'center' }}>
-						<Text color={v.item4 === NO ? 'error' : 'text'}>{v.item4}</Text>
+						<Text color={v.isCurrent ? 'text' : 'error'}>{v.isCurrent ? YES : NO}</Text>
+					</Row>,
+					<Row key={i} style={{ textAlign: 'center' }}>
+						<Text color={v.compressed ? 'text' : 'error'}>{v.compressed ? YES : NO}</Text>
 					</Row>
 				],
 				clickable: true
@@ -65,132 +69,38 @@ const VolumeListTable: FC<{
 
 const VolumesDetailPanel: FC = () => {
 	const [t] = useTranslation();
+	const selectedServerName = useBucketVolumeStore((state) => state.selectedServerName);
 	const [volumeselection, setVolumeselection] = useState('');
 	const [toggleDetailPage, setToggleDetailPage] = useState(false);
 	const [volumeDetail, setVolumeDetail] = useState<object | any>({});
+	const [volumeList, setVolumeList] = useState<object | any>({
+		primaries: [],
+		indexes: [],
+		secondaries: []
+	});
 
-	const headers = [
-		{
-			id: 'name',
-			label: 'Name',
-			width: '62%',
-			bold: true,
-			align: 'left',
-			items: [
-				{ label: 'Volumename_1', value: '1' },
-				{ label: 'Volumename_2', value: '2' }
-			]
-		},
-		{
-			id: 'allocation',
-			label: 'Allocation',
-			width: '12%',
-			align: 'center',
-			bold: true,
-			items: [
-				{ label: 'Allocation_1', value: '1' },
-				{ label: 'Allocation_2', value: '2' }
-			]
-		},
-		{
-			id: 'current',
-			label: 'Current',
-			width: '12%',
-			align: 'center',
-			bold: true
-		},
-		{
-			id: 'compression',
-			label: 'Compression',
-			i18nAllLabel: 'All',
-			width: '14%',
-			align: 'center',
-			bold: true
-		}
-	];
+	const getServersListType = useCallback((): void => {
+		fetchSoap('zextras', {
+			_jsns: 'urn:zimbraAdmin',
+			module: 'ZxPowerstore',
+			action: 'getAllVolumes',
+			targetServers: 'all_servers'
+		}).then((res) => {
+			const responseData = JSON.parse(res.response.content);
+			if (responseData.ok) {
+				const data = responseData.response[selectedServerName].response;
+				setVolumeList({
+					primaries: data?.primaries,
+					indexes: data?.indexes,
+					secondaries: data?.secondaries
+				});
+			}
+		});
+	}, [selectedServerName]);
 
-	const indexerHeaders = [
-		{
-			id: 'name',
-			label: 'Name',
-			width: '62%',
-			bold: true,
-			align: 'left',
-			items: [
-				{ label: 'Volumename_1', value: '1' },
-				{ label: 'Volumename_2', value: '2' }
-			]
-		},
-		{
-			id: 'path',
-			label: 'Path',
-			width: '12%',
-			align: 'center',
-			bold: true,
-			items: [
-				{ label: 'Allocation_1', value: '1' },
-				{ label: 'Allocation_2', value: '2' }
-			]
-		},
-		{
-			id: 'current',
-			label: 'Current',
-			width: '12%',
-			align: 'center',
-			bold: true
-		},
-		{
-			width: '14%'
-		}
-	];
-	const primaryVolumeList = [
-		{
-			item1: 'VolumeName#1',
-			item2: 'Local',
-			item3: 'Yes',
-			item4: 'Yes'
-		},
-		{
-			item1: 'VolumeExtraName#2',
-			item2: 'Local',
-			item3: 'No',
-			item4: 'No'
-		},
-		{
-			item1: 'AnotherVolName#3',
-			item2: 'Local',
-			item3: 'No',
-			item4: 'No'
-		}
-	];
-
-	const secondaryVolumeList = [
-		{
-			item1: 'VolumeSecName#1',
-			item2: 'Local',
-			item3: 'Yes',
-			item4: 'Yes'
-		},
-		{
-			item1: 'VolumeSecExtraName#2',
-			item2: 'Local',
-			item3: 'No',
-			item4: 'No'
-		}
-	];
-
-	const indexerVolumeList = [
-		{
-			item1: 'VolumeSecName#1',
-			item2: '/.../...',
-			item3: 'Yes'
-		},
-		{
-			item1: 'VolumeSecExtraName#2',
-			item2: '/.../...',
-			item3: 'No'
-		}
-	];
+	useEffect(() => {
+		getServersListType();
+	}, [getServersListType]);
 	return (
 		<>
 			{toggleDetailPage && volumeDetail && (
@@ -210,7 +120,9 @@ const VolumesDetailPanel: FC = () => {
 			>
 				<Row mainAlignment="flex-start" padding={{ all: 'large' }}>
 					<Text size="extralarge" weight="bold">
-						{t('buckets.serverName#1_volumes', 'ServerName#1 Volumes')}
+						{t('buckets.serverName_volumes', '{{serverName}} Volumes', {
+							serverName: selectedServerName
+						})}
 					</Text>
 				</Row>
 				<Divider />
@@ -261,11 +173,16 @@ const VolumesDetailPanel: FC = () => {
 						</Row>
 						<Row padding={{ horizontal: 'large' }} width="100%">
 							<VolumeListTable
-								volumes={primaryVolumeList}
-								headers={headers}
+								volumes={volumeList?.primaries}
+								headers={tableHeader}
 								selectedRows={volumeselection}
 								onSelectionChange={(selected: any): any => {
-									// const volumeObject: any = volumeList.find((s, index) => index === selected[0]);
+									setVolumeselection(selected);
+									const volumeObject: any = volumeList?.primaries.find(
+										(s: any, index: any) => index === selected[0]
+									);
+									setToggleDetailPage(true);
+									setVolumeDetail(volumeObject);
 								}}
 							/>
 						</Row>
@@ -322,13 +239,13 @@ const VolumesDetailPanel: FC = () => {
 							width="100%"
 						>
 							<VolumeListTable
-								volumes={secondaryVolumeList}
-								headers={headers}
+								volumes={volumeList?.secondaries}
+								headers={tableHeader}
 								selectedRows={volumeselection}
 								onSelectionChange={(selected: any): any => {
 									setVolumeselection(selected);
-									const volumeObject: any = secondaryVolumeList.find(
-										(s, index) => index === selected[0]
+									const volumeObject: any = volumeList?.secondaries.find(
+										(s: any, index: any) => index === selected[0]
 									);
 									setToggleDetailPage(true);
 									setVolumeDetail(volumeObject);
@@ -353,8 +270,8 @@ const VolumesDetailPanel: FC = () => {
 							}}
 							width="100%"
 						>
-							<VolumeListTable
-								volumes={indexerVolumeList}
+							<IndexerVolumeTable
+								volumes={volumeList?.indexes}
 								headers={indexerHeaders}
 								selectedRows={volumeselection}
 								onSelectionChange={(selected: any): any => {
