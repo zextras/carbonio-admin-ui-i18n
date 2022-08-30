@@ -97,3 +97,6 @@ export const PRIVACY_ROUTE_ID = 'privacy';
 export const PRIMARIES = 'Primary';
 export const SECONDARIES = 'Secondary';
 export const INDEXERES = 'Index';
+export const CARBONIO_SEND_ANALYTICS = 'carbonioSendAnalytics';
+export const CARBONIO_SEND_FULL_ERROR_STACK = 'carbonioSendFullErrorStack';
+export const CARBONIO_ALLOW_FEEDBACK = 'carbonioAllowFeedback';
