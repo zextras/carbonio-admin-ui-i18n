@@ -4,103 +4,182 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useCallback, useEffect, useState } from 'react';
-import { Container, Row, Padding, Text, Divider, Switch } from '@zextras/carbonio-design-system';
+import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
+import {
+	Container,
+	Row,
+	Padding,
+	Text,
+	Divider,
+	Switch,
+	Button,
+	SnackbarManagerContext
+} from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import ListRow from '../list/list-row';
-import { getConfig } from '../../services/get-config';
 import { modifyConfig } from '../../services/modify-config';
-import { FALSE, TRUE } from '../../constants';
+import {
+	CARBONIO_ALLOW_FEEDBACK,
+	CARBONIO_SEND_ANALYTICS,
+	CARBONIO_SEND_FULL_ERROR_STACK,
+	FALSE,
+	TRUE
+} from '../../constants';
+import { useConfigStore } from '../../store/config/store';
 
 const PrivacyView: FC = () => {
 	const [t] = useTranslation();
 	const [carbonioAllowFeedback, setCarbonioAllowFeedback] = useState<boolean>(false);
 	const [carbonioSendAnalytics, setCarbonioSendAnalytics] = useState<boolean>(false);
 	const [carbonioSendFullErrorStack, setCarbonioSendFullErrorStack] = useState<boolean>(false);
-	const CARBONIO_SEND_ANALYTICS = 'carbonioSendAnalytics';
-	const CARBONIO_SEND_FULL_ERROR_STACK = 'carbonioSendFullErrorStack';
-	const CARBONIO_ALLOW_FEEDBACK = 'carbonioAllowFeedback';
-
-	const getConfigData = useCallback((): void => {
-		const feedback: any = { a: { n: CARBONIO_SEND_ANALYTICS } };
-		getConfig(feedback)
-			.then((response) => response.json())
-			.then((data) => {
-				if (data?.Body?.GetConfigResponse?.a && Array.isArray(data?.Body?.GetConfigResponse?.a)) {
-					const allAttributes = data?.Body?.GetConfigResponse?.a;
-					allAttributes.forEach((item: any) => {
-						if (item?.n === CARBONIO_SEND_ANALYTICS) {
-							setCarbonioSendAnalytics(item?._content === 'TRUE');
-						}
-					});
-				}
-			});
-
-		const errorStack: any = { a: { n: CARBONIO_SEND_FULL_ERROR_STACK } };
-		getConfig(errorStack)
-			.then((response) => response.json())
-			.then((data) => {
-				if (data?.Body?.GetConfigResponse?.a && Array.isArray(data?.Body?.GetConfigResponse?.a)) {
-					const allAttributes = data?.Body?.GetConfigResponse?.a;
-					allAttributes.forEach((item: any) => {
-						if (item?.n === CARBONIO_SEND_FULL_ERROR_STACK) {
-							setCarbonioSendFullErrorStack(item?._content === 'TRUE');
-						}
-					});
-				}
-			});
-
-		const analytics: any = { a: { n: CARBONIO_ALLOW_FEEDBACK } };
-		getConfig(analytics)
-			.then((response) => response.json())
-			.then((data) => {
-				if (data?.Body?.GetConfigResponse?.a && Array.isArray(data?.Body?.GetConfigResponse?.a)) {
-					const allAttributes = data?.Body?.GetConfigResponse?.a;
-					allAttributes.forEach((item: any) => {
-						if (item?.n === CARBONIO_ALLOW_FEEDBACK) {
-							setCarbonioAllowFeedback(item?._content === 'TRUE');
-						}
-					});
-				}
-			});
-	}, []);
+	const config = useConfigStore((state) => state.config);
+	const updateConfig = useConfigStore((state) => state.updateConfig);
+	const [isDirty, setIsDirty] = useState<boolean>(false);
+	const createSnackbar: any = useContext(SnackbarManagerContext);
+	const [lastState, setLastState]: any = useState({
+		CARBONIO_SEND_ANALYTICS: false,
+		CARBONIO_SEND_FULL_ERROR_STACK: false,
+		CARBONIO_ALLOW_FEEDBACK: false
+	});
 
 	useEffect(() => {
-		getConfigData();
-	}, [getConfigData]);
+		if (config && config.length > 0) {
+			const analytics = config.find((item: any) => item?.n === CARBONIO_SEND_ANALYTICS);
+			if (analytics) {
+				setCarbonioSendAnalytics(analytics?._content === 'TRUE');
+				setLastState((prev: any) => ({
+					...prev,
+					CARBONIO_SEND_ANALYTICS: analytics?._content === 'TRUE'
+				}));
+			}
+			const errorStack = config.find((item: any) => item?.n === CARBONIO_SEND_FULL_ERROR_STACK);
+			if (errorStack) {
+				setCarbonioSendFullErrorStack(errorStack?._content === 'TRUE');
+				setLastState((prev: any) => ({
+					...prev,
+					CARBONIO_SEND_FULL_ERROR_STACK: errorStack?._content === 'TRUE'
+				}));
+			}
 
-	const savePrivacySettings = useCallback((key, value) => {
-		const attributes: any[] = [];
-		attributes.push({
-			n: key,
-			_content: value ? TRUE : FALSE
-		});
+			const feedback = config.find((item: any) => item?.n === CARBONIO_ALLOW_FEEDBACK);
+			if (feedback) {
+				setCarbonioAllowFeedback(feedback?._content === 'TRUE');
+				setLastState((prev: any) => ({
+					...prev,
+					CARBONIO_ALLOW_FEEDBACK: feedback?._content === 'TRUE'
+				}));
+			}
+		}
+	}, [config]);
 
-		modifyConfig(attributes)
-			.then((response) => response.json())
-			.then((data) => {
-				if (data?.Body?.ModifyConfigResponse) {
-					if (key === CARBONIO_ALLOW_FEEDBACK) {
-						setCarbonioAllowFeedback(value);
-					}
-					if (key === CARBONIO_SEND_ANALYTICS) {
-						setCarbonioSendAnalytics(value);
-					}
-					if (key === CARBONIO_SEND_FULL_ERROR_STACK) {
-						setCarbonioSendFullErrorStack(value);
-					}
-				}
+	const isChangeItem = (key: string, value: boolean): void => {
+		setIsDirty(true);
+		if (key === CARBONIO_ALLOW_FEEDBACK) {
+			setCarbonioAllowFeedback(value);
+		}
+		if (key === CARBONIO_SEND_ANALYTICS) {
+			setCarbonioSendAnalytics(value);
+		}
+		if (key === CARBONIO_SEND_FULL_ERROR_STACK) {
+			setCarbonioSendFullErrorStack(value);
+		}
+	};
+
+	const onCancel = useCallback(() => {
+		setCarbonioAllowFeedback(lastState.CARBONIO_ALLOW_FEEDBACK);
+		setCarbonioSendAnalytics(lastState.CARBONIO_SEND_ANALYTICS);
+		setCarbonioSendFullErrorStack(lastState.CARBONIO_SEND_FULL_ERROR_STACK);
+		setIsDirty(false);
+	}, [lastState]);
+
+	const callAllRequest = useCallback(
+		(req) => {
+			Promise.all(req).then((response) => {
+				createSnackbar({
+					key: 'success',
+					type: 'success',
+					label: t('label.change_save_success_msg', 'The change has been saved successfully'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+				updateConfig(CARBONIO_SEND_ANALYTICS, carbonioSendAnalytics ? TRUE : FALSE);
+				updateConfig(CARBONIO_ALLOW_FEEDBACK, carbonioAllowFeedback ? TRUE : FALSE);
+				updateConfig(CARBONIO_SEND_FULL_ERROR_STACK, carbonioSendFullErrorStack ? TRUE : FALSE);
+				setLastState((prev: any) => ({
+					...prev,
+					CARBONIO_SEND_FULL_ERROR_STACK: carbonioSendFullErrorStack,
+					CARBONIO_SEND_ANALYTICS: carbonioSendAnalytics,
+					CARBONIO_ALLOW_FEEDBACK: carbonioAllowFeedback
+				}));
+				setIsDirty(false);
 			});
-	}, []);
+		},
+		[
+			t,
+			createSnackbar,
+			carbonioSendFullErrorStack,
+			carbonioSendAnalytics,
+			carbonioAllowFeedback,
+			updateConfig
+		]
+	);
+
+	const onSave = useCallback(() => {
+		let attributes: any[] = [];
+		const allRequest: any[] = [];
+		attributes.push({
+			n: CARBONIO_SEND_ANALYTICS,
+			_content: carbonioSendAnalytics ? TRUE : FALSE
+		});
+		allRequest.push(modifyConfig(attributes));
+		attributes = [];
+		attributes.push({
+			n: CARBONIO_ALLOW_FEEDBACK,
+			_content: carbonioAllowFeedback ? TRUE : FALSE
+		});
+		allRequest.push(modifyConfig(attributes));
+
+		attributes = [];
+		attributes.push({
+			n: CARBONIO_SEND_FULL_ERROR_STACK,
+			_content: carbonioSendFullErrorStack ? TRUE : FALSE
+		});
+		allRequest.push(modifyConfig(attributes));
+		callAllRequest(allRequest);
+	}, [carbonioSendAnalytics, carbonioAllowFeedback, carbonioSendFullErrorStack, callAllRequest]);
 
 	return (
 		<Container mainAlignment="flex-start" background="gray6">
 			<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
-				<Row mainAlignment="flex-start" crossAlignment="flex-start" padding={{ all: 'large' }}>
-					<Text size="medium" weight="bold" color="gray0">
-						{t('label.privacy', 'Privacy')}
-					</Text>
-				</Row>
+				<Container
+					orientation="vertical"
+					mainAlignment="space-around"
+					background="gray6"
+					height="58px"
+				>
+					<Row orientation="horizontal" width="100%" padding={{ all: 'large' }}>
+						<Row mainAlignment="flex-start" width="30%" crossAlignment="flex-start">
+							<Text size="medium" weight="bold" color="gray0">
+								{t('label.mailing_list', 'Mailing List')}
+							</Text>
+						</Row>
+						<Row width="70%" mainAlignment="flex-end" crossAlignment="flex-end">
+							<Padding right="large">
+								{isDirty && (
+									<Button
+										label={t('label.cancel', 'Cancel')}
+										color="secondary"
+										onClick={onCancel}
+									/>
+								)}
+							</Padding>
+							{isDirty && (
+								<Button label={t('label.save', 'Save')} color="primary" onClick={onSave} />
+							)}
+						</Row>
+					</Row>
+				</Container>
 			</Row>
 			<Row orientation="horizontal" width="100%" background="gray6">
 				<Divider />
@@ -128,7 +207,7 @@ const PrivacyView: FC = () => {
 									'Send full error data to Zextras'
 								)}
 								onClick={(): void => {
-									savePrivacySettings(CARBONIO_SEND_FULL_ERROR_STACK, !carbonioSendFullErrorStack);
+									isChangeItem(CARBONIO_SEND_FULL_ERROR_STACK, !carbonioSendFullErrorStack);
 								}}
 							/>
 						</Container>
@@ -160,7 +239,7 @@ const PrivacyView: FC = () => {
 								value={carbonioSendAnalytics}
 								label={t('privacy.allow_data_analytics', 'Allow data analytics')}
 								onClick={(): void => {
-									savePrivacySettings(CARBONIO_SEND_ANALYTICS, !carbonioSendAnalytics);
+									isChangeItem(CARBONIO_SEND_ANALYTICS, !carbonioSendAnalytics);
 								}}
 							/>
 						</Container>
@@ -192,7 +271,7 @@ const PrivacyView: FC = () => {
 								value={carbonioAllowFeedback}
 								label={t('privacy.allow_live_survey_feedbacks', 'Allow live survey feedbacks')}
 								onClick={(): void => {
-									savePrivacySettings(CARBONIO_ALLOW_FEEDBACK, !carbonioAllowFeedback);
+									isChangeItem(CARBONIO_ALLOW_FEEDBACK, !carbonioAllowFeedback);
 								}}
 							/>
 						</Container>

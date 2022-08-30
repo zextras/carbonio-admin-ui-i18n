@@ -12,6 +12,9 @@ import {
 	APPLICATION_LOG,
 	APP_ID,
 	BACKUP_ROUTE_ID,
+	CARBONIO_ALLOW_FEEDBACK,
+	CARBONIO_SEND_ANALYTICS,
+	CARBONIO_SEND_FULL_ERROR_STACK,
 	COS_ROUTE_ID,
 	CREATE_NEW_COS_ROUTE_ID,
 	CREATE_NEW_DOMAIN_ROUTE_ID,
@@ -33,6 +36,9 @@ import { useServerStore } from './store/server/store';
 import { useGlobalConfigStore } from './store/global-config/store';
 import { useBackupModuleStore } from './store/backup-module/store';
 import { getAllServers } from './services/get-all-servers-service';
+import { getConfig } from './services/get-config';
+import { useConfigStore } from './store/config/store';
+import { getAllConfig } from './services/get-all-config';
 
 const LazyAppView = lazy(() => import('./views/app-view'));
 
@@ -48,6 +54,7 @@ const App: FC = () => {
 	const setServerList = useServerStore((state) => state.setServerList);
 	const setGlobalConfig = useGlobalConfigStore((state) => state.setGlobalConfig);
 	const setBackupModuleEnable = useBackupModuleStore((state) => state.setBackupModuleEnable);
+	const setConfig = useConfigStore((state) => state.setConfig);
 	const managementSection = useMemo(
 		() => ({
 			id: MANAGE_APP_ID,
@@ -391,8 +398,7 @@ const App: FC = () => {
 			appView: AppView,
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore
-			primarybarSection: { ...managementSection },
-			tooltip: StorageTooltipView
+			primarybarSection: { ...managementSection }
 		});
 		addRoute({
 			route: BACKUP_ROUTE_ID,
@@ -561,6 +567,24 @@ const App: FC = () => {
 	useEffect(() => {
 		getAllServersRequest();
 	}, [getAllServersRequest]);
+
+	const getAllConfigRequest = useCallback(() => {
+		getAllConfig()
+			.then((response) => response.json())
+			.then((data) => {
+				if (
+					data?.Body?.GetAllConfigResponse?.a &&
+					Array.isArray(data?.Body?.GetAllConfigResponse?.a)
+				) {
+					const allConfig = data?.Body?.GetAllConfigResponse?.a;
+					setConfig(allConfig);
+				}
+			});
+	}, [setConfig]);
+
+	useEffect(() => {
+		getAllConfigRequest();
+	}, [getAllConfigRequest]);
 
 	return null;
 };
