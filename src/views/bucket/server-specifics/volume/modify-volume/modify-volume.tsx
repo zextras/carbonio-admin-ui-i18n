@@ -14,16 +14,18 @@ import {
 	IconButton,
 	Divider,
 	Switch,
-	Select
+	Select,
+	useSnackbar
 } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { volumeTypeList } from '../../../../utility/utils';
+import { fetchSoap } from '../../../../../services/bucket-service';
 
-const ModifyVolume: FC<{ setmodifyVolumeToggle: any; volumeDetail: any }> = ({
-	setmodifyVolumeToggle,
-	volumeDetail
-}) => {
-	console.log('__det', volumeDetail);
+const ModifyVolume: FC<{
+	setmodifyVolumeToggle: any;
+	volumeDetail: any;
+	GetAllVolumesRequest: any;
+}> = ({ setmodifyVolumeToggle, volumeDetail, GetAllVolumesRequest }) => {
 	const { t } = useTranslation();
 	const [isDirty, setIsDirty] = useState(false);
 	const [name, setName] = useState(volumeDetail?.name);
@@ -36,6 +38,7 @@ const ModifyVolume: FC<{ setmodifyVolumeToggle: any; volumeDetail: any }> = ({
 		volumeDetail?.compressionThreshold
 	);
 	const [previousDetail, setPreviousDetail] = useState<any>({});
+	const createSnackbar = useSnackbar();
 
 	const updatePreviousDetail = (): void => {
 		const latestData: any = {};
@@ -51,6 +54,28 @@ const ModifyVolume: FC<{ setmodifyVolumeToggle: any; volumeDetail: any }> = ({
 	};
 
 	const onSave = (): void => {
+		fetchSoap('ModifyVolumeRequest', {
+			_jsns: 'urn:zimbraAdmin',
+			module: 'ZxCore',
+			action: 'ModifyVolumeRequest',
+			id,
+			volume: {
+				id,
+				name,
+				rootpath,
+				type,
+				compressBlobs: compressBlobs ? 1 : 0,
+				compressionThreshold,
+				isCurrent: isCurrent ? 1 : 0
+			}
+		}).then((res: any) => {
+			createSnackbar({
+				key: '1',
+				type: 'success',
+				label: t('label.volume_edited', 'Volume edited successfully')
+			});
+			GetAllVolumesRequest();
+		});
 		updatePreviousDetail();
 	};
 

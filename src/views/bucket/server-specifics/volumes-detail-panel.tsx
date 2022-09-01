@@ -219,7 +219,11 @@ const VolumesDetailPanel: FC = () => {
 			)}
 			{modifyVolumeToggle && volume && (
 				<AbsoluteContainer orientation="vertical" background="gray5">
-					<ModifyVolume volumeDetail={volume} setmodifyVolumeToggle={setmodifyVolumeToggle} />
+					<ModifyVolume
+						volumeDetail={volume}
+						setmodifyVolumeToggle={setmodifyVolumeToggle}
+						GetAllVolumesRequest={GetAllVolumesRequest}
+					/>
 				</AbsoluteContainer>
 			)}
 			{toggleWizardSection && (
