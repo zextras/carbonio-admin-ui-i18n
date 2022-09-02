@@ -13,7 +13,8 @@ import {
 	Divider,
 	Padding,
 	Text,
-	Switch
+	Switch,
+	useSnackbar
 } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { fetchSoap } from '../../../services/bucket-service';
@@ -25,14 +26,17 @@ const ServerVolumeDetailsPanel: FC<{
 	modifyVolumeToggle: any;
 	setmodifyVolumeToggle: any;
 	setOpen: any;
+	GetAllVolumesRequest: any;
 }> = ({
 	setToggleDetailPage,
 	volumeDetail,
 	modifyVolumeToggle,
 	setmodifyVolumeToggle,
-	setOpen
+	setOpen,
+	GetAllVolumesRequest
 }) => {
 	const { t } = useTranslation();
+	const createSnackbar = useSnackbar();
 	const [detailData, setDetailData] = useState({
 		name: '',
 		id: 0,
@@ -42,6 +46,10 @@ const ServerVolumeDetailsPanel: FC<{
 		compressionThreshold: ''
 	});
 	const [type, setType] = useState('');
+	const [toggleSetAsBtnLabel, setToggleSetAsBtnLabel] = useState(
+		t('label.set_as_secondary_button', 'SET AS SECONDARY')
+	);
+	const [toggleSetAsIcon, setToggleSetAsIcon] = useState('ArrowheadDown');
 
 	const getVolumeDetailData = useCallback((): void => {
 		fetchSoap('GetVolumeRequest', {
@@ -49,7 +57,7 @@ const ServerVolumeDetailsPanel: FC<{
 			module: 'ZxPowerstore',
 			id: volumeDetail?.id
 		}).then((response) => {
-			if (response) {
+			if (response.Fault === undefined) {
 				if (response.GetVolumeResponse.volume[0].type === 1) {
 					setType(PRIMARIES);
 				} else if (response.GetVolumeResponse.volume[0].type === 2) {
@@ -65,13 +73,34 @@ const ServerVolumeDetailsPanel: FC<{
 					rootpath: response.GetVolumeResponse.volume[0].rootpath,
 					compressionThreshold: response.GetVolumeResponse.volume[0].compressionThreshold
 				});
+			} else {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: t('label.volume_detail_error', '{{message}}', {
+						message: response.Fault.Reason.Text
+					}),
+					autoHideTimeout: 5000
+				});
+				setToggleDetailPage(false);
+				GetAllVolumesRequest();
 			}
 		});
-	}, [volumeDetail]);
+	}, [GetAllVolumesRequest, createSnackbar, setToggleDetailPage, t, volumeDetail?.id]);
 
 	useEffect(() => {
 		getVolumeDetailData();
 	}, [getVolumeDetailData, volumeDetail, modifyVolumeToggle]);
+
+	useEffect(() => {
+		if (type === PRIMARIES) {
+			setToggleSetAsBtnLabel(t('label.set_as_secondary_button', 'SET AS SECONDARY'));
+			setToggleSetAsIcon('ArrowheadDown');
+		} else if (type === SECONDARIES) {
+			setToggleSetAsBtnLabel(t('label.set_as_primary_button', 'SET AS PRIMARY'));
+			setToggleSetAsIcon('ArrowheadUp');
+		}
+	}, [t, type]);
 
 	return (
 		<>
@@ -100,47 +129,20 @@ const ServerVolumeDetailsPanel: FC<{
 						padding={{ all: 'extralarge' }}
 						style={{ height: 'fit-content' }}
 					>
-						<Padding right="large">
-							<Button
-								type="outlined"
-								iconColor="gray6"
-								icon="EditAsNewOutline"
-								height={36}
-								label=""
-								width={36}
-								style={{ padding: '8px 8px 8px 6px', display: 'block' }}
-								onClick={(): void => {
-									setmodifyVolumeToggle(true);
-								}}
-								disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
-								loading={!detailData?.id || volumeDetail.id !== detailData?.id}
-							/>
-						</Padding>
-						<Container width="fit" height="fit">
-							<Button
-								type="outlined"
-								color="error"
-								icon="Trash2Outline"
-								height={36}
-								label=""
-								width={36}
-								onClick={(): any => setOpen(true)}
-								style={{
-									padding: '8px 8px 8px 6px',
-									display: 'block'
-								}}
-								disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
-								loading={!detailData?.id || volumeDetail.id !== detailData?.id}
-							/>
-							{/* <Button
-								iconColor="error"
-								backgroundColor="gray6"
-								icon="Trash2Outline"
-								height={36}
-								width={36}
-								onClick={(): any => setOpen(true)}
-							/> */}
-						</Container>
+						<Button
+							type="outlined"
+							iconColor="gray6"
+							icon="EditAsNewOutline"
+							height={36}
+							label=""
+							width={36}
+							style={{ padding: '8px 8px 8px 6px', display: 'block' }}
+							onClick={(): void => {
+								setmodifyVolumeToggle(true);
+							}}
+							disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
+							loading={!detailData?.id || volumeDetail.id !== detailData?.id}
+						/>
 					</Container>
 					<Container
 						padding={{ horizontal: 'large', top: 'extralarge', bottom: 'large' }}
@@ -200,6 +202,40 @@ const ServerVolumeDetailsPanel: FC<{
 								color="secondary"
 							/>
 						</Row>
+						<Container orientation="horizontal" mainAlignment="flex-end" crossAlignment="flex-end">
+							{/* <Row width="100%"> */}
+							{type !== INDEXERES && (
+								<>
+									<Row width="50%" mainAlignment="flex-start">
+										<Button
+											type="outlined"
+											width="fill"
+											label={toggleSetAsBtnLabel}
+											icon={toggleSetAsIcon}
+											iconPlacement="left"
+											color="primary"
+											disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
+											loading={!detailData?.id || volumeDetail.id !== detailData?.id}
+										/>
+									</Row>
+									<Padding horizontal="small" />
+								</>
+							)}
+							<Row width={type !== INDEXERES ? '50%' : '100%'} mainAlignment="flex-start">
+								<Button
+									icon="CloseOutline"
+									iconPlacement="left"
+									type="outlined"
+									label={t('label.button_delete', 'DELETE')}
+									color="error"
+									width="fill"
+									onClick={(): any => setOpen(true)}
+									disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
+									loading={!detailData?.id || volumeDetail.id !== detailData?.id}
+								/>
+							</Row>
+							{/* </Row> */}
+						</Container>
 					</Container>
 				</Container>
 			)}

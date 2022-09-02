@@ -114,7 +114,31 @@ const VolumesDetailPanel: FC = () => {
 	const [createMailstoresVolumeData, setCreateMailstoresVolumeData] = useState();
 	const [modifyVolumeToggle, setmodifyVolumeToggle] = useState(false);
 	const [toggleDetailPage, setToggleDetailPage] = useState(false);
-	const [volume, setVolume] = useState<number>(0);
+	const [volume, setVolume] = useState<{
+		compressBlobs: string;
+		compressionThreshold: number;
+		fbits: number;
+		fgbits: number;
+		id: number;
+		isCurrent: true;
+		mbits: number;
+		mgbits: number;
+		name: string;
+		rootpath: string;
+		type: number;
+	}>({
+		compressBlobs: '',
+		compressionThreshold: 0,
+		fbits: 0,
+		fgbits: 0,
+		id: 0,
+		isCurrent: true,
+		mbits: 0,
+		mgbits: 0,
+		name: '',
+		rootpath: '',
+		type: 1
+	});
 	const [open, setOpen] = useState(false);
 	const [volumeList, setVolumeList] = useState<object | any>({
 		primaries: [],
@@ -130,20 +154,33 @@ const VolumesDetailPanel: FC = () => {
 		fetchSoap('GetAllVolumesRequest', {
 			_jsns: 'urn:zimbraAdmin'
 		}).then((response) => {
-			const primaries = response.GetAllVolumesResponse.volume.filter(
-				(item: any) => item.type === 1
-			);
-			const secondaries = response.GetAllVolumesResponse.volume.filter(
-				(item: any) => item.type === 2
-			);
-			const indexes = response.GetAllVolumesResponse.volume.filter((item: any) => item.type === 10);
-			setVolumeList({
-				primaries,
-				indexes,
-				secondaries
-			});
+			if (response.Fault === undefined) {
+				const primaries = response.GetAllVolumesResponse.volume.filter(
+					(item: any) => item.type === 1
+				);
+				const secondaries = response.GetAllVolumesResponse.volume.filter(
+					(item: any) => item.type === 2
+				);
+				const indexes = response.GetAllVolumesResponse.volume.filter(
+					(item: any) => item.type === 10
+				);
+				setVolumeList({
+					primaries,
+					indexes,
+					secondaries
+				});
+			} else {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: t('label.volume_detail_error', '{{message}}', {
+						message: response.Fault.Reason.Text
+					}),
+					autoHideTimeout: 5000
+				});
+			}
 		});
-	}, []);
+	}, [createSnackbar, t]);
 
 	useEffect(() => {
 		GetAllVolumesRequest();
@@ -155,15 +192,26 @@ const VolumesDetailPanel: FC = () => {
 			module: 'ZxCore',
 			action: 'DeleteVolumeRequest',
 			id
-		}).then(() => {
-			setOpen(false);
-			createSnackbar({
-				key: '1',
-				type: 'success',
-				label: t('label.volume_deleted', 'Volume deleted successfully')
-			});
-			setToggleDetailPage(false);
+		}).then((res) => {
+			if (res.Fault === undefined) {
+				createSnackbar({
+					key: '1',
+					type: 'success',
+					label: t('label.volume_deleted', 'Volume deleted successfully')
+				});
+			} else {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: t('label.volume_detail_error', '{{message}}', {
+						message: res.Fault.Reason.Text
+					}),
+					autoHideTimeout: 5000
+				});
+			}
 			GetAllVolumesRequest();
+			setOpen(false);
+			setToggleDetailPage(false);
 		});
 	};
 
@@ -190,13 +238,24 @@ const VolumesDetailPanel: FC = () => {
 				isCurrent: volumeDetail?.isCurrent ? 1 : 0
 			}
 		}).then((res: any) => {
-			GetAllVolumesRequest();
-			setToggleWizardSection(false);
-			createSnackbar({
-				key: '1',
-				type: 'success',
-				label: t('label.volume_created', 'Volume created successfully')
-			});
+			if (res.Fault === undefined) {
+				setToggleWizardSection(false);
+				createSnackbar({
+					key: '1',
+					type: 'success',
+					label: t('label.volume_created', 'Volume created successfully')
+				});
+				GetAllVolumesRequest();
+			} else {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: t('label.volume_detail_error', '{{message}}', {
+						message: res.Fault.Reason.Text
+					}),
+					autoHideTimeout: 5000
+				});
+			}
 		});
 	};
 
@@ -205,6 +264,20 @@ const VolumesDetailPanel: FC = () => {
 		setVolume(volumeObject);
 		setToggleDetailPage(true);
 	};
+
+	useEffect(() => {
+		if (volume?.type === 1 && volume.id !== 0) {
+			const volumeObject: any = volumeList?.primaries.find((s: any) => s.id === volume.id);
+			setVolume(volumeObject);
+		} else if (volume?.type === 2 && volume.id !== 0) {
+			const volumeObject: any = volumeList?.secondaries.find((s: any) => s.id === volume.id);
+			setVolume(volumeObject);
+		} else if (volume?.type === 10 && volume.id !== 0) {
+			const volumeObject: any = volumeList?.indexes.find((s: any) => s.id === volume.id);
+			setVolume(volumeObject);
+		}
+	}, [volume.id, volume?.type, volumeList]);
+
 	return (
 		<>
 			{toggleDetailPage && volume && (
@@ -215,6 +288,7 @@ const VolumesDetailPanel: FC = () => {
 						modifyVolumeToggle={modifyVolumeToggle}
 						setmodifyVolumeToggle={setmodifyVolumeToggle}
 						setOpen={setOpen}
+						GetAllVolumesRequest={GetAllVolumesRequest}
 					/>
 				</AbsoluteContainer>
 			)}
@@ -289,11 +363,11 @@ const VolumesDetailPanel: FC = () => {
 							width="100%"
 							mainAlignment="flex-start"
 							orientation="horizontal"
-							padding={{ horizontal: 'large', top: 'large', bottom: 'small' }}
+							padding={{ horizontal: 'large', top: 'large', bottom: 'large' }}
 						>
 							<Text>Primary</Text>
 						</Row>
-						<Row padding={{ horizontal: 'large' }} width="100%">
+						<Row padding={{ horizontal: 'large', bottom: 'extralarge' }} width="100%">
 							<VolumeListTable
 								volumes={volumeList?.primaries}
 								headers={tableHeader}
@@ -306,58 +380,20 @@ const VolumesDetailPanel: FC = () => {
 								}}
 							/>
 						</Row>
+
 						<Row
 							width="100%"
 							mainAlignment="flex-start"
 							orientation="horizontal"
 							padding={{
 								horizontal: 'large',
-								vertical: 'extralarge'
-							}}
-						>
-							<Container
-								orientation="horizontal"
-								mainAlignment="flex-start"
-								style={{ gap: '16px' }}
-							>
-								<Button
-									type="outlined"
-									width="fill"
-									label={t('label.set_as_secondary_button', 'SET AS SECONDARY')}
-									icon="ArrowheadDown"
-									iconPlacement="left"
-									color="primary"
-									disabled
-								/>
-								<Button
-									type="outlined"
-									width="fill"
-									label={t('label.set_as_primary_button', 'SET AS PRIMARY')}
-									icon="ArrowheadUp"
-									iconPlacement="left"
-									color="secondary"
-									disabled
-								/>
-							</Container>
-						</Row>
-						<Row
-							width="100%"
-							mainAlignment="flex-start"
-							orientation="horizontal"
-							padding={{
-								horizontal: 'large',
-								bottom: 'small'
+								bottom: 'large',
+								top: 'small'
 							}}
 						>
 							<Text>Secondary</Text>
 						</Row>
-						<Row
-							padding={{
-								horizontal: 'large',
-								bottom: 'extralarge'
-							}}
-							width="100%"
-						>
+						<Row padding={{ horizontal: 'large', bottom: 'extralarge' }} width="100%">
 							<VolumeListTable
 								volumes={volumeList?.secondaries}
 								headers={tableHeader}
@@ -370,14 +406,12 @@ const VolumesDetailPanel: FC = () => {
 								}}
 							/>
 						</Row>
+
 						<Row
 							width="100%"
 							mainAlignment="flex-start"
 							orientation="horizontal"
-							padding={{
-								horizontal: 'large',
-								vertical: 'small'
-							}}
+							padding={{ horizontal: 'large', bottom: 'large' }}
 						>
 							<Text>Indexer</Text>
 						</Row>

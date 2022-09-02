@@ -69,11 +69,22 @@ const ModifyVolume: FC<{
 				isCurrent: isCurrent ? 1 : 0
 			}
 		}).then((res: any) => {
-			createSnackbar({
-				key: '1',
-				type: 'success',
-				label: t('label.volume_edited', 'Volume edited successfully')
-			});
+			if (res.Fault === undefined) {
+				createSnackbar({
+					key: '1',
+					type: 'success',
+					label: t('label.volume_edited', 'Volume edited successfully')
+				});
+			} else {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: t('label.volume_detail_error', '{{message}}', {
+						message: res.Fault.Reason.Text
+					}),
+					autoHideTimeout: 5000
+				});
+			}
 			GetAllVolumesRequest();
 			setmodifyVolumeToggle(false);
 		});

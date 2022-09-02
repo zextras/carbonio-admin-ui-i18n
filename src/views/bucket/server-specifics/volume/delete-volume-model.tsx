@@ -14,8 +14,6 @@ const DeleteVolumeModel: FC<{
 	volumeDetail: any;
 }> = ({ open, closeHandler, deleteHandler, volumeDetail }) => {
 	const [t] = useTranslation();
-	console.log('__detail', volumeDetail);
-
 	return (
 		<>
 			<Modal

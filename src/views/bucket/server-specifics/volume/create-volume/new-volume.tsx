@@ -12,7 +12,6 @@ import MailstoresConfig from './mailstores-config';
 import MailstoresVolume from './mailstores-volume';
 import MailstoresCreate from './mailstores-create';
 import { VolumeContext } from './volume-context';
-import { fetchSoap } from '../../../../../services/bucket-service';
 
 const WizardInSection: FC<any> = ({
 	wizard,

@@ -17,12 +17,10 @@ const MailstoresCreate: FC = () => {
 
 	const changeVolDetail = useCallback(
 		(e) => {
-			console.log('__id', e.target.value);
 			setVolumeDetail((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
 		},
 		[setVolumeDetail]
 	);
-	console.log('__', volumeDetail);
 
 	return (
 		<>
