@@ -68,26 +68,27 @@ const ModifyVolume: FC<{
 				compressionThreshold,
 				isCurrent: isCurrent ? 1 : 0
 			}
-		}).then((res: any) => {
-			if (res.Fault === undefined) {
+		})
+			.then(() => {
 				createSnackbar({
 					key: '1',
 					type: 'success',
 					label: t('label.volume_edited', 'Volume edited successfully')
 				});
-			} else {
+				GetAllVolumesRequest();
+				setmodifyVolumeToggle(false);
+			})
+			.catch((error) => {
 				createSnackbar({
 					key: 'error',
 					type: 'error',
 					label: t('label.volume_detail_error', '{{message}}', {
-						message: res.Fault.Reason.Text
+						message: error
 					}),
 					autoHideTimeout: 5000
 				});
-			}
-			GetAllVolumesRequest();
-			setmodifyVolumeToggle(false);
-		});
+				setmodifyVolumeToggle(false);
+			});
 		updatePreviousDetail();
 	};
 

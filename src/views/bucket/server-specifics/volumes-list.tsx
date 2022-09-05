@@ -153,8 +153,8 @@ const VolumesDetailPanel: FC = () => {
 	const GetAllVolumesRequest = useCallback((): void => {
 		fetchSoap('GetAllVolumesRequest', {
 			_jsns: 'urn:zimbraAdmin'
-		}).then((response) => {
-			if (response.Body.Fault === undefined) {
+		})
+			.then((response) => {
 				const primaries = response.Body.GetAllVolumesResponse.volume.filter(
 					(item: any) => item.type === 1
 				);
@@ -169,17 +169,17 @@ const VolumesDetailPanel: FC = () => {
 					indexes,
 					secondaries
 				});
-			} else {
+			})
+			.catch((error) => {
 				createSnackbar({
 					key: 'error',
 					type: 'error',
 					label: t('label.volume_detail_error', '{{message}}', {
-						message: response.Body.Fault.Reason.Text
+						message: error
 					}),
 					autoHideTimeout: 5000
 				});
-			}
-		});
+			});
 	}, [createSnackbar, t]);
 
 	useEffect(() => {
@@ -192,27 +192,58 @@ const VolumesDetailPanel: FC = () => {
 			module: 'ZxCore',
 			action: 'DeleteVolumeRequest',
 			id
-		}).then((res) => {
-			if (res.Body.Fault === undefined) {
-				createSnackbar({
-					key: '1',
-					type: 'success',
-					label: t('label.volume_deleted', 'Volume deleted successfully')
+		})
+			.then((res) => {
+				if (res.Body.DeleteVolumeResponse._jsns === 'urn:zimbraAdmin') {
+					createSnackbar({
+						key: '1',
+						type: 'success',
+						label: t('label.volume_deleted', 'Volume deleted successfully')
+					});
+				}
+				setVolume({
+					compressBlobs: '',
+					compressionThreshold: 0,
+					fbits: 0,
+					fgbits: 0,
+					id: 0,
+					isCurrent: true,
+					mbits: 0,
+					mgbits: 0,
+					name: '',
+					rootpath: '',
+					type: 0
 				});
-			} else if (res.Body.Fault.Reason.Text !== '') {
+				GetAllVolumesRequest();
+				setOpen(false);
+				setToggleDetailPage(false);
+			})
+			.catch((error) => {
 				createSnackbar({
 					key: 'error',
 					type: 'error',
 					label: t('label.volume_detail_error', '{{message}}', {
-						message: res.Body.Fault.Reason.Text
+						message: error
 					}),
 					autoHideTimeout: 5000
 				});
-			}
-			GetAllVolumesRequest();
-			setOpen(false);
-			setToggleDetailPage(false);
-		});
+				setVolume({
+					compressBlobs: '',
+					compressionThreshold: 0,
+					fbits: 0,
+					fgbits: 0,
+					id: 0,
+					isCurrent: true,
+					mbits: 0,
+					mgbits: 0,
+					name: '',
+					rootpath: '',
+					type: 0
+				});
+				GetAllVolumesRequest();
+				setOpen(false);
+				setToggleDetailPage(false);
+			});
 	};
 
 	const CreateVolumeRequest = (volumeDetail: {
@@ -237,8 +268,8 @@ const VolumesDetailPanel: FC = () => {
 				compressionThreshold: volumeDetail?.compressionThreshold,
 				isCurrent: volumeDetail?.isCurrent ? 1 : 0
 			}
-		}).then((res: any) => {
-			if (res.Body.Fault === undefined) {
+		})
+			.then((res: any) => {
 				setToggleWizardSection(false);
 				createSnackbar({
 					key: '1',
@@ -246,17 +277,17 @@ const VolumesDetailPanel: FC = () => {
 					label: t('label.volume_created', 'Volume created successfully')
 				});
 				GetAllVolumesRequest();
-			} else {
+			})
+			.catch((error) => {
 				createSnackbar({
 					key: 'error',
 					type: 'error',
 					label: t('label.volume_detail_error', '{{message}}', {
-						message: res.Body.Fault.Reason.Text
+						message: error
 					}),
 					autoHideTimeout: 5000
 				});
-			}
-		});
+			});
 	};
 
 	const handleClick = (i: number, data: any): void => {
@@ -265,19 +296,18 @@ const VolumesDetailPanel: FC = () => {
 		setToggleDetailPage(true);
 	};
 
-	// useEffect(() => {
-	// 	console.log('__vol', volume);
-	// 	if (volume?.type === 1 && volume.id !== 0) {
-	// 		const volumeObject: any = volumeList?.primaries.find((s: any) => s.id === volume.id);
-	// 		setVolume(volumeObject);
-	// 	} else if (volume?.type === 2 && volume.id !== 0) {
-	// 		const volumeObject: any = volumeList?.secondaries.find((s: any) => s.id === volume.id);
-	// 		setVolume(volumeObject);
-	// 	} else if (volume?.type === 10 && volume.id !== 0) {
-	// 		const volumeObject: any = volumeList?.indexes.find((s: any) => s.id === volume.id);
-	// 		setVolume(volumeObject);
-	// 	}
-	// }, [volume, volume.id, volume?.type, volumeList]);
+	useEffect(() => {
+		if (volume?.type === 1 && volume.id !== 0) {
+			const volumeObject: any = volumeList?.primaries.find((s: any) => s.id === volume.id);
+			setVolume(volumeObject);
+		} else if (volume?.type === 2 && volume.id !== 0) {
+			const volumeObject: any = volumeList?.secondaries.find((s: any) => s.id === volume.id);
+			setVolume(volumeObject);
+		} else if (volume?.type === 10 && volume.id !== 0) {
+			const volumeObject: any = volumeList?.indexes.find((s: any) => s.id === volume.id);
+			setVolume(volumeObject);
+		}
+	}, [volume, volume.id, volume?.type, volumeList]);
 
 	return (
 		<>

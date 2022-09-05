@@ -56,10 +56,8 @@ const ServerVolumeDetailsPanel: FC<{
 			_jsns: 'urn:zimbraAdmin',
 			module: 'ZxPowerstore',
 			id: volumeDetail?.id
-		}).then((response) => {
-			console.log('__res', response);
-
-			if (response.Body.Fault === undefined) {
+		})
+			.then((response) => {
 				if (response.Body.GetVolumeResponse.volume[0].type === 1) {
 					setType(PRIMARIES);
 				} else if (response.Body.GetVolumeResponse.volume[0].type === 2) {
@@ -75,19 +73,19 @@ const ServerVolumeDetailsPanel: FC<{
 					rootpath: response.Body.GetVolumeResponse.volume[0].rootpath,
 					compressionThreshold: response.Body.GetVolumeResponse.volume[0].compressionThreshold
 				});
-			} else {
+			})
+			.catch((error) => {
 				createSnackbar({
 					key: 'error',
 					type: 'error',
 					label: t('label.volume_detail_error', '{{message}}', {
-						message: response.Body.Fault.Reason.Text
+						message: error
 					}),
 					autoHideTimeout: 5000
 				});
 				setToggleDetailPage(false);
 				GetAllVolumesRequest();
-			}
-		});
+			});
 	}, [GetAllVolumesRequest, createSnackbar, setToggleDetailPage, t, volumeDetail?.id]);
 
 	useEffect(() => {
