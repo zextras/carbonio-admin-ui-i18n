@@ -23,6 +23,8 @@ import styled from 'styled-components';
 import { getMailboxQuota } from '../../../../services/account-list-directory-service';
 import { AccountContext } from './account-context';
 import { deleteAccount } from '../../../../services/delete-account-service';
+import { CLOSED } from '../../../../constants';
+import { modifyAccountRequest } from '../../../../services/modify-account';
 
 const AccountDetailContainer = styled(Container)`
 	z-index: 10;
@@ -71,22 +73,29 @@ const AccountDetailView: FC<any> = ({
 		setIsOpenDeleteDialog(false);
 	}, []);
 
+	const onSuccess = useCallback(
+		(message) => {
+			createSnackbar({
+				key: 'success',
+				type: 'success',
+				label: message,
+				autoHideTimeout: 3000,
+				hideButton: true,
+				replace: true
+			});
+			setIsRequestInProgress(false);
+			closeHandler();
+			setShowAccountDetailView(false);
+			getAccountList();
+		},
+		[closeHandler, createSnackbar, getAccountList, setShowAccountDetailView]
+	);
+
 	const onDeleteHandler = useCallback(() => {
 		setIsRequestInProgress(true);
 		deleteAccount(selectedAccount?.id)
 			.then((data: any) => {
-				createSnackbar({
-					key: 'success',
-					type: 'success',
-					label: t('label.account_remove_correctly', 'The account has been correctly removed.'),
-					autoHideTimeout: 3000,
-					hideButton: true,
-					replace: true
-				});
-				setIsRequestInProgress(false);
-				closeHandler();
-				setShowAccountDetailView(false);
-				getAccountList();
+				onSuccess(t('label.account_remove_correctly', 'The account has been correctly removed.'));
 			})
 			.then((error: any) => {
 				setIsRequestInProgress(false);
@@ -102,14 +111,32 @@ const AccountDetailView: FC<any> = ({
 					replace: true
 				});
 			});
-	}, [
-		selectedAccount?.id,
-		closeHandler,
-		setShowAccountDetailView,
-		getAccountList,
-		createSnackbar,
-		t
-	]);
+	}, [createSnackbar, onSuccess, t, selectedAccount?.id]);
+
+	const onDisableAccount = useCallback(() => {
+		setIsRequestInProgress(true);
+		modifyAccountRequest(accountDetail?.zimbraId, { zimbraAccountStatus: CLOSED })
+			.then((data) => {
+				if (data?.account && Array.isArray(data?.account)) {
+					onSuccess(
+						t('label.account_disable_correctly', 'The account has been correctly disable.')
+					);
+				}
+			})
+			.catch((error) => {
+				setIsRequestInProgress(false);
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: error?.message
+						? error?.message
+						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			});
+	}, [accountDetail?.zimbraId, createSnackbar, t, onSuccess]);
 
 	return (
 		<AccountDetailContainer background="gray5" mainAlignment="flex-start">
@@ -429,7 +456,7 @@ const AccountDetailView: FC<any> = ({
 								<Button
 									label={t('label.disable_it_instead', 'Disable it instead')}
 									color="secondary"
-									onClick={closeHandler}
+									onClick={onDisableAccount}
 									disabled={isRequestInProgress}
 								/>
 								<Button
