@@ -1060,7 +1060,7 @@
         "can_send_auto_reply_messages": "Może wysyłać automatyczne odpowiedzi",
         "browser_title_for_appointments": "Tytył spotkań w przeglądarce",
         "auto_delete_duplicate_messages": "Automatycznie usuwaj zduplikowane wiadomości",
-        "auto_decline_if_inviter_is_blacklisted": "Automatycznie odrzucaj jeśli zapraszający znajduje się na czarnej liście",
+        "auto_decline_if_inviter_is_blacklisted": "Automatycznie odrzucaj jeśli nadawca znajduje się na czarnej liście",
         "audible_reminder_notification": "Dźwiękowe przypomnienie",
         "appointments_default_duration": "Domyślna długość trwania spotkania",
         "always_show_mini_calendar": "Zawsze pokazuj minikalendarz",
