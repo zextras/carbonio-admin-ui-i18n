@@ -547,13 +547,41 @@ const MailingListSection: FC<any> = () => {
 								<Table rows={dynamicListMemberRows} headers={memberHeaders} showCheckbox={false} />
 							</Container>
 						</ListRow>
-
+						<Row padding={{ top: 'large' }}>
+							<Text
+								size="small"
+								mainAlignment="flex-start"
+								crossAlignment="flex-start"
+								orientation="horizontal"
+								weight="bold"
+							>
+								{t('label.owners_settings', 'Owners’ Settings')}
+							</Text>
+						</Row>
+						<Row padding={{ top: 'small', bottom: 'medium' }}>
+							<Text
+								size="small"
+								mainAlignment="flex-start"
+								crossAlignment="flex-start"
+								orientation="horizontal"
+								weight="light"
+								color="#828282"
+							>
+								{t(
+									'label.owners_manage_add_list',
+									'Owners can manage and... add what Owners can do in the list'
+								)}
+							</Text>
+						</Row>
 						<ListRow>
 							<Container>
 								<Select
 									items={grantTypeOptions}
 									background="gray5"
-									label={t('label.new_subscription_requests', 'New subscriptions requests')}
+									label={t(
+										'label.who_can_send_mails_to_this_list',
+										'Who can send mails TO this list?'
+									)}
 									showCheckbox={false}
 									onChange={onGrantTypeChange}
 									selection={grantType}
@@ -563,7 +591,7 @@ const MailingListSection: FC<any> = () => {
 							<Container padding={{ all: 'small' }}>
 								<ChipInput
 									defaultValue={grantEmails}
-									placeholder="Select"
+									placeholder={t('label.type_in_the_mails', 'Type in the mails')}
 									options={grantEmailsList}
 									requireUniqueChips
 									onChange={onEmailAdd}
@@ -581,7 +609,7 @@ const MailingListSection: FC<any> = () => {
 								mainAlignment="flex-start"
 								crossAlignment="flex-start"
 								orientation="horizontal"
-								padding={{ top: 'large', right: 'small' }}
+								padding={{ top: 'medium', right: 'small' }}
 								width="65%"
 							>
 								<Dropdown
