@@ -132,6 +132,7 @@
         "create_new_bucket": "NEW BUCKET",
         "filter_buckets_list": "Filter Buckets List",
         "invalid_prefix": "Prefix should not contains space, the allowed letters are a-z,A-z and special characters /-.",
+        "invalid_volume_name": "Please fill the volume name field.",
         "new": {
             "bucket_connection": "Bucket Connection"
         },
@@ -851,12 +852,14 @@
         "virtual_host_user_msg": "Any user that logs in while using a URL with one of the hostnames below will be assumed to be in this domain, {{domainName}}",
         "virtual_hosts": "Virtual Hosts",
         "volume": "Volume",
+        "volume_active": "{{volumeName}} is Currently active",
         "volume_allocation": "Allocation",
         "volume_available_space": "Available Space",
         "volume_back_button": "BACK",
         "volume_cancel_button": "CANCEL",
         "volume_check": "CHECK",
         "volume_compression_thresold": "Compression Threshold",
+        "volume_create": "CREATE",
         "volume_create_with_this_data_button": "CREATE WITH THESE DATA",
         "volume_created": "Volume created successfully",
         "volume_deleted": "Volume deleted successfully",
