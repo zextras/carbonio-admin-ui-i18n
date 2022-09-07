@@ -62,6 +62,7 @@ const MailstoresCreate: FC<{
 		(e) => {
 			setVolumeDetail((prev: object) => ({ ...prev, compressionThreshold: e.target.value }));
 			onSelection({ compressionThreshold: e.target.value }, true);
+			const compThresold = /^[0-9]$/;
 			if (e.target.value !== '') {
 				setErrCompressionThreshold(true);
 			} else {
@@ -134,9 +135,11 @@ const MailstoresCreate: FC<{
 						hasError={!errName}
 					/>
 					{!errName && (
-						<Text color="error" overflow="break-word" size="extrasmall">
-							{t('buckets.invalid_volume_name', 'Please fill Required field')}
-						</Text>
+						<Padding top="extrasmall">
+							<Text color="error" overflow="break-word" size="extrasmall">
+								{t('buckets.invalid_volume_name', 'Volume name is required.')}
+							</Text>
+						</Padding>
 					)}
 				</Row>
 				<Row mainAlignment="flex-start" padding={{ top: 'large' }} width="100%">
@@ -149,9 +152,11 @@ const MailstoresCreate: FC<{
 						hasError={!errPath}
 					/>
 					{!errPath && (
-						<Text color="error" overflow="break-word" size="extrasmall">
-							{t('buckets.invalid_volume_name', 'Please fill Required field')}
-						</Text>
+						<Padding top="extrasmall">
+							<Text color="error" overflow="break-word" size="extrasmall">
+								{t('buckets.invalid_volume_path', 'path is required')}
+							</Text>
+						</Padding>
 					)}
 				</Row>
 				<Row mainAlignment="flex-start" padding={{ top: 'large' }} width="100%">
@@ -163,7 +168,7 @@ const MailstoresCreate: FC<{
 						/>
 					</Row>
 					<Padding horizontal="small" />
-					<Row padding={{ top: 'large' }} width="65%">
+					<Row mainAlignment="flex-start" padding={{ top: 'large' }} width="65%">
 						<Input
 							inputName="compressionThreshold"
 							label={t('label.volume_compression_thresold', 'Compression Threshold')}
@@ -173,9 +178,11 @@ const MailstoresCreate: FC<{
 							hasError={!errCompressionThreshold}
 						/>
 						{!errCompressionThreshold && (
-							<Text color="error" overflow="break-word" size="extrasmall">
-								{t('buckets.invalid_volume_name', 'Please fill Required field')}
-							</Text>
+							<Padding top="extrasmall">
+								<Text color="error" overflow="break-word" size="extrasmall">
+									{t('buckets.invalid_compression_thresold', 'Compression Threshold is required')}
+								</Text>
+							</Padding>
 						)}
 					</Row>
 				</Row>
@@ -188,7 +195,10 @@ const MailstoresCreate: FC<{
 				</Row>
 				<Row mainAlignment="flex-start" width="100%" padding={{ left: 'extralarge' }}>
 					<Text color="secondary">
-						Enabling this option will disable the current active volume.
+						{t(
+							'label.enable_current_helptext',
+							'Enabling this option will disable the current active volume.'
+						)}
 					</Text>
 				</Row>
 			</Container>
