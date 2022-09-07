@@ -24,7 +24,8 @@
             "descriptive_name": "Nome Descrittivo",
             "notes": "Note",
             "secret_key": "Chiave Segreta"
-        }
+        },
+        "invalid_prefix": "Il prefisso non deve contenere spazi. I caratteri ammessi sono a-z, A-Z e i caratteri speciali /-."
     },
     "core": {
         "subscription": {
@@ -494,7 +495,8 @@
             "wednesday": "Mercoledì"
         },
         "volume_main": "Volume Principale",
-        "filter_account_list": "Filtra Lista Account"
+        "filter_account_list": "Filtra Lista Account",
+        "appointments_default_duration": "Durata predefinita di un appuntamento"
     },
     "message": {
         "snackbar": {
@@ -790,7 +792,19 @@
         "time_window_failed_logins_must_occur_to_lock_account": "Intervallo entro cui devono verificarsi gli accessi non riusciti perché l’account venga bloccato:",
         "timeout_policy": "Criterio di timeout",
         "trashed_message_lifetime": "Durata messaggi cestinati",
-        "user_specific_fowarding_addresses": "Limita il campo degli indirizzi di inoltro specificati dall’utente a (caratt.)"
+        "user_specific_fowarding_addresses": "Limita il campo degli indirizzi di inoltro specificati dall’utente a (caratt.)",
+        "name_server": "Nome Server",
+        "minimum_duration_of_time_between_quota_warnings": "Intervallo minimo fra avvisi per spazio a disposizione",
+        "limt_serverpool_avaiable_create_user": "Limita il pool di server disponibili per creare nuovi utenti in questo COS:",
+        "legacy_exchange_dn_attribute": "O e OU usati nell’attributo legacyExchangeDN",
+        "initial_search_preference": "Preferenza di Ricerca Iniziale",
+        "external_pop_access": "Accesso POP Esterno",
+        "enable_past_due_reminders": "Permetti i promemoria scaduti",
+        "display_a_warning_when_administrators_try_to_navigate_away_from_Zimbra_Administration_Console": "Avvisa l'amministratore quando cerca di navigare al di fuori del pannello amministrativo di Carbonio",
+        "days_hours_minutes_sec": "Giorni / Ore/ Minuti/ Secondi",
+        "auto_delete_duplicate_messages": "Elimina automaticamente i messaggi duplicati",
+        "auto_decline_if_inviter_is_blacklisted": "Rifiuta automaticamente se il mittente risulta in black list",
+        "allow_sending_from_any_address": "Consenti l’invio da qualsiasi indirizzo"
     },
     "lable": {
         "delete_button": "ELIMINA"
@@ -881,7 +895,22 @@
         "auto_decline_if_inviter_is_blacklisted": "Rifiuta automaticamente se il mittente risulta in black list",
         "appointments_default_duration": "Durata predefinita di un appuntamento",
         "always_show_mini_calendar": "Mostra sempre il mini calendario",
-        "allow_sending_from_any_address": "Consenti l’invio da qualsiasi indirizzo"
+        "allow_sending_from_any_address": "Consenti l’invio da qualsiasi indirizzo",
+        "view_mail_as_html": "Visualizza e-mail come HTML",
+        "use_ical_delegation_model_for_shared_calendars": "Utilizza il modello di delega di iCal per i calendari condivisi",
+        "use_gal_to_auto_fill": "Utilizza la GAL per l'auto completamento",
+        "this_user_must_change_password": "Questo utente deve cambiare password",
+        "sms_reminder": "Promemoria SMS",
+        "pop3_access": "Accesso POP3",
+        "out_of_office_reply": "Risposta quando Fuori Ufficio",
+        "new_mail_notification": "Notifica per nuova e-mail",
+        "mail_signatures": "Firme E-mail",
+        "mail_signature": "Firma E-mail",
+        "iamp_access": "Accesso IMAP",
+        "enable_notifications": "Abilita notifiche",
+        "dont_keep_local_copy_of_messages": "Non salvare una copia dei messaggi in locale",
+        "display_external_image_as_html": "Mostra immagini esterne come HTML",
+        "auto_delete_duplicate_messages": "Elimina automaticamente i messaggi duplicati"
     },
     "connection": {
         "access_key": "Chiave d'Accesso",
@@ -889,5 +918,6 @@
         "descriptive_name": "Nome Descrittivo",
         "notes": "Note",
         "secret_key": "Chiave Segreta"
-    }
+    },
+    "click_new_bucket_button_to_create_new_one": "Seleziona il pulsante NUOVO BUCKET per crearne uno nuovo."
 }
