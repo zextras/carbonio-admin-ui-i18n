@@ -525,6 +525,7 @@
         "check_new_mail_every": "Check new mail every",
         "class_of_service": "Class of Service",
         "click_here": "Click here",
+        "close_the_account": "Close the account",
         "closed": "Closed",
         "composing_mails": "Composing Mails",
         "compression": "Compression",
@@ -981,7 +982,8 @@
     },
     "lable": {
         "delete_button": "DELETE",
-        "delete_it": "Delete it"
+        "delete_it": "Delete it",
+        "delete_it_instead": "Delete it instead"
     },
     "locale": {
         "English": "English",
