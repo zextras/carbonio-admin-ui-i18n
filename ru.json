@@ -25,7 +25,10 @@
         "type_here_a_domain": "Введите здесь домен",
         "i_want_to_see_this_domain": "Я хочу увидеть этот домен",
         "account_list": "Список учетных записей",
-        "list_details": "Подробности списка"
+        "list_details": "Подробности списка",
+        "single_account_domain_space_byte": "Пространство домена одной учетной записи (байт)",
+        "total_domain_space": "Общее доменное пространство (байт)",
+        "max_result_return_gal_search": "Максимальное количество результатов, возвращаемых поиском в GAL"
     },
     "label": {
         "account": "Учетная запись",
@@ -117,7 +120,6 @@
         "https": "https",
         "inbound_smtp_host_name": "Имя входящего SMTP-хоста",
         "log": "Журнал",
-        "login_allowed_user_agent": "Вход из разрешенного клиента",
         "logout_allowed_ip": "Разрешенный IP-адрес выхода",
         "logout_redirect_url": "URL переадресации выхода из системы",
         "mail_size": "Размер письма",
@@ -323,7 +325,6 @@
         "view_mail": "ПРОСМОТР ПОЧТЫ",
         "userName_auto_fill": "имя пользователя (автозаполнение)",
         "userName": "имя пользователя (автозаполнение)",
-        "used_on_Domains": "Используется в доменах",
         "unsubscribe_request": "Запросы на отмену подписки",
         "this_list_is_member_of": "Этот список является частью",
         "this_is_hidden_from_gal": "Этот список скрыт от GAL",
@@ -525,7 +526,18 @@
         "allowed_sending_addresses": "Разрешенные адреса для отправки",
         "share_message_to_new_member": "Поделиться сообщением с новыми участниками",
         "restore_account_has_added_operation_queue": "Учетная запись восстановления добавлена в очередь операций успешно",
-        "auto_accept_auto_decline_on_conflict": "Автоматическое принятие при наличии, автоматический отказ в случае конфликта"
+        "auto_accept_auto_decline_on_conflict": "Автоматическое принятие при наличии, автоматический отказ в случае конфликта",
+        "account_disable_correctly": "Учетная запись была правильно отключена.",
+        "account_remove_correctly": "Аккаунт успешно удален.",
+        "accounts_that_are_owners": "Аккаунты, которым принадлежат владельцы",
+        "accounts_that_use_this_cos": "Аккаунты, которые используют этот CoS",
+        "appointment_reminder_in_minutes": "Напоминание о встрече в минутах",
+        "close_the_account": "Закрыть учетную запись",
+        "data_volume": "Объем данных",
+        "data_volumes": "Объемы данных",
+        "deleting_account_content_2": "Удаление аккаунта НАВСЕГДА удаляет все данные. ",
+        "apply_hsm_policy_after_the_restore": "Применить политики HSM после восстановления",
+        "deleting_account_content_1": "Вы уверены, что хотите удалить <bold>{{name}}</bold>?"
     },
     "timezone": {
         "europe_bucharest": "{{value}} Бухарест",
@@ -694,7 +706,69 @@
             "descriptive_name": "Описательное имя",
             "notes": "Заметки",
             "secret_key": "Секретный ключ"
-        }
+        },
+        "alibaba_regions": {
+            "ap_northeast_1": "Япония (Токио)",
+            "ap_south_1": "Индия (Мумбаи)",
+            "ap_southeast_1": "Сингапур",
+            "ap_southeast_2": "Австралия (Сидней)",
+            "ap_southeast_3": "Малайзия (Куала-Лумпур)",
+            "ap_southeast_5": "Индонезия (Джакарта)",
+            "cn_beijing": "Китай (Пекин)",
+            "cn_hongkong": "Китай (Гонконг)",
+            "cn_huhehaote": "Китай (Хух-Хото)",
+            "cn_qingdao": "Китай (Циндао)",
+            "cn_shanghai": "Китай (Шанхай)",
+            "eu_central_1": "Германия (Франкфурт)",
+            "eu_west_1": "Великобритания (Лондон)",
+            "me_east_1": "ОАЭ Дубай",
+            "us_east_1": "США (Вирджиния)",
+            "cn_chengdu": "Китай(Chengdu)",
+            "cn_hangzhou": "Китай (Ханчжоу)",
+            "cn_zhangjiakou": "Китай (Чжанцзякоу)",
+            "us_west_1": "США (Кремниевая долина)",
+            "cn_shenzhen": "Китай (Шэньчжэнь)"
+        },
+        "amazon_regions": {
+            "af_south_1": "Африка (Кейптаун)",
+            "ap_east_1": "Азиатско-Тихоокеанский регион (Гонконг)",
+            "ap_northeast_2": "Азиатско-Тихоокеанский регион (Сеул)",
+            "ap_south_1": "Азиатско-Тихоокеанский регион (Мумбаи)",
+            "ap_southeast_2": "Азиатско-Тихоокеанский регион (Сидней)",
+            "ca_central_1": "Канада (Центральная)",
+            "eu_central_1": "Евросоюз (Франкфурт)",
+            "eu_north_1": "Евросоюз (Стокгольм)",
+            "eu_south_1": "Евросоюз (Милан)",
+            "eu_west_2": "Евросоюз (Лондон)",
+            "eu_west_3": "Евросоюз (Париж)",
+            "govcloud": "AWS GovCloud (США)",
+            "me_south_1": "Ближний Восток (Бахрейн)",
+            "sa_east_1": "Южная Америка (Сан-Паулу)",
+            "cn_northwest_1": "Китай (Ningxia)",
+            "us_east_1": "Восток США (Северная Вирджиния)",
+            "us_east_2": "Восток США (Огайо)",
+            "us_gov_east_1": "AWS GovCloud (Восток США)",
+            "us_west_1": "Запад США (Северная Калифорния)",
+            "us_west_2": "Запад США (Орегон)",
+            "ap_northeast_1": "Азиатско-Тихоокеанский регион (Токио)",
+            "cn_north_1": "Китай (Пекин)",
+            "ap_southeast_1": "Азиатско-Тихоокеанский регион (Сингапур)",
+            "eu_west_1": "Евросоюз (Ирландия)"
+        },
+        "invalid_volume_path": "Укажите путь к тому",
+        "s3_types": {
+            "alibaba_cloud_s3": "Alibaba Cloud S3",
+            "amazone_web_service_s3": "Amazon Web Service S3",
+            "ceph_s3": "Ceph S3",
+            "cloudian_s3": "Cloudian S3",
+            "custom_s3": "Пользовательский S3",
+            "emc_s3": "EMC S3",
+            "openio_s3": "OpenIO S3",
+            "scality_s3": "Scality S3",
+            "yandex_s3": "Yandex S3"
+        },
+        "invalid_compression_thresold": "Требуется порог сжатия",
+        "invalid_volume_name": "Заполните поле имя тома."
     },
     "core": {
         "subscription": {
@@ -741,8 +815,8 @@
     "many_domain_info_msg": "Много доменов! Какой из них вы хотели бы увидеть? Начните печатать, чтобы отфильтровать.",
     "new_bucket_connection": "ПОДКЛЮЧЕНИЕ",
     "new_bucket_summary": "ОТЧЕТ",
-    "select_bucket_or_create_new_bucket": "Вы не настроили тип бакета. Нажмите кнопку НОВЫЙ БАКЕТ, чтобы создать новый.",
-    "select_domain_or_create_new": "Выберите домен для управления или нажмите кнопку «Создать», чтобы создать новый.",
+    "select_bucket_or_create_new_bucket": "Вы не настроили тип бакета. Для создания нажмите кнопку НОВЫЙ БАКЕТ.",
+    "select_domain_or_create_new": "Выберите домен в меню слева или нажмите кнопку «Создать», чтобы создать новый.",
     "cos": {
         "view_mail_as_html": "Показывать почту как HTML (при возможности)",
         "calendar_options": "Параметры ежедневника",
@@ -889,7 +963,8 @@
         "time_window_failed_logins_must_occur_to_lock_account": "Временной интервал с неудачными входами, после которого блокируется учетная запись:",
         "timeout_policy": "Правила тайм-аута",
         "trashed_message_lifetime": "Время хранения сообщения в Корзине",
-        "user_specific_fowarding_addresses": "Предельный размер поля указанных пользователем адресов пересылки (количество знаков)"
+        "user_specific_fowarding_addresses": "Предельный размер поля указанных пользователем адресов пересылки (количество знаков)",
+        "time_range": "Диапазон времени"
     },
     "lable": {
         "delete_button": "УДАЛИТЬ"
@@ -907,7 +982,6 @@
         "purge_old_configurations": "Очистить старые конфигурации",
         "realtime_scanner": "Сканер реального времени",
         "schedule": "Расписание",
-        "smart_scan_scheduling": "Планирование SmartScan",
         "set_backup_forever_msg": "Если вы установите 0, ваши данные всегда будут храниться в резервной копии",
         "save_index": "Сохранить индекс",
         "max_waiting_time": "Максимальное время ожидания",
@@ -916,11 +990,18 @@
         "latency_low_threshold": "Минимальное значение задержки",
         "latency_high_threshold": "Максимальное значение задержки",
         "threads_for_items": "Поток для элементов",
-        "threads_for_account": "Поток для учетной записи"
+        "threads_for_account": "Поток для учетной записи",
+        "enable_realtime_scanner": "Включить Realtime Scanner",
+        "run_the_smart_scan_at_the_startup": "Запустить Smartscan при запуске",
+        "schedule_smart_scan": "Запланировать Smartscan",
+        "store_server_configurations_in_the_backup": "Сохранить конфигурацию сервера в резервной копии",
+        "this_module_is_enable_at_the_startup": "Этот модуль включается при запуске",
+        "archive_user_metadata_folder_in_the_remote_backup": "Архивировать папку метаданных пользователя в удаленной резервной копии",
+        "flash_metadata_in_the_disk_at_every_save": "Flash метаданные на диске при каждом сохранении"
     },
     "welcome_to_carbonio": "Добро пожаловать, {{adminName}}, в Carbonio {{carbonioVersion}}!",
     "select_section_from_left_menu": "Пожалуйста, выберите раздел в меню слева",
-    "select_cos_or_create_new_cos": "Выберите класс сервиса, чтобы управлять им, или нажмите кнопку «Создать», чтобы создать новый.",
+    "select_cos_or_create_new_cos": "Выберите класс сервиса, чтобы управлять им, или создайте новый нажав кнопку «Создать».",
     "many_cos_info_msg": "Много COS! Какой из них вы бы хотели увидеть? Начните вводить текст для фильтрации.",
     "create_new_cos": "СОЗДАТЬ НОВЫЙ COS",
     "locale": {
@@ -929,7 +1010,7 @@
         "label_portuguese": "Португальский-{{value}}",
         "label_portuguese_brazil": "Португальский-{{value}}",
         "label_romanian": "Румынский-{{value}}",
-        "label_russian": "Русский-{{value}}",
+        "label_russian": "Русский{{value}}",
         "label_spanish": "Испанский-{{value}}",
         "label_thai": "Тайский-{{value}}",
         "label_turkish": "Турецкий-{{value}}",
@@ -970,7 +1051,7 @@
         "serverName_volumes_create_mailstores_volume": "{{serverName}} Создать том почтовых хранилищ",
         "serverName_volumes": "{{serverName}} Тома",
         "new": {
-            "create_mailstores_volume": "Создать том почтовых хранилищ"
+            "create_mailstores_volume": "Создать том Почтового хранила"
         }
     },
     "have_not_setup_bucket_type": "Похоже, вы не настроили тип Бакета",
@@ -1052,7 +1133,7 @@
         "send_read_receipts": "Отправлять уведомления о прочтении",
         "sharing": "Общий доступ",
         "tagging": "Установление меток",
-        "can_send_auto_reply_messages": "Может отправлять сообщения автоответчика"
+        "can_send_auto_reply_messages": "Может отправлять сообщения автоответ"
     },
     "privacy": {
         "survey_feedback_sub_1": "Мы обещаем, что они будут быстрыми, легкими и очень полезными, чтобы понять, как у нас дела.",
