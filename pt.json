@@ -192,7 +192,8 @@
             "wednesday": "Quarta-Feira"
         },
         "required": "Necessário",
-        "volume_server": "Servidor"
+        "volume_server": "Servidor",
+        "configuration_lbl": "Configuração"
     },
     "timezone": {
         "asia_pyongyang": "{{value}} Pyongyang",
@@ -543,7 +544,8 @@
         "save_to_sent": "Guardar nos itens enviados",
         "saved_searches": "Pesquisas guardadas",
         "sharing": "Compartilhamento",
-        "tagging": "Marcação"
+        "tagging": "Marcação",
+        "min_new_check_interval_value": "Valor"
     },
     "connection": {
         "access_key": "Chave de acesso",
