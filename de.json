@@ -439,7 +439,8 @@
         "required": "Erforderlich",
         "volume_create": "ERSTELLEN",
         "select_a_server": "Server auswählen",
-        "volume_server": "Server"
+        "volume_server": "Server",
+        "configuration_lbl": "Konfiguration"
     },
     "timezone": {
         "asia_yerevan": "{{value}} Eriwan",
@@ -863,7 +864,8 @@
         "saved_searches": "Gespeicherte Suchabfragen",
         "send_read_receipts": "Lesebestätigungen senden",
         "sharing": "Freigaben",
-        "tagging": "Tagging"
+        "tagging": "Tagging",
+        "min_new_check_interval_value": "Wert"
     },
     "connection": {
         "access_key": "Access Key",
