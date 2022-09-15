@@ -466,7 +466,8 @@
         "required": "Vereist",
         "select_a_server": "Een Server selecteren",
         "volume_create": "CREËREN",
-        "volume_server": "Server"
+        "volume_server": "Server",
+        "configuration_lbl": "Configuratie"
     },
     "timezone": {
         "europe_belgrade": "{{value}} Belgrado, Bratislava, Boedapest, Ljubljana, Praag",
@@ -863,7 +864,8 @@
         "saved_searches": "Opgeslagen zoekopdrachten",
         "send_read_receipts": "Gelezen-ontvangstberichten verzenden",
         "sharing": "Delen",
-        "tagging": "Bezig met labels aanbrengen"
+        "tagging": "Bezig met labels aanbrengen",
+        "min_new_check_interval_value": "Waarde"
     },
     "privacy": {
         "send_full_error_data_to_zextras": "Stuur volledige foutgegevens naar Zextras"
