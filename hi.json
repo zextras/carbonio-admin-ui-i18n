@@ -411,7 +411,8 @@
         "required": "अपेक्षित",
         "select_a_server": "कोई सर्वर चुनें",
         "volume_create": "बनाएँ",
-        "volume_server": "सर्वर"
+        "volume_server": "सर्वर",
+        "configuration_lbl": "कॉन्फ़िगुरेशन"
     },
     "timezone": {
         "asia_tomsk": "{{value}} तोम्स्क",
@@ -863,7 +864,8 @@
         "saved_searches": "सहेजी गई खोज",
         "send_read_receipts": "पढ़ने की पुष्टि भेजें",
         "sharing": "शेयर करना",
-        "tagging": "टैगिंग"
+        "tagging": "टैगिंग",
+        "min_new_check_interval_value": "वैल्यू"
     },
     "privacy": {
         "send_full_error_data_to_zextras": "Carbonio को फुल एरर डाटा भेजें"
