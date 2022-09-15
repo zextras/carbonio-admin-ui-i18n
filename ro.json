@@ -151,7 +151,8 @@
         "compression_threshold": "Prag de comprimare",
         "contact": "Persoană de contact",
         "conversation": "Conversaţie",
-        "volume_server": "Server"
+        "volume_server": "Server",
+        "configuration_lbl": "Configuraţie"
     },
     "core": {
         "subscription": {
@@ -319,7 +320,8 @@
             "work_week": "Vizualizare zile de lucru"
         },
         "enable_smime": "Activare S/MIME",
-        "general": "General"
+        "general": "General",
+        "min_new_check_interval_value": "Valoare"
     },
     "connection": {
         "notes": "Note"
