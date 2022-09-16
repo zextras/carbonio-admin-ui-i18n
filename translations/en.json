@@ -592,12 +592,14 @@
         "delete_domain_error_msg": "You are deleting {{domainName}}. Are you sure you want to delete {{domainName}}?",
         "delete_domain_success_msg": "Domain has been delete successfully",
         "delete_domain_with_account_content_msg": "{{domainName}} is not empty: contains {{domainAccounts}} system accounts and {{domainAccounts}} regular accounts. Are you sure to continue the deletion",
+        "delete_it": "Delete it",
         "deleteing": "Deleting ",
         "deleting_account_content_1": "Are you sure you want to delete <bold>{{name}}</bold>?",
         "deleting_account_content_2": "Deleting the account will PERMANENTLY delete all the data. ",
         "deleting_account_content_3": "You can <bold>Disable it to preserve</bold> the data, instead.",
         "deleting_account_name": "You are deleting {{name}} account",
         "deleting_cos_msg": "Deleting <bold>{{cosname}}</bold>",
+        "deleting_resource_name": "You are deleting {{name}}",
         "deletion_date": "Deletion Date",
         "deligated_admin_help_url": "Deligated Admin Help URL",
         "description": "Description",
@@ -823,7 +825,10 @@
         "require_list_owner_approval": "Require list owner approval",
         "required": "Required",
         "resource": "Resource",
+        "resource_deleted_successfully": "The {{resource_name}} has been deleted successfully",
+        "resource_disable_successfully": "The {{resource_name}} has been disabled successfully.",
         "resource_name": "ResourceName",
+        "resource_remove_correctly": "The {{resource_name}} has been correctly removed.",
         "resources": "Resources",
         "restart_replica": "RESTART REPLICA",
         "restore_account": "Restore Account",
@@ -999,7 +1004,8 @@
     "lable": {
         "delete_button": "DELETE",
         "delete_it": "Delete it",
-        "delete_it_instead": "Delete it instead"
+        "delete_it_instead": "Delete it instead",
+        "disable_it_instead": "Disable it instead"
     },
     "locale": {
         "English": "English",

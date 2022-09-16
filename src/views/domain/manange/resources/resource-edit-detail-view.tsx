@@ -17,9 +17,10 @@ import {
 	Button,
 	Padding,
 	PasswordInput,
-	SnackbarManagerContext
+	SnackbarManagerContext,
+	Modal
 } from '@zextras/carbonio-design-system';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import _ from 'lodash';
 import ListRow from '../../../list/list-row';
 import { getCalenderResource } from '../../../../services/get-cal-resource-service';
@@ -32,6 +33,7 @@ import Textarea from '../../../components/textarea';
 import { SendInviteAccounts } from './send-invite-accounts';
 import { SignatureDetail } from './signature-detail';
 import { RouteLeavingGuard } from '../../../ui-extras/nav-guard';
+import { deleteCalendarResource } from '../../../../services/delete-cal-resource-service';
 
 // eslint-disable-next-line no-shadow
 export enum RESOURCE_TYPE {
@@ -187,6 +189,8 @@ const ResourceEditDetailView: FC<any> = ({
 	const [zimbraPrefCalendarAutoDenySignatureId, setZimbraPrefCalendarAutoDenySignatureId] =
 		useState<any>({});
 	const [signatureList, setSignatureList] = useState<any[]>([]);
+	const [isOpenDeleteDialog, setIsOpenDeleteDialog] = useState<boolean>(false);
+	const [isRequestInProgress, setIsRequestInProgress] = useState<boolean>(false);
 
 	useEffect(() => {
 		const arrayItem: any[] = [
@@ -750,6 +754,98 @@ const ResourceEditDetailView: FC<any> = ({
 		}
 	};
 
+	const onDeleteResource = useCallback(() => {
+		setIsOpenDeleteDialog(true);
+	}, []);
+
+	const closeHandler = useCallback(() => {
+		setIsOpenDeleteDialog(false);
+	}, []);
+
+	const onSuccess = useCallback(
+		(message) => {
+			createSnackbar({
+				key: 'success',
+				type: 'success',
+				label: message,
+				autoHideTimeout: 3000,
+				hideButton: true,
+				replace: true
+			});
+			setIsRequestInProgress(false);
+			closeHandler();
+			setShowResourceEditDetailView(false);
+			setIsUpdateRecord(true);
+		},
+		[closeHandler, createSnackbar, setIsUpdateRecord, setShowResourceEditDetailView]
+	);
+
+	const onDeleteHandler = useCallback(() => {
+		setIsRequestInProgress(true);
+		deleteCalendarResource(selectedResourceList?.id)
+			.then((data: any) => {
+				onSuccess(
+					t(
+						'label.resource_deleted_successfully',
+						'The {{resource_name}} has been deleted successfully',
+						{
+							resource_name: selectedResourceList?.name
+						}
+					)
+				);
+			})
+			.then((error: any) => {
+				setIsRequestInProgress(false);
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: error.message
+						? error.message
+						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			});
+	}, [selectedResourceList?.id, selectedResourceList?.name, onSuccess, t, createSnackbar]);
+
+	const onDisableResource = useCallback(() => {
+		setIsRequestInProgress(true);
+		const attributes: any[] = [];
+		attributes.push({
+			n: 'zimbraAccountStatus',
+			_content: STATUS.CLOSED
+		});
+		modifyCalendarResource(selectedResourceList?.id, attributes)
+			.then((data) => {
+				if (data?.calresource && Array.isArray(data?.calresource)) {
+					onSuccess(
+						t(
+							'label.resource_disable_successfully',
+							'The {{resource_name}} has been disabled successfully.',
+							{
+								resource_name: selectedResourceList?.name
+							}
+						)
+					);
+				}
+			})
+			.catch((error) => {
+				setIsRequestInProgress(false);
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: error?.message
+						? error?.message
+						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			});
+	}, [selectedResourceList?.id, selectedResourceList?.name, onSuccess, t, createSnackbar]);
+
 	return (
 		<Container
 			background="gray5"
@@ -827,6 +923,7 @@ const ResourceEditDetailView: FC<any> = ({
 								icon="Trash2Outline"
 								height={42}
 								width={42}
+								onClick={onDeleteResource}
 							/>
 						</Container>
 					</Padding>
@@ -837,6 +934,7 @@ const ResourceEditDetailView: FC<any> = ({
 						color="primary"
 						type="outlined"
 						height={44}
+						disabled
 					/>
 				</Row>
 			)}
@@ -1298,6 +1396,78 @@ const ResourceEditDetailView: FC<any> = ({
 					</>
 				)}
 			</Container>
+			{isOpenDeleteDialog && (
+				<Modal
+					size="medium"
+					title={t('label.deleting_resource_name', 'You are deleting {{name}}', {
+						name: selectedResourceList?.name
+					})}
+					open={isOpenDeleteDialog}
+					customFooter={
+						<Container orientation="horizontal" mainAlignment="space-between">
+							<Button
+								style={{ marginLeft: '10px' }}
+								type="outlined"
+								label={t('label.help', 'Help')}
+								color="primary"
+							/>
+							<Row style={{ gap: '8px' }}>
+								<Button
+									label={t('lable.disable_it_instead', 'Disable it instead')}
+									color="secondary"
+									onClick={onDisableResource}
+									disabled={isRequestInProgress}
+								/>
+								<Button
+									label={t('label.delete_it', 'Delete it')}
+									color="error"
+									onClick={onDeleteHandler}
+									disabled={isRequestInProgress}
+								/>
+							</Row>
+						</Container>
+					}
+					showCloseIcon
+					onClose={closeHandler}
+				>
+					<Container>
+						<Padding bottom="medium" top="medium">
+							<Text size={'extralarge'} overflow="break-word">
+								<Trans
+									i18nKey="label.deleting_account_content_1"
+									defaults="Are you sure you want to delete <bold>{{name}}</bod> ?"
+									components={{ bold: <strong />, name: selectedResourceList?.name }}
+								/>
+							</Text>
+						</Padding>
+						<Padding bottom="medium">
+							<Text size="extralarge" overflow="break-word">
+								<Trans
+									i18nKey="label.deleting_account_content_2"
+									defaults="Deleting the account <bold>will PERMANENTLY delete</bold> all the data."
+									components={{ bold: <strong /> }}
+								/>
+							</Text>
+						</Padding>
+						<Padding bottom="medium">
+							<Text size="extralarge" overflow="break-word">
+								<Trans
+									i18nKey="label.deleting_account_content_3"
+									defaults="You can <bold>Disable it to preserve</bold> the data, instead."
+									components={{ bold: <strong /> }}
+								/>
+							</Text>
+						</Padding>
+						<Row padding={{ bottom: 'large' }}>
+							<Icon
+								icon="AlertTriangleOutline"
+								size="large"
+								style={{ height: '48px', width: '48px' }}
+							/>
+						</Row>
+					</Container>
+				</Modal>
+			)}
 			<RouteLeavingGuard when={isDirty} onSave={onSave}>
 				<Text>
 					{t(
