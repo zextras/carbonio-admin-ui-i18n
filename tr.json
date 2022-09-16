@@ -78,7 +78,7 @@
         "email": "E-Posta",
         "enable_automatic_adding_of_contacts": "Kişileri otomatik eklemeyi etkinleştir",
         "enable_mandatory_spell_check": "Zorunlu yazım denetimini etkinleştir",
-        "enable_past_due_reminders": "Süresi geçmiş anımsatıcıları etkinleştir",
+        "enable_past_due_reminders": "Geçmiş randevular için anımsatıcıları etkinleştir",
         "export_domain": "Alanadını Dışarıya Ver",
         "gal": "GAL",
         "general_Settings": "Genel Ayarlar",
@@ -939,7 +939,7 @@
         "percentage_threshold_for_quota_warning": "Kota uyarı mesajları için yüzde aralığı",
         "password_set_to_use_external_authentication_information_msg": "Bu ayarlar dış kimlik doğrulama kullanacak şekilde yapılandırılmış etki alanlarındaki kullanıcılar tarafından belirlenen parolaları etkilemeyecektir",
         "out_of_the_office_reply": "Ofis Dışındayım Yanıtı",
-        "notify_changes_by_delegated_access": "Alt yetkili erişimiyle yapılan değişiklikleri bildir",
+        "notify_changes_by_delegated_access": "Alt yetkili hesaplarla yapılan değişiklikleri bildir",
         "new_proxy_allowed_domain": "Yeni Proxy Sunucu İzin Verilen Alanadı",
         "name_server": "Alan adı Sunucusu",
         "minimum_duration_of_time_between_quota_warnings": "Kota uyarıları arasındaki minimum süre",
@@ -948,7 +948,7 @@
         "initial_search_preference": "İlk Arama Tercihi",
         "group_calender": "Grup Takvimi",
         "external_pop_access": "Dış POP Erişimi",
-        "enable_past_due_reminders": "Süresi geçmiş anımsatıcıları etkinleştir",
+        "enable_past_due_reminders": "Geçmiş randevular için anımsatıcıları etkinleştir",
         "enable_notification_for_new_email": "Yeni posta bildirimini etkinleştir",
         "enable_notification_for_new_appointment": "Yeni randevu için uyarı özelliğini aç",
         "enable_auto_add_contacts": "Kişileri otomatik ekleme özelliğini etkinleştir",
@@ -959,13 +959,13 @@
         "days_hours_minutes_sec": "Gün / Saat / Dakika / Saniye",
         "create_cos_success_msg": "{{serverName}} sunucusundaki havuzu kapatıyorsunuz. Bütün postakutuları taşınmayacak. Silmek istediğinize emin misiniz?",
         "auto_delete_duplicate_messages": "Birbiriyle aynı mesajları otomatik sil",
-        "auto_decline_if_inviter_is_blacklisted": "Davet gönderen kara listede ise otomatik reddet",
+        "auto_decline_if_inviter_is_blacklisted": "Gönderen kara listede ise otomatik reddet",
         "audible_reminder_notification": "Sesli hatırlatma bildirimi",
         "allow_sending_from_any_address": "Her adresten göndermeye izin ver",
         "allow_sending_cancellation_mail": "İptal e-postası göndermeye izin ver",
         "add_invites_with_publish_method": "Davetleri YAYINLA metodu ile ekle",
         "add_forwarded_invites_to_calendar": "İletilen davetleri takvime ekle",
-        "add_appointments_when_invited": "Davet edilince randevu ekle",
+        "add_appointments_when_invited": "Kullanıcı davet edilince randevuyu otomatik olarak ekle",
         "user_specific_fowarding_addresses": "Kullanıcı tarafından belirlenen iletme adreslerini şununla sınırla (karakter)",
         "account_quota": "Hesap kotası",
         "admin_console_auth_token_lifetime": "Yönetici konsolu yetkilendirme simgesi kullanım süresi",
@@ -1034,9 +1034,6 @@
         "timeout_policy": "Zamanaşımı İlkesi",
         "trashed_message_lifetime": "Çöp kutusundaki mesajın tutulma süresi",
         "time_range": "Zaman Aralığı"
-    },
-    "lable": {
-        "delete_it": "Bunu Sil"
     },
     "locale": {
         "English": "English",
@@ -1145,7 +1142,7 @@
         "forwarding_addresses_hidden_from_the_user": "Yönlendirme adreslerini kullanıcıya gösterme",
         "external_pop_access": "Dış POP Erişimi",
         "enable_toast_for_new_emails": "Yeni epostalar için bildirimleri etkinleştir",
-        "enable_toast_notifications": "Köşede bildirimleri etkinleştir",
+        "enable_toast_notifications": "Bildirimleri etkinleştir",
         "enable_past_due_reminders": "Geçmiş randevular için anımsatıcıları etkinleştir",
         "enable_auto_add_contacts": "Kişileri otomatik ekleme özelliğini etkinleştir",
         "enable_notifications": "Bildirimleri etkinleştir",
@@ -1203,6 +1200,6 @@
     },
     "reminder": {
         "minute": "{{count}} dakika",
-        "minute_plural": "{{count}} dakika"
+        "minute_plural": ""
     }
 }
