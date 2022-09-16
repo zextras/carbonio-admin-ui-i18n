@@ -592,7 +592,23 @@
         "max_account_you_can_manage_is": "Il numero massimo di account che puoi gestire è...",
         "max_quota_allowed": "Quota Massima Consentita",
         "min_Threshold": "Soglia Minima",
-        "configuration_lbl": "Configurazione"
+        "configuration_lbl": "Configurazione",
+        "percentage_maximum_conflict": "% Massimo Conflitto",
+        "resource_name": "NomeRisorsa",
+        "search_for_user_add_button": "Cerca un utente e clicca il pulsante AGGIUNGI.",
+        "server_details": "Dettagli Server",
+        "set_as_primary_button": "IMPOSTA COME PRIMARIO",
+        "the_week_starts_on": "La settimana inizia il",
+        "there_are_not_owner_here": "Non sono presenti proprietari.",
+        "this_list_can_receive_email": "Questa lista può ricevere e-mail",
+        "the_has_been_created_success": "Il {{name}} è stato creato con successo",
+        "type_accounts_paste_them_here": "Digita gli account oppure copia e incollali qui",
+        "search_for_a_Server": "Cerca un server",
+        "select_an_account": "Seleziona un account",
+        "set_as_secondary_button": "IMPOSTA COME SECONDARIO",
+        "share_message_to_new_member": "Condividi messaggio con i nuovi membri",
+        "smime": "S/MIME",
+        "specified_domain_not_exist": "Il dominio specificato non esiste"
     },
     "message": {
         "snackbar": {
