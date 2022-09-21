@@ -7,8 +7,8 @@
 import { soapFetch } from '@zextras/carbonio-shell-ui';
 
 export const createAccountRequest = async (
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	attr: Array<any>,
+	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+	attr: any,
 	name: string,
 	password: string
 ): Promise<any> => {

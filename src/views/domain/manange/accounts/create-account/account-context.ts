@@ -8,5 +8,6 @@ import { createContext } from 'react';
 type AccountContext = {
 	accountDetail: any;
 	setAccountDetail: (arg: any) => void;
+	setShowCreateAccountView: (arg: any) => void;
 };
 export const AccountContext = createContext({} as AccountContext);

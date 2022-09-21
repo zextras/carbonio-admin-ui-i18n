@@ -331,43 +331,6 @@ const ManageAccounts: FC = () => {
 		}
 	}, [domainName, getAccountList]);
 
-	const createAccountReq = useCallback(
-		(attr, name, password): void => {
-			createAccountRequest(attr, name, password)
-				.then((data) => {
-					const isCreateAccount = data;
-					if (isCreateAccount) {
-						setShowCreateAccountView(false);
-						createSnackbar({
-							key: 'success',
-							type: 'success',
-							label: t(
-								'label.account_created_successfully',
-								'The account has been created successfully'
-							),
-							autoHideTimeout: 3000,
-							hideButton: true,
-							replace: true
-						});
-					}
-					getAccountList();
-				})
-				.catch((error) => {
-					createSnackbar({
-						key: 'error',
-						type: 'error',
-						label: error?.message
-							? error?.message
-							: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
-						autoHideTimeout: 3000,
-						hideButton: true,
-						replace: true
-					});
-				});
-		},
-		[createSnackbar, getAccountList, t]
-	);
-
 	return (
 		<Container padding={{ all: 'large' }} mainAlignment="flex-start" background="gray6">
 			<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
@@ -515,7 +478,7 @@ const ManageAccounts: FC = () => {
 			{showCreateAccountView && (
 				<CreateAccount
 					setShowCreateAccountView={setShowCreateAccountView}
-					createAccountReq={createAccountReq}
+					getAccountList={getAccountList}
 				/>
 			)}
 			<AccountContext.Provider
@@ -545,7 +508,6 @@ const ManageAccounts: FC = () => {
 				{showEditAccountView && (
 					<EditAccount
 						setShowEditAccountView={setShowEditAccountView}
-						createAccountReq={createAccountReq}
 						selectedAccount={selectedAccount}
 						getAccountList={getAccountList}
 						signatureList={signatureList}

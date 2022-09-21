@@ -179,6 +179,7 @@ export const HorizontalWizardLayout = React.forwardRef<HTMLDivElement, Props>(
 								isActive={isActive}
 								isLastStep={stepIndex === steps.length - 1}
 								onClick={(): any =>
+									!step.clickDisabled &&
 									!isActive &&
 									(isDone ? goToStep(step.name) : (canGoNext() && goNext()) || goToStep(step.name))
 								}

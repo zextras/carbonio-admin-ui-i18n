@@ -25,6 +25,7 @@ type Props = {
 	currentStepIndex: any;
 	setToggleWizardSection: any;
 	externalData: any;
+	activeStep: any;
 };
 
 const Wizard: React.FC<Props> = ({
@@ -40,7 +41,8 @@ const Wizard: React.FC<Props> = ({
 	Wrapper,
 	title,
 	setToggleWizardSection,
-	externalData
+	externalData,
+	activeStep
 }) => {
 	const sectionRef = useRef();
 	const activeRef = useRef();
@@ -52,7 +54,8 @@ const Wizard: React.FC<Props> = ({
 		onComplete,
 		sectionRef,
 		activeRef,
-		title
+		title,
+		activeStep
 	});
 	return (
 		<Layout
@@ -68,6 +71,4 @@ const Wizard: React.FC<Props> = ({
 	);
 };
 
-export const HorizontalWizard: React.FC<any> = (props) => (
-	<Wizard Layout={HorizontalWizardLayout} {...props} />
-);
+export const HorizontalWizard: React.FC<any> = (props) =>(<Wizard Layout={HorizontalWizardLayout} {...props} />);

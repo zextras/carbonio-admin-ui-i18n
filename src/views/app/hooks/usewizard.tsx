@@ -15,6 +15,7 @@ type WizardProps = {
 	sectionRef: any;
 	activeRef: any;
 	title: any;
+	activeStep: any;
 };
 const useWizard = ({
 	data,
@@ -24,7 +25,8 @@ const useWizard = ({
 	onComplete,
 	sectionRef,
 	activeRef,
-	title
+	title,
+	activeStep
 }: WizardProps): any => {
 	const uncontrolledMode = useMemo(() => !data, [data]);
 	const [innerData, setInnerData] = useState(
@@ -126,7 +128,10 @@ const useWizard = ({
 				? sectionRef.current.scrollBy({ top: offset, behavior: 'smooth' })
 				: sectionRef.current.scrollTo(0, sectionRef.current.scrollHeight);
 		}
-	}, [activeRef, currentStep, sectionRef]);
+		if (activeStep) {
+			goToStep(activeStep);
+		}
+	}, [activeRef, activeStep, currentStep, goToStep, sectionRef]);
 
 	useEffect(() => {
 		if (!isEmpty(data)) {

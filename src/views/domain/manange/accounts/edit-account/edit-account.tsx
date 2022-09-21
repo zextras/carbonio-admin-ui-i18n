@@ -35,14 +35,12 @@ import { AccountContext } from '../account-context';
 // eslint-disable-next-line no-empty-pattern
 const EditAccount: FC<{
 	setShowEditAccountView: any;
-	createAccountReq: any;
 	selectedAccount: any;
 	getAccountList: any;
 	signatureItems: any;
 	signatureList: any;
 }> = ({
 	setShowEditAccountView,
-	createAccountReq,
 	selectedAccount,
 	getAccountList,
 	signatureItems,
