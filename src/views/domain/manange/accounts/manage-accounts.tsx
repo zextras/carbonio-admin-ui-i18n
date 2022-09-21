@@ -548,6 +548,8 @@ const ManageAccounts: FC = () => {
 						createAccountReq={createAccountReq}
 						selectedAccount={selectedAccount}
 						getAccountList={getAccountList}
+						signatureList={signatureList}
+						signatureItems={signatureItems}
 					/>
 				)}
 			</AccountContext.Provider>
