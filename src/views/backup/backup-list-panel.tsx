@@ -3,20 +3,22 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container } from '@zextras/carbonio-design-system';
+import { Container, Dropdown, Row, SelectItem, Input, Icon } from '@zextras/carbonio-design-system';
 import { replaceHistory } from '@zextras/carbonio-shell-ui';
 import ListPanelItem from '../list/list-panel-item';
 import {
 	ADVANCED,
-	CONFIGURATION_LBL,
+	ADVANCED_LBL,
+	CONFIGURATION_BACKUP,
 	IMPORT_EXTERNAL_BACKUP,
 	SERVERS_LIST,
 	SERVER_CONFIG,
 	SERVICE_STATUS
 } from '../../constants';
 import ListItems from '../list/list-items';
+import { useServerStore } from '../../store/server/store';
 
 const BackupListPanel: FC = () => {
 	const [t] = useTranslation();
@@ -24,6 +26,10 @@ const BackupListPanel: FC = () => {
 	const [isDefaultSettingsExpanded, setIsDefaultSettingsExpanded] = useState(true);
 	const [isServerSettingsEpanded, setIsServerSettingsEpanded] = useState(true);
 	const [isActionExpanded, setIsActionExpanded] = useState(true);
+	const serverList = useServerStore((state) => state.serverList || []);
+	const [selectedServer, setSelectedServer] = useState<string>('');
+	const [isServerSelect, setIsServerSelect] = useState<boolean>(false);
+
 	const defaultSettingsOptions = useMemo(
 		() => [
 			{
@@ -53,17 +59,17 @@ const BackupListPanel: FC = () => {
 	const serverSettingsOptions = useMemo(
 		() => [
 			{
-				id: CONFIGURATION_LBL,
-				name: t('label.configuration_lbl', 'Configuration'),
-				isSelected: true
+				id: CONFIGURATION_BACKUP,
+				name: t('label.configuration_backup', 'Configuration'),
+				isSelected: isServerSelect
 			},
 			{
-				id: ADVANCED,
-				name: t('label.advanced', 'Advanced'),
-				isSelected: true
+				id: ADVANCED_LBL,
+				name: t('label.advanced_lbl', 'Advanced'),
+				isSelected: isServerSelect
 			}
 		],
-		[t]
+		[t, isServerSelect]
 	);
 
 	const actionOptions = useMemo(
@@ -78,8 +84,12 @@ const BackupListPanel: FC = () => {
 	);
 
 	useEffect(() => {
-		replaceHistory(`/${selectedOperationItem}`);
-	}, [selectedOperationItem]);
+		if (selectedOperationItem === CONFIGURATION_BACKUP || selectedOperationItem === ADVANCED_LBL) {
+			replaceHistory(`/${selectedServer}/${selectedOperationItem}`);
+		} else {
+			replaceHistory(`/${selectedOperationItem}`);
+		}
+	}, [selectedOperationItem, selectedServer]);
 
 	const toggleDefaultSettingsView = (): void => {
 		setIsDefaultSettingsExpanded(!isDefaultSettingsExpanded);
@@ -90,6 +100,38 @@ const BackupListPanel: FC = () => {
 	const toggleActionView = (): void => {
 		setIsActionExpanded(!isActionExpanded);
 	};
+
+	useEffect(() => {
+		if (selectedServer !== '') {
+			setIsServerSelect(true);
+		}
+	}, [selectedServer]);
+
+	const serverNames = serverList.map((serverItem: any) => ({
+		id: serverItem?.id,
+		label: serverItem?.name,
+		customComponent: (
+			<Row
+				top="9px"
+				right="large"
+				bottom="9px"
+				left="large"
+				style={{
+					fontFamily: 'roboto',
+					display: 'block',
+					textAlign: 'left',
+					height: 'inherit',
+					padding: '3px',
+					width: 'inherit'
+				}}
+				onClick={(): void => {
+					setSelectedServer(serverItem?.name);
+				}}
+			>
+				{serverItem?.name}
+			</Row>
+		)
+	}));
 
 	return (
 		<Container
@@ -117,6 +159,32 @@ const BackupListPanel: FC = () => {
 				isListExpanded={isServerSettingsEpanded}
 				setToggleView={toggleServerSettingsView}
 			/>
+
+			{isServerSettingsEpanded && (
+				<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
+					<Dropdown
+						items={serverNames}
+						placement="bottom-start"
+						maxWidth="300px"
+						disableAutoFocus
+						width="265px"
+						style={{
+							width: '100%'
+						}}
+					>
+						<Input
+							label={t(
+								'label.I_want_to_see_this_server_details',
+								'i want to see this server’s details'
+							)}
+							value={selectedServer}
+							CustomIcon={(): any => <Icon icon="HardDriveOutline" size="large" />}
+							backgroundColor="gray5"
+						/>
+					</Dropdown>
+				</Row>
+			)}
+
 			{isServerSettingsEpanded && (
 				<ListItems
 					items={serverSettingsOptions}

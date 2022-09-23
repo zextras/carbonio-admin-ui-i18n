@@ -106,4 +106,5 @@ export const ALL = 'all';
 export const GRP = 'grp';
 export const EMAIL = 'email';
 export const MEMBERS_ONLY = 'members only';
-export const CONFIGURATION_LBL = 'configuration_lbl';
+export const CONFIGURATION_BACKUP = 'configuration_backup';
+export const ADVANCED_LBL = 'advanced_lbl';
