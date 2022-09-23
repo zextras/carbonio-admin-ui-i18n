@@ -633,7 +633,12 @@
         "required": "Diperlukan",
         "select_a_server": "Pilih Server",
         "volume_server": "Server",
-        "configuration_lbl": "Konfigurasi"
+        "configuration_lbl": "Konfigurasi",
+        "disabled": "Dinonaktifkan",
+        "local": "Lokal",
+        "na": "N/A",
+        "purge": "Hapus",
+        "scheduled": "Dijadwalkan"
     },
     "message": {
         "snackbar": {
@@ -860,7 +865,8 @@
         "send_read_receipts": "Kirim tanda terima",
         "sharing": "Berbagi",
         "tagging": "Pemberian Tag",
-        "min_new_check_interval_value": "Nilai"
+        "min_new_check_interval_value": "Nilai",
+        "send": "KIRIM"
     },
     "connection": {
         "access_key": "Kunci Akses",
