@@ -101,6 +101,7 @@
         "data_retention_policies": "Data Retention Policies",
         "enable_realtime_scanner": "Enable Realtime Scanner",
         "flash_metadata_in_the_disk_at_every_save": "Flash metadata in the disk at every save",
+        "force_backup_purge_now": "Force backup purge now",
         "force_start_smartscan_now": "Force start smartscan now",
         "general": "General",
         "initialize_backup": "Initialize Backup",
