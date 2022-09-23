@@ -237,7 +237,12 @@
         "enable_current_helptext": "Bật tùy chọn này sẽ vô hiệu hóa âm lượng đang hoạt động hiện tại.",
         "required": "Yêu cầu",
         "select_a_server": "Lựa chọn một Máy chủ",
-        "configuration_lbl": "Cấu hình"
+        "configuration_lbl": "Cấu hình",
+        "local": "Cục bộ",
+        "na": "Không xác định",
+        "purge": "Xoá",
+        "scheduled": "Đã lên lịch",
+        "disabled": "Đã tắt"
     },
     "timezone": {
         "australia_sydney": "{{value}} Canberra, Melbourne, Sydney",
@@ -577,7 +582,8 @@
         },
         "enable_smime": "Bật S/MIME:",
         "general": "Chung",
-        "min_new_check_interval_value": "Giá trị"
+        "min_new_check_interval_value": "Giá trị",
+        "send": "GỬI"
     },
     "privacy": {
         "send_full_error_data_to_zextras": "Gửi dữ liệu lỗi đầy đủ tới Zextras"
