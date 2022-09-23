@@ -65,7 +65,7 @@
         "maintenance": "Обслуживание",
         "mb": "MB",
         "minutes": "Минут",
-        "name": "Имя",
+        "name": "имя",
         "not_set": "Не установлено",
         "note": "Заметка",
         "notification": "Оповещение",
@@ -583,7 +583,12 @@
         "default_calendar_view": "Представление календаря по умолчанию",
         "auto_negation": "Автоматический отказ",
         "configuration_lbl": "Конфигурация",
-        "everyone": "Все"
+        "everyone": "Все",
+        "na": "Не относится",
+        "purge": "Удалить",
+        "scheduled": "Включено в расписание",
+        "disabled": "Отключено",
+        "local": "Локальный"
     },
     "timezone": {
         "europe_bucharest": "{{value}} Бухарест",
@@ -1175,7 +1180,8 @@
         "send_read_receipts": "Отправлять уведомления о прочтении",
         "sharing": "Общий доступ",
         "tagging": "Установление меток",
-        "can_send_auto_reply_messages": "Может отправлять сообщения автоответ"
+        "can_send_auto_reply_messages": "Может отправлять сообщения автоответ",
+        "send": "ОТПРАВИТЬ"
     },
     "privacy": {
         "survey_feedback_sub_1": "Мы обещаем, что они будут быстрыми, легкими и очень полезными, чтобы понять, как у нас дела.",
