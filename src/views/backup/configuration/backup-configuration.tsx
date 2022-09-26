@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
 	Container,
@@ -12,14 +12,112 @@ import {
 	Divider,
 	Button,
 	Switch,
-	Input
+	Input,
+	SnackbarManagerContext
 } from '@zextras/carbonio-design-system';
+import {
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	getSoapFetchRequest
+} from '@zextras/carbonio-shell-ui';
 import { useParams } from 'react-router-dom';
 import ListRow from '../../list/list-row';
+import { useServerStore } from '../../../store/server/store';
 
 const BackupConfiguration: FC = () => {
 	const { operation, server }: { operation: string; server: string } = useParams();
 	const [t] = useTranslation();
+	const allServers = useServerStore((state) => state.serverList);
+	const createSnackbar: any = useContext(SnackbarManagerContext);
+	const [moduleEnableStartup, setModuleEnableStartup] = useState<boolean>(false);
+	const [enableRealtimeScanner, setEnableRealtimeScanner] = useState<boolean>(false);
+	const [runSmartScanStartup, setRunSmartScanStartup] = useState<boolean>(false);
+	const [spaceThreshold, setSpaceThreshold] = useState<number>(0);
+	const [isScheduleSmartscan, setIsScheduleSmartScan] = useState<boolean>(false);
+	const [scheduleSmartScan, setScheduleSmartScan] = useState<string>('');
+	const [keepDeletedItemInBackup, setKeepDeletedItemInBackup] = useState<number>(0);
+	const [keepDeletedAccountsInBackup, setKeepDeletedAccountsInBackup] = useState<number>(0);
+	useEffect(() => {
+		if (allServers && allServers.length > 0) {
+			const selectedServer = allServers.find((serverItem: any) => serverItem?.name === server);
+			if (selectedServer && selectedServer?.id) {
+				getSoapFetchRequest(
+					`/service/extension/zextras_admin/core/getServer/${selectedServer?.id}?module=zxbackup`
+				)
+					.then((data: any) => {
+						if (data && data?.attributes) {
+							const attributes = data?.attributes;
+							if (attributes?.ZxBackup_ModuleEnabledAtStartup) {
+								const value = attributes?.ZxBackup_ModuleEnabledAtStartup?.value;
+								if (value) {
+									setModuleEnableStartup(value);
+								}
+							}
+
+							if (attributes?.ZxBackup_RealTimeScanner) {
+								const value = attributes?.ZxBackup_RealTimeScanner?.value;
+								if (value) {
+									setEnableRealtimeScanner(value);
+								}
+							}
+
+							if (attributes?.ZxBackup_DoSmartScanOnStartup) {
+								const value = attributes?.ZxBackup_DoSmartScanOnStartup?.value;
+								if (value) {
+									setRunSmartScanStartup(value);
+								}
+							}
+
+							if (attributes?.ZxBackup_SpaceThreshold) {
+								const value = attributes?.ZxBackup_SpaceThreshold?.value;
+								if (value) {
+									setSpaceThreshold(value);
+								}
+							}
+
+							if (attributes?.backupSmartScanScheduler) {
+								const value = attributes?.backupSmartScanScheduler?.value;
+								if (value && value['cron-enabled']) {
+									setIsScheduleSmartScan(value['cron-enabled']);
+								}
+								if (value && value['cron-pattern']) {
+									setScheduleSmartScan(value['cron-pattern']);
+								}
+							}
+						}
+
+						if (data && data?.properties) {
+							const properties = data?.properties;
+							if (properties?.latest_smart_scan?.numDeletedItems) {
+								const value = properties?.latest_smart_scan?.numDeletedItems;
+								if (value) {
+									setKeepDeletedItemInBackup(value);
+								}
+							}
+
+							if (properties?.latest_smart_scan?.numDeletedAccounts) {
+								const value = properties?.latest_smart_scan?.numDeletedAccounts;
+								if (value) {
+									setKeepDeletedAccountsInBackup(value);
+								}
+							}
+						}
+					})
+					.catch((error: any) => {
+						createSnackbar({
+							key: 'error',
+							type: 'error',
+							label: error?.message
+								? error?.message
+								: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+							autoHideTimeout: 3000,
+							hideButton: true,
+							replace: true
+						});
+					});
+			}
+		}
+	}, [server, allServers, createSnackbar, t]);
 	return (
 		<Container mainAlignment="flex-start" background="gray6">
 			<Container
@@ -89,14 +187,22 @@ const BackupConfiguration: FC = () => {
 									'backup.module_is_enabled_at_startup',
 									'This module is enabled at startup'
 								)}
+								value={moduleEnableStartup}
+								onClick={(): void => setModuleEnableStartup(!moduleEnableStartup)}
 							/>
 						</Container>
 						<Container padding={{ top: 'large' }}>
-							<Switch label={t('backup.enable_realtime_scanner', 'Enable RealTime Scanner')} />
+							<Switch
+								label={t('backup.enable_realtime_scanner', 'Enable RealTime Scanner')}
+								value={enableRealtimeScanner}
+								onClick={(): void => setEnableRealtimeScanner(!enableRealtimeScanner)}
+							/>
 						</Container>
 						<Container padding={{ top: 'large' }}>
 							<Switch
 								label={t('backup.run_smartscan_at_startup', 'Run the Smartscan at startup')}
+								value={runSmartScanStartup}
+								onClick={(): void => setRunSmartScanStartup(!runSmartScanStartup)}
 							/>
 						</Container>
 					</ListRow>
@@ -125,7 +231,11 @@ const BackupConfiguration: FC = () => {
 						<Container padding={{ top: 'large' }}>
 							<Input
 								label={t('backup.space_threshold_mb', 'Space Threshold (MB)')}
+								value={spaceThreshold}
 								background="gray5"
+								onChange={(e: any): any => {
+									setSpaceThreshold(e.target.value);
+								}}
 							/>
 						</Container>
 					</ListRow>
@@ -172,12 +282,23 @@ const BackupConfiguration: FC = () => {
 						padding={{ top: 'large' }}
 						height="fit"
 					>
-						<Switch label={t('backup.schedule_smartscan', 'Schedule Smartscan')} />
+						<Switch
+							label={t('backup.schedule_smartscan', 'Schedule Smartscan')}
+							value={isScheduleSmartscan}
+							onClick={(): void => setIsScheduleSmartScan(!isScheduleSmartscan)}
+						/>
 					</Container>
 
 					<ListRow>
 						<Container padding={{ top: 'large' }}>
-							<Input label={t('backup.schedule', 'Schedule')} background="gray5" />
+							<Input
+								label={t('backup.schedule', 'Schedule')}
+								background="gray5"
+								value={scheduleSmartScan}
+								onChange={(e: any): any => {
+									setScheduleSmartScan(e.target.value);
+								}}
+							/>
 						</Container>
 					</ListRow>
 
@@ -251,6 +372,10 @@ const BackupConfiguration: FC = () => {
 								background="gray5"
 								backgroundColor="gray5"
 								borderColor="gray3"
+								value={keepDeletedItemInBackup}
+								onChange={(e: any): any => {
+									setKeepDeletedItemInBackup(e.target.value);
+								}}
 							/>
 						</Container>
 						<Container
@@ -260,7 +385,11 @@ const BackupConfiguration: FC = () => {
 							padding={{ top: 'large', right: 'large' }}
 							width="15%"
 						>
-							<Input label={t('backup.range', 'Range')} background="gray5" />
+							<Input
+								label={t('backup.range', 'Range')}
+								background="gray5"
+								value={t('label.days', 'Days')}
+							/>
 						</Container>
 						<Container
 							mainAlignment="flex-start"
@@ -275,6 +404,10 @@ const BackupConfiguration: FC = () => {
 									'Keep deleted account in the backup'
 								)}
 								background="gray5"
+								value={keepDeletedAccountsInBackup}
+								onChange={(e: any): any => {
+									setKeepDeletedAccountsInBackup(e.target.value);
+								}}
 							/>
 						</Container>
 						<Container
@@ -284,7 +417,11 @@ const BackupConfiguration: FC = () => {
 							padding={{ top: 'large' }}
 							width="15%"
 						>
-							<Input label={t('backup.range', 'Range')} background="gray5" />
+							<Input
+								label={t('backup.range', 'Range')}
+								background="gray5"
+								value={t('label.days', 'Days')}
+							/>
 						</Container>
 					</ListRow>
 					<ListRow>
