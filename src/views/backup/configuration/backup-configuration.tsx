@@ -37,6 +37,10 @@ const BackupConfiguration: FC = () => {
 	const [scheduleSmartScan, setScheduleSmartScan] = useState<string>('');
 	const [keepDeletedItemInBackup, setKeepDeletedItemInBackup] = useState<number>(0);
 	const [keepDeletedAccountsInBackup, setKeepDeletedAccountsInBackup] = useState<number>(0);
+	const [scheduleAutomaticRetentionPolicy, setScheduleAutomaticRetentionPolicy] =
+		useState<boolean>(false);
+	const [retentionPolicySchedule, setRetentionPolicySchedule] = useState<string>('');
+	const [backupDestPath, setBackupDestPath] = useState<string>('');
 	useEffect(() => {
 		if (allServers && allServers.length > 0) {
 			const selectedServer = allServers.find((serverItem: any) => serverItem?.name === server);
@@ -82,6 +86,23 @@ const BackupConfiguration: FC = () => {
 								}
 								if (value && value['cron-pattern']) {
 									setScheduleSmartScan(value['cron-pattern']);
+								}
+							}
+
+							if (attributes?.backupPurgeScheduler) {
+								const value = attributes?.backupPurgeScheduler?.value;
+								if (value && value['cron-enabled']) {
+									setScheduleAutomaticRetentionPolicy(value['cron-enabled']);
+								}
+								if (value && value['cron-pattern']) {
+									setRetentionPolicySchedule(value['cron-pattern']);
+								}
+							}
+
+							if (attributes?.ZxBackup_DestPath) {
+								const value = attributes?.ZxBackup_DestPath?.value;
+								if (value) {
+									setBackupDestPath(value);
 								}
 							}
 						}
@@ -223,7 +244,14 @@ const BackupConfiguration: FC = () => {
 
 					<ListRow>
 						<Container padding={{ top: 'large' }}>
-							<Input label={t('backup.local_volume', 'Local Volume')} background="gray5" />
+							<Input
+								label={t('backup.local_volume', 'Local Volume')}
+								value={backupDestPath}
+								background="gray5"
+								onChange={(e: any): any => {
+									setBackupDestPath(e.target.value);
+								}}
+							/>
 						</Container>
 					</ListRow>
 
@@ -349,13 +377,24 @@ const BackupConfiguration: FC = () => {
 									'backup.schedule_automatic_retention_policies',
 									'Schedule automatic retention policies'
 								)}
+								value={scheduleAutomaticRetentionPolicy}
+								onClick={(): void =>
+									setScheduleAutomaticRetentionPolicy(!scheduleAutomaticRetentionPolicy)
+								}
 							/>
 						</Container>
 					</ListRow>
 
 					<ListRow>
 						<Container padding={{ top: 'large' }}>
-							<Input label={t('backup.schedule', 'Schedule')} background="gray5" />
+							<Input
+								label={t('backup.schedule', 'Schedule')}
+								background="gray5"
+								value={retentionPolicySchedule}
+								onChange={(e: any): any => {
+									setRetentionPolicySchedule(e.target.value);
+								}}
+							/>
 						</Container>
 					</ListRow>
 
@@ -370,8 +409,6 @@ const BackupConfiguration: FC = () => {
 							<Input
 								label={t('backup.keep_deleted_item_in_backup', 'Keep deleted items in the backup')}
 								background="gray5"
-								backgroundColor="gray5"
-								borderColor="gray3"
 								value={keepDeletedItemInBackup}
 								onChange={(e: any): any => {
 									setKeepDeletedItemInBackup(e.target.value);

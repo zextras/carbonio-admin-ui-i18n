@@ -24,6 +24,7 @@ import {
 } from '@zextras/carbonio-shell-ui';
 import ListRow from '../../list/list-row';
 import { useServerStore } from '../../../store/server/store';
+import { updateBackup } from '../../../services/update-backup';
 
 const ServerAdvanced: FC = () => {
 	const { operation, server }: { operation: string; server: string } = useParams();
@@ -167,6 +168,36 @@ const ServerAdvanced: FC = () => {
 									currentBackupObject.backupNumberThreadsForAccounts = value;
 								} else {
 									currentBackupObject.backupNumberThreadsForAccounts = 0;
+								}
+							}
+
+							if (attributes?.ZxBackup_BackupCustomizations) {
+								const value = attributes?.ZxBackup_BackupCustomizations?.value;
+								if (value) {
+									setServerConfiguration(value);
+									currentBackupObject.serverConfiguration = true;
+								} else {
+									currentBackupObject.serverConfiguration = false;
+								}
+							}
+
+							if (attributes?.ZxBackup_PurgeCustomizations) {
+								const value = attributes?.ZxBackup_PurgeCustomizations?.value;
+								if (value) {
+									setPurgeOldConfiguration(value);
+									currentBackupObject.purgeOldConfiguration = true;
+								} else {
+									currentBackupObject.purgeOldConfiguration = false;
+								}
+							}
+
+							if (attributes?.backupSaveIndex) {
+								const value = attributes?.backupSaveIndex?.value;
+								if (value) {
+									setIncludeIndex(value);
+									currentBackupObject.includeIndex = true;
+								} else {
+									currentBackupObject.includeIndex = false;
 								}
 							}
 						}
@@ -315,6 +346,33 @@ const ServerAdvanced: FC = () => {
 		}
 	}, [currentBackupValue.backupNumberThreadsForAccounts, backupNumberThreadsForAccounts]);
 
+	const onSave = useCallback(() => {
+		const body: any = {
+			ldapDumpEnabled: {
+				value: ldapDumpEnabled,
+				objectName: server,
+				configType: 'server'
+			}
+		};
+
+		updateBackup(body)
+			.then((data: any) => {
+				console.log(data);
+			})
+			.catch((error: any) => {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: error?.message
+						? error?.message
+						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			});
+	}, [ldapDumpEnabled, createSnackbar, t, server]);
+
 	return (
 		<Container mainAlignment="flex-start" background="gray6">
 			<Container
@@ -351,7 +409,9 @@ const ServerAdvanced: FC = () => {
 										/>
 									)}
 								</Padding>
-								{isDirty && <Button label={t('label.save', 'Save')} color="primary" />}
+								{isDirty && (
+									<Button label={t('label.save', 'Save')} color="primary" onClick={onSave} />
+								)}
 							</Row>
 						</Row>
 					</Container>
