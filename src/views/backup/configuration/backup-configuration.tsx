@@ -24,6 +24,8 @@ import {
 import { useParams } from 'react-router-dom';
 import ListRow from '../../list/list-row';
 import { useServerStore } from '../../../store/server/store';
+import { updateBackup } from '../../../services/update-backup';
+import { SERVER } from '../../../constants';
 
 const BackupConfiguration: FC = () => {
 	const { operation, server }: { operation: string; server: string } = useParams();
@@ -207,7 +209,140 @@ const BackupConfiguration: FC = () => {
 
 	const onSave = useCallback(() => {
 		console.log('>>>>>>> Save');
-	}, []);
+		const body: any = {
+			ZxBackup_ModuleEnabledAtStartup: {
+				value: moduleEnableStartup,
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_RealTimeScanner: {
+				value: enableRealtimeScanner,
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_DoSmartScanOnStartup: {
+				value: runSmartScanStartup,
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_SpaceThreshold: {
+				value: spaceThreshold,
+				objectName: server,
+				configType: SERVER
+			},
+			backupSmartScanScheduler: {
+				value: {
+					'cron-pattern': scheduleSmartScan,
+					'cron-enabled': isScheduleSmartScan
+				},
+				objectName: server,
+				configType: SERVER
+			},
+			backupPurgeScheduler: {
+				value: {
+					'cron-pattern': retentionPolicySchedule,
+					'cron-enabled': scheduleAutomaticRetentionPolicy
+				},
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_DestPath: {
+				value: backupDestPath,
+				objectName: server,
+				configType: SERVER
+			},
+			numDeletedItems: {
+				value: keepDeletedItemInBackup,
+				objectName: server,
+				configType: SERVER
+			},
+			numDeletedAccounts: {
+				value: keepDeletedAccountsInBackup,
+				objectName: server,
+				configType: SERVER
+			}
+		};
+
+		setIsRequestInProgress(true);
+		updateBackup(body)
+			.then((data: any) => {
+				setIsRequestInProgress(false);
+				if ((data?.errors && Array.isArray(data?.errors)) || data?.error) {
+					let errorMessage = t(
+						'label.something_wrong_error_msg',
+						'Something went wrong. Please try again.'
+					);
+					if (data?.errors && Array.isArray(data?.errors) && data?.errors[0]?.error) {
+						errorMessage = data?.errors[0]?.error;
+					} else if (data?.error) {
+						errorMessage = data?.error;
+					}
+					createSnackbar({
+						key: 'error',
+						type: 'error',
+						label: errorMessage,
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				} else {
+					setCurrentBackupValue((prev: any) => ({
+						...prev,
+						moduleEnableStartup,
+						enableRealtimeScanner,
+						runSmartScanStartup,
+						spaceThreshold,
+						isScheduleSmartScan,
+						scheduleSmartScan,
+						scheduleAutomaticRetentionPolicy,
+						retentionPolicySchedule,
+						backupDestPath,
+						keepDeletedItemInBackup,
+						keepDeletedAccountsInBackup
+					}));
+					setIsDirty(false);
+					createSnackbar({
+						key: 'success',
+						type: 'success',
+						label: t(
+							'label.the_last_changes_has_been_saved_successfully',
+							'Changes have been saved successfully'
+						),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				}
+			})
+			.catch((error: any) => {
+				setIsRequestInProgress(false);
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: error
+						? error?.error
+						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			});
+	}, [
+		createSnackbar,
+		t,
+		enableRealtimeScanner,
+		moduleEnableStartup,
+		runSmartScanStartup,
+		server,
+		spaceThreshold,
+		scheduleSmartScan,
+		isScheduleSmartScan,
+		retentionPolicySchedule,
+		scheduleAutomaticRetentionPolicy,
+		backupDestPath,
+		keepDeletedItemInBackup,
+		keepDeletedAccountsInBackup
+	]);
 
 	useEffect(() => {
 		if (
