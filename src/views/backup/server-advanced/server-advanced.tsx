@@ -47,9 +47,9 @@ const ServerAdvanced: FC = () => {
 	const [backupNumberThreadsForItems, setBackupNumberThreadsForItems] = useState<number>(0);
 	const [backupNumberThreadsForAccounts, setBackupNumberThreadsForAccounts] = useState<number>(0);
 	const [currentBackupValue, setCurrentBackupValue] = useState<any>({});
-
 	const [scheduledMetadataArchivingEnabled, setScheduledMetadataArchivingEnabled] =
 		useState<boolean>(false);
+	const [isRequestInProgress, setIsRequestInProgress] = useState<boolean>(false);
 
 	useEffect(() => {
 		if (allServers && allServers.length > 0) {
@@ -400,14 +400,107 @@ const ServerAdvanced: FC = () => {
 				value: includeIndex,
 				objectName: server,
 				configType: SERVER
+			},
+			backupLatencyHighThreshold: {
+				value: backupLatencyHighThreshold,
+				objectName: server,
+				configType: SERVER
+			},
+			backupLatencyLowThreshold: {
+				value: backupLatencyLowThreshold,
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_MaxWaitingTime: {
+				value: backupMaxWaitTime,
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_MaxMetadataSize: {
+				value: backupMaxMetaDataSize,
+				objectName: server,
+				configType: SERVER
+			},
+			backupOnTheFlyMetadata: {
+				value: backupOnTheFlyMetadata,
+				objectName: server,
+				configType: SERVER
+			},
+			scheduledMetadataArchivingEnabled: {
+				value: scheduledMetadataArchivingEnabled,
+				objectName: server,
+				configType: SERVER
+			},
+			ZxBackup_MaxOperationPerAccount: {
+				value: backupMaxOperationPerAccount,
+				objectName: server,
+				configType: SERVER
+			},
+			backupCompressionLevel: {
+				value: backupCompressionLevel,
+				objectName: server,
+				configType: SERVER
+			},
+			backupNumberThreadsForItems: {
+				value: backupNumberThreadsForItems,
+				objectName: server,
+				configType: SERVER
+			},
+			backupNumberThreadsForAccounts: {
+				value: backupNumberThreadsForAccounts,
+				objectName: server,
+				configType: SERVER
 			}
 		};
-
+		setIsRequestInProgress(true);
 		updateBackup(body)
 			.then((data: any) => {
-				console.log(data);
+				setIsRequestInProgress(false);
+				if (data?.errors && Array.isArray(data?.errors)) {
+					createSnackbar({
+						key: 'error',
+						type: 'error',
+						label: data?.errors[0]?.error
+							? data?.errors[0]?.error
+							: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				} else {
+					setCurrentBackupValue((prev: any) => ({
+						...prev,
+						ldapDumpEnabled,
+						backupLatencyLowThreshold,
+						backupLatencyHighThreshold,
+						backupMaxWaitTime,
+						backupMaxMetaDataSize,
+						backupOnTheFlyMetadata,
+						scheduledMetadataArchivingEnabled,
+						backupMaxOperationPerAccount,
+						backupCompressionLevel,
+						backupNumberThreadsForItems,
+						backupNumberThreadsForAccounts,
+						serverConfiguration,
+						purgeOldConfiguration,
+						includeIndex
+					}));
+					setIsDirty(false);
+					createSnackbar({
+						key: 'success',
+						type: 'success',
+						label: t(
+							'label.the_last_changes_has_been_saved_successfully',
+							'Changes have been saved successfully'
+						),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				}
 			})
 			.catch((error: any) => {
+				setIsRequestInProgress(false);
 				createSnackbar({
 					key: 'error',
 					type: 'error',
@@ -424,9 +517,19 @@ const ServerAdvanced: FC = () => {
 		createSnackbar,
 		t,
 		server,
+		backupLatencyLowThreshold,
+		backupLatencyHighThreshold,
+		backupMaxMetaDataSize,
+		backupOnTheFlyMetadata,
+		scheduledMetadataArchivingEnabled,
+		backupMaxOperationPerAccount,
+		backupCompressionLevel,
+		backupNumberThreadsForItems,
+		backupNumberThreadsForAccounts,
 		serverConfiguration,
 		purgeOldConfiguration,
-		includeIndex
+		includeIndex,
+		backupMaxWaitTime
 	]);
 
 	return (
@@ -462,11 +565,17 @@ const ServerAdvanced: FC = () => {
 											label={t('label.cancel', 'Cancel')}
 											color="secondary"
 											onClick={onCancel}
+											disabled={isRequestInProgress}
 										/>
 									)}
 								</Padding>
 								{isDirty && (
-									<Button label={t('label.save', 'Save')} color="primary" onClick={onSave} />
+									<Button
+										label={t('label.save', 'Save')}
+										color="primary"
+										onClick={onSave}
+										disabled={isRequestInProgress}
+									/>
 								)}
 							</Row>
 						</Row>
