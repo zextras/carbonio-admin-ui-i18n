@@ -5,19 +5,38 @@
  */
 import React, { FC, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Container } from '@zextras/carbonio-design-system';
+import { Container, Dropdown, Row, Input, Icon } from '@zextras/carbonio-design-system';
 import { replaceHistory } from '@zextras/carbonio-shell-ui';
 import ListPanelItem from '../list/list-panel-item';
-import { ADVANCED, IMPORT_EXTERNAL_BACKUP, SERVERS_LIST, SERVER_CONFIG } from '../../constants';
+import {
+	ADVANCED,
+	ADVANCED_LBL,
+	CONFIGURATION_BACKUP,
+	IMPORT_EXTERNAL_BACKUP,
+	SERVERS_LIST,
+	SERVER_CONFIG,
+	SERVICE_STATUS
+} from '../../constants';
 import ListItems from '../list/list-items';
+import { useServerStore } from '../../store/server/store';
 
 const BackupListPanel: FC = () => {
 	const [t] = useTranslation();
 	const [selectedOperationItem, setSelectedOperationItem] = useState(SERVER_CONFIG);
 	const [isDefaultSettingsExpanded, setIsDefaultSettingsExpanded] = useState(true);
 	const [isActionExpanded, setIsActionExpanded] = useState(true);
+	const [isServerSpecificsExpanded, setIsServerSpecificsExpanded] = useState<boolean>(true);
+	const serverList = useServerStore((state) => state.serverList || []);
+	const [selectedServer, setSelectedServer] = useState<string>('');
+	const [isServerSelect, setIsServerSelect] = useState<boolean>(false);
+
 	const defaultSettingsOptions = useMemo(
 		() => [
+			{
+				id: SERVICE_STATUS,
+				name: t('label.service_status', 'Service Status'),
+				isSelected: true
+			},
 			{
 				id: SERVER_CONFIG,
 				name: t('label.server_config', 'Server Config'),
@@ -37,6 +56,22 @@ const BackupListPanel: FC = () => {
 		[t]
 	);
 
+	const serverSettingsOptions = useMemo(
+		() => [
+			{
+				id: CONFIGURATION_BACKUP,
+				name: t('label.configuration_backup', 'Configuration'),
+				isSelected: isServerSelect
+			},
+			{
+				id: ADVANCED_LBL,
+				name: t('label.advanced_lbl', 'Advanced'),
+				isSelected: isServerSelect
+			}
+		],
+		[t, isServerSelect]
+	);
+
 	const actionOptions = useMemo(
 		() => [
 			{
@@ -49,8 +84,12 @@ const BackupListPanel: FC = () => {
 	);
 
 	useEffect(() => {
-		replaceHistory(`/${selectedOperationItem}`);
-	}, [selectedOperationItem]);
+		if (selectedOperationItem === CONFIGURATION_BACKUP || selectedOperationItem === ADVANCED_LBL) {
+			replaceHistory(`/${selectedServer}/${selectedOperationItem}`);
+		} else {
+			replaceHistory(`/${selectedOperationItem}`);
+		}
+	}, [selectedOperationItem, selectedServer]);
 
 	const toggleDefaultSettingsView = (): void => {
 		setIsDefaultSettingsExpanded(!isDefaultSettingsExpanded);
@@ -58,6 +97,42 @@ const BackupListPanel: FC = () => {
 	const toggleActionView = (): void => {
 		setIsActionExpanded(!isActionExpanded);
 	};
+
+	const toggleServerSpecific = (): void => {
+		setIsServerSpecificsExpanded(!isServerSpecificsExpanded);
+	};
+
+	useEffect(() => {
+		if (selectedServer !== '') {
+			setIsServerSelect(true);
+		}
+	}, [selectedServer]);
+
+	const serverNames = serverList.map((serverItem: any) => ({
+		id: serverItem?.id,
+		label: serverItem?.name,
+		customComponent: (
+			<Row
+				top="9px"
+				right="large"
+				bottom="9px"
+				left="large"
+				style={{
+					fontFamily: 'roboto',
+					display: 'block',
+					textAlign: 'left',
+					height: 'inherit',
+					padding: '3px',
+					width: 'inherit'
+				}}
+				onClick={(): void => {
+					setSelectedServer(serverItem?.name);
+				}}
+			>
+				{serverItem?.name}
+			</Row>
+		)
+	}));
 
 	return (
 		<Container
@@ -75,6 +150,45 @@ const BackupListPanel: FC = () => {
 			{isDefaultSettingsExpanded && (
 				<ListItems
 					items={defaultSettingsOptions}
+					selectedOperationItem={selectedOperationItem}
+					setSelectedOperationItem={setSelectedOperationItem}
+				/>
+			)}
+
+			<ListPanelItem
+				title={t('label.server_specifics', 'Server Specifics')}
+				isListExpanded={isServerSpecificsExpanded}
+				setToggleView={toggleServerSpecific}
+			/>
+
+			{isServerSpecificsExpanded && (
+				<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
+					<Dropdown
+						items={serverNames}
+						placement="bottom-start"
+						maxWidth="300px"
+						disableAutoFocus
+						width="265px"
+						style={{
+							width: '100%'
+						}}
+					>
+						<Input
+							label={t(
+								'label.I_want_to_see_this_server_details',
+								'i want to see this server’s details'
+							)}
+							value={selectedServer}
+							CustomIcon={(): any => <Icon icon="HardDriveOutline" size="large" />}
+							backgroundColor="gray5"
+						/>
+					</Dropdown>
+				</Row>
+			)}
+
+			{isServerSpecificsExpanded && (
+				<ListItems
+					items={serverSettingsOptions}
 					selectedOperationItem={selectedOperationItem}
 					setSelectedOperationItem={setSelectedOperationItem}
 				/>
