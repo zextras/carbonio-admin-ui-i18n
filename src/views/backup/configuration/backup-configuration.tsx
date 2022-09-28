@@ -78,6 +78,7 @@ const BackupConfiguration: FC = () => {
 									setModuleEnableStartup(value);
 									currentBackupObject.moduleEnableStartup = true;
 								} else {
+									setModuleEnableStartup(false);
 									currentBackupObject.moduleEnableStartup = false;
 								}
 							}
@@ -88,6 +89,7 @@ const BackupConfiguration: FC = () => {
 									setEnableRealtimeScanner(value);
 									currentBackupObject.enableRealtimeScanner = true;
 								} else {
+									setEnableRealtimeScanner(false);
 									currentBackupObject.enableRealtimeScanner = false;
 								}
 							}
@@ -98,6 +100,7 @@ const BackupConfiguration: FC = () => {
 									setRunSmartScanStartup(value);
 									currentBackupObject.runSmartScanStartup = true;
 								} else {
+									setRunSmartScanStartup(false);
 									currentBackupObject.runSmartScanStartup = false;
 								}
 							}
@@ -118,6 +121,7 @@ const BackupConfiguration: FC = () => {
 									setIsScheduleSmartScan(value['cron-enabled']);
 									currentBackupObject.isScheduleSmartScan = true;
 								} else {
+									setIsScheduleSmartScan(false);
 									currentBackupObject.isScheduleSmartScan = false;
 								}
 								if (value && value['cron-pattern']) {
@@ -134,6 +138,7 @@ const BackupConfiguration: FC = () => {
 									setScheduleAutomaticRetentionPolicy(value['cron-enabled']);
 									currentBackupObject.scheduleAutomaticRetentionPolicy = true;
 								} else {
+									setScheduleAutomaticRetentionPolicy(false);
 									currentBackupObject.scheduleAutomaticRetentionPolicy = false;
 								}
 								if (value && value['cron-pattern']) {
@@ -173,15 +178,22 @@ const BackupConfiguration: FC = () => {
 								}
 							}
 						}
+
 						if (data && data?.services?.module?.running) {
 							setBackupServiceStart(true);
+						} else {
+							setBackupServiceStart(false);
 						}
 						if (data && data?.properties && data?.properties?.backup_initialized) {
 							setIsBackupInitialized(true);
+						} else {
+							setIsBackupInitialized(false);
 						}
 						setCurrentBackupValue(currentBackupObject);
+						setIsDirty(false);
 					})
 					.catch((error: any) => {
+						setIsDirty(false);
 						createSnackbar({
 							key: 'error',
 							type: 'error',

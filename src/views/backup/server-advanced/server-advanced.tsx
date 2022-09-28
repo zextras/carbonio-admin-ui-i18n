@@ -70,6 +70,7 @@ const ServerAdvanced: FC = () => {
 									setLdapDumpEnabled(value);
 									currentBackupObject.ldapDumpEnabled = true;
 								} else {
+									setLdapDumpEnabled(false);
 									currentBackupObject.ldapDumpEnabled = false;
 								}
 							}
@@ -80,6 +81,7 @@ const ServerAdvanced: FC = () => {
 									setBackupLatencyLowThreshold(value);
 									currentBackupObject.backupLatencyLowThreshold = value;
 								} else {
+									setBackupLatencyLowThreshold(value);
 									currentBackupObject.backupLatencyLowThreshold = 0;
 								}
 							}
@@ -120,6 +122,7 @@ const ServerAdvanced: FC = () => {
 									setBackupOnTheFlyMetadata(value);
 									currentBackupObject.backupOnTheFlyMetadata = true;
 								} else {
+									setBackupOnTheFlyMetadata(false);
 									currentBackupObject.backupOnTheFlyMetadata = false;
 								}
 							}
@@ -130,6 +133,7 @@ const ServerAdvanced: FC = () => {
 									setScheduledMetadataArchivingEnabled(value);
 									currentBackupObject.scheduledMetadataArchivingEnabled = true;
 								} else {
+									setScheduledMetadataArchivingEnabled(false);
 									currentBackupObject.scheduledMetadataArchivingEnabled = false;
 								}
 							}
@@ -180,6 +184,7 @@ const ServerAdvanced: FC = () => {
 									setServerConfiguration(value);
 									currentBackupObject.serverConfiguration = true;
 								} else {
+									setServerConfiguration(false);
 									currentBackupObject.serverConfiguration = false;
 								}
 							}
@@ -190,6 +195,7 @@ const ServerAdvanced: FC = () => {
 									setPurgeOldConfiguration(value);
 									currentBackupObject.purgeOldConfiguration = true;
 								} else {
+									setPurgeOldConfiguration(false);
 									currentBackupObject.purgeOldConfiguration = false;
 								}
 							}
@@ -200,13 +206,16 @@ const ServerAdvanced: FC = () => {
 									setIncludeIndex(value);
 									currentBackupObject.includeIndex = true;
 								} else {
+									setIncludeIndex(false);
 									currentBackupObject.includeIndex = false;
 								}
 							}
 						}
 						setCurrentBackupValue(currentBackupObject);
+						setIsDirty(false);
 					})
 					.catch((error: any) => {
+						setIsDirty(false);
 						createSnackbar({
 							key: 'error',
 							type: 'error',
