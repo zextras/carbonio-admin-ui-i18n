@@ -425,7 +425,22 @@
         "module_enable_at_startup": "Mô-đun sẽ chạy trong Startup",
         "purge_old_configurations": "Xoá cấu hình cũ",
         "realtime_scanner": "Quét theo thời gian thực",
-        "schedule": "Lịch trình"
+        "schedule": "Lịch trình",
+        "advanced": "Nâng cao",
+        "data_retention_policies": "Chính sách lưu giữ dữ liệu",
+        "force_backup_purge_now": "Buộc thanh lọc sao lưu ngay",
+        "general": "Chung",
+        "initialize_backup": "Khởi tạo sao lưu",
+        "keep_deleted_item_in_backup": "Giữ các mục bị xoá trong Bản sao lưu",
+        "latency": "Độ trễ",
+        "latency_high_threshold_ms": "Ngưỡng độ trễ cao (mili giây)",
+        "latency_low_threshold_ms": "Ngưỡng độ trễ thấp (mili giây)",
+        "max_waiting_time_ms": "Thời gian chờ tối đa (ms)",
+        "maximum_metadata_size_mb": "Kích thước siêu dữ liệu tối đa (MB)",
+        "metadata": "Siêu Dữ liệu",
+        "other_controls": "Điều khiển khác",
+        "smart_scan_configuration": "Cấu hình SmartScan",
+        "tuning_options": "Bật lên các tuỳ chọn"
     },
     "cos": {
         "calendar_options": "Tuỳ chọn lịch biểu",
