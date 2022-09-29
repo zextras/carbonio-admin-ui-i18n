@@ -912,7 +912,24 @@
         "schedule_smart_scan": "Akıllı Tarama zamanı belirle",
         "store_server_configurations_in_the_backup": "Yedekleme sırasında Sunucu konfigürasyonunu ekle",
         "this_module_is_enable_at_the_startup": "Bu modül sistem başlarken etkindir",
-        "flash_metadata_in_the_disk_at_every_save": "Her kaydetme sırasında diskteki meta verilerin flash görüntüsünü al"
+        "flash_metadata_in_the_disk_at_every_save": "Her kaydetme sırasında diskteki meta verilerin flash görüntüsünü al",
+        "advanced": "Gelişmiş",
+        "data_retention_policies": "Veri Saklama İlkeleri",
+        "force_backup_purge_now": "Yedekleme Temizliği işleminini şimdi zorla yap",
+        "metadata": "Metaveri",
+        "other_controls": "Diğer Kontroller",
+        "range": "Aralık",
+        "schedule_smartscan": "Akıllı Tarama zamanı belirle",
+        "smart_scan_configuration": "AkıllıTarama Yapılandırması",
+        "tuning_options": "Detay Ayar Seçenekleri",
+        "general": "Genel",
+        "initialize_backup": "Yedeklemeyi Başlat",
+        "keep_deleted_item_in_backup": "Silinmiş öğeleri yedekte sakla",
+        "latency": "Gecikme",
+        "latency_high_threshold_ms": "Gecikme Üst Eşiği (ms)",
+        "latency_low_threshold_ms": "Gecikme Alt Eşiği (ms)",
+        "max_waiting_time_ms": "Maks Bekleme Süresi (ms)",
+        "maximum_metadata_size_mb": "Maksimum Metaveri Boyutu (MB)"
     },
     "cos": {
         "calendar_options": "Takvim Seçenekleri",
@@ -1068,7 +1085,7 @@
         "dutch": "Dutch",
         "french": "Fransızca",
         "german": "German",
-        "hindi": "Hintçe",
+        "hindi": "Hindi",
         "italian": "İtalyanca",
         "japanese": "Japonca",
         "label_chinese": "Chinese (China) - {{value}}",
@@ -1233,6 +1250,6 @@
     },
     "reminder": {
         "minute": "{{count}} dakika",
-        "minute_plural": "{{count}} dakika"
+        "minute_plural": ""
     }
 }
