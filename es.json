@@ -153,7 +153,7 @@
         "page ": "Has aceptado la solicitud de compartir",
         "page_": "Has aceptado la solicitud de compartir",
         "privacy": "Privacy",
-        "remove": "Remover",
+        "remove": "Eliminar",
         "save": "Guardar",
         "signature_required": "Se requiere información sobre la firma.",
         "snackbar": {
@@ -955,7 +955,23 @@
         "schedule_smart_scan": "Programar Smartscan",
         "flash_metadata_in_the_disk_at_every_save": "Limpiar metadatos en disco cada guardado",
         "run_the_smart_scan_at_the_startup": "Ejecutar Smartscan en el inicio",
-        "store_server_configurations_in_the_backup": "Guardar configuración del servidor en la copia de seguridad"
+        "store_server_configurations_in_the_backup": "Guardar configuración del servidor en la copia de seguridad",
+        "advanced": "Avanzada",
+        "data_retention_policies": "Políticas de retención de datos",
+        "force_backup_purge_now": "Forzar limpieza de la copia de seguridad ahora",
+        "general": "General",
+        "keep_deleted_item_in_backup": "Mantener los archivos borrados en la copia de seguridad",
+        "smart_scan_configuration": "Configuración de SmartScan",
+        "initialize_backup": "Inicializar Copia de seguridad",
+        "latency": "Latencia",
+        "latency_high_threshold_ms": "Umbral alto de latencia (ms)",
+        "latency_low_threshold_ms": "Umbral bajo de latencia (ms)",
+        "max_waiting_time_ms": "Tiempo de espera máximo (ms)",
+        "maximum_metadata_size_mb": "Tamaño máximo de metadatos (MB)",
+        "metadata": "Metadatos",
+        "other_controls": "Otros controles",
+        "range": "Rango",
+        "tuning_options": "Opciones de ajuste"
     },
     "cos": {
         "calendar_options": "Opciones de Agenda",
