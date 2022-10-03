@@ -266,7 +266,7 @@ const App: FC = () => {
 	const storagesTooltipItems = useMemo(
 		() => [
 			{
-				header: t('label.mail_stores', 'Mailstores'),
+				header: t('label.mailstores', 'Mailstores'),
 				options: [
 					{
 						label: t('label.here_you_will_find', 'Here you will find')
@@ -274,31 +274,29 @@ const App: FC = () => {
 				]
 			},
 			{
-				header: t('label.servers', 'Servers'),
+				header: t('label.global_servers', 'Global Servers'),
 				options: [
 					{
-						label: t('label.service_status', 'Service_Status')
+						label: t('label.servers_list', 'Servers List')
 					},
 					{
+						label: t('label.bucket_list', 'Bucket List')
+					}
+				]
+			},
+			{
+				header: t('label.server_details', 'Server Details'),
+				options: [
+					{
 						label: t('label.data_volumes', 'Data Volumes')
-					},
+					}
+					/* ,
 					{
 						label: t('label.hsm_policies', 'HSM Policies')
 					},
 					{
 						label: t('label.indexer_settings', 'Indexer Settings')
-					},
-					{
-						label: t('label.index_volumes', 'Index Volumes')
-					}
-				]
-			},
-			{
-				header: t('label.buckets', 'Buckets'),
-				options: [
-					{
-						label: t('label.connect_buckets', 'Connect Buckets')
-					}
+					} */
 				]
 			}
 		],
@@ -374,7 +372,7 @@ const App: FC = () => {
 			route: STORAGES_ROUTE_ID,
 			position: 2,
 			visible: true,
-			label: t('label.mail_stores', 'Mailstores'),
+			label: t('label.mailstores', 'Mailstores'),
 			primaryBar: 'HardDriveOutline',
 			appView: AppView,
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
