@@ -1417,7 +1417,7 @@ const ResourceEditDetailView: FC<any> = ({
 									disabled={isRequestInProgress}
 								/>
 								<Button
-									label={t('label.close_the_account', 'Close the account')}
+									label={t('label.close_the_resource', 'Close the resource')}
 									color="primary"
 									onClick={onDisableResource}
 									disabled={isRequestInProgress}
