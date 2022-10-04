@@ -7,10 +7,11 @@ import React, { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container } from '@zextras/carbonio-design-system';
-import { BUCKET_LIST, DATA_VOLUMES, SERVERS_LIST } from '../../constants';
+import { BUCKET_LIST, DATA_VOLUMES, HSM_SETTINGS, SERVERS_LIST } from '../../constants';
 import BucketDetailPanel from './bucket-detail-panel';
 import ServersDetailPanel from './global-servers/server-detail-panel';
 import VolumesDetailPanel from './server-specifics/volume/volumes-list';
+import HSMsettingPanel from './hsm/hsm-setting-panel';
 
 const DetailViewContainer = styled(Container)`
 	max-width: ${({ isPrimaryBarExpanded }): number => (isPrimaryBarExpanded ? 981 : 1125)}px;
@@ -40,6 +41,12 @@ const BucketOperation: FC = () => {
 						return (
 							<DetailViewContainer>
 								<VolumesDetailPanel />
+							</DetailViewContainer>
+						);
+					case HSM_SETTINGS:
+						return (
+							<DetailViewContainer>
+								<HSMsettingPanel />
 							</DetailViewContainer>
 						);
 					default:

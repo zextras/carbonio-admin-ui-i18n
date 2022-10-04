@@ -116,7 +116,7 @@ const BucketListPanel: FC = () => {
 	useEffect(() => {
 		if (isStoreSelect) {
 			if (selectedOperationItem) {
-				if (selectedOperationItem === DATA_VOLUMES) {
+				if (selectedOperationItem === DATA_VOLUMES || selectedOperationItem === HSM_SETTINGS) {
 					replaceHistory(`${searchVolumeName}/${selectedOperationItem}`);
 				} else {
 					replaceHistory(`/${selectedOperationItem}`);
