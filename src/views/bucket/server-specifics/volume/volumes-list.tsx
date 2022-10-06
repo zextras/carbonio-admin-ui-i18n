@@ -27,7 +27,7 @@ import { AbsoluteContainer } from '../../../components/styled';
 import ServerVolumeDetailsPanel from './server-volume-details-panel';
 import { fetchSoap } from '../../../../services/bucket-service';
 import IndexerVolumeTable from './indexer-volume-table';
-import { tableHeader, indexerHeaders } from '../../../utility/utils';
+import { volTableHeader, indexerHeaders } from '../../../utility/utils';
 import { useBucketVolumeStore } from '../../../../store/bucket-volume/store';
 import NewVolume from './create-volume/new-volume';
 import ModifyVolume from './modify-volume/modify-volume';
@@ -131,6 +131,8 @@ const VolumesDetailPanel: FC = () => {
 	const { volumeDetail, setVolumeDetail } = context;
 	const selectedServerName = useBucketVolumeStore((state) => state.selectedServerName);
 	const isAdvanced = useAuthIsAdvanced((state) => state.isAdvanced);
+	const volIndexerHeaders = useMemo(() => indexerHeaders(t), [t]);
+	const volPrimarySecondaryHeaders = useMemo(() => volTableHeader(t), [t]);
 	const [priamryVolumeSelection, setPriamryVolumeSelection] = useState('');
 	const [secondaryVolumeSelection, setSecondaryVolumeSelection] = useState('');
 	const [indexerVolumeSelection, setIndexerVolumeSelection] = useState('');
@@ -388,11 +390,11 @@ const VolumesDetailPanel: FC = () => {
 
 	return (
 		<>
-			{toggleWizardLocal && (
+			{toggleWizardExternal && (
 				<AbsoluteContainer orientation="vertical" background="gray5">
-					<NewVolume
-						setToggleWizardLocal={setToggleWizardLocal}
+					<CreateMailstoresVolume
 						setToggleWizardExternal={setToggleWizardExternal}
+						setToggleWizardLocal={setToggleWizardLocal}
 						setDetailsVolume={setDetailsVolume}
 						setCreateMailstoresVolumeData={setCreateMailstoresVolumeData}
 						volName={selectedServerName}
@@ -400,11 +402,11 @@ const VolumesDetailPanel: FC = () => {
 					/>
 				</AbsoluteContainer>
 			)}
-			{toggleWizardExternal && (
+			{toggleWizardLocal && (
 				<AbsoluteContainer orientation="vertical" background="gray5">
-					<CreateMailstoresVolume
-						setToggleWizardExternal={setToggleWizardExternal}
+					<NewVolume
 						setToggleWizardLocal={setToggleWizardLocal}
+						setToggleWizardExternal={setToggleWizardExternal}
 						setDetailsVolume={setDetailsVolume}
 						setCreateMailstoresVolumeData={setCreateMailstoresVolumeData}
 						volName={selectedServerName}
@@ -512,7 +514,7 @@ const VolumesDetailPanel: FC = () => {
 						<Row padding={{ horizontal: 'large', bottom: 'extralarge' }} width="100%">
 							<VolumeListTable
 								volumes={volumeList?.primaries}
-								headers={tableHeader}
+								headers={volPrimarySecondaryHeaders}
 								selectedRows={priamryVolumeSelection}
 								onSelectionChange={(selected: any): any => {
 									setPriamryVolumeSelection(selected);
@@ -538,7 +540,7 @@ const VolumesDetailPanel: FC = () => {
 						<Row padding={{ horizontal: 'large', bottom: 'extralarge' }} width="100%">
 							<VolumeListTable
 								volumes={volumeList?.secondaries}
-								headers={tableHeader}
+								headers={volPrimarySecondaryHeaders}
 								selectedRows={secondaryVolumeSelection}
 								onSelectionChange={(selected: any): any => {
 									setSecondaryVolumeSelection(selected);
@@ -566,7 +568,7 @@ const VolumesDetailPanel: FC = () => {
 						>
 							<IndexerVolumeTable
 								volumes={volumeList?.indexes}
-								headers={indexerHeaders}
+								headers={volIndexerHeaders}
 								selectedRows={indexerVolumeSelection}
 								onSelectionChange={(selected: any): any => {
 									setIndexerVolumeSelection(selected);

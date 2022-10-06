@@ -96,6 +96,7 @@ const AdvancedMailstoresCreate: FC<{
 }> = ({ onSelection, externalData, setCompleteLoading }) => {
 	const context = useContext(AdvancedVolumeContext);
 	const { t } = useTranslation();
+	const volConfigHeader = useMemo(() => volumeConfigHeader(t), [t]);
 	// const { advancedVolumeDetail, setAdvancedVolumeDetail } = context;
 	const [volumeCreateSelection, setVolumeCreateSelection] = useState(false);
 
@@ -183,7 +184,7 @@ const AdvancedMailstoresCreate: FC<{
 				<Row padding={{ top: 'large' }} width="100%">
 					<VolumeCreateTable
 						volumes={volumeCreateList}
-						headers={volumeConfigHeader}
+						headers={volConfigHeader}
 						selectedRows={volumeCreateSelection}
 						onSelectionChange={(selected: any): any => {
 							setVolumeCreateSelection(selected);

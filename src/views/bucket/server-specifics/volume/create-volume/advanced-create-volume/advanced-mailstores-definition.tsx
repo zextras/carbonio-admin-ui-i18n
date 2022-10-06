@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
+import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { Container, Row, Input, Select, Padding, Text } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { volumeAllocationList } from '../../../../../utility/utils';
@@ -20,6 +20,7 @@ const AdvancedMailstoresDefinition: FC<{
 	const context = useContext(VolumeContext);
 	const { volumeDetail, setVolumeDetail } = context;
 	const setIsAllocationToggle = useBucketVolumeStore((state) => state.setIsAllocationToggle);
+	const volAllocationList = useMemo(() => volumeAllocationList(t), [t]);
 	const [allocation, setAllocation] = useState<any>();
 	const [errName, setErrName] = useState(true);
 	const [errPath, setErrPath] = useState(true);
@@ -60,11 +61,11 @@ const AdvancedMailstoresDefinition: FC<{
 	};
 
 	useEffect(() => {
-		const VolumeTypeObject = volumeAllocationList.find(
+		const volumeTypeObject = volAllocationList.find(
 			(item: any) => item.value === volumeDetail?.volumeAllocation
 		);
-		setAllocation(VolumeTypeObject);
-	}, [volumeDetail?.volumeAllocation]);
+		setAllocation(volumeTypeObject);
+	}, [volAllocationList, volumeDetail?.volumeAllocation]);
 
 	useEffect(() => {
 		if (volumeDetail?.volumeName && volumeDetail?.path && volumeDetail?.volumeAllocation) {
@@ -93,7 +94,7 @@ const AdvancedMailstoresDefinition: FC<{
 				</Row>
 				<Row padding={{ top: 'large' }} width="100%">
 					<Select
-						items={volumeAllocationList}
+						items={volAllocationList}
 						background="gray5"
 						label={t('label.volume_allocation', 'Allocation')}
 						showCheckbox={false}

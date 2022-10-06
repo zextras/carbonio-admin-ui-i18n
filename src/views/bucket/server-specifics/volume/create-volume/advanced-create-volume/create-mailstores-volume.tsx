@@ -8,7 +8,6 @@ import { Button } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { HorizontalWizard } from '../../../../../app/component/hwizard';
 import { Section } from '../../../../../app/component/section';
-// import MailstoresCreate from './mailstores-create';
 import { AdvancedVolumeContext } from './create-advanced-volume-context';
 import AdvancedMailstoresDefinition from './advanced-mailstores-definition';
 import AdvancedMailstoresConfig from './advanced-mailstores-config';
@@ -116,10 +115,7 @@ const CreateMailstoresVolume: FC<{
 						label={t('label.volume_next_step_button', 'NEXT STEP')}
 						icon={'ChevronRightOutline'}
 						iconPlacement="right"
-						onClick={(): void => {
-							setToggleWizardExternal(false);
-							setToggleWizardLocal(true);
-						}}
+						onClick={(): void => setToggleWizardLocal(true)}
 					/>
 				)
 		},
@@ -211,19 +207,6 @@ const CreateMailstoresVolume: FC<{
 		},
 		[setToggleWizardExternal, setDetailsVolume, setCreateMailstoresVolumeData]
 	);
-
-	// const onComplete = useCallback((data) => {
-	// 	CreateVolumeRequest({
-	// 		id: volumeDetail?.id,
-	// 		name: volumeDetail?.volumeName,
-	// 		rootpath: volumeDetail?.path,
-	// 		type: volumeDetail?.volumeMain,
-	// 		compressBlobs: volumeDetail?.isCompression ? 1 : 0,
-	// 		compressionThreshold: volumeDetail?.compressionThreshold,
-	// 		isCurrent: volumeDetail?.isCurrent ? 1 : 0
-	// 	});
-	// 	setCreateMailstoresVolumeData(volumeDetail);
-	// }, []);
 
 	return (
 		<AdvancedVolumeContext.Provider value={{ advancedVolumeDetail, setAdvancedVolumeDetail }}>

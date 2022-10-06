@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
+import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import {
 	Container,
 	Row,
@@ -34,6 +34,8 @@ const MailstoresCreate: FC<{
 	const context = useContext(VolumeContext);
 	const { t } = useTranslation();
 	const isAdvanced = useAuthIsAdvanced((state) => state.isAdvanced);
+	const volTypeList = useMemo(() => volumeTypeList(t), [t]);
+	const volAllocationList = useMemo(() => volumeAllocationList(t), [t]);
 	const { volumeDetail, setVolumeDetail } = context;
 	const [errName, setErrName] = useState(true);
 	const [errPath, setErrPath] = useState(true);
@@ -144,16 +146,17 @@ const MailstoresCreate: FC<{
 			setVolumeDetail((prev: any) => ({ ...prev, volumeMain: EMPTY_TYPE_VALUE }));
 			onSelection({ volumeMain: EMPTY_TYPE_VALUE }, true);
 		}
-		const VolumeTypeObject = volumeAllocationList.find(
+		const volumeTypeObject = volAllocationList.find(
 			(item: any) => item.value === volumeDetail?.volumeAllocation
 		);
-		setAllocation(VolumeTypeObject);
+		setAllocation(volumeTypeObject);
 	}, [
 		indexRadio,
 		onSelection,
 		primaryRadio,
 		secondaryRadio,
 		setVolumeDetail,
+		volAllocationList,
 		volumeDetail?.volumeAllocation
 	]);
 
@@ -191,7 +194,7 @@ const MailstoresCreate: FC<{
 				{!isAdvanced && (
 					<Row padding={{ top: 'large' }} width="100%">
 						<Select
-							items={volumeTypeList}
+							items={volTypeList}
 							background="gray5"
 							label={t('label.volume_type', 'Volume Type')}
 							defaultSelection={{
@@ -206,7 +209,7 @@ const MailstoresCreate: FC<{
 				{isAdvanced && (
 					<Row padding={{ top: 'large' }} width="100%">
 						<Select
-							items={volumeAllocationList}
+							items={volAllocationList}
 							background="gray5"
 							label={t('label.volume_allocation', 'Allocation')}
 							showCheckbox={false}

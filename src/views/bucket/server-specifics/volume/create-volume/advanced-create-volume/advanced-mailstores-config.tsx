@@ -93,6 +93,8 @@ const AdvancedMailstoresConfig: FC<{ externalData: any }> = ({ externalData }) =
 	const context = useContext(AdvancedVolumeContext);
 	const { t } = useTranslation();
 	const { advancedVolumeDetail, setAdvancedVolumeDetail } = context;
+	const volTypeList = useMemo(() => volumeTypeList(t), [t]);
+	const volConfigHeader = useMemo(() => volumeConfigHeader(t), [t]);
 	const [volumeConfigSelection, setVolumeConfigSelection] = useState(false);
 
 	const changeVolDetail = useCallback(
@@ -149,11 +151,11 @@ const AdvancedMailstoresConfig: FC<{ externalData: any }> = ({ externalData }) =
 				</Row>
 				<Row padding={{ top: 'large' }} width="100%">
 					<Select
-						items={volumeTypeList}
+						items={volTypeList}
 						inputName="type"
 						label={t('label.type', 'Type')}
 						backgroundColor="gray5"
-						defaultSelection={volumeTypeList.find(
+						defaultSelection={volTypeList.find(
 							(item: any) => item.value === advancedVolumeDetail?.volumeMain
 						)}
 						showCheckbox={false}
@@ -265,7 +267,7 @@ const AdvancedMailstoresConfig: FC<{ externalData: any }> = ({ externalData }) =
 				<Row padding={{ top: 'large' }} width="100%">
 					<VolumeConfigTable
 						volumes={volumeConfigList}
-						headers={volumeConfigHeader}
+						headers={volConfigHeader}
 						selectedRows={volumeConfigSelection}
 						onSelectionChange={(selected: any): any => {
 							setVolumeConfigSelection(selected);
