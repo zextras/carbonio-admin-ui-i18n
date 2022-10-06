@@ -1311,7 +1311,36 @@
             "create_mailstores_volume": "Create Mailstores Volume"
         },
         "serverName_volumes": "{{serverName}} Volumes",
-        "serverName_volumes_create_mailstores_volume": "{{serverName}} Create Mailstores Volume"
+        "serverName_volumes_create_mailstores_volume": "{{serverName}} Create Mailstores Volume",
+        "volume_allocation_list": {
+            "centralized": "Centralized",
+            "external": "External",
+            "local": "Local",
+            "sproxy": "Sproxy"
+        },
+        "volume_config_header": {
+            "hsm_scheduled": "HSM Scheduled",
+            "indexer": "Indexer",
+            "name": "Name"
+        },
+        "volume_header": {
+            "compression": "Compression",
+            "current": "Current",
+            "id": "ID",
+            "name": "Name",
+            "path": "Path"
+        },
+        "volume_indexer_header": {
+            "current": "Current",
+            "id": "ID",
+            "name": "Name",
+            "path": "Path"
+        },
+        "volume_type": {
+            "index": "Index",
+            "primary": "Priamry",
+            "secondary": "Secondary"
+        }
     },
     "welcome_to_carbonio": "Welcome {{adminName}} to Carbonio {{carbonioVersion}}!",
     "welcome_to_carbonio_display_name": "Welcome {{adminName}}!"

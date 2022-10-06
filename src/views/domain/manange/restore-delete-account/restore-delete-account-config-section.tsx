@@ -4,11 +4,19 @@
  * SPDX-License-Identifier: AGPL-3.0-only
  */
 import React, { FC, useCallback, useContext, useState } from 'react';
-import { Container, Input, Row, Switch, DateTimePicker } from '@zextras/carbonio-design-system';
+import {
+	Container,
+	Input,
+	Row,
+	Switch,
+	DateTimePicker,
+	Icon
+} from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import ListRow from '../../../list/list-row';
 import { RestoreDeleteAccountContext } from './restore-delete-account-context';
+import { useDomainStore } from '../../../../store/domain/store';
 
 const DatePickerContainer = styled(Container)`
 	.react-datepicker__input-container {
@@ -25,6 +33,7 @@ const RestoreDeleteAccountConfigSection: FC<any> = () => {
 	const [date, setDate] = useState(
 		restoreAccountDetail?.dateTime === null ? null : restoreAccountDetail?.dateTime
 	);
+	const domainName = useDomainStore((state) => state.domain?.name);
 	const handleChange = useCallback(
 		(d) => {
 			setDate(d);
@@ -53,20 +62,46 @@ const RestoreDeleteAccountConfigSection: FC<any> = () => {
 						padding={{ bottom: 'large', right: 'large', left: 'large' }}
 					>
 						<ListRow>
-							<Input
-								backgroundColor="gray5"
-								label={t(
-									'label.account_data_copy_to_account',
-									'The account data will be copied to this account'
-								)}
-								value={restoreAccountDetail?.copyAccount}
-								onChange={(e: any): void => {
-									setRestoreAccountDetail((prev: any) => ({
-										...prev,
-										copyAccount: e.target.value
-									}));
-								}}
-							/>
+							<Container
+								mainAlignment="flex-start"
+								crossAlignment="flex-start"
+								orientation="horizontal"
+								padding={{ top: 'large', right: 'small' }}
+							>
+								<Input
+									backgroundColor="gray5"
+									label={t('label.userName', 'username (Auto-fill)')}
+									value={restoreAccountDetail?.copyAccount}
+									onChange={(e: any): void => {
+										setRestoreAccountDetail((prev: any) => ({
+											...prev,
+											copyAccount: e.target.value
+										}));
+									}}
+								/>
+							</Container>
+							<Container
+								mainAlignment="flex-start"
+								crossAlignment="center"
+								orientation="horizontal"
+								padding={{ top: 'extralarge', right: 'small' }}
+								width="fit"
+							>
+								<Icon icon="AtOutline" size="large" />
+							</Container>
+							<Container
+								mainAlignment="flex-start"
+								crossAlignment="flex-start"
+								orientation="horizontal"
+								padding={{ top: 'large', left: 'small' }}
+							>
+								<Input
+									label={t('label.domain_name', 'Domain Name')}
+									value={domainName}
+									readOnly
+									backgroundColor="gray5"
+								/>
+							</Container>
 						</ListRow>
 						<ListRow>
 							<Container crossAlignment="flex-start" padding={{ top: 'large', bottom: 'medium' }}>
