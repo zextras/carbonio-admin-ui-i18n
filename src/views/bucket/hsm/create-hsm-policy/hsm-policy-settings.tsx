@@ -33,6 +33,7 @@ const HSMpolicySettings: FC<any> = () => {
 	const [isDocument, setIsDocument] = useState<boolean>(hsmDetail?.isDocumentEnabled);
 	const [policyCriteriaRows, setPolicyCriteriaRows] = useState<Array<any>>();
 	const [value, setValue] = useState<string>();
+	const [selectedPolicies, setSelectedPolicies] = useState<Array<any>>([]);
 
 	const options: any[] = useMemo(
 		() => [
@@ -201,6 +202,14 @@ const HSMpolicySettings: FC<any> = () => {
 		}
 	}, [isDocument, isContactEnable, isMessageEnable, isEventEnable, setHsmDetail]);
 
+	const onDeletePolicy = useCallback(() => {
+		const reducedArr = policyCriteria.filter(
+			(item, itemIndex) => itemIndex !== selectedPolicies[0]
+		);
+		setPolicyCriteria(reducedArr);
+		setSelectedPolicies([]);
+	}, [selectedPolicies, policyCriteria]);
+
 	return (
 		<Container
 			mainAlignment="flex-start"
@@ -359,7 +368,13 @@ const HSMpolicySettings: FC<any> = () => {
 					/>
 				</Container>
 				<Container style={{ border: '1px solid rgb(215, 73, 66)' }} width="fit">
-					<IconButton iconColor="error" icon="Trash2Outline" height={44} width={44} />
+					<IconButton
+						iconColor="error"
+						icon="Trash2Outline"
+						height={44}
+						width={44}
+						onClick={onDeletePolicy}
+					/>
 				</Container>
 			</ListRow>
 			<ListRow>
@@ -368,7 +383,14 @@ const HSMpolicySettings: FC<any> = () => {
 					crossAlignment="flex-start"
 					padding={{ top: 'large' }}
 				>
-					<Table rows={policyCriteriaRows} headers={headers} />
+					<Table
+						rows={policyCriteriaRows}
+						headers={headers}
+						showCheckbox={false}
+						multiSelect={false}
+						selectedRows={selectedPolicies}
+						onSelectionChange={(selected: any): void => setSelectedPolicies(selected)}
+					/>
 				</Container>
 			</ListRow>
 		</Container>
