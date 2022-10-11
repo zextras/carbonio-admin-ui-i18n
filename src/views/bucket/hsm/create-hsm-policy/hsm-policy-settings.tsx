@@ -171,7 +171,11 @@ const HSMpolicySettings: FC<any> = () => {
 			setAll(check);
 			setHsmDetail((prev: any) => ({
 				...prev,
-				allVolumes: check
+				isAllEnabled: check,
+				isMessageEnabled: check,
+				isEventEnabled: check,
+				isContactEnabled: check,
+				isDocumentEnabled: check
 			}));
 			setIsDocument(check);
 			setIsContactEnable(check);
@@ -184,10 +188,18 @@ const HSMpolicySettings: FC<any> = () => {
 	useEffect(() => {
 		if (!isDocument || !isContactEnable || !isMessageEnable || !isEventEnable) {
 			setAll(false);
+			setHsmDetail((prev: any) => ({
+				...prev,
+				isAllEnabled: false
+			}));
 		} else if (isDocument && isContactEnable && isMessageEnable && isEventEnable) {
 			setAll(true);
+			setHsmDetail((prev: any) => ({
+				...prev,
+				isAllEnabled: true
+			}));
 		}
-	}, [isDocument, isContactEnable, isMessageEnable, isEventEnable]);
+	}, [isDocument, isContactEnable, isMessageEnable, isEventEnable, setHsmDetail]);
 
 	return (
 		<Container
