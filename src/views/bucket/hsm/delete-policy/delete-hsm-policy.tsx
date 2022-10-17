@@ -17,6 +17,7 @@ import {
 import React, { FC, useCallback, useContext } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import { MESSAGE, DOCUMENT, CONTACT, APPOINTMENT } from '../../../../constants';
 import ListRow from '../../../list/list-row';
 
 const DeleteHsmPolicy: FC<{
@@ -25,26 +26,56 @@ const DeleteHsmPolicy: FC<{
 	selectedPolicies: any;
 	onDeletePolicy: any;
 	isRequestInProgress: boolean;
+	policies: any;
 }> = ({
 	showDeletePolicyView,
 	setShowDeletePolicyView,
 	selectedPolicies,
 	onDeletePolicy,
-	isRequestInProgress
+	isRequestInProgress,
+	policies
 }) => {
 	const [t] = useTranslation();
 	const createSnackbar: any = useContext(SnackbarManagerContext);
+	const getHSMType = useCallback(
+		(query: string): string => {
+			const hsmType: Array<any> = policies.find((item: any) => item?.hsmQuery === query)?.hsmType;
+			let hsmTypeString = '';
+			if (hsmType && hsmType?.length > 0) {
+				if (hsmType.length === 4) {
+					hsmTypeString = 'document,message,contact,appointment:';
+				} else {
+					const item: string[] = [];
+					hsmType.forEach((element: any) => {
+						if (element === 5) {
+							item.push(MESSAGE);
+						} else if (element === 8) {
+							item.push(DOCUMENT);
+						} else if (element === 11) {
+							item.push(APPOINTMENT);
+						} else if (element === 6) {
+							item.push(CONTACT);
+						}
+					});
+					hsmTypeString = `${item.join()}:`;
+				}
+			}
+			return hsmTypeString;
+		},
+		[policies]
+	);
+
 	const copyToClipboard = useCallback(() => {
 		if (navigator) {
-			navigator.clipboard.writeText(selectedPolicies);
+			navigator.clipboard.writeText(`${getHSMType(selectedPolicies)}${selectedPolicies}`);
 			createSnackbar({
 				type: 'info',
-				label: 'HSM Policy 4 has been copied to the clipboard',
+				label: t('hsm.policy_has_been_coppied', 'HSM Policy has been copied to the clipboard'),
 				autoHideTimeout: 2000,
 				actionLabel: ''
 			});
 		}
-	}, [createSnackbar, selectedPolicies]);
+	}, [createSnackbar, selectedPolicies, t, getHSMType]);
 
 	const closeHandler = useCallback(() => {
 		setShowDeletePolicyView(false);
@@ -110,7 +141,7 @@ const DeleteHsmPolicy: FC<{
 					<Input
 						background="gray5"
 						label={t('hsm.hsm_policy', 'HSM Policy')}
-						value={selectedPolicies}
+						value={`${getHSMType(selectedPolicies)}${selectedPolicies}`}
 						CustomIcon={(): any => (
 							<Icon icon="CopyOutline" size="large" color="grey" onClick={copyToClipboard} />
 						)}

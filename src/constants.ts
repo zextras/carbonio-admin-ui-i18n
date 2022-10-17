@@ -116,3 +116,7 @@ export const SERVER = 'server';
 export const LOCAL_TYPE_VALUE = 1;
 export const EXTERNAL_TYPE_VALUE = 2;
 export const LOCAL = 'Local';
+export const MESSAGE = 'message';
+export const DOCUMENT = 'document';
+export const APPOINTMENT = 'appointment';
+export const CONTACT = 'contact';

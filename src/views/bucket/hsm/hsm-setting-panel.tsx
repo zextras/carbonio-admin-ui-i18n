@@ -32,7 +32,7 @@ import CreateHsmPolicy from './create-hsm-policy/create-hsm-policy';
 import EditHsmPolicy from './edit-hsm-policy/edit-hsm-policy';
 import DeleteHsmPolicy from './delete-policy/delete-hsm-policy';
 import { useServerStore } from '../../../store/server/store';
-import { SERVER } from '../../../constants';
+import { APPOINTMENT, CONTACT, DOCUMENT, MESSAGE, SERVER } from '../../../constants';
 import { updateBackup } from '../../../services/update-backup';
 
 const HSMsettingPanel: FC = () => {
@@ -96,12 +96,37 @@ const HSMsettingPanel: FC = () => {
 		getHSMPolicyList();
 	}, [server, getHSMPolicyList]);
 
+	const getHSMType = (hsmType: Array<any>): string => {
+		let hsmTypeString = '';
+		if (hsmType.length > 0) {
+			const item: string[] = [];
+			if (hsmType.length === 4) {
+				hsmTypeString = 'document,message,contact,appointment:';
+			} else {
+				hsmType.forEach((element: any) => {
+					if (element === 5) {
+						item.push(MESSAGE);
+					} else if (element === 8) {
+						item.push(DOCUMENT);
+					} else if (element === 11) {
+						item.push(APPOINTMENT);
+					} else if (element === 6) {
+						item.push(CONTACT);
+					}
+				});
+				hsmTypeString = `${item.join()}:`;
+			}
+		}
+		return hsmTypeString;
+	};
+
 	useEffect(() => {
 		if (policies.length > 0) {
 			const allRows = policies.map((item: any) => ({
 				id: item?.hsmQuery,
 				columns: [
 					<Text size="medium" weight="bold" key={item?.hsmQuery} color="#828282">
+						{getHSMType(item?.hsmType)}
 						{item?.hsmQuery}
 					</Text>
 				]
@@ -436,12 +461,13 @@ const HSMsettingPanel: FC = () => {
 
 	const onDeletePolicy = useCallback(() => {
 		setIsRequestInProgress(true);
+		const hType = policies.find((item: any) => item?.hsmQuery === selectedPolicies[0]);
 		fetchSoap('zextras', {
 			_jsns: 'urn:zimbraAdmin',
 			module: 'ZxPowerstore',
 			action: 'removeHSMPolicy',
 			targetServer: server,
-			hsmPolicy: selectedPolicies[0]
+			hsmPolicy: `${getHSMType(hType?.hsmType)}${selectedPolicies[0]}`
 		})
 			.then((res: any) => {
 				setIsRequestInProgress(false);
@@ -475,7 +501,7 @@ const HSMsettingPanel: FC = () => {
 					replace: true
 				});
 			});
-	}, [server, selectedPolicies, t, createSnackbar, getHSMPolicyList]);
+	}, [server, selectedPolicies, t, createSnackbar, getHSMPolicyList, policies]);
 
 	return (
 		<Container mainAlignment="flex-start" width="100%">
@@ -695,6 +721,7 @@ const HSMsettingPanel: FC = () => {
 					selectedPolicies={selectedPolicies[0]}
 					onDeletePolicy={onDeletePolicy}
 					isRequestInProgress={isRequestInProgress}
+					policies={policies}
 				/>
 			)}
 		</Container>

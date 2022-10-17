@@ -31,21 +31,21 @@ const HSMcreatePolicy: FC<any> = () => {
 			enabledString.push(t('hsm.contact', 'Contact'));
 			query += 'document,message,contact,appointment';
 		} else {
+			if (hsmDetail?.isDocumentEnabled) {
+				enabledString.push(t('hsm.document', 'Document'));
+				criteriaScale.push('document');
+			}
 			if (hsmDetail?.isMessageEnabled) {
 				enabledString.push(t('hsm.message', 'Message'));
 				criteriaScale.push('message');
-			}
-			if (hsmDetail?.isEventEnabled) {
-				enabledString.push(t('hsm.event', 'Event'));
-				criteriaScale.push('appointment');
 			}
 			if (hsmDetail?.isContactEnabled) {
 				enabledString.push(t('hsm.contact', 'Contact'));
 				criteriaScale.push('contact');
 			}
-			if (hsmDetail?.isDocumentEnabled) {
-				enabledString.push(t('hsm.document', 'Document'));
-				criteriaScale.push('document');
+			if (hsmDetail?.isEventEnabled) {
+				enabledString.push(t('hsm.event', 'Event'));
+				criteriaScale.push('appointment');
 			}
 		}
 		if (criteriaScale.length > 0) {
