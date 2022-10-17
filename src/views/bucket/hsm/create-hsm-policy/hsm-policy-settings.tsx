@@ -61,15 +61,15 @@ const HSMpolicySettings: FC<any> = () => {
 		() => [
 			{
 				label: t('hsm.days', 'Days'),
-				value: 'days'
+				value: 'day'
 			},
 			{
 				label: t('hsm.months', 'Months'),
-				value: 'months'
+				value: 'month'
 			},
 			{
 				label: t('hsm.years', 'Years'),
-				value: 'years'
+				value: 'year'
 			}
 		],
 		[t]
@@ -111,15 +111,33 @@ const HSMpolicySettings: FC<any> = () => {
 
 	const [selectedOption, setSelectedOption]: any = useState<any>(options[0]);
 
-	const [selectedScale, setSelectedScale]: any = useState<any>(scaleOptions[0]);
+	const [isShowDateScale, setIsShowDateScale] = useState<boolean>(true);
+
+	const [selectedScale, setSelectedScale]: any = useState<any>(
+		isShowDateScale ? dateScaleOption[0] : scaleOptions[0]
+	);
+
+	// const [dateScale, setDateScale] = useState<any>(dateScaleOption[0]);
 
 	const onOptionChange = (v: any): any => {
 		const it = options.find((item: any) => item.value === v);
 		setSelectedOption(it);
+		if (it?.value === 'after' || it?.value === 'before') {
+			setIsShowDateScale(true);
+			setSelectedScale(dateScaleOption[0]);
+		} else {
+			setIsShowDateScale(false);
+			setSelectedScale(scaleOptions[0]);
+		}
 	};
 
 	const onScaleChange = (v: any): any => {
 		const it = scaleOptions.find((item: any) => item.value === v);
+		setSelectedScale(it);
+	};
+
+	const onDateScaleChange = (v: any): any => {
+		const it = dateScaleOption.find((item: any) => item.value === v);
 		setSelectedScale(it);
 	};
 
@@ -148,7 +166,7 @@ const HSMpolicySettings: FC<any> = () => {
 			let displayPolicy = '';
 			const allRows = policyCriteria.map((item: any, index: number) => {
 				if (item?.option === 'before' || item?.option === 'after') {
-					displayPolicy = `${item?.option} ${item?.dateScale} ${t('hsm.days_lbl', 'days')}`;
+					displayPolicy = `${item?.option} ${item?.dateScale} ${item?.scale}`;
 				} else if (item?.option === 'larger' || item?.option === 'smaller') {
 					displayPolicy = `${item?.option}  ${item?.dateScale} ${item?.scale}`;
 				}
@@ -326,20 +344,38 @@ const HSMpolicySettings: FC<any> = () => {
 					/>
 				</Container>
 
-				<Container
-					mainAlignment="flex-start"
-					crossAlignment="flex-start"
-					padding={{ right: 'large' }}
-				>
-					<Select
-						items={scaleOptions}
-						background="gray5"
-						label={t('hsm.value', 'Value')}
-						showCheckbox={false}
-						selection={selectedScale}
-						onChange={onScaleChange}
-					/>
-				</Container>
+				{isShowDateScale && (
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ right: 'large' }}
+					>
+						<Select
+							items={dateScaleOption}
+							background="gray5"
+							label={t('hsm.value', 'Value')}
+							showCheckbox={false}
+							selection={selectedScale}
+							onChange={onDateScaleChange}
+						/>
+					</Container>
+				)}
+				{!isShowDateScale && (
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ right: 'large' }}
+					>
+						<Select
+							items={scaleOptions}
+							background="gray5"
+							label={t('hsm.value', 'Value')}
+							showCheckbox={false}
+							selection={selectedScale}
+							onChange={onScaleChange}
+						/>
+					</Container>
+				)}
 
 				<Container
 					mainAlignment="flex-start"
