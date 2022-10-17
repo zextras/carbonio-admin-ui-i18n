@@ -3,15 +3,29 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import { Container, Text, Padding, Switch, Table } from '@zextras/carbonio-design-system';
-import React, { FC, useMemo, useState } from 'react';
+import {
+	Container,
+	Text,
+	Padding,
+	Switch,
+	Table,
+	SnackbarManagerContext
+} from '@zextras/carbonio-design-system';
+import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import ListRow from '../../../list/list-row';
+import { HSMContext } from '../hsm-context/hsm-context';
 
 const EditHsmPolicyVolumesSection: FC<any> = () => {
 	const [t] = useTranslation();
-	const [showSourceVolume, setShowSourceVolume] = useState<boolean>(false);
-	const [showDestinationVolume, setShowDestinationVolume] = useState<boolean>(false);
+	const context = useContext(HSMContext);
+	const { hsmDetail, setHsmDetail } = context;
+	const [showSourceVolume, setShowSourceVolume] = useState<boolean>(true);
+	const [showDestinationVolume, setShowDestinationVolume] = useState<boolean>(true);
+	const [volumeRows, setVolumeRows] = useState<Array<any>>([]);
+	const [selectedDestinationVolume, setSelectedDestinationVolume] = useState<Array<any>>([]);
+	const [selectedSourceVolume, setSelectedSourceVolume] = useState<Array<any>>([]);
+	const createSnackbar: any = useContext(SnackbarManagerContext);
 	const headers = useMemo(
 		() => [
 			{
@@ -41,6 +55,77 @@ const EditHsmPolicyVolumesSection: FC<any> = () => {
 		],
 		[t]
 	);
+	const getVoumeType = useCallback(
+		(type: number): string => {
+			if (type === 1) {
+				return t('hsm.primary', 'Primary');
+			}
+			if (type === 2) {
+				return t('hsm.secondry', 'Secondry');
+			}
+			return t('hsm.indexes', 'Indexes');
+		},
+		[t]
+	);
+	useEffect(() => {
+		const volumeList = hsmDetail?.allVolumes;
+		if (volumeList && volumeList.length > 0) {
+			const allRows = volumeList.map((item: any) => ({
+				id: item?.id,
+				columns: [
+					<Text size="medium" weight="bold" key={item} color="#828282">
+						{item?.name}
+					</Text>,
+					<Text size="medium" weight="bold" key={item} color="#828282">
+						{''}
+					</Text>,
+					<Text size="medium" weight="bold" key={item} color="#828282">
+						{getVoumeType(item?.type)}
+					</Text>,
+					<Text
+						size="medium"
+						weight="bold"
+						key={item}
+						color={item?.isCurrent ? '#414141' : '#D74942'}
+					>
+						{item?.isCurrent ? t('hsm.yes', 'Yes') : t('hsm.no', 'No')}
+					</Text>
+				]
+			}));
+			setVolumeRows(allRows);
+		} else {
+			setVolumeRows([]);
+		}
+	}, [hsmDetail?.allVolumes, getVoumeType, t]);
+
+	useEffect(() => {
+		if (Array.isArray(hsmDetail?.allVolumes)) {
+			const sourceVol = hsmDetail?.allVolumes?.filter((item: any) =>
+				selectedSourceVolume?.includes(item?.id)
+			);
+			if (sourceVol) {
+				setHsmDetail((prev: any) => ({
+					...prev,
+					sourceVolume: sourceVol
+				}));
+			}
+		}
+	}, [hsmDetail?.allVolumes, selectedSourceVolume, setHsmDetail]);
+
+	useEffect(() => {
+		if (Array.isArray(hsmDetail?.allVolumes)) {
+			const destVol = hsmDetail?.allVolumes?.filter((item: any) =>
+				selectedDestinationVolume?.includes(item?.id)
+			);
+			if (destVol) {
+				setHsmDetail((prev: any) => ({
+					...prev,
+					destinationVolume: destVol
+				}));
+			}
+		}
+	}, [hsmDetail?.allVolumes, selectedDestinationVolume, setHsmDetail]);
+
 	return (
 		<Container
 			mainAlignment="flex-start"
@@ -86,7 +171,33 @@ const EditHsmPolicyVolumesSection: FC<any> = () => {
 			</ListRow>
 			<ListRow>
 				<Padding bottom="large">
-					{showSourceVolume && <Table rows={[]} headers={headers} />}
+					{showSourceVolume && (
+						<Table
+							rows={volumeRows}
+							headers={headers}
+							selectedRows={selectedSourceVolume}
+							onSelectionChange={(selected: any): void => {
+								const available = selectedDestinationVolume.filter((item: any) =>
+									selected?.includes(item)
+								);
+								if (available.length > 0) {
+									createSnackbar({
+										key: 'error',
+										type: 'error',
+										label: t(
+											'hsm.volume_already_selected_in_destination',
+											'Volume already selected in destination volume'
+										),
+										autoHideTimeout: 3000,
+										hideButton: true,
+										replace: true
+									});
+								} else {
+									setSelectedSourceVolume(selected);
+								}
+							}}
+						/>
+					)}
 				</Padding>
 			</ListRow>
 
@@ -130,7 +241,35 @@ const EditHsmPolicyVolumesSection: FC<any> = () => {
 			</ListRow>
 			<ListRow>
 				<Padding bottom="large">
-					{showDestinationVolume && <Table rows={[]} headers={headers} />}
+					{showDestinationVolume && (
+						<Table
+							rows={volumeRows}
+							headers={headers}
+							showCheckbox={false}
+							multiSelect={false}
+							selectedRows={selectedDestinationVolume}
+							onSelectionChange={(selected: any): void => {
+								const available = selectedSourceVolume.filter((item: any) =>
+									selected?.includes(item)
+								);
+								if (available.length > 0) {
+									createSnackbar({
+										key: 'error',
+										type: 'error',
+										label: t(
+											'hsm.volume_already_selected_in_source',
+											'Volume already selected in source volume'
+										),
+										autoHideTimeout: 3000,
+										hideButton: true,
+										replace: true
+									});
+								} else {
+									setSelectedDestinationVolume(selected);
+								}
+							}}
+						/>
+					)}
 				</Padding>
 			</ListRow>
 		</Container>
