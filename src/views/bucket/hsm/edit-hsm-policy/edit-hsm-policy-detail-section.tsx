@@ -41,6 +41,12 @@ const EditHsmPolicyDetailSection: FC<{
 	const [value, setValue] = useState<string>();
 	const [selectedPolicies, setSelectedPolicies] = useState<Array<any>>([]);
 	const [isUpdatePolicyCriteria, setIsUpdatePolicyCriteria] = useState<boolean>(false);
+	const [selectedDestinationVolume, setSelectedDestinationVolume] = useState<Array<any>>(
+		hsmDetail?.destinationVolume.map((item: any) => item?.id)
+	);
+	const [selectedSourceVolume, setSelectedSourceVolume] = useState<Array<any>>(
+		hsmDetail?.sourceVolume.map((item: any) => item?.id)
+	);
 
 	useEffect(() => {
 		if (!isDocument || !isContactEnable || !isMessageEnable || !isEventEnable) {
@@ -104,6 +110,20 @@ const EditHsmPolicyDetailSection: FC<{
 									dateScale: valueItem
 								}
 							]);
+						}
+
+						if (
+							element !== '' &&
+							(element.startsWith('source') || element.startsWith('destination'))
+						) {
+							const option = element.split(':')[0];
+							const valueItem = element.split(':')[1];
+							if (option.startsWith('source')) {
+								setSelectedSourceVolume(valueItem.split(',').map((item: any) => +item));
+							}
+							if (option.startsWith('destination')) {
+								setSelectedDestinationVolume(valueItem.split(',').map((item: any) => +item));
+							}
 						}
 					});
 				} else {
@@ -295,7 +315,6 @@ const EditHsmPolicyDetailSection: FC<{
 		if (selectedPolicies.length > 0) {
 			setIsUpdatePolicyCriteria(true);
 			const policy = policyCriteria[selectedPolicies[0]];
-			console.log('>>>', policy);
 			const it = options.find((item: any) => item.value === policy?.option);
 			setSelectedOption(it);
 			if (policy) {
@@ -309,6 +328,7 @@ const EditHsmPolicyDetailSection: FC<{
 				setValue(policy?.dateScale);
 			}
 		} else {
+			setValue('');
 			setIsUpdatePolicyCriteria(false);
 		}
 	}, [selectedPolicies, policyCriteria, onScaleChange, onDateScaleChange, options]);
@@ -330,8 +350,40 @@ const EditHsmPolicyDetailSection: FC<{
 	}, [selectedOption, selectedScale, value, selectedPolicies, policyCriteria, setIsDirty]);
 
 	useEffect(() => {
-		console.log('>>>>>>>>>', hsmDetail);
-	}, [hsmDetail]);
+		const sourceVol = hsmDetail?.allVolumes?.filter((item: any) =>
+			selectedSourceVolume?.includes(item?.id)
+		);
+		if (sourceVol && sourceVol.length > 0) {
+			setHsmDetail((prev: any) => ({
+				...prev,
+				sourceVolume: sourceVol
+			}));
+		} else {
+			setHsmDetail((prev: any) => ({
+				...prev,
+				sourceVolume: []
+			}));
+		}
+	}, [selectedSourceVolume, hsmDetail?.allVolumes, setHsmDetail]);
+
+	useEffect(() => {
+		if (Array.isArray(hsmDetail?.allVolumes)) {
+			const destVol = hsmDetail?.allVolumes?.filter((item: any) =>
+				selectedDestinationVolume?.includes(item?.id)
+			);
+			if (destVol && destVol.length > 0) {
+				setHsmDetail((prev: any) => ({
+					...prev,
+					destinationVolume: destVol
+				}));
+			} else {
+				setHsmDetail((prev: any) => ({
+					...prev,
+					destinationVolume: []
+				}));
+			}
+		}
+	}, [hsmDetail?.allVolumes, selectedDestinationVolume, setHsmDetail]);
 
 	return (
 		<Container
@@ -516,7 +568,7 @@ const EditHsmPolicyDetailSection: FC<{
 						<Button
 							type="outlined"
 							label={t('label.update', 'Update')}
-							icon="PlusOutline"
+							icon="EditOutline"
 							iconPlacement="right"
 							color="primary"
 							height={46}
