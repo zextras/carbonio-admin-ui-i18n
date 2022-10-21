@@ -573,7 +573,7 @@
         "resource_disable_successfully": "{{resource_name}} başarıyla kullanım dışı bırakıldı.",
         "resource_remove_correctly": "{{resource_name}} başarıyla kaldırıldı.",
         "rt_status": "RT Durumu",
-        "server_list": "Sunucu Listesi",
+        "server_list": "Sunucular Listesi",
         "smartscan": "AkıllıTarama",
         "resource_deleted_successfully": "{{resource_name}} başarıyla silindi",
         "yes_delete_it": "Evet, Sil",
@@ -583,7 +583,7 @@
         "na": "N/A",
         "purge": "Sil",
         "scheduled": "Zamanlandı",
-        "server_specifics": "Sunucu Özelliği"
+        "server_specifics": "Sunucu Özellikleri"
     },
     "timezone": {
         "asia_gaza": "{{value}} Gaza",
@@ -940,7 +940,7 @@
         "keep_deleted_account_in_the_backup": "Silinmiş hesabı yedekte tut",
         "ldap_working_properly": "LDAP düzgün çalışıyor",
         "local_volume": "Lokal Hacim",
-        "maximum_operation_per_account": "Hesap başına Maksimum İşlem",
+        "maximum_operation_per_account": "Hesap başına Maksimum İşlemler",
         "metadata_archiving": "Metaveri arşivleme",
         "module_is_enabled_at_startup": "Bu modül sistem başlarken etkindir",
         "on_the_fly_metadata": "Anlık Metaveri",
@@ -1279,6 +1279,6 @@
     },
     "reminder": {
         "minute": "{{count}} dakika",
-        "minute_plural": "{{count}} dakika"
+        "minute_plural": ""
     }
 }
