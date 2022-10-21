@@ -164,7 +164,7 @@
         "yes": "Có",
         "detail": "Chi tiết",
         "device": "Thiết bị",
-        "edit": "Chỉnh sửa",
+        "edit": "Soan thảo",
         "go_back": "Quay trở lại",
         "id_lbl": "ID",
         "language": "Ngôn ngữ",
@@ -242,7 +242,8 @@
         "na": "Không xác định",
         "purge": "Xoá",
         "scheduled": "Đã lên lịch",
-        "disabled": "Đã tắt"
+        "disabled": "Đã tắt",
+        "soft_deleted": "đã tắt"
     },
     "timezone": {
         "australia_sydney": "{{value}} Canberra, Melbourne, Sydney",
@@ -440,7 +441,9 @@
         "metadata": "Siêu Dữ liệu",
         "other_controls": "Điều khiển khác",
         "smart_scan_configuration": "Cấu hình SmartScan",
-        "tuning_options": "Bật lên các tuỳ chọn"
+        "tuning_options": "Bật lên các tuỳ chọn",
+        "maximum_operation_per_account": "Số hoạt động tối đa cho mỗi Tài khoản",
+        "waiting_time": "Thời gian đợi"
     },
     "cos": {
         "calendar_options": "Tuỳ chọn lịch biểu",
