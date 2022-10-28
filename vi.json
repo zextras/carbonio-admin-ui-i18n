@@ -243,7 +243,8 @@
         "purge": "Xoá",
         "scheduled": "Đã lên lịch",
         "disabled": "Đã tắt",
-        "soft_deleted": "đã tắt"
+        "soft_deleted": "đã tắt",
+        "global_address_list": "Danh sách địa chỉ chung"
     },
     "timezone": {
         "australia_sydney": "{{value}} Canberra, Melbourne, Sydney",
@@ -443,7 +444,8 @@
         "smart_scan_configuration": "Cấu hình SmartScan",
         "tuning_options": "Bật lên các tuỳ chọn",
         "maximum_operation_per_account": "Số hoạt động tối đa cho mỗi Tài khoản",
-        "waiting_time": "Thời gian đợi"
+        "waiting_time": "Thời gian đợi",
+        "running": "đang chạy"
     },
     "cos": {
         "calendar_options": "Tuỳ chọn lịch biểu",
