@@ -29,7 +29,7 @@ import { modifyAccountRequest } from '../../../../services/modify-account';
 import { getDelegateAuthRequest } from '../../../../services/get-delegate-auth-request';
 import { endSession } from '../../../../services/end-session';
 import { getSessions } from '../../../../services/get-sessions';
-import Paginig from '../../../components/paging';
+import Paging from '../../../components/paging';
 
 const AccountDetailContainer = styled(Container)`
 	z-index: 10;
@@ -639,7 +639,7 @@ const AccountDetailView: FC<any> = ({
 					mainAlignment="flex-end"
 					crossAlignment="flex-end"
 				>
-					<Paginig
+					<Paging
 						totalItem={1}
 						setOffset={(): void => {
 							console.log('setOffset for paging');
