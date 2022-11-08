@@ -25,6 +25,8 @@ import {
 } from '@zextras/carbonio-shell-ui';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
+import { Icon, IconButton } from '@zextras/carbonio-design-system';
+import styled from 'styled-components';
 import { MatomoProvider } from '@datapunt/matomo-tracker-react';
 import {
 	APPLICATION_LOG,
@@ -58,6 +60,7 @@ import { getAllServers } from './services/get-all-servers-service';
 import { useConfigStore } from './store/config/store';
 import { getAllConfig } from './services/get-all-config';
 import { useAuthIsAdvanced } from './store/auth-advanced/store';
+import SvgBackupOutline from './icons/outline/BackupOutline';
 import { useBucketServersListStore } from './store/bucket-server-list/store';
 import MatomoTracker from './matomo-tracker';
 
@@ -70,6 +73,12 @@ const AppView: FC = (props) => (
 		</Suspense>
 	</MatomoProvider>
 );
+
+const PrimaryBarIconButton = styled(IconButton)`
+	&:hover {
+		background: transparent;
+	}
+`;
 
 const App: FC = () => {
 	const [t] = useTranslation();
@@ -376,6 +385,17 @@ const App: FC = () => {
 		[subscriptionTooltipItems]
 	);
 
+	const backupPrimaryBar: FC = useCallback(
+		() => (
+			<PrimaryBarIconButton
+				icon={SvgBackupOutline}
+				size="large"
+				onClick={(): void => history.push(`/${SERVICES_ROUTE_ID}/${BACKUP_ROUTE_ID}`)}
+			/>
+		),
+		[history]
+	);
+
 	useEffect(() => {
 		addRoute({
 			route: DASHBOARD,
@@ -458,7 +478,8 @@ const App: FC = () => {
 			position: 1,
 			visible: true,
 			label: t('label.backup', 'Backup'),
-			primaryBar: 'HistoryOutline',
+			// primaryBar: 'HistoryOutline',
+			primaryBar: backupPrimaryBar,
 			appView: AppView,
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore
@@ -512,7 +533,8 @@ const App: FC = () => {
 		DomainTooltipView,
 		StorageTooltipView,
 		SubscriptionTooltipView,
-		logAndQueuesSection
+		logAndQueuesSection,
+		backupPrimaryBar
 	]);
 
 	useEffect(() => {
