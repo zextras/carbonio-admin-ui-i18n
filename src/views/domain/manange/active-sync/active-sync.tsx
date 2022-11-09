@@ -21,6 +21,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import Paginig from '../../../components/paging';
 import gardian from '../../../../assets/gardian.svg';
 import { getAllDevices } from '../../../../services/get-all-devices';
+import ActiveDeviceDetail from './active-device-detail';
 
 const ActiveSync: FC = () => {
 	const [t] = useTranslation();
@@ -28,6 +29,7 @@ const ActiveSync: FC = () => {
 	const [allDevices, setAllDevices] = useState<Array<any>>([]);
 	const [allDeviceRow, setAllDeviceRow] = useState<Array<any>>([]);
 	const createSnackbar: any = useContext(SnackbarManagerContext);
+	const [isShowDeviceDetail, setIsShowDeviceDetail] = useState<boolean>(true);
 	const headers: any[] = useMemo(
 		() => [
 			{
@@ -230,6 +232,7 @@ const ActiveSync: FC = () => {
 					</Row>
 				</Container>
 			</Container>
+			{isShowDeviceDetail && <ActiveDeviceDetail setIsShowDeviceDetail={setIsShowDeviceDetail} />}
 		</Container>
 	);
 };
