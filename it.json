@@ -732,7 +732,8 @@
         "sharing": "CONDIVISIONE",
         "start": "inizia",
         "virtual_host_user_msg_2": "Gli host virtual devono essere unici per ciascun dominio, così il sistema sarà in grado di riconoscere a quale dominio appartiene l'utente e sarà possibile mostrare le impostazioni stabilite per il dato dominio",
-        "empty_table": "Tabella vuota"
+        "empty_table": "Tabella vuota",
+        "not_ready_to_be_active": "Non pronto per essere attivo"
     },
     "message": {
         "snackbar": {
@@ -964,7 +965,8 @@
         "range": "Periodo",
         "schedule_smartscan": "Programma Smartscan",
         "smart_scan_configuration": "Configurazione SmartScan",
-        "tuning_options": "Ottimizzazioni"
+        "tuning_options": "Ottimizzazioni",
+        "on_the_fly_metadata": "Metadati"
     },
     "cos": {
         "maximum_number_of_items_to_display_per_page": "Numero massimo di elementi da visualizzare per pagina",
