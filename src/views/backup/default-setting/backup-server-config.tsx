@@ -122,7 +122,12 @@ const BackupServerConfig: FC = () => {
 	return (
 		<>
 			<Container padding={{ all: 'large' }} mainAlignment="flex-start" background="gray6">
-				<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
+				<Row
+					takeAvwidth="fill"
+					mainAlignment="flex-start"
+					width="100%"
+					padding={{ left: 'large', right: 'large' }}
+				>
 					<Container
 						orientation="vertical"
 						mainAlignment="space-around"
@@ -162,7 +167,7 @@ const BackupServerConfig: FC = () => {
 					style={{ overflow: 'auto' }}
 					width="100%"
 					height="calc(100vh - 200px)"
-					padding={{ top: 'extralarge', left: 'small', right: 'small' }}
+					padding={{ all: 'large' }}
 				>
 					<ListRow>
 						<Switch
@@ -211,7 +216,10 @@ const BackupServerConfig: FC = () => {
 					<ListRow>
 						<Container padding={{ bottom: 'large' }}>
 							<Input
-								label={t('backup.minimum_space_threshold', 'Minimum Space Threshold')}
+								label={`${t('backup.minimum_space_threshold', 'Minimum Space Threshold')} (${t(
+									'label.mb',
+									'MB'
+								)})`}
 								value={initbackupDetail.backupLatencyLowThreshold}
 								defaultValue={initbackupDetail.backupLatencyLowThreshold}
 								onChange={changeBackupDetail}
@@ -221,9 +229,12 @@ const BackupServerConfig: FC = () => {
 						</Container>
 					</ListRow>
 					<ListRow>
-						<Container padding={{ bottom: 'large' }}>
+						<Container padding={{ bottom: 'medium' }}>
 							<Input
-								label={t('backup.local_metadata_threshold', 'Local Metadata Threshold')}
+								label={`${t('backup.local_metadata_threshold', 'Local Metadata Threshold')} (${t(
+									'label.mb',
+									'MB'
+								)})`}
 								value={initbackupDetail.backupLatencyHighThreshold}
 								defaultValue={initbackupDetail.backupLatencyHighThreshold}
 								onChange={changeBackupDetail}
@@ -233,7 +244,7 @@ const BackupServerConfig: FC = () => {
 						</Container>
 					</ListRow>
 					<ListRow>
-						<Container padding={{ top: 'large', bottom: 'large' }}>
+						<Container padding={{ top: 'small', bottom: 'large' }}>
 							<Divider />
 						</Container>
 					</ListRow>
@@ -247,7 +258,7 @@ const BackupServerConfig: FC = () => {
 						</Padding>
 					</ListRow>
 					<ListRow>
-						<Container padding={{ bottom: 'large' }}>
+						<Container padding={{ bottom: 'medium' }}>
 							<Input
 								label={t('backup.schedule', 'Schedule')}
 								value={initbackupDetail.backupSmartScanScheduler?.['cron-pattern']}
@@ -259,7 +270,7 @@ const BackupServerConfig: FC = () => {
 						</Container>
 					</ListRow>
 					<ListRow>
-						<Container padding={{ top: 'large', bottom: 'extralarge' }}>
+						<Container padding={{ top: 'small', bottom: 'extralarge' }}>
 							<Divider />
 						</Container>
 					</ListRow>
