@@ -437,10 +437,25 @@ const MailingListDetail: FC<any> = ({
 
 	const handleClickDeleteEvent = useCallback(() => {
 		setIsDeleteBtnLoading(true);
-		getGrant('name', 'dl', selectedMailingList?.name)
+		const getGrantBody: any = {};
+		const grantee = {
+			type: 'grp',
+			by: 'name',
+			_content: selectedMailingList?.name,
+			all: false
+		};
+		getGrantBody.grantee = grantee;
+		getGrant(getGrantBody)
 			.then((data: any) => {
 				if (data && data?.grant && Array.isArray(data?.grant)) {
-					setTotalGrantRights(data?.grant[0]?.right?.length);
+					const rights = data?.grant?.map((items: any) => items?.right?.length);
+					const rightLenght = rights?.values();
+					let totalRights = 0;
+					// eslint-disable-next-line no-restricted-syntax
+					for (const value of rightLenght) {
+						totalRights += value;
+					}
+					setTotalGrantRights(totalRights);
 				}
 				setIsOpenDeleteDialog(true);
 				setIsDeleteBtnLoading(false);
