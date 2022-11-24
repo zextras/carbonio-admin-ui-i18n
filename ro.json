@@ -154,7 +154,14 @@
         "volume_server": "Server",
         "configuration_lbl": "Configuraţie",
         "disabled": "Dezactivat",
-        "scheduled": "Planificat"
+        "scheduled": "Planificat",
+        "advanced_lbl": "Avansat",
+        "email_address": "Adresa de e-mail",
+        "enabled": "Activat",
+        "global": "Global",
+        "status_lbl": "Stare",
+        "volume_server_name": "Server",
+        "theme": "Tema"
     },
     "core": {
         "subscription": {
@@ -327,5 +334,50 @@
     },
     "connection": {
         "notes": "Note"
+    },
+    "hsm": {
+        "all": "Toate",
+        "contact": "Persoană de contact",
+        "delete": "Ştergere",
+        "details": "Detalii",
+        "document": "Document",
+        "edit": "Editeaza",
+        "event": "Eveniment",
+        "items": "Elemente",
+        "mb": "MB",
+        "message": "Mesaj",
+        "name": "Nume",
+        "no": "Nu.",
+        "schedule": "Planificare",
+        "server": "Server",
+        "type": "Tip",
+        "value": "Valoare",
+        "volumes": "Volume",
+        "yes": "Da",
+        "current": "Actual"
+    },
+    "volume": {
+        "server_list_header": {
+            "description": "Descriere",
+            "server": "Server"
+        },
+        "volume_allocation_list": {
+            "external": "Extern"
+        },
+        "volume_config_header": {
+            "name": "Nume"
+        },
+        "volume_header": {
+            "current": "Actual",
+            "id": "ID",
+            "name": "Nume",
+            "path": "Cale"
+        },
+        "volume_indexer_header": {
+            "current": "Actual",
+            "id": "ID",
+            "name": "Nume",
+            "path": "Cale"
+        }
     }
 }
