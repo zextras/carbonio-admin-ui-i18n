@@ -615,7 +615,8 @@
         "value": "Valor",
         "volumes": "Volumes",
         "yes": "Sim",
-        "all": "Tudo"
+        "all": "Tudo",
+        "secondry": "Secundário"
     },
     "volume": {
         "server_list_header": {
