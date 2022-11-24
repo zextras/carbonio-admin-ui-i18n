@@ -852,7 +852,6 @@
     },
     "core": {
         "subscription": {
-            "active": "启用",
             "bundle": "捆绑包",
             "company_name": "公司名称",
             "customer": "客户",
@@ -874,8 +873,7 @@
                 "deactivate": "是的，停用",
                 "confirm": "确定要继续吗？",
                 "cancel": "否"
-            },
-            "deactive": "不活动"
+            }
         }
     },
     "message": {

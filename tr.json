@@ -818,7 +818,6 @@
     },
     "core": {
         "subscription": {
-            "active": "Etkin",
             "bundle": "Toplu Paket",
             "company_name": "Firma Adı",
             "customer": "Müşteri",
@@ -840,8 +839,7 @@
                 "deactivate": "Evet, Pasif duruma getir",
                 "confirm": "Devam etmek istediğinizden emin misiniz?",
                 "cancel": "HAYIR"
-            },
-            "deactive": "Aktif Değil"
+            }
         }
     },
     "domain": {

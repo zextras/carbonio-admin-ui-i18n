@@ -852,7 +852,6 @@
     },
     "core": {
         "subscription": {
-            "active": "Активно",
             "bundle": "Комплект",
             "company_name": "Название компании",
             "customer": "Пользователь",
@@ -868,7 +867,6 @@
             "subscription_type": "Тип подписки",
             "token": "Токен",
             "version": "Версия Zextras",
-            "deactive": "Деактивировать",
             "modal": {
                 "cancel": "НЕТ",
                 "confirm": "Вы уверены, что хотите продолжить?",

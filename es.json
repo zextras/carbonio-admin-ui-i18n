@@ -852,7 +852,6 @@
     },
     "core": {
         "subscription": {
-            "active": "Activa",
             "bundle": "Bundle",
             "company_name": "Nombre de la compañía",
             "customer": "Cliente",
@@ -868,7 +867,6 @@
             "subscription_type": "Tipo de suscripción",
             "token": "Token",
             "version": "Versión de Zextras",
-            "deactive": "Desactivar",
             "modal": {
                 "cancel": "NO",
                 "confirm": "¿Está seguro que desea continuar?",

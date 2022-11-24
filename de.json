@@ -854,7 +854,6 @@
         "subscription": {
             "hide": "Ausblenden",
             "status": "Status",
-            "active": "Aktiv",
             "bundle": "Bundle",
             "company_name": "Firmenname",
             "customer": "Kunde",
@@ -874,8 +873,7 @@
                 "deactivate": "Ja, deaktivieren",
                 "confirm": "Sind Sie sicher, dass Sie sich fortfahren möchten?",
                 "cancel": "NEIN"
-            },
-            "deactive": "Deaktiviert"
+            }
         }
     },
     "message": {

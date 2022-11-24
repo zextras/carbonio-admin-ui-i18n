@@ -354,8 +354,7 @@
     "core": {
         "subscription": {
             "hide": "Ocultar",
-            "status": "Status",
-            "active": "Ativa"
+            "status": "Status"
         }
     },
     "domain": {

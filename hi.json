@@ -817,7 +817,6 @@
     },
     "core": {
         "subscription": {
-            "active": "एक्टिव",
             "bundle": "बंडल",
             "company_name": "कंपनी नाम",
             "customer": "कस्टमर",
@@ -839,8 +838,7 @@
                 "deactivate": "हाँ, डी-एक्टिव कर दें",
                 "confirm": "क्या आप वाकई में आगे बढ़ना चाहते हैं?",
                 "cancel": "नहीं"
-            },
-            "deactive": "एक्टिव नहीं"
+            }
         }
     },
     "domain": {

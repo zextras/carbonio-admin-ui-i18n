@@ -6,7 +6,6 @@
             "subscription_Accounts": "サブスクリプションアカウント",
             "subscription_last_check": "サブスクリプションの最終確認",
             "token": "トークン",
-            "active": "アクティブ",
             "bundle": "バンドル",
             "company_name": "会社名",
             "customer": "顧客",
@@ -23,8 +22,7 @@
                 "deactivate": "はい、非アクティブ化する",
                 "confirm": "続行しますか？",
                 "cancel": "いいえ"
-            },
-            "deactive": "非アクティブ"
+            }
         }
     },
     "timezone": {

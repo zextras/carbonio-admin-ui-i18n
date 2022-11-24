@@ -231,7 +231,6 @@
     },
     "core": {
         "subscription": {
-            "active": "Aktif",
             "bundle": "Bundel",
             "company_name": "Nama Perusahaan",
             "customer": "Pelanggan",
@@ -253,8 +252,7 @@
                 "deactivate": "Ya, Nonaktifkan",
                 "confirm": "Anda yakin ingin melanjutkan?",
                 "cancel": "TIDAK"
-            },
-            "deactive": "Nonaktif"
+            }
         }
     },
     "domain": {

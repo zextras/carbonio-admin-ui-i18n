@@ -232,7 +232,6 @@
     },
     "core": {
         "subscription": {
-            "active": "Ativa",
             "bundle": "Bundle",
             "company_name": "Nome da Empresa",
             "customer": "Cliente",
@@ -254,8 +253,7 @@
                 "deactivate": "Sim, desativar",
                 "label": "Desativar Token",
                 "warning": "Você está tentando desativar o Token atual. Se continuar, você vai desabilitar todas as funcionalidades habilitadas."
-            },
-            "deactive": "Desativar"
+            }
         }
     },
     "domain": {

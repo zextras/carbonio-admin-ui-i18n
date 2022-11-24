@@ -7,7 +7,6 @@
             "features": "Các tính năng khác",
             "less_info": "Ít thông tin hơn",
             "more_info": "Nhiều thông tin hơn",
-            "active": "Hoạt động",
             "bundle": "Bó lại",
             "company_name": "Tên Công ty",
             "customer": "Khách hàng",
@@ -23,8 +22,7 @@
                 "confirm": "Bạn có chắc muốn tiếp tục?",
                 "deactivate": "Có, Hủy kích hoạt",
                 "warning": "Bạn đang cố gắng hủy kích hoạt mã thông báo hiện tại. Làm như vậy sẽ vô hiệu hóa tất cả các tính năng đã bật."
-            },
-            "deactive": "Huỷ kích hoạt"
+            }
         }
     },
     "label": {

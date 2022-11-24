@@ -93,7 +93,6 @@
     },
     "core": {
         "subscription": {
-            "active": "Actief",
             "bundle": "Bundel",
             "company_name": "Naam bedrijf",
             "customer": "Klant",
@@ -115,8 +114,7 @@
                 "deactivate": "Ja, Deactiveren",
                 "confirm": "Weet u zeker dat u wilt doorgaan?",
                 "cancel": "NEE"
-            },
-            "deactive": "Inactief"
+            }
         }
     },
     "label": {

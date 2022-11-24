@@ -234,7 +234,6 @@
         "subscription": {
             "hide": "Ukryj",
             "status": "Status",
-            "active": "Aktywne",
             "bundle": "Pakiet",
             "company_name": "Nazwa firmy",
             "customer": "Klient",
@@ -254,8 +253,7 @@
                 "deactivate": "Tak, deaktywuj",
                 "confirm": "Czy na pewno chcesz kontynuować?",
                 "cancel": "NIE"
-            },
-            "deactive": "Deaktywuj"
+            }
         }
     },
     "domain": {
