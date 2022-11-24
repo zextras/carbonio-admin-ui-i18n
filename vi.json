@@ -26,7 +26,7 @@
         }
     },
     "label": {
-        "status": "Trạng thái",
+        "status": "trạng thái",
         "account": "Tài khoản",
         "accounts": "Tài khoản",
         "add": "Thêm",
@@ -56,7 +56,7 @@
         "timezone": "Múi giờ",
         "unlimited": "Không giới hạn",
         "url": "URL",
-        "active": "Hoạt động",
+        "active": "Đang hoạt động",
         "app_name": "Quản lý",
         "hours": "Giờ",
         "minutes": "Phút",
@@ -609,7 +609,32 @@
         "this_list_is_empty": "Danh sách này rỗng.",
         "use_the_QuickAdd_dialog_when_creating_new_appointments": "sử dụng hộp thoại QuickAdd khi tạo các cuộc hẹn mới",
         "utility_view": "Chế độ xem tiện ích thử nghiệm 1",
-        "utility_view2": "Chế độ xem tiện ích thử nghiệm 2"
+        "utility_view2": "Chế độ xem tiện ích thử nghiệm 2",
+        "OTP": "OTP",
+        "advanced_lbl": "Nâng cao",
+        "allowed": "Đã cho phép",
+        "device_id": "ID thiết bị",
+        "e_mail": "Thư điện tử",
+        "eas": "EAS",
+        "email_address": "Địa chỉ thư điện tử",
+        "enabled": "Đã bật",
+        "global": "Toàn cầu",
+        "last_seen": "Lần xem gần nhất",
+        "mailstores": "Kho chứa thư",
+        "mobile_password": "Mật khẩu di động",
+        "reset": "Cài đặt lại",
+        "reset_device": "Cài đặt lại thiết bị",
+        "s3_bucket": "Đơn vị lưu trữ S3 Bucket",
+        "select_an_external_volume": "Lựa chọn một tập bên ngoài",
+        "service": "Dịch vụ",
+        "status_lbl": "Trạng thái",
+        "theme": "Chủ đề",
+        "title": "Tiêu đề",
+        "update": "Cập nhập",
+        "volume_next_button": "TIẾP",
+        "volume_server_name": "Máy chủ",
+        "wipe_device": "Xoá thiết bị",
+        "DELETE": "XOÁ"
     },
     "timezone": {
         "australia_sydney": "{{value}} Canberra, Melbourne, Sydney",
@@ -737,7 +762,7 @@
         "america_caracas": "{{value}} Caracas",
         "america_cayenne": "{{value}} Cayenne, Fortaleza",
         "america_chicago": "{{value}} US/Canada Central",
-        "africa_algiers": "{{value}} Tây Trung Phi",
+        "africa_algiers": "{{value}} West Central Africa",
         "africa_cairo": "{{value}} Ai Cập",
         "africa_casablanca": "{{value}} Casablanca",
         "africa_harare": "{{value}} Harare, Pretoria",
@@ -956,7 +981,10 @@
         "save_index": "Lưu chỉ mục",
         "set_backup_forever_msg": "Nếu bạn đặt 0, dữ liệu của bạn sẽ luôn được lưu giữ trong sao lưu",
         "threads_for_account": "Chủ đề cho Tài khoản",
-        "threads_for_items": "Chủ đề cho mục"
+        "threads_for_items": "Chủ đề cho mục",
+        "bucket_list": "Danh sách nhóm",
+        "external_volume": "Tập bên ngoài",
+        "kb": "KB"
     },
     "cos": {
         "calendar_options": "Tuỳ chọn lịch biểu",
@@ -1104,7 +1132,9 @@
         "show_IMAP_search_folder": "Hiển thị Thư mục tìm kiếm IMAP",
         "show_search_string": "Hiển thị chuỗi tìm kiếm",
         "standard_html_client": "Client chuẩn (HTML)",
-        "type_of_UI": "Kiểu của UI"
+        "type_of_UI": "Kiểu của UI",
+        "active_sync": "Kích hoạt đồng bộ",
+        "dark_mode": "Chế độ tối"
     },
     "locale": {
         "English": "Tiếng Anh",
@@ -1246,7 +1276,40 @@
             "create_mailstores_volume": "Tạo thư viện ổ đĩa"
         },
         "serverName_volumes": "{{serverName}} Ổ đĩa",
-        "serverName_volumes_create_mailstores_volume": "{{serverName}} tạo thư viện ổ đĩa"
+        "serverName_volumes_create_mailstores_volume": "{{serverName}} tạo thư viện ổ đĩa",
+        "server_list_header": {
+            "description": "Mô tả",
+            "index": "Mục lục",
+            "primary": "Đầu tiên",
+            "secondary": "Thứ nhì",
+            "server": "Máy chủ"
+        },
+        "volume_allocation_list": {
+            "centralized": "Tập trung",
+            "external": "Bên ngoài",
+            "local": "Cục bộ"
+        },
+        "volume_config_header": {
+            "name": "Tên"
+        },
+        "volume_header": {
+            "compression": "Nén",
+            "current": "Hiện tại",
+            "id": "ID",
+            "name": "Tên",
+            "path": "Đường dẫn"
+        },
+        "volume_indexer_header": {
+            "current": "Hiện tại",
+            "id": "ID",
+            "name": "Tên",
+            "path": "Đường dẫn"
+        },
+        "volume_type": {
+            "index": "Mục lục",
+            "primary": "Đầu tiên",
+            "secondary": "Thứ nhì"
+        }
     },
     "account": {
         "new": {
@@ -1277,5 +1340,50 @@
     "select_bucket_or_create_new_bucket": "Có vẻ như bạn chưa thiết lập loại nhóm. Nhấp vào nút \"VÒNG MỚI\" để tạo một cái mới.",
     "have_not_setup_bucket_type": "Có vẻ như bạn chưa thiết lập loại nhóm",
     "create_new_cos": "TẠO COS MỚI",
-    "welcome_to_carbonio": "Chào mừng {{adminName}} đến với Carbonio {{carbonioVersion}}!"
+    "welcome_to_carbonio": "Chào mừng {{adminName}} đến với Carbonio {{carbonioVersion}}!",
+    "hsm": {
+        "all": "Tất cả",
+        "allocation": "Phân bổ",
+        "apply_duplication_after_scheduledhsm": "Áp dụng Sao chép sau khi HSM đã lên lịch",
+        "contact": "Liên hệ",
+        "create_policy": "Tạo chính sách",
+        "criteria": "Tiêu chuẩn",
+        "current": "Hiện tại",
+        "days": "Ngày",
+        "delete": "Xoá",
+        "destination_volume": "Tập đích",
+        "details": "Thông tin chi tiết",
+        "document": "Văn bản",
+        "edit": "Soan thảo",
+        "event": "Sự kiện",
+        "hours": "Giờ",
+        "hsm_policies_list": "Danh sách chính sách HSM",
+        "hsm_policy": "Chính sách HSM",
+        "indexes": "Mục lục",
+        "items": "Các mục",
+        "kb": "KB",
+        "mb": "MB",
+        "message": "Thư",
+        "minimum_space_threshold": "Hạn mức không gian tối thiểu",
+        "minutes": "Phút",
+        "months": "Tháng",
+        "name": "Tên",
+        "new_policy_summary": "Tổng quan chính sách mới",
+        "no": "Không",
+        "option": "Tuỳ chọn",
+        "parameters": "Các thông số",
+        "policy_settings": "Các cài đặt chính sách",
+        "primary": "Đầu tiên",
+        "schedule": "Lịch trình",
+        "secondary": "Thứ nhì",
+        "select_volumes": "Chọn Tập",
+        "server": "Máy chủ",
+        "source_volume": "Tập nguồn",
+        "this_function_allow_save_disk_copy_msg": "Chức năng này cho phép bạn tiết kiệm dung lượng ổ đĩa bằng cách lưu trữ một bản sao của một mục.",
+        "type": "Loại",
+        "value": "Giá trị",
+        "volumes": "Dung lượng",
+        "yes": "Có",
+        "gb": "GB"
+    }
 }
