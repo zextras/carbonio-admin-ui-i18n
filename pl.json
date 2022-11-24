@@ -1386,6 +1386,7 @@
         "type": "Typ",
         "value": "Wartość",
         "volumes": "Woluminy",
-        "yes": "Tak"
+        "yes": "Tak",
+        "secondry": "Drugorzędny"
     }
 }
