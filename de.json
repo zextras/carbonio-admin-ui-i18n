@@ -66,7 +66,7 @@
                 "accepted": "Sie haben den Antrag auf Freigabe angenommen"
             }
         },
-        "status": "Status",
+        "status": "präsenz",
         "suspended": "Unterbrochen",
         "timezone": "Zeitzonen",
         "unlimited": "Unbegrenzt",
@@ -447,7 +447,7 @@
         "volume_server": "Server",
         "configuration_lbl": "Konfiguration",
         "global_address_list": "Globale Adressliste",
-        "disabled": "Deaktiviert",
+        "disabled": "Abgeschaltet",
         "local": "Lokal",
         "na": "N/A",
         "purge": "Bereinigen",
@@ -617,7 +617,32 @@
         "volume_max_quota_allowed": "Maximal zulässig",
         "volume_min_threshold": "Min. Schwellwert",
         "soft_deleted": "deaktiviert",
-        "server_list": "Server Liste"
+        "server_list": "Server Liste",
+        "DELETE": "LÖSCHEN",
+        "OTP": "OTP",
+        "advanced_lbl": "Erweitert",
+        "allowed": "Erlaubt",
+        "e_mail": "E-mail",
+        "eas": "EAS",
+        "email_address": "E-Mail Adresse",
+        "enabled": "Aktiviert",
+        "global": "Global",
+        "last_seen": "Zuletzt gesehen",
+        "mailstores": "Mailstores",
+        "mobile_password": "Mobiles Passwort",
+        "reset": "Zurücksetzen",
+        "reset_device": "Gerät zurücksetzen",
+        "s3_bucket": "S3 Bucket",
+        "select_an_external_volume": "Einen externen Datenträger auswählen",
+        "service": "Service",
+        "status_lbl": "Status",
+        "theme": "Thema",
+        "title": "Titel",
+        "update": "Aktualisierung",
+        "volume_next_button": "WEITER",
+        "volume_server_name": "Server",
+        "wipe_device": "Gerät löschen",
+        "device_id": "Geräte-ID"
     },
     "timezone": {
         "asia_yerevan": "{{value}} Eriwan",
@@ -956,7 +981,10 @@
         "tuning_options": "Einstellungsoptionen",
         "maximum_operation_per_account": "Maximale Anzahl der Vorgänge pro Konto",
         "running": "aktiv",
-        "waiting_time": "Wartezeit"
+        "waiting_time": "Wartezeit",
+        "bucket_list": "Buckets Liste",
+        "external_volume": "Externer Datenträger",
+        "kb": "KB"
     },
     "cos": {
         "calendar_options": "Kalenderoptionen",
@@ -1017,7 +1045,7 @@
             "work_week": "Arbeitswochenansicht"
         },
         "disable_attachment_viewing_from_web_mail_ui": "Anzeigen von Anhängen über Webmail-UI deaktivieren",
-        "disabled": "Deaktiviert",
+        "disabled": "Abgeschaltet",
         "email_message_lifetime": "Mails löschen nach",
         "email_retention_policy": "Regeln für die Mail-Speicherung",
         "enable_failed_login_lockout": "Sperrung bei fehlgeschlagener Anmeldung aktivieren",
@@ -1103,7 +1131,9 @@
         "use_quickadd_dialog_in_creation": "QuickAdd Dialog bei Erstellung nutzen",
         "sms_reminders": "SMS Erinnerungen",
         "use_gal_to_auto_fill": "GAL zum automatischen Vervollständigen benutzen",
-        "use_ical_delegation_model_for_shared_calendars": "iCal Delegierungsmodell für geteilte Kalender nutzen"
+        "use_ical_delegation_model_for_shared_calendars": "iCal Delegierungsmodell für geteilte Kalender nutzen",
+        "active_sync": "ActiveSync",
+        "dark_mode": "Dunkler Modus"
     },
     "locale": {
         "English": "Englisch",
@@ -1276,6 +1306,84 @@
         "serverName_volumes_create_mailstores_volume": "{{serverName}} Mailstores Datenträger erstellen",
         "new": {
             "create_mailstores_volume": "Mailstores Datenträger erstellen"
+        },
+        "server_list_header": {
+            "description": "Beschreibung",
+            "index": "Index",
+            "primary": "Primär",
+            "secondary": "Sekundär",
+            "server": "Server"
+        },
+        "volume_allocation_list": {
+            "centralized": "Zentralisiert",
+            "external": "Extern",
+            "local": "Lokal"
+        },
+        "volume_config_header": {
+            "name": "Name"
+        },
+        "volume_header": {
+            "compression": "Komprimierung",
+            "current": "Aktuell",
+            "id": "ID",
+            "name": "Name",
+            "path": "Pfad"
+        },
+        "volume_indexer_header": {
+            "current": "Aktuell",
+            "id": "ID",
+            "name": "Name",
+            "path": "Pfad"
+        },
+        "volume_type": {
+            "index": "Index",
+            "primary": "Primär",
+            "secondary": "Sekundär"
         }
+    },
+    "hsm": {
+        "allocation": "Zuordnung",
+        "apply_duplication_after_scheduledhsm": "Deduplizierung nach geplantem HSM anwenden",
+        "contact": "Kontakt",
+        "create_policy": "Richtlinie erstellen",
+        "criteria": "Kriterien",
+        "current": "Aktuell",
+        "days": "Tage",
+        "delete": "Löschen",
+        "destination_volume": "Zieldatenträger",
+        "details": "Details",
+        "document": "Dokument",
+        "edit": "Bewerken",
+        "event": "Event",
+        "hours": "stunden",
+        "hsm_policies_list": "Liste HSM Richtlinien",
+        "hsm_policy": "HSM Richtlinie",
+        "indexes": "Indexe",
+        "items": "Elemente",
+        "kb": "KB",
+        "mb": "MB",
+        "message": "Nachricht",
+        "minimum_space_threshold": "Grenzwert des minimalen Speicherplatzes",
+        "minutes": "Minuten",
+        "months": "Monate",
+        "name": "Name",
+        "new_policy_summary": "Zusammenfassung neue Richtlinie",
+        "no": "Nein",
+        "option": "Option",
+        "parameters": "Parameter",
+        "policy_settings": "Einstellungen Richtlinien",
+        "primary": "Primär",
+        "schedule": "Planung",
+        "secondary": "Sekundär",
+        "select_volumes": "Datenträger auswählen",
+        "server": "Server",
+        "source_volume": "Quelldatenträger",
+        "this_function_allow_save_disk_copy_msg": "Diese Funktionalität ermöglicht es Ihnen, durch das Speichern einer einzigen Kopie eines Elementes Speicherplatz zu sparen.",
+        "type": "Typ",
+        "value": "Wert",
+        "volumes": "Datenträger",
+        "yes": "Ja",
+        "all": "Alle",
+        "gb": "GB"
     }
 }
