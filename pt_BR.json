@@ -1384,6 +1384,7 @@
         "value": "Valor",
         "volumes": "Volumes",
         "yes": "Sim",
-        "minutes": "Minutos"
+        "minutes": "Minutos",
+        "secondry": "Secundário"
     }
 }
