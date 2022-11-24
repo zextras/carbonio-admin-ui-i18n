@@ -2,7 +2,7 @@
     "core": {
         "subscription": {
             "more_info": "詳細",
-            "status": "ステータス",
+            "status": "状態",
             "subscription_Accounts": "サブスクリプションアカウント",
             "subscription_last_check": "サブスクリプションの最終確認",
             "token": "トークン",
@@ -874,7 +874,32 @@
         "username_without": "以下がないユーザー名",
         "verify_connector_verified": " 検証済み",
         "volume_back_button": "戻る",
-        "volume_main": "ボリュームメイン"
+        "volume_main": "ボリュームメイン",
+        "DELETE": "削除する",
+        "OTP": "OTP",
+        "advanced_lbl": "詳細設定",
+        "allowed": "許可",
+        "device_id": "デバイスID",
+        "e_mail": "メール",
+        "eas": "EAS",
+        "email_address": "メールアドレス",
+        "enabled": "有効",
+        "global": "グローバル",
+        "last_seen": "最終閲覧日",
+        "mailstores": "メールストア",
+        "mobile_password": "モバイルパスワード",
+        "reset": "リセットする",
+        "reset_device": "デバイスリセット",
+        "s3_bucket": "S3バケット",
+        "select_an_external_volume": "外部ボリュームを選択する",
+        "service": "サービス",
+        "status_lbl": "状態",
+        "theme": "テーマ",
+        "title": "タイトル",
+        "update": "更新する",
+        "volume_server_name": "サーバー",
+        "wipe_device": "デバイスをワイプ",
+        "volume_next_button": "次へ"
     },
     "message": {
         "snackbar": {
@@ -956,7 +981,10 @@
         "keep_deleted_item_in_backup": "削除したアイテムをバックアップに保持する",
         "latency_high_threshold_ms": "レイテンシー高のしきい値（ms）",
         "latency_low_threshold_ms": "レイテンシー低のしきい値（ms）",
-        "metadata": "メタデータ"
+        "metadata": "メタデータ",
+        "bucket_list": "バケットリスト",
+        "external_volume": "外部ボリューム",
+        "kb": "KB"
     },
     "cos": {
         "calendar_options": "カレンダーのオプション",
@@ -1020,7 +1048,7 @@
         "session_idle_timeout": "セッションのアイドルタイムアウト",
         "shortest_allowed_duration_for_any_polling_interval": "任意のポーリング間隔の最小許容期間",
         "spam_message_lifetime": "迷惑メールメッセージの有効期間",
-        "status": "ステータス",
+        "status": "状態",
         "tagging": "タグ付け",
         "time_to_lockout_account": "アカウントをロックアウトする時間",
         "time_window_failed_logins_must_occur_to_lock_account": "アカウントをロックするためにログインの失敗が発生しなければならない時間枠：",
@@ -1104,7 +1132,9 @@
         "use_gal_to_auto_fill": "GALを使用して自動入力する",
         "use_ical_delegation_model_for_shared_calendars": "共有カレンダーにiCal委任モデルを使用する",
         "use_quickadd_dialog_in_creation": "作成時にQuickAddダイアログを使用する",
-        "yes_disable": "はい、無効にします"
+        "yes_disable": "はい、無効にします",
+        "dark_mode": "ダークモード",
+        "active_sync": "ActiveSync"
     },
     "locale": {
         "English": "英語",
@@ -1275,7 +1305,85 @@
         "serverName_volumes": "{{serverName}}ボリューム",
         "new": {
             "create_mailstores_volume": "メールストアボリュームを作成する"
+        },
+        "volume_header": {
+            "current": "現在",
+            "id": "ID",
+            "name": "名前",
+            "compression": "圧縮",
+            "path": "パス"
+        },
+        "server_list_header": {
+            "description": "説明",
+            "index": "インデックス",
+            "primary": "プライマリー",
+            "secondary": "セカンダリー",
+            "server": "サーバー"
+        },
+        "volume_allocation_list": {
+            "centralized": "一元化されました",
+            "external": "外部",
+            "local": "ローカル"
+        },
+        "volume_config_header": {
+            "name": "名前"
+        },
+        "volume_indexer_header": {
+            "current": "現在",
+            "id": "ID",
+            "name": "名前",
+            "path": "パス"
+        },
+        "volume_type": {
+            "index": "インデックス",
+            "primary": "プライマリー",
+            "secondary": "セカンダリー"
         }
     },
-    "click_new_bucket_button_to_create_new_one": "[新しいバケット]をクリックして新しいバケットを作成します。"
+    "click_new_bucket_button_to_create_new_one": "[新しいバケット]をクリックして新しいバケットを作成します。",
+    "hsm": {
+        "all": "すべて",
+        "allocation": "割り当て",
+        "apply_duplication_after_scheduledhsm": "スケジュールされたHSMの後に重複排除を適用する",
+        "contact": "連絡先",
+        "create_policy": "ポリシーを作成する",
+        "criteria": "基準",
+        "current": "現在",
+        "days": "日",
+        "delete": "削除する",
+        "destination_volume": "宛先ボリューム",
+        "details": "詳細",
+        "document": "ドキュメント",
+        "edit": "編集する",
+        "event": "イベント",
+        "gb": "GB",
+        "hours": "時間",
+        "hsm_policies_list": "HSMポリシーリスト",
+        "hsm_policy": "HSM ポリシー",
+        "indexes": "インデックス",
+        "items": "アイテム",
+        "kb": "KB",
+        "mb": "MB",
+        "message": "メッセージ",
+        "minimum_space_threshold": "最低空き容量",
+        "minutes": "分",
+        "months": "月",
+        "name": "名前",
+        "new_policy_summary": "新しいポリシーの概要",
+        "no": "いいえ",
+        "option": "オプション",
+        "parameters": "パラメーター",
+        "policy_settings": "ポリシー設定",
+        "schedule": "スケジュール",
+        "secondary": "セカンダリー",
+        "select_volumes": "ボリュームを選択してください",
+        "server": "サーバー",
+        "source_volume": "ソースボリューム",
+        "this_function_allow_save_disk_copy_msg": "この機能を使用すると、アイテムのコピーを1つ保存することで、ディスク容量を節約できます。",
+        "type": "種類",
+        "value": "価",
+        "volumes": "ボリューム",
+        "yes": "はい",
+        "primary": "プライマリー"
+    }
 }
