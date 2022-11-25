@@ -607,7 +607,10 @@
         "advanced_lbl": "एड्वान्स्ड",
         "allowed": "अनुमति है",
         "mailstores": "मेलस्टोर",
-        "mobile_password": "मोबाइल पासवर्ड"
+        "mobile_password": "मोबाइल पासवर्ड",
+        "failed": "विफल",
+        "remove_button": "हटाएँ",
+        "session_id": "सत्र आईडी"
     },
     "timezone": {
         "asia_tomsk": "{{value}} तोम्स्क",
@@ -1385,6 +1388,7 @@
         "value": "वैल्यू",
         "volumes": "वॉल्यूम",
         "yes": "हाँ",
-        "secondry": "सेकंडरी"
+        "secondry": "सेकंडरी",
+        "policy_name": "नीति का नाम"
     }
 }
