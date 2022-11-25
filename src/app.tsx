@@ -18,10 +18,15 @@ import {
 	postSoapFetchRequest,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
-	useAllConfig
+	useAllConfig,
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	useIsAdvanced
 } from '@zextras/carbonio-shell-ui';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
+import { Icon, IconButton } from '@zextras/carbonio-design-system';
+import styled from 'styled-components';
 import { MatomoProvider } from '@datapunt/matomo-tracker-react';
 import {
 	APPLICATION_LOG,
@@ -55,6 +60,7 @@ import { getAllServers } from './services/get-all-servers-service';
 import { useConfigStore } from './store/config/store';
 import { getAllConfig } from './services/get-all-config';
 import { useAuthIsAdvanced } from './store/auth-advanced/store';
+import SvgBackupOutline from './icons/outline/BackupOutline';
 import { useBucketServersListStore } from './store/bucket-server-list/store';
 import MatomoTracker from './matomo-tracker';
 
@@ -68,13 +74,19 @@ const AppView: FC = (props) => (
 	</MatomoProvider>
 );
 
+const PrimaryBarIconButton = styled(IconButton)`
+	&:hover {
+		background: transparent;
+	}
+`;
+
 const App: FC = () => {
 	const [t] = useTranslation();
 	const history = useHistory();
 	const setServerList = useServerStore((state) => state.setServerList);
 	const setGlobalConfig = useGlobalConfigStore((state) => state.setGlobalConfig);
 	const setBackupModuleEnable = useBackupModuleStore((state) => state.setBackupModuleEnable);
-	const setIsAdvavanced = useAuthIsAdvanced((state) => state.setIsAdvavanced);
+	const setIsAdvanced = useAuthIsAdvanced((state) => state.setIsAdvanced);
 	const setBackupServerList = useBackupModuleStore((state) => state.setBackupServerList);
 	const { setAllServersList, setVolumeList } = useBucketServersListStore((state) => state);
 	const { config, setConfig } = useConfigStore((state) => state);
@@ -82,6 +94,7 @@ const App: FC = () => {
 		(state) => state.setGlobalCarbonioSendAnalytics
 	);
 	const allConfig = useAllConfig();
+	const isAdvanced = useIsAdvanced();
 
 	useEffect(() => {
 		const sendAnalytics = config.filter((items) => items.n === CARBONIO_SEND_ANALYTICS)[0]
@@ -96,6 +109,13 @@ const App: FC = () => {
 			setConfig(allConfig);
 		}
 	}, [allConfig, setConfig]);
+
+	useEffect(() => {
+		if (isAdvanced) {
+			setIsAdvanced(isAdvanced);
+		}
+	}, [isAdvanced, setIsAdvanced]);
+
 	const managementSection = useMemo(
 		() => ({
 			id: MANAGE_APP_ID,
@@ -365,6 +385,17 @@ const App: FC = () => {
 		[subscriptionTooltipItems]
 	);
 
+	const backupPrimaryBar: FC = useCallback(
+		() => (
+			<PrimaryBarIconButton
+				icon={SvgBackupOutline}
+				size="large"
+				onClick={(): void => history.push(`/${SERVICES_ROUTE_ID}/${BACKUP_ROUTE_ID}`)}
+			/>
+		),
+		[history]
+	);
+
 	useEffect(() => {
 		addRoute({
 			route: DASHBOARD,
@@ -447,7 +478,8 @@ const App: FC = () => {
 			position: 1,
 			visible: true,
 			label: t('label.backup', 'Backup'),
-			primaryBar: 'HistoryOutline',
+			// primaryBar: 'HistoryOutline',
+			primaryBar: backupPrimaryBar,
 			appView: AppView,
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore
@@ -501,7 +533,8 @@ const App: FC = () => {
 		DomainTooltipView,
 		StorageTooltipView,
 		SubscriptionTooltipView,
-		logAndQueuesSection
+		logAndQueuesSection,
+		backupPrimaryBar
 	]);
 
 	useEffect(() => {
@@ -590,23 +623,6 @@ const App: FC = () => {
 	useEffect(() => {
 		getAllServersRequest();
 	}, [getAllServersRequest]);
-
-	useEffect(() => {
-		const hostname = window?.location?.hostname;
-		const protocol = window?.location?.protocol;
-		fetch(`${protocol}//${hostname}/zx/auth/supported`)
-			// eslint-disable-next-line consistent-return
-			.then((res) => {
-				if (res.status === 200) {
-					setIsAdvavanced(true);
-					return res.json();
-				}
-				setIsAdvavanced(false);
-			})
-			.catch(() => {
-				setIsAdvavanced(false);
-			});
-	}, [setIsAdvavanced]);
 
 	return null;
 };

@@ -869,7 +869,7 @@ export const BucketTypeItems = (t: TFunction): Array<{ value?: string; label: st
 	},
 	{
 		label: t('buckets.s3_types.custom_s3', 'Custom S3'),
-		value: 'CustomS3'
+		value: 'Custom_S3'
 	},
 	{
 		label: t('buckets.s3_types.emc_s3', 'EMC S3'),
@@ -1504,6 +1504,11 @@ export const isValidLdapBaseDN = (basedn: string): boolean => {
 	const reqex =
 		/(?:(?<cn>CN=(?<name>[^,]*)),)?(?:(?<path>(?:(?:CN|OU)=[^,]+,?)+),)?(?<domain>(?:DC=[^,]+,?)+)$/gi;
 	return reqex.test(basedn);
+};
+
+export const isValidHttpsUrl = (url: string): boolean => {
+	const reqex = /^(https:\/\/)[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/;
+	return reqex.test(url);
 };
 
 export const conversationGroupBy = (t: TFunction): Array<{ value?: string; label: string }> => [

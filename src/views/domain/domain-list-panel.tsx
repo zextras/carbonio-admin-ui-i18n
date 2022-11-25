@@ -22,11 +22,13 @@ import { debounce } from 'lodash';
 import { getDomainList } from '../../services/search-domain-service';
 import {
 	ACCOUNTS,
+	ACTIVE_SYNC,
 	AUTHENTICATION,
 	DOMAINS_ROUTE_ID,
 	GAL,
 	GENERAL_INFORMATION,
 	GENERAL_SETTINGS,
+	GLOBAL_THEME_ROUTE,
 	MAILBOX_QUOTA,
 	MAILING_LIST,
 	MANAGE_APP_ID,
@@ -34,6 +36,7 @@ import {
 	RESOURCES,
 	RESTORE_ACCOUNT,
 	RESTORE_DELETED_EMAIL,
+	THEME,
 	VIRTUAL_HOSTS
 } from '../../constants';
 import { useDomainStore } from '../../store/domain/store';
@@ -42,6 +45,7 @@ import ListItems from '../list/list-items';
 import { useBackupModuleStore } from '../../store/backup-module/store';
 import MatomoTracker from '../../matomo-tracker';
 import { useGlobalConfigStore } from '../../store/global-config/store';
+import GlobalListPanel from './global-list-panel';
 
 const SelectItem = styled(Row)``;
 
@@ -142,12 +146,19 @@ const DomainListPanel: FC = () => {
 			if (selectedOperationItem) {
 				globalCarbonioSendAnalytics &&
 					matomo.trackEvent('trackViewPage', `${selectedOperationItem}`);
-				replaceHistory(`/${domainId}/${selectedOperationItem}`);
+				if (selectedOperationItem === GLOBAL_THEME_ROUTE) {
+					replaceHistory(`/${selectedOperationItem}`);
+				} else {
+					replaceHistory(`/${domainId}/${selectedOperationItem}`);
+				}
 			} else {
 				globalCarbonioSendAnalytics &&
 					matomo.trackEvent('trackViewPage', `${selectedOperationItem}`);
 				replaceHistory(`/${domainId}/${GENERAL_SETTINGS}`);
 			}
+		} else if (selectedOperationItem) {
+			globalCarbonioSendAnalytics && matomo.trackEvent('trackViewPage', `${selectedOperationItem}`);
+			replaceHistory(`/${selectedOperationItem}`);
 		}
 	}, [isDomainSelect, domainId, selectedOperationItem, matomo, globalCarbonioSendAnalytics]);
 
@@ -182,6 +193,11 @@ const DomainListPanel: FC = () => {
 				id: MAILBOX_QUOTA,
 				name: t('label.mailbox_quota', 'Mailbox Quota'),
 				isSelected: isDomainSelect
+			},
+			{
+				id: THEME,
+				name: t('label.theme', 'Theme'),
+				isSelected: isDomainSelect
 			}
 		],
 		[t, isDomainSelect]
@@ -208,13 +224,13 @@ const DomainListPanel: FC = () => {
 				id: ADMIN_DELEGATES,
 				name: t('label.admin_delegates', 'Admin Delegates'),
 				isSelected: isDomainSelect
-			}, 
+			}, */
 			{
 				id: ACTIVE_SYNC,
 				name: t('label.active_sync', 'ActiveSync'),
 				isSelected: isDomainSelect
 			},
-			{
+			/*	{
 				id: ACCOUNT_SCAN,
 				name: t('label.account_scan', 'AccountScan'),
 				isSelected: isDomainSelect
@@ -236,6 +252,17 @@ const DomainListPanel: FC = () => {
 			} */
 		],
 		[t, isDomainSelect]
+	);
+
+	const globalOptionItems = useMemo(
+		() => [
+			{
+				id: GLOBAL_THEME_ROUTE,
+				name: t('label.theme', 'Theme'),
+				isSelected: true
+			}
+		],
+		[t]
 	);
 
 	const manageOptions = useMemo(
@@ -318,7 +345,12 @@ const DomainListPanel: FC = () => {
 			background="gray5"
 			style={{ overflow: 'auto', borderTop: '1px solid #FFFFFF' }}
 		>
-			<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%">
+			<GlobalListPanel
+				globalOptionItems={globalOptionItems}
+				selectedOperationItem={selectedOperationItem}
+				setSelectedOperationItem={setSelectedOperationItem}
+			/>
+			<Row takeAvwidth="fill" mainAlignment="flex-start" width="100%" padding={{ top: 'large' }}>
 				<Dropdown
 					items={items}
 					placement="bottom-start"

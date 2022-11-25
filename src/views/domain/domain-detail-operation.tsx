@@ -18,7 +18,9 @@ import {
 	MAILING_LIST,
 	RESOURCES,
 	RESTORE_ACCOUNT,
-	RESTORE_DELETED_EMAIL
+	RESTORE_DELETED_EMAIL,
+	ACTIVE_SYNC,
+	THEME
 } from '../../constants';
 import { getDomainInformation } from '../../services/domain-information-service';
 import { searchDirectory } from '../../services/search-directory-service';
@@ -31,6 +33,8 @@ import { useDomainStore } from '../../store/domain/store';
 import DomainMailingList from './manange/mailing-list/domain-mailing-list';
 import DomainResources from './manange/resources/domain-resources';
 import RestoreAccount from './manange/restore-delete-account/restore-delete-account';
+import ActiveSync from './manange/active-sync/active-sync';
+import DomainTheme from './details/domain-theme';
 
 const DomainOperations: FC = () => {
 	const [t] = useTranslation();
@@ -86,6 +90,8 @@ const DomainOperations: FC = () => {
 						return <DomainVirtualHosts />;
 					case MAILBOX_QUOTA:
 						return <DomainMailboxQuotaSetting />;
+					case THEME:
+						return <DomainTheme />;
 					case ACCOUNTS:
 						return <ManageAccounts />;
 					case MAILING_LIST:
@@ -94,6 +100,8 @@ const DomainOperations: FC = () => {
 						return <DomainResources />;
 					case RESTORE_ACCOUNT:
 						return <RestoreAccount />;
+					case ACTIVE_SYNC:
+						return <ActiveSync />;
 					default:
 						return null;
 				}

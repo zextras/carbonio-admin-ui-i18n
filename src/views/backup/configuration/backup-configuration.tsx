@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
+import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import {
 	Container,
@@ -14,7 +14,8 @@ import {
 	Switch,
 	Input,
 	SnackbarManagerContext,
-	Padding
+	Padding,
+	Select
 } from '@zextras/carbonio-design-system';
 import {
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -28,11 +29,22 @@ import {
 	fetchExternalSoap
 } from '@zextras/carbonio-shell-ui';
 import { useParams } from 'react-router-dom';
+import { isEmpty } from 'lodash';
 import ListRow from '../../list/list-row';
 import { useServerStore } from '../../../store/server/store';
 import { updateBackup } from '../../../services/update-backup';
-import { SERVER } from '../../../constants';
+import {
+	LOCAL_VALUE,
+	MANAGE_EXTERNAL_VOLUME,
+	MOUNTPOINT,
+	MOVE_TO_EXTERNAL_BUCKET,
+	MOVE_TO_LOCAL_MOUNT_POINT,
+	S3,
+	S3_BUCKET,
+	SERVER
+} from '../../../constants';
 import { RouteLeavingGuard } from '../../ui-extras/nav-guard';
+import { fetchSoap } from '../../../services/bucket-service';
 
 const BackupConfiguration: FC = () => {
 	const { operation, server }: { operation: string; server: string } = useParams();
@@ -60,7 +72,78 @@ const BackupConfiguration: FC = () => {
 	const [isExternalVolumeRequestRunning, setIsExternalVolumeRequestRunning] =
 		useState<boolean>(false);
 	const [isSaveRequestInProgress, setIsSaveRequestInProgress] = useState<boolean>(false);
+	const [isManageExternalVolumeEnable, setIsManageExternalVolumeEnable] = useState<boolean>(false);
+	const [isBackArchivingStoreEmpty, setIsBackArchivingStoreEmpty] = useState<boolean>(false);
+	const [isShowSetExternalVolume, setIsShowSetExternalVolume] = useState<boolean>(false);
+	const [bucketList, setBucketList] = useState<Array<any>>([]);
+	const [backupArchivingStore, setBackupArchivingStore] = useState<any>({});
 
+	const [manageExternalVolumeType, setManageExternalVolumeType] = useState<string>('');
+	const [manageExternalVolumeConfiguration, setManageExternalVolumeConfiguration] = useState<any>(
+		{}
+	);
+	const [manageExternalVolumeBucketList, setManageExternalVolumeBucketList] = useState<any>([]);
+	const [manageExternalVolumeLocalMountpoint, setManageExternalVolumeLocalMountpoint] =
+		useState<string>('');
+	const [manageExternalVolumeNewLocalMountpoint, setManageExternalVolumeNewLocalMountpoint] =
+		useState<string>('');
+	const [rootVolumePath, setRootVolumePath] = useState<string>('');
+
+	const destinationOptions: any[] = useMemo(
+		() => [
+			{
+				label: t(
+					'label.manage_external_volume_and_move_all',
+					'MANAGE EXTERNAL VOLUME and Move All Items to Local Path'
+				),
+				value: MANAGE_EXTERNAL_VOLUME
+			},
+			{
+				label: t('label.move_item_to_an_external_bucket', 'Move Items to an External Bucket'),
+				value: MOVE_TO_EXTERNAL_BUCKET
+			},
+			{
+				label: t('label.move_item_to_a_local_mountpoint', 'Move Items to a Local Mountpoint'),
+				value: MOVE_TO_LOCAL_MOUNT_POINT
+			}
+		],
+		[t]
+	);
+
+	const externalVolumeOptions: any[] = useMemo(
+		() => [
+			{
+				label: t('label.mountpoint', 'Mountpoint'),
+				value: MOUNTPOINT
+			},
+			{
+				label: t('label.s3_bucket', 'S3 Bucket'),
+				value: S3_BUCKET
+			}
+		],
+		[t]
+	);
+
+	const [externalVolume, setExternalVolume] = useState<any>(externalVolumeOptions[0]);
+	const [destinationSelected, setDestinationSelected] = useState<any>(destinationOptions[0]);
+	const [bucketConfiguration, setBucketConfiguration] = useState<any>([]);
+	const [bucketListOption, setBucketListOption] = useState<Array<any>>([]);
+
+	const onDestinationChange = useCallback(
+		(v: any): any => {
+			const it = destinationOptions.find((item: any) => item.value === v);
+			setDestinationSelected(it);
+		},
+		[destinationOptions]
+	);
+
+	const onExternalVolumeChange = useCallback(
+		(v: any): any => {
+			const it = externalVolumeOptions.find((item: any) => item.value === v);
+			setExternalVolume(it);
+		},
+		[externalVolumeOptions]
+	);
 	useEffect(() => {
 		if (allServers && allServers.length > 0) {
 			const selectedServer = allServers.find((serverItem: any) => serverItem?.name === server);
@@ -175,6 +258,17 @@ const BackupConfiguration: FC = () => {
 									currentBackupObject.keepDeletedAccountsInBackup = value;
 								} else {
 									currentBackupObject.keepDeletedAccountsInBackup = 0;
+								}
+							}
+
+							if (attributes?.backupArchivingStore) {
+								const value = attributes?.backupArchivingStore?.value;
+								if (isEmpty(value)) {
+									setBackupArchivingStore({});
+									setIsBackArchivingStoreEmpty(true);
+								} else {
+									setBackupArchivingStore(value);
+									setIsBackArchivingStoreEmpty(false);
 								}
 							}
 						}
@@ -560,33 +654,215 @@ const BackupConfiguration: FC = () => {
 			});
 	}, [server, createSnackbar, t]);
 
-	const onBackupExternalVolume = useCallback(() => {
-		setIsExternalVolumeRequestRunning(true);
-		fetchExternalSoap(`/service/extension/zextras_admin/backup/migrateBackupVolume`, {
-			targetServers: [server],
-			backup_volume_decommission: true,
-			volumeRootPath: backupDestPath,
-			useInfrequentAccess: true,
-			infrequentAcccessThreshold: 0,
-			useIntelligentTiering: true
-		})
-			.then((res: any) => {
-				setIsExternalVolumeRequestRunning(false);
+	const onBackupExternalVolume = useCallback(
+		(body) => {
+			setIsExternalVolumeRequestRunning(true);
+			fetchExternalSoap(`/service/extension/zextras_admin/backup/migrateBackupVolume`, {
+				...body
 			})
-			.catch((error: any) => {
-				setIsExternalVolumeRequestRunning(false);
-				createSnackbar({
-					key: 'error',
-					type: 'error',
-					label: error
-						? error?.error
-						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
-					autoHideTimeout: 3000,
-					hideButton: true,
-					replace: true
+				.then((res: any) => {
+					setIsExternalVolumeRequestRunning(false);
+					if (res?.error && res?.error?.details) {
+						createSnackbar({
+							key: 'error',
+							type: 'error',
+							label: res?.error
+								? res?.error?.message || res?.error?.details?.cause
+								: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+							autoHideTimeout: 3000,
+							hideButton: true,
+							replace: true
+						});
+					} else {
+						const selectedServer = allServers.find(
+							(serverItem: any) => serverItem?.name === server
+						);
+						getSoapFetchRequest(
+							`/service/extension/zextras_admin/core/getServer/${selectedServer?.id}?module=zxbackup`
+						).then((data: any) => {
+							if (data && data?.attributes) {
+								const attributes = data?.attributes;
+								if (attributes?.backupArchivingStore) {
+									const value = attributes?.backupArchivingStore?.value;
+									if (isEmpty(value)) {
+										setBackupArchivingStore({});
+										setIsBackArchivingStoreEmpty(true);
+									} else {
+										setBackupArchivingStore(value);
+										setIsBackArchivingStoreEmpty(false);
+									}
+								}
+							}
+						});
+						setIsShowSetExternalVolume(false);
+						setIsManageExternalVolumeEnable(false);
+						createSnackbar({
+							key: 'info',
+							type: 'info',
+							label: t('label.operation_now_in_queue', 'The operation is now in the queue'),
+							autoHideTimeout: 3000,
+							hideButton: true,
+							replace: true
+						});
+					}
+				})
+				.catch((error: any) => {
+					setIsExternalVolumeRequestRunning(false);
+					createSnackbar({
+						key: 'error',
+						type: 'error',
+						label: error
+							? error?.error
+							: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+				});
+		},
+		[createSnackbar, t, server, allServers]
+	);
+
+	const getAllBuckets = useCallback(() => {
+		fetchSoap('zextras', {
+			_jsns: 'urn:zimbraAdmin',
+			module: 'ZxCore',
+			action: 'listBuckets',
+			type: 'all',
+			targetServer: server,
+			showSecrets: true
+		}).then((res: any) => {
+			const response = JSON.parse(res.Body.response.content);
+			if (response.ok) {
+				setBucketList(response.response.values);
+			} else {
+				setBucketList([]);
+			}
+		});
+	}, [server]);
+
+	useEffect(() => {
+		getAllBuckets();
+	}, [getAllBuckets]);
+
+	useEffect(() => {
+		if (bucketList.length > 0) {
+			const allOptions: any[] = [];
+			bucketList.forEach((item: any) => {
+				allOptions.push({
+					label: `${item?.storeType} | ${item?.bucketName}`,
+					value: item?.uuid
 				});
 			});
-	}, [server, createSnackbar, t, backupDestPath]);
+			setBucketListOption(allOptions);
+			if (allOptions.length > 0) {
+				setBucketConfiguration(allOptions[0]);
+				setManageExternalVolumeBucketList(allOptions[0]);
+			}
+		}
+	}, [bucketList]);
+
+	const onManageExternalVolumeConfigurationChange = useCallback(
+		(v: any): any => {
+			if (bucketListOption.length > 0) {
+				const it = bucketListOption.find((item: any) => item.value === v);
+				setManageExternalVolumeBucketList(it);
+			}
+		},
+		[bucketListOption]
+	);
+
+	const onBucketConfigurationChange = useCallback(
+		(v: any): any => {
+			if (bucketListOption.length > 0) {
+				const it = bucketListOption.find((item: any) => item.value === v);
+				setBucketConfiguration(it);
+			}
+		},
+		[bucketListOption]
+	);
+
+	const onSaveSetExternal = useCallback(() => {
+		const body: any = {
+			storeType: externalVolume?.value === MOUNTPOINT ? LOCAL_VALUE : S3,
+			volumeRootPath: externalVolume?.value === MOUNTPOINT ? rootVolumePath : '',
+			bucketConfigurationId: externalVolume?.value === MOUNTPOINT ? '' : bucketConfiguration?.value,
+			targetServers: [server]
+		};
+		if (externalVolume?.value === S3_BUCKET) {
+			body.useInfrequentAccess = true;
+			body.infrequentAcccessThreshold = 0;
+			body.useIntelligentTiering = true;
+		}
+		onBackupExternalVolume(body);
+	}, [
+		server,
+		externalVolume?.value,
+		bucketConfiguration?.value,
+		onBackupExternalVolume,
+		rootVolumePath
+	]);
+
+	useEffect(() => {
+		if (!isEmpty(backupArchivingStore)) {
+			if (backupArchivingStore?.storeType) {
+				setManageExternalVolumeType(backupArchivingStore?.storeType);
+			}
+			if (backupArchivingStore?.volumeRootPath) {
+				setManageExternalVolumeLocalMountpoint(backupArchivingStore?.volumeRootPath);
+			}
+		}
+		if (
+			!isEmpty(backupArchivingStore) &&
+			backupArchivingStore?.bucketConfigurationId &&
+			bucketList.length > 0
+		) {
+			const bucket = bucketList.find(
+				(item: any) => item?.uuid === backupArchivingStore?.bucketConfigurationId
+			);
+			if (bucket) {
+				const name = `${bucket?.storeType} | ${bucket?.bucketName}`;
+				setManageExternalVolumeConfiguration({
+					label: name,
+					value: bucket?.uuid
+				});
+			}
+		}
+	}, [backupArchivingStore, bucketList]);
+
+	const onSaveManageExternalVolume = useCallback(() => {
+		const body: any = {};
+		if (isManageExternalVolumeEnable && destinationSelected?.value === MANAGE_EXTERNAL_VOLUME) {
+			body.storeType = 'default';
+			body.backup_volume_decommission = true;
+		} else if (
+			isManageExternalVolumeEnable &&
+			destinationSelected?.value === MOVE_TO_EXTERNAL_BUCKET
+		) {
+			body.bucketConfigurationId = manageExternalVolumeBucketList?.value;
+			body.storeType = 'S3';
+		} else if (
+			isManageExternalVolumeEnable &&
+			destinationSelected?.value === MOVE_TO_LOCAL_MOUNT_POINT
+		) {
+			body.volumeRootPath = manageExternalVolumeNewLocalMountpoint;
+			body.storeType = 'LOCAL';
+		}
+		body.targetServers = [server];
+		onBackupExternalVolume(body);
+	}, [
+		isManageExternalVolumeEnable,
+		destinationSelected?.value,
+		manageExternalVolumeBucketList?.value,
+		onBackupExternalVolume,
+		manageExternalVolumeNewLocalMountpoint,
+		server
+	]);
+
+	const isSetManageExternalButtonVisible = useMemo(
+		() => isManageExternalVolumeEnable || isShowSetExternalVolume,
+		[isManageExternalVolumeEnable, isShowSetExternalVolume]
+	);
 
 	return (
 		<Container mainAlignment="flex-start" background="gray6">
@@ -649,7 +925,7 @@ const BackupConfiguration: FC = () => {
 					<Container
 						mainAlignment="flex-end"
 						crossAlignment="flex-end"
-						padding={{ top: 'medium' }}
+						padding={{ top: 'large' }}
 						height="fit"
 						orientation="horizontal"
 					>
@@ -766,20 +1042,203 @@ const BackupConfiguration: FC = () => {
 						</Container>
 					</ListRow>
 
-					<ListRow>
-						<Container padding={{ top: 'large' }}>
+					{!isBackArchivingStoreEmpty && (
+						<Container>
+							<ListRow>
+								<Container padding={{ top: 'large' }}>
+									<Input
+										label={t('backup.external_volume', 'External Volume')}
+										value={manageExternalVolumeType}
+										background="gray5"
+										readOnly
+									/>
+								</Container>
+							</ListRow>
+							<ListRow>
+								<Container padding={{ top: 'large', bottom: 'large' }}>
+									<Input
+										label={t('backup.bucket_configuration', 'Bucket Configuration')}
+										value={
+											manageExternalVolumeType.startsWith('LOCAL')
+												? manageExternalVolumeLocalMountpoint
+												: manageExternalVolumeConfiguration?.label
+										}
+										background="gray5"
+										readOnly
+									/>
+								</Container>
+							</ListRow>
+						</Container>
+					)}
+
+					{isShowSetExternalVolume && (
+						<ListRow>
+							<Container padding={{ top: 'large', bottom: 'large' }}>
+								<Select
+									items={externalVolumeOptions}
+									background="gray5"
+									label={t('label.select_an_external_volume', 'Select an External Volume')}
+									showCheckbox={false}
+									onChange={onExternalVolumeChange}
+									selection={externalVolume}
+								/>
+							</Container>
+						</ListRow>
+					)}
+
+					{isShowSetExternalVolume && externalVolume?.value === MOUNTPOINT && (
+						<Container>
+							<Input
+								label={t('label.path', 'Path')}
+								value={rootVolumePath}
+								background="gray5"
+								onChange={(e: any): any => {
+									setRootVolumePath(e.target.value);
+								}}
+							/>
+						</Container>
+					)}
+					{isShowSetExternalVolume && externalVolume?.value === S3_BUCKET && (
+						<Select
+							items={bucketListOption}
+							background="gray5"
+							label={t('label.select_a_bucket_configuration', 'Select a Bucket Configuration')}
+							showCheckbox={false}
+							selection={bucketConfiguration}
+							onChange={onBucketConfigurationChange}
+						/>
+					)}
+
+					{isShowSetExternalVolume && (
+						<Row
+							padding={{ all: 'large' }}
+							width="50%"
+							mainAlignment="flex-end"
+							crossAlignment="flex-end"
+						>
+							<Padding right="small">
+								<Button
+									label={t('label.cancel', 'Cancel')}
+									color="secondary"
+									onClick={(): void => {
+										setIsShowSetExternalVolume(false);
+									}}
+								/>
+							</Padding>
+
 							<Button
-								type="outlined"
-								label={t('backup.set_external_volume', 'Set external volume')}
+								label={t('label.migrate', 'Migrate')}
 								color="primary"
-								icon="HardDriveOutline"
-								iconPlacement="right"
-								height={36}
-								width="100%"
-								disabled={!isBackupInitialized || isExternalVolumeRequestRunning}
-								onClick={onBackupExternalVolume}
+								onClick={onSaveSetExternal}
+								disabled={isExternalVolumeRequestRunning}
 								loading={isExternalVolumeRequestRunning}
 							/>
+						</Row>
+					)}
+
+					{isManageExternalVolumeEnable && (
+						<ListRow>
+							<Container padding={{ bottom: 'large' }}>
+								<Select
+									items={destinationOptions}
+									background="gray5"
+									label={t('label.destination', 'Destination')}
+									showCheckbox={false}
+									onChange={onDestinationChange}
+									selection={destinationSelected}
+								/>
+							</Container>
+						</ListRow>
+					)}
+
+					{isManageExternalVolumeEnable && destinationSelected?.value === MOVE_TO_EXTERNAL_BUCKET && (
+						<Container>
+							<ListRow>
+								<Container padding={{ bottom: 'large' }}>
+									<Select
+										items={bucketListOption}
+										background="gray5"
+										label={t('backup.bucket_list', 'Buckets List')}
+										showCheckbox={false}
+										selection={bucketConfiguration}
+										onChange={onManageExternalVolumeConfigurationChange}
+									/>
+								</Container>
+							</ListRow>
+						</Container>
+					)}
+					{isManageExternalVolumeEnable &&
+						destinationSelected?.value === MOVE_TO_LOCAL_MOUNT_POINT && (
+							<Container>
+								<ListRow>
+									<Container padding={{ bottom: 'large' }}>
+										<Input
+											label={t('backup.local_mountpoint', 'Local Mountpoint')}
+											value={manageExternalVolumeNewLocalMountpoint}
+											background="gray5"
+											onChange={(e: any): any => {
+												setManageExternalVolumeNewLocalMountpoint(e.target.value);
+											}}
+										/>
+									</Container>
+								</ListRow>
+							</Container>
+						)}
+					{isManageExternalVolumeEnable && (
+						<Row width="100%">
+							<Container
+								padding={{ right: 'extrasmall' }}
+								mainAlignment="flex-start"
+								crossAlignment="flex-start"
+								width="50%"
+							>
+								<Button
+									label={t('label.cancel', 'Cancel')}
+									color="secondary"
+									width="100%"
+									onClick={(): void => {
+										setIsManageExternalVolumeEnable(false);
+									}}
+								/>
+							</Container>
+
+							<Button
+								label={t('label.migrate', 'Migrate')}
+								color="primary"
+								width="50%"
+								onClick={onSaveManageExternalVolume}
+								disabled={isExternalVolumeRequestRunning}
+								loading={isExternalVolumeRequestRunning}
+							/>
+						</Row>
+					)}
+					<ListRow>
+						<Container padding={{ top: 'large' }}>
+							{!isSetManageExternalButtonVisible && (
+								<Button
+									type="outlined"
+									label={
+										isBackArchivingStoreEmpty
+											? t('backup.set_external_volume', 'Set external volume')
+											: t('backup.manage_external_volume', 'Manage external volume')
+									}
+									color="primary"
+									icon="HardDriveOutline"
+									iconPlacement="right"
+									height={36}
+									width="100%"
+									disabled={!isBackupInitialized}
+									onClick={(): void => {
+										if (!isBackArchivingStoreEmpty) {
+											setIsManageExternalVolumeEnable(true);
+											setIsShowSetExternalVolume(false);
+										} else {
+											setIsShowSetExternalVolume(true);
+											setIsManageExternalVolumeEnable(false);
+										}
+									}}
+								/>
+							)}
 						</Container>
 					</ListRow>
 
