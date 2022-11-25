@@ -726,7 +726,10 @@
         "wipe_device": "Apparaat wissen",
         "advanced_lbl": "Geavanceerd",
         "allowed": "Toegelaten",
-        "global": "Globaal"
+        "global": "Globaal",
+        "failed": "Mislukt",
+        "remove_button": "VERWIJDEREN",
+        "session_id": "Sessie-ID"
     },
     "timezone": {
         "europe_belgrade": "{{value}} Belgrado, Bratislava, Boedapest, Ljubljana, Praag",
@@ -1386,6 +1389,7 @@
         "value": "Waarde",
         "volumes": "Volumes",
         "yes": "Ja",
-        "secondry": "Secundair"
+        "secondry": "Secundair",
+        "policy_name": "Beleidsnaam"
     }
 }
