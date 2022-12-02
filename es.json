@@ -739,7 +739,7 @@
         "remove_button": "REMOVER",
         "session_id": "ID de sesión",
         "admin_panel_theme_description": "En esta sección puedes personalizar el panel de administración con el logotipo e imagen de tu compañía.",
-        "aware_of_doing_device_factory_settings": "Soy consciente de lo que estoy haciendo, quiero reiniciarlo a los ajustes de fábrica ",
+        "aware_of_doing_device_factory_settings": "Quiero reiniciarlo a los ajustes de fábrica",
         "background_description": "Pega la URL de la imagen para la página de inicio de sesión. Utiliza un archivo JPG, con unas dimensiones de 560x1440 píxeles, 800 KB max.",
         "favicon_description": "Pega la URL del favicon para la página de inicio de sesión. Utiliza un archivo ICO, con tamaño de 16x16 pixels.",
         "logoff_from_every_device": "Cerrar sesión de cada dispositivo",
@@ -764,7 +764,7 @@
         "create_otp": "CREAR OTP",
         "create_otp_list_msg": "Puedes crear un nuevo OTP haciendo clic en el botón <bold>NUEVO OTP</bold> aquí arriba",
         "dark_mode": "Modo <bold>oscuro</bold>",
-        "can_not_receiver": "No se puede recibir",
+        "can_not_receiver": "No puede recibir",
         "delet_volume_header": "¿Borrar {{name}}?",
         "delete_content_is_current": "Estas tratando de borrar {{name}}. Este volumen está configurado como actual. Debes configurar un volumen diferente como actual antes de borrarlo.",
         "description_theme_note": "La descripción aparecerá en la tooltip de la pestaña del navegador",
@@ -777,7 +777,7 @@
         "favicon": "Favicon",
         "favicon_path": "Ruta de Favicon",
         "filter_by_device_type_account": "FIltrar por tipo de dispositivo, cuenta, estado",
-        "end_user_webapp": "Finalizar Webapp del usuario",
+        "end_user_webapp": "Usuario final Webapp",
         "image_path": "Ruta de la imagen",
         "ip": "IP",
         "light_mode": "Modo <bold>claro</bold>",
@@ -1295,7 +1295,7 @@
     "account": {
         "new": {
             "create_account_wizard": "Crear asistente de la cuenta",
-            "create_otp_wizard": "Crear asistente OTP"
+            "create_otp_wizard": "Crear OTP"
         }
     },
     "privacy": {
@@ -1508,7 +1508,7 @@
         "delete_hsm_policy": "¿Borrar política HSM?",
         "delete_hsm_policy_confirm_msg_1": "Si borras esta política HSM no podrás restaurarla. ¿Quieres borrar la política HSM?",
         "edit_hsm_policy_success": "Política HSM actualizada correctamente",
-        "editing_policy": "Editando política",
+        "editing_policy": "Editar política",
         "enable_scheduler": "Activar programador",
         "hsm_policy_correctly_deleted": "La política HSM fue borrada correctamente",
         "larger_size": "Más grande (tamaño)",
@@ -1525,7 +1525,7 @@
         "smaller_size": "Más pequeño (tamaño)",
         "smaller_size_than": "más pequeño que <bold>{{measure}} {{scale}}</bold>",
         "years": "Años",
-        "scheduling": "Programando",
+        "scheduling": "Programa",
         "volume_already_selected_in_destination": "El volumen ya ha sido seleccionado como volumen de destino",
         "volume_already_selected_in_source": "El volumen ya ha sido seleccionado como volumen de origen"
     },
