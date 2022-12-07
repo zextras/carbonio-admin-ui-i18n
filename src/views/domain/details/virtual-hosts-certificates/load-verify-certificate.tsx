@@ -107,36 +107,38 @@ const LoadAndVerifyCert: FC<any> = () => {
 
 	const verifyCertificateHandler = useCallback((): void => {
 		setVerifyBtnLoading(true);
-		// if (
-		// 	objDomainCertificate.content === '' ||
-		// 	objDomainCertificateCaChain.content === '' ||
-		// 	objDomainCertificatePrivateKey.content === ''
-		// ) {
-		// 	createSnackbar({
-		// 		key: 'error',
-		// 		type: 'error',
-		// 		label: t(
-		// 			'domain.certificate_content_error',
-		// 			'Domain certificate , CA Chain or Private key is invalid'
-		// 		),
-		// 		autoHideTimeout: 3000,
-		// 		hideButton: true,
-		// 		replace: true
-		// 	});
-		// } else {
-		soapFetch(`VerifyCertKey`, {
-			_jsns: 'urn:zimbraAdmin',
-			ca: objDomainCertificateCaChain.content,
-			cert: objDomainCertificate.content,
-			privkey: objDomainCertificatePrivateKey.content
-		}).then((data: any) => {
-			console.log('_dd responseData', data?.verifyRe);
-		});
-		// }
+		if (
+			objDomainCertificate.content === '' ||
+			objDomainCertificateCaChain.content === '' ||
+			objDomainCertificatePrivateKey.content === ''
+		) {
+			createSnackbar({
+				key: 'error',
+				type: 'error',
+				label: t(
+					'domain.certificate_content_error',
+					'Domain certificate , CA Chain or Private key is invalid'
+				),
+				autoHideTimeout: 3000,
+				hideButton: true,
+				replace: true
+			});
+		} else {
+			soapFetch(`VerifyCertKey`, {
+				_jsns: 'urn:zimbraAdmin',
+				ca: objDomainCertificateCaChain.content,
+				cert: objDomainCertificate.content,
+				privkey: objDomainCertificatePrivateKey.content
+			}).then((data: any) => {
+				console.log('_dd responseData', data?.verifyResult);
+			});
+		}
 	}, [
+		createSnackbar,
 		objDomainCertificate.content,
 		objDomainCertificateCaChain.content,
-		objDomainCertificatePrivateKey.content
+		objDomainCertificatePrivateKey.content,
+		t
 	]);
 
 	return (
@@ -246,7 +248,7 @@ const LoadAndVerifyCert: FC<any> = () => {
 				<ListRow>
 					<Padding vertical="large" horizontal="small" width="100%">
 						<Text weight="bold" size="medium">
-							{t('label.domain_certificate_ca_chain', 'Domain Certificate CA Chain')}
+							{t('label.domain_certificate_private_key', 'Domain Private Key')}
 						</Text>
 					</Padding>
 				</ListRow>
@@ -264,7 +266,7 @@ const LoadAndVerifyCert: FC<any> = () => {
 				<ListRow>
 					<Padding vertical="small" horizontal="small" width="100%">
 						<Input
-							label={t('label.load_your_private_file', 'Load your certificate file')}
+							label={t('label.load_your_private_file', 'Load your Domain Private Key')}
 							type="text"
 							backgroundColor="gray5"
 							value={objDomainCertificatePrivateKey.fileName || ''}
