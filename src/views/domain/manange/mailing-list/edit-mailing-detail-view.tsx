@@ -2071,6 +2071,37 @@ const EditMailingListView: FC<any> = ({
 						</Container>
 					)}
 				</ListRow>
+				{dlmTableRows.length === 0 && !selectedMailingList?.dynamic && (
+					<ListRow>
+						<Container
+							background="gray6"
+							height="fit-content"
+							mainAlignment="center"
+							crossAlignment="center"
+						>
+							<Padding value="57px 0 0 0" width="100%">
+								<Row takeAvwidth="fill" mainAlignment="center" width="100%">
+									<img src={helmetLogo} alt="logo" />
+								</Row>
+							</Padding>
+							<Padding vertical="extralarge" width="100%">
+								<Row takeAvwidth="fill" mainAlignment="center" width="100%">
+									<Text size="large" color="secondary" weight="regular">
+										{t('label.there_are_not_member_here', 'There aren’t members here.')}
+									</Text>
+								</Row>
+								<Row takeAvwidth="fill" mainAlignment="center" width="100%">
+									<Text size="large" color="secondary" weight="regular">
+										{t(
+											'label.search_for_user_and_clic_to_add',
+											'Search for a user and click on the ADD button.'
+										)}
+									</Text>
+								</Row>
+							</Padding>
+						</Container>
+					</ListRow>
+				)}
 				<ListRow>
 					{!selectedMailingList?.dynamic && (
 						<Container
