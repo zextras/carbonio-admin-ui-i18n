@@ -139,7 +139,11 @@ const NotificationDetail: FC<{
 				padding={{ right: 'extralarge', left: 'extralarge', bottom: 'extralarge' }}
 				wrap="nowrap"
 			>
-				{notification?.text}
+				<Container
+					height="calc(100vh - 400px)"
+					style={{ overflow: 'auto' }}
+					dangerouslySetInnerHTML={{ __html: notification?.text.replace(/(\r\n|\r|\n)/g, '<br>') }}
+				></Container>
 			</Row>
 		</Container>
 	);
