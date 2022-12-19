@@ -616,7 +616,8 @@
         "volumes": "Volumes",
         "yes": "Sim",
         "all": "Tudo",
-        "secondry": "Secundário"
+        "secondry": "Secundário",
+        "scheduling": "Programação"
     },
     "volume": {
         "server_list_header": {
