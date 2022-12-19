@@ -1520,7 +1520,7 @@
         "policy_criteria": "नीति मानदंड",
         "policy_has_been_coppied": "HSM नीति क्लिपबोर्ड पर कॉपी हो गई है",
         "previous_day_scale": "पिछला <bold>{{day}}</bold>{{scale}}?",
-        "scheduling": "शेड्यूल",
+        "scheduling": "समय सारिणी",
         "select_manually_destination_volumes": "गंतव्य वॉल्यूम खुद सिलेक्ट करें",
         "select_manually_source_volumes": "सोर्स वॉल्यूम खुद सिलेक्ट करें",
         "smaller_size": "छोटी (साइज़)",
