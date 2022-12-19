@@ -901,7 +901,7 @@
         "wipe_device": "Hapus Perangkat",
         "advanced_lbl": "Canggih",
         "reset": "Atur ulang",
-        "home": "Rumah",
+        "home": "",
         "failed": "Gagal",
         "remove_button": "HAPUS",
         "session_id": "ID Sesi",
