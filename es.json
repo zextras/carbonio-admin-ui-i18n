@@ -1525,7 +1525,7 @@
         "smaller_size": "Más pequeño (tamaño)",
         "smaller_size_than": "más pequeño que <bold>{{measure}} {{scale}}</bold>",
         "years": "Años",
-        "scheduling": "Programa",
+        "scheduling": "Agenda",
         "volume_already_selected_in_destination": "El volumen ya ha sido seleccionado como volumen de destino",
         "volume_already_selected_in_source": "El volumen ya ha sido seleccionado como volumen de origen"
     },
