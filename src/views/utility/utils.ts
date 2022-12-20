@@ -1682,3 +1682,9 @@ export const bytesToSize = (bytes: number): string => {
 	if (i === 0) return `${bytes} ${sizes[i]}`;
 	return `${(bytes / 1024 ** i).toFixed(1)} ${sizes[i]}`;
 };
+
+export const copyTextToClipboard = (text: string): void => {
+	if (navigator) {
+		navigator.clipboard.writeText(text);
+	}
+};

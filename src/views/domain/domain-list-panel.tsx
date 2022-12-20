@@ -94,17 +94,24 @@ const DomainListPanel: FC = () => {
 		getDomainLists('');
 	}, []);
 
-	useEffect(() => {
+	useMemo(() => {
 		if (domainInformation?.name) {
 			setSearchDomainName(domainInformation?.name);
 			setIsDomainSelect(true);
 			setIsDomainListExpand(false);
-			setSelectedOperationItem(GENERAL_SETTINGS);
+
 			if (domainInformation?.id) {
 				setDomainId(domainInformation?.id);
 			}
 		}
 	}, [domainInformation?.id, domainInformation?.name]);
+
+	useMemo(() => {
+		if (selectedOperationItem === '') {
+			const operationItem = locationService?.pathname.split('/').pop();
+			setSelectedOperationItem(operationItem || '');
+		}
+	}, [locationService?.pathname, selectedOperationItem]);
 
 	useEffect(() => {
 		if (
