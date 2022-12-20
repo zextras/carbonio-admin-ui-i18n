@@ -80,7 +80,7 @@ const DomainListPanel: FC = () => {
 
 	const getBackupModuleEnable = useBackupModuleStore((state) => state.backupModuleEnable);
 	const getDomainLists = (domainName: string): any => {
-		getDomainList(domainName).then((data) => {
+		getDomainList(domainName, 0).then((data) => {
 			const searchResponse: any = data;
 			if (!!searchResponse && searchResponse?.searchTotal > 0) {
 				setDomainList(searchResponse?.domain);

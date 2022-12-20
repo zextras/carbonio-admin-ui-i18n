@@ -34,6 +34,7 @@ import { modifyAccountRequest } from '../../../../../services/modify-account';
 import { setPasswordRequest } from '../../../../../services/set-password';
 import { renameAccountRequest } from '../../../../../services/rename-account';
 import { AccountContext } from '../account-context';
+import { getDomainList } from '../../../../../services/search-domain-service';
 
 // eslint-disable-next-line no-empty-pattern
 const EditAccount: FC<{
@@ -52,11 +53,38 @@ const EditAccount: FC<{
 	const { t } = useTranslation();
 	const createSnackbar = useSnackbar();
 	const domainName = useDomainStore((state) => state.domain?.name);
+	const domainList = useDomainStore((state) => state.domainList);
 	const [change, setChange] = useState('general');
 	const [click, setClick] = useState('');
 	const [isDirty, setIsDirty] = useState<boolean>(false);
 	const conext = useContext(AccountContext);
 	const { accountDetail, setAccountDetail, initAccountDetail, setInitAccountDetail } = conext;
+	const setDomainListStore = useDomainStore((state) => state.setDomainList);
+
+	const getDomainLists = useCallback(
+		(offset: number): any => {
+			getDomainList('', offset).then((data) => {
+				const searchResponse: any = data;
+				if (!!searchResponse && searchResponse?.searchTotal > 0) {
+					if (searchResponse?.domain?.length) {
+						setDomainListStore([...domainList, ...searchResponse.domain]);
+						if (searchResponse?.more) {
+							getDomainLists(offset + 50);
+						}
+					}
+				} else {
+					setDomainListStore([]);
+				}
+			});
+		},
+		[domainList, setDomainListStore]
+	);
+
+	useEffect(() => {
+		if (!domainList?.length) {
+			getDomainLists(0);
+		}
+	}, [domainList, getDomainLists]);
 
 	useEffect(() => {
 		const modifiedKeys: any = reduce(
