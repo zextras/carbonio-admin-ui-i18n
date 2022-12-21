@@ -18,23 +18,32 @@ import {
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { postSoapFetchRequest, soapFetch } from '@zextras/carbonio-shell-ui';
-import React, { FC, useCallback, useContext, useMemo, useState } from 'react';
+import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ICertificateContent } from '../../../../../types';
 import {
 	DOMAIN_CERTIFICATE,
 	DOMAIN_CERTIFICATE_CA_CHAIN,
-	DOMAIN_CERTIFICATE_PRIVATE_KEY
+	DOMAIN_CERTIFICATE_PRIVATE_KEY,
+	INVALID,
+	ZIMBRA_ID
 } from '../../../../constants';
+import { getDomainInformation } from '../../../../services/domain-information-service';
+import { modifyDomain } from '../../../../services/modify-domain-service';
+import { useDomainStore } from '../../../../store/domain/store';
 import Textarea from '../../../components/textarea';
 import ListRow from '../../../list/list-row';
+import { CertificateTypes } from '../../../utility/utils';
 
-const LoadAndVerifyCert: FC<any> = () => {
+const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizardSection }) => {
 	let fileReader: FileReader;
 	const { t } = useTranslation();
-	const [selectedCertType, setSelectedCertType] = useState<string>('');
+	const domainInformation: any = useDomainStore((state) => state.domain?.a);
+	const [selectedCertType, setSelectedCertType] = useState<any>();
 	const [verifyBtnLoading, setVerifyBtnLoading] = useState(false);
+	const [uploadBtnTgl, setUploadBtnTgl] = useState(false);
 	const createSnackbar: any = useContext(SnackbarManagerContext);
+	const certificateTypes = useMemo(() => CertificateTypes(t), [t]);
 	const [objDomainCertificate, setObjDomainCertificate] = useState<ICertificateContent>({
 		fileName: '',
 		content: ''
@@ -50,23 +59,6 @@ const LoadAndVerifyCert: FC<any> = () => {
 			fileName: '',
 			content: ''
 		});
-
-	const certificateTypes = useMemo(
-		() => [
-			{
-				label: t(
-					'domain.certificate_type_use_letsencrypt',
-					'I want to use a Let’s Encrypt Certificate'
-				),
-				value: '1'
-			},
-			{
-				label: t('domain.certificate_type_use_custom', 'I want to use a Custom Certificate'),
-				value: '2'
-			}
-		],
-		[t]
-	);
 
 	const setStatesForFileContent = (fieldName: string, fileName: string, content: any): void => {
 		switch (fieldName) {
@@ -100,9 +92,11 @@ const LoadAndVerifyCert: FC<any> = () => {
 	const readFileContentHandler = (file: File, fieldName: string): any => {
 		fileReader = new FileReader();
 		fileReader.onload = (evt): any => {
+			console.log('__file', evt);
 			setStatesForFileContent(fieldName, file.name, evt.target?.result);
 		};
 		fileReader.readAsText(file);
+		setUploadBtnTgl(false);
 	};
 
 	const verifyCertificateHandler = useCallback((): void => {
@@ -126,11 +120,73 @@ const LoadAndVerifyCert: FC<any> = () => {
 		} else {
 			soapFetch(`VerifyCertKey`, {
 				_jsns: 'urn:zimbraAdmin',
-				ca: objDomainCertificateCaChain.content,
-				cert: objDomainCertificate.content,
-				privkey: objDomainCertificatePrivateKey.content
+				ca: objDomainCertificateCaChain.content.replaceAll('\r', ''),
+				cert: objDomainCertificate.content.replaceAll('\r', ''),
+				privkey: objDomainCertificatePrivateKey.content.replaceAll('\r', '')
 			}).then((data: any) => {
-				console.log('_dd responseData', data?.verifyResult);
+				console.log('__dd responseData', data?.verifyResult);
+				if (data?.verifyResult) {
+					createSnackbar({
+						key: 'success',
+						type: 'success',
+						label: t('domain.certificate_valid', `The certificate is valid`),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+					setVerifyBtnLoading(false);
+					setUploadBtnTgl(true);
+				} else if (!data?.verifyResult) {
+					createSnackbar({
+						key: 'warning',
+						type: 'warning',
+						label: t(
+							'domain.certificate_valid_but_either_expired_or_exists_non_trusted_CA',
+							`The certificate is valid but it's either expired or exists a non trusted CA`
+						),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+					setObjDomainCertificate({
+						content: '',
+						fileName: ''
+					});
+					setObjDomainCertificateCaChain({
+						content: '',
+						fileName: ''
+					});
+					setObjDomainCertificatePrivateKey({
+						content: '',
+						fileName: ''
+					});
+					setVerifyBtnLoading(false);
+				} else if (data?.verifyResult === INVALID) {
+					createSnackbar({
+						key: 'error',
+						type: 'error',
+						label: t(
+							'domain.certificate_invalid_error',
+							`The certificate is invalid , please try with other certificate`
+						),
+						autoHideTimeout: 3000,
+						hideButton: true,
+						replace: true
+					});
+					setObjDomainCertificate({
+						content: '',
+						fileName: ''
+					});
+					setObjDomainCertificateCaChain({
+						content: '',
+						fileName: ''
+					});
+					setObjDomainCertificatePrivateKey({
+						content: '',
+						fileName: ''
+					});
+					setVerifyBtnLoading(false);
+				}
 			});
 		}
 	}, [
@@ -140,6 +196,67 @@ const LoadAndVerifyCert: FC<any> = () => {
 		objDomainCertificatePrivateKey.content,
 		t
 	]);
+	console.log('__domainInformation', domainInformation);
+
+	const uploadClickHandler = (): any => {
+		const zimbraId = domainInformation.filter((item: any) => item.n === ZIMBRA_ID)[0]?._content;
+		const body: any = {};
+		const attributes: any[] = [];
+		body.id = zimbraId;
+		body._jsns = 'urn:zimbraAdmin';
+		attributes.push({
+			n: 'zimbraSSLCertificate',
+			_content: objDomainCertificate?.content
+		});
+		attributes.push({
+			n: 'zimbraSSLPrivateKey',
+			_content: objDomainCertificatePrivateKey?.content
+		});
+		body.a = attributes;
+		modifyDomain(body)
+			.then((data) => {
+				console.log('__data', data);
+				createSnackbar({
+					key: 'success',
+					type: 'success',
+					label: t('domain.certificate_saved', `The certificates have been saved`),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+				setToggleWizardSection(false);
+				soapFetch(`GetDomain`, {
+					_jsns: 'urn:zimbraAdmin',
+					attrs: 'zimbraSSLCertificate,zimbraSSLPrivateKey',
+					domain: {
+						by: 'name',
+						_content: data?.domain[0]?.name
+					}
+				}).then((res: any) => {
+					console.log('__res', res);
+				});
+				soapFetch(`GetCert`, {
+					_jsns: 'urn:zimbraAdmin',
+					server: zimbraId,
+					type: 'proxy',
+					option: 'comm'
+				}).then((res: any) => {
+					console.log('__data', res);
+				});
+			})
+			.catch((error) => {
+				createSnackbar({
+					key: 'error',
+					type: 'error',
+					label: error?.message
+						? error?.message
+						: t('label.something_wrong_error_msg', 'Something went wrong. Please try again.'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			});
+	};
 
 	return (
 		<Container padding={{ all: 'small' }}>
@@ -150,12 +267,9 @@ const LoadAndVerifyCert: FC<any> = () => {
 						background="gray5"
 						label={t('label.certificate_type', 'Certificate Type')}
 						onChange={(e: React.ChangeEvent<HTMLSelectElement>): void => {
-							setSelectedCertType(e.target?.value);
+							setSelectedCertType(e);
 						}}
-						defaultSelection={{
-							label: t('domain.certificate_type_use_custom', 'I want to use a Custom Certificate'),
-							value: '2'
-						}}
+						defaultSelection={certificateTypes[1]}
 						showCheckbox={false}
 					/>
 				</Padding>
@@ -191,7 +305,7 @@ const LoadAndVerifyCert: FC<any> = () => {
 					</Padding>
 					<Padding vertical="small" horizontal="small">
 						<FileLoader
-							label="LOAD FILE"
+							label={t('label.load_FILE', 'LOAD FILE')}
 							size="large"
 							type="outlined"
 							color="primary"
@@ -233,12 +347,12 @@ const LoadAndVerifyCert: FC<any> = () => {
 					</Padding>
 					<Padding vertical="small" horizontal="small">
 						<FileLoader
-							label="LOAD FILE"
+							label={t('label.load_FILE', 'LOAD FILE')}
 							size="large"
 							type="outlined"
 							color="primary"
 							onChange={(e: any): any =>
-								readFileContentHandler(e.target.files[0], 'domain_certificate_ca_chain')
+								readFileContentHandler(e.target.files[0], DOMAIN_CERTIFICATE_CA_CHAIN)
 							}
 						/>
 					</Padding>
@@ -275,12 +389,12 @@ const LoadAndVerifyCert: FC<any> = () => {
 					</Padding>
 					<Padding vertical="small" horizontal="small">
 						<FileLoader
-							label="LOAD FILE"
+							label={t('label.load_FILE', 'LOAD FILE')}
 							size="large"
 							type="outlined"
 							color="primary"
 							onChange={(e: any): any =>
-								readFileContentHandler(e.target.files[0], 'domain_certificate_private_key')
+								readFileContentHandler(e.target.files[0], DOMAIN_CERTIFICATE_PRIVATE_KEY)
 							}
 						/>
 					</Padding>
@@ -291,9 +405,14 @@ const LoadAndVerifyCert: FC<any> = () => {
 					<Padding vertical="large" horizontal="small" width="100%">
 						<Button
 							width="fill"
-							label={t('label.verify', 'Verify')}
-							onClick={verifyCertificateHandler}
+							label={
+								uploadBtnTgl
+									? t('label.want_to_use_this_certifiacte', 'I WANT TO USE THIS CERTIFICATE')
+									: t('label.verify', 'Verify')
+							}
+							onClick={uploadBtnTgl ? uploadClickHandler : verifyCertificateHandler}
 							loading={verifyBtnLoading}
+							type={uploadBtnTgl ? 'outlined' : 'default'}
 						/>
 					</Padding>
 				</ListRow>

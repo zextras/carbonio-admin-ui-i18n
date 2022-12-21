@@ -146,3 +146,4 @@ export const GLOBAL_THEME_ROUTE = 'global/theme';
 export const DOMAIN_CERTIFICATE = 'domain_certificate';
 export const DOMAIN_CERTIFICATE_CA_CHAIN = 'domain_certificate_ca_chain';
 export const DOMAIN_CERTIFICATE_PRIVATE_KEY = 'domain_certificate_private_key';
+export const INVALID = 'invalid';
