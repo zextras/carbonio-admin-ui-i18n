@@ -92,7 +92,6 @@ const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizar
 	const readFileContentHandler = (file: File, fieldName: string): any => {
 		fileReader = new FileReader();
 		fileReader.onload = (evt): any => {
-			console.log('__file', evt);
 			setStatesForFileContent(fieldName, file.name, evt.target?.result);
 		};
 		fileReader.readAsText(file);
@@ -124,7 +123,6 @@ const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizar
 				cert: objDomainCertificate.content.replaceAll('\r', ''),
 				privkey: objDomainCertificatePrivateKey.content.replaceAll('\r', '')
 			}).then((data: any) => {
-				console.log('__dd responseData', data?.verifyResult);
 				if (data?.verifyResult) {
 					createSnackbar({
 						key: 'success',
@@ -196,17 +194,19 @@ const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizar
 		objDomainCertificatePrivateKey.content,
 		t
 	]);
-	console.log('__domainInformation', domainInformation);
 
 	const uploadClickHandler = (): any => {
 		const zimbraId = domainInformation.filter((item: any) => item.n === ZIMBRA_ID)[0]?._content;
+		const concatedCertiFile = objDomainCertificate?.content.concat(
+			objDomainCertificateCaChain.content
+		);
 		const body: any = {};
 		const attributes: any[] = [];
 		body.id = zimbraId;
 		body._jsns = 'urn:zimbraAdmin';
 		attributes.push({
 			n: 'zimbraSSLCertificate',
-			_content: objDomainCertificate?.content
+			_content: concatedCertiFile
 		});
 		attributes.push({
 			n: 'zimbraSSLPrivateKey',
@@ -214,8 +214,7 @@ const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizar
 		});
 		body.a = attributes;
 		modifyDomain(body)
-			.then((data) => {
-				console.log('__data', data);
+			.then(() => {
 				createSnackbar({
 					key: 'success',
 					type: 'success',
@@ -225,24 +224,6 @@ const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizar
 					replace: true
 				});
 				setToggleWizardSection(false);
-				soapFetch(`GetDomain`, {
-					_jsns: 'urn:zimbraAdmin',
-					attrs: 'zimbraSSLCertificate,zimbraSSLPrivateKey',
-					domain: {
-						by: 'name',
-						_content: data?.domain[0]?.name
-					}
-				}).then((res: any) => {
-					console.log('__res', res);
-				});
-				soapFetch(`GetCert`, {
-					_jsns: 'urn:zimbraAdmin',
-					server: zimbraId,
-					type: 'proxy',
-					option: 'comm'
-				}).then((res: any) => {
-					console.log('__data', res);
-				});
 			})
 			.catch((error) => {
 				createSnackbar({
@@ -271,6 +252,8 @@ const LoadAndVerifyCert: FC<{ setToggleWizardSection: any }> = ({ setToggleWizar
 						}}
 						defaultSelection={certificateTypes[1]}
 						showCheckbox={false}
+						readOnly
+						disabled
 					/>
 				</Padding>
 			</ListRow>
