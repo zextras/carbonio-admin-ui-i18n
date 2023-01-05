@@ -697,7 +697,19 @@
         "yes_reset_the_device": "Evet, cihazı sıfırla",
         "yes_wipe_the_device": "Evet, Cihazı sil",
         "you_are_trying_reset_device": "Bir cihazı sıfırlamaya çalışıyorsunuz",
-        "you_are_trying_wipe_device": "Bir cihazı silmeye çalışıyorsunuz"
+        "you_are_trying_wipe_device": "Bir cihazı silmeye çalışıyorsunuz",
+        "bucket_create_button": "OLUŞTUR",
+        "bucket_delete_button": "SİL",
+        "bucket_notes": "Notlar",
+        "date": "Tarih",
+        "label": "Etiket",
+        "search_for_user_and_clic_to_add": "Bir kullanıcı arayın ve EKLE simgesine tıklayın.",
+        "there_are_no_owners": "Burada sahip yetkili kullanıcılar yok.",
+        "verify": "Doğrula",
+        "verify_certificate": "Doğrula",
+        "who_can_send_mails_to_list ": "Bu listeye kimler posta gönderebilir?",
+        "notifications": "Bildirimler",
+        "open": "Aç"
     },
     "timezone": {
         "asia_gaza": "{{value}} Gaza",
@@ -1231,7 +1243,8 @@
         "time_range": "Zaman Aralığı",
         "dark_mode": "Koyu Mod",
         "active_sync": "ActiveSync",
-        "activesync_remote_access": "ActiveSync uzaktan erişim"
+        "activesync_remote_access": "ActiveSync uzaktan erişim",
+        "chats": "Sohbetler"
     },
     "locale": {
         "English": "English",
@@ -1434,7 +1447,9 @@
         "select_email_otp": "Tek Kullanımlık Parola göndermek için e-posta adresi seçin veya yukarıdaki kodu kopyalayın",
         "send_the_otp_to": "Tek Kullanımlık Parola gönder",
         "send": "GÖNDER",
-        "activesync_remote_access": "ActiveSync uzaktan erişim"
+        "activesync_remote_access": "ActiveSync uzaktan erişim",
+        "Chats": "Sohbetler",
+        "domain": "Alan adı"
     },
     "connection": {
         "access_key": "Access Key",
@@ -1527,5 +1542,16 @@
         "years": "Yıl"
     },
     "select_bucket_or_create_new_bucket_helperText": "Bucket türü belirlememişsiniz. \n\t\t\t\t\t\t\t\t\tYeni oluşturmak için \"YENİ BUCKET\" tuşuna tıklayın...",
-    "welcome_to_carbonio_display_name": "Hoşgeldiniz {{adminName}}!"
+    "welcome_to_carbonio_display_name": "Hoşgeldiniz {{adminName}}!",
+    "dashboard": {
+        "carbonio": "Carbonio",
+        "description": "Açıklama"
+    },
+    "notification": {
+        "copy": "Kopyala",
+        "list": "Liste",
+        "manage": "Yönet",
+        "mark_as_read": "Okundu olarak işaretle",
+        "mark_as_unread": "Okunmadı olarak işaretle"
+    }
 }
