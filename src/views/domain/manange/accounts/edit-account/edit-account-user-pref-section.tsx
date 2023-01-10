@@ -354,7 +354,10 @@ const EditAccountUserPrefrencesSection: FC<{ signatureItems: any; signatureList:
 					<Switch
 						value={accountDetail?.zimbraPrefMailLocalDeliveryDisabled === 'TRUE'}
 						onClick={(): void => changeSwitchOption('zimbraPrefMailLocalDeliveryDisabled')}
-						label={t('account_details.cannot_check_for_less_than', `Cannot check for less than`)}
+						label={t(
+							'account_details.allow_user_check_minimum_interval',
+							'Allow the user to change the minimum checking interval'
+						)}
 					/>
 				</Row>
 				<Row width="32%" mainAlignment="flex-start">
@@ -461,8 +464,8 @@ const EditAccountUserPrefrencesSection: FC<{ signatureItems: any; signatureList:
 			<Row padding={{ top: 'large', left: 'large' }} width="100%" mainAlignment="space-between">
 				<Row width="48%" mainAlignment="flex-start">
 					<Switch
-						value={accountDetail?.zimbraPrefMailLocalDeliveryDisabled === 'TRUE'}
-						onClick={(): void => changeSwitchOption('zimbraPrefMailLocalDeliveryDisabled')}
+						value={accountDetail?.zimbraFeatureReadReceiptsEnabled === 'TRUE'}
+						onClick={(): void => changeSwitchOption('zimbraFeatureReadReceiptsEnabled')}
 						label={t('account_details.send_read_receipts', `Send read receipts`)}
 					/>
 				</Row>
