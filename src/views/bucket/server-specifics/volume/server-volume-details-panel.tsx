@@ -18,8 +18,10 @@ import {
 } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { soapFetch } from '@zextras/carbonio-shell-ui';
-import { fetchSoap } from '../../../../services/bucket-service';
 import { INDEXERES, PRIMARIES, SECONDARIES } from '../../../../constants';
+import { useAuthIsAdvanced } from '../../../../store/auth-advanced/store';
+import { useBucketServersListStore } from '../../../../store/bucket-server-list/store';
+import { useServerStore } from '../../../../store/server/store';
 
 const ServerVolumeDetailsPanel: FC<{
 	setToggleDetailPage: any;
@@ -46,6 +48,9 @@ const ServerVolumeDetailsPanel: FC<{
 }) => {
 	const { t } = useTranslation();
 	const createSnackbar = useSnackbar();
+	const serverList = useServerStore((state) => state?.serverList);
+	const serverName = useBucketServersListStore((state) => state?.volumeList)[0].name;
+	const isAdvanced = useAuthIsAdvanced((state) => state?.isAdvanced);
 	const [typeLabel, setTypeLabel] = useState('');
 	const [toggleSetAsBtnLabel, setToggleSetAsBtnLabel] = useState(
 		t('label.set_as_secondary_button', 'SET AS SECONDARY')
@@ -73,15 +78,8 @@ const ServerVolumeDetailsPanel: FC<{
 				} else if (response?.volume[0]?.type === 10) {
 					setTypeLabel(INDEXERES);
 				}
-				setDetailData({
-					name: response?.volume[0]?.name,
-					id: response?.volume[0]?.id,
-					type: response?.volume[0]?.type,
-					compressBlobs: response?.volume[0]?.compressBlobs,
-					isCurrent: response?.volume[0]?.isCurrent,
-					rootpath: response?.volume[0]?.rootpath,
-					compressionThreshold: response?.volume[0]?.compressionThreshold
-				});
+				const volData = response?.volume[0];
+				setDetailData(volData);
 			})
 			.catch((error) => {
 				createSnackbar({
@@ -96,13 +94,13 @@ const ServerVolumeDetailsPanel: FC<{
 				getAllVolumesRequest();
 			});
 	}, [
-		getAllVolumesRequest,
-		createSnackbar,
-		setDetailData,
-		setToggleDetailPage,
-		t,
 		volumeDetail?.id,
-		selectedServerId
+		selectedServerId,
+		setDetailData,
+		createSnackbar,
+		t,
+		setToggleDetailPage,
+		getAllVolumesRequest
 	]);
 
 	useEffect(() => {
@@ -178,7 +176,9 @@ const ServerVolumeDetailsPanel: FC<{
 					<Row mainAlignment="flex-start" crossAlignment="center" width="100%" height="auto">
 						<Row mainAlignment="flex-start" padding={{ all: 'large' }} takeAvailableSpace>
 							<Text size="extralarge" weight="bold">
-								{detailData.name} Details
+								{t('label.volume_detail_page_title', '{{message}} Details', {
+									message: detailData?.name
+								})}
 							</Text>
 						</Row>
 						<Row padding={{ horizontal: 'small' }}>
@@ -205,12 +205,12 @@ const ServerVolumeDetailsPanel: FC<{
 							height={36}
 							label=""
 							width={36}
-							style={{ padding: '8px 8px 8px 6px', display: 'block' }}
+							style={{ padding: '0.5rem 0.5rem 0.5rem 0.375rem', display: 'block' }}
 							onClick={(): void => {
 								setmodifyVolumeToggle(true);
 							}}
-							disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
-							loading={!detailData?.id || volumeDetail.id !== detailData?.id}
+							disabled={!detailData?.id || volumeDetail?.id !== detailData?.id}
+							loading={!detailData?.id || volumeDetail?.id !== detailData?.id}
 						/>
 					</Container>
 					<Container
@@ -288,8 +288,8 @@ const ServerVolumeDetailsPanel: FC<{
 											icon={toggleSetAsIcon}
 											iconPlacement="left"
 											color="primary"
-											disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
-											loading={!detailData?.id || volumeDetail.id !== detailData?.id}
+											disabled={!detailData?.id || volumeDetail?.id !== detailData?.id}
+											loading={!detailData?.id || volumeDetail?.id !== detailData?.id}
 											onClick={handleTypeToggleClick}
 										/>
 									</Row>
@@ -305,8 +305,8 @@ const ServerVolumeDetailsPanel: FC<{
 									color="error"
 									width="fill"
 									onClick={(): any => setOpen(true)}
-									disabled={!detailData?.id || volumeDetail.id !== detailData?.id}
-									loading={!detailData?.id || volumeDetail.id !== detailData?.id}
+									disabled={!detailData?.id || volumeDetail?.id !== detailData?.id}
+									loading={!detailData?.id || volumeDetail?.id !== detailData?.id}
 								/>
 							</Row>
 						</Container>

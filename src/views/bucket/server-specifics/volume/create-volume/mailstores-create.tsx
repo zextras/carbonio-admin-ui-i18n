@@ -34,7 +34,7 @@ const MailstoresCreate: FC<{
 }> = ({ onSelection, externalData, setCompleteLoading }) => {
 	const context = useContext(VolumeContext);
 	const { t } = useTranslation();
-	const isAdvanced = useAuthIsAdvanced((state) => state.isAdvanced);
+	const isAdvanced = useAuthIsAdvanced((state) => state?.isAdvanced);
 	const volTypeList = useMemo(() => volumeTypeList(t), [t]);
 	const volAllocationList = useMemo(() => volumeAllocationList(t), [t]);
 	const { volumeDetail, setVolumeDetail } = context;
@@ -61,9 +61,9 @@ const MailstoresCreate: FC<{
 
 	const changeVolName = useCallback(
 		(e) => {
-			setVolumeDetail((prev: object) => ({ ...prev, volumeName: e.target.value }));
-			onSelection({ volumeName: e.target.value }, true);
-			if (e.target.value !== '') {
+			setVolumeDetail((prev: object) => ({ ...prev, volumeName: e?.target?.value }));
+			onSelection({ volumeName: e?.target?.value }, true);
+			if (e?.target?.value !== '') {
 				setErrName(true);
 			} else {
 				setErrName(false);
@@ -73,9 +73,9 @@ const MailstoresCreate: FC<{
 	);
 	const changeVolPath = useCallback(
 		(e) => {
-			setVolumeDetail((prev: object) => ({ ...prev, path: e.target.value }));
-			onSelection({ path: e.target.value }, true);
-			if (e.target.value !== '') {
+			setVolumeDetail((prev: object) => ({ ...prev, path: e?.target?.value }));
+			onSelection({ path: e?.target?.value }, true);
+			if (e?.target?.value !== '') {
 				setErrPath(true);
 			} else {
 				setErrPath(false);
@@ -86,11 +86,11 @@ const MailstoresCreate: FC<{
 	const changeVolCompThresold = useCallback(
 		(e) => {
 			const regex = /^[0-9]*$/;
-			const result = regex.test(e.target.value);
+			const result = regex?.test(e?.target?.value);
 			if (result) {
-				setVolumeDetail((prev: object) => ({ ...prev, compressionThreshold: e.target.value }));
-				onSelection({ compressionThreshold: e.target.value }, true);
-				if (e.target.value !== '') {
+				setVolumeDetail((prev: object) => ({ ...prev, compressionThreshold: e?.target?.value }));
+				onSelection({ compressionThreshold: e?.target?.value }, true);
+				if (e?.target?.value !== '') {
 					setErrCompressionThreshold(true);
 				} else {
 					setErrCompressionThreshold(false);
@@ -163,8 +163,8 @@ const MailstoresCreate: FC<{
 				setVolumeDetail((prev: any) => ({ ...prev, volumeMain: EMPTY_TYPE_VALUE }));
 				onSelection({ volumeMain: EMPTY_TYPE_VALUE }, true);
 			}
-			const volumeTypeObject = volAllocationList.find(
-				(item: any) => item.value === volumeDetail?.volumeAllocation
+			const volumeTypeObject = volAllocationList?.find(
+				(item: any) => item?.value === volumeDetail?.volumeAllocation
 			);
 			setAllocation(volumeTypeObject);
 		}
@@ -225,8 +225,8 @@ const MailstoresCreate: FC<{
 							items={volTypeList}
 							background="gray5"
 							label={t('label.volume_type', 'Volume Type')}
-							defaultSelection={volTypeList.filter(
-								(items) => items.value === volumeDetail?.volumeMain
+							defaultSelection={volTypeList?.filter(
+								(items) => items?.value === volumeDetail?.volumeMain
 							)}
 							showCheckbox={false}
 							onChange={onVolMainChange}

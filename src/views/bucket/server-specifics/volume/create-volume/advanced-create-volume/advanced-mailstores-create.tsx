@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: AGPL-3.0-only
  */
 import React, { FC, useContext, useEffect, useMemo, useState } from 'react';
-import { Container, Row, Input, Padding, Text, Table } from '@zextras/carbonio-design-system';
+import { Container, Row, Input } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { volumeTypeList } from '../../../../../utility/utils';
 import { AdvancedVolumeContext } from './create-advanced-volume-context';
 import { DISABLED, ENABLED, NO, S3, YES } from '../../../../../../constants';
+import ListRow from '../../../../../list/list-row';
 // import logo from '../../../../../../assets/gardian.svg';
 
 // const VolumeCreateTable: FC<{
@@ -114,8 +115,8 @@ const AdvancedMailstoresCreate: FC<{
 	}, [advancedVolumeDetail, setCompleteLoading, volumeType]);
 
 	useEffect(() => {
-		const volumeTypeObject = volTypeList.find(
-			(item: any) => item.value === advancedVolumeDetail?.volumeMain
+		const volumeTypeObject = volTypeList?.find(
+			(item: any) => item?.value === advancedVolumeDetail?.volumeMain
 		)?.label;
 		setVolumeType(volumeTypeObject);
 	}, [advancedVolumeDetail?.volumeMain, volTypeList]);
@@ -155,34 +156,44 @@ const AdvancedMailstoresCreate: FC<{
 						readOnly
 					/>
 				</Row>
-				<Row padding={{ top: 'large' }} width="100%">
-					<Row width="31.5%" mainAlignment="flex-start">
+				<ListRow>
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ top: 'large', right: 'large' }}
+					>
 						<Input
 							label={t('label.bucket_name', 'Bucket Name')}
 							backgroundColor="gray6"
 							value={advancedVolumeDetail?.bucketName}
 							readOnly
 						/>
-					</Row>
-					<Padding horizontal="small" />
-					<Row width="31.5%" mainAlignment="flex-start">
+					</Container>
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ top: 'large', right: 'large' }}
+					>
 						<Input
 							label={t('label.type', 'Type')}
 							backgroundColor="gray6"
 							value={advancedVolumeDetail?.unusedBucketType}
 							readOnly
 						/>
-					</Row>
-					<Padding horizontal="small" />
-					<Row width="31.5%" mainAlignment="flex-start">
+					</Container>
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ top: 'large' }}
+					>
 						<Input
 							label={t('label.ID', 'ID')}
 							backgroundColor="gray6"
 							value={advancedVolumeDetail?.bucketId}
 							readOnly
 						/>
-					</Row>
-				</Row>
+					</Container>
+				</ListRow>
 				<Row padding={{ top: 'large' }} width="100%">
 					<Input
 						label={t('label.type_of_volume', 'Type of Volume')}

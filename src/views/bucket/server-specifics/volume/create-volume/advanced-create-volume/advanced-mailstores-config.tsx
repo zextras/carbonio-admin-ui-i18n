@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, { FC, useCallback, useContext, useEffect, useState } from 'react';
 import {
 	Container,
 	Row,
@@ -22,6 +22,7 @@ import {
 	SECONDARY_TYPE_VALUE
 } from '../../../../../../constants';
 import { useBucketVolumeStore } from '../../../../../../store/bucket-volume/store';
+import ListRow from '../../../../../list/list-row';
 
 const AdvancedMailstoresConfig: FC<{
 	onSelection: any;
@@ -31,14 +32,14 @@ const AdvancedMailstoresConfig: FC<{
 	const context = useContext(AdvancedVolumeContext);
 	const { t } = useTranslation();
 	const { advancedVolumeDetail, setAdvancedVolumeDetail } = context;
-	const setIsAllocationToggle = useBucketVolumeStore((state) => state.setIsAllocationToggle);
+	const setIsAllocationToggle = useBucketVolumeStore((state) => state?.setIsAllocationToggle);
 	const [primaryRadio, setPrimaryRadio] = useState(false);
 	const [secondaryRadio, setSecondaryRadio] = useState(false);
 	const [bucketS3, setBucketS3] = useState(false);
 
 	const changeVolDetail = useCallback(
 		(e) => {
-			setAdvancedVolumeDetail((prev: any) => ({ ...prev, [e.target.name]: e.target.value }));
+			setAdvancedVolumeDetail((prev: any) => ({ ...prev, [e?.target?.name]: e?.target?.value }));
 		},
 		[setAdvancedVolumeDetail]
 	);
@@ -105,7 +106,7 @@ const AdvancedMailstoresConfig: FC<{
 			setIsAllocationToggle(true);
 		}
 	}, [
-		advancedVolumeDetail.prefix,
+		advancedVolumeDetail?.prefix,
 		advancedVolumeDetail?.volumeMain,
 		setCompleteLoading,
 		setIsAllocationToggle
@@ -147,34 +148,44 @@ const AdvancedMailstoresConfig: FC<{
 						readOnly
 					/>
 				</Row>
-				<Row padding={{ top: 'large' }} width="100%">
-					<Row width="31.5%" mainAlignment="flex-start">
+				<ListRow>
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ top: 'large', right: 'large' }}
+					>
 						<Input
 							label={t('label.bucket_name', 'Bucket Name')}
 							backgroundColor="gray6"
 							value={advancedVolumeDetail?.bucketName}
 							readOnly
 						/>
-					</Row>
-					<Padding horizontal="small" />
-					<Row width="31.5%" mainAlignment="flex-start">
+					</Container>
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ top: 'large', right: 'large' }}
+					>
 						<Input
 							label={t('label.type', 'Type')}
 							backgroundColor="gray6"
 							value={advancedVolumeDetail?.unusedBucketType}
 							readOnly
 						/>
-					</Row>
-					<Padding horizontal="small" />
-					<Row width="31.5%" mainAlignment="flex-start">
+					</Container>
+					<Container
+						mainAlignment="flex-start"
+						crossAlignment="flex-start"
+						padding={{ top: 'large' }}
+					>
 						<Input
 							label={t('label.ID', 'ID')}
 							backgroundColor="gray6"
 							value={advancedVolumeDetail?.bucketId}
 							readOnly
 						/>
-					</Row>
-				</Row>
+					</Container>
+				</ListRow>
 				<Row
 					padding={{ top: 'large' }}
 					width="100%"

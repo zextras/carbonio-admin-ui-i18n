@@ -33,13 +33,13 @@ const AdvancedMailstoresDefinition: FC<{
 	const [errName, setErrName] = useState(true);
 	const [backupUnusedBucketList, setBackupUnusedBucketList] = useState<any>([]);
 
-	const server = document.location.hostname; // 'nbm-s02.demo.zextras.io';
+	const server = document?.location?.hostname; // 'nbm-s02.demo.zextras.io';
 
 	const changeVolName = useCallback(
 		(e) => {
-			setVolumeDetail((prev: any) => ({ ...prev, volumeName: e.target.value }));
-			setAdvancedVolumeDetail((prev: any) => ({ ...prev, volumeName: e.target.value }));
-			if (e.target.value !== '') {
+			setVolumeDetail((prev: any) => ({ ...prev, volumeName: e?.target?.value }));
+			setAdvancedVolumeDetail((prev: any) => ({ ...prev, volumeName: e?.target?.value }));
+			if (e?.target?.value !== '') {
 				setErrName(true);
 			} else {
 				setErrName(false);
@@ -50,7 +50,7 @@ const AdvancedMailstoresDefinition: FC<{
 
 	const onVolAllocationChange = (v: any): any => {
 		setVolumeDetail((prev: any) => ({ ...prev, volumeAllocation: v }));
-		const volumeTypeObject = volAllocationList.find((item: any) => item.value === v)?.label;
+		const volumeTypeObject = volAllocationList?.find((item: any) => item?.value === v)?.label;
 		setAdvancedVolumeDetail((prev: any) => ({ ...prev, volumeAllocation: volumeTypeObject }));
 		if (v === LOCAL_TYPE_VALUE) {
 			setToggleNextBtn(true);
@@ -79,16 +79,16 @@ const AdvancedMailstoresDefinition: FC<{
 			showSecrets: true
 		}).then((res: any) => {
 			const response = JSON.parse(res?.Body?.response?.content);
-			if (response?.ok && response?.response?.values.lenght !== 0) {
+			if (response?.ok && response?.response?.values?.lenght !== 0) {
 				const volUnusedBucketList: any = [];
 				const allData = response?.response?.values
 					?.filter((items: any) => items[USAGE_IN_EXTERNAL_BACKUP] === UNUSED)
 					.map((items: any) => {
-						const volumeObject: any = bucketTypeItems.find(
-							(s) => s.value?.toLowerCase() === items?.storeType?.toLowerCase()
+						const volumeObject: any = bucketTypeItems?.find(
+							(s) => s?.value?.toLowerCase() === items?.storeType?.toLowerCase()
 						)?.label;
 						volUnusedBucketList.push({
-							label: `${volumeObject} | ${items?.bucketName}`,
+							label: `${volumeObject} | ${items?.label}`,
 							value: items?.uuid
 						});
 						return items;
@@ -100,8 +100,8 @@ const AdvancedMailstoresDefinition: FC<{
 	}, [bucketTypeItems, server, setIsVolumeAllDetail]);
 
 	useEffect(() => {
-		const volumeTypeObject = volAllocationList.find(
-			(item: any) => item.value === volumeDetail?.volumeAllocation
+		const volumeTypeObject = volAllocationList?.find(
+			(item: any) => item?.value === volumeDetail?.volumeAllocation
 		);
 		setAllocation(volumeTypeObject);
 	}, [volAllocationList, volumeDetail?.volumeAllocation]);
@@ -124,7 +124,7 @@ const AdvancedMailstoresDefinition: FC<{
 		}
 	}, [
 		advancedVolumeDetail?.unusedBucketType,
-		advancedVolumeDetail.volumeAllocation,
+		advancedVolumeDetail?.volumeAllocation,
 		setCompleteLoading,
 		setIsAllocationToggle,
 		volumeDetail?.volumeAllocation,
@@ -132,8 +132,8 @@ const AdvancedMailstoresDefinition: FC<{
 	]);
 
 	useEffect(() => {
-		const volumeTypeObject = backupUnusedBucketList.find(
-			(item: any) => item.value === advancedVolumeDetail?.unusedBucketType
+		const volumeTypeObject = backupUnusedBucketList?.find(
+			(item: any) => item?.value === advancedVolumeDetail?.unusedBucketType
 		);
 		setUnusedType(volumeTypeObject);
 	}, [backupUnusedBucketList, advancedVolumeDetail?.unusedBucketType]);
@@ -184,7 +184,7 @@ const AdvancedMailstoresDefinition: FC<{
 				</Row>
 				{advancedVolumeDetail?.volumeAllocation !== undefined &&
 					volumeDetail?.volumeAllocation !== LOCAL_TYPE_VALUE &&
-					backupUnusedBucketList.length !== 0 && (
+					backupUnusedBucketList?.length !== 0 && (
 						<Row padding={{ top: 'large' }} width="100%">
 							<Select
 								items={backupUnusedBucketList}

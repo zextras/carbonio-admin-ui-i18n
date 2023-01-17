@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: AGPL-3.0-only
  */
-import React, { FC, ReactElement, useCallback, useState } from 'react';
+import React, { FC, ReactElement, useCallback, useMemo, useState } from 'react';
 import { Button } from '@zextras/carbonio-design-system';
 import { useTranslation } from 'react-i18next';
 import { HorizontalWizard } from '../../../../../app/component/hwizard';
@@ -13,6 +13,7 @@ import AdvancedMailstoresDefinition from './advanced-mailstores-definition';
 import AdvancedMailstoresConfig from './advanced-mailstores-config';
 import AdvancedMailstoresCreate from './advanced-mailstores-create';
 import { useBucketVolumeStore } from '../../../../../../store/bucket-volume/store';
+import { volumeTypeList } from '../../../../../utility/utils';
 
 const WizardInSection: FC<any> = ({
 	wizard,
@@ -74,7 +75,8 @@ const CreateMailstoresVolume: FC<{
 	CreateAdvancedRequest
 }) => {
 	const { t } = useTranslation();
-	const isAllocationToggle = useBucketVolumeStore((state) => state.isAllocationToggle);
+	const volTypeList = useMemo(() => volumeTypeList(t), [t]);
+	const isAllocationToggle = useBucketVolumeStore((state) => state?.isAllocationToggle);
 	const [wizardData, setWizardData] = useState();
 	const [advancedVolumeDetail, setAdvancedVolumeDetail] = useState<VolumeDetailObj>({
 		volumeName: '',
@@ -154,7 +156,7 @@ const CreateMailstoresVolume: FC<{
 					label={t('label.volume_back_button', 'BACK')}
 					icon={'ChevronLeftOutline'}
 					iconPlacement="left"
-					disable={props.completeLoading}
+					disable={props?.completeLoading}
 					color="secondary"
 				/>
 			),
@@ -164,7 +166,7 @@ const CreateMailstoresVolume: FC<{
 					label={t('label.volume_next_button', 'NEXT')}
 					icon={'ChevronRightOutline'}
 					iconPlacement="right"
-					disable={props.completeLoading}
+					disable={props?.completeLoading}
 				/>
 			)
 		},
@@ -193,7 +195,7 @@ const CreateMailstoresVolume: FC<{
 					label={t('label.volume_back_button', 'BACK')}
 					icon={'ChevronLeftOutline'}
 					iconPlacement="left"
-					disable={props.completeLoading}
+					disable={props?.completeLoading}
 					color="secondary"
 				/>
 			),
@@ -203,7 +205,7 @@ const CreateMailstoresVolume: FC<{
 					label={t('label.volume_create', 'CREATE')}
 					icon={'PowerOutline'}
 					iconPlacement="right"
-					disable={props.completeLoading}
+					disable={props?.completeLoading}
 				/>
 			)
 		}
@@ -211,10 +213,13 @@ const CreateMailstoresVolume: FC<{
 
 	const onComplete = useCallback(
 		(data) => {
+			const volumeType = volTypeList
+				?.filter((item) => item?.value === advancedVolumeDetail?.volumeMain)[0]
+				?.label?.toLowerCase();
 			CreateAdvancedRequest({
 				volumeName: advancedVolumeDetail?.volumeName,
-				volumeType: advancedVolumeDetail?.volumeMain,
-				storeType: advancedVolumeDetail.unusedBucketType,
+				volumeType,
+				storeType: advancedVolumeDetail?.unusedBucketType,
 				bucketConfigurationId: advancedVolumeDetail?.bucketId,
 				volumePrefix: advancedVolumeDetail?.prefix,
 				centralized: advancedVolumeDetail?.centralized,
@@ -222,7 +227,7 @@ const CreateMailstoresVolume: FC<{
 			});
 			setCreateMailstoresVolumeData(advancedVolumeDetail);
 		},
-		[CreateAdvancedRequest, advancedVolumeDetail, setCreateMailstoresVolumeData]
+		[CreateAdvancedRequest, advancedVolumeDetail, setCreateMailstoresVolumeData, volTypeList]
 	);
 
 	return (
