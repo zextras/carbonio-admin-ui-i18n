@@ -1002,7 +1002,7 @@
         "verify": "Verifikasi",
         "verify_certificate": "Verifikasi",
         "who_can_send_mails_to_list ": "Siapa yang dapat mengirim email KE daftar ini?",
-        "home": "Rumah",
+        "home": "",
         "Aliases": "Alias",
         "domain_certificate": "Sertifikat Domain",
         "domain_certificate_private_key": "Kunci Pribadi Domain"
