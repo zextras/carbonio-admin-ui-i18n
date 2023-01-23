@@ -218,17 +218,24 @@ const serverDetailPanel: FC = () => {
 							getSoapFetchRequest(
 								`/service/extension/zextras_admin/core/getAllServers?module=zxpowerstore`
 							).then((data: any) => {
+								const powerStoreServer = data?.servers.map((s: any) => Object.values(s)[0]);
 								const serverList = allServersList.map((item) => {
 									const advacnedData = responseData.response[item.name].response;
 									const primaries = advacnedData.primaries.length;
 									const secondaries = advacnedData.secondaries.length;
 									const indexes = advacnedData.indexes.length;
 									const description = item?.a.filter((items: any) => items?.n === DESCRIPTION);
-									const indexer =
-										data?.servers[0]?.[item?.id]?.ZxPowerstore?.services?.[INDEXER_MANAGER_KEY];
-									const hsmScheduled =
-										data?.servers[0]?.[item?.id]?.ZxPowerstore?.attributes?.powerstoreMoveScheduler
-											?.value?.[HSM_SCHEDULED_KEY];
+									let indexer = '';
+									let hsmScheduled = '';
+									const findPowerStoreServer = powerStoreServer.find(
+										(s: any) => s.name === item?.name
+									);
+									if (findPowerStoreServer) {
+										indexer = findPowerStoreServer?.ZxPowerstore?.services?.[INDEXER_MANAGER_KEY];
+										hsmScheduled =
+											findPowerStoreServer?.ZxPowerstore?.attributes?.powerstoreMoveScheduler
+												?.value?.[HSM_SCHEDULED_KEY];
+									}
 									return {
 										name: item.name,
 										primaries,
@@ -239,6 +246,7 @@ const serverDetailPanel: FC = () => {
 										description: description?.length !== 0 ? description[0]._content : ''
 									};
 								});
+
 								setServersList(serverList);
 							});
 						}
