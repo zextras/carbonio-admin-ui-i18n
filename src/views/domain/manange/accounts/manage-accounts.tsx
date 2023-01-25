@@ -5,7 +5,7 @@
  */
 import React, { FC, useEffect, useState, useMemo, useCallback } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import { debounce } from 'lodash';
+import { debounce, flatMapDeep, filter } from 'lodash';
 import {
 	Container,
 	Input,
@@ -22,6 +22,7 @@ import {
 } from '@zextras/carbonio-design-system';
 import moment from 'moment';
 import {
+	soapFetch,
 	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 	// @ts-ignore
 	postSoapFetchRequest
@@ -50,7 +51,10 @@ const ManageAccounts: FC = () => {
 	const [initAccountDetail, setInitAccountDetail] = useState<any>({});
 	const [otpList, setOtpList] = useState<any[]>([]);
 	const [identitiesList, setIdentitiesList] = useState<any[]>([]);
+	const [folderList, setFolderList] = useState<any[]>([]);
 	const [deligateDetail, setDeligateDetail] = useState<any>({});
+
+	const flatten: any = useCallback((item: any) => [item, flatMapDeep(item.folder, flatten)], []);
 
 	const headers: any = useMemo(
 		() => [
@@ -280,51 +284,138 @@ const ManageAccounts: FC = () => {
 		},
 		[t]
 	);
-	const getIdentitiesList = useCallback((acc): void => {
-		console.log('==>> GetIdentities acc ==>', acc);
-		const targetServers = 'localhost';
-		// soapFetch(`GetIdentities`, {
-		// 	_jsns: 'urn:zimbraAccount',
-		// 	identity: {
-		// 		by: 'name',
-		// 		_content: acc.name
-		// 	}
-		// }).then((res: any) => {
-		// 	console.log('==>> GetIdentities ==>', res?.identity);
-		// 	// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
-		// });
+	const getFolderList = useCallback(
+		(acc, delegateList): void => {
+			const targetServers = 'localhost';
+			postSoapFetchRequest(
+				`/service/admin/soap/GetFolderRequest`,
+				{
+					_jsns: 'urn:zimbraMail'
+				},
+				'GetFolderRequest',
+				acc.id
+			).then((res: any) => {
+				const allFolder =
+					res?.Body?.GetFolderResponse?.folder ||
+					flatMapDeep(res?.Body?.GetFolderResponse?.folder, flatten) ||
+					[];
+				allFolder.forEach((ele: any) => {
+					// eslint-disable-next-line prefer-destructuring, no-param-reassign
+					ele.id = ele.id.split(':')[1];
+					return ele;
+				});
+				const filteredFolders = filter(allFolder, (ele: any) =>
+					['1', '2', '7', '10', '4', '5', '6', '3'].includes(ele.id)
+				);
+				const userDelegate: any[] = [];
+				filteredFolders.forEach((ele: any) => {
+					ele?.acl?.grant &&
+						ele?.acl?.grant.forEach((el: any) => {
+							userDelegate.push({ ...el, id: ele.id, name: ele.name });
+						});
+				});
+				console.log('==>> getFolderList ==>', filteredFolders);
+				console.log('==>> userDelegate Folder ==>', userDelegate);
+				setFolderList(filteredFolders);
+				const mergeList: any[] = [];
+				// delegateList.forEach((ele: any) => {
+				// 	const folder: any[] = filter(userDelegate, { d: ele?.grantee?.[0]?.name });
+				// 	mergeList.push({ ...ele, folder });
+				// });
+				userDelegate.forEach((ele: any) => {
+					let found = false;
+					delegateList.forEach((el: any) => {
+						// const folder: any[] = filter(userDelegate, { d: ele?.grantee?.[0]?.name });
+						if (el?.grantee?.[0]?.name === ele?.d) {
+							found = true;
+							if (el?.folder?.length) {
+								el?.folder.push(ele);
+							} else {
+								// eslint-disable-next-line prefer-destructuring, no-param-reassign
+								el.folder = [ele];
+							}
+						}
+					});
+					if (!found) {
+						delegateList.push({
+							grantee: [{ id: ele.zid, name: ele.d, type: ele.gt }],
+							folder: [ele]
+						});
+					}
+				});
 
-		const request: any = {
-			_jsns: 'urn:zimbraAccount'
-		};
-		postSoapFetchRequest(
-			`/service/admin/soap/GetIdentitiesRequest`,
-			{
-				...request
-			},
-			'GetIdentitiesRequest',
-			acc.id
-		).then((res: any) => {
-			console.log('==>> GetIdentities ==>', res?.Body?.GetIdentitiesResponse?.identity);
-			// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
-		});
+				console.log('==>> userDelegate ==>', delegateList);
+				setIdentitiesList(delegateList);
+				// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+				// setIdentitiesList(res?.Body?.GetGrantsResponse?.grant);
+			});
+		},
+		[flatten]
+	);
+	const getIdentitiesList = useCallback(
+		(acc): void => {
+			console.log('==>> GetIdentities acc ==>', acc);
+			const targetServers = 'localhost';
+			postSoapFetchRequest(
+				`/service/admin/soap/GetIdentitiesRequest`,
+				{
+					_jsns: 'urn:zimbraAccount',
+					identity: [
+						{
+							a: {
+								by: 'name',
+								_content: acc.name
+							}
+						}
+					]
+				},
+				'GetIdentitiesRequest',
+				acc.id
+			).then((res: any) => {
+				console.log('==>> GetIdentitiesRequest ==>', res?.Body?.GetIdentitiesResponse?.identity);
+				// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+				// setIdentitiesList(res?.Body?.GetGrantsResponse?.grant);
+			});
+			const request: any = {
+				_jsns: 'urn:zimbraAdmin',
+				target: {
+					_content: acc.name,
+					type: 'account',
+					by: 'name'
+				}
+			};
+			postSoapFetchRequest(
+				`/service/admin/soap/GetGrantsRequest`,
+				{
+					...request
+				},
+				'GetGrantsRequest',
+				acc.id
+			).then((res: any) => {
+				console.log('==>> GetGrantsResponse ==>', res?.Body?.GetGrantsResponse?.grant);
+				// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+				getFolderList(acc, res?.Body?.GetGrantsResponse?.grant || []);
+			});
 
-		fetchSoap('zextras', {
-			_jsns: 'urn:zimbraAdmin',
-			module: 'ZxCore',
-			action: 'getAllowDelegatedAddress',
-			targetServers,
-			targetID: acc.id,
-			type: 'account',
-			by: 'id'
-		}).then((res: any) => {
-			if (res?.ok) {
-				setIdentitiesList(res?.response?.[targetServers]?.grants);
-			}
-			console.log('addAllowAddressForDelegatedSender ==>', res);
-			// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
-		});
-	}, []);
+			// fetchSoap('zextras', {
+			// 	_jsns: 'urn:zimbraAdmin',
+			// 	module: 'ZxCore',
+			// 	action: 'getAllowDelegatedAddress',
+			// 	targetServers,
+			// 	targetID: acc.id,
+			// 	type: 'account',
+			// 	by: 'id'
+			// }).then((res: any) => {
+			// 	if (res?.ok) {
+			// 		setIdentitiesList(res?.response?.[targetServers]?.grants);
+			// 	}
+			// 	console.log('addAllowAddressForDelegatedSender ==>', res);
+			// 	// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+			// });
+		},
+		[getFolderList]
+	);
+
 	const openDetailView = useCallback(
 		(acc: any): void => {
 			setSelectedAccount(acc);
@@ -654,7 +745,9 @@ const ManageAccounts: FC = () => {
 					identitiesList,
 					deligateDetail,
 					setDeligateDetail,
-					getIdentitiesList
+					getIdentitiesList,
+					folderList,
+					setFolderList
 				}}
 			>
 				{showAccountDetailView && (

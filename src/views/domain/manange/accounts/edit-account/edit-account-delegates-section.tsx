@@ -27,8 +27,13 @@ import {
 	Icon
 } from '@zextras/carbonio-design-system';
 import styled from 'styled-components';
-import { find } from 'lodash';
+import { find, filter } from 'lodash';
 import { Trans, useTranslation } from 'react-i18next';
+import {
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore
+	postSoapFetchRequest
+} from '@zextras/carbonio-shell-ui';
 import { useDomainStore } from '../../../../../store/domain/store';
 import { AccountContext } from '../account-context';
 import { HorizontalWizard } from '../../../../app/component/hwizard';
@@ -84,15 +89,17 @@ const WizardInSection: FC<any> = ({ wizard, wizardFooter, setToggleWizardSection
 
 const EditAccountDelegatesSection: FC = () => {
 	const conext = useContext(AccountContext);
-	const { identitiesList, accountDetail, getIdentitiesList, deligateDetail, setDeligateDetail } =
-		conext;
+	const {
+		identitiesList,
+		accountDetail,
+		getIdentitiesList,
+		deligateDetail,
+		setDeligateDetail,
+		folderList
+	} = conext;
 	console.log('accountDetail===>', accountDetail);
-	const domainName = useDomainStore((state) => state.domain?.name);
 	const [showCreateIdentity, setShowCreateIdentity] = useState<boolean>(false);
 	const [editMode, setEditMode] = useState<boolean>(false);
-	const [qrData, setQrData] = useState('');
-	const [sendEmailTo, setSendEmailTo] = useState('');
-	const [pinCodes, setPinCodes] = useState<any>([]);
 	const [selectedRows, setSelectedRows] = useState([]);
 	const [t] = useTranslation();
 	const createSnackbar = useSnackbar();
@@ -104,24 +111,27 @@ const EditAccountDelegatesSection: FC = () => {
 		console.log('==>> DelegatedAddress ==>', identitiesList);
 		identitiesList.map((item: any): any => {
 			identitiesArr.push({
-				id: item?.granteeID,
+				id: item?.grantee?.[0]?.id,
 				columns: [
-					<Text size="medium" key={item?.granteeID} color="#414141">
-						{item?.granteeName || ' '}
+					<Text size="medium" key={item?.grantee?.[0]?.id} color="#414141">
+						{item?.grantee?.[0]?.name || ' '}
 					</Text>,
-					<Text size="medium" key={item?.granteeID} color="#414141">
-						{item?.granteeType === 'usr' ? 'Single User' : 'Group'}
+					<Text size="medium" key={item?.grantee?.[0]?.id} color="#414141">
+						{item?.grantee?.[0]?.type === 'usr' ? 'Single User' : 'Group'}
 					</Text>,
-					<Text size="medium" key={item?.granteeID} color="#414141">
-						{item?.sendAs === 'true' ? 'Send As' : ''}
-						{item?.sendOnBehalfOf === 'true' ? 'Send on Behalf Of' : ''}
+					<Text size="medium" key={item?.grantee?.[0]?.id} color="#414141">
+						{item?.right?.[0]?._content === 'sendAs' ? 'Send As' : ''}
+						{item?.right?.[0]?._content === 'sendOnBehalfOf' ? 'Send on Behalf Of' : ''}
 					</Text>,
-					<Text size="medium" key={item?.granteeID} color="#414141">
-						{'Read, Send, Write'}
-					</Text>,
-					<Text size="medium" key={item?.granteeID} color="#414141">
-						{'Save it on the Delegated Account'}
+					<Text size="medium" key={item?.grantee?.[0]?.id} color="#414141">
+						{/* {'Read, Send, Write'} */}
+						{/* {item?.right?.[0]?._content ? 'Send, ' : ' '} */}
+						{find(item?.folder || [], (ele: any) => ele.perm.includes('r')) ? 'Read, ' : ' '}
+						{find(item?.folder || [], (ele: any) => ele.perm.includes('w')) ? 'Write' : ' '}
 					</Text>
+					// <Text size="medium" key={item?.grantee?.[0]?.id} color="#414141">
+					// 	{'Save it on the Delegated Account'}
+					// </Text>
 				],
 				item,
 				clickable: true
@@ -134,35 +144,35 @@ const EditAccountDelegatesSection: FC = () => {
 	const headers: any = useMemo(
 		() => [
 			{
-				id: 'description',
+				id: 'accounts',
 				label: t('label.Accounts', 'Accounts'),
-				width: '20%',
+				width: '30%',
 				bold: true
 			},
 			{
-				id: 'status',
+				id: 'type',
 				label: t('label.Type', 'Type'),
 				width: '20%',
 				bold: true
 			},
 			{
-				id: 'failed',
+				id: 'rights',
 				label: t('label.Rights', 'Rights'),
-				width: '20%',
+				width: '25%',
 				bold: true
 			},
 			{
-				id: 'creation-date',
-				label: t('label.sending_options', 'Sending Options'),
-				width: '20%',
-				bold: true
-			},
-			{
-				id: 'save-mails-to',
-				label: t('label.save_mails_to', 'Save Mails to'),
-				width: '20%',
+				id: 'sharing-options',
+				label: t('label.sending_options', 'Sharing Options'),
+				width: '25%',
 				bold: true
 			}
+			// {
+			// 	id: 'save-mails-to',
+			// 	label: t('label.save_mails_to', 'Save Mails to'),
+			// 	width: '20%',
+			// 	bold: true
+			// }
 		],
 		[t]
 	);
@@ -174,10 +184,20 @@ const EditAccountDelegatesSection: FC = () => {
 	};
 	const handleEditDelegate = (): void => {
 		setEditMode(true);
-		const selectedDelegate = find(identitiesList, (o) => o.granteeID === selectedRows[0]);
+		const selectedDelegate = find(identitiesList, (o) => o?.grantee?.[0].id === selectedRows[0]);
+		selectedDelegate.folderSelection = selectedDelegate?.folder?.length ? 'all_folders' : '';
+		if (!selectedDelegate?.folder?.length) {
+			selectedDelegate.delegeteRights = 'send_mails_only';
+		} else if (selectedDelegate?.folder?.length && !selectedDelegate?.right?.length) {
+			selectedDelegate.delegeteRights = 'read_mails_only';
+		} else if (selectedDelegate?.folder?.[0]?.perm === 'r') {
+			selectedDelegate.delegeteRights = 'send_read_mails';
+		} else if (selectedDelegate?.folder?.[0]?.perm === 'rwidxa') {
+			selectedDelegate.delegeteRights = 'send_read_manage_mails';
+		}
 		console.log('selectedDelegate', selectedDelegate);
-		selectedDelegate.granteeEmail = selectedDelegate?.granteeName;
-		selectedDelegate.right = selectedDelegate?.sendAs === 'true' ? 'sendAs' : 'sendOnBehalfOf';
+		// selectedDelegate.granteeEmail = selectedDelegate?.granteeName;
+		// selectedDelegate.right = selectedDelegate?.sendAs === 'true' ? 'sendAs' : 'sendOnBehalfOf';
 		setDeligateDetail(selectedDelegate);
 		setShowCreateIdentity(true);
 	};
@@ -185,67 +205,80 @@ const EditAccountDelegatesSection: FC = () => {
 	const handleDeleteeDelegate = useCallback((): void => {
 		console.log('handleDeleteeDelegate');
 		console.log('selectedRows', selectedRows);
-		const selectedDelegate = find(identitiesList, (o) => o.granteeID === selectedRows[0]);
+		const selectedDelegate = find(identitiesList, (o) => o?.grantee?.[0].id === selectedRows[0]);
 		console.log('selectedDelegate', selectedDelegate);
 		if (selectedDelegate) {
-			fetchSoap('zextras', {
-				_jsns: 'urn:zimbraAdmin',
-				module: 'ZxCore',
-				action: 'doRemoveDelegatedSenderAddress',
-				targetServers: 'localhost',
-				targetID: accountDetail?.zimbraId,
-				targetEmail: accountDetail?.zimbraMailDeliveryAddress,
-				type: 'account',
-				by: 'name',
-				granteeEmail: selectedDelegate?.granteeName,
-				granteeType: selectedDelegate?.granteeType,
-				right: 'sendAs'
-			}).then((res: any) => {
-				console.log('doRemoveDelegatedSenderAddress ==>', res?.Body);
-				setShowCreateIdentity(false);
-				getIdentitiesList(accountDetail?.zimbraId);
-			});
-			fetchSoap('zextras', {
-				_jsns: 'urn:zimbraAdmin',
-				module: 'ZxCore',
-				action: 'doRemoveDelegatedSenderAddress',
-				targetServers: 'localhost',
-				targetID: accountDetail?.zimbraId,
-				targetEmail: accountDetail?.zimbraMailDeliveryAddress,
-				type: 'account',
-				by: 'name',
-				granteeEmail: selectedDelegate?.granteeName,
-				granteeType: selectedDelegate?.granteeType,
-				right: 'sendOnBehalfOf'
-			}).then((res: any) => {
-				console.log('doRemoveDelegatedSenderAddress ==>', res?.Body);
-				setShowCreateIdentity(false);
-				getIdentitiesList(accountDetail?.zimbraId);
-				if (!editMode) {
-					createSnackbar({
-						key: 'success',
-						type: 'success',
-						label: t(
-							'account_details.delegate_deleted_successfully',
-							'Delegate deleted successfully'
-						),
-						autoHideTimeout: 3000,
-						hideButton: true,
-						replace: true
+			if (selectedDelegate?.folder?.length) {
+				selectedDelegate.folder.forEach((ele: any) => {
+					postSoapFetchRequest(
+						`/service/admin/soap/FolderActionRequest`,
+						{
+							_jsns: 'urn:zimbraMail',
+							action: {
+								op: '!grant',
+								id: ele.id,
+								zid: ele.zid
+							}
+						},
+						'FolderActionRequest',
+						accountDetail?.zimbraId
+					).then((res: any) => {
+						console.log('==>> GetIdentities ==>', res);
+						getIdentitiesList({
+							id: accountDetail?.zimbraId,
+							name: accountDetail?.zimbraMailDeliveryAddress
+						});
+
+						// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+						// setIdentitiesList(res?.Body?.GetGrantsResponse?.grant);
 					});
-				}
-			});
+				});
+			}
+			if (selectedDelegate?.right?.[0]?._content) {
+				postSoapFetchRequest(
+					`/service/admin/soap/RevokeRightRequest`,
+					{
+						_jsns: 'urn:zimbraAdmin',
+						target: {
+							_content: accountDetail?.zimbraMailDeliveryAddress,
+							type: 'account',
+							by: 'name'
+						},
+						grantee: {
+							by: 'name',
+							type: selectedDelegate?.grantee?.[0]?.type,
+							_content: selectedDelegate?.grantee?.[0]?.name
+						},
+						right: {
+							_content: selectedDelegate?.right?.[0]?._content
+						}
+					},
+					'RevokeRightRequest',
+					accountDetail?.zimbraId
+				).then((res: any) => {
+					console.log('doRemoveDelegatedSenderAddress ==>', res?.Body);
+					setShowCreateIdentity(false);
+					getIdentitiesList({
+						id: accountDetail?.zimbraId,
+						name: accountDetail?.zimbraMailDeliveryAddress
+					});
+				});
+			}
+			if (!editMode) {
+				createSnackbar({
+					key: 'success',
+					type: 'success',
+					label: t(
+						'account_details.delegate_deleted_successfully',
+						'Delegate deleted successfully'
+					),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+			}
 		}
-	}, [
-		accountDetail?.zimbraId,
-		accountDetail?.zimbraMailDeliveryAddress,
-		createSnackbar,
-		editMode,
-		getIdentitiesList,
-		identitiesList,
-		selectedRows,
-		t
-	]);
+	}, [accountDetail, createSnackbar, editMode, getIdentitiesList, identitiesList, selectedRows, t]);
 	const handleCreateDelegateAPI = useCallback((): void => {
 		console.log('handleCreateDelegateAPI');
 		console.log('deligateDetail', deligateDetail);
@@ -253,40 +286,130 @@ const EditAccountDelegatesSection: FC = () => {
 		if (editMode) {
 			handleDeleteeDelegate();
 		}
-		fetchSoap('zextras', {
-			_jsns: 'urn:zimbraAdmin',
-			module: 'ZxCore',
-			action: 'doAddAllowAddressForDelegatedSender',
-			targetServers: 'localhost',
-			targetID: accountDetail?.zimbraId,
-			targetEmail: accountDetail?.zimbraMailDeliveryAddress,
-			type: 'account',
-			by: 'name',
-			granteeEmail: deligateDetail?.granteeEmail,
-			granteeType: deligateDetail?.granteeType,
-			right: deligateDetail?.right
-		}).then((res: any) => {
-			console.log('addAllowAddressForDelegatedSender ==>', res?.Body);
-			setShowCreateIdentity(false);
-			getIdentitiesList(accountDetail?.zimbraId);
-			createSnackbar({
-				key: 'success',
-				type: 'success',
-				label: t('account_details.delegate_created_successfully', 'Delegate created successfully'),
-				autoHideTimeout: 3000,
-				hideButton: true,
-				replace: true
+		if (deligateDetail?.delegeteRights && deligateDetail?.delegeteRights !== 'read_mails_only') {
+			postSoapFetchRequest(
+				`/service/admin/soap/GrantRightRequest`,
+				{
+					_jsns: 'urn:zimbraAdmin',
+					target: {
+						_content: accountDetail?.zimbraMailDeliveryAddress,
+						type: 'account',
+						by: 'name'
+					},
+					grantee: {
+						by: 'name',
+						type: deligateDetail?.grantee?.[0]?.type,
+						_content: deligateDetail?.grantee?.[0]?.name
+					},
+					right: {
+						_content: deligateDetail?.right?.[0]?._content
+					}
+				},
+				'GrantRightRequest',
+				accountDetail?.zimbraId
+			).then((res: any) => {
+				console.log('==>> GetIdentities ==>', res);
+				getIdentitiesList({
+					id: accountDetail?.zimbraId,
+					name: accountDetail?.zimbraMailDeliveryAddress
+				});
+				setShowCreateIdentity(false);
+				createSnackbar({
+					key: 'success',
+					type: 'success',
+					label: editMode
+						? t('account_details.delegate_updated_successfully', 'Delegate updated successfully')
+						: t('account_details.delegate_created_successfully', 'Delegate created successfully'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+				// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+				// setIdentitiesList(res?.Body?.GetGrantsResponse?.grant);
 			});
-		});
+		}
+		if (deligateDetail?.delegeteRights && deligateDetail?.delegeteRights !== 'send_mails_only') {
+			const selectedFolders = filter(folderList, { selected: true });
+			const folderIds = selectedFolders.map(function (obj) {
+				return obj.id;
+			});
+			console.log('folderIds=>', folderIds);
+			postSoapFetchRequest(
+				`/service/admin/soap/FolderActionRequest`,
+				{
+					_jsns: 'urn:zimbraMail',
+					action: {
+						op: 'grant',
+						id: deligateDetail?.folderSelection === 'all_folders' ? '1' : folderIds.join(','),
+						grant: {
+							perm: deligateDetail?.delegeteRights === 'send_read_manage_mails' ? 'rwidxa' : 'r',
+							gt: deligateDetail?.grantee?.[0]?.type,
+							d: deligateDetail?.grantee?.[0]?.name,
+							pw: ''
+						}
+					}
+				},
+				'FolderActionRequest',
+				accountDetail?.zimbraId
+			).then((res: any) => {
+				console.log('==>> GetIdentities ==>', res);
+				getIdentitiesList({
+					id: accountDetail?.zimbraId,
+					name: accountDetail?.zimbraMailDeliveryAddress
+				});
+				setShowCreateIdentity(false);
+				createSnackbar({
+					key: 'success',
+					type: 'success',
+					label: editMode
+						? t('account_details.delegate_updated_successfully', 'Delegate updated successfully')
+						: t('account_details.delegate_created_successfully', 'Delegate created successfully'),
+					autoHideTimeout: 3000,
+					hideButton: true,
+					replace: true
+				});
+				// setIdentitiesList(res?.Body?.GetIdentitiesResponse?.identity);
+				// setIdentitiesList(res?.Body?.GetGrantsResponse?.grant);
+			});
+		}
+		// Create Identity
+		// postSoapFetchRequest(
+		// 	`/service/admin/soap/CreateIdentityRequest`,
+		// 	{
+		// 		_jsns: 'urn:zimbraAdmin',
+		// 		identity: {
+		// 			_content: accountDetail?.zimbraMailDeliveryAddress,
+		// 			type: 'account',
+		// 			by: 'name'
+		// 		},
+		// 		grantee: {
+		// 			by: 'name',
+		// 			type: deligateDetail?.grantee?.[0]?.type,
+		// 			_content: deligateDetail?.grantee?.[0]?.name
+		// 		},
+		// 		right: {
+		// 			_content: deligateDetail?.right?.[0]?._content
+		// 		}
+		// 	},
+		// 	'CreateIdentityRequest',
+		// 	accountDetail?.zimbraId
+		// ).then((res: any) => {
+		// 	console.log('==>> GetIdentities ==>', res);
+		// 	getIdentitiesList({
+		// 		id: accountDetail?.zimbraId,
+		// 		name: accountDetail?.zimbraMailDeliveryAddress
+		// 	});
+		// });
 	}, [
 		deligateDetail,
 		editMode,
-		accountDetail?.zimbraId,
-		accountDetail?.zimbraMailDeliveryAddress,
 		handleDeleteeDelegate,
+		accountDetail?.zimbraMailDeliveryAddress,
+		accountDetail?.zimbraId,
 		getIdentitiesList,
 		createSnackbar,
-		t
+		t,
+		folderList
 	]);
 
 	const wizardSteps = useMemo(

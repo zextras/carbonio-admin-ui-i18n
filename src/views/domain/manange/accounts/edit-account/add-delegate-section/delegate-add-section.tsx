@@ -148,10 +148,10 @@ const DelegateAddSection: FC = () => {
 									i18nKey="account_details.deligate_abstract_text"
 									defaults="The user {{granteeEmail}} will be able to send mails {{right}} {{targetEmail}}"
 									components={{
-										granteeEmail: deligateDetail?.granteeEmail,
+										granteeEmail: deligateDetail?.grantee[0]?.name,
 										targetEmail: accountDetail?.zimbraMailDeliveryAddress,
 										right:
-											deligateDetail?.right === 'sendAs'
+											deligateDetail?.right?.[0]?._content === 'sendAs'
 												? t('account_details.as', 'as')
 												: t('account_details.on_behalf_of', 'on behalf of')
 									}}
@@ -170,12 +170,12 @@ const DelegateAddSection: FC = () => {
 							backgroundColor="gray5"
 							defaultValue={
 								DELEGETES_RIGHTS_TYPE.find(
-									(item: any) => item.value === deligateDetail?.delegeteRights
+									(item: any) => item.value === deligateDetail?.right?.[0]?._content
 								)?.label
 							}
 							value={
 								DELEGETES_RIGHTS_TYPE.find(
-									(item: any) => item.value === deligateDetail?.delegeteRights
+									(item: any) => item.value === deligateDetail?.right?.[0]?._content
 								)?.label
 							}
 							// onChange={changeAccDetail}
@@ -193,10 +193,10 @@ const DelegateAddSection: FC = () => {
 								'account_details.send_recepients_see_the_mail',
 								'Send {{right}} (recepients will see the mail from {{targetEmail}})',
 								{
-									granteeEmail: deligateDetail?.granteeEmail,
+									granteeEmail: deligateDetail?.grantee?.[0]?.name,
 									targetEmail: accountDetail?.zimbraMailDeliveryAddress,
 									right:
-										deligateDetail?.right === 'sendAs'
+										deligateDetail?.right?.[0]?._content === 'sendAs'
 											? t('account_details.as', 'as')
 											: t('account_details.on_behalf_of', 'on behalf of')
 								}
@@ -205,10 +205,10 @@ const DelegateAddSection: FC = () => {
 								'account_details.send_recepients_see_the_mail',
 								'Send {{right}} (recepients will see the mail from {{targetEmail}})',
 								{
-									granteeEmail: deligateDetail?.granteeEmail,
+									granteeEmail: deligateDetail?.grantee?.[0]?.name,
 									targetEmail: accountDetail?.zimbraMailDeliveryAddress,
 									right:
-										deligateDetail?.right === 'sendAs'
+										deligateDetail?.right?.[0]?._content === 'sendAs'
 											? t('account_details.as', 'as')
 											: t('account_details.on_behalf_of', 'on behalf of')
 								}
@@ -233,7 +233,7 @@ const DelegateAddSection: FC = () => {
 						</Text> */}
 					</Row>
 				</Row>
-				<Row mainAlignment="flex-start" width="100%">
+				{/* <Row mainAlignment="flex-start" width="100%">
 					<Row padding={{ top: 'large' }} width="100%" mainAlignment="space-between">
 						<Input
 							label={t('account_details.where_do_we_store_it', 'Where do we store it?')}
@@ -253,7 +253,7 @@ const DelegateAddSection: FC = () => {
 							name="descriptiveName"
 						/>
 					</Row>
-				</Row>
+				</Row> */}
 			</Container>
 		</>
 	);

@@ -18,6 +18,8 @@ type AccountContext = {
 	initAccountDetail: any;
 	otpList: any;
 	identitiesList: any[];
+	folderList: any[];
+	setFolderList: (arg: any) => void;
 	getListOtp: any;
 	getIdentitiesList: any;
 	deligateDetail: any;

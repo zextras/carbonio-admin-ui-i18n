@@ -11,14 +11,14 @@ import {
 	Select,
 	Text,
 	Icon,
-	Dropdown,
+	Checkbox,
 	Divider,
 	Radio,
 	RadioGroup
 } from '@zextras/carbonio-design-system';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { debounce } from 'lodash';
+import { cloneDeep, debounce } from 'lodash';
 import { useDomainStore } from '../../../../../../store/domain/store';
 import { accountListDirectory } from '../../../../../../services/account-list-directory-service';
 
@@ -51,7 +51,7 @@ const DelegateSetRightsSection: FC = () => {
 	const [offset, setOffset] = useState<number>(0);
 	const [limit, setLimit] = useState<number>(20);
 	const conext = useContext(AccountContext);
-	const { deligateDetail, setDeligateDetail } = conext;
+	const { deligateDetail, setDeligateDetail, folderList, setFolderList } = conext;
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const searchAccountList = useCallback(
@@ -134,6 +134,12 @@ const DelegateSetRightsSection: FC = () => {
 	const onWhereToStoreChange = (v: any): any => {
 		setDeligateDetail((prev: any) => ({ ...prev, whereToStore: v }));
 	};
+	const onFolderSelect = (v: any, index: number): any => {
+		// setDeligateDetail((prev: any) => ({ ...prev, whereToStore: v }));
+		const changeFolder = cloneDeep(folderList);
+		changeFolder[index].selected = !changeFolder[index].selected;
+		setFolderList(changeFolder);
+	};
 	return (
 		<>
 			<Container
@@ -151,7 +157,10 @@ const DelegateSetRightsSection: FC = () => {
 					<Row width="100%" mainAlignment="flex-start">
 						<Select
 							background="gray5"
-							label={t('account_details.who_will_be_delegates', 'Who will be the delegates?')}
+							label={t(
+								'account_details.what_rights_will_the_delegate_have',
+								'What rights will the delegate have?'
+							)}
 							showCheckbox={false}
 							padding={{ right: 'medium' }}
 							defaultSelection={DELEGETES_RIGHTS_TYPE.find(
@@ -165,40 +174,133 @@ const DelegateSetRightsSection: FC = () => {
 				<Row width="100%" padding={{ top: 'medium' }}>
 					<Divider color="gray2" />
 				</Row>
-				<Row mainAlignment="flex-start" width="100%">
-					<Row padding={{ top: 'large' }} width="100%" mainAlignment="space-between">
-						<Text size="small" color="gray0" weight="bold">
-							{t('account_details.sending_options', `Sending Options`)}
-						</Text>
-					</Row>
-				</Row>
-				<Row padding={{ top: 'large', left: 'large' }} width="100%" mainAlignment="space-between">
-					<Row width="100%" mainAlignment="flex-start">
-						<RadioGroup
-							value={sendingOption || deligateDetail?.right}
-							onChange={(newValue: string): void => {
-								setSendingOption(newValue);
-								setDeligateDetail((prev: any) => ({ ...prev, right: newValue }));
-							}}
+				{deligateDetail?.delegeteRights === 'read_mails_only' ? (
+					<></>
+				) : (
+					<>
+						<Row mainAlignment="flex-start" width="100%">
+							<Row padding={{ top: 'large' }} width="100%" mainAlignment="space-between">
+								<Text size="small" color="gray0" weight="bold">
+									{t('account_details.sending_options', `Sending Options`)}
+								</Text>
+							</Row>
+						</Row>
+						<Row
+							padding={{ top: 'large', left: 'large' }}
+							width="100%"
+							mainAlignment="space-between"
 						>
-							<Radio
-								label={t(
-									'account_details.send_as_recepients',
-									`Send as (recepients will see the sender)`
-								)}
-								value="sendAs"
-							/>
-							<Radio
-								label={t(
-									'account_details.send_as_behalf',
-									`Send on Behalf of (recepients will see the sender)`
-								)}
-								value="sendOnBehalfOf"
-							/>
-						</RadioGroup>
-					</Row>
-				</Row>
-				<Row width="100%" padding={{ top: 'medium' }}>
+							<Row width="100%" mainAlignment="flex-start">
+								<RadioGroup
+									value={sendingOption || deligateDetail?.right?.[0]?._content}
+									onChange={(newValue: string): void => {
+										setSendingOption(newValue);
+										setDeligateDetail((prev: any) => ({
+											...prev,
+											right: [{ _content: newValue }]
+										}));
+									}}
+								>
+									<Radio
+										label={t(
+											'account_details.send_as_recepients',
+											`Send as (recepients will see the sender)`
+										)}
+										value="sendAs"
+									/>
+									<Radio
+										label={t(
+											'account_details.send_as_behalf',
+											`Send on Behalf of (recepients will see the sender)`
+										)}
+										value="sendOnBehalfOf"
+									/>
+								</RadioGroup>
+							</Row>
+						</Row>
+					</>
+				)}
+				{deligateDetail?.delegeteRights === 'send_mails_only' ? (
+					<></>
+				) : (
+					<>
+						<Row mainAlignment="flex-start" width="100%">
+							<Row padding={{ top: 'large' }} width="100%" mainAlignment="space-between">
+								<Text size="small" color="gray0" weight="bold">
+									{t(
+										'account_details.select_delegate_folder',
+										`Select which folders the delegate can view`
+									)}
+								</Text>
+							</Row>
+						</Row>
+						<Row
+							padding={{ top: 'large', left: 'large' }}
+							width="100%"
+							mainAlignment="space-between"
+						>
+							<Row width="100%" mainAlignment="flex-start">
+								<Row width="100%" mainAlignment="space-between">
+									<Row width="100%" mainAlignment="space-between">
+										<RadioGroup
+											value={deligateDetail?.folderSelection}
+											onChange={(newValue: string): void => {
+												// setFolderSelection(newValue);
+												setDeligateDetail((prev: any) => ({
+													...prev,
+													folderSelection: newValue
+												}));
+											}}
+											width="100%"
+											mainAlignment="space-between"
+										>
+											<Radio
+												label={t(
+													'account_details.all_folders',
+													`All Folders (include future folders)`
+												)}
+												value="all_folders"
+												width="300px"
+											/>
+											<Radio
+												label={t(
+													'account_details.i_want_to_select',
+													`I want to select the Folders`
+												)}
+												value="i_want_to_select"
+												width="300px"
+												style={{ display: 'none' }}
+											/>
+										</RadioGroup>
+									</Row>
+
+									{deligateDetail?.folderSelection === 'i_want_to_select' ? (
+										<>
+											<Row width="100%" mainAlignment="space-start">
+												{folderList.map((ele: any, index) =>
+													ele.id !== '1' ? (
+														<Row key={ele.id} width="200px" mainAlignment="space-start">
+															<Checkbox
+																defaultChecked={ele.selected || false}
+																label={ele.name}
+																onClick={(): void => onFolderSelect(ele, index)}
+															/>
+														</Row>
+													) : (
+														<></>
+													)
+												)}
+											</Row>
+										</>
+									) : (
+										<></>
+									)}
+								</Row>
+							</Row>
+						</Row>
+					</>
+				)}
+				{/* <Row width="100%" padding={{ top: 'medium' }}>
 					<Divider color="gray2" />
 				</Row>
 				<Row mainAlignment="flex-start" width="100%">
@@ -207,8 +309,8 @@ const DelegateSetRightsSection: FC = () => {
 							{t('account_details.where_to_store_sent_emails', `Where to store sent emails?`)}
 						</Text>
 					</Row>
-				</Row>
-				<Row padding={{ top: 'large', left: 'large' }} width="100%" mainAlignment="space-between">
+				</Row> */}
+				{/* <Row padding={{ top: 'large', left: 'large' }} width="100%" mainAlignment="space-between">
 					<Row width="100%" mainAlignment="flex-start">
 						<Select
 							background="gray5"
@@ -222,7 +324,7 @@ const DelegateSetRightsSection: FC = () => {
 							items={DELEGETES_WHERE_TO_STORE}
 						/>
 					</Row>
-				</Row>
+				</Row> */}
 			</Container>
 		</>
 	);
