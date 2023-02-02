@@ -12,7 +12,7 @@
             "email_buyer": "メール購入者",
             "emissionDate": "発行日",
             "features": "その他の機能",
-            "hide": "非表示",
+            "hide": "非表示にする",
             "less_info": "不十分な情報",
             "subscription_type": "サブスクリプションタイプ",
             "version": "Moduleバージョン",
@@ -297,7 +297,7 @@
         "account": "アカウント",
         "accounts": "アカウント",
         "active": "アクティブ",
-        "add": "追加",
+        "add": "追加する",
         "app_clicked": "共有リクエストを承認しました",
         "app_name": "管理",
         "available_space": "利用可能なスペース",
@@ -1006,7 +1006,21 @@
         "verify_certificate": "確認する",
         "domain_certificate_private_key": "ドメインの秘密キー",
         "Aliases": "エイリアス",
-        "domain_certificate": "ドメインの証明書"
+        "domain_certificate": "ドメインの証明書",
+        "centralized": "一元化されました",
+        "done": "完了",
+        "empty_table_helperText": "空のテーブル",
+        "external_volume_edited": "{{message}}",
+        "general_options": "全般オプション",
+        "operation": {
+            "stop_operation_error": "{{name}}",
+            "get_all_operation_error": "{{name}}"
+        },
+        "queued": "キューに入れられました",
+        "ID": "ID",
+        "running": "稼働中",
+        "stop_operation_helperText": "{{message}}",
+        "use_intelligent_tiering": "インテリジェントな階層化を利用する"
     },
     "message": {
         "snackbar": {
@@ -1451,7 +1465,8 @@
         "volume_config_header": {
             "name": "名前",
             "hsm_scheduled": "HSM スケジュール済み",
-            "indexer": "インデクサー"
+            "indexer": "インデクサー",
+            "status": "状態"
         },
         "volume_indexer_header": {
             "current": "現在",
@@ -1463,7 +1478,10 @@
             "index": "インデックス",
             "primary": "プライマリー",
             "secondary": "セカンダリー"
-        }
+        },
+        "primary_helperText": "プライマリー",
+        "secondary_helperText": "セカンダリー",
+        "indexer_helperText": "インデクサー"
     },
     "click_new_bucket_button_to_create_new_one": "[新しいバケット]をクリックして新しいバケットを作成します。",
     "hsm": {
@@ -1559,5 +1577,27 @@
         "mark_as_unread": "未読にする",
         "notifications_list": "通知リンク"
     },
-    "welcome": "ようこそ"
+    "welcome": "ようこそ",
+    "operations": {
+        "empty_table_helperText": "空のテーブル",
+        "label": {
+            "Deep": "深い",
+            "notifications": "通知",
+            "status": "状態"
+        },
+        "operations_list_header": {
+            "author": "著者",
+            "operation": "オペレーション",
+            "server": "サーバー",
+            "start_date": "開始日",
+            "status": "状態",
+            "submit_date": "送信日"
+        },
+        "queued": "キューに入れられました",
+        "running": "稼働中",
+        "copy_btn": "コピーする",
+        "details": "詳細",
+        "done": "完了",
+        "other": "その他"
+    }
 }
