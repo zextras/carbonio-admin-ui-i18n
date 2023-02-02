@@ -833,7 +833,21 @@
         "who_can_send_mails_to_list ": "Wie kan mails sturen naar deze lijst?",
         "domain_certificate": "Domeincertificaat",
         "domain_certificate_private_key": "Persoonlijke sleutel domein",
-        "Aliases": "Aliassen"
+        "Aliases": "Aliassen",
+        "ID": "ID",
+        "done": "Gedaan",
+        "empty_table_helperText": "Lege Tabel",
+        "external_volume_edited": "{{message}}",
+        "general_options": "Algemene opties",
+        "centralized": "Gecentraliseerd",
+        "operation": {
+            "get_all_operation_error": "{{name}}",
+            "stop_operation_error": "{{name}}"
+        },
+        "queued": "In wachtrij",
+        "running": "Werkt",
+        "stop_operation_helperText": "{{message}}",
+        "use_intelligent_tiering": "Intelligent Tiering gebruiken"
     },
     "timezone": {
         "europe_belgrade": "{{value}} Belgrado, Bratislava, Boedapest, Ljubljana, Praag",
@@ -1464,8 +1478,12 @@
         "volume_config_header": {
             "name": "Naam",
             "hsm_scheduled": "HSM gepland",
-            "indexer": "Indexer"
-        }
+            "indexer": "Indexer",
+            "status": "Status"
+        },
+        "indexer_helperText": "Indexer",
+        "primary_helperText": "Primair",
+        "secondary_helperText": "Secundair"
     },
     "hsm": {
         "all": "Alle",
@@ -1560,5 +1578,27 @@
         "mark_as_unread": "Markeren als niet geşezen",
         "notifications_list": "Meldingenlijst"
     },
-    "welcome": "Welkom"
+    "welcome": "Welkom",
+    "operations": {
+        "details": "Details",
+        "done": "Gedaan",
+        "empty_table_helperText": "Lege Tabel",
+        "label": {
+            "Deep": "Diep",
+            "notifications": "kennisgevingen",
+            "status": "Status"
+        },
+        "operations_list_header": {
+            "author": "Auteur",
+            "operation": "Operatie",
+            "server": "Server",
+            "start_date": "Startdatum",
+            "status": "Status",
+            "submit_date": "Datum indienen"
+        },
+        "other": "Ander",
+        "queued": "In wachtrij",
+        "running": "Werkt",
+        "copy_btn": "KOPIE"
+    }
 }
