@@ -847,7 +847,10 @@
         "queued": "In wachtrij",
         "running": "Werkt",
         "stop_operation_helperText": "{{message}}",
-        "use_intelligent_tiering": "Intelligent Tiering gebruiken"
+        "use_intelligent_tiering": "Intelligent Tiering gebruiken",
+        "lockout": "Vergrendelen",
+        "please_wait": "Even geduld",
+        "what_inside": "Onderwerp"
     },
     "timezone": {
         "europe_belgrade": "{{value}} Belgrado, Bratislava, Boedapest, Ljubljana, Praag",
