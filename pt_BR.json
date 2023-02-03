@@ -1019,7 +1019,11 @@
         "queued": "Em fila",
         "running": "Executando",
         "stop_operation_helperText": "{{message}}",
-        "use_intelligent_tiering": "Usar hierarquia inteligente"
+        "use_intelligent_tiering": "Usar hierarquia inteligente",
+        "home": "Início",
+        "lockout": "Bloqueio",
+        "please_wait": "Aguarde",
+        "what_inside": "Assunto"
     },
     "message": {
         "snackbar": {
