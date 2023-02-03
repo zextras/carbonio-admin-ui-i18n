@@ -1020,7 +1020,10 @@
         "done": "เสร็จสิ้น",
         "empty_table_helperText": "โต๊ะว่าง",
         "queued": "อยู่ในคิวแล้ว",
-        "stop_operation_helperText": "{{message}}"
+        "stop_operation_helperText": "{{message}}",
+        "what_inside": "เรื่อง",
+        "lockout": "การล็อก",
+        "please_wait": "โปรดรอสักครู่"
     },
     "message": {
         "snackbar": {
