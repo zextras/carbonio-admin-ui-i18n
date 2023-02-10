@@ -936,7 +936,15 @@
         "delete_private_key_certificate_header": "Vuoi eliminare la chiave privata del certificato?",
         "domain_certificate_ca_chain": "Gerarchia certificati del dominio",
         "load_certificate_message": "Carica il certificato per visualizzarne i dettagli!<br />Seleziona<strong>\"CARICA E VERIFICA CERTIFICATO +\" </strong> per iniziare",
-        "load_copy_certi": "Carica o copia il tuo certificato"
+        "load_copy_certi": "Carica o copia il tuo certificato",
+        "account_password_setting_note_for_external_authentication": "Le impostazioni qui in basso ↓ non influiscono sulle passwords impostate dagli utenti sui quei domini che sono configurati per l'utilizzo dell'autenticazione esterna. Le modifiche fatte sovrascriveranno le impostazioni COS delle password e il del blocco per login non riuscito.",
+        "cancel_operations_msg": "Vuoi CANCELLARE questa operazione? <br /> Selezionando CANCELLA OPERAZIONE, questa verrà rimossa dalla lista delle operazioni in coda.",
+        "restore_config_info_row_1": "<bold>{{accountName}}</bold> verrà copiato nell'account selezionato nel campo qui in basso.",
+        "restore_select_account_row_2": "<bold>Considera</bold>che tutti le mail, appuntamenti, contatti e impostazioni dell'account verranno ripristinati nello stesso stato in cui erano nel periodo scelto.",
+        "cancel_operation_sucess": "L'operazione {{name}} è stata cancellata con successo",
+        "copyrights_theme_note": "Le informazioni che riguardano il copyright appariranno nel footer del riquadro per l'accesso",
+        "use_infraquent_access": "Usa Accesso poco frequente",
+        "volume_as_current": "Volume come corrente"
     },
     "message": {
         "snackbar": {
@@ -1486,7 +1494,9 @@
         "manage_the_aliases_for_this_account": "Gestisci gli alias per questo account",
         "new_alias_name": "Nome nuovo alias",
         "your_available_aliases": "I tuoi alias disponibili",
-        "allow_user_check_minimum_interval": "Consenti all'utente di modificare l'intervallo minimo tra i controlli"
+        "allow_user_check_minimum_interval": "Consenti all'utente di modificare l'intervallo minimo tra i controlli",
+        "type_the_new_alias_name": "Digita il nuovo nome alias e seleziona un dominio per aggiungerlo ai tuoi alias disponibili",
+        "type_name_of_aliases": "Digita il nuovo nome alias e seleziona un dominio per aggiungerlo ai tuoi alias disponibili "
     },
     "connection": {
         "access_key": "Chiave d'Accesso",
