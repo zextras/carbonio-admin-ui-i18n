@@ -185,6 +185,7 @@ const ManageAccounts: FC = () => {
 
 					obj.password = '';
 					obj.repeatPassword = '';
+					obj.name = data?.account?.[0]?.name;
 					setInitAccountDetail({ ...obj });
 					setAccountDetail({ ...obj });
 				})
