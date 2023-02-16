@@ -106,7 +106,7 @@
         "australia_lord_howe": "{{value}} Ilha de Lord Howe",
         "australia_perth": "{{value}} Perth",
         "australia_sydney": "{{value}} Camberra, Melbourne, Sydney",
-        "etc_gmt+12": "{{value}} Linha de data",
+        "etc_gmt+12": "{{value}} Local e data",
         "europe_astrakhan": "{{value}} Astracã",
         "europe_brussels": "{{value}} Bruxelas, Copenhague, Madri, Paris",
         "europe_bucharest": "{{value}} Bucareste",
@@ -1391,7 +1391,7 @@
     "account": {
         "new": {
             "create_account_wizard": "Criar Assistente de Conta",
-            "create_otp_wizard": "Criar OTP"
+            "create_otp_wizard": "Criar senha de uso único (OTP)"
         }
     },
     "account_details": {
