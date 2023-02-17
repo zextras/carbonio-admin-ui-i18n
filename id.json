@@ -1027,7 +1027,7 @@
         "empty_table_helperText": "Kosongkan Tabel",
         "queued": "Diantrekan",
         "stop_operation_helperText": "{{message}}",
-        "home": "Rumah",
+        "home": "",
         "lockout": "Penguncian",
         "please_wait": "Harap tunggu",
         "what_inside": "Subjek",
@@ -1085,7 +1085,19 @@
         "delete_domain_certificate_content": "Anda menghapus Sertifikat Domain.<br /> Anda yakin ingin menghapusnya?",
         "download": "UNDUH",
         "no_virtual_host_message": "Tidak ada host virtual di sini.<br />Klik tombol TAMBAH untuk mengaktifkan yang baru.",
-        "there_are_not_member_here": "Tidak ada anggota di sini."
+        "there_are_not_member_here": "Tidak ada anggota di sini.",
+        "Accounts": "Akun",
+        "EDIT": "EDIT",
+        "REMOVE": "HAPUS",
+        "Rights": "Hak-hak",
+        "Type": "Jenis",
+        "chats": "Chats",
+        "contacts": "Kontak",
+        "files": "Drive",
+        "mail_signatures": "Tanda Tangan Email",
+        "mails": "Email",
+        "out_of_the_office_reply": "Balas Di Luar Kantor",
+        "tasks": "Tugas"
     },
     "message": {
         "snackbar": {
@@ -1485,7 +1497,10 @@
         "new_alias_name": "Nama Alias Baru",
         "your_available_aliases": "Alias Anda yang Tersedia",
         "click_on_the_pencil_to_edit": "Klik pensil untuk mengedit alias yang tersedia atau klik tanda silang untuk menghapusnya",
-        "manage_aliases": "KELOLA ALIAS"
+        "manage_aliases": "KELOLA ALIAS",
+        "NEXT": "BERIKUTNYA",
+        "abstract": "Abstrak",
+        "on_behalf_of": "atas nama"
     },
     "connection": {
         "access_key": "Kunci Akses",
