@@ -328,7 +328,6 @@ export const SignatureDetail: FC<any> = ({
 								label={t('label.add', 'Add')}
 								icon="Plus"
 								color="primary"
-								height="44px"
 								onClick={(): void => {
 									setIsOpenCreateEditSignatureDialog(true);
 								}}
@@ -340,7 +339,6 @@ export const SignatureDetail: FC<any> = ({
 								label={t('label.edit', 'Edit')}
 								icon="Edit"
 								color="secondary"
-								height="44px"
 								disabled={selectedSignature.length === 0 || selectedSignature.length > 1}
 								onClick={onEditSignature}
 							/>
@@ -547,7 +545,10 @@ export const SignatureDetail: FC<any> = ({
 					size="medium"
 					customFooter={
 						<Container orientation="horizontal" mainAlignment="space-between">
-							<Button label={t('label.help', 'Help')} type="outlined" color="primary" />
+							<Container orientation="horizontal" mainAlignment="flex-start">
+								<Button label={t('label.help', 'Help')} type="outlined" />
+							</Container>
+
 							<Container orientation="horizontal" mainAlignment="flex-end">
 								<Padding all="small">
 									<Button
