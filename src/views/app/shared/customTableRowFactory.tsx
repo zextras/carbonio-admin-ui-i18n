@@ -86,7 +86,6 @@ const CustomRowFactory = ({
 
 	const onClick = useCallback<React.ReactEventHandler>(
 		(e) => {
-			onChange(row.id);
 			showCheckbox &&
 				ckbRef.current &&
 				e.target !== ckbRef.current &&
