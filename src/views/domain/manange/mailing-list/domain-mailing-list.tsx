@@ -348,6 +348,9 @@ const DomainMailingList: FC = () => {
 							replace: true
 						});
 					}
+				})
+				.catch((error) => {
+					setIsUpdateRecord(true);
 				});
 		},
 		[createSnackbar]
