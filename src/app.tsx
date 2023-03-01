@@ -313,7 +313,7 @@ const App: FC = () => {
 				header: (
 					<Trans
 						i18nKey="label.operation_primarybar_tooltip"
-						defaults="View and manage the <bold>operations</bold>, be them <bold>running, queued</bold> or <bold>done</bold>."
+						defaults="View and manage the <bold>operations, run, manage</bold> and <bold>end them</bold>."
 						components={{ bold: <strong /> }}
 					/>
 				),
