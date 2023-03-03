@@ -837,7 +837,8 @@
         "files": "文件",
         "mails": "邮件",
         "out_of_the_office_reply": "不在办公室回复",
-        "tasks": "任务"
+        "tasks": "任务",
+        "storage": "存储"
     },
     "timezone": {
         "asia_tehran": "{{value}} 德黑兰",
