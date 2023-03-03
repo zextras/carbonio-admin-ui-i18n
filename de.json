@@ -773,7 +773,8 @@
         "mail_signatures": "Mail-Signaturen",
         "mails": "Mails",
         "out_of_the_office_reply": "Abwesenheitsnachricht",
-        "tasks": "Aufgaben"
+        "tasks": "Aufgaben",
+        "quota": "Kontingent"
     },
     "timezone": {
         "asia_yerevan": "{{value}} Eriwan",
