@@ -1365,7 +1365,8 @@
     "accountDetails": {
         "default_COS": "COS Predefinita",
         "change_password_for_next_login": "La password dev'essere modificata al prossimo accesso",
-        "enable_activeSync_remote_access": "Abilita accesso remoto ActiveSync"
+        "enable_activeSync_remote_access": "Abilita accesso remoto ActiveSync",
+        "user_will_change_password_on_next_login": "L\"utente cambierà password all'accesso successivo"
     },
     "many_cos_info_msg": "Sembrano esserci molte COS! Quale vuoi visualizzare? Inizia a digitare il nome per filtrarle.",
     "new_bucket_summary": "RIEPILOGO",
