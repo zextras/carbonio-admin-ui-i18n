@@ -331,7 +331,7 @@
         "page ": "共有リクエストを承認しました",
         "page_": "共有リクエストを承認しました",
         "privacy": "プライバシー",
-        "remove": "すべて削除する",
+        "remove": "削除する",
         "save": "保存する",
         "signature_required": "署名の情報が必要です。",
         "snackbar": {
@@ -1098,7 +1098,8 @@
         "mail_signatures": "メールの署名",
         "mails": "メール",
         "out_of_the_office_reply": "不在時の返信",
-        "tasks": "タスク"
+        "tasks": "タスク",
+        "storage": "ストレージ"
     },
     "message": {
         "snackbar": {
