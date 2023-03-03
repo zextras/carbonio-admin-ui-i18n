@@ -774,7 +774,8 @@
         "mails": "Mails",
         "out_of_the_office_reply": "Abwesenheitsnachricht",
         "tasks": "Aufgaben",
-        "quota": "Kontingent"
+        "quota": "Kontingent",
+        "storage": "Speicher"
     },
     "timezone": {
         "asia_yerevan": "{{value}} Eriwan",
