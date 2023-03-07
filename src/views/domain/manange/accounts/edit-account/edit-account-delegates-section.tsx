@@ -229,7 +229,7 @@ const EditAccountDelegatesSection: FC = () => {
 						},
 						'FolderActionRequest',
 						accountDetail?.zimbraId
-					).then((res: any) => {
+					).then(() => {
 						getIdentitiesList({
 							id: accountDetail?.zimbraId,
 							name: accountDetail?.zimbraMailDeliveryAddress
@@ -258,7 +258,7 @@ const EditAccountDelegatesSection: FC = () => {
 					},
 					'RevokeRightRequest',
 					accountDetail?.zimbraId
-				).then((res: any) => {
+				).then(() => {
 					setShowCreateIdentity(false);
 					getIdentitiesList({
 						id: accountDetail?.zimbraId,
@@ -311,7 +311,7 @@ const EditAccountDelegatesSection: FC = () => {
 				},
 				'GrantRightRequest',
 				accountDetail?.zimbraId
-			).then((res: any) => {
+			).then(() => {
 				getIdentitiesList({
 					id: accountDetail?.zimbraId,
 					name: accountDetail?.zimbraMailDeliveryAddress
@@ -361,7 +361,7 @@ const EditAccountDelegatesSection: FC = () => {
 				},
 				'FolderActionRequest',
 				accountDetail?.zimbraId
-			).then((res: any) => {
+			).then(() => {
 				getIdentitiesList({
 					id: accountDetail?.zimbraId,
 					name: accountDetail?.zimbraMailDeliveryAddress
@@ -549,7 +549,7 @@ const EditAccountDelegatesSection: FC = () => {
 					},
 					'RevokeRightRequest',
 					accountDetail?.zimbraId
-				).then((res: any) => {
+				).then(() => {
 					setShowCreateIdentity(false);
 					getIdentitiesList({
 						id: accountDetail?.zimbraId,
@@ -577,7 +577,7 @@ const EditAccountDelegatesSection: FC = () => {
 					},
 					'GrantRightRequest',
 					accountDetail?.zimbraId
-				).then((res: any) => {
+				).then(() => {
 					getIdentitiesList({
 						id: accountDetail?.zimbraId,
 						name: accountDetail?.zimbraMailDeliveryAddress
@@ -603,7 +603,7 @@ const EditAccountDelegatesSection: FC = () => {
 					},
 					'FolderActionRequest',
 					accountDetail?.zimbraId
-				).then((res: any) => {
+				).then(() => {
 					getIdentitiesList({
 						id: accountDetail?.zimbraId,
 						name: accountDetail?.zimbraMailDeliveryAddress
@@ -700,7 +700,7 @@ const EditAccountDelegatesSection: FC = () => {
 								},
 								'FolderActionRequest',
 								accountDetail?.zimbraId
-							).then((res: any) => {
+							).then(() => {
 								getIdentitiesList({
 									id: accountDetail?.zimbraId,
 									name: accountDetail?.zimbraMailDeliveryAddress
@@ -729,7 +729,7 @@ const EditAccountDelegatesSection: FC = () => {
 							},
 							'RevokeRightRequest',
 							accountDetail?.zimbraId
-						).then((res: any) => {
+						).then(() => {
 							setShowCreateIdentity(false);
 							getIdentitiesList({
 								id: accountDetail?.zimbraId,
