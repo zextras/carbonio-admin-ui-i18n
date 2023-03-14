@@ -1609,7 +1609,7 @@
         "send_read_mails": "Отправка и чтение писем (нет прав на создание папок/управление письмами)",
         "send_read_manage_mails": "Отправка, чтение и управление письмами (все вышеперечисленное)",
         "save_it_to_delegate_sent_folder": "Сохранить в папку «Отправленные» отправителя и делегатов",
-        "send_recepients_see_the_mail": "Отправить {{right}} получатели будут отображать это письмо отправителя {{targetEmail}}"
+        "send_recepients_see_the_mail": "Отправить {{right}} получатели будут отображать письмо отправителя {{targetEmail}}"
     },
     "privacy": {
         "survey_feedback_sub_1": "Помогите нам стать лучше. Пройдите быстрый опрос.",
@@ -1770,7 +1770,8 @@
             "who_started_it": "Кто запустил?",
             "stop_operation_btn": "ОСТАНОВИТЬ ОПЕРАЦИЮ",
             "cancel_operation_btn": "ОТМЕНИТЬ ОПЕРАЦИЮ",
-            "operation_type": "Тип операции"
+            "operation_type": "Тип операции",
+            "read_error_threshold": "Допустимое количество ошибок чтения"
         },
         "operations_list_header": {
             "author": "Автор",
