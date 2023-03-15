@@ -881,7 +881,7 @@
         "volume_available_unused_Buckets_list_in_backup": "Liste des Buckets disponibles (qui ne sont pas utilisés dans le backup)",
         "domain_certificate_private_key": "Clé privée de domaine",
         "domain_certificate_ca_chain": "Chaîne du certificat CA du domaine",
-        "backup_primarybar_tooltip": "Gestion de vos <bold>vue des services de backup</bold> son <bold>statut</bold>, la <bold>liste des serveurs</bold> ou <bold>l'import d'un existant</bold>.",
+        "backup_primarybar_tooltip": "Gestion de vos <bold>services de backup</bold>,voir leur <bold>statut</bold>, la <bold>liste des serveurs</bold> ou <bold>l'import d'un backup existant</bold>.",
         "cancel_operation_sucess": "L'opération {{name}} a été annulée avec succès",
         "cancel_operations_message": "Êtes-vous sûr de vouloir ANNULER cette opération ? <br />En cliquant ANNULER L'OPÉRATION, il sera<br /> supprimé de la file d'attente des opérations.",
         "cancel_operations_msg": "Êtes-vous sûr de vouloir ANNULER cette opération ? <br />En cliquant sur ANNULER L'OPÉRATION, elle sera supprimée de la file d'attente des opérations.",
