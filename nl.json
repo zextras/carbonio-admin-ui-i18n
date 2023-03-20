@@ -855,7 +855,7 @@
         "certificate_alert_helperText": "Het certificaat zal beschikbaar zijn zodra de proxy opnieuw wordt opgestart",
         "virtual_host_msg": "Met virtuele hosts is het voor het systeem mogelijk om een standaarddomein vast te stellen voor de aanmelding van een gebruiker. <br />Een gebruiker die aanmeldt via een URL met een van de onderstaande hostnamen, wordt verondersteld zich in dit domein te bevinden domain1.local.<br />Let op: verwijdering van de virtuele host treedt alleen in werking nadat de mailbox-server opnieuw is gestart.",
         "account_password_setting_note_for_external_authentication": "De onderstaande instellingen ↓ hebben geen invloed op de wachtwoorden die zijn ingesteld door gebruikers in domeinen die zijn geconfigureerd om externe verificatie te gebruiken. Wijzigingen die hier worden aangebracht, overschrijven de COS-instellingen voor het wachtwoord en de vergrendeling voor mislukte aanmeldingen.",
-        "cancel_operation_sucess": "De {{naam}} operatie is met succes geannuleerd",
+        "cancel_operation_sucess": "De {{name}} operatie is met succes geannuleerd",
         "certificate_invalid": "Het certificaat is ongeldig",
         "copyrights_information": "Informatie over auteursrechten",
         "copyrights_theme_note": "De informatie over de auteursrechten verschijnt in de voettekst van de aanmeldingsbox",
