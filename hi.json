@@ -1708,7 +1708,7 @@
         "volume_already_selected_in_destination": "वॉल्यूम पहले ही गंतव्य वॉल्यूम के रूप में सिलेक्ट किया गया है",
         "years": "वर्ष"
     },
-    "select_bucket_or_create_new_bucket_helperText": "ऐसा लगता है आपने अभी तक कोई बकेट टाइप सेटअप नहीं की है।\n         \"नई बकेट\" बटन पर क्लिक करके एक नई बनाएँ।",
+    "select_bucket_or_create_new_bucket_helperText": "ऐसा लगता है आपने अभी तक कोई बकेट टाइप सेटअप नहीं की है।\n \"नई बकेट\" बटन पर क्लिक करके एक नई बनाएँ।",
     "welcome_to_carbonio_display_name": "{{adminName}} आपका स्वागत है!",
     "dashboard": {
         "carbonio": "Carbonio",
