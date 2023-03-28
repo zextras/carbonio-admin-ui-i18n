@@ -114,7 +114,7 @@
         "virtual_hosts": "Hosts virtuales",
         "warn_when_reach_space_quota": "Notificarme al alcanzar este nivel de cuota total",
         "manage": "Administrar",
-        "type_here_a_domain": "Escriba aquí un dominio",
+        "type_here_a_domain": "Ingrese aquí un dominio",
         "i_want_to_see_this_domain": "Ajustes del dominio:",
         "account_list": "Lista de cuentas",
         "list_details": "Detalles de la lista",
@@ -712,7 +712,7 @@
         "smime": "S/MIME",
         "specified_domain_not_exist": "El dominio especificado no existe",
         "start": "empezar",
-        "type_accounts_paste_them_here": "Ingrese las cuentas o péguelas aquí",
+        "type_accounts_paste_them_here": "Ingrese o pegue aquí las cuentas",
         "type_an_account_dot": "Ingrese una cuenta…",
         "volume_main": "Volumen principal",
         "volume_max_quota_allowed": "Cuota máxima permitida",
@@ -1075,7 +1075,7 @@
         "australia_lord_howe": "{{value}} Lord Howe",
         "australia_perth": "{{value}} Perth",
         "australia_sydney": "{{value}} Canberra, Melbourne, Sídney",
-        "etc_gmt+12": "{{value}} Fecha",
+        "etc_gmt+12": "{{value}} Línea internacional de cambio de fecha",
         "europe_astrakhan": "{{value}} Astracán",
         "europe_athens": "{{value}} Atenas, Beirut, Bucarest, Estambul",
         "europe_belgrade": "{{value}} Belgrado, Bratislava, Budapest, Liubliana, Praga",
@@ -1143,7 +1143,7 @@
     "log": "Log",
     "new_bucket_connection": "CONEXIÓN",
     "new_bucket_summary": "SUMARIO",
-    "select_bucket_or_create_new_bucket": "No se ha configurado ningún Bucket aún. Clic en \"NUEVO BUCKET\" para crearlo.",
+    "select_bucket_or_create_new_bucket": "No se ha configurado ningún Bucket aún. Haga clic en el botón \"NUEVO BUCKET\" para crear uno nuevo.",
     "backup": {
         "backup_path": "Ruta del Backup",
         "backup_purge": "Depuración del Backup",
@@ -1358,7 +1358,7 @@
         "initial_search_preference": "Preferencias de búsqueda",
         "legacy_exchange_dn_attribute": "O y OU usados en el atributo legacyExchangeDN",
         "limt_serverpool_avaiable_create_user": "Limitar el pool de servidores disponibles al crear nuevos usuarios en esta COS",
-        "minimum_duration_of_time_between_quota_warnings": "Iintervalo entre avisos de exceso de cuota",
+        "minimum_duration_of_time_between_quota_warnings": "Intervalo de tiempo entre avisos de exceso de cuota",
         "search_for_people": "Buscar contactos",
         "name_server": "Nombre del servidor",
         "new_proxy_allowed_domain": "Nuevo Proxy permitido para el dominio",
@@ -1631,7 +1631,7 @@
         "indexer_helperText": "Indexador"
     },
     "click_new_bucket_button_to_create_new_one": "Haga clic en el botón NUEVO BUCKET para crearlo.",
-    "have_not_setup_bucket_type": "No se ha especificado el tipo de bucket",
+    "have_not_setup_bucket_type": "No se ha especificado el tipo de Bucket",
     "hsm": {
         "all": "Todo",
         "allocation": "Tipo",
@@ -1709,7 +1709,7 @@
         "volume_already_selected_in_destination": "El volumen ya ha sido seleccionado como destino",
         "volume_already_selected_in_source": "El volumen ya ha sido seleccionado como origen"
     },
-    "select_bucket_or_create_new_bucket_helperText": "No se ha configurado ningún bucket aún.\n Clic en el botón \"NUEVO BUCKET\" para crearlo.",
+    "select_bucket_or_create_new_bucket_helperText": "No se ha configurado ningún Bucket aún.\nHaga clic en el botón \"NUEVO BUCKET\" para crear uno nuevo.",
     "welcome_to_carbonio_display_name": "¡Bienvenido {{adminName}}!",
     "dashboard": {
         "carbonio": "Carbonio",
@@ -1787,7 +1787,7 @@
         "stopping_operation_model_title": "Se va a interrumpir {{OperationName}}",
         "stopping_operation_model_title_helperText": "Se va a interrumpir {{operationName}}"
     },
-    "select_bucket_or_create_bucket": "Aún no se ha configurado ningún bucket.\nClic en el botón \"CREAR\" para añadir uno nuevo.",
+    "select_bucket_or_create_bucket": "No se ha configurado ningún Bucket aún.\nHaga clic en el botón \"CREAR\" para crear uno nuevo.",
     "to_carbonio": "a Carbonio!",
     "virtual_hosts": {
         "load": "CARGAR",
