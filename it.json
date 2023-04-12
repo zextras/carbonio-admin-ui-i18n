@@ -1330,7 +1330,7 @@
         "user_specific_fowarding_addresses": "Limita il campo degli indirizzi di inoltro specificati dall’utente a (caratt.)",
         "name_server": "Nome Server",
         "minimum_duration_of_time_between_quota_warnings": "Intervallo minimo fra avvisi per spazio a disposizione",
-        "limt_serverpool_avaiable_create_user": "Limita il pool di server disponibili per creare nuovi utenti in questo COS:",
+        "limt_serverpool_avaiable_create_user": "Limita il pool di server disponibili per creare nuovi utenti in questo COS",
         "legacy_exchange_dn_attribute": "O e OU usati nell’attributo legacyExchangeDN",
         "initial_search_preference": "Preferenza di Ricerca Iniziale",
         "external_pop_access": "Accesso POP Esterno",
