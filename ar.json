@@ -3,7 +3,7 @@
         "copy": "نسخ"
     },
     "backup": {
-        "general": "عام"
+        "general": ""
     },
     "core": {
         "subscription": {
@@ -45,8 +45,9 @@
         "chats": "دردشات"
     },
     "account_details": {
-        "general": "عام",
-        "Chats": "دردشات"
+        "general": "",
+        "Chats": "دردشات",
+        "status": "الحالة"
     },
     "volume": {
         "volume_config_header": {
