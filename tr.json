@@ -902,7 +902,15 @@
         "delete_domain_with_all_resources_msg": "Alanadı {{domainName}} boş değil ve {{domainRegularAccounts}} Hesaplar, {{domainSystemAccounts}} Sistem Hesapları, {{distributionList}} Dağıtım listesi, {{aliases}} Takma Ad ve {{resources}} Kaynaklar içeriyor. Emin değilseniz, alanadını sadece kullanıma \"kapatabilir\" ve gerektiğinde içeriğe erişebilirsiniz. Veya tüm hesap ve alanadı öğelerini tamamen kaldırabilirsiniz. Bu işlem geri alınamaz.",
         "primary_color_hint": "Birincil rengi değiştirmek için lütfen yer tutucu formatındaki gibi bir HEX renk kodu kullanın.",
         "storage_lbl": "<bold>Depolama</bold>",
-        "you_have_exported_the_configuration": "Yapılandırmayı dışa aktardınız"
+        "you_have_exported_the_configuration": "Yapılandırmayı dışa aktardınız",
+        "account_name": "Hesap Adı",
+        "aliases": "Takma Adlar",
+        "distribution_list": "Dağıtım listesi",
+        "dont_save_a_copy_of_sent_messages": "Gönderilen mesajların kopyasını kaydetme",
+        "save_a_copy_of_sent_messages_to_delegates_sent_folder": "Gönderilen mesajların bir kopyasını yardımcımın Gönderilenler klasörüne kaydet",
+        "save_a_copy_of_sent_messages_to_my_sent_folder": "Gönderilen mesajların bir kopyasını Gönderilenler klasörüme kaydet",
+        "save_a_copy_of_sent_messages_to_my_sent_folder_and_delegates_folder": "Gönderilen mesajların bir kopyasını Gönderilenler klasörüme ve yardımcımın klasörüne kaydet",
+        "value": "Değer"
     },
     "timezone": {
         "asia_gaza": "{{value}} Gaza",
@@ -1165,7 +1173,8 @@
             "deactivate": "Aktif Değil",
             "order_id": "Sipariş No",
             "not_valid": "Geçerli değil",
-            "license_activated_successfully": "Lisans başarıyla etkinleştirildi"
+            "license_activated_successfully": "Lisans başarıyla etkinleştirildi",
+            "valid": "Geçerli"
         }
     },
     "domain": {
@@ -1212,7 +1221,14 @@
         "private_key_certificate_removed": "Sertifikanın özel anahtarı kaldırıldı",
         "ldap": "LDAP",
         "unit_measure_milliseconds": "Milisaniye",
-        "page_size": "Sayfa Boyutu"
+        "page_size": "Sayfa Boyutu",
+        "gal_change_mode_both": "Her ikisi",
+        "gal_change_mode_external": "Harici",
+        "gal_change_mode_internal": "İç",
+        "unit_measure_days": "Gün",
+        "unit_measure_hours": "Saat",
+        "unit_measure_minutes": "Dakika",
+        "unit_measure_seconds": "Saniye"
     },
     "message": {
         "snackbar": {
@@ -1740,7 +1756,15 @@
         "password_allow_once_user_to_connect": "Bu parola, kullanıcının güvenilmeyen bir ağdan bile 2FA olmadan bu servise bağlanmasına izin verecektir.",
         "service_password": "Servis Parolası",
         "switch_simplified": "Basit Görünüme Geç",
-        "account_with_send_rights": "<bold>Kişi gibi/Kişi adına gönderim hakları</bold> ile hesap"
+        "account_with_send_rights": "<bold>Kişi gibi/Kişi adına gönderim hakları</bold> ile hesap",
+        "label": "Etiket",
+        "send_check": "Gönder",
+        "services": "Hizmetler",
+        "status": "Durum",
+        "DELETE": "SİL",
+        "SAVE": "KAYDET",
+        "create": "OLUŞTUR",
+        "remove": "Kaldır"
     },
     "connection": {
         "access_key": "Access Key",
@@ -1928,5 +1952,6 @@
     "warning": {
         "is_current": "Daha önce geçerli olarak başka bir birim ayarlamanız gerekir."
     },
-    "this_will_not_affect_data_already_stored": "Bu, önceden depolanmış verileri etkilemez"
+    "this_will_not_affect_data_already_stored": "Bu, önceden depolanmış verileri etkilemez",
+    "new": "Yeni"
 }
