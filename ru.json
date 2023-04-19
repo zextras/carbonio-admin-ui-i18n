@@ -787,7 +787,6 @@
         "what_inside": "Тема",
         "centralized": "Централизованный",
         "done": "Готово",
-        "empty_table_helperText": "Пустая таблица",
         "external_volume_edited": "{{message}}",
         "general_options": "Общие параметры",
         "operation": {
@@ -1756,7 +1755,6 @@
         "copy_operation_successfully": "Уведомление успешно скопировано",
         "details": "Детали",
         "done": "Готово",
-        "empty_table_helperText": "Пустая таблица",
         "label": {
             "Deep": "Глубокий",
             "notifications": "Оповещения",

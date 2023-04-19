@@ -1025,7 +1025,6 @@
         "use_intelligent_tiering": "Gunakan Tiering Cerdas",
         "ID": "ID",
         "done": "Selesai",
-        "empty_table_helperText": "Kosongkan Tabel",
         "queued": "Diantrekan",
         "stop_operation_helperText": "{{message}}",
         "lockout": "Penguncian",
@@ -1745,7 +1744,6 @@
         "copy_btn": "SALIN",
         "details": "Detail",
         "done": "Selesai",
-        "empty_table_helperText": "Kosongkan Tabel",
         "label": {
             "Deep": "Dalam",
             "notifications": "Notifikasi",

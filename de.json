@@ -757,7 +757,6 @@
         "ID": "ID",
         "centralized": "Zentralisiert",
         "done": "Fertig",
-        "empty_table_helperText": "Leere Tabelle",
         "external_volume_edited": "{{message}}",
         "general_options": "Allgemeine Optionen",
         "operation": {
@@ -1743,7 +1742,6 @@
     },
     "welcome": "Willkommen",
     "operations": {
-        "empty_table_helperText": "Leere Tabelle",
         "label": {
             "Deep": "Tief",
             "notifications": "Benachrichtigungen",

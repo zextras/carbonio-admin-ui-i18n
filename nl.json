@@ -835,7 +835,6 @@
         "Aliases": "Aliassen",
         "ID": "ID",
         "done": "Gedaan",
-        "empty_table_helperText": "Lege Tabel",
         "external_volume_edited": "{{message}}",
         "general_options": "Algemene opties",
         "centralized": "Gecentraliseerd",
@@ -1745,7 +1744,6 @@
     "operations": {
         "details": "Details",
         "done": "Gedaan",
-        "empty_table_helperText": "Lege Tabel",
         "label": {
             "Deep": "Diep",
             "notifications": "kennisgevingen",

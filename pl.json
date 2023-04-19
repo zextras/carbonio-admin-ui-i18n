@@ -1048,7 +1048,6 @@
         "what_inside": "Temat",
         "centralized": "Zcentralizowane",
         "done": "Gotowe",
-        "empty_table_helperText": "Tabela jest pusta",
         "external_volume_edited": "{{message}}",
         "ID": "ID",
         "general_options": "Ustawienia ogólne",
@@ -1757,7 +1756,6 @@
         "copy_operation_successfully": "Powiadomienie zostało skopiowane",
         "details": "Szczegóły",
         "done": "Gotowe",
-        "empty_table_helperText": "Tabela jest pusta",
         "label": {
             "Deep": "Głęboki",
             "notifications": "Notifications",

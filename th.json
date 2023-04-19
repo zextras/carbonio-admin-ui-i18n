@@ -1026,7 +1026,6 @@
         "use_intelligent_tiering": "ใช้การจัดระดับอัจฉริยะ",
         "centralized": "รวบรวมแล้ว",
         "done": "เสร็จสิ้น",
-        "empty_table_helperText": "โต๊ะว่าง",
         "queued": "อยู่ในคิวแล้ว",
         "stop_operation_helperText": "{{message}}",
         "what_inside": "หัวข้อ",
@@ -1745,7 +1744,6 @@
         "copy_btn": "คัดลอก",
         "details": "รายละเอียด",
         "done": "เสร็จสิ้น",
-        "empty_table_helperText": "โต๊ะว่าง",
         "label": {
             "Deep": "ลึก",
             "notifications": "การแจ้งเตือน",

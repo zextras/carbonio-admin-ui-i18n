@@ -745,7 +745,6 @@
         "ID": "ID",
         "centralized": "Merkezi",
         "done": "Tamamlandı",
-        "empty_table_helperText": "Tabloyu Boşalt",
         "external_volume_edited": "{{message}}",
         "general_options": "Genel Seçenekler",
         "operation": {
@@ -1756,7 +1755,6 @@
         "copy_operation_successfully": "Bildirim başarıyla kopyalandı",
         "details": "Detaylar",
         "done": "Tamamlandı",
-        "empty_table_helperText": "Tabloyu Boşalt",
         "label": {
             "Deep": "Derinlik",
             "notifications": "Bildirimler",

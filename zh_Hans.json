@@ -757,7 +757,6 @@
         "ID": "ID",
         "centralized": "中心化",
         "done": "完成",
-        "empty_table_helperText": "空表格",
         "external_volume_edited": "{{message}}",
         "general_options": "一般选项",
         "operation": {
@@ -1745,7 +1744,6 @@
         "copy_btn": "复制",
         "details": "详细资料",
         "done": "完成",
-        "empty_table_helperText": "空表格",
         "label": {
             "Deep": "深度",
             "notifications": "通知",

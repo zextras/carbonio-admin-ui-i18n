@@ -839,7 +839,6 @@
         "stop_operation_helperText": "{{message}}",
         "ID": "ID",
         "done": "Terminé",
-        "empty_table_helperText": "Vider la Table",
         "queued": "Ajouté(e) dans la queue",
         "running": "En cours",
         "use_intelligent_tiering": "Utiliser le Tiering intelligent",
@@ -1745,7 +1744,6 @@
         "copy_btn": "COPIER",
         "details": "Détails",
         "done": "Terminé",
-        "empty_table_helperText": "Vider la Table",
         "label": {
             "Deep": "Profond",
             "notifications": "Notifications",

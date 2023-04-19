@@ -889,7 +889,6 @@
         "ID": "ID",
         "centralized": "Centralizzato",
         "done": "Fine",
-        "empty_table_helperText": "Tabella vuota",
         "general_options": "Opzioni generali",
         "operation": {
             "get_all_operation_error": "{{name}}",
@@ -1741,7 +1740,6 @@
         "copy_btn": "COPIA",
         "details": "Dettagli",
         "done": "Fine",
-        "empty_table_helperText": "Tabella vuota",
         "label": {
             "Deep": "Approfondito",
             "notifications": "Notifiche",

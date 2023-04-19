@@ -1017,7 +1017,6 @@
         "domain_certificate": "ドメインの証明書",
         "centralized": "一元化されました",
         "done": "完了",
-        "empty_table_helperText": "空のテーブル",
         "external_volume_edited": "{{message}}",
         "general_options": "全般オプション",
         "operation": {
@@ -1742,7 +1741,6 @@
     },
     "welcome": "ようこそ",
     "operations": {
-        "empty_table_helperText": "空のテーブル",
         "label": {
             "Deep": "深い",
             "notifications": "通知",

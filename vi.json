@@ -648,7 +648,6 @@
         "ID": "ID",
         "centralized": "Tập trung",
         "done": "Hoàn thành",
-        "empty_table_helperText": "Bảng trống",
         "external_volume_edited": "{{message}}",
         "general_options": "Tùy chọn chung",
         "operation": {
@@ -1450,7 +1449,6 @@
         "copy_btn": "SAO CHÉP",
         "details": "Thông tin chi tiết",
         "done": "Hoàn thành",
-        "empty_table_helperText": "Bảng trống",
         "label": {
             "Deep": "Sâu",
             "notifications": "Các thông báo",

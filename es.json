@@ -854,7 +854,6 @@
         "ID": "ID",
         "centralized": "Centralizado",
         "done": "Concluido",
-        "empty_table_helperText": "Tabla vacía",
         "external_volume_edited": "{{message}}",
         "general_options": "Opciones generales",
         "queued": "En cola",
@@ -1757,7 +1756,6 @@
         "copy_btn": "COPIAR",
         "details": "Detalles",
         "done": "Concluido",
-        "empty_table_helperText": "Tabla vacía",
         "label": {
             "Deep": "Deep",
             "notifications": "Notificaciones",

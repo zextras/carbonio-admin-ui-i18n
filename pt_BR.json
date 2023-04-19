@@ -1017,7 +1017,6 @@
         "ID": "ID",
         "centralized": "Centralizado",
         "done": "Concluído",
-        "empty_table_helperText": "Tabela vazia",
         "external_volume_edited": "{{message}}",
         "general_options": "Opções gerais",
         "operation": {
@@ -1746,7 +1745,6 @@
         "copy_btn": "COPIAR",
         "details": "Detalhes",
         "done": "Concluído",
-        "empty_table_helperText": "Tabela vazia",
         "label": {
             "Deep": "Deep",
             "notifications": "Notificações",

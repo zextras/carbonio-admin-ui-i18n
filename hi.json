@@ -723,7 +723,6 @@
         "use_intelligent_tiering": "Intelligent Tiering उपयोग करें",
         "centralized": "केन्द्रित",
         "done": "हो गया",
-        "empty_table_helperText": "खाली टेबल",
         "stop_operation_helperText": "{{message}}",
         "please_wait": "कृपया प्रतीक्षा करें",
         "lockout": "लॉकआउट",
@@ -1745,7 +1744,6 @@
         "copy_btn": "कॉपी करें",
         "details": "विवरण",
         "done": "हो गया",
-        "empty_table_helperText": "खाली टेबल",
         "label": {
             "Deep": "गहराई",
             "notifications": "अधिसूचनाएं",
