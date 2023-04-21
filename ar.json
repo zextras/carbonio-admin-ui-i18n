@@ -2,9 +2,6 @@
     "notification": {
         "copy": "نسخ"
     },
-    "backup": {
-        "general": ""
-    },
     "core": {
         "subscription": {
             "status": "الحالة"
@@ -45,7 +42,6 @@
         "chats": "دردشات"
     },
     "account_details": {
-        "general": "",
         "Chats": "دردشات",
         "status": "الحالة"
     },
