@@ -169,7 +169,7 @@
         "page ": "Has aceptado la solicitud de acceso compartido",
         "page_": "Has aceptado la solicitud de acceso compartido",
         "privacy": "Privacidad",
-        "remove": "Remover",
+        "remove": "Eliminar",
         "save": "Guardar",
         "signature_required": "La información de la firma es obligatoria.",
         "snackbar": {
@@ -1592,7 +1592,7 @@
         "SAVE": "GUARDAR",
         "create": "CREAR",
         "label": "Etiqueta",
-        "remove": "Remover",
+        "remove": "Eliminar",
         "send_check": "Enviar",
         "status": "Estado",
         "services": "Servicios"
