@@ -911,13 +911,13 @@
         "inactive": "Неактивный",
         "keep_it_button": "НЕТ, СОХРАНИТЬ",
         "ldap_filter": "Фильтр LDAP",
-        "ldap_search_base": "База поиска LDAP",
+        "ldap_search_base": "LDAP-поиск",
         "ldap_url": "URL-адрес LDAP",
         "measure_unit": "Единица измерения",
         "model_label_create_account": "Создать учетную запись",
         "notification_lbl": "<bold>Уведомления</bold>",
         "operation_lbl": "<bold>Операции</bold>",
-        "personalisation": "Персонализация",
+        "personalisation": "Кастомизация",
         "prefix_volume": "Префикс — {{volumePrefix}}",
         "primary_color_for_dark_mode": "<bold>Основной</bold> цвет для темного режима",
         "primary_color_for_light_mode": "<bold>Основной</bold> цвет для светлого режима",
@@ -1190,7 +1190,7 @@
             "openio_s3": "OpenIO S3",
             "scality_s3": "Scality S3",
             "yandex_s3": "Yandex S3",
-            "minio": "Minio"
+            "minio": "MinIO"
         },
         "invalid_compression_thresold": "Требуется порог сжатия",
         "invalid_volume_name": "Заполните поле имя тома."
