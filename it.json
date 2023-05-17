@@ -1660,7 +1660,8 @@
         "manage_no_rights_to_send_mails": "Gestisci (nessun diritto di invio di e-mail)",
         "passphrasaId": "ID passphrase",
         "password_allow_once_user_to_connect": "Questa password consentirà all'utente di connettersi al servizio senza l'utilizzo di autenticazione 2FA anche da una rete non attendibile.",
-        "read_only": "Sola lettura"
+        "read_only": "Sola lettura",
+        "labels_password": "Password di"
     },
     "connection": {
         "access_key": "Chiave d'Accesso",
