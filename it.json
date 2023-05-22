@@ -84,7 +84,8 @@
             "emc_s3": "EMC S3",
             "openio_s3": "OpenIO S3",
             "scality_s3": "Scality S3",
-            "yandex_s3": "Yandex S3"
+            "yandex_s3": "Yandex S3",
+            "minio": "MinIO"
         },
         "serverName_volumes": "Volumi {{serverName}}",
         "invalid_compression_thresold": "La soglia di compressione è obbligatoria",
@@ -1666,7 +1667,11 @@
         "read_write": "Lettura / Scrittura",
         "remove_all": "RIMUOVI TUTTO",
         "account_read_write_rights": "Questo account ha i permessi di <bold>Lettura / Scrittura</bold> su",
-        "i_have_copied_the_password": "HO COPIATO LA PASSWORD"
+        "i_have_copied_the_password": "HO COPIATO LA PASSWORD",
+        "switch_advanced": "Passa a Vista avanzata",
+        "switch_simplified": "Passa a Vista semplificata",
+        "services_passphrase": "Passphrase per i Servizi",
+        "start_typing_account": "Inizia a digitare il nome di un Account / Gruppo per aggiungerlo ai permessi"
     },
     "connection": {
         "access_key": "Chiave d'Accesso",
