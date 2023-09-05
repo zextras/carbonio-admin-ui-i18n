@@ -99,7 +99,18 @@
         "total_domains": "Total des domaines",
         "allow_permission_to_send_data_to_zextras": "Autoriser toutes les permissions suivantes depuis le section de confidentialité pour l'envoi données d'erreur complètes à Zextras",
         "allow_permission_to_send_feedback_to_zextras": "Autoriser toutes les permissions suivantes depuis le section de confidentialité pour l'envoi de retour d'information",
-        "carbonio_community_edition": "Carbonio Community Edition"
+        "carbonio_community_edition": "Carbonio Community Edition",
+        "enable_following_permission_to_send_feedback_to_zextras": "Activer les autorisations de suivi pour envoyer des retours d'utilisation",
+        "feedback_head_to_forum_helperText": "<bold>Souhaitez-vous recevoir une mise à jour à propos de votre demande ?</bold><br /><br />Obtenez du support de la part de la communauté Carbonio CE en créant un post sur notre forum.",
+        "feedback_head_to_forum_reachout_carbonio": "<bold>Souhaitez-vous accéder à notre plateforme de support en ligne ?</bold><br /><br />Ouvrez un ticket support depuis notre page dédiée et obtenez de l'assistance de nos experts.",
+        "head_to_forum": "SE RENDRE SUR LE FORUM",
+        "open_a_ticket": "OUVRIR UN TICKET",
+        "part_of_project_atom": "Prenez part au <bold>Projet ATOM</bold>, testez les nouvelles fonctionnalités en avance, partager votre retour d'expérience et aidez à améliorer Carbonio !",
+        "send_feedback": "Envoyer un retour d'expérience",
+        "send_feedback_helperText_carbonio": "<bold>Souhaitez-vous suggérer des changements ou nous dire quelque chose ?</bold><br /><br />Partagez vos idées avec nous et aidez nous à façonner un meilleur {{carbonio}}. Nous sommes impatient d'avoir de vos nouvelles !",
+        "send_feedback_helperText": "<bold>Souhaitez-vous suggérer des changements ou nous dire quelque chose ?</bold><br /><br />Partagez vos idées avec nous et aidez nous à façonner un meilleur Carbonio CE. Nous sommes impatient d'avoir de vos nouvelles !",
+        "use_our_forum": "Utilisez notre forum à la place",
+        "feedback_head_to_forum_helperText_carbonio": "<bold>Souhaitez-vous recevoir une mise à jour à propos de votre demande ?</bold><br /><br />Obtenez du support de la part de la communauté {{carbonio}} en créant un post sur notre forum."
     },
     "search": {
         "clear": "Effacer la saisie de recherche",
@@ -415,7 +426,8 @@
         "enlarge": "Agrandir le panneau",
         "hide": "Cacher le panneau",
         "reduce": "Réduire le panneau",
-        "show_tabs": "Montrer les autres onglets"
+        "show_tabs": "Montrer les autres onglets",
+        "open_app": "Ouvrir dans l'application"
     },
     "locale": {
         "English": "Anglais",
