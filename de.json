@@ -193,7 +193,18 @@
         "allow_permission_to_send_feedback_to_zextras": "Erlauben Sie alle folgenden Berechtigungen aus dem Bereich Datenschutz, um Feedback zu senden",
         "carbonio_community_edition": "Carbonio -Community -Edition",
         "details_feedback__collected_msg": "Bei der Abgabe einer Rückmeldung werden auch die folgenden Angaben erfasst",
-        "post_feedback_send_helper_text_line_2": "Um Carbonio zu verbessern, führen wir kontinuierliche Tests durch,"
+        "post_feedback_send_helper_text_line_2": "Um Carbonio zu verbessern, führen wir kontinuierliche Tests durch,",
+        "enable_following_permission_to_send_feedback_to_zextras": "Die folgenden Berechtigungen aktivieren, um Feedback zu senden",
+        "feedback_head_to_forum_helperText": "<bold>Möchten Sie ein Update zu Ihrer Anfrage erhalten?</bold><br /><br />Erhalten Sie Unterstützung von der gesamten Carbonio CE-Community, indem Sie einen Beitrag in unserem Forum erstellen.",
+        "feedback_head_to_forum_helperText_carbonio": "<bold>Möchten Sie ein Update zu Ihrer Anfrage erhalten?</bold><br /><br />Erhalten Sie Unterstützung von der gesamten {{carbonio}}-Community, indem Sie einen Beitrag in unserem Forum erstellen.",
+        "feedback_head_to_forum_reachout_carbonio": "<bold>Möchten Sie sich für Support an unseren Helpdesk wenden?</bold><br /><br />Eröffnen Sie ein Support-Ticket auf unserer speziell dafür vorgesehen Seite, um Unterstützung von unserem Experten-Helpdesk zu erhalten.",
+        "head_to_forum": "ZUM FORUM GEHEN",
+        "open_a_ticket": "EIN TICKET ERÖFFNEN",
+        "part_of_project_atom": "Seien Sie Teil des <bold>ATOM Projekts </bold>, testen Sie neue Funktionen im Voraus, geben Sie Feedback und helfen Sie, Carbonio zu verbessern!",
+        "send_feedback": "Feedback abschicken",
+        "send_feedback_helperText": "<bold>Möchten Sie eine Änderung vorschlagen oder uns etwas mitteilen?</bold><br /><br />Teilen Sie Ihre Gedanken mit uns und helfen Sie dabei, ein besseres Carbonio CE zu gestalten. Wir freuen uns von Ihnen zu hören!",
+        "send_feedback_helperText_carbonio": "<bold>Möchten Sie eine Änderung vorschlagen oder uns etwas mitteilen?</bold><br /><br />Teilen Sie Ihre Gedanken mit uns und helfen Sie dabei, ein besseres {{carbonio}} zu gestalten. Wir freuen uns von Ihnen zu hören!",
+        "use_our_forum": "Nutzen Sie stattdessen unser Forum"
     },
     "timezone": {
         "asuncion": "{{value}} Asuncion",
@@ -427,7 +438,8 @@
         "enlarge": "Vergrößern",
         "hide": "Ausblenden",
         "reduce": "Verkleinern",
-        "show_tabs": "Andere Tabs anzeigen"
+        "show_tabs": "Andere Tabs anzeigen",
+        "open_app": "In App öffnen"
     },
     "locale": {
         "English": "Englisch",
