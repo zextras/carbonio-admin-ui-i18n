@@ -193,7 +193,10 @@
         "enable_all__following_permission_to_send_feedback_to_zextras": "Включите все следующие разрешения в разделе конфиденциальности, чтобы отправить отзыв",
         "carbonio_community_edition": "Carbonio Community Edition",
         "carbonio_admin_ui_version": "Версия Carbonio AdminUI",
-        "carbonio_backend_version": "Backend Version Carbonio"
+        "carbonio_backend_version": "Backend Version Carbonio",
+        "enable_following_permission_to_send_feedback_to_zextras": "Включите следующие разрешения для отправки отзыва",
+        "feedback_head_to_forum_helperText": "<bold>Хотите ли вы получать обновленную информацию по вашему запросу?</bold><br /><br />Получите поддержку всего сообщества Carbonio CE, создав сообщение на нашем форуме.",
+        "feedback_head_to_forum_helperText_carbonio": "<bold>Хотите ли вы получать обновленную информацию по вашему запросу?</bold><br /><br />Получите поддержку всего сообщества {{carbonio}}, создав сообщение на нашем форуме."
     },
     "board": {
         "close_tab": "Закрыть вкладку",
@@ -201,7 +204,8 @@
         "enlarge": "Увеличить окно",
         "hide": "Спрятать окно",
         "reduce": "Уменьшить окно",
-        "show_tabs": "Показать другие вкладки"
+        "show_tabs": "Показать другие вкладки",
+        "open_app": "Открыть в приложении"
     },
     "locale": {
         "label_chinese": "Китайский-{{value}}",
