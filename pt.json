@@ -107,7 +107,7 @@
         "address": "Endereço",
         "email_address": "Endereço de e-mail",
         "filter_folders": "Filtrar pastas",
-        "logout": "Encerrar a sessão",
+        "logout": "Sair",
         "new_folder": "Nova pasta",
         "save": "Guardar",
         "secondary": "Secundário",
@@ -118,9 +118,9 @@
         "go_back": "Voltar",
         "inbox": "Caixa de entrada",
         "no_results": "Não foram encontrados resultados",
-        "password": "Senha",
+        "password": "Senha de acesso",
         "primary": "Primário",
-        "remove": "remover",
+        "remove": "Remover",
         "account_menu": "Menu da conta",
         "account_name": "Nome da conta",
         "account_type": "Tipo de conta",
@@ -138,7 +138,7 @@
         "download_messages": "Descarregar as mensagens para:",
         "edit_permissions": "Editar as permissões",
         "email_server": "Servidor de e-mail (ex. \"mail.example.com”)",
-        "passwords_recovery_settings": "Configurações de recuperação de senha",
+        "passwords_recovery_settings": "Configurações de recuperação da senha de acesso",
         "pop3": "POP3",
         "persona_name": "Nome da Identidade",
         "permanent_delete_title": "Confirma que deseja excluir permanentemente esta Indentidade?",
@@ -191,8 +191,8 @@
         "carbonio_community_edition": "Carbonio Community Edition",
         "carbonio_admin_ui_version": "Versão da interface administrativa",
         "allow_permission_to_send_feedback_to_zextras": "Permitir as seguintes permissões de privacidade para o envio de feedback",
-        "allow_permission_to_send_data_to_zextras": "Permitir as seguintes permissões de privacidade para o envio de dados de erro à Zextras",
-        "allow_all_permission_to_send_feedback_to_zextras": "Conceda as seguintes permissões de privacidade para enviar comentários",
+        "allow_permission_to_send_data_to_zextras": "Conceder as permissões seguintes para o envio de dados de erro ao fornecedor",
+        "allow_all_permission_to_send_feedback_to_zextras": "Conceder as permissões seguintes para o envio de comentários",
         "carbonio_backend_version": "Versão do backend",
         "use_our_forum": "Utilize o fórum"
     },
@@ -462,7 +462,8 @@
         "enlarge": "Ampliar janela",
         "hide": "Minimizar janela",
         "reduce": "Redefinir janela",
-        "show_tabs": "Mostrar tudo"
+        "show_tabs": "Mostrar tudo",
+        "open_app": "Abrir na aplicação"
     },
     "feedback": {
         "other": "Outro",
@@ -478,7 +479,7 @@
         "success": "Agradecemos o seu feedback",
         "user_interface": "Interface do utilizador",
         "write_here": "Escreva o seu feedback aqui",
-        "write_here_placeholder_text": "Olá! Comece a escrever seus comentários aqui :) \n\n\nO envio será feito de forma anônima, independentemente se se tratar\nde coisas boas ou ruins",
+        "write_here_placeholder_text": "Olá! Comece a escrever aqui o seu comentário\n\n\nO envio será anónimo\nAgradeçemos o comentario",
         "send_feedback": "ENVIAR COMENTÁRIOS",
         "goto_privacy": "Ir para Privacidade",
         "count_user_in_helper_button_text": "OK",
@@ -493,7 +494,7 @@
         "is_contained_in": "Na pasta"
     },
     "passwords_recovery_settings": {
-        "title": "Configurações de recuperação de senha"
+        "title": "Configurações de recuperação da senha de acesso"
     },
     "primary_account": {
         "title": "Conta principal"
