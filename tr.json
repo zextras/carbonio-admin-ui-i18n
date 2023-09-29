@@ -132,7 +132,6 @@
         "delete": "Sil",
         "delete_after_download": "İndirildikten sonra mesajları sunucudan sil",
         "delete_permanently": "Kalıcı olarak sil",
-        "documentation": "Yardımcı belgeler",
         "dont_save": "Gönderilen mesajların kopyasını kaydetme",
         "download_messages": "Mesajları indirme yeri:",
         "edit_permissions": "İzinleri düzenle",
