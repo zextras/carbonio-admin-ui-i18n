@@ -112,13 +112,13 @@
         "save": "Guardar",
         "secondary": "Secundário",
         "advanced_settings": "Configurações avançadas",
-        "delete": "Excluir",
+        "delete": "Apagar",
         "delete_permanently": "Excluir permanentemente",
         "folders": "Pastas",
         "go_back": "Voltar",
         "inbox": "Caixa de entrada",
         "no_results": "Não foram encontrados resultados",
-        "password": "Senha de acesso",
+        "password": "Senha de Acesso",
         "primary": "Primário",
         "remove": "Remover",
         "account_menu": "Menu da conta",
@@ -486,7 +486,7 @@
         "enable_privacy_setting": "Ativar configurações de privacidade para o envio de feedback"
     },
     "messages": {
-        "permanent_delete_title": "Confirma que deseja excluir permanentemente este elemento?",
+        "permanent_delete_title": "Confirma que deseja apagar permanentemente este elemento?",
         "permanent_delete_body": "Se excluir permanentemente esta Identidade, não poderá recuperá-la. Continuar?"
     },
     "share": {
