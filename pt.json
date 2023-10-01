@@ -113,7 +113,7 @@
         "secondary": "Secundário",
         "advanced_settings": "Configurações avançadas",
         "delete": "Apagar",
-        "delete_permanently": "Excluir permanentemente",
+        "delete_permanently": "Apagar permanentemente",
         "folders": "Pastas",
         "go_back": "Voltar",
         "inbox": "Caixa de entrada",
@@ -141,12 +141,12 @@
         "passwords_recovery_settings": "Configurações de recuperação da senha de acesso",
         "pop3": "POP3",
         "persona_name": "Nome da Identidade",
-        "permanent_delete_title": "Confirma que deseja excluir permanentemente esta Indentidade?",
+        "permanent_delete_title": "Confirma que deseja apagar permanentemente esta Indentidade?",
         "persona": "Identidade",
         "reply_to_field_example": "ex. João da Silva",
         "button": "Botão",
         "click_to_copy": "Clique para copiar",
-        "delete_after_download": "Excluir mensagens do servidor após o download",
+        "delete_after_download": "Apagar mensagens do servidor após o download",
         "save_both_folders": "Guardar uma cópia das mensagens na minha pasta de mensagens Enviadas e na dos delegados",
         "settings_sent_messages": "Configurações de mensagens enviadas",
         "unsaved_changes_line2": "As alterações não gravadas serão perdidas",
@@ -487,7 +487,7 @@
     },
     "messages": {
         "permanent_delete_title": "Confirma que deseja apagar permanentemente este elemento?",
-        "permanent_delete_body": "Se excluir permanentemente esta Identidade, não poderá recuperá-la. Continuar?"
+        "permanent_delete_body": "Se apagar permanentemente esta Identidade, não poderá recuperá-la. Deseja continuar?"
     },
     "share": {
         "is_contained_in": "Na pasta"
