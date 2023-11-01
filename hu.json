@@ -2,5 +2,29 @@
     "board": {
         "close_tab": "Lap bezárása",
         "close_tabs": "Összes lap bezárása"
+    },
+    "message": {
+        "snackbar": {
+            "settings_saved": "A szerkesztések mentése sikeres"
+        }
+    },
+    "messages": {
+        "permanent_delete_title": "Biztosan véglegesen törli ezt az elemet?"
+    },
+    "label": {
+        "cancel": "Mégse",
+        "delete": "Töröl",
+        "discard_changes": "Módosítások elvetése",
+        "filter_folders": "Mappák szűrése",
+        "go_back": "Vissza",
+        "new_folder": "Új mappa",
+        "save": "Mentés",
+        "time_zone": "Időzóna"
+    },
+    "settings": {
+        "choose": "Választ"
+    },
+    "share": {
+        "is_contained_in": "tartalmazza"
     }
 }
