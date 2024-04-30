@@ -74,7 +74,9 @@
     "message": {
         "snackbar": {
             "settings_saved": "Edições guardadas corretamente",
-            "identities_quota_exceeded": "A identidade não foi criada porque atingiu o número máximo de identidades permitido"
+            "identities_quota_exceeded": "A identidade não foi criada porque atingiu o número máximo de identidades permitido",
+            "okay_got_it": "Ok, entendi",
+            "our_interface_does_not_support_tablets_and_smartphones": "Nossa interface não suporta tablets e smartphones, o que pode levar a problemas de visualização. Use o desktop ou laptop para o melhor desempenho. Estamos trabalhando na compatibilidade móvel para o futuro. Obrigado."
         },
         "reload": "\tPretende recarregar agora a aplicação para mostrar o novo idioma?\nCaso contrário, o novo idioma aparecerá da próxima vez que fizer login."
     },
@@ -193,7 +195,17 @@
         "allow_permission_to_send_data_to_zextras": "Conceder as permissões seguintes para o envio de dados de erro ao fornecedor",
         "allow_all_permission_to_send_feedback_to_zextras": "Conceder as permissões seguintes para o envio de comentários",
         "carbonio_backend_version": "Versão do backend",
-        "use_our_forum": "Utilize o fórum"
+        "use_our_forum": "Utilize o fórum",
+        "feedback_head_to_forum_helperText": "<bold>Gostaria de receber uma atualização sobre o seu pedido?</bold><br /><br />Receba apoio de toda a comunidade Carbonio CE criando um post em nosso fórum.",
+        "feedback_head_to_forum_reachout_carbonio": "<bold>Gostaria de falar com nosso helpdesk para obter suporte?</bold><br /><br />Abra um ticket de suporte em nossa página exclusiva para receber ajuda do nosso helpdesk especializado.",
+        "enable_following_permission_to_send_feedback_to_zextras": "Ative as seguintes permissões para enviar um feedback",
+        "send_feedback_helperText_carbonio": "<bold>Gostaria de sugerir alguma mudança ou fazer um comentário?</bold><br /><br />Compartilhe suas ideias com a gente e ajude a melhorar o {{carbonio}}. Estamos ansiosos para ouvir você!",
+        "send_feedback": "Enviar Feedback",
+        "feedback_head_to_forum_helperText_carbonio": "<bold>Gostaria de receber uma atualização sobre o seu pedido?</bold><br /><br />Receba apoio de toda a comunidade {{carbonio}} criando um post em nosso fórum.",
+        "open_a_ticket": "ABRIR UM TICKET",
+        "part_of_project_atom": "Faça parte do <bold>Projeto ATOM</bold>, teste novos recursos antecipadamente, compartilhe sua opinião e ajude a melhorar o Carbonio!",
+        "send_feedback_helperText": "<bold>Gostaria de sugerir alguma mudança ou fazer um comentário?</bold><br /><br />Compartilhe suas ideias com a gente e ajude a melhorar o Carbonio CE. Estamos ansiosos para ouvir você!",
+        "head_to_forum": "IR PARA O FÓRUM"
     },
     "timezone": {
         "brasilia": "{{value}} Brasília",
