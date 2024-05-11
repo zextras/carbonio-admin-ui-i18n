@@ -8,5 +8,19 @@
         "time_zone": "Сааттык алкак",
         "go_back": "Артка",
         "new_folder": "Жаңы папка"
+    },
+    "message": {
+        "snackbar": {
+            "settings_saved": "Оңдоолор сакталды"
+        }
+    },
+    "messages": {
+        "permanent_delete_title": "Бул элементти биротоло өчүрүүнү каалайсызбы?"
+    },
+    "settings": {
+        "choose": "Тандоо"
+    },
+    "share": {
+        "is_contained_in": "камтылган"
     }
 }
