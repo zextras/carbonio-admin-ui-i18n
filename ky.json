@@ -4,6 +4,9 @@
         "save": "Сактоо",
         "filter_folders": "Папкаларды чыпкалоо",
         "delete": "Өчүрүү",
-        "discard_changes": "Өзгөртүүнү жокко чыгаруу"
+        "discard_changes": "Өзгөртүүнү жокко чыгаруу",
+        "time_zone": "Сааттык алкак",
+        "go_back": "Артка",
+        "new_folder": "Жаңы папка"
     }
 }
