@@ -10,7 +10,10 @@
         "new_folder": "Жаңы папка",
         "address": "Дарек",
         "account_name": "Пайдалануучунун аты",
-        "accounts": "Эсептик жазуулар"
+        "accounts": "Эсептик жазуулар",
+        "language": "Тили",
+        "leave_anyway": "Барыбир чыгуу",
+        "logout": "Чыгуу"
     },
     "message": {
         "snackbar": {
