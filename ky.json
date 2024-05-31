@@ -13,7 +13,8 @@
         "accounts": "Эсептик жазуулар",
         "language": "Тили",
         "leave_anyway": "Барыбир чыгуу",
-        "logout": "Чыгуу"
+        "logout": "Чыгуу",
+        "password": "Пароль"
     },
     "message": {
         "snackbar": {
