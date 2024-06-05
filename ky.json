@@ -16,7 +16,9 @@
         "logout": "Чыгуу",
         "password": "Пароль",
         "save_and_leave": "Сактоо жана чыгуу",
-        "unsaved_changes": "Сакталбаган өзгөртүүлөрүңүз бар"
+        "unsaved_changes": "Сакталбаган өзгөртүүлөрүңүз бар",
+        "unsaved_changes_line1": "Сактабастан, бул баракчадан чыгып кетүүнү каалайсызбы?",
+        "unsaved_changes_line2": "Бардык сакталбаган өзгөртүүлөр жоголот"
     },
     "message": {
         "snackbar": {
@@ -31,5 +33,39 @@
     },
     "share": {
         "is_contained_in": "камтылган"
+    },
+    "locale": {
+        "vietnamese": "Вьетнам",
+        "label_italian": "Италья - {{value}}",
+        "label_spanish": "Испан -{{value}}",
+        "dutch": "Голланд",
+        "chinese_china": "Кытай",
+        "English": "Англис",
+        "french": "Француз",
+        "german": "Немец",
+        "hindi": "Хинд",
+        "italian": "Италья",
+        "japanese": "Япон",
+        "label_chinese": "Кытай - {{value}}",
+        "label_dutch": "Голланд -{{value}}",
+        "label_english": "Англис - {{value}}",
+        "label_french": "Француз - {{value}}",
+        "label_german": "Немец - {{value}}",
+        "label_hindi": "Хинд - {{value}}",
+        "label_japanese": "Жапон - {{value}}",
+        "label_portuguese_brazil": "Португал - {{value}}",
+        "label_portuguese": "Португал - {{value}}",
+        "label_romanian": "Румын -{{value}}",
+        "label_russian": "Орус - {{value}}",
+        "label_thai": "Тай - {{value}}",
+        "label_turkish": "Түрк - {{value}}",
+        "polish": "Поляк",
+        "portuguese": "Португалия",
+        "portuguese_brazil": "Португалия (Бразилия)",
+        "romanian": "Румыния",
+        "russian": "Орус",
+        "spanish": "Испан",
+        "thai": "Тай",
+        "turkish": "Түрк"
     }
 }
