@@ -113,15 +113,75 @@
     },
     "message": {
         "snackbar": {
-            "settings_saved": "Оңдоолор сакталды"
+            "settings_saved": "Оңдоолор сакталды",
+            "identities_quota_exceeded": "Альянс түзүү мүмкүн эмес, анткени сиз Альянс түзүү үчүн максималдуу квотадан ашып кеттиңиз",
+            "okay_got_it": "Ооба, түшүнүктүү",
+            "our_interface_does_not_support_tablets_and_smartphones": "Биздин Web client планшеттерди жана смартфондорду колдобойт, бул визуализация көйгөйлөрүнө алып келиши мүмкүн. Сураныч, оптималдуу иштеши үчүн компьютерди же ноутбукту колдонуңуз. Биз келечекте мобилдик түзүлүштөргө шайкеш келтирүү үстүндө иштеп жатабыз. Рахмат."
         },
         "reload": "\tЖаңы тилди көрсөтүү үчүн системаны кайра иштетүүнү каалайсызбы?\n(Болбосо, системага кийинки жолу киргенде жаңы тил пайда болот.)"
     },
     "messages": {
-        "permanent_delete_title": "Бул элементти биротоло өчүрүүнү каалайсызбы?"
+        "permanent_delete_title": "Бул элементти биротоло өчүрүүнү каалайсызбы?",
+        "permanent_delete_body": "Эгер сиз бул Алиасты биротоло жок кылсаңыз, аны калыбына келтире албайсыз. Улантууну каалайсызбы?"
     },
     "settings": {
-        "choose": "Тандоо"
+        "choose": "Тандоо",
+        "out_of_office": {
+            "send_auto_replies": "Авто-жоопторду жөнөтүү",
+            "external_senders": {
+                "send_custom_not_in_organisation": "Кызматкер болуп саналбаган жана даректик китепте жок адамдарга ыңгайлаштырылган билдирүү жөнөтүү",
+                "do_not_send_to_external": "Тышкы жөнөтүүчүгө авто-жоопту жөнөтпөңүз",
+                "send_custom_in_organisation": "Кызматкер эмес адамдарга ыңгайлаштырылган билдирүү жөнөтүңүз",
+                "send_standard_auto_reply": "Авто жооп менен стандарттык билдирүү жөнөтүү"
+            },
+            "labels": {
+                "external_senders": "Тышкы жөнөтүүчүлөр",
+                "all_day": "Күн бою:",
+                "auto_reply_message": "Авто жооп:",
+                "auto_reply_message_external": "Тышкы жөнөтүүчү үчүн авто жооп:",
+                "create_appointment": "Жолугушууну түзүү:",
+                "end_date": "Аяктоо датасы",
+                "end_time": "Аяктоо датасы:",
+                "out_of_office_status": "Офистен тышкары статус:",
+                "send_auto_reply_period": "Төмөнкү мезгил ичинде авто-жоопторду жөнөтүңүз:",
+                "start_date": "Башталган дата",
+                "start_time": "Башталган дата:"
+            },
+            "do_not_send_auto_replies": "Авто жоопторду жөнөтпөңүз",
+            "headings": {
+                "create_appointment": "Календарда жолугушуу",
+                "settings_label": "Офистен тышкары жөнгө салуу",
+                "time_period": "Убакыт мезгили"
+            },
+            "status": {
+                "busy": "Бош эмес"
+            }
+        },
+        "general_tab": "Негизги жөнгө салуулар",
+        "accounts": "Эсептик жазуулар",
+        "app": "Жөнгө салуулар",
+        "button": {
+            "confirm": "Тастыктоо",
+            "primary": "Сактоо"
+        },
+        "general": {
+            "account": "Эсептик жазуу",
+            "account_logout": "Чыгуу",
+            "dark_mode": "Күңүрт режим",
+            "general": "Жалпы жөнгө салуулар",
+            "theme_auto": "Автоматтык",
+            "theme_disabled": "өчүрүлдү",
+            "theme_enabled": "Иштетилди",
+            "theme_options": "Теманын параметрлери"
+        },
+        "search_settings": {
+            "labels": {
+                "include_search_in_shared_folder": "Жалпы папкага издөөнү иштетүү",
+                "include_search_in_spam_folder": "\"Спам\" папкасында издөөнү иштетүү",
+                "include_search_in_trash_folder": "\"Себет\" папкасында издөөнү иштетүү"
+            }
+        },
+        "timezone_and_language": "Убакыт алкагы жана тили"
     },
     "share": {
         "is_contained_in": "камтылган"
@@ -178,7 +238,7 @@
         "europe_helsinki": "{{value}} Хельсинки, Киев, Рига, София, Таллинн, Вильнюс",
         "asia_kamchatka": "{{value}} Анадырь, Петропавловск-Камчатский (RTZ 11)",
         "asia_muscat": "{{value}} Абу-Даби, Маскат",
-        "asia_seoul": "{{value}} Түштүк Корея",
+        "asia_seoul": "{{value}} Корея",
         "asia_tokyo": "{{value}} Япония",
         "etc_gmt+12": "{{value}} дата",
         "asia_yekaterinburg": "{{value}} Екатеринбург (RTZ 4)",
@@ -297,7 +357,47 @@
         "pacific_marquesas": "{{value}} Маркиз аралдары",
         "pacific_midway": "{{value}} Самоа",
         "pacific_tongatapu": "{{value}} Нукуалофа",
-        "utc": "{{value}}Координацияланган дүйнөлүк убакыт"
+        "utc": "{{value}}Координацияланган дүйнөлүк убакыт",
+        "abu_dhabi_muscat": "{{value}} Абу-Даби, Маскат",
+        "alaska": "{{value}} Аляска",
+        "amsterdam_berlin_bern_rome_stockholm_vienna": "{{value}} Амстердам, Берлин, Берн, Рим, Стокгольм, Вена",
+        "anadyr_petropavlovsk_kamchatsky_rtz11": "{{value}} Анадырь, Петропавловск-Камчатский (RTZ 11)",
+        "argentina": "{{value}} Аргентина",
+        "arizona": "{{value}} Аризона",
+        "asuncion": "{{value}} Асунсьон",
+        "athens_beirut_bucharest_istanbul": "{{value}} Афины, Бейрут, Бухарест, Стамбул",
+        "atlantic_time_canada": "{{value}}Атлантика убактысы (Канада)",
+        "azores": "{{value}} Азор аралдары",
+        "baja_california": "{{value}} Төмөнкү Калифорния",
+        "baku": "{{value}} Баку",
+        "bangkok_hanoi_jakarta": "{{value}} Бангкок, Ханой, Джакарта",
+        "beijing_chongqing_hong_kong_urumqi": "{{value}} Пекин, Чунцин, Гонконг, Урумиай",
+        "beirut": "{{value}} Бейрут",
+        "belgrade_bratislava_budapest_ljubljana_prague": "{{value}} Белград, Братислава, Будапешт, Любляна, Прага",
+        "brasilia": "{{value}} Бразилия",
+        "britain_ireland_portugal": "{{value}} Улуубритания, Ирландия, Португалия",
+        "brussels_copenhagen_madrid_paris ": "{{value}} Брюссель, Копенгаген, Мадрид, Париж ",
+        "cape_verde_is": "{{value}} Кабо-Верде аралдары.",
+        "caracas": "{{value}} Каракас",
+        "casablanca": "{{value}} Касабланка",
+        "cayenne_fortaleza": "{{value}} Кайенна, Фортелеза",
+        "central_america": "{{value}} Борбордук Америка",
+        "chennai_kolkata_mumbai_new_delhi": "{{value}} Ченнаи, Калькутта, Мумбаи, Нью-Дели",
+        "chihuahua_la_paz_mazatlan": "{{value}} Чиуауа, Ла-Пас, Масатлан",
+        "chita": "{{value}} Чита",
+        "christmas_island": "{{value}} Рождество аралы",
+        "colombia": "{{value}} Колумбия",
+        "coordinated_universal_time": "{{value}} Координацияланган дүйнөлүк убакыт",
+        "cuiaba": "{{value}} Куяба",
+        "damascus": "{{value}} Дамаск",
+        "darwin": "{{value}} Дарвин",
+        "dateline": "{{value}} Меридиан",
+        "dhaka": "{{value}} Дакка",
+        "egypt": "{{value}} Египет",
+        "ekaterinburg_rtz_4": "{{value}} Екатеринбург (RTZ 4)",
+        "eucla": "{{value}} Евкла",
+        "georgetown_la_paz_manaus_san_juan": "{{value}} Джорджтаун, Ла-Пас, Манаус, Сан-Хуан",
+        "gmt_02": "{{value}} GMT-02"
     },
     "feedback": {
         "behaviors": "Жүрүм-турум",
@@ -332,9 +432,38 @@
     "create": "Түзүү",
     "new": "Түзүү",
     "privacy": {
-        "allow_data_analytics": "Маалыматтардын аналитикасына уруксат берүү"
+        "allow_data_analytics": "Маалыматтардын аналитикасына уруксат берүү",
+        "allow_live_survey_feedbacks": "Реалдуу убакытта сурамжылоого уруксат берүү",
+        "send_full_error_data_to_zextras": "Zextras каталар тууралуу толук маалымат жөнөтүү"
     },
     "labels": {
         "help_center": "Маалымдама борбору"
+    },
+    "search": {
+        "type_or_choose_suggestion": "Издөөнү баштоо үчүн, негизги сөздү киргизүү же тандоо",
+        "unable_to_parse_query": "Издөөнү аяктоого мүмкүн болгон жок, аны тазалап, кайра аракет кылыңыз",
+        "active_input_label": "Негизги сөздөрдү үтүр менен ажыратыңыз же TAB баскычын басыңыз",
+        "already_clear": "Издөө тилкеси тазаланды",
+        "app": "Издөө",
+        "clear": "Издөө шарттарын тазалоо",
+        "idle_input_label": "{{module}} издөө",
+        "module": "Модуль",
+        "start": "Издөөнү баштоо",
+        "type_to_start_search": "Издөөнү баштоо үчүн бир нече негизги сөздөрдү киргизиңиз"
+    },
+    "module": {
+        "app": {
+            "version": "Тиркеменин версиясы"
+        }
+    },
+    "new_tab": "Жаңы тиркеме",
+    "passwords_recovery_settings": {
+        "title": "Паролду калыбына келтирүү үчүн эсептик жазууларды жөнгө салуу"
+    },
+    "primary_account": {
+        "title": "Негизги эсептик жазууну жөнгө салуу"
+    },
+    "snackbar": {
+        "error": "Бир жерден ката кетти, кайра аракет кылыңыз"
     }
 }
