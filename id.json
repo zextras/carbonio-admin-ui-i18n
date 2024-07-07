@@ -74,7 +74,9 @@
     "message": {
         "snackbar": {
             "settings_saved": "Hasil edit disimpan dengan benar",
-            "identities_quota_exceeded": "Identitas tidak dapat dibuat karena Anda melebihi batas kuota identitas"
+            "identities_quota_exceeded": "Identitas tidak dapat dibuat karena Anda melebihi batas kuota identitas",
+            "okay_got_it": "Oke, saya mengerti",
+            "our_interface_does_not_support_tablets_and_smartphones": "Antarmuka kami tidak mendukung tablet dan smartphone, yang dapat menyebabkan masalah visualisasi. Gunakan desktop atau laptop untuk performa optimal. Kami sedang mengerjakan kompatibilitas seluler untuk masa depan. Terima kasih."
         },
         "reload": "\tAnda ingin memuat ulang aplikasi sekarang agar menampilkan bahasa baru?\n(Jika tidak, bahasa baru akan muncul saat berikutnya Anda masuk.)"
     },
