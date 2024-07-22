@@ -33,7 +33,7 @@
                 "create_appointment": "Crea Appuntamento:",
                 "end_time": "Data di Fine:",
                 "external_senders": "Mittenti Esterni",
-                "send_auto_reply_period": "Invia riposta automatica durante questo periodo:",
+                "send_auto_reply_period": "Invia risposta automatica durante questo periodo:",
                 "start_date": "Data di inizio",
                 "start_time": "Ora di inizio:",
                 "out_of_office_status": "Stato Fuori Ufficio:"
