@@ -279,7 +279,7 @@
                 "include_search_in_trash_folder": "Include Trash Folder in searches"
             }
         },
-        "timezone_and_language": "Time Zone and Language"
+        "timezone_and_language": "Language"
     },
     "share": {
         "is_contained_in": "Is contained in"
@@ -514,9 +514,9 @@
         "yerevan": "{{value}} Yerevan"
     },
     "user_quota": {
-        "limited": "You have filled {{quota}}% of the available space",
+        "limited": "{{used}} of {{limit}} used",
         "space_full": "It seems that all available space is full",
         "title": "User's quota",
-        "unlimited": "You have unlimited space available"
+        "unlimited": "{{used}} of unlimited space"
     }
 }
