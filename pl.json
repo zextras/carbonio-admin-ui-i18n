@@ -75,7 +75,7 @@
             "theme_options": "Opcje stylu"
         },
         "general_tab": "Ogólne",
-        "timezone_and_language": "Strefa czasowa i język",
+        "timezone_and_language": "Język",
         "choose": "Wybierz",
         "accounts": "Konta"
     },
@@ -462,10 +462,10 @@
         "yerevan": "{{value}} Erywań"
     },
     "user_quota": {
-        "limited": "{{quota}}% dostępnej przestrzeni zostało zapełnione",
+        "limited": "użyto {{used}} z {{limit}}",
         "space_full": "Wygląda na to, że cała dostępna przestrzeń jest zapełniona",
         "title": "Limit przestrzeni dla użytkownika",
-        "unlimited": "Masz nieograniczoną ilość dostępnej przestrzeni"
+        "unlimited": "{{used}} z nielimitowanej przestrzeni"
     },
     "module": {
         "app": {
