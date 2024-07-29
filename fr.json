@@ -181,7 +181,7 @@
             },
             "send_auto_replies": "Envoyer des réponses automatiques"
         },
-        "timezone_and_language": "Fuseau horaire et langue",
+        "timezone_and_language": "Langue",
         "search_settings": {
             "labels": {
                 "include_search_in_shared_folder": "Inclure les dossiers partagés dans les recherches",
@@ -471,10 +471,10 @@
     },
     "new_tab": "Nouvel onglet",
     "user_quota": {
-        "limited": "Vous avez utilisé {{quota}}% de votre espace disponible",
+        "limited": "{{used}} sur {{limit}} utilisés",
         "space_full": "Il semble que tout l'espace disponible soit plein",
         "title": "Quota de l'utilisateur",
-        "unlimited": "Vous disposez d'un espace illimité"
+        "unlimited": "{{used}} d'un espace illimité"
     },
     "feedback": {
         "other": "Autre",
