@@ -49,7 +49,7 @@
             }
         },
         "general_tab": "Generale",
-        "timezone_and_language": "Fuso Orario e Lingua",
+        "timezone_and_language": "Lingua",
         "search_settings": {
             "labels": {
                 "include_search_in_shared_folder": "Includi Cartelle Condivise nelle ricerche",
@@ -87,8 +87,8 @@
         "reload": "\tVuoi ricaricare l'applicazione per vedere la nuova lingua?\n(Altrimenti, la nuova lingua verrà applicata al prossimo accesso.)"
     },
     "user_quota": {
-        "limited": "Hai occupato {{quota}}% dello spazio disponibile",
-        "unlimited": "Spazio disponibile illimitato",
+        "limited": "{{used}} di {{limit}} utilizzato",
+        "unlimited": "{{used}} di spazio illimitato",
         "space_full": "Sembra che tutto lo spazio disponibile sia stato occupato",
         "title": "Quota Utente"
     },
