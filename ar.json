@@ -1,5 +1,9 @@
 {
     "label": {
-        "cancel": "إلغاء"
+        "cancel": "إلغاء",
+        "filter_folders": "تصفية المجلدات",
+        "go_back": "الرجوع للخلف",
+        "delete": "حذف",
+        "discard_changes": "تجاهل التغييرات"
     }
 }
