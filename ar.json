@@ -5,6 +5,7 @@
         "go_back": "الرجوع للخلف",
         "delete": "حذف",
         "discard_changes": "تجاهل التغييرات",
-        "new_folder": "مجلد جديد"
+        "new_folder": "مجلد جديد",
+        "save": "حفظ"
     }
 }
