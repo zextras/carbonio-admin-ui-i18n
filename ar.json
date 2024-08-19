@@ -6,6 +6,10 @@
         "delete": "حذف",
         "discard_changes": "تجاهل التغييرات",
         "new_folder": "مجلد جديد",
-        "save": "حفظ"
+        "save": "حفظ",
+        "time_zone": "المنطقة الزمنية"
+    },
+    "messages": {
+        "permanent_delete_title": "هل أنت متأكد من حذف هذا العنصر نهائيا؟"
     }
 }
