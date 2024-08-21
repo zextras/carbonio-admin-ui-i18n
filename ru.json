@@ -47,7 +47,7 @@
                 "busy": "Занят"
             }
         },
-        "timezone_and_language": "Часовой пояс и язык",
+        "timezone_and_language": "Язык",
         "search_settings": {
             "labels": {
                 "include_search_in_shared_folder": "Включить в поиск общую папку",
@@ -90,7 +90,7 @@
         "error": "Что-то пошло не так, повторите попытку"
     },
     "user_quota": {
-        "unlimited": "Доступно неограниченное пространство",
+        "unlimited": "{{used}} неограниченного пространства",
         "limited": "{{used}} из {{limit}} доступного места",
         "space_full": "Все свободное место заполнено",
         "title": "Пользовательская квота"
