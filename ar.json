@@ -1,7 +1,7 @@
 {
     "label": {
         "cancel": "إلغاء",
-        "filter_folders": "تصفية المجلدات",
+        "filter_folders": "فرز المجلدات",
         "go_back": "الرجوع للخلف",
         "delete": "حذف",
         "discard_changes": "تجاهل التغييرات",
@@ -12,5 +12,10 @@
     },
     "messages": {
         "permanent_delete_title": "هل أنت متأكد من حذف هذا العنصر نهائيا؟"
+    },
+    "message": {
+        "snackbar": {
+            "settings_saved": "تم حفظ التعديلات بشكل صحيح"
+        }
     }
 }
