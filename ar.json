@@ -17,5 +17,8 @@
         "snackbar": {
             "settings_saved": "تم حفظ التعديلات بشكل صحيح"
         }
+    },
+    "settings": {
+        "choose": "اختر"
     }
 }
