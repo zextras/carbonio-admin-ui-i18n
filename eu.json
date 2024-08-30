@@ -1,1 +1,27 @@
-{}
+{
+    "label": {
+        "cancel": "Utzi",
+        "clear_search_query": "GARBITU BILAKETA",
+        "filter_folders": "Iragazi karpetak",
+        "go_back": "Itzuli",
+        "new_folder": "Karpeta berria",
+        "delete": "Ezabatu",
+        "discard_changes": "BAZTERTU ALDAKETAK",
+        "save": "Gorde",
+        "time_zone": "Ordu-zona"
+    },
+    "message": {
+        "snackbar": {
+            "settings_saved": "Aldaketak behar bezala gorde dira"
+        }
+    },
+    "messages": {
+        "permanent_delete_title": "Ziur elementu hau betiko ezabatu nahi duzula?"
+    },
+    "settings": {
+        "choose": "Aukeratu"
+    },
+    "share": {
+        "is_contained_in": "barruan dago"
+    }
+}
