@@ -8,7 +8,8 @@
         "delete": "Ezabatu",
         "discard_changes": "BAZTERTU ALDAKETAK",
         "save": "Gorde",
-        "time_zone": "Ordu-zona"
+        "time_zone": "Ordu-zona",
+        "delete_permanently": "Betirako ezabatu"
     },
     "message": {
         "snackbar": {
