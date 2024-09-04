@@ -20,5 +20,8 @@
     },
     "settings": {
         "choose": "اختر"
+    },
+    "share": {
+        "is_contained_in": "ويحتوي على"
     }
 }
