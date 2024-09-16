@@ -518,5 +518,10 @@
         "allow_live_survey_feedbacks": "Consenti sondaggi per i feedback",
         "send_full_error_data_to_zextras": "Invia rapporto di errore completo a Zextras",
         "allow_data_analytics": "Consenti l'analisi dei dati"
+    },
+    "cosPreferences": {
+        "mailOptions": {
+            "placeholderFileUploadMaxSizePerFile": "Dimensione massima consentita per ogni allegato, espressa in byte"
+        }
     }
 }
