@@ -521,7 +521,7 @@
     },
     "cosPreferences": {
         "mailOptions": {
-            "placeholderFileUploadMaxSizePerFile": "Taille maximale du fichier pour chaque pièce jointe en octets"
+            "placeholderFileUploadMaxSizePerFile": "Taille maximale autorisée (en octets) pour chaque pièce jointe"
         }
     }
 }
