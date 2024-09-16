@@ -518,10 +518,5 @@
         "allow_live_survey_feedbacks": "Zezwalaj na opinie z ankiet",
         "send_full_error_data_to_zextras": "Wysyłaj pełne dane o błędach do Zextras",
         "allow_data_analytics": "Zezwalaj na analitykę danych"
-    },
-    "cosPreferences": {
-        "mailOptions": {
-            "placeholderFileUploadMaxSizePerFile": "Max. rozmiar pliku dla jakiegokolwiek załącznika w bajtach"
-        }
     }
 }
