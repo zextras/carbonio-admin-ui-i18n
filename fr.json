@@ -518,10 +518,5 @@
         "allow_data_analytics": "Autoriser l'analyse des données",
         "allow_live_survey_feedbacks": "Autoriser l'envoi de données d'analyse",
         "send_full_error_data_to_zextras": "Envoyer les données d'erreurs complètes à Zextras"
-    },
-    "cosPreferences": {
-        "mailOptions": {
-            "placeholderFileUploadMaxSizePerFile": "Taille maximale autorisée (en octets) pour chaque pièce jointe"
-        }
     }
 }
