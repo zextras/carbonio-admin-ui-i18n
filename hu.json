@@ -20,7 +20,8 @@
         "new_folder": "Új mappa",
         "save": "Mentés",
         "time_zone": "Időzóna",
-        "delete_permanently": "Végleges törlés"
+        "delete_permanently": "Végleges törlés",
+        "clear_search_query": "KERESÉS TÖRLÉSE"
     },
     "settings": {
         "choose": "Választ"
