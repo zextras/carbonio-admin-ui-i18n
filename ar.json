@@ -8,7 +8,8 @@
         "new_folder": "مجلد جديد",
         "save": "حفظ",
         "time_zone": "المنطقة الزمنية",
-        "clear_search_query": "مسح البحث"
+        "clear_search_query": "مسح البحث",
+        "delete_permanently": "حذفها نهائياً"
     },
     "messages": {
         "permanent_delete_title": "هل أنت متأكد من حذف هذا العنصر نهائيا؟"
