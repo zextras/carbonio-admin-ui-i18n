@@ -518,10 +518,5 @@
         "space_full": "It seems that all available space is full",
         "title": "User's quota",
         "unlimited": "{{used}} of unlimited space"
-    },
-    "cosPreferences": {
-        "mailOptions": {
-            "placeholderFileUploadMaxSizePerFile": "Maximum size (bytes) allowed for each attachment"
-        }
     }
 }
