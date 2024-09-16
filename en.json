@@ -521,7 +521,7 @@
     },
     "cosPreferences": {
         "mailOptions": {
-            "placeholderFileUploadMaxSizePerFile": "Maximum file size for each attachment in bytes"
+            "placeholderFileUploadMaxSizePerFile": "Maximum size (bytes) allowed for each attachment"
         }
     }
 }
