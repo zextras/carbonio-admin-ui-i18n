@@ -87,8 +87,8 @@
     },
     "new_tab": "Nova aba",
     "user_quota": {
-        "limited": "Você utilizou {{quota}}% do espaço disponível",
-        "unlimited": "Sem limite de cota",
+        "limited": "Usado {{used}} de {{limit}}",
+        "unlimited": "{{used}} do espaço ilimitado",
         "space_full": "Todo o espaço alocado foi ocupado",
         "title": "Cota de usuário"
     },
