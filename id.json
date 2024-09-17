@@ -59,7 +59,7 @@
             "dark_mode": "Mode Gelap"
         },
         "general_tab": "Umum",
-        "timezone_and_language": "Zona Waktu dan Bahasa",
+        "timezone_and_language": "Bahasa",
         "accounts": "Akun",
         "choose": "Pilih",
         "search_settings": {
@@ -90,8 +90,8 @@
         "error": "Terjadi kesalahan, coba lagi"
     },
     "user_quota": {
-        "limited": "{{quota}} % ruang yang tersedia sudah digunakan",
-        "unlimited": "Anda memiliki ruang tak terbatas",
+        "limited": "{{used}} dari {{limit}} digunakan",
+        "unlimited": "{{used}} dari ruang tak terbatas",
         "space_full": "Tampaknya semua ruang yang tersedia sudah penuh",
         "title": "Kuota pengguna"
     },
