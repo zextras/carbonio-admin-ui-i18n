@@ -90,8 +90,8 @@
     },
     "new_tab": "Nueva pestaña",
     "user_quota": {
-        "limited": "Ocupado {{quota}}% del espacio disponible",
-        "unlimited": "No hay límite de cuota",
+        "limited": "{{used}} de {{limit}} utilizado",
+        "unlimited": "{{used}} de espacio ilimitado",
         "space_full": "Todo el espacio asignado está ocupado",
         "title": "Cuota de espacio"
     },
