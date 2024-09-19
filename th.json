@@ -47,7 +47,7 @@
             "dark_mode": "โหมดมืด"
         },
         "general_tab": "ทั่วไป",
-        "timezone_and_language": "เขตเวลาและภาษา",
+        "timezone_and_language": "ภาษา",
         "accounts": "บัญชีผู้ใช้",
         "choose": "เลือก",
         "search_settings": {
@@ -87,8 +87,8 @@
     },
     "new_tab": "แท็บใหม่",
     "user_quota": {
-        "limited": "คุณได้ใช้ {{quota}}% ของพื้นที่ว่างที่มีอยู่",
-        "unlimited": "คุณมีพื้นที่ว่างไม่จำกัด",
+        "limited": "ใช้ไปแล้ว {{used}} จาก {{limit}}",
+        "unlimited": "{{used}} ของพื้นที่ไม่จำกัด",
         "space_full": "ดูเหมือนว่าพื้นที่ว่างทั้งหมดจะเต็มแล้ว",
         "title": "โควต้าของผู้ใช้"
     },
