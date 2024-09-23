@@ -1,15 +1,23 @@
 {
     "board": {
         "close_tab": "Lap bezárása",
-        "close_tabs": "Összes lap bezárása"
+        "close_tabs": "Összes lap bezárása",
+        "enlarge": "Tábla nagyítása",
+        "hide": "Tábla elrejtése",
+        "open_app": "Megnyitás az alkalmazásban",
+        "reduce": "Tábla csökkentése",
+        "show_tabs": "A többi lap mutatása"
     },
     "message": {
         "snackbar": {
-            "settings_saved": "A szerkesztések mentése sikeres"
-        }
+            "settings_saved": "A szerkesztések mentése sikeres",
+            "identities_quota_exceeded": "Az identitás nem hozható létre, mert túllépte az identitáskvótáját"
+        },
+        "reload": "\tBetölti újra az alkalmazást most, hogy az új nyelv látható legyen?\n(Ellenkező esetben az új nyelv a legközelebbi bejelentkezéskor lesz látható.)"
     },
     "messages": {
-        "permanent_delete_title": "Biztosan véglegesen törli ezt az elemet?"
+        "permanent_delete_title": "Biztosan véglegesen törli ezt az elemet?",
+        "permanent_delete_body": "Ha véglegesen törlöd ezt a személyazonosságot, nem fogod tudni helyreállítani. Folytatás?"
     },
     "label": {
         "cancel": "Mégse",
@@ -21,10 +29,106 @@
         "save": "Mentés",
         "time_zone": "Időzóna",
         "delete_permanently": "Végleges törlés",
-        "clear_search_query": "KERESÉS TÖRLÉSE"
+        "clear_search_query": "KERESÉS TÖRLÉSE",
+        "account_name": "Fiók neve",
+        "account_type": "Fiók típusa",
+        "account_username": "Fiók felhasználóneve",
+        "accounts": "Fiókok",
+        "accounts_list": "Fiókok listája",
+        "add_external_account": "Külső fiók hozzáadása",
+        "add_new_email": "Új e-mail-cím hozzáadása",
+        "add_recovery_email": "Helyreállítási e-mail-cím hozzáadása",
+        "address": "Cím",
+        "advanced_settings": "Speciális Beállítások",
+        "add_persona": "Személyazonosság hozzáadása",
+        "button": "Gomb",
+        "change_pop": "POP-port módosítása",
+        "choose_account": "Válasszon egy fiókot",
+        "choose_folder": "Válasszon mappát",
+        "click_to_copy": "Kattintson a másoláshoz",
+        "delegates": "Delegáltak",
+        "delete_after_download": "Üzenetek törlése a szerverről a letöltés után",
+        "dont_save": "Ne mentsen másolatot a küldött üzenetekről",
+        "download_messages": "Üzenetek letöltése ide:",
+        "edit_permissions": "Jogosultságok szerkesztése",
+        "edit_to_start_search": "Szerkessze a keresést, hogy újat kezdhessen",
+        "email_address": "E-mail-cím",
+        "feedback": "Visszajelzés",
+        "folder": "Mappa: Új külső fiók 3",
+        "folders": "Mappák",
+        "from_name": "Feladó: \"Név\"",
+        "imap": "IMAP",
+        "inbox": "Beérkező levelek",
+        "language": "Nyelv",
+        "leave_anyway": "Mégis kilép",
+        "logout": "Kijelentkezés",
+        "no": "Nem",
+        "no_results": "Nincs találat",
+        "out_of_office": "Házon kívül",
+        "password": "Jelszó",
+        "persona_name": "Név",
+        "pop3": "POP3",
+        "pop_port": "POP port",
+        "persona": "Személyazonosság",
+        "persona_settings": "Személyazonosság beállításai",
+        "primary": "Elsődleges",
+        "recipents": "Címzettek",
+        "recovery_email": "Helyreállítási e-mail",
+        "reload": "Újratöltés",
+        "remove": "eltávolítás",
+        "reply_to_field_example": "pl. Kovács Róbert",
+        "save_and_leave": "Mentés és kilépés",
+        "save_delegate_folder": "Másolat mentése a küldött üzenetekről a meghatalmazott Elküldött levelek mappájába",
+        "save_to_my_sent_folder": "Másolat mentése a küldött üzenetekről a saját Elküldött levelek mappába",
+        "secondary": "Másodlagos",
+        "settings_sent_messages": "Az elküldött üzenetek beállításai",
+        "test_settings": "Tesztbeállítások",
+        "unsaved_changes": "Nem mentett módosításai vannak",
+        "unsaved_changes_line2": "Az összes nem mentett módosítás elvész",
+        "use_personas_line1": "Használja a személyazonosságokat hogy gyorsan válthassa a beállításokat email küldésnél.",
+        "use_ssl": "Titkosított kapcsolat (SSL) használata a szerver eléréséhez",
+        "when_composing": "Üzenetek írásakor, megválaszolásakor és továbbításakor a következő mappá(k)ban:",
+        "when_replying": "Válasznál vagy továbbításnál az üzenetek címzettje:",
+        "passwords_recovery_settings": "Jelszó-helyreállítási fiók beállításai",
+        "unsaved_changes_line1": "Biztosan mentés nélkül szeretné elhagyni ezt az oldalt?",
+        "add_delegate": "Delegált hozzáadása",
+        "email_server": "E-mail szerver (pl. “mail.example.com”)",
+        "external_account_settings": "Külső fiók beállításai",
+        "permanent_delete_title": "Biztosan véglegesen törli ezt a személyazonosságot?",
+        "account_menu": "Fiók menü",
+        "save_both_folders": "Az elküldött üzenetek másolatának mentése a saját Elküldött mappába és a meghatalmazott mappájába",
+        "set_reply_to_field": "Állítsa az e-mail \"Válasz\" mezőjét a következőre:",
+        "use_persona": "Használja ezt a személyazonosságot",
+        "use_personas_line2": "Például, ha néha e-maileket küld egy adott szerepkörben a munkahelyén, hozzon létre egy személyazonosságot az adott szerepkörben."
     },
     "settings": {
-        "choose": "Választ"
+        "choose": "Választ",
+        "accounts": "Fiókok",
+        "app": "Beállítások",
+        "button": {
+            "confirm": "Megerősítés",
+            "primary": "Mentés"
+        },
+        "general": {
+            "account": "Fiók",
+            "account_logout": "Kijelentkezés",
+            "dark_mode": "Sötét mód",
+            "general": "Általános beállítások",
+            "theme_auto": "Auto",
+            "theme_disabled": "Letiltva",
+            "theme_enabled": "Engedélyezve",
+            "theme_options": "Téma beállítások"
+        },
+        "general_tab": "Általános",
+        "out_of_office": {
+            "do_not_send_auto_replies": "Ne küldjön automatikus választ",
+            "external_senders": {
+                "do_not_send_to_external": "Külső feladóknak ne küldjön automatikus válaszüzenetet",
+                "send_custom_in_organisation": "Egyéni üzenet küldése azoknak, akik nem tagjai a szervezetemnek",
+                "send_custom_not_in_organisation": "Egyéni üzenet küldése azoknak, akik nem tagjai a szervezetemnek és a címjegyzékemnek",
+                "send_standard_auto_reply": "Szokásos automatikus válaszüzenet küldése"
+            }
+        }
     },
     "share": {
         "is_contained_in": "tartalmazza"
@@ -115,5 +219,77 @@
         "vladivostok_magadan": "{{value}} vladivostok_magadan_rtz_9",
         "yangon": "{{value}} Yangon",
         "yerevan": "{{value}} Jereván"
+    },
+    "feedback": {
+        "behaviors": "Viselkedés",
+        "error": "Hiba történt a visszajelzés elküldése során",
+        "hint": "Ne feledje: határozza meg a témát modulok és részterület-választók segítségével, mielőtt visszajelzést írna. Köszönjük a segítségét.",
+        "missing_features": "Hiányzó jellemzők",
+        "other": "Egyéb",
+        "report_something": "Szeretne jelenteni valamit?",
+        "select_a_module": "Modul kiválasztása",
+        "select_a_topic": "Témakör kiválasztása",
+        "send": "KÜLDÉS",
+        "success": "Köszönjük visszajelzését!",
+        "user_interface": "Felhasználói felület",
+        "write_here": "Itt írhat visszajelzést",
+        "explanation": "Kérjük, adjon visszajelzést a Zextras Serverrel kapcsolatos új tapasztalatairól. A véleménye fontos hogy fejlesszük a termékünket. Ossza meg velünk a gondolatait."
+    },
+    "locale": {
+        "English": "Angol",
+        "chinese_china": "Kínai (Kína)",
+        "dutch": "Holland",
+        "french": "Francia",
+        "german": "Német",
+        "hindi": "Hindi",
+        "italian": "Olasz",
+        "japanese": "Japán",
+        "label_chinese": "Kínai (Kína) - {{value}}",
+        "label_dutch": "Holland - {{value}}",
+        "label_english": "Angol - {{value}}",
+        "label_french": "Francia - {{value}}",
+        "label_german": "Német - {{value}}",
+        "label_hindi": "Hindi - {{value}}",
+        "label_italian": "Olasz - {{value}}",
+        "label_japanese": "Japán - {{value}}",
+        "label_portuguese": "Portugál - {{value}}",
+        "label_portuguese_brazil": "Portugál - {{value}}",
+        "label_romanian": "Román - {{value}}",
+        "label_spanish": "Spanyol - {{value}}",
+        "label_thai": "Thai - {{value}}",
+        "label_russian": "Orosz - {{value}}",
+        "label_turkish": "Török - {{value}}",
+        "polish": "Lengyel",
+        "portuguese": "Portugál",
+        "portuguese_brazil": "Portugál (Brazília)",
+        "romanian": "Román",
+        "russian": "Orosz",
+        "spanish": "Spanyol",
+        "thai": "Thai",
+        "turkish": "Török",
+        "vietnamese": "Vietnámi"
+    },
+    "module": {
+        "app": {
+            "version": "Alkalmazás verziói"
+        }
+    },
+    "new": "Új",
+    "new_tab": "Új fül",
+    "passwords_recovery_settings": {
+        "title": "Jelszó-helyreállítási fiók beállításai"
+    },
+    "primary_account": {
+        "title": "Elsődleges fiókbeállítások"
+    },
+    "search": {
+        "app": "Keresés",
+        "clear": "Keresés törlése",
+        "idle_input_label": "Keresés itt: {{module}}",
+        "module": "Modul",
+        "start": "Keresés indítása",
+        "type_or_choose_suggestion": "Írjon be vagy válasszon néhány kulcsszavat a keresés indításához",
+        "type_to_start_search": "Írjon be kulcsszavakat a keresés kezdéséhez",
+        "unable_to_parse_query": "Nem sikerült befejezni a keresést, törölje és próbálja újra"
     }
 }
