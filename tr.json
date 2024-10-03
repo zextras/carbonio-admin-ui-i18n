@@ -70,7 +70,7 @@
                 "busy": "Meşgul"
             }
         },
-        "timezone_and_language": "Saat Dilimi ve Dil",
+        "timezone_and_language": "Dil",
         "search_settings": {
             "labels": {
                 "include_search_in_shared_folder": "Aramalara Paylaşılan Klasörü ekle",
@@ -85,8 +85,8 @@
         "error": "Bir hata oluştu, lütfen tekrar deneyin"
     },
     "user_quota": {
-        "limited": "Kullanılabilir kotanızdan % {{quota}} kullanıldı",
-        "unlimited": "Sınırsız kota kullanıyorsunuz",
+        "limited": "Kullanılan {{used}} / Limit  {{limit}}",
+        "unlimited": "Sınırsız kotadan {{used}} kullanıldı",
         "space_full": "Tüm kullanılabilir kotanız doldu",
         "title": "Kullanıcı kotası"
     },
