@@ -96,6 +96,20 @@
         "us_canada_mountain": "{{value}} جبل الولايات المتحدة / كندا",
         "us_canada_pacific": "{{value}} الولايات المتحدة / كندا والمحيط الهادئ",
         "yangon": "{{value}} يانغون",
-        "yerevan": "{{value}} يريفان"
+        "yerevan": "{{value}} يريفان",
+        "asuncion": "{{value}} أسونسيون",
+        "azores": "{{value}} جزر الأزور",
+        "athens_beirut_bucharest_istanbul": "{{value}} أثينا، بيروت، بوخارست، اسطنبول",
+        "baja_california": "{{value}} باها كاليفورنيا",
+        "baku": "{{value}} باكو",
+        "abu_dhabi_muscat": "{{value}} أبو ظبي، مسقط",
+        "arizona": "{{value}} أريزونا",
+        "atlantic_time_canada": "{{value}} التوقيت الأطلسي (كندا)",
+        "alaska": "{{value}} ألاسكا",
+        "amsterdam_berlin_bern_rome_stockholm_vienna": "{{value}} أمستردام، برلين، برن، روما، ستوكهولم، فيينا",
+        "anadyr_petropavlovsk_kamchatsky_rtz11": "{{value}} أنادير، بتروبافلوفسك كامتشاتسكي (RTZ 11)",
+        "argentina": "{{value}} الأرجنتين",
+        "bangkok_hanoi_jakarta": "{{value}} بانكوك، هانوي، جاكرتا",
+        "beijing_chongqing_hong_kong_urumqi": "{{value}} بكين، تشونغتشينغ، هونغ كونغ، أورومتشي"
     }
 }
