@@ -140,7 +140,15 @@
         "use_personas_line2": "For example, if you sometimes send e-mails in a particular role at work, create a persona for that.",
         "use_ssl": "Use an encrypter connection (SSL) when accessing this server",
         "when_composing": "When composing, replying to or forwarding messages in folder(s):",
-        "when_replying": "When replying or forwarding messages sent to:"
+        "when_replying": "When replying or forwarding messages sent to:",
+        "mails_quota_mb": "Mails Quota (MB)",
+        "mails_quota_gb": "Mails Quota (GB)",
+        "mails_quota_used_mb": "Mails Quota Used (MB)",
+        "mails_quota_used_gb": "Mails Quota Used (GB)",
+        "files_quota_mb": "Files Quota (MB)",
+        "files_quota_used_mb": "Files Quota Used (MB)",
+        "files_quota_gb": "Files Quota (GB)",
+        "files_quota_used_gb": "Files Quota Used (GB)"
     },
     "labels": {
         "help_center": "Help Center"
