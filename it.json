@@ -214,7 +214,14 @@
         "send_feedback_helperText_carbonio": "<bold> Vuoi suggerirci qualcosa o comunicare con noi?</bold><br /><br />Condividi cosa ne pensi e aiutaci a rendere {{carbonio}} sempre migliore. Non vediamo l'ora di sentire la tua opinione!",
         "use_our_forum": "Utilizza il nostro forum",
         "feedback_head_to_forum_helperText": "<bold> Vuoi ricevere aggiornamenti relativi alla tua richiesta?</bold><br /><br /> Trova supporto dall'intera community Carbonio CE creando un post sul nostro forum.",
-        "feedback_head_to_forum_reachout_carbonio": "<bold> Vuoi contattare il nostro helpdesk per ricevere supporto?</bold><br /><br />Apri un ticket di supporto direttamente dalla nostra pagina dedicata per ricevere assistenza dai nostri esperti."
+        "feedback_head_to_forum_reachout_carbonio": "<bold> Vuoi contattare il nostro helpdesk per ricevere supporto?</bold><br /><br />Apri un ticket di supporto direttamente dalla nostra pagina dedicata per ricevere assistenza dai nostri esperti.",
+        "mails_quota_mb": "Quota Mails (MB)",
+        "mails_quota_gb": "Quota Mails (GB)",
+        "mails_quota_used_mb": "Quota Mails Utilizzata (MB)",
+        "files_quota_mb": "Quota Files (MB)",
+        "files_quota_gb": "Quota Files (GB)",
+        "files_quota_used_mb": "Quota Files Utilizzata (MB)",
+        "files_quota_used_gb": "Quota Files Utilizzata (GB)"
     },
     "locale": {
         "English": "Inglese",
