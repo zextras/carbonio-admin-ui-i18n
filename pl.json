@@ -189,7 +189,15 @@
         "use_our_forum": "Użyj naszego forum",
         "send_feedback_helperText": "<bold>Chcesz zasugerować jakąś zmianę lub coś nam powiedzieć?</bold><br /><br />Podziel się z nami Twoimi myślami i pomóż tworzyć lepsze Carbonio CE. Chętnie wysłuchamy!",
         "send_feedback_helperText_carbonio": "<bold>Chcesz zasugerować jakąś zmianę lub coś nam powiedzieć?</bold><br /><br />Podziel się z nami Twoimi myślami i pomóż tworzyć lepsze {{carbonio}}. Chętnie wysłuchamy!",
-        "feedback_head_to_forum_helperText_carbonio": "<bold>Czy chcesz otrzymać aktualizację dot. Twojego zgłoszenia?</bold><br /><br />Otrzymaj wsparcie od całej społeczności {{carbonio}} tworząc post na naszym forum."
+        "feedback_head_to_forum_helperText_carbonio": "<bold>Czy chcesz otrzymać aktualizację dot. Twojego zgłoszenia?</bold><br /><br />Otrzymaj wsparcie od całej społeczności {{carbonio}} tworząc post na naszym forum.",
+        "mails_quota_used_gb": "Użyta przestrzeń dla E-maili (GB)",
+        "files_quota_gb": "Limit przestrzeni dla Plików (GB)",
+        "files_quota_mb": "Limit przestrzeni dla Plików (MB)",
+        "mails_quota_mb": "Limit przestrzeni dla E-maili (MB)",
+        "mails_quota_gb": "Limit przestrzeni dla E-maili (GB)",
+        "mails_quota_used_mb": "Użyta przestrzeń dla E-maili (MB)",
+        "files_quota_used_mb": "Użyta przestrzeń dla Plików (MB)",
+        "files_quota_used_gb": "Użyta przestrzeń dla Plików (GB)"
     },
     "board": {
         "close_tab": "Zamknij kartę",
