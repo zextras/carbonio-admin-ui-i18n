@@ -205,7 +205,15 @@
         "head_to_forum": "Ir para o fórum",
         "part_of_project_atom": "Faça parte do <bold>Projeto ATOM</bold>, teste antecipadamente as novas funcionalidades, compartilhe o seu feedback e ajude a melhorar o Carbonio!",
         "send_feedback": "Envie seu feedback",
-        "send_feedback_helperText": "<bold>Gostaria de sugerir alguma alteração ou nos dizer algo? </bold><br /><br />Compartilhe suas ideias conosco e ajude a melhorar o Carbonio CE. Queremos ouvir sua opinião!"
+        "send_feedback_helperText": "<bold>Gostaria de sugerir alguma alteração ou nos dizer algo? </bold><br /><br />Compartilhe suas ideias conosco e ajude a melhorar o Carbonio CE. Queremos ouvir sua opinião!",
+        "mails_quota_mb": "Cota de Emails (MB)",
+        "mails_quota_gb": "Cota de Emails (GB)",
+        "files_quota_gb": "Cota de Arquivos (GB)",
+        "files_quota_used_mb": "Cota de Arquivos Utilizada (MB)",
+        "files_quota_used_gb": "Cota de Arquivos Utilizada (GB)",
+        "mails_quota_used_gb": "Cota de Emails Utilizada (GB)",
+        "mails_quota_used_mb": "Cota de Emails Utilizada (MB)",
+        "files_quota_mb": "Cota de Arquivos (MB)"
     },
     "timezone": {
         "brasilia": "{{value}} Brasília",
