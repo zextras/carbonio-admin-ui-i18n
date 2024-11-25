@@ -109,7 +109,15 @@
         "send_feedback_helperText_carbonio": "<bold>Souhaitez-vous suggérer des changements ou nous dire quelque chose ?</bold><br /><br />Partagez vos idées avec nous et aidez nous à façonner un meilleur {{carbonio}}. Nous sommes impatient d'avoir de vos nouvelles !",
         "send_feedback_helperText": "<bold>Souhaitez-vous suggérer des changements ou nous dire quelque chose ?</bold><br /><br />Partagez vos idées avec nous et aidez nous à façonner un meilleur Carbonio CE. Nous sommes impatient d'avoir de vos nouvelles !",
         "use_our_forum": "Utilisez notre forum à la place",
-        "feedback_head_to_forum_helperText_carbonio": "<bold>Souhaitez-vous recevoir une mise à jour à propos de votre demande ?</bold><br /><br />Obtenez du support de la part de la communauté {{carbonio}} en créant un post sur notre forum."
+        "feedback_head_to_forum_helperText_carbonio": "<bold>Souhaitez-vous recevoir une mise à jour à propos de votre demande ?</bold><br /><br />Obtenez du support de la part de la communauté {{carbonio}} en créant un post sur notre forum.",
+        "mails_quota_gb": "Quota des emails (Go)",
+        "mails_quota_mb": "Quota des emails (Mo)",
+        "files_quota_gb": "Quota des fichiers (Go)",
+        "files_quota_used_gb": "Usage des fichiers (Go)",
+        "mails_quota_used_gb": "Usage des emails (Go)",
+        "files_quota_used_mb": "Usage des fichiers (Mo)",
+        "mails_quota_used_mb": "Usage des emails (Mo)",
+        "files_quota_mb": "Quota des fichiers (Mo)"
     },
     "search": {
         "clear": "Effacer la saisie de recherche",
