@@ -205,7 +205,11 @@
         "part_of_project_atom": "Станьте частью <bold>Проекта ATOM</bold>, заранее тестируйте новые функции, делитесь впечатлениями и помогите улучшить Carbonio!",
         "send_feedback": "Отправить отзыв",
         "use_our_forum": "Пишите на форуме",
-        "send_feedback_helperText": "<bold>Помогите нам улучшить продукт?</bold><br /><br />Поделитесь своим мнением и помогите улучшить Carbonio CE. Мы с нетерпением ждем вашего отзыва!"
+        "send_feedback_helperText": "<bold>Помогите нам улучшить продукт?</bold><br /><br />Поделитесь своим мнением и помогите улучшить Carbonio CE. Мы с нетерпением ждем вашего отзыва!",
+        "mails_quota_mb": "Квота почтового ящика (MB)",
+        "mails_quota_gb": "Квота почтового ящика (GB)",
+        "files_quota_mb": "Квота Files (MB)",
+        "files_quota_gb": "Квота Files (GB)"
     },
     "board": {
         "close_tab": "Закрыть вкладку",
