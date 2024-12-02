@@ -205,7 +205,15 @@
         "send_feedback": "Enviar comentarios",
         "send_feedback_helperText": "<bold>¿Quiere sugerir algún cambio o comentar algo?</bold><br /><br />Comparta su opinión con nosotros y ayude a mejorar Carbonio CE. ¡Estaremos complacidos en conocer su opinión!",
         "send_feedback_helperText_carbonio": "<bold>¿Quiere sugerir algún cambio o comentar algo?</bold><br /><br />Comparta su opinión con nosotros y ayude a mejorar {{carbonio}}. ¡Estaremos complacidos en conocer su opinión!",
-        "use_our_forum": "Utilice el foro"
+        "use_our_forum": "Utilice el foro",
+        "mails_quota_mb": "Cuota de correo (MB)",
+        "mails_quota_gb": "Cuota de correo (GB)",
+        "mails_quota_used_mb": "Cuota de correo utilizada (MB)",
+        "mails_quota_used_gb": "Cuota de correo utilizada (GB)",
+        "files_quota_mb": "Cuota de Files (MB)",
+        "files_quota_gb": "Cuota de Files (GB)",
+        "files_quota_used_mb": "Cuota de FIles utilizada (MB)",
+        "files_quota_used_gb": "Cuota de FIles utilizada (GB)"
     },
     "timezone": {
         "argentina": "{{value}} Argentina",
