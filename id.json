@@ -205,7 +205,15 @@
         "send_feedback": "Kirim Umpan Balik",
         "send_feedback_helperText": "<bold>Apakah Anda ingin menyarankan perubahan atau memberi tahu kami sesuatu?</bold><br /><br />Bagikan pemikiran Anda dan bantu tingkatkan Carbonio CE. Kami menantikan bantuan Anda!",
         "send_feedback_helperText_carbonio": "<bold>Apakah Anda ingin menyarankan perubahan atau memberi tahu kami sesuatu?</bold><br /><br />Bagikan pemikiran Anda dan bantu tingkatkan {{carbonio}}. Kami menantikan bantuan Anda!",
-        "use_our_forum": "Gunakan forum kami"
+        "use_our_forum": "Gunakan forum kami",
+        "mails_quota_mb": "Kuota Email (MB)",
+        "mails_quota_gb": "Kuota Email (GB)",
+        "mails_quota_used_mb": "Kuota Email yang Digunakan (MB)",
+        "files_quota_mb": "Kuota File (MB)",
+        "files_quota_gb": "Kuota File (GB)",
+        "files_quota_used_mb": "Kuota File yang Digunakan (MB)",
+        "files_quota_used_gb": "Kuota File yang Digunakan (GB)",
+        "mails_quota_used_gb": "Kuota Email yang Digunakan (GB)"
     },
     "locale": {
         "portuguese_brazil": "Portugis (Brasil)",
