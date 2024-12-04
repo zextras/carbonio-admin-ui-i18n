@@ -205,7 +205,15 @@
         "open_a_ticket": "เปิดตั๋ว",
         "send_feedback": "ส่งความคิดเห็น",
         "send_feedback_helperText_carbonio": "<bold>คุณต้องการแนะนำการเปลี่ยนแปลงหรือบอกเราบางอย่างกับเราหรือไม่? </bold><br /><br />แบ่งปันความคิดของคุณกับเรา และช่วยกำหนด {{carbonio}} ให้ดียิ่งขึ้น เราหวังว่าจะได้รับความคิดเห็นจากคุณ!",
-        "use_our_forum": "ใช้ฟอรัมของเราแทน"
+        "use_our_forum": "ใช้ฟอรัมของเราแทน",
+        "mails_quota_mb": "โควต้าจดหมาย (MB)",
+        "mails_quota_gb": "โควต้าจดหมาย (GB)",
+        "mails_quota_used_mb": "โควต้าจดหมายที่ใช้ (MB)",
+        "mails_quota_used_gb": "โควต้าจดหมายที่ใช้ (GB)",
+        "files_quota_mb": "โควต้าไฟล์ (MB)",
+        "files_quota_gb": "โควต้าไฟล์ (GB)",
+        "files_quota_used_mb": "โควต้าไฟล์ที่ใช้ (MB)",
+        "files_quota_used_gb": "โควต้าไฟล์ที่ใช้ (GB)"
     },
     "board": {
         "close_tab": "ปิดแท็บ",
