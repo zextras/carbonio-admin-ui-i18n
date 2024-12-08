@@ -111,5 +111,8 @@
         "argentina": "{{value}} الأرجنتين",
         "bangkok_hanoi_jakarta": "{{value}} بانكوك، هانوي، جاكرتا",
         "beijing_chongqing_hong_kong_urumqi": "{{value}} بكين، تشونغتشينغ، هونغ كونغ، أورومتشي"
+    },
+    "board": {
+        "close_tab": "إغلاق التبويب"
     }
 }
