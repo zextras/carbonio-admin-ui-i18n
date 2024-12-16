@@ -80,7 +80,10 @@
         "remove": "أزل",
         "unsaved_changes_line1": "هل أنت متأكد أنك تريد مغادرة هذه الصفحة دون الحفظ؟",
         "unsaved_changes": "لديك تغييرات غير محفوظة",
-        "save_both_folders": "احفظ نسخة من الرسائل المرسلة في مجلد الرسائل المرسلة ومجلد المفوض"
+        "save_both_folders": "احفظ نسخة من الرسائل المرسلة في مجلد الرسائل المرسلة ومجلد المفوض",
+        "enable_all_permission_to_send_feedback_to_zextras": "قم بتفعيل جميع الصلاحيات التالية من قسم الخصوصية لإرسال التعليقات",
+        "enable_following_permission_to_send_feedback_to_zextras": "تفعيل الصلاحيات التالية لإرسال التعليقات",
+        "enable_all__following_permission_to_send_feedback_to_zextras": "قم بتفعيل جميع الصلاحيات التالية من قسم الخصوصية لإرسال التعليقات"
     },
     "messages": {
         "permanent_delete_title": "هل أنت متأكد من حذف هذا العنصر نهائيا؟",
@@ -100,7 +103,7 @@
             "account": "الحساب",
             "account_logout": "الخروج",
             "dark_mode": "الوضع المظلم",
-            "theme_enabled": "ممكن",
+            "theme_enabled": "مفعل",
             "theme_options": "خيارات الموضوع",
             "theme_auto": "آلي",
             "general": "الإعدادات العامة",
@@ -402,7 +405,10 @@
         "user_interface": "واجهة المستخدم",
         "write_here": "اكتب ملاحظاتك هنا",
         "explanation": "يرجى تزويدنا بملاحظاتك حول تجربتك الجديدة مع نظام زيكستراس -Zextras Server-. رأيك مهم بالنسبة لنا لتحسين منتجنا. أخبرنا بأفكارك.",
-        "error": "حدث خطأ أثناء إرسال ملاحظاتك"
+        "error": "حدث خطأ أثناء إرسال ملاحظاتك",
+        "count_user_in_helper_button_text": "نعم، اعتبرني معك!",
+        "enable_feedback": "تفعيل التعليقات",
+        "enable_privacy_setting": "قم بتفعيل إعداد الخصوصية لإرسال التعليقات"
     },
     "passwords_recovery_settings": {
         "title": "إعدادات كلمة السر حساب الاستعادة"
@@ -470,5 +476,6 @@
             "version": "إصدارات التطبيق"
         }
     },
-    "new": "جديدة"
+    "new": "جديدة",
+    "create": "أنشئ"
 }
