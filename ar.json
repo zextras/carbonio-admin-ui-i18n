@@ -83,7 +83,16 @@
         "save_both_folders": "احفظ نسخة من الرسائل المرسلة في مجلد الرسائل المرسلة ومجلد المفوض",
         "enable_all_permission_to_send_feedback_to_zextras": "قم بتفعيل جميع الصلاحيات التالية من قسم الخصوصية لإرسال التعليقات",
         "enable_following_permission_to_send_feedback_to_zextras": "تفعيل الصلاحيات التالية لإرسال التعليقات",
-        "enable_all__following_permission_to_send_feedback_to_zextras": "قم بتفعيل جميع الصلاحيات التالية من قسم الخصوصية لإرسال التعليقات"
+        "enable_all__following_permission_to_send_feedback_to_zextras": "قم بتفعيل جميع الصلاحيات التالية من قسم الخصوصية لإرسال التعليقات",
+        "details_feedback__collected_msg": "عند إرسال الملاحظات، يتم أيضًا إرسال التفاصيل التالية",
+        "allow_all_permission_to_send_feedback_to_zextras": "السماح لجميع الصلاحيات التالية من قسم الخصوصية بإرسال ملاحظات",
+        "allow_permission_to_send_data_to_zextras": "اسمح لجميع الصلاحيات التالية من قسم الخصوصية بإرسال بيانات اﻷخطاء كاملةً إلى مهندسوا زيكستراس -Zextras-",
+        "allow_permission_to_send_feedback_to_zextras": "السماح لجميع الصلاحيات التالية من قسم الخصوصية بإرسال الملاحظات",
+        "carbonio_admin_ui_version": "إصدار واجهة مستخدم مسؤول كاربونيو -Carbonio AdminUI-",
+        "carbonio_backend_version": "إصدار خادم كاربونيو الخلفي -Carbonio Backend-",
+        "carbonio_community_edition": "إصدار كاربونيو للمجتمع -Carbonio Community Edition-",
+        "detailsfeedback__collected_msg": "عند إرسال الملاحظات، يتم أيضًا إرسال التفاصيل التالية",
+        "feedback_head_to_forum_helperText": "<bold>هل ترغب في تلقي تحديث بخصوص طلبك؟</bold><br /><br />احصل على الدعم من مجتمع بأكمله لكاربونيو نسخة المجتمع -Carbonio CE- من خلال إنشاء منشور على منتدانا."
     },
     "messages": {
         "permanent_delete_title": "هل أنت متأكد من حذف هذا العنصر نهائيا؟",
@@ -408,7 +417,10 @@
         "error": "حدث خطأ أثناء إرسال ملاحظاتك",
         "count_user_in_helper_button_text": "نعم، اعتبرني معك!",
         "enable_feedback": "تفعيل التعليقات",
-        "enable_privacy_setting": "قم بتفعيل إعداد الخصوصية لإرسال التعليقات"
+        "enable_privacy_setting": "قم بتفعيل إعداد الخصوصية لإرسال التعليقات",
+        "send_feedback": "شاركنا تعليقاتك",
+        "goto_privacy": "انتقل إلى صفحة الخصوصية",
+        "write_here_placeholder_text": "مرحبًا! ابدأ بكتابة ملاحظاتك هنا :)\n\n\nسيتم إرسالها بشكل مجهول، لذا أخبرنا بما قمنا به بشكل جيد\nأو خاطئ دون إستحياء"
     },
     "passwords_recovery_settings": {
         "title": "إعدادات كلمة السر حساب الاستعادة"
