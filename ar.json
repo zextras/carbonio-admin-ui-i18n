@@ -92,7 +92,32 @@
         "carbonio_backend_version": "إصدار خادم كاربونيو الخلفي -Carbonio Backend-",
         "carbonio_community_edition": "إصدار كاربونيو للمجتمع -Carbonio Community Edition-",
         "detailsfeedback__collected_msg": "عند إرسال الملاحظات، يتم أيضًا إرسال التفاصيل التالية",
-        "feedback_head_to_forum_helperText": "<bold>هل ترغب في تلقي تحديث بخصوص طلبك؟</bold><br /><br />احصل على الدعم من مجتمع بأكمله لكاربونيو نسخة المجتمع -Carbonio CE- من خلال إنشاء منشور على منتدانا."
+        "feedback_head_to_forum_helperText": "<bold>هل ترغب في تلقي تحديث بخصوص طلبك؟</bold><br /><br />احصل على الدعم من مجتمع بأكمله لكاربونيو نسخة المجتمع -Carbonio CE- من خلال إنشاء منشور على منتدانا.",
+        "feedback_request_data": "طلب البيانات للتعليق:",
+        "post_feedback_send_helper_text_line_3": "يمكنك أن تكون الصوت الذي نحب أن نسمعه الآن!",
+        "feedback_head_to_forum_helperText_carbonio": "<bold>هل ترغب في تلقي تحديث بخصوص طلبك؟</bold><br /><br />احصل على الدعم من مجتمع {{carbonio}} بأكمله عن طريق إنشاء منشور على منتدانا.",
+        "feedback_head_to_forum_reachout_carbonio": "<bold>هل ترغب في التواصل مع مكتب المساعدة الخاص بنا للحصول على الدعم؟</bold><br /><br />افتح تذكرة دعم من صفحتنا المخصصة للحصول على المساعدة من مكتب الخبراء .",
+        "head_to_forum": "توجه إلى المنتدى",
+        "part_of_project_atom": "كن جزءًا من <bold>مشروع الذرة -ATOM- </bold>، واختبر الميزات الجديدة مسبقًا، وشارك التعليقات، وساعد في تحسين كاربورينو -Carbonio-!",
+        "total_accounts": "مجموع الحسابات",
+        "total_domains": "مجموع النطاقات",
+        "post_feedback_send_helper_text_line_2": "لتحسين كاربورينو -Carbonio-، نقوم بتشغيل جلسات اختبار مستمرة،",
+        "send_feedback": "إرسال التعليقات",
+        "total_servers": "إجمالي الخوادم",
+        "use_our_forum": "استخدم منتدانا",
+        "mails_quota_mb": "حصة رسائل البريد الإلكتروني (ميغابايت)",
+        "mails_quota_gb": "حصة رسائل البريد الإلكتروني (جيجابايت)",
+        "mails_quota_used_mb": "حصة البريد المستخدمة (ميغابايت)",
+        "mails_quota_used_gb": "حصة البريد المستخدمة (جيجابايت)",
+        "files_quota_mb": "حصة الملفات (ميغابايت)",
+        "files_quota_used_mb": "حصة الملفات المستخدمة (ميغابايت)",
+        "files_quota_gb": "حصة الملفات (جيجابايت)",
+        "files_quota_used_gb": "حصة الملفات المستخدمة (جيجابايت)",
+        "feedback_helper_text": "هل ترغب بالمشاركة؟",
+        "open_a_ticket": "افتح تذكرة",
+        "send_feedback_helperText_carbonio": "<bold>هل ترغب في اقتراح أي تغيير أو إخبارنا بشيء؟</bold><br /><br />شارك أفكارك معنا وساعد في تشكيل {{carbonio}} للأفضل. نتطلع إلى سماع رأيك!",
+        "thank_you_for_feedback": "شكرا على تعليقك!",
+        "send_feedback_helperText": "<bold>هل ترغب في اقتراح أي تغيير أو إخبارنا بشيء؟</bold><br /><br />شارك أفكارك معنا وساعد في صياغة مستقبل نسخة كاربونيو للمجتمع -Carbonio CE- للأفضل. نتطلع إلى سماع رأيك!"
     },
     "messages": {
         "permanent_delete_title": "هل أنت متأكد من حذف هذا العنصر نهائيا؟",
@@ -102,7 +127,8 @@
         "snackbar": {
             "settings_saved": "تم حفظ التعديلات بشكل صحيح",
             "identities_quota_exceeded": "لم يتم إنشاء الهوية لأنك تجاوزت حصة هويتك",
-            "our_interface_does_not_support_tablets_and_smartphones": "لا تدعم واجهتنا الأجهزة اللوحية والهواتف الذكية، مما قد يؤدي إلى حدوث مشاكل في العرض المرئي. يُرجى استخدام حاسب سطح المكتب أو الحاسب المحمول للحصول على الأداء الأمثل. نحن نعمل على التوافق مع الأجهزة المحمولة في المستقبل. شكرًا لك."
+            "our_interface_does_not_support_tablets_and_smartphones": "لا تدعم واجهتنا الأجهزة اللوحية والهواتف الذكية، مما قد يؤدي إلى حدوث مشاكل في العرض المرئي. يُرجى استخدام حاسب سطح المكتب أو الحاسب المحمول للحصول على الأداء الأمثل. نحن نعمل على التوافق مع الأجهزة المحمولة في المستقبل. شكرًا لك.",
+            "okay_got_it": "حسنا، فهمت"
         },
         "reload": "\tهل ترغب في إعادة تحميل التطبيق الآن لإظهار اللغة الجديدة؟\n(وإلا، ستظهر اللغة الجديدة في المرة التالية التي تقوم فيها بالدخول.)"
     },
@@ -390,7 +416,9 @@
         "pacific_chatham": "تشاتام {{value}}",
         "pacific_midway": "ساموا {{value}}",
         "australia_lord_howe": "لورد هاو {{value}}",
-        "america_caracas": "كاراكاس {{value}}"
+        "america_caracas": "كاراكاس {{value}}",
+        "guadalajara_mexico_city_monterrey ": "{{value}} جوادالاخارا، مكسيكو سيتي، مونتيري ",
+        "brussels_copenhagen_madrid_paris ": "{{value}} بروكسل، كوبنهاجن، مدريد، باريس "
     },
     "board": {
         "close_tab": "إغلاق الصفحة",
@@ -434,7 +462,8 @@
         "type_or_choose_suggestion": "اكتب أو اختر بعض الكلمات الرئيسية لبدء البحث",
         "type_to_start_search": "اكتب بعض الكلمات الرئيسية لبدء البحث",
         "already_clear": "البحث المدخل واضح",
-        "unable_to_parse_query": "غير قادر على إكمال البحث، قم بمسحه ثم أعد المحاولة"
+        "unable_to_parse_query": "غير قادر على إكمال البحث، قم بمسحه ثم أعد المحاولة",
+        "active_input_label": "افصل كلماتك الرئيسية بفاصلة أو بالضغط على مفتاح تاب -TAB-"
     },
     "snackbar": {
         "error": "لقد حدث خطأ ما، يرجى المحاولة مرة أخرى"
@@ -489,5 +518,13 @@
         }
     },
     "new": "جديدة",
-    "create": "أنشئ"
+    "create": "أنشئ",
+    "privacy": {
+        "allow_data_analytics": "السماح بتحليل البيانات",
+        "allow_live_survey_feedbacks": "السماح بتعليقات الاستطلاع المباشرة",
+        "send_full_error_data_to_zextras": "إرسال بيانات الاخطاء كاملة إلى زيكستراس -Zextras-"
+    },
+    "labels": {
+        "help_center": "مركز المساعدة"
+    }
 }
