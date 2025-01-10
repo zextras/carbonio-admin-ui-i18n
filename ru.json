@@ -209,7 +209,11 @@
         "mails_quota_mb": "Квота почтового ящика (MB)",
         "mails_quota_gb": "Квота почтового ящика (GB)",
         "files_quota_mb": "Квота Files (MB)",
-        "files_quota_gb": "Квота Files (GB)"
+        "files_quota_gb": "Квота Files (GB)",
+        "files_quota_used_mb": "Использованная квота Files (МB)",
+        "files_quota_used_gb": "Использованная квота Files (GB)",
+        "mails_quota_used_gb": "Использованная квота почты (GB)",
+        "mails_quota_used_mb": "Использованная квота почты (МB)"
     },
     "board": {
         "close_tab": "Закрыть вкладку",
