@@ -148,7 +148,8 @@
         "files_quota_mb": "Files Quota (MB)",
         "files_quota_used_mb": "Files Quota Used (MB)",
         "files_quota_gb": "Files Quota (GB)",
-        "files_quota_used_gb": "Files Quota Used (GB)"
+        "files_quota_used_gb": "Files Quota Used (GB)",
+        "backup_enabled": "Enable / Disable Backup"
     },
     "labels": {
         "help_center": "Help Center"
