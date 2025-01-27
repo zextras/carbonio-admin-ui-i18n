@@ -222,7 +222,8 @@
         "files_quota_gb": "Quota Files (GB)",
         "files_quota_used_mb": "Quota Files Utilizzata (MB)",
         "files_quota_used_gb": "Quota Files Utilizzata (GB)",
-        "mails_quota_used_gb": "Quota Email Utilizzata (GB)"
+        "mails_quota_used_gb": "Quota Email Utilizzata (GB)",
+        "backup_enabled": "Abilita / Disabilita Backup"
     },
     "locale": {
         "English": "Inglese",
