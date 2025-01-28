@@ -197,7 +197,8 @@
         "mails_quota_gb": "Limit przestrzeni dla E-maili (GB)",
         "mails_quota_used_mb": "Użyta przestrzeń dla E-maili (MB)",
         "files_quota_used_mb": "Użyta przestrzeń dla Plików (MB)",
-        "files_quota_used_gb": "Użyta przestrzeń dla Plików (GB)"
+        "files_quota_used_gb": "Użyta przestrzeń dla Plików (GB)",
+        "backup_enabled": "Włącz / wyłącz kopię zapasową"
     },
     "board": {
         "close_tab": "Zamknij kartę",
