@@ -117,7 +117,8 @@
         "mails_quota_used_gb": "Usage des emails (Go)",
         "files_quota_used_mb": "Usage des fichiers (Mo)",
         "mails_quota_used_mb": "Usage des emails (Mo)",
-        "files_quota_mb": "Quota des fichiers (Mo)"
+        "files_quota_mb": "Quota des fichiers (Mo)",
+        "backup_enabled": "Activer / Désactiver les sauvegardes"
     },
     "search": {
         "clear": "Effacer la saisie de recherche",
