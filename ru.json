@@ -213,7 +213,8 @@
         "files_quota_used_mb": "Использованная квота Files (МB)",
         "files_quota_used_gb": "Использованная квота Files (GB)",
         "mails_quota_used_gb": "Использованная квота почты (GB)",
-        "mails_quota_used_mb": "Использованная квота почты (МB)"
+        "mails_quota_used_mb": "Использованная квота почты (МB)",
+        "backup_enabled": "Включить/отключить резервное копирование"
     },
     "board": {
         "close_tab": "Закрыть вкладку",
