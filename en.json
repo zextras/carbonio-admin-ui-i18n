@@ -527,5 +527,10 @@
         "space_full": "It seems that all available space is full",
         "title": "User's quota",
         "unlimited": "{{used}} of unlimited space"
+    },
+    "domain": {
+        "mailSpaceQuotaThresholdError": {
+            "description": "Mail space quota threshold should be between 0 to 100"
+        }
     }
 }
