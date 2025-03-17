@@ -527,5 +527,10 @@
         "allow_live_survey_feedbacks": "Consenti sondaggi per i feedback",
         "send_full_error_data_to_zextras": "Invia rapporto di errore completo a Zextras",
         "allow_data_analytics": "Consenti l'analisi dei dati"
+    },
+    "domain": {
+        "mailSpaceQuotaThresholdError": {
+            "description": "La soglia della quota di spazio di posta deve essere compresa tra 0 e 100"
+        }
     }
 }
