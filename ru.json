@@ -527,5 +527,10 @@
         "send_full_error_data_to_zextras": "Отправить полные данные об ошибках в Zextras",
         "allow_live_survey_feedbacks": "Разрешить опросы в реальном времени",
         "allow_data_analytics": "Разрешить аналитику данных"
+    },
+    "domain": {
+        "mailSpaceQuotaThresholdError": {
+            "description": "Порог почтовой квоты должен иметь значение от 0 до 100"
+        }
     }
 }
