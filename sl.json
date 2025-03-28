@@ -1,1 +1,8 @@
-{}
+{
+    "label": {
+        "delete": "Izbriši",
+        "discard_changes": "Zavrzi spremembe",
+        "save": "Shrani",
+        "delete_permanently": "Trajno izbriši"
+    }
+}
