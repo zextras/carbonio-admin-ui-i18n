@@ -525,5 +525,10 @@
         "space_full": "Čini se da je sav raspoloživi prostor popunjen",
         "title": "Korisnikova kvota",
         "unlimited": "{{used}} od neograničenog prostora"
+    },
+    "domain": {
+        "mailSpaceQuotaThresholdError": {
+            "description": "Prag kvote prostora za poštu trebao bi biti između 0 i 100"
+        }
     }
 }
