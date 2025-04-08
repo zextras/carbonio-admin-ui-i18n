@@ -1,1 +1,6 @@
-{}
+{
+    "label": {
+        "cancel": "Zrušit",
+        "delete": "Smazat"
+    }
+}
