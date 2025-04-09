@@ -3,7 +3,10 @@
         "delete": "Izbriši",
         "discard_changes": "Zavrzi spremembe",
         "save": "Shrani",
-        "delete_permanently": "Trajno izbriši"
+        "delete_permanently": "Trajno izbriši",
+        "cancel": "Prekliči",
+        "filter_folders": "Filtriraj mape",
+        "new_folder": "Nova mapa"
     },
     "timezone": {
         "abu_dhabi_muscat": "{{value}} Abu Dabi, Muskat",
@@ -91,5 +94,10 @@
         "port_louis": "{{value}} Port Louis",
         "la_paz": "{{value}} La Paz",
         "kaliningrad_rtz_1": "{{value}} Kaliningrad (RTZ 1)"
+    },
+    "message": {
+        "snackbar": {
+            "settings_saved": "Spremembe uspešno shranjene"
+        }
     }
 }
