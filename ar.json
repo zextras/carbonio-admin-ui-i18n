@@ -527,5 +527,10 @@
     },
     "labels": {
         "help_center": "مركز المساعدة"
+    },
+    "domain": {
+        "mailSpaceQuotaThresholdError": {
+            "description": "يجب أن يكون حد العتبة لمساحة البريد الإلكتروني بين 0 و 100"
+        }
     }
 }
