@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "Mail space quota threshold should be between 0 to 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Active Sync Access"
+        }
     }
 }
