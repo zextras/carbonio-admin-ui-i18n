@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "La soglia della quota di spazio di posta deve essere compresa tra 0 e 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Accesso Active Sync"
+        }
     }
 }
