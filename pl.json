@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "Ten próg powinien wynosić od 0 do 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Dostęp Active Sync"
+        }
     }
 }
