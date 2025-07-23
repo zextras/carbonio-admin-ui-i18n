@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "Le seuil du quota d'espace de messagerie doit être compris entre 0 et 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Accès Active Sync"
+        }
     }
 }
