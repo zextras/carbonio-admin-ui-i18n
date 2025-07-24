@@ -1,1 +1,7 @@
-{}
+{
+    "label": {
+        "account_name": "계정 이름",
+        "accounts": "계정",
+        "address": "주소"
+    }
+}
