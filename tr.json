@@ -527,5 +527,10 @@
         "send_full_error_data_to_zextras": "Tüm hata verisini Zextras'a gönder",
         "allow_live_survey_feedbacks": "Canlı anket görüşlere izin ver",
         "allow_data_analytics": "Veri analize izin ver"
+    },
+    "domain": {
+        "mailSpaceQuotaThresholdError": {
+            "description": "Posta alanı kota eşiği 0 ile 100 arasında olmalıdır"
+        }
     }
 }
