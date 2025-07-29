@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "Posta alanı kota eşiği 0 ile 100 arasında olmalıdır"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Etki Senkron Erişimi"
+        }
     }
 }
