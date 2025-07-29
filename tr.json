@@ -132,6 +132,7 @@
         "choose_folder": "Klasör seç",
         "delegates": "Temsilciler",
         "delete": "Sil",
+        "delete_plural": "Sil",
         "delete_after_download": "İndirildikten sonra mesajları sunucudan sil",
         "delete_permanently": "Kalıcı olarak sil",
         "dont_save": "Gönderilen mesajların kopyasını kaydetme",
@@ -535,7 +536,7 @@
     },
     "cos": {
         "features": {
-            "active_sync_access": "Etki Senkron Erişimi"
+            "active_sync_access": "Active Sync Erişimi"
         }
     }
 }
