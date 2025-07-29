@@ -221,7 +221,8 @@
         "mails_quota_used_gb": "Kullanılan Posta Kota (GB)",
         "files_quota_mb": "Dosya Kota (MB)",
         "files_quota_gb": "Dosya Kota (GB)",
-        "files_quota_used_mb": "Kullanılan Dosya Kota (MB)"
+        "files_quota_used_mb": "Kullanılan Dosya Kota (MB)",
+        "files_quota_used_gb": "Kullanılan Dosya Kota (GB)"
     },
     "locale": {
         "label_italian": "Italian - {{value}}",
