@@ -530,7 +530,7 @@
     },
     "domain": {
         "mailSpaceQuotaThresholdError": {
-            "description": "Posta alanı kota eşiği 0 ile 100 arasında olmalıdır"
+            "description": "Posta alanı kotası 0 ile 100 arasında olmalıdır"
         }
     },
     "cos": {
