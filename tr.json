@@ -216,7 +216,8 @@
         "part_of_project_atom": "<bold>Project ATOM'un </bold> bir parçası olun, yeni özellikleri önceden test edin, geri bildirim paylaşın ve Carbonio'nun geliştirilmesine yardımcı olun!",
         "send_feedback_helperText": "<bold>Herhangi bir değişiklik önermek veya bize bir şey söylemek ister misiniz?</bold><br /><br />Düşüncelerinizi bizimle paylaşın ve daha iyi bir Carbonio CE oluşturmaya yardımcı olun. Görüşlerinizi heyecanla bekliyoruz!",
         "mails_quota_mb": "Posta Kota (MB)",
-        "mails_quota_gb": "Posta Kota (GB)"
+        "mails_quota_gb": "Posta Kota (GB)",
+        "mails_quota_used_mb": "Kullanılan Posta Kota (MB)"
     },
     "locale": {
         "label_italian": "Italian - {{value}}",
