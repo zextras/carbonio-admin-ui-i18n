@@ -218,7 +218,8 @@
         "mails_quota_mb": "Posta Kota (MB)",
         "mails_quota_gb": "Posta Kota (GB)",
         "mails_quota_used_mb": "Kullanılan Posta Kota (MB)",
-        "mails_quota_used_gb": "Kullanılan Posta Kota (GB)"
+        "mails_quota_used_gb": "Kullanılan Posta Kota (GB)",
+        "files_quota_mb": "Dosya Kota (MB)"
     },
     "locale": {
         "label_italian": "Italian - {{value}}",
