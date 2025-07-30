@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "Prag kvote poštnega prostora mora biti med 0 in 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Dostop do Active Synca"
+        }
     }
 }
