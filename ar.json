@@ -532,5 +532,10 @@
         "mailSpaceQuotaThresholdError": {
             "description": "يجب أن يكون حد العتبة لمساحة البريد الإلكتروني بين 0 و 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "الوصول عن طريق آكتف سينك -ActiveSync-"
+        }
     }
 }
