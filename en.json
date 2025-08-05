@@ -537,5 +537,13 @@
         "features": {
             "active_sync_access": "Active Sync Access"
         }
+    },
+    "error": {
+        "contact_support": "Contact support or try refreshing the page",
+        "something_went_wrong": "Something went wrong",
+        "loading_page": "We’re sorry, but there was an error trying to load this page."
+    },
+    "button": {
+        "refresh_page": "REFRESH"
     }
 }
