@@ -537,5 +537,13 @@
         "features": {
             "active_sync_access": "Accesso Active Sync"
         }
+    },
+    "error": {
+        "something_went_wrong": "Qualcosa è andato storto",
+        "loading_page": "Ci dispiace, ma c'è stato un errore nel caricamento della pagina.",
+        "contact_support": "Contatta il supporto o prova ad aggiornare la pagina"
+    },
+    "button": {
+        "refresh_page": "AGGIORNA"
     }
 }
