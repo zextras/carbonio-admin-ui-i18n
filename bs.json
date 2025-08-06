@@ -530,5 +530,18 @@
         "mailSpaceQuotaThresholdError": {
             "description": "Prag kvote prostora za poštu trebao bi biti između 0 i 100"
         }
+    },
+    "cos": {
+        "features": {
+            "active_sync_access": "Pristup Active Sync"
+        }
+    },
+    "error": {
+        "something_went_wrong": "Nešto nije u redu",
+        "loading_page": "Izvinjavamo se, ali došlo je do greške prilikom učitavanja ove stranice.",
+        "contact_support": "Kontaktirajte podršku ili pokušajte osvježiti stranicu"
+    },
+    "button": {
+        "refresh_page": "OSVJEŽI"
     }
 }
