@@ -540,6 +540,10 @@
     },
     "error": {
         "something_went_wrong": "Coś poszło nie tak",
-        "loading_page": "Wystąpił błąd podczas ładowania tej strony."
+        "loading_page": "Wystąpił błąd podczas ładowania tej strony.",
+        "contact_support": "Skontaktuj się ze wsparciem lub spróbuj odświeżyć stronę"
+    },
+    "button": {
+        "refresh_page": "ODŚWIEŻ"
     }
 }
