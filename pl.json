@@ -537,5 +537,9 @@
         "features": {
             "active_sync_access": "Dostęp Active Sync"
         }
+    },
+    "error": {
+        "something_went_wrong": "Coś poszło nie tak",
+        "loading_page": "Wystąpił błąd podczas ładowania tej strony."
     }
 }
