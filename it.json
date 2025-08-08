@@ -531,6 +531,12 @@
     "domain": {
         "mailSpaceQuotaThresholdError": {
             "description": "La soglia della quota di spazio di posta deve essere compresa tra 0 e 100"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldapReferenceForAuthentication": "Riferimento LDAP Esterno per Autenticazione",
+                "externalldap": "LDAP Esterno"
+            }
         }
     },
     "cos": {
@@ -545,5 +551,17 @@
     },
     "button": {
         "refresh_page": "AGGIORNA"
+    },
+    "core": {
+        "subscription": {
+            "date_start": "Data di Inizio",
+            "last_validation_check": "Ultimo Controllo di Convalida",
+            "maintenance_end_date": "Data di Fine Manutenzione",
+            "next_validation_deadline": "Prossima Scadenza di Convalida",
+            "date_end": "Data di Fine",
+            "last_validation_check_tooltip": "Questa data rappresenta l'ultimo giorno in cui la licenza è stata convalidata dal servizio di sottoscrizione Zextras.\n\nPoiché si tratta di un abbonamento Pay Per Use (PPU), il sistema invia automaticamente i dati di utilizzo giornaliero al servizio di sottoscrizione Zextras. Non è richiesta alcuna azione da parte dell'utente, a patto che la comunicazione funzioni correttamente. Se il sistema non è in grado di contattare il servizio, viene applicato un periodo di tolleranza di 7 giorni. Questo periodo di tolleranza viene rinnovato automaticamente ogni volta che il servizio di sottoscrizione Zextras viene contattato con successo.",
+            "next_validation_deadline_tooltip": "Questa data rappresenta l'ultimo giorno in cui la licenza rimarrà pienamente funzionante se i dati di utilizzo non vengono inviati al servizio di sottoscrizione Zextras.\n\nPoiché si tratta di un abbonamento Pay Per Use (PPU), il sistema invia automaticamente i dati di utilizzo giornaliero al servizio di sottoscrizione Zextras. Non è richiesta alcuna azione da parte dell'utente, a patto che la comunicazione funzioni correttamente. Se il sistema non è in grado di contattare il servizio, viene applicato un periodo di tolleranza di 7 giorni. Questo periodo di tolleranza viene rinnovato automaticamente ogni volta che il servizio di sottoscrizione Zextras viene contattato con successo.",
+            "renew": "RINNOVA"
+        }
     }
 }
