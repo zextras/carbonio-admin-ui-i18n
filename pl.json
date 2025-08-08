@@ -531,6 +531,12 @@
     "domain": {
         "mailSpaceQuotaThresholdError": {
             "description": "Ten próg powinien wynosić od 0 do 100"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldap": "Zewnętrzne LDAP",
+                "externalldapReferenceForAuthentication": "Referencja zewnętrznego LDAP do uwierzytelniania"
+            }
         }
     },
     "cos": {
@@ -545,5 +551,17 @@
     },
     "button": {
         "refresh_page": "ODŚWIEŻ"
+    },
+    "core": {
+        "subscription": {
+            "date_start": "Data rozpoczęcia",
+            "maintenance_end_date": "Data zakończenia wsparcia",
+            "next_validation_deadline": "Następny ostateczny termin zatwierdzenia",
+            "date_end": "Data zakończenia",
+            "renew": "ODNÓW",
+            "next_validation_deadline_tooltip": "Ta data oznacza ostatni dzień, w którym licencja będzie w pełni funkcjonalna, jeśli dane o zużyciu nie zostaną wysłane do Usługi Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
+            "last_validation_check_tooltip": "Ta data oznacza ostatni dzień, w którym licencja została zatwierdzona przez Usługę Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
+            "last_validation_check": "Ostatnie zatwierdzenie"
+        }
     }
 }
