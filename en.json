@@ -563,5 +563,10 @@
             "next_validation_deadline_tooltip": "This date represents the last day the license will remain fully functional if usage data is not sent to the Zextras Subscription Service.\n\nSince this is a Pay Per Use (PPU) subscription, the system automatically reports daily usage data to the Zextras Subscription Service. No user action is required as long as communication is functioning correctly. If the system is unable to contact the service, a 7-day grace period is applied. This grace period is automatically renewed each time the Zextras Subscription Service is successfully contacted.",
             "renew": "RENEW"
         }
+    },
+    "backup": {
+        "config": {
+            "scheduleBackupPurge": "Schedule Backup Purge"
+        }
     }
 }
