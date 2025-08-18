@@ -563,5 +563,10 @@
             "next_validation_deadline_tooltip": "Questa data rappresenta l'ultimo giorno in cui la licenza rimarrà pienamente funzionante se i dati di utilizzo non vengono inviati al servizio di sottoscrizione Zextras.\n\nPoiché si tratta di un abbonamento Pay Per Use (PPU), il sistema invia automaticamente i dati di utilizzo giornaliero al servizio di sottoscrizione Zextras. Non è richiesta alcuna azione da parte dell'utente, a patto che la comunicazione funzioni correttamente. Se il sistema non è in grado di contattare il servizio, viene applicato un periodo di tolleranza di 7 giorni. Questo periodo di tolleranza viene rinnovato automaticamente ogni volta che il servizio di sottoscrizione Zextras viene contattato con successo.",
             "renew": "RINNOVA"
         }
+    },
+    "backup": {
+        "config": {
+            "scheduleBackupPurge": "Pianifica Pulizia Backup"
+        }
     }
 }
