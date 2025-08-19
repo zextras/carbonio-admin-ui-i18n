@@ -563,5 +563,10 @@
             "last_validation_check_tooltip": "Ta data oznacza ostatni dzień, w którym licencja została zatwierdzona przez Usługę Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
             "last_validation_check": "Ostatnie zatwierdzenie"
         }
+    },
+    "backup": {
+        "config": {
+            "scheduleBackupPurge": "Zaplanuj wyczyszczenie kopii zapasowej"
+        }
     }
 }
