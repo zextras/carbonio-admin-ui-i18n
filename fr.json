@@ -511,7 +511,7 @@
         "permanent_delete_body": "Si vous supprimez définitivement cette identité, vous ne pourrez pas la récupérer. Continuer ?"
     },
     "share": {
-        "is_contained_in": "Dans le dossier"
+        "is_contained_in": "Est contenu dans"
     },
     "passwords_recovery_settings": {
         "title": "Paramètres du compte de récupération de mot de passe"
