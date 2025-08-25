@@ -429,5 +429,10 @@
         "title": "Квота користувача",
         "unlimited": "{{used}} з необмеженого простору",
         "limited": "{{used}} з {{limit}} використано"
+    },
+    "backup": {
+        "config": {
+            "scheduleBackupPurge": "Розклад видалення резервних копій"
+        }
     }
 }
