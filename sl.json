@@ -537,5 +537,13 @@
         "features": {
             "active_sync_access": "Dostop do Active Synca"
         }
+    },
+    "error": {
+        "something_went_wrong": "Nekaj je šlo narobe",
+        "contact_support": "Stopite v stik s podporo ali poskusite osvežiti stran",
+        "loading_page": "Oprostite, pri nalaganju te strani je prišlo do napake."
+    },
+    "button": {
+        "refresh_page": "OSVEŽI"
     }
 }
