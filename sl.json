@@ -531,6 +531,11 @@
     "domain": {
         "mailSpaceQuotaThresholdError": {
             "description": "Prag kvote poštnega prostora mora biti med 0 in 100"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldap": "Zunanji LDAP"
+            }
         }
     },
     "cos": {
