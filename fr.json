@@ -531,6 +531,12 @@
     "domain": {
         "mailSpaceQuotaThresholdError": {
             "description": "Le seuil du quota d'espace de messagerie doit être compris entre 0 et 100"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldap": "LDAP externe",
+                "externalldapReferenceForAuthentication": "Référence LDAP externe pour l'authentification"
+            }
         }
     },
     "cos": {
@@ -545,5 +551,22 @@
     },
     "button": {
         "refresh_page": "RAFRAÎCHIR"
+    },
+    "core": {
+        "subscription": {
+            "date_start": "Date de début",
+            "last_validation_check": "Dernière vérification de validation",
+            "maintenance_end_date": "Date de fin de maintenance",
+            "next_validation_deadline": "Prochaine date limite de validation",
+            "date_end": "Date de fin",
+            "last_validation_check_tooltip": "Cette date correspond au dernier jour de validité de la licence par le service d'abonnement Zextras.\n\nComme il s'agit d'un abonnement Pay Per Use (PPU), le système transmet automatiquement les données d'utilisation quotidiennes au service d'abonnement Zextras. Aucune action de la part de l'utilisateur n'est requise tant que la communication fonctionne correctement. Si le système ne parvient pas à contacter le service, un délai de grâce de 7 jours est appliqué. Ce délai de grâce est automatiquement renouvelé chaque fois que le service d'abonnement Zextras est contacté avec succès.",
+            "renew": "RENOUVELER",
+            "next_validation_deadline_tooltip": "Cette date correspond au dernier jour où la licence restera pleinement fonctionnelle si les données d'utilisation ne sont pas envoyées au service d'abonnement Zextras.\n\nComme il s'agit d'un abonnement Pay Per Use (PPU), le système transmet automatiquement les données d'utilisation quotidiennes au service d'abonnement Zextras. Aucune action de la part de l'utilisateur n'est requise tant que la communication fonctionne correctement. Si le système ne parvient pas à contacter le service, un délai de grâce de 7 jours est appliqué. Ce délai de grâce est automatiquement renouvelé chaque fois que le service d'abonnement Zextras est contacté avec succès."
+        }
+    },
+    "backup": {
+        "config": {
+            "scheduleBackupPurge": "Planifier la purge des sauvegardes"
+        }
     }
 }
