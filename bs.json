@@ -266,7 +266,7 @@
                 "end_time": "Vrijeme završetka:",
                 "external_senders": "Eksterni pošiljaoci",
                 "out_of_office_status": "Status izvan ureda:",
-                "start_date": "Datum početka",
+                "start_date": "Početni datum",
                 "start_time": "Vrijeme početka:",
                 "send_auto_reply_period": "Šalji automatske odgovore tokom sljedećeg perioda:",
                 "end_date": "Datum završetka",
@@ -529,6 +529,12 @@
     "domain": {
         "mailSpaceQuotaThresholdError": {
             "description": "Prag kvote prostora za poštu trebao bi biti između 0 i 100"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldap": "Eksterni LDAP",
+                "externalldapReferenceForAuthentication": "Eksterni LDAP referenca za autentifikaciju"
+            }
         }
     },
     "cos": {
@@ -543,5 +549,22 @@
     },
     "button": {
         "refresh_page": "OSVJEŽI"
+    },
+    "core": {
+        "subscription": {
+            "date_start": "Početni datum",
+            "next_validation_deadline": "Sljedeći rok za validaciju",
+            "date_end": "Datum krajnji",
+            "maintenance_end_date": "Datum završetka održavanja",
+            "last_validation_check_tooltip": "Ovaj datum predstavlja posljednji dan kada je licenca potvrđena od strane Zextras pretplatničke usluge.\n\nBudući da se radi o pretplati s plaćanjem po korištenju (PPU), sistem automatski prijavljuje podatke o dnevnoj upotrebi Zextras pretplatničkoj usluzi. Nije potrebna nikakva radnja korisnika sve dok komunikacija ispravno funkcionira. Ako sistem ne može kontaktirati uslugu, primjenjuje se 7-dnevni period odgode. Ovaj period odgode se automatski obnavlja svaki put kada se uspješno kontaktira Zextras pretplatnička usluga.",
+            "last_validation_check": "Zadnja provjera validnosti",
+            "next_validation_deadline_tooltip": "Ovaj datum predstavlja posljednji dan kada će licenca ostati u potpunosti funkcionalna ako se podaci o korištenju ne pošalju Zextras pretplatničkoj usluzi.\n\nBudući da se radi o pretplati s plaćanjem po korištenju (PPU), sistem automatski prijavljuje dnevne podatke o korištenju Zextras pretplatničkoj usluzi. Nije potrebna nikakva radnja korisnika sve dok komunikacija ispravno funkcionira. Ako sistem ne može kontaktirati uslugu, primjenjuje se 7-dnevni period odgode. Ovaj period odgode se automatski obnavlja svaki put kada se uspješno kontaktira Zextras pretplatnička usluga.",
+            "renew": "OBNOVA"
+        }
+    },
+    "backup": {
+        "config": {
+            "scheduleBackupPurge": "Zakazivanje čišćenja sigurnosne kopije"
+        }
     }
 }
