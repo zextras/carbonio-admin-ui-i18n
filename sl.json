@@ -553,7 +553,7 @@
     },
     "core": {
         "subscription": {
-            "last_validation_check": "Zadnja preverjanja veljavnosti"
+            "last_validation_check": "Zadnje preverjanje veljavnosti"
         }
     }
 }
