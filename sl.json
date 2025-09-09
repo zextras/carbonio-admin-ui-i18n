@@ -550,5 +550,10 @@
     },
     "button": {
         "refresh_page": "OSVEŽI"
+    },
+    "core": {
+        "subscription": {
+            "last_validation_check": "Zadnja preverjanja veljavnosti"
+        }
     }
 }
