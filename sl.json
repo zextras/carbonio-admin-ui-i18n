@@ -555,7 +555,7 @@
         "subscription": {
             "last_validation_check": "Zadnje preverjanje veljavnosti",
             "next_validation_deadline_tooltip": "Ta datum predstavlja zadnji dan, ko bo licenca še vedno popolnoma funkcionalna, če podatkov o uporabi ni poslano na Zextras Subscription Service.\n\nKer gre za naročnino plačilo na uporabo (PPU), sistem samodejno poroča o dnevni uporabi podatkov na Zextras Subscription Service. Uporabniška akcija ni potrebna, če komunikacija deluje pravilno. Če sistem ne more kontaktirati storitve, se uporabi 7-dnevno obdobje tolerance. To obdobje tolerance se samodejno obnovi vsakič, ko je uspešno kontaktiran Zextras Subscription Service.",
-            "next_validation_deadline": "Naslednji rok za preverjanje veljavnosti",
+            "next_validation_deadline": "Naslednji rok preverjanja veljavnosti",
             "renew": "POOBNOVI"
         }
     }
