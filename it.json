@@ -568,5 +568,14 @@
         "config": {
             "scheduleBackupPurge": "Pianifica Pulizia Backup"
         }
+    },
+    "mta": {
+        "advanced": {
+            "mail_messages_size": "Dimensione email",
+            "no_size_limit_for_mail_messages": "Nessun limite di dimensione per le email",
+            "custom_max_size_mail_message": "Dimensione massima delle email personalizzata (MB)",
+            "max_size_for_mail_messages": "Dimensione massima per le email (MB)",
+            "value_0_disables_email_sending": "Il valore 0 disabilita l'invio delle email: inserisci un valore maggiore di 0"
+        }
     }
 }
