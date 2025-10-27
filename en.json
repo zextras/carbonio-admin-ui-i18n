@@ -568,5 +568,14 @@
         "config": {
             "scheduleBackupPurge": "Schedule Backup Purge"
         }
+    },
+    "mta": {
+        "advanced": {
+            "mail_messages_size": "Mail messages size",
+            "no_size_limit_for_mail_messages": "No size limit for mail messages",
+            "custom_max_size_mail_message": "Custom max size mail messages (MB)",
+            "max_size_for_mail_messages": "Max size for mail messages (MB)",
+            "value_0_disables_email_sending": "Value 0 disables email sending: enter a value greater than 0"
+        }
     }
 }
