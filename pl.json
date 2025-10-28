@@ -568,5 +568,14 @@
         "config": {
             "scheduleBackupPurge": "Zaplanuj wyczyszczenie kopii zapasowej"
         }
+    },
+    "mta": {
+        "advanced": {
+            "mail_messages_size": "Rozmiar wiadomości e-mail",
+            "no_size_limit_for_mail_messages": "Brak limitu rozmiaru dla wiadomości e-mail",
+            "custom_max_size_mail_message": "Niestandardowy max. rozmiar wiadomości e-mail (MB)",
+            "max_size_for_mail_messages": "Max. rozmiar wiadomości e-mail (MB)",
+            "value_0_disables_email_sending": "Wartość 0 wyłącza wysyłanie e-maili: wprowadź wartość większą niż 0"
+        }
     }
 }
