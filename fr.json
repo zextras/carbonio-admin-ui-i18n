@@ -568,5 +568,14 @@
         "config": {
             "scheduleBackupPurge": "Planifier la purge des sauvegardes"
         }
+    },
+    "mta": {
+        "advanced": {
+            "mail_messages_size": "Taille des emails",
+            "no_size_limit_for_mail_messages": "Pas de taille limite pour les emails",
+            "custom_max_size_mail_message": "Taille personnalisée pour les emails (Mo)",
+            "max_size_for_mail_messages": "Taille maximum pour les emails (Mo)",
+            "value_0_disables_email_sending": "La valeur 0 désactive l'envoi d'e-mails : entrez une valeur supérieure à 0"
+        }
     }
 }
