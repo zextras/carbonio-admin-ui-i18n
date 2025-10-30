@@ -550,7 +550,8 @@
         "loading_page": "We’re sorry, but there was an error trying to load this page."
     },
     "button": {
-        "refresh_page": "REFRESH"
+        "refresh_page": "REFRESH",
+        "view_subscription_details": "VIEW SUBSCRIPTION DETAILS"
     },
     "core": {
         "subscription": {
@@ -577,5 +578,11 @@
             "max_size_for_mail_messages": "Max size for mail messages (MB)",
             "value_0_disables_email_sending": "Value 0 disables email sending: enter a value greater than 0"
         }
+    },
+    "banner": {
+        "maintenance-expired-description": "Your maintenance expired on {{maintenanceEndDate}}.",
+        "maintenance-expired-label": "Your current version will continue to function normally, but you must not install any new Carbonio updates — doing so may cause service disruption. Renew maintenance to safely upgrade and keep your system fully supported.",
+        "maintenance-expiring-description": "Your maintenance will expire on {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "After expiration, you will still be notified of new updates, but you won’t be allowed to install them without risking service issues. Renew on time to ensure smooth, safe upgrades and full support coverage."
     }
 }
