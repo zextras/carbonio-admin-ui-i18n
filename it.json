@@ -550,7 +550,8 @@
         "contact_support": "Contatta il supporto o prova ad aggiornare la pagina"
     },
     "button": {
-        "refresh_page": "AGGIORNA"
+        "refresh_page": "AGGIORNA",
+        "view_subscription_details": "VEDI DETTAGLI ABBONAMENTO"
     },
     "core": {
         "subscription": {
@@ -577,5 +578,11 @@
             "max_size_for_mail_messages": "Dimensione massima per le email (MB)",
             "value_0_disables_email_sending": "Il valore 0 disabilita l'invio delle email: inserisci un valore maggiore di 0"
         }
+    },
+    "banner": {
+        "maintenance-expired-description": "Il supporto è scaduto il {{maintenanceEndDate}}.",
+        "maintenance-expired-label": "La versione attuale continuerà a funzionare, ma non installare aggiornamenti di Carbonio — potrebbero interrompere il servizio. Rinnova il supporto per aggiornare in sicurezza e mantenere il sistema protetto.",
+        "maintenance-expiring-description": "Il supporto scadrà il {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Dopo la scadenza riceverai ancora le notifiche degli aggiornamenti, ma installarli potrebbe causare problemi al servizio. Rinnova in tempo per garantire aggiornamenti sicuri e supporto completo."
     }
 }
