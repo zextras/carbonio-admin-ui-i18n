@@ -550,7 +550,8 @@
         "contact_support": "Skontaktuj się ze wsparciem lub spróbuj odświeżyć stronę"
     },
     "button": {
-        "refresh_page": "ODŚWIEŻ"
+        "refresh_page": "ODŚWIEŻ",
+        "view_subscription_details": "ZOBACZ SZCZEGÓŁY SUBSKRYPCJI"
     },
     "core": {
         "subscription": {
@@ -577,5 +578,11 @@
             "max_size_for_mail_messages": "Max. rozmiar wiadomości e-mail (MB)",
             "value_0_disables_email_sending": "Wartość 0 wyłącza wysyłanie e-maili: wprowadź wartość większą niż 0"
         }
+    },
+    "banner": {
+        "maintenance-expired-description": "Twoje wsparcie wygasło {{maintenanceEndDate}}.",
+        "maintenance-expired-label": "Twoja aktualna wersja będzie funkcjonować normalnie, ale nie możesz instalować żadnych aktualizacji Carbonio. Instalacja aktualizacji może spowodować zatrzymanie usługi. Odnów wsparcie, aby móc bezpiecznie aktualizować i mieć pełne wsparcie Twojego systemu.",
+        "maintenance-expiring-description": "Twoje wsparcie wygaśnie {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Po wygaśnięciu, dalej będziesz powiadamiany o nowych aktualizacjach - ale nie będziesz mógł ich zainstalować bez ryzyka problemów z usługą. Odnów terminowo, aby zapewnić bezpieczne, bezproblemowe aktualizacje i pełen zakres wsparcia."
     }
 }
