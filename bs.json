@@ -26,7 +26,7 @@
         "user_interface": "Korisnički interfejs",
         "write_here": "Napiši povratnu informaciju",
         "write_here_placeholder_text": "Hej! Počni pisati svoj komentar ovde :)\n\n\nKomentar je anoniman, pa nas obavijesti šta smo učinkovito \nili pogrešno učinili bez filtera",
-        "explanation": "Molimo Vas da nam pružite povratne informacije o Vašem novom iskustvu sa Zextras Serverom. Vaše mišljenje je jako važno za nas da poboljšamo naš proizvod. Recite nam Vaše mišljenje.",
+        "explanation": "Molimo Vas da nam pružite povratne informacije o Vašem novom iskustvu sa Zextras Serverom. Vaše mišljenje je jako važno za nas da poboljšamo naš proizvod. Opišite nam Vaše razmišljanje.",
         "hint": "Podsjetnik: Definirajte temu pomoću modula i selektora makro područja prije pisanja povratnih informacija. Zahvaljujemo Vam na vašoj pomoći.",
         "enable_privacy_setting": "Omogući postavku privatnosti za slanje povratnih informacija"
     },
@@ -60,10 +60,10 @@
         "details_feedback__collected_msg": "Prilikom pružanja povratne informacije, prikupljaju se i sljedeći podaci",
         "detailsfeedback__collected_msg": "Prilikom pružanja povratne informacije, prikupljaju se i sljedeći podaci",
         "discard_changes": "ODBACI IZMJENE",
-        "dont_save": "Nemoj sačuvati kopiju poslanih poruka",
+        "dont_save": "Nemoj pohranjivati kopiju poslanih poruka",
         "download_messages": "Preuzmite poruke na:",
         "edit_permissions": "Uredi permisije",
-        "edit_to_start_search": "Uredi pretragu da biste počeli novu",
+        "edit_to_start_search": "Izmijeni kriterije pretrage i započni novu",
         "email_address": "E-mail adresa",
         "email_server": "E-mail server (npr. “mail.example.com”)",
         "enable_all__following_permission_to_send_feedback_to_zextras": "Dozvoli sve permisije iz sekcije privatnosti kako biste poslali povratne informacije",
@@ -106,8 +106,8 @@
         "reload": "Ponovo učitaj",
         "remove": "ukloni",
         "save_and_leave": "Sačuvaj i napusti",
-        "save_both_folders": "Sačuvajte kopiju poslanih poruka u mapu Poslano i mapu zaduženja",
-        "save_to_my_sent_folder": "Sačuvaj kopiju poslanih poruka u moju mapu Poslano",
+        "save_both_folders": "Sačuvaj kopiju poslanih poruka u direktorij Poslano i dijeljeni direktorij",
+        "save_to_my_sent_folder": "Sačuvaj kopiju poslanih poruka u moj direktorij Poslano",
         "secondary": "Sekundarno",
         "send_feedback": "Pošalji povratne informacije",
         "send_feedback_helperText_carbonio": "<bold>Želite li predložiti neke promjene ili nam nešto reći? </bold><br /><br /> Podijelite svoje mišljenje s nama i pomozite u oblikovanju boljeg {{carbonio}}-a. Radujemo se Vašem odgovoru!",
@@ -119,12 +119,12 @@
         "total_accounts": "Ukupan broj računa",
         "total_domains": "Ukupan broj domena",
         "total_servers": "Ukupan broj servera",
-        "unsaved_changes_line1": "Jeste li sigurni da želite napustiti ovu stranicu bez spašavanja?",
+        "unsaved_changes_line1": "Jeste li sigurni da želite napustiti ovu stranicu bez pohranjivanja promjena?",
         "unsaved_changes_line2": "Sve nesačuvane izmjene će se izgubiti",
         "use_persona": "Koristi ovu osobu",
-        "use_personas_line1": "Koristite osobe kako biste brzo promijenili mnoge postavke prilikom slanja e-mail poruka.",
+        "use_personas_line1": "Koristi osobe za brzu promjenu mnogih postavki prilikom slanja e-mail poruka.",
         "use_ssl": "Koristite šifriranu konekciju (SSL) prilikom pristupa ovom serveru",
-        "when_composing": "Prilikom sastavljanja, odgovaranja ili prosljeđivanja poruka u mapi/ama:",
+        "when_composing": "Prilikom sastavljanja, odgovaranja ili prosljeđivanja poruka u direktoriju(ima):",
         "when_replying": "Kada odgovarate ili prosljeđujete poruke poslate na:",
         "mails_quota_mb": "Kvota za e-mail (MB)",
         "mails_quota_gb": "Kvota za e-mail (GB)",
@@ -136,7 +136,7 @@
         "address": "Adresa",
         "allow_all_permission_to_send_feedback_to_zextras": "Dopusti sve permisije iz sekcije privatnosti kako biste poslali povratne informacije",
         "carbonio_community_edition": "Carbonio Community Izdanje",
-        "reply_to_field_example": "npr. Mujo Mujić",
+        "reply_to_field_example": "npr. Sara Hadžić",
         "files_quota_used_mb": "Iskorištena kvota fajlova (MB)",
         "part_of_project_atom": "Budite dio <bold>Project ATOM</bold>, testirajte nove funkcije unaprijed, dijelite povratne informacije i pomozi poboljšati Carbonio!",
         "feedback_head_to_forum_helperText_carbonio": "<bold>Želite li primati obavijesti o Vašem zahtjevu?</bold><br /><br />Dobijte podršku od cijele zajednice {{carbonio}}  tako što ćete kreirati objavu na našem forumu.",
@@ -146,7 +146,7 @@
         "unsaved_changes": "Imate promjene koje nisu sačuvane",
         "update_view": "Ažuriraj prikaz",
         "use_personas_line2": "Na primjer, ako nekada šaljete e-mail u nekoj posebnoj ulozi na poslu, kreirajte račun za osobu za slanje istih.",
-        "save_delegate_folder": "Spremi kopiju poslanih poruka u dijeljenu mapu Poslano",
+        "save_delegate_folder": "Spremi kopiju poslanih poruka u dijeljeni direktorij Poslano",
         "backup_enabled": "Omogući / Onemogući sigurnosnu kopiju"
     },
     "labels": {
@@ -193,18 +193,18 @@
             "settings_saved": "Izmjene su ispravno sačuvane",
             "our_interface_does_not_support_tablets_and_smartphones": "Naš interfejs ne podržava tablete i smartphone, što može dovesti do problema s prikazom. Molimo koristite računar ili laptop za optimalan rad. Radi se na kompatibilnosti s mobilnim uređajima u budućnosti. Hvala."
         },
-        "reload": "\tŽelite li ponovno učitati aplikaciju da prikažete novi jezik? \n(U suprotnom, novi jezik će se pojaviti kada se sljedeći put prijavite.)"
+        "reload": "\tŽelite li sada ponovo učitati aplikaciju kako bi se prikazao novi odabrani jezik? \n(U suprotnom, novi jezik će se pojaviti prilikom sljedeće prijave.)"
     },
     "messages": {
-        "permanent_delete_body": "Ako trajno obrišete ovu Osobu, nećete je moći vratiti. Nastaviti?",
-        "permanent_delete_title": "Jeste li sigurni da želite trajno izbrisati ovu stavku?"
+        "permanent_delete_body": "Ukoliko trajno obrišete ovu Osobu to se neće moći poništiti. Nastavi?",
+        "permanent_delete_title": "Jeste li siguni da želite trajno izbrisati ovu stavku?"
     },
     "module": {
         "app": {
             "version": "Verzije aplikacije"
         }
     },
-    "new": "Novi",
+    "new": "Novo",
     "new_tab": "Nova kartica",
     "passwords_recovery_settings": {
         "title": "Postavke računa za oporavak lozinke"
@@ -256,7 +256,7 @@
             },
             "headings": {
                 "create_appointment": "Zakazivanje u kalendaru",
-                "settings_label": "Postavke statusa izvan ureda",
+                "settings_label": "Postavke statusa odsustva iz kancelarije",
                 "time_period": "Vremenski period"
             },
             "labels": {
@@ -265,7 +265,7 @@
                 "create_appointment": "Kreirajte sastanak:",
                 "end_time": "Vrijeme završetka:",
                 "external_senders": "Eksterni pošiljaoci",
-                "out_of_office_status": "Status izvan ureda:",
+                "out_of_office_status": "Status odsustva iz kancelarije:",
                 "start_date": "Početni datum",
                 "start_time": "Vrijeme početka:",
                 "send_auto_reply_period": "Šalji automatske odgovore tokom sljedećeg perioda:",
@@ -281,9 +281,9 @@
         "app": "Postavke",
         "search_settings": {
             "labels": {
-                "include_search_in_shared_folder": "Uključi dijeljenju mapu u pretrage",
-                "include_search_in_spam_folder": "Uključi mapu sa neželjenom poštom u pretrage",
-                "include_search_in_trash_folder": "Uključi mapu za otpad u pretrage"
+                "include_search_in_shared_folder": "Uključi dijeljeni direktorij u pretrage",
+                "include_search_in_spam_folder": "Uključi direktorij Neželjena pošta u pretrage",
+                "include_search_in_trash_folder": "Uključi direktorij Otpad u pretrage"
             }
         },
         "timezone_and_language": "Jezik"
