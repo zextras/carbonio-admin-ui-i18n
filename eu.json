@@ -1,28 +1,107 @@
 {
-    "label": {
-        "cancel": "Utzi",
-        "clear_search_query": "GARBITU BILAKETA",
-        "filter_folders": "Iragazi karpetak",
-        "go_back": "Itzuli",
-        "new_folder": "Karpeta berria",
-        "delete": "Ezabatu",
-        "discard_changes": "BAZTERTU ALDAKETAK",
-        "save": "Gorde",
-        "time_zone": "Ordu-zona",
-        "delete_permanently": "Betirako ezabatu"
+  "action": {
+    "click_preview": "Egin klik aurrebista ikusteko",
+    "click_open": "Egin klik irekitzeko"
+  },
+  "label": {
+    "days": "Egunak",
+    "invalid_destination": "Nodo hau ez da baliozko helmuga",
+    "save": "Gorde",
+    "to": "Hartzailea",
+    "add": "Gehitu",
+    "attachments_disclaimer": "Erantsitako mezu bat ikusten ari zara. Ezin da egiaztatu erantsitako mezuen benetakotasuna.",
+    "attachement_unknown": "<{{mimeType}}> ezezaguna",
+    "calendar": "Egutegia",
+    "from": "Igorlea",
+    "go_back": "Itzuli",
+    "create": "Sortu",
+    "cancel": "Utzi",
+    "delete": "Ezabatu",
+    "messages": "Mezuak",
+    "discard_changes": "BAZTERTU ALDAKETAK",
+    "edit": "Editatu",
+    "private": "Pribatua",
+    "path": "Bidea",
+    "save_to_files": "Gorde Fitxategietan",
+    "select_folder": "Hautatu karpeta",
+    "time_zone": "Ordu-zona",
+    "show_quoted_text": "Bistaratu testua kakotx artean",
+    "signature_required": "Sinaduraren informazioa beharrezkoa da.",
+    "subject": "Gaia",
+    "show_all": "Erakutsi guztiak",
+    "type": "Mota",
+    "view_images": "IKUSI IRUDIAK",
+    "attachment": "Eranskina",
+    "attachment_plural": "eranskinak",
+    "equipment": "Ekipamendua",
+    "invites": "Gonbidapenak",
+    "location": "Kokapena",
+    "clear_search_query": "GARBITU BILAKETA",
+    "filter_folders": "Iragazi karpetak",
+    "new_folder": "Karpeta berria",
+    "delete_permanently": "Betirako ezabatu"
+  },
+  "message": {
+    "snackbar": {
+      "all_att_saved": "Eranskinak ongi gorde dira hautatutako karpetan",
+      "att_saved": "Eranskina hautatutako karpetan gorde da",
+      "share": {
+        "accepted": "Partekatzeko eskaera onartu duzu"
+      },
+      "some_att_fails": "Fitxategi batzuk gordetzerakoan arazoren bat dagoela dirudi. Saiatu berriro",
+      "att_err": "Gordetzerakoan arazo bat dagoela dirudi. Saiatu berriro",
+      "settings_saved": "Aldaketak behar bezala gorde dira"
     },
-    "message": {
-        "snackbar": {
-            "settings_saved": "Aldaketak behar bezala gorde dira"
-        }
+    "external_images_blocked": "Kanpoko irudiak blokeatu egin dira balizko spametatik zu babesteko"
+  },
+  "messages": {
+    "no_content": "Mezuak ez dauka testu-edukirik",
+    "snackbar": {
+      "marked_as_spam": "E-posta hau Spam gisa markatu duzu"
     },
-    "messages": {
-        "permanent_delete_title": "Ziur elementu hau betiko ezabatu nahi duzula?"
-    },
-    "settings": {
-        "choose": "Aukeratu"
-    },
-    "share": {
-        "is_contained_in": "barruan dago"
+    "permanent_delete_title": "Ziur elementu hau betiko ezabatu nahi duzula?"
+  },
+  "account": {
+    "new": {
+      "create_otp_wizard": "Sortu behin-behineko pasahitza (OTP)",
+      "create_account_wizard": "Kontuak sortzeko morroia"
     }
+  },
+  "accountDetails": {
+    "auto_fill_user_is_disabled": "Erabiltzailea automatikoki betetzea desgaituta dago",
+    "auto_fill_username_is_disabled": "Erabiltzaile-izena automatikoki betetzea desgaituta dago",
+    "change_password_for_next_login": "Pasahitza aldatu behar da hurrengo saio-hasieran",
+    "enable_activeSync_remote_access": "Gaitu ActiveSync urruneko sarbidea",
+    "force_change_password": "Behartu pasahitza aldatzea",
+    "default_COS": "COS lehenetsia",
+    "user_will_change_password_on_next_login": "Erabiltzaileak pasahitza aldatuko du hurrengo saio-hasieran"
+  },
+  "account_details": {
+    "ADD": "GEHITU",
+    "DELETE": "EZABATU",
+    "NEXT": "HURRENGOA",
+    "SAVE": "GORDE",
+    "abq_status": "ABQ egoera",
+    "abstract": "Abstraktua",
+    "account_with_read_only_rights": "<bold>Irakurtzeko Bakarrik</bold> baimenak dituzten kontuak",
+    "activesync_remote_access": "ActiveSync urruneko sarbidea",
+    "add_invites_with_publish_method": "Gehitu gonbidapenak PUBLISH metodoarekin",
+    "Chats": "Txatak",
+    "a_user": "Erabiltzaile bat",
+    "add_appointments_when_invited": "Gehitu automatikoki hitzorduak erabiltzailea gonbidatzen denean",
+    "able_to_see_password_once": " Kontuan izan: pasahitza <bold> behin bakarrik</bold> ikusi ahal izango duzu.",
+    "account_send_rights": "Kontu honek <bold>Bidaltzeko</bold> baimenak ditu honetan",
+    "account_read_only_rights": "Kontu honek <bold>Bakarrik Irakurtzeko</bold> baimenak ditu honetan",
+    "account_read_write_rights": "Kontu honek <bold>Irakurtzeko/Idazteko</bold> baimenak ditu honetan",
+    "account_with_read_write_rights": "<bold>Irakurtzeko/Idazteko</bold> baimenak dituzten kontuak",
+    "account_with_send_rights": "<bold>Bidaltzeko/Honen izenean bidlatzeko</bold> baimenak dituen kontua",
+    "add_the_account_group_with_selected_rights": "GEHITU KONTU / TALDEA HAUTATUTAKO ESKUBIDEEKIN",
+    "add_forwarded_invites_to_calendar": "Egutegian automatikoki gehitu birbidalitako hitzorduak"
+  },
+  "settings": {
+    "choose": "Aukeratu"
+  },
+  "share": {
+    "is_contained_in": "barruan dago"
+  }
 }

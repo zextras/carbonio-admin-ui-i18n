@@ -1,6 +1,12 @@
 {
-    "label": {
-        "cancel": "Zrušit",
-        "delete": "Smazat"
-    }
+  "label": {
+    "attachments_disclaimer": "Zobrazujete připojenou zprávu. Autenticita připojených zpráv nemůže být ověřena.",
+    "create": "Vytvořit",
+    "delete": "Smazat",
+    "close": "Zavřít",
+    "add": "Přidat",
+    "attachement_unknown": "Neznámý <{{mimeType}}>",
+    "calendar": "Kalendář",
+    "cancel": "Zrušit"
+  }
 }
