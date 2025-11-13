@@ -2023,7 +2023,10 @@
         "domains_that_use_this_cos": "Domeny używające tego COS",
         "enable_new_mail_toast_notification": "Włącz wyskakujące powiadomienia o nowych e-mailach",
         "upload_max_size_per_file": "Max. dozwolony rozmiar (bajty) dla każdego załącznika",
-        "unlimited": "Nielimitowane"
+        "unlimited": "Nielimitowane",
+        "creatCOS": {
+            "cosNameInfo": "Nazwa COS musi zawierać tylko małe litery."
+        }
     },
     "locale": {
         "label_italian": "Włoski - {{value}}",
