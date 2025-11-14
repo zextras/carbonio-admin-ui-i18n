@@ -572,7 +572,9 @@
         "play_sound_when_message_arrives": "Play a sound when a message arrives (requires QuickTime or Windows Media plugin)",
         "polling_interval": "Polling interval (time after which to check for new mail)",
         "pop3_polling_interval": "POP3 polling interval",
-        "preferences": "Preferences",
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "Allow the user to ask for a read receipt"
+        },
         "prevent_user_from_changing_password": "Prevent user from changing password",
         "proxy_allowed_domain_name": "Proxy Allowed Domain Name",
         "proxy_allowed_domains": "Proxy Allowed Domains",
@@ -731,7 +733,8 @@
         "accounts": {
             "editAccount": {
                 "externalldap": "External LDAP",
-                "externalldapReferenceForAuthentication": "External LDAP Reference for Authentication"
+                "externalldapReferenceForAuthentication": "External LDAP Reference for Authentication",
+                "allowTheUserToAskForAReadReceipt": "Allow the user to ask for a read receipt"
             }
         }
     },
