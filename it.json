@@ -230,7 +230,8 @@
         "accounts": {
             "editAccount": {
                 "externalldapReferenceForAuthentication": "Riferimento LDAP Esterno per Autenticazione",
-                "externalldap": "LDAP Esterno"
+                "externalldap": "LDAP Esterno",
+                "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
             }
         }
     },
@@ -1871,7 +1872,6 @@
         "number_of_items_to_display_per_page": "Numero di elementi da visualizzare per pagina",
         "play_sound_when_message_arrives": "Riproduci un suono quando arriva un messaggio (occorre il plug-in QuickTime o Windows Media)",
         "polling_interval": "Intervallo di ricezione automatica della nuova posta",
-        "preferences": "Preferenze",
         "receiving_mail": "Ricezione messaggi",
         "s_mime_features": "Funzioni S/MIME",
         "search_features": "Funzioni di ricerca",
@@ -2036,6 +2036,9 @@
         "upload_max_size_per_file": "Dimensione massima consentita per ogni allegato, espressa in byte",
         "creatCOS": {
             "cosNameInfo": "Il nome della COS deve contenere solo lettere minuscole."
+        },
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
         }
     },
     "accountDetails": {
