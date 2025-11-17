@@ -457,7 +457,8 @@
         "accounts": {
             "editAccount": {
                 "externalldap": "Zewnętrzne LDAP",
-                "externalldapReferenceForAuthentication": "Referencja zewnętrznego LDAP do uwierzytelniania"
+                "externalldapReferenceForAuthentication": "Referencja zewnętrznego LDAP do uwierzytelniania",
+                "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
             }
         }
     },
@@ -1882,7 +1883,6 @@
         "number_of_items_to_display_per_page": "Liczba elementów wyświetlanych na stronie",
         "play_sound_when_message_arrives": "Po odebraniu wiadomości odtwórz dźwięk (wymagana wtyczka QuickTime lub Windows Media)",
         "polling_interval": "Interwał sprawdzania wiadomości (czas, po którym sprawdzać czy przyszły nowe e-maile)",
-        "preferences": "Właściwości",
         "receiving_mail": "Otrzymywanie e-maili",
         "s_mime_features": "Funkcje S/MIME",
         "search_features": "Funkcje wyszukiwania",
@@ -2026,6 +2026,9 @@
         "unlimited": "Nielimitowane",
         "creatCOS": {
             "cosNameInfo": "Nazwa COS musi zawierać tylko małe litery."
+        },
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
         }
     },
     "locale": {
