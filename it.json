@@ -1521,7 +1521,8 @@
         "files_quota_used_mb": "Quota Files Utilizzata (MB)",
         "files_quota_used_gb": "Quota Files Utilizzata (GB)",
         "mails_quota_used_gb": "Quota Email Utilizzata (GB)",
-        "backup_enabled": "Abilita / Disabilita Backup"
+        "backup_enabled": "Abilita / Disabilita Backup",
+        "help_and_documentation": "Aiuto e Documentazione"
     },
     "message": {
         "snackbar": {
