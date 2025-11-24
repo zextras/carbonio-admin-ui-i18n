@@ -736,6 +736,10 @@
                 "externalldapReferenceForAuthentication": "External LDAP Reference for Authentication",
                 "allowTheUserToAskForAReadReceipt": "Allow the user to ask for a read receipt"
             }
+        },
+        "editAccount": {
+            "invalidaEmailError": "One or more email addresses are invalid.",
+            "otpSentSuccessfully": "OTP has been sent successfully"
         }
     },
     "error": {
