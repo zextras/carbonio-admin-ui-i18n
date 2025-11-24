@@ -233,6 +233,10 @@
                 "externalldap": "LDAP Esterno",
                 "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
             }
+        },
+        "editAccount": {
+            "otpSentSuccessfully": "L'OTP è stato inviato con successo",
+            "invalidaEmailError": "Uno o più indirizzi email non sono validi."
         }
     },
     "label": {
