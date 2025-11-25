@@ -460,6 +460,10 @@
                 "externalldapReferenceForAuthentication": "Referencja zewnętrznego LDAP do uwierzytelniania",
                 "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
             }
+        },
+        "editAccount": {
+            "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
+            "otpSentSuccessfully": "Hasło jednorazowe zostało wysłane"
         }
     },
     "label": {
