@@ -1431,7 +1431,8 @@
         "files_quota_used_mb": "Usage des fichiers (Mo)",
         "mails_quota_used_mb": "Usage des emails (Mo)",
         "files_quota_mb": "Quota des fichiers (Mo)",
-        "backup_enabled": "Activer / Désactiver les sauvegardes"
+        "backup_enabled": "Activer / Désactiver les sauvegardes",
+        "help_and_documentation": "Aide & Documentation"
     },
     "message": {
         "snackbar": {
@@ -1765,8 +1766,13 @@
         "accounts": {
             "editAccount": {
                 "externalldap": "LDAP externe",
-                "externalldapReferenceForAuthentication": "Référence LDAP externe pour l'authentification"
+                "externalldapReferenceForAuthentication": "Référence LDAP externe pour l'authentification",
+                "allowTheUserToAskForAReadReceipt": "Autoriser l'utilisateur à demander un accusé de lecture"
             }
+        },
+        "editAccount": {
+            "invalidaEmailError": "Une ou plusieurs adresses email sont invalides.",
+            "otpSentSuccessfully": "L'OTP a été envoyé avec succès"
         }
     },
     "commons": {
@@ -2037,7 +2043,13 @@
         "domains_that_use_this_cos": "Domaines utilisant cette COS",
         "enable_new_mail_toast_notification": "Activer les bulles de notification pour les nouveaux messages",
         "upload_max_size_per_file": "Taille maximale (en octets) autorisée pour chaque pièce jointe",
-        "unlimited": "Illimité"
+        "unlimited": "Illimité",
+        "creatCOS": {
+            "cosNameInfo": "Le nom de la COS doit contenir uniquement des lettres minuscules."
+        },
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "Autoriser l'utilisateur à demander un accusé de lecture"
+        }
     },
     "create_new_cos": "CRÉER UNE NOUVELLE COS",
     "select_section_from_left_menu": "Merci de sélectionner une section depuis le menu de gauche",
@@ -2983,6 +2995,13 @@
         "help_center": "Centre d'assistance"
     },
     "button": {
-        "refresh_page": "RAFRAÎCHIR"
+        "refresh_page": "RAFRAÎCHIR",
+        "view_subscription_details": "VOIR LE DÉTAIL DES SOUSCRIPTIONS"
+    },
+    "banner": {
+        "maintenance-expired-description": "Votre maintenance a expiré le {{maintenanceEndDate}}.",
+        "maintenance-expired-label": "Votre version actuelle continuera à fonctionner normalement, mais vous ne devez installer aucune nouvelle mise à jour Carbonio — si vous le faites, cela pourrait entraîner une interruption du service. Renouvelez votre contrat de maintenance pour mettre à niveau votre système en toute sécurité et bénéficier d'une assistance complète.",
+        "maintenance-expiring-description": "Votre maintenance expirera le {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Après expiration, vous continuerez à être informé des nouvelles mises à jour, mais vous ne pourrez pas les installer sans risquer de rencontrer des problèmes de service. Renouvelez à temps pour garantir des mises à niveau fluides et sécurisées ainsi qu'une couverture d'assistance complète."
     }
 }
