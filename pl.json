@@ -1756,7 +1756,8 @@
         "files_quota_used_mb": "Użyta przestrzeń dla Plików (MB)",
         "files_quota_used_gb": "Użyta przestrzeń dla Plików (GB)",
         "backup_enabled": "Włącz / wyłącz kopię zapasową",
-        "help_and_documentation": "Pomoc i dokumentacja"
+        "help_and_documentation": "Pomoc i dokumentacja",
+        "certificate_authority": "Urząd certyfikacji"
     },
     "message": {
         "snackbar": {
