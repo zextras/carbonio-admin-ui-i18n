@@ -1526,7 +1526,16 @@
         "files_quota_used_gb": "Quota Files Utilizzata (GB)",
         "mails_quota_used_gb": "Quota Email Utilizzata (GB)",
         "backup_enabled": "Abilita / Disabilita Backup",
-        "help_and_documentation": "Aiuto e Documentazione"
+        "help_and_documentation": "Aiuto e Documentazione",
+        "certificate_authority": "Autorità del certificato",
+        "upload_certificate": "CARICA CERTIFICATO",
+        "generate_certificate": "GENERA CERTIFICATO",
+        "no_certificate_to_remove": "Non c'è nessun certificato da rimuovere",
+        "no_certificate_to_download": "Non c'è nessun certificato da scaricare",
+        "dismiss": "ANNULLA",
+        "generate": "GENERA",
+        "no_virtual_hosts": "Aggiungi almeno un Virtual Host",
+        "certificate_available_after_proxy_restart": "Il certificato sarà disponibile una volta che il Proxy verrà riavviato"
     },
     "message": {
         "snackbar": {
@@ -2989,12 +2998,16 @@
     },
     "button": {
         "refresh_page": "AGGIORNA",
-        "view_subscription_details": "VEDI DETTAGLI ABBONAMENTO"
+        "view_subscription_details": "VEDI DETTAGLI ABBONAMENTO",
+        "remove_selected_items": "Rimuovi elementi selezionati"
     },
     "banner": {
         "maintenance-expired-description": "Il supporto è scaduto il {{maintenanceEndDate}}.",
         "maintenance-expired-label": "La versione attuale continuerà a funzionare, ma non installare aggiornamenti di Carbonio — potrebbero interrompere il servizio. Rinnova il supporto per aggiornare in sicurezza e mantenere il sistema protetto.",
         "maintenance-expiring-description": "Il supporto scadrà il {{maintenanceEndDate}}.",
         "maintenance-expiring-label": "Dopo la scadenza riceverai ancora le notifiche degli aggiornamenti, ma installarli potrebbe causare problemi al servizio. Rinnova in tempo per garantire aggiornamenti sicuri e supporto completo."
+    },
+    "tooltip": {
+        "add_virtual_host": "Scrivi il nome di un Virtual Host valido per aggiungerlo"
     }
 }
