@@ -2131,7 +2131,7 @@
         "no_certificate_to_remove": "There is no certificate to remove",
         "no_certificate_to_download": "There is no certificate to download",
         "no_virtual_hosts": "You need to add at least one Virtual Host",
-        "certificate_request_success": "Processing request; results will be sent to domain notification recipients",
+        "certificate_request_success": "Processing. Results will be notified to global and domain recipients",
         "dismiss": "DISMISS",
         "generate": "GENERATE",
         "certificate_available_after_proxy_restart": "The certificate will be available once the Proxy is restarted"
