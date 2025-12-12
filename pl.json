@@ -1179,7 +1179,7 @@
         "download_2": "POBIERZ",
         "download_pdf": "POBIERZ PDF",
         "load_FILE": "PRZEŚLIJ PLIK",
-        "load_copy_certi": "Prześlij lub skopiuj swój certyifkat",
+        "load_copy_certi": "Prześlij lub skopiuj Twój certyfikat",
         "load_you_cert_file": "Prześlij plik z certyfikatem",
         "load_your_cert_file": "Prześlij plik z certyfikatem",
         "load_your_private_file": "Prześlij plik z certyfikatem",
@@ -1757,7 +1757,16 @@
         "files_quota_used_gb": "Użyta przestrzeń dla Plików (GB)",
         "backup_enabled": "Włącz / wyłącz kopię zapasową",
         "help_and_documentation": "Pomoc i dokumentacja",
-        "certificate_authority": "Urząd certyfikacji"
+        "certificate_authority": "Urząd certyfikacji",
+        "upload_certificate": "PRZEŚLIJ CERTYFIKAT",
+        "generate_certificate": "WYGENERUJ CERTYFIKAT",
+        "no_certificate_to_remove": "Brak certyfikatu do usunięcia",
+        "no_certificate_to_download": "Brak certyfikatu do pobrania",
+        "no_virtual_hosts": "Musisz dodać co najmniej jednego wirtualnego hosta",
+        "certificate_request_success": "Przetwarzanie. O wynikach powiadomieni zostaną odbiorcy globalni i odbiorcy z domeny",
+        "dismiss": "ZAMKNIJ",
+        "generate": "WYGENERUJ",
+        "certificate_available_after_proxy_restart": "Certyfikat będzie dostępny, gdy proxy zostanie zrestartowane"
     },
     "message": {
         "snackbar": {
@@ -1969,7 +1978,7 @@
         "save_to_Sent": "Zapisuj w wysłanych",
         "saved_searches": "Zapisane wyszukiwania",
         "session_idle_timeout": "Limit czasowy braku aktywności",
-        "new_proxy_allowed_domain": "Nowa domena dopuszczona przez Proxy",
+        "new_proxy_allowed_domain": "Nowa domena dopuszczona przez proxy",
         "yes_disable": "Tak, wyłącz",
         "use_quickadd_dialog_in_creation": "Używaj dialogu QuickAdd podczas tworzenia",
         "use_ical_delegation_model_for_shared_calendars": "Używaj modelu delegacji iCal dla udostępnionych kalendarzy",
@@ -2997,12 +3006,16 @@
     "create": "Stwórz",
     "button": {
         "refresh_page": "ODŚWIEŻ",
-        "view_subscription_details": "ZOBACZ SZCZEGÓŁY SUBSKRYPCJI"
+        "view_subscription_details": "ZOBACZ SZCZEGÓŁY SUBSKRYPCJI",
+        "remove_selected_items": "Usuń wybrane elementy"
     },
     "banner": {
         "maintenance-expired-description": "Twoje wsparcie wygasło {{maintenanceEndDate}}.",
         "maintenance-expired-label": "Twoja aktualna wersja będzie funkcjonować normalnie, ale nie możesz instalować żadnych aktualizacji Carbonio. Instalacja aktualizacji może spowodować zatrzymanie usługi. Odnów wsparcie, aby móc bezpiecznie aktualizować i mieć pełne wsparcie Twojego systemu.",
         "maintenance-expiring-description": "Twoje wsparcie wygaśnie {{maintenanceEndDate}}.",
         "maintenance-expiring-label": "Po wygaśnięciu, dalej będziesz powiadamiany o nowych aktualizacjach - ale nie będziesz mógł ich zainstalować bez ryzyka problemów z usługą. Odnów terminowo, aby zapewnić bezpieczne, bezproblemowe aktualizacje i pełen zakres wsparcia."
+    },
+    "tooltip": {
+        "add_virtual_host": "Aby dodać, wprowadź prawidłową nazwę wirtualnego hosta"
     }
 }
