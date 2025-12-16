@@ -2041,8 +2041,7 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
-        },
-        "features": "Funkcje"
+        }
     },
     "locale": {
         "label_italian": "Włoski - {{value}}",
