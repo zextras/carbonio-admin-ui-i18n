@@ -2050,8 +2050,7 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
-        },
-        "features": "Features"
+        }
     },
     "accountDetails": {
         "default_COS": "COS Predefinita",
