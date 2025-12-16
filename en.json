@@ -515,9 +515,7 @@
         "enabled": "Enabled",
         "external_pop_access": "External POP Access",
         "failed_login_policy": "Failed Login Policy",
-        "features": {
-            "active_sync_access": "Active Sync Access"
-        },
+        "features": "Features",
         "files": "Files",
         "flash_browser_title_when_message_arrives": "Flash the browser title when a message arrives",
         "forwarding": "Forwarding",
