@@ -1882,9 +1882,6 @@
         "enable_keyboard_shortcuts": "Włącz skróty klawiaturowe",
         "enable_message_deduping": "Włącz deduplikację wiadomości",
         "enable_toaster_notification_for_new_mail": "Włącz powiadomienia pop-up dla nowych wiadomości",
-        "features": {
-            "active_sync_access": "Dostęp Active Sync"
-        },
         "flash_browser_title_when_message_arrives": "Po odebraniu wiadomości podświetl tytuł strony w przeglądarce",
         "general_features": "Funkcje ogólne",
         "general_information": "Informacje ogólne",
@@ -2044,7 +2041,8 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
-        }
+        },
+        "features": "Funkcje"
     },
     "locale": {
         "label_italian": "Włoski - {{value}}",
