@@ -1167,7 +1167,6 @@
         "number_of_items_to_display_per_page": "Số mục hiển thị trên mỗi trang",
         "play_sound_when_message_arrives": "Phát âm thanh khi có thư đến (yêu cầu có plugin QuickTime hoặc Windows Media)",
         "polling_interval": "Khoảng thăm dò (thời gian sau khi kiểm tra thư mới)",
-        "preferences": "Tùy chọn",
         "receiving_mail": "Nhận thư",
         "s_mime_features": "Tính năng S/MIME",
         "search_features": "Tính năng tìm kiếm",

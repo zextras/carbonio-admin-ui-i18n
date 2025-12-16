@@ -1858,7 +1858,6 @@
         "number_of_items_to_display_per_page": "Nº de elementos a mostrar por página",
         "play_sound_when_message_arrives": "Reproducir un sonido al recibir un e-mail (requiere los complementos QuickTime o Windows Media)",
         "polling_interval": "Intervalo de consulta (Verificación de nuevo correo)",
-        "preferences": "Preferencias",
         "receiving_mail": "Correo entrante",
         "s_mime_features": "Funcionalidades de S/MIME",
         "search_features": "Funcionalidades de búsqueda",

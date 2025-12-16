@@ -1860,7 +1860,6 @@
         "number_of_items_to_display_per_page": "Nº de itens a serem exibidos por página",
         "play_sound_when_message_arrives": "Reproduzir um som quando chegar uma mensagem (requer o plugin QuickTime ou Windows Media)",
         "polling_interval": "Intervalo de consulta (verificação de novos emails)",
-        "preferences": "Preferências",
         "receiving_mail": "Recebimento de emails",
         "s_mime_features": "Funcionalidades de S/MIME",
         "search_features": "Funcionalidades da busca",

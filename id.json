@@ -1757,7 +1757,6 @@
         "number_of_items_to_display_per_page": "Jumlah item yang ditampilkan per halaman",
         "play_sound_when_message_arrives": "Putar bunyi ketika pesan masuk (memerlukan plugin Media QuickTime atau Windows)",
         "polling_interval": "Interval polling (waktu sebelum pemeriksaan email baru)",
-        "preferences": "Preferensi",
         "receiving_mail": "Menerima email",
         "s_mime_features": "Fitur S/MIME",
         "search_features": "Fitur Pencarian",

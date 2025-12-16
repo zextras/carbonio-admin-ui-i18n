@@ -1841,7 +1841,6 @@
         "play_sound_when_message_arrives": "Билдирүүнү алууда үнүн чыгаруу (QuickTime же Windows Media плагин талап кылынат)",
         "polling_interval": "Сурамжылоо интервалы (бир аз убакыт өткөндөн кийин жаңы почтаны текшерүү)",
         "pop3_polling_interval": "POP3 сурамжылоо интервалы",
-        "preferences": "Жөнгө салуулар",
         "proxy_allowed_domain_name": "Прокси-сервери менен уруксат берилген домендин аты",
         "quota_warning_message_template": "Чекке жетүү жөнүндө эскертүү шаблону",
         "quotas": "Лимиттер",

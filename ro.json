@@ -248,7 +248,6 @@
         "number_of_items_to_display_per_page": "Număr elemente afişate pe o pagină",
         "play_sound_when_message_arrives": "Redare sunet când soseşte un mesaj (necesită insert QuickTime sau Windows Media)",
         "polling_interval": "Interval de interogare ciclică (timpul după care se verifică dacă sunt mesaje noi)",
-        "preferences": "Preferinţe",
         "receiving_mail": "Primire mesaje",
         "s_mime_features": "Caracteristici S/MIME",
         "search_features": "Caracteristicile căutare",

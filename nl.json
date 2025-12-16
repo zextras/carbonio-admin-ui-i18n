@@ -1704,7 +1704,6 @@
         "number_of_items_to_display_per_page": "Aantal items per pagina weergeven",
         "play_sound_when_message_arrives": "Een geluid afspelen als er een bericht wordt ontvangen (vereist QuickTime- of Windows Media-invoegtoepassing)",
         "polling_interval": "Opvragingsinterval (tijd tot controle op nieuwe e-mail)",
-        "preferences": "Voorkeuren",
         "receiving_mail": "E-mail ontvangen",
         "s_mime_features": "S/MIME-functies",
         "search_features": "Zoekfuncties",

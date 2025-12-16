@@ -1564,7 +1564,6 @@
         "number_of_items_to_display_per_page": "每页显示的条目数",
         "play_sound_when_message_arrives": "收到邮件时以声音提示 (须使用 QuickTime 或 Windows Media 插件)",
         "polling_interval": "循环间隔 (多长时间后检查新邮件)",
-        "preferences": "首选项",
         "receiving_mail": "接收邮件",
         "s_mime_features": "S/MIME 功能",
         "search_features": "搜索功能",

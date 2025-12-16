@@ -563,7 +563,6 @@
         "play_sound_when_message_arrives": "메시지가 도착할 때 소리로 알림(QuickTime 또는 Windows Media 플러그인 필요)",
         "polling_interval": "폴링 간격(새 메일 확인 전 경과 시간)",
         "pop3_polling_interval": "POP3 폴링 간격",
-        "preferences": "환경설정",
         "prevent_user_from_changing_password": "사용자가 비밀번호를 변경하지 못하게 합니다",
         "proxy_allowed_domain_name": "프록시 허용 도메인 이름",
         "proxy_allowed_domains": "프록시 허용 도메인",

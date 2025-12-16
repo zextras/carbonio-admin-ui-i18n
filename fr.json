@@ -1887,9 +1887,6 @@
         "enable_keyboard_shortcuts": "Activer les raccourcis clavier",
         "enable_message_deduping": "Activer la déduplication de message",
         "enable_toaster_notification_for_new_mail": "Activer la notification de nouveaux emails via le bandeau de notification",
-        "features": {
-            "active_sync_access": "Accès Active Sync"
-        },
         "flash_browser_title_when_message_arrives": "Chaque fois qu’un nouveau mail arrive : faire clignoter la barre de titre du navigateur",
         "general_features": "Fonctions générales",
         "general_information": "Information générale",

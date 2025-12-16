@@ -141,9 +141,6 @@
         "distribution_list_folder": "مجلد قائمة التوزيع",
         "email_retention_policy": "سياسة الاحتفاظ بالبريد الإلكتروني",
         "failed_login_policy": "سياسة محاولات الدخول الفاشلة",
-        "features": {
-            "active_sync_access": "الوصول عن طريق آكتف سينك -ActiveSync-"
-        },
         "flash_browser_title_when_message_arrives": "ومض المتصفح عند وصول رسالة",
         "forwarding": "إعادة التوجيه",
         "free_busy_interop": "توافق خاصية متاح/مشغول (O = خارج المكتب)، (OU = خارج المكتب، متاح للمشاكل العاجلة)",

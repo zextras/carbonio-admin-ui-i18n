@@ -1731,7 +1731,6 @@
         "number_of_items_to_display_per_page": "प्रत्येक पृष्ठ पर प्रदर्शित किए जाने वाले आइटम्स की संख्या",
         "play_sound_when_message_arrives": "संदेश आने पर कोई ध्वनि चलाएँ (QuickTime या Windows मीडिया प्लगिन आवश्यक)",
         "polling_interval": "पोलिंग अंतराल (नई मेल जाँचने के बीच का अंतराल)",
-        "preferences": "प्राथमिकताएँ",
         "receiving_mail": "मेल प्राप्‍त करना",
         "s_mime_features": "S/MIME सुविधाएँ",
         "search_features": "खोज सुविधाएँ",

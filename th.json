@@ -1841,7 +1841,6 @@
         "number_of_items_to_display_per_page": "จำนวนรายการที่จะแสดงต่อหน้า",
         "play_sound_when_message_arrives": "เล่นเสียงเมื่อข้อความมาถึง (จำเป็นต้องใช้ปลั๊กอิน QuickTime หรือ Windows Media)",
         "polling_interval": "ช่วงเวลาการหยั่งเสียง (เวลาหลังการตรวจสอบจดหมายใหม่)",
-        "preferences": "การกำหนดลักษณะ",
         "receiving_mail": "การรับจดหมาย",
         "s_mime_features": "คุณลักษณะ S/MIME",
         "search_features": "คุณลักษณะการค้นหา",

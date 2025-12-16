@@ -1702,7 +1702,6 @@
         "number_of_items_to_display_per_page": "Anzahl der pro Seite angezeigten Objekte",
         "play_sound_when_message_arrives": "Bei Maileingang Sound abspielen (QuickTime- oder Windows-Media-Plugin erforderlich)",
         "polling_interval": "Abrufintervall (Zeit, nach der auf neue Mails geprüft wird)",
-        "preferences": "Einstellungen",
         "receiving_mail": "E-Mail empfangen",
         "s_mime_features": "S/MIME-Funktionen",
         "search_features": "Suchfunktionen",

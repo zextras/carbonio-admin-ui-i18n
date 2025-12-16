@@ -1702,7 +1702,6 @@
         "number_of_items_to_display_per_page": "1ページに表示する項目の数",
         "play_sound_when_message_arrives": "メッセージが届いたときに音で通知する（QuickTimeまたはWindows Mediaプラグインが必要）",
         "polling_interval": "ポーリング間隔（新着メールを確認する間隔）",
-        "preferences": "プリファレンス",
         "receiving_mail": "メールの受信",
         "s_mime_features": "S/MIMEの機能",
         "search_features": "検索の機能",
