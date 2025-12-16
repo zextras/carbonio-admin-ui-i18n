@@ -1900,9 +1900,6 @@
         "enable_keyboard_shortcuts": "Attiva tasti di scelta rapida",
         "enable_message_deduping": "Enable Message Deduping",
         "enable_toaster_notification_for_new_mail": "Permetti la notifica toaster per le nuove mail",
-        "features": {
-            "active_sync_access": "Accesso Active Sync"
-        },
         "flash_browser_title_when_message_arrives": "Fai lampeggiare la barra del titolo del browser quando arriva un messaggio",
         "general_features": "Funzioni generali",
         "general_information": "Informazioni Generali",
@@ -2053,7 +2050,8 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
-        }
+        },
+        "features": "Features"
     },
     "accountDetails": {
         "default_COS": "COS Predefinita",
