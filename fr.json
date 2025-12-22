@@ -1306,7 +1306,7 @@
         "validate_ip_Address_text": "Veuillez saisir une adresse IP valide.",
         "verified": "Vérifié",
         "max_mainbox_quota_for_the_mails_in_gb": "Quota maximal de la boîte aux lettres pour les courriers (Go)",
-        "show_forget_password_link": "Afficher le lien \"Oublier le mot de passe\" dans la page de connexion",
+        "show_forget_password_link": "Afficher le lien \"Mot de passe oublié\" dans la page de connexion",
         "user_can_ask_for_forgotten_password_token": "L'utilisateur peut demander un jeton de mot de passe oublié",
         "enable_the_mobile_dos_protection_service": "Activer le service de Protection DOS pour les mobiles",
         "mailing_lists_lbl": "Listes de distribution",
