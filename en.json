@@ -449,7 +449,9 @@
             "date_end": "Date End",
             "last_validation_check_tooltip": "This date represents the last day on which the license was validated by the Zextras Subscription Service.\n\nSince this is a Pay Per Use (PPU) subscription, the system automatically reports daily usage data to the Zextras Subscription Service. No user action is required as long as communication is functioning correctly. If the system is unable to contact the service, a 7-day grace period is applied. This grace period is automatically renewed each time the Zextras Subscription Service is successfully contacted.",
             "next_validation_deadline_tooltip": "This date represents the last day the license will remain fully functional if usage data is not sent to the Zextras Subscription Service.\n\nSince this is a Pay Per Use (PPU) subscription, the system automatically reports daily usage data to the Zextras Subscription Service. No user action is required as long as communication is functioning correctly. If the system is unable to contact the service, a 7-day grace period is applied. This grace period is automatically renewed each time the Zextras Subscription Service is successfully contacted.",
-            "renew": "RENEW"
+            "renew": "RENEW",
+            "maxCarbonioVersion": "Max Carbonio Version",
+            "updateTime": "Update Time"
         }
     },
     "cos": {
@@ -3023,9 +3025,11 @@
     },
     "banner": {
         "maintenance-expired-description": "Your maintenance expired on {{maintenanceEndDate}}.",
-        "maintenance-expired-label": "Your current version will continue to function normally, but you must not install any new Carbonio updates — doing so may cause service disruption. Renew maintenance to safely upgrade and keep your system fully supported.",
+        "maintenance-expired-label": "Your maintenance has expired. Renew to receive updates. Your license supports versions up to {{maxCarbonioVersion}}. Your current version is {{carbonioVersion}}. Do not upgrade beyond {{maxCarbonioVersion}} to avoid service disruption. – Last subscription update {{updateTime}}",
         "maintenance-expiring-description": "Your maintenance will expire on {{maintenanceEndDate}}.",
-        "maintenance-expiring-label": "After expiration, you will still be notified of new updates, but you won’t be allowed to install them without risking service issues. Renew on time to ensure smooth, safe upgrades and full support coverage."
+        "maintenance-expiring-label": "Your maintenance expires on {{maintenanceEndDate}}. Renew to continue receiving updates. Your license supports upgrades up to Carbonio {{maxCarbonioVersion}}. – Last subscription update {{updateTime}}",
+        "maintenance-invalid-description": "License is invalid.",
+        "maintenance-invalid-label": "Your subscription does not support Carbonio version {{carbonioVersion}}. Maximum supported version is {{maxCarbonioVersion}}. Please provide a valid license. – Last subscription update {{updateTime}}"
     },
     "tooltip": {
         "add_virtual_host": "Type a valid Virtual Host Name to add it"
