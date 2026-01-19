@@ -139,7 +139,9 @@
             "date_end": "Data di Fine",
             "last_validation_check_tooltip": "Questa data rappresenta l'ultimo giorno in cui la licenza è stata convalidata dal servizio di sottoscrizione Zextras.\n\nPoiché si tratta di un abbonamento Pay Per Use (PPU), il sistema invia automaticamente i dati di utilizzo giornaliero al servizio di sottoscrizione Zextras. Non è richiesta alcuna azione da parte dell'utente, a patto che la comunicazione funzioni correttamente. Se il sistema non è in grado di contattare il servizio, viene applicato un periodo di tolleranza di 7 giorni. Questo periodo di tolleranza viene rinnovato automaticamente ogni volta che il servizio di sottoscrizione Zextras viene contattato con successo.",
             "next_validation_deadline_tooltip": "Questa data rappresenta l'ultimo giorno in cui la licenza rimarrà pienamente funzionante se i dati di utilizzo non vengono inviati al servizio di sottoscrizione Zextras.\n\nPoiché si tratta di un abbonamento Pay Per Use (PPU), il sistema invia automaticamente i dati di utilizzo giornaliero al servizio di sottoscrizione Zextras. Non è richiesta alcuna azione da parte dell'utente, a patto che la comunicazione funzioni correttamente. Se il sistema non è in grado di contattare il servizio, viene applicato un periodo di tolleranza di 7 giorni. Questo periodo di tolleranza viene rinnovato automaticamente ogni volta che il servizio di sottoscrizione Zextras viene contattato con successo.",
-            "renew": "RINNOVA"
+            "renew": "RINNOVA",
+            "maxCarbonioVersion": "Massima versione di Carbonio",
+            "updateTime": "Ora di aggiornamento"
         }
     },
     "domain": {
@@ -2999,10 +3001,14 @@
         "remove_selected_items": "Rimuovi elementi selezionati"
     },
     "banner": {
-        "maintenance-expired-description": "Il supporto è scaduto il {{maintenanceEndDate}}.",
-        "maintenance-expired-label": "La versione attuale continuerà a funzionare, ma non installare aggiornamenti di Carbonio — potrebbero interrompere il servizio. Rinnova il supporto per aggiornare in sicurezza e mantenere il sistema protetto.",
-        "maintenance-expiring-description": "Il supporto scadrà il {{maintenanceEndDate}}.",
-        "maintenance-expiring-label": "Dopo la scadenza riceverai ancora le notifiche degli aggiornamenti, ma installarli potrebbe causare problemi al servizio. Rinnova in tempo per garantire aggiornamenti sicuri e supporto completo."
+        "maintenance-expired-description": "La manutenzione è scaduta.",
+        "maintenance-expired-label": "La tua manutenzione supporta versioni di Carbonio fino a {{maxCarbonioVersion}}. Versione installata: {{carbonioVersion}}.\\nNon aggiornare oltre {{maxCarbonioVersion}} per evitare interruzioni del servizio.\\nPer continuare a ricevere aggiornamenti, contatta il tuo fornitore della licenza per rinnovare la manutenzione.\\nUltimo aggiornamento della licenza: {{updateTime}}",
+        "maintenance-expiring-description": "La manutenzione scade il {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Rinnova per continuare a ricevere aggiornamenti.\\nLa tua manutenzione consente aggiornamenti fino a Carbonio {{maxCarbonioVersion}}.\\nContatta il tuo fornitore della licenza per pianificare il rinnovo della manutenzione.\\nUltimo aggiornamento della licenza: {{updateTime}}",
+        "maintenance-invalid-description": "La tua manutenzione non supporta la versione di Carbonio {{carbonioVersion}}.",
+        "maintenance-invalid-label": "Versione massima supportata: {{maxCarbonioVersion}}.\\nContatta il tuo fornitore della licenza per aggiornare o rinnovare la manutenzione.\\nUltimo aggiornamento della licenza: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "Rinnova per continuare a ricevere aggiornamenti.\\nLa tua manutenzione consente aggiornamenti fino a Carbonio Non definito.\\nPContatta il tuo fornitore della licenza per pianificare il rinnovo della manutenzione..\\nUltimo aggiornamento della licenza: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "La tua manutenzione supporta versioni di Carbonio fino a Non definito. Versione installata: {{carbonioVersion}}.\\nNon aggiornare oltre Non definito per evitare interruzioni del servizio.\\nPer continuare a ricevere aggiornamenti, contatta il tuo fornitore della licenza per rinnovare la manutenzione.\\nUltimo aggiornamento della licenza: {{updateTime}}"
     },
     "tooltip": {
         "add_virtual_host": "Scrivi il nome di un Virtual Host valido per aggiungerlo"
