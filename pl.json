@@ -365,7 +365,9 @@
             "renew": "ODNÓW",
             "next_validation_deadline_tooltip": "Ta data oznacza ostatni dzień, w którym licencja będzie w pełni funkcjonalna, jeśli dane o zużyciu nie zostaną wysłane do Usługi Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
             "last_validation_check_tooltip": "Ta data oznacza ostatni dzień, w którym licencja została zatwierdzona przez Usługę Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
-            "last_validation_check": "Ostatnie zatwierdzenie"
+            "last_validation_check": "Ostatnie zatwierdzenie",
+            "maxCarbonioVersion": "Max. wersja Carbonio",
+            "updateTime": "Czas aktualizacji"
         }
     },
     "domain": {
@@ -3007,10 +3009,14 @@
         "remove_selected_items": "Usuń wybrane elementy"
     },
     "banner": {
-        "maintenance-expired-description": "Twoje wsparcie wygasło {{maintenanceEndDate}}.",
-        "maintenance-expired-label": "Twoja aktualna wersja będzie funkcjonować normalnie, ale nie możesz instalować żadnych aktualizacji Carbonio. Instalacja aktualizacji może spowodować zatrzymanie usługi. Odnów wsparcie, aby móc bezpiecznie aktualizować i mieć pełne wsparcie Twojego systemu.",
-        "maintenance-expiring-description": "Twoje wsparcie wygaśnie {{maintenanceEndDate}}.",
-        "maintenance-expiring-label": "Po wygaśnięciu, dalej będziesz powiadamiany o nowych aktualizacjach - ale nie będziesz mógł ich zainstalować bez ryzyka problemów z usługą. Odnów terminowo, aby zapewnić bezpieczne, bezproblemowe aktualizacje i pełen zakres wsparcia."
+        "maintenance-expired-description": "Wsparcie wygasło.",
+        "maintenance-expired-label": "Twoje wsparcie obejmuje wersje Carbonio do {{maxCarbonioVersion}}. Zainstalowana wersja to: {{carbonioVersion}}.\\nNie aktualizuj poza {{maxCarbonioVersion}}, żeby zachować ciągłość usługi.\\nAby dalej otrzymywać aktualizacje, skontaktuj się z Twoim dostawcą licencji w celu odnowienia Twojego wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expiring-description": "Wsparcie wygaśnie {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Odnów, aby dalej otrzymywać aktualizacje.\\nTwoje wsparci obejmuje aktualizacje do Carbonio {{maxCarbonioVersion}}.\\nSkontaktuj się z Twoim dostawcą licencji, aby zaplanować odnowienie Twojego wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-invalid-description": "Twoje wsparcie nie obejmuje wersji Carbonio {{carbonioVersion}}.",
+        "maintenance-invalid-label": "Max. wspierana wersja: {{maxCarbonioVersion}}.\\nSkontaktuj się z Twoim dostawcą licencji, aby zaktualizować lub odnowić Twoje wsparcie.\\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "Odnów, aby dalej otrzymywać aktualizacje.\\nTwoje wsparcie obejmuje aktualizacje do Carbonio niezdefiniowane.\\nSkontaktuj się z Twoim dostawcą licencji, aby zaplanować odnowienie wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "Twoje wsparcie obejmuje wersje Carbonio do niezdefiniowane. Zainstalowana wersja: {{carbonioVersion}}\\nNie aktualizuj poza niezdefiniowane, aby zachować ciągłość usługi.\\nAby dalej otrzymywać aktualizacje, skontaktuj się z Twoim dostawcą licencji w celu odnowienia Twojego wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}"
     },
     "tooltip": {
         "add_virtual_host": "Aby dodać, wprowadź prawidłową nazwę wirtualnego hosta"
