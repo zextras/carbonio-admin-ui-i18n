@@ -3024,12 +3024,14 @@
         "remove_selected_items": "Remove selected items"
     },
     "banner": {
-        "maintenance-expired-description": "Your maintenance expired on {{maintenanceEndDate}}.",
-        "maintenance-expired-label": "Your maintenance has expired. Renew to receive updates. Your license supports versions up to {{maxCarbonioVersion}}. Your current version is {{carbonioVersion}}. Do not upgrade beyond {{maxCarbonioVersion}} to avoid service disruption. – Last subscription update {{updateTime}}",
-        "maintenance-expiring-description": "Your maintenance will expire on {{maintenanceEndDate}}.",
-        "maintenance-expiring-label": "Your maintenance expires on {{maintenanceEndDate}}. Renew to continue receiving updates. Your license supports upgrades up to Carbonio {{maxCarbonioVersion}}. – Last subscription update {{updateTime}}",
-        "maintenance-invalid-description": "License is invalid.",
-        "maintenance-invalid-label": "Your subscription does not support Carbonio version {{carbonioVersion}}. Maximum supported version is {{maxCarbonioVersion}}. Please provide a valid license. – Last subscription update {{updateTime}}"
+        "maintenance-expired-description": "Maintenance has expired.",
+        "maintenance-expired-label": "Your maintenance supports Carbonio versions up to {{maxCarbonioVersion}}. Installed version: {{carbonioVersion}}.\\nDo not upgrade beyond {{maxCarbonioVersion}} to avoid service disruption.\\nTo continue receiving updates, please contact your licensing provider to renew your maintenance.\\nLast license update: {{updateTime}}",
+        "maintenance-expiring-description": "Maintenance expires on {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Renew to continue receiving updates.\\nYour maintenance supports upgrades up to Carbonio {{maxCarbonioVersion}}.\\nPlease contact your licensing provider to plan your maintenance renewal.\\nLast license update: {{updateTime}}",
+        "maintenance-invalid-description": "Your maintenance does not support Carbonio version {{carbonioVersion}}.",
+        "maintenance-invalid-label": "Maximum supported version: {{maxCarbonioVersion}}.\\nPlease contact your licensing provider to update or renew your maintenance.\\nLast license update: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "Renew to continue receiving updates.\\nYour maintenance supports upgrades up to Carbonio Not defined.\\nPlease contact your licensing provider to plan your maintenance renewal.\\nLast license update: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "Your maintenance supports Carbonio versions up to Not defined. Installed version: {{carbonioVersion}}.\\nDo not upgrade beyond Not defined to avoid service disruption.\\nTo continue receiving updates, please contact your licensing provider to renew your maintenance.\\nLast license update: {{updateTime}}"
     },
     "tooltip": {
         "add_virtual_host": "Type a valid Virtual Host Name to add it"
