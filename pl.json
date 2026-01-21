@@ -3010,13 +3010,13 @@
     },
     "banner": {
         "maintenance-expired-description": "Wsparcie wygasło.",
-        "maintenance-expired-label": "Twoje wsparcie obejmuje wersje Carbonio do {{maxCarbonioVersion}}. Zainstalowana wersja to: {{carbonioVersion}}.\\nNie aktualizuj poza {{maxCarbonioVersion}}, żeby zachować ciągłość usługi.\\nAby dalej otrzymywać aktualizacje, skontaktuj się z Twoim dostawcą licencji w celu odnowienia Twojego wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expired-label": "Twoje wsparcie obejmuje wersje Carbonio do {{maxCarbonioVersion}}. Zainstalowana wersja to: {{carbonioVersion}}.\nNie aktualizuj poza {{maxCarbonioVersion}}, żeby zachować ciągłość usługi.\nAby dalej otrzymywać aktualizacje, skontaktuj się z Twoim dostawcą licencji w celu odnowienia Twojego wsparcia.\nOstatnia aktualizacja licencji: {{updateTime}}",
         "maintenance-expiring-description": "Wsparcie wygaśnie {{maintenanceEndDate}}.",
-        "maintenance-expiring-label": "Odnów, aby dalej otrzymywać aktualizacje.\\nTwoje wsparci obejmuje aktualizacje do Carbonio {{maxCarbonioVersion}}.\\nSkontaktuj się z Twoim dostawcą licencji, aby zaplanować odnowienie Twojego wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expiring-label": "Odnów, aby dalej otrzymywać aktualizacje.\nTwoje wsparcie obejmuje aktualizacje do Carbonio {{maxCarbonioVersion}}.\nSkontaktuj się z Twoim dostawcą licencji, aby zaplanować odnowienie Twojego wsparcia.\nOstatnia aktualizacja licencji: {{updateTime}}",
         "maintenance-invalid-description": "Twoje wsparcie nie obejmuje wersji Carbonio {{carbonioVersion}}.",
-        "maintenance-invalid-label": "Max. wspierana wersja: {{maxCarbonioVersion}}.\\nSkontaktuj się z Twoim dostawcą licencji, aby zaktualizować lub odnowić Twoje wsparcie.\\nOstatnia aktualizacja licencji: {{updateTime}}",
-        "maintenance-expiring-empty-max-version-label": "Odnów, aby dalej otrzymywać aktualizacje.\\nTwoje wsparcie obejmuje aktualizacje do Carbonio niezdefiniowane.\\nSkontaktuj się z Twoim dostawcą licencji, aby zaplanować odnowienie wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}",
-        "maintenance-expired-empty-max-version-label": "Twoje wsparcie obejmuje wersje Carbonio do niezdefiniowane. Zainstalowana wersja: {{carbonioVersion}}\\nNie aktualizuj poza niezdefiniowane, aby zachować ciągłość usługi.\\nAby dalej otrzymywać aktualizacje, skontaktuj się z Twoim dostawcą licencji w celu odnowienia Twojego wsparcia.\\nOstatnia aktualizacja licencji: {{updateTime}}"
+        "maintenance-invalid-label": "Max. wspierana wersja: {{maxCarbonioVersion}}.\nSkontaktuj się z Twoim dostawcą licencji, aby zaktualizować lub odnowić Twoje wsparcie.\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "Odnów, aby dalej otrzymywać aktualizacje\nTwoje wsparcie obejmuje aktualizacje do Carbonio niezdefiniowane.\nSkontaktuj się z Twoim dostawcą licencji, aby zaplanować odnowienie wsparcia.\nOstatnia aktualizacja licencji: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "Twoje wsparcie obejmuje wersje Carbonio do niezdefiniowane. Zainstalowana wersja: {{carbonioVersion}}\nNie aktualizuj poza niezdefiniowane, aby zachować ciągłość usługi.\nAby dalej otrzymywać aktualizacje, skontaktuj się z Twoim dostawcą licencji w celu odnowienia Twojego wsparcia.\nOstatnia aktualizacja licencji: {{updateTime}}"
     },
     "tooltip": {
         "add_virtual_host": "Aby dodać, wprowadź prawidłową nazwę wirtualnego hosta"
