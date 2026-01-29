@@ -234,11 +234,19 @@
                 "externalldapReferenceForAuthentication": "Riferimento LDAP Esterno per Autenticazione",
                 "externalldap": "LDAP Esterno",
                 "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
-            }
+            },
+            "phoneNumber": {
+                "tooltip": "i caratteri consentiti sono spazi, numeri e simboli -+()/,."
+            },
+            "totalAccounts": "Account totali"
         },
         "editAccount": {
             "otpSentSuccessfully": "L'OTP è stato inviato con successo",
             "invalidaEmailError": "Uno o più indirizzi email non sono validi."
+        },
+        "mailingList": {
+            "canReceive": "Può ricevere",
+            "cantReceive": "Non può ricevere"
         }
     },
     "label": {
