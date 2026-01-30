@@ -461,11 +461,19 @@
                 "externalldap": "Zewnętrzne LDAP",
                 "externalldapReferenceForAuthentication": "Referencja zewnętrznego LDAP do uwierzytelniania",
                 "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
-            }
+            },
+            "phoneNumber": {
+                "tooltip": "dozwolone znaki to spacja, cyfry i symbole -+()/,."
+            },
+            "totalAccounts": "Kont w sumie"
         },
         "editAccount": {
             "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
             "otpSentSuccessfully": "Hasło jednorazowe zostało wysłane"
+        },
+        "mailingList": {
+            "canReceive": "Może otrzymywać",
+            "cantReceive": "Nie może otrzymywać"
         }
     },
     "label": {
