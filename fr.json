@@ -1780,11 +1780,19 @@
                 "externalldap": "LDAP externe",
                 "externalldapReferenceForAuthentication": "Référence LDAP externe pour l'authentification",
                 "allowTheUserToAskForAReadReceipt": "Autoriser l'utilisateur à demander un accusé de lecture"
-            }
+            },
+            "phoneNumber": {
+                "tooltip": "Les caractères autorisés sont les espaces, les chiffres ainsi que les symboles -+()/,."
+            },
+            "totalAccounts": "Comptes total"
         },
         "editAccount": {
             "invalidaEmailError": "Une ou plusieurs adresses email sont invalides.",
             "otpSentSuccessfully": "L'OTP a été envoyé avec succès"
+        },
+        "mailingList": {
+            "canReceive": "Peut recevoir",
+            "cantReceive": "Ne peut pas recevoir"
         }
     },
     "commons": {
