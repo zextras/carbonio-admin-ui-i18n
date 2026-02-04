@@ -465,7 +465,10 @@
             "phoneNumber": {
                 "tooltip": "dozwolone znaki to spacja, cyfry i symbole -+()/,."
             },
-            "totalAccounts": "Kont w sumie"
+            "totalAccounts": "Kont w sumie",
+            "twoFactorAuthenticator": "Uwierzytelnianie dwuetapowe",
+            "allowUsersToConfigure2FA": "Zezwalaj użytkownikom na konfigurację uwierzytelniania dwuetapowego",
+            "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu."
         },
         "editAccount": {
             "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
@@ -2051,6 +2054,11 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Zezwalaj użytkownikowi na pytanie o potwierdzenie przeczytania"
+        },
+        "features": {
+            "twoFactorAuthenticator": "Uwierzytelnianie dwuetapowe",
+            "allowUsersToConfigure2FA": "Zezwalaj użytkownikom na konfigurację uwierzytelniania dwuetapowego",
+            "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu."
         }
     },
     "locale": {
