@@ -623,6 +623,11 @@
         "unlimited": "Unlimited",
         "creatCOS": {
             "cosNameInfo": "COS name must contain only lowercase letters."
+        },
+        "features": {
+            "twoFactorAuthenticator": "Two-Factor authenticator",
+            "allowUsersToConfigure2FA": "Allow users to configure 2FA",
+            "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings."
         }
     },
     "create_new_bucket": "NEW BUCKET",
@@ -738,7 +743,10 @@
             "phoneNumber": {
                 "tooltip": "allowed chars are whitespaces, numbers and symbols -+()/,."
             },
-            "totalAccounts": "Total Accounts"
+            "totalAccounts": "Total Accounts",
+            "twoFactorAuthenticator": "Two-Factor authenticator",
+            "allowUsersToConfigure2FA": "Allow users to configure 2FA",
+            "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings."
         },
         "editAccount": {
             "invalidaEmailError": "One or more email addresses are invalid.",
