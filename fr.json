@@ -2066,6 +2066,10 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Autoriser l'utilisateur à demander un accusé de lecture"
+        },
+        "features": {
+            "twoFactorAuthenticator": "Authentification à 2 facteurs",
+            "allowUsersToConfigure2FA": "Autoriser les utilisateurs à configurer la 2FA"
         }
     },
     "create_new_cos": "CRÉER UNE NOUVELLE COS",
