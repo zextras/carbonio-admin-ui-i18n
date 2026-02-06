@@ -238,7 +238,10 @@
             "phoneNumber": {
                 "tooltip": "i caratteri consentiti sono spazi, numeri e simboli -+()/,."
             },
-            "totalAccounts": "Account totali"
+            "totalAccounts": "Account totali",
+            "twoFactorAuthenticator": "Autenticatore a due fattori",
+            "allowUsersToConfigure2FA": "Consenti agli utenti di configurare l'autenticazione a due fattori (2FA)",
+            "allowUsersToConfigure2FAInfo": "Gli utenti potranno impostare e gestire la propria password monouso (OTP) dalle impostazioni del proprio profilo."
         },
         "editAccount": {
             "otpSentSuccessfully": "L'OTP è stato inviato con successo",
@@ -2060,6 +2063,11 @@
         },
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "Permetti all'utente di chiedere una ricevuta di lettura"
+        },
+        "features": {
+            "twoFactorAuthenticator": "Autenticazione a due fattori",
+            "allowUsersToConfigure2FA": "Consenti agli utenti di configurare l'autenticazione a due fattori (2FA)",
+            "allowUsersToConfigure2FAInfo": "Gli utenti potranno impostare e gestire la propria password monouso (OTP) dalle impostazioni del proprio profilo."
         }
     },
     "accountDetails": {
