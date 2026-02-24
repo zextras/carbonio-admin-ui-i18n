@@ -2666,7 +2666,7 @@
         "smtp_helo_name": "Nazwa SMTP HELO",
         "tls_security_level": "Poziom bezpieczeństwa TLS",
         "verify_dkim_validity": "Zweryfikuj prawidłowość DKIM",
-        "virus_block_encrypted_archive": "Archiwum zaszyfrowane przy blokadzie wirusowej",
+        "virus_block_encrypted_archive": "Blokada wirusowa, zaszyfrowane archiwum",
         "warn_admins_when_something_quarntined": "Ostrzeż administratorów kiedy coś jest poddane kwarantannie",
         "warn_recipients_when_is_quarantined": "Ostrzeż odbiorców kiedy coś jest poddane kwarantannie",
         "pass": "Dostarczaj",
