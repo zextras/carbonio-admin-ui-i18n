@@ -1809,7 +1809,7 @@
     "log": "Log",
     "new_bucket_connection": "CONNEXION",
     "new_bucket_summary": "RÉSUMÉ",
-    "select_bucket_or_create_new_bucket": "Il semblerai que vous n'ayez pas défini le type de bucket. Cliquez sur le bouton \"NOUVEAU BUCKET\" pour en créer un nouveau.",
+    "select_bucket_or_create_new_bucket": "Il semblerait que vous n'ayez pas défini le type de bucket. Cliquez sur le bouton \"NOUVEAU BUCKET\" pour en créer un nouveau.",
     "backup": {
         "backup_path": "Dossier des sauvegardes",
         "backup_purge": "Purge des sauvegardes",
@@ -2334,7 +2334,7 @@
         "minute_2": "{{count}} minutes"
     },
     "click_new_bucket_button_to_create_new_one": "Cliquer sur le bouton NOUVEAU BUCKET pour en créer un nouveau.",
-    "have_not_setup_bucket_type": "Il semblerai que vous n'ayez pas paramétré le type de bucket",
+    "have_not_setup_bucket_type": "Il semblerait que vous n'ayez pas paramétré le type de bucket",
     "volume": {
         "serverName_volumes": "Volumes de {{serverName}}",
         "serverName_volumes_create_mailstores_volume": "{{serverName}} Créer le Volume Mailstore",
@@ -2554,7 +2554,7 @@
     },
     "cumminity_edition": "Community Edition !",
     "to_carbonio": "vers Carbonio !",
-    "select_bucket_or_create_bucket": "Il semblerai que vous n'ayez pas configurer un type de Bucket.\nCliquer sur le bouton \"CRÉER +\" pour en créer un nouveau.",
+    "select_bucket_or_create_bucket": "Il semblerait que vous n'ayez pas configuré un type de Bucket.\nCliquez sur le bouton \"CRÉER +\" pour en créer un nouveau.",
     "virtual_hosts": {
         "load": "CHARGEMENT",
         "load_and_verify_certificate": "Charger et vérifier le certificat",
