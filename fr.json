@@ -1784,7 +1784,10 @@
             "phoneNumber": {
                 "tooltip": "Les caractères autorisés sont les espaces, les chiffres ainsi que les symboles -+()/,."
             },
-            "totalAccounts": "Comptes total"
+            "totalAccounts": "Comptes total",
+            "twoFactorAuthenticator": "Authentification à 2 facteurs",
+            "allowUsersToConfigure2FA": "Autoriser les utilisateurs à configurer la 2FA",
+            "allowUsersToConfigure2FAInfo": "Les utilisateurs pourront paramétrer et gérer leur OTP depuis les paramètres de leur profil."
         },
         "editAccount": {
             "invalidaEmailError": "Une ou plusieurs adresses email sont invalides.",
@@ -2069,7 +2072,8 @@
         },
         "features": {
             "twoFactorAuthenticator": "Authentification à 2 facteurs",
-            "allowUsersToConfigure2FA": "Autoriser les utilisateurs à configurer la 2FA"
+            "allowUsersToConfigure2FA": "Autoriser les utilisateurs à configurer la 2FA",
+            "allowUsersToConfigure2FAInfo": "Les utilisateurs pourront paramétrer et gérer leur OTP depuis les paramètres de leur profil."
         }
     },
     "create_new_cos": "CRÉER UNE NOUVELLE COS",
