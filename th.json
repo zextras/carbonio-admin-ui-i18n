@@ -2671,7 +2671,8 @@
     },
     "error": {
         "one_or_more_ip_invalid": "IP อย่างน้อยหนึ่งรายการไม่ถูกต้อง",
-        "invalid_ip_address_error_text": "รูปแบบ IP ที่รองรับสำหรับ ipv4 คือ ipv4/netmask และสำหรับ ipv6 คือ [ipv6]/netmask"
+        "invalid_ip_address_error_text": "รูปแบบ IP ที่รองรับสำหรับ ipv4 คือ ipv4/netmask และสำหรับ ipv6 คือ [ipv6]/netmask",
+        "something_went_wrong": "มีบางอย่างผิดพลาด"
     },
     "action": {
         "click_open": "คลิกเพื่อเปิด",
