@@ -2672,7 +2672,9 @@
     "error": {
         "one_or_more_ip_invalid": "IP อย่างน้อยหนึ่งรายการไม่ถูกต้อง",
         "invalid_ip_address_error_text": "รูปแบบ IP ที่รองรับสำหรับ ipv4 คือ ipv4/netmask และสำหรับ ipv6 คือ [ipv6]/netmask",
-        "something_went_wrong": "มีบางอย่างผิดพลาด"
+        "something_went_wrong": "มีบางอย่างผิดพลาด",
+        "loading_page": "ขออภัย เกิดข้อผิดพลาดในการโหลดหน้านี้",
+        "contact_support": "ติดต่อฝ่ายสนับสนุน หรือลองรีเฟรชหน้าอีกครั้ง"
     },
     "action": {
         "click_open": "คลิกเพื่อเปิด",
