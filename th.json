@@ -2856,5 +2856,8 @@
     "create": "สร้าง",
     "labels": {
         "help_center": "ศูนย์ความช่วยเหลือ"
+    },
+    "button": {
+        "refresh_page": "รีเฟรช"
     }
 }
