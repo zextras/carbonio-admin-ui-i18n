@@ -357,7 +357,15 @@
             "type": "ประเภท",
             "valid_until": "ใช้ได้จนกระทั่ง",
             "provider": "ผู้ให้บริการ",
-            "refresh_subscription_last_check": "รีเฟรชการสมัครสมาชิก (ตรวจสอบล่าสุด)"
+            "refresh_subscription_last_check": "รีเฟรชการสมัครสมาชิก (ตรวจสอบล่าสุด)",
+            "date_start": "วันที่เริ่ม",
+            "last_validation_check": "การตรวจสอบล่าสุด",
+            "maintenance_end_date": "วันสิ้นสุดการบำรุงรักษา",
+            "next_validation_deadline": "กำหนดการตรวจสอบครั้งถัดไป",
+            "date_end": "วันสิ้นสุด",
+            "last_validation_check_tooltip": "วันที่นี้แสดงถึงวันล่าสุดที่ใบอนุญาตถูกตรวจสอบความถูกต้องโดย Zextras Subscription Service\n\nเนื่องจากเป็นการสมัครใช้งานแบบ Pay Per Use (PPU) ระบบจะรายงานข้อมูลการใช้งานประจำวันไปยัง Zextras Subscription Service โดยอัตโนมัติ ผู้ใช้ไม่จำเป็นต้องดำเนินการใด ๆ ตราบใดที่การสื่อสารกับระบบยังทำงานได้ตามปกติ หากระบบไม่สามารถติดต่อกับบริการได้ จะมีระยะผ่อนผัน 7 วัน โดยระยะเวลานี้จะถูกต่ออายุโดยอัตโนมัติทุกครั้งที่ระบบสามารถติดต่อกับ Zextras Subscription Service ได้สำเร็จ",
+            "next_validation_deadline_tooltip": "วันที่นี้แสดงถึงวันสุดท้ายที่ใบอนุญาตจะยังคงใช้งานได้อย่างสมบูรณ์ หากไม่มีการส่งข้อมูลการใช้งานไปยัง Zextras Subscription Service\n\nเนื่องจากเป็นการสมัครใช้งานแบบ Pay Per Use (PPU) ระบบจะรายงานข้อมูลการใช้งานประจำวันไปยัง Zextras Subscription Service โดยอัตโนมัติ ผู้ใช้ไม่จำเป็นต้องดำเนินการใด ๆ ตราบใดที่การสื่อสารกับระบบยังทำงานได้ตามปกติ หากระบบไม่สามารถติดต่อกับบริการได้ จะมีระยะผ่อนผัน 7 วัน โดยระยะเวลานี้จะถูกต่ออายุโดยอัตโนมัติทุกครั้งที่ระบบสามารถติดต่อกับ Zextras Subscription Service ได้สำเร็จ",
+            "renew": "ต่ออายุ"
         }
     },
     "domain": {
@@ -1816,7 +1824,10 @@
         "backup_is_enabled_at_startup": "เปิดใช้งานการสำรองข้อมูลเมื่อเริ่มต้น",
         "backup_is_enable_at_the_startup": "เปิดใช้งานการสำรองข้อมูลเมื่อเริ่มต้น",
         "initialising_backup_check_your_notifications_for_updates": "กำลังเริ่มต้นการสำรองข้อมูล... ตรวจสอบการแจ้งเตือนของคุณเพื่อรับการอัปเดต",
-        "local_volume_reload_if_you_changed_this_value": "Local Volume (โหลดซ้ำหากคุณเปลี่ยนค่านี้)"
+        "local_volume_reload_if_you_changed_this_value": "Local Volume (โหลดซ้ำหากคุณเปลี่ยนค่านี้)",
+        "config": {
+            "scheduleBackupPurge": "ตั้งเวลาลบข้อมูลสำรอง"
+        }
     },
     "cos": {
         "calendar_options": "ตัวเลือกปฏิทิน",
