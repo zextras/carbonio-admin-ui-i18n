@@ -365,7 +365,9 @@
             "date_end": "วันสิ้นสุด",
             "last_validation_check_tooltip": "วันที่นี้แสดงถึงวันล่าสุดที่ใบอนุญาตถูกตรวจสอบความถูกต้องโดย Zextras Subscription Service\n\nเนื่องจากเป็นการสมัครใช้งานแบบ Pay Per Use (PPU) ระบบจะรายงานข้อมูลการใช้งานประจำวันไปยัง Zextras Subscription Service โดยอัตโนมัติ ผู้ใช้ไม่จำเป็นต้องดำเนินการใด ๆ ตราบใดที่การสื่อสารกับระบบยังทำงานได้ตามปกติ หากระบบไม่สามารถติดต่อกับบริการได้ จะมีระยะผ่อนผัน 7 วัน โดยระยะเวลานี้จะถูกต่ออายุโดยอัตโนมัติทุกครั้งที่ระบบสามารถติดต่อกับ Zextras Subscription Service ได้สำเร็จ",
             "next_validation_deadline_tooltip": "วันที่นี้แสดงถึงวันสุดท้ายที่ใบอนุญาตจะยังคงใช้งานได้อย่างสมบูรณ์ หากไม่มีการส่งข้อมูลการใช้งานไปยัง Zextras Subscription Service\n\nเนื่องจากเป็นการสมัครใช้งานแบบ Pay Per Use (PPU) ระบบจะรายงานข้อมูลการใช้งานประจำวันไปยัง Zextras Subscription Service โดยอัตโนมัติ ผู้ใช้ไม่จำเป็นต้องดำเนินการใด ๆ ตราบใดที่การสื่อสารกับระบบยังทำงานได้ตามปกติ หากระบบไม่สามารถติดต่อกับบริการได้ จะมีระยะผ่อนผัน 7 วัน โดยระยะเวลานี้จะถูกต่ออายุโดยอัตโนมัติทุกครั้งที่ระบบสามารถติดต่อกับ Zextras Subscription Service ได้สำเร็จ",
-            "renew": "ต่ออายุ"
+            "renew": "ต่ออายุ",
+            "maxCarbonioVersion": "เวอร์ชัน Carbonio สูงสุด",
+            "updateTime": "เวลาอัปเดต"
         }
     },
     "domain": {
@@ -445,6 +447,36 @@
         "virtual_host_name_error": "โปรดป้อนชื่อโฮสต์เสมือนที่ถูกต้อง!",
         "globalSettings": {
             "allowSearchUserFromAllDomains": "อนุญาตให้ค้นหาข้อมูลผู้ใช้งานในทุกโดเมน"
+        },
+        "authentication": {
+            "search_bind_password": "รหัสผ่านสำหรับ Search Bind",
+            "search_bind_user": "ผู้ใช้ Search Bind",
+            "carbonio_info": "วิธีนี้รองรับการใช้งาน Local LDAP, External AD/LDAP, Credential Password และ SAML"
+        },
+        "mailSpaceQuotaThresholdError": {
+            "description": "ค่าเกณฑ์โควตาพื้นที่อีเมลต้องอยู่ระหว่าง 0 ถึง 100"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldap": "LDAP ภายนอก",
+                "externalldapReferenceForAuthentication": "การอ้างอิง LDAP ภายนอกสำหรับการยืนยันตัวตน",
+                "allowTheUserToAskForAReadReceipt": "อนุญาตให้ผู้ใช้ขอการแจ้งเตือนการอ่าน"
+            },
+            "phoneNumber": {
+                "tooltip": "ตัวอักษรที่อนุญาต ได้แก่ พื้นที่ว่าง ตัวเลข และสัญลักษณ์ -+()/,"
+            },
+            "totalAccounts": "บัญชีทั้งหมด",
+            "twoFactorAuthenticator": "เครื่องมือยืนยันตัวตนแบบสองปัจจัย",
+            "allowUsersToConfigure2FA": "อนุญาตให้ผู้ใช้กำหนดค่า 2FA",
+            "allowUsersToConfigure2FAInfo": "ผู้ใช้สามารถตั้งค่าและจัดการรหัสผ่านแบบใช้ครั้งเดียว (OTP) ของตนได้จากการตั้งค่าโปรไฟล์"
+        },
+        "editAccount": {
+            "invalidaEmailError": "มีที่อยู่อีเมลอย่างน้อยหนึ่งรายการไม่ถูกต้อง",
+            "otpSentSuccessfully": "ส่ง OTP สำเร็จแล้ว"
+        },
+        "mailingList": {
+            "canReceive": "สามารถรับได้",
+            "cantReceive": "รับไม่ได้"
         }
     },
     "label": {
@@ -1723,7 +1755,27 @@
         "files_quota_mb": "โควต้าไฟล์ (MB)",
         "files_quota_gb": "โควต้าไฟล์ (GB)",
         "files_quota_used_mb": "โควต้าไฟล์ที่ใช้ (MB)",
-        "files_quota_used_gb": "โควต้าไฟล์ที่ใช้ (GB)"
+        "files_quota_used_gb": "โควต้าไฟล์ที่ใช้ (GB)",
+        "legal_hold": "การเก็บรักษาข้อมูลเพื่อวัตถุประสงค์ทางกฎหมาย",
+        "one_time_password_management": "การจัดการรหัส OTP",
+        "user_name": "ชื่อผู้ใช้",
+        "two_factor_auth": "การยืนยันตัวตนแบบสองปัจจัย (2FA)",
+        "enable_wsc": "เปิดใช้งานแชท",
+        "allow_restore_message": "อนุญาตให้ผู้ใช้กู้คืนข้อความ",
+        "add_appointments_when_invited": "เพิ่มการนัดหมายโดยอัตโนมัติเมื่อผู้ใช้ได้รับคำเชิญ",
+        "wsc": "แชท",
+        "backup_enabled": "เปิด / ปิดการสำรองข้อมูล",
+        "help_and_documentation": "ความช่วยเหลือและเอกสาร",
+        "certificate_authority": "หน่วยงานออกใบรับรอง (CA)",
+        "upload_certificate": "อัปโหลดใบรับรอง",
+        "generate_certificate": "สร้างใบรับรอง",
+        "no_certificate_to_remove": "ไม่มีใบรับรองที่สามารถลบได้",
+        "no_certificate_to_download": "ไม่มีใบรับรองให้ดาวน์โหลด",
+        "no_virtual_hosts": "คุณต้องเพิ่ม Virtual Host อย่างน้อยหนึ่งรายการ",
+        "certificate_request_success": "กำลังประมวลผล ผลลัพธ์จะแจ้งให้ผู้รับในระดับ Global และ Domain ทราบ",
+        "dismiss": "ยกเลิก",
+        "generate": "สร้าง",
+        "certificate_available_after_proxy_restart": "ใบรับรองจะพร้อมใช้งานหลังจากรีสตาร์ท Proxy แล้ว"
     },
     "message": {
         "snackbar": {
@@ -1992,7 +2044,18 @@
         "domains_that_use_this_cos": "โดเมนที่ใช้ COS นี้",
         "enable_new_mail_toast_notification": "เปิดใช้งานการแจ้งเตือนอีเมลใหม่ด้วยภาพ",
         "upload_max_size_per_file": "ขนาดสูงสุด (ไบต์) ที่อนุญาตสำหรับแต่ละไฟล์แนบ",
-        "unlimited": "ไม่จำกัด"
+        "unlimited": "ไม่จำกัด",
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "อนุญาตให้ผู้ใช้ขอการแจ้งเตือนการอ่าน"
+        },
+        "creatCOS": {
+            "cosNameInfo": "ชื่อ COS ต้องประกอบด้วยตัวอักษรพิมพ์เล็กเท่านั้น"
+        },
+        "features": {
+            "twoFactorAuthenticator": "เครื่องมือยืนยันตัวตนแบบสองปัจจัย",
+            "allowUsersToConfigure2FA": "อนุญาตให้ผู้ใช้กำหนดค่า 2FA",
+            "allowUsersToConfigure2FAInfo": "ผู้ใช้สามารถตั้งค่าและจัดการรหัสผ่านแบบใช้ครั้งเดียว (OTP) ของตนได้จากการตั้งค่าโปรไฟล์"
+        }
     },
     "accountDetails": {
         "enable_activeSync_remote_access": "เปิดใช้งานการเข้าถึงระยะไกล ActiveSync",
@@ -2675,7 +2738,14 @@
         "scan_completed": "การสแกนเสร็จสิ้นแล้ว",
         "scan_in_progress": "อยู่ระหว่างการสแกน",
         "smtpd_not_valid_error": "แผนที่การเข้าสู่ระบบของผู้ส่ง Smtpd ไม่ถูกต้อง",
-        "smtpd_sender_login_maps": "แผนที่เข้าสู่ระบบของผู้ส่ง Smtpd"
+        "smtpd_sender_login_maps": "แผนที่เข้าสู่ระบบของผู้ส่ง Smtpd",
+        "advanced": {
+            "mail_messages_size": "ขนาดข้อความอีเมล",
+            "no_size_limit_for_mail_messages": "ไม่มีการจำกัดขนาดสำหรับข้อความอีเมล",
+            "custom_max_size_mail_message": "กำหนดขนาดสูงสุดของข้อความอีเมลเอง (MB)",
+            "max_size_for_mail_messages": "ขนาดสูงสุดของข้อความอีเมล (MB)",
+            "value_0_disables_email_sending": "ค่า 0 จะปิดการส่งอีเมล: โปรดระบุค่ามากกว่า 0"
+        }
     },
     "mat": {
         "add_here_any_blocked_extension": "เพิ่มส่วนขยายที่ถูกบล็อกที่นี่"
@@ -2869,6 +2939,96 @@
         "help_center": "ศูนย์ความช่วยเหลือ"
     },
     "button": {
-        "refresh_page": "รีเฟรช"
+        "refresh_page": "รีเฟรช",
+        "view_subscription_details": "ดูรายละเอียดการสมัครสมาชิก",
+        "remove_selected_items": "ลบรายการที่เลือก"
+    },
+    "legalHold": {
+        "show_only_accounts_on_legal_hold": "แสดงเฉพาะบัญชีที่อยู่ในสถานะ Legal Hold"
+    },
+    "wsc": {
+        "section": {
+            "header": {
+                "title": {
+                    "chats": "แชทส่วนตัวและแชทกลุ่ม",
+                    "attachments": "การแชร์และไฟล์แนบ",
+                    "messaging": "ข้อความและสถานะการออนไลน์",
+                    "videocall": "วิดีโอคอล",
+                    "general": "การตั้งค่าทั่วไป"
+                },
+                "description": {
+                    "messaging": "จัดการการมองเห็นของแชทและสถานะผู้ใช้",
+                    "videocall": "ตั้งค่าวิดีโอคอล การบันทึก และพื้นหลังเสมือน",
+                    "attachments": "จัดการการแชร์ไฟล์และการจำกัดขนาดไฟล์แนบ",
+                    "general": "จัดการการเปิดใช้งานฟีเจอร์และแอปพลิเคชันหลัก"
+                }
+            },
+            "content": {
+                "description": {
+                    "presence": "แสดงสถานะออนไลน์ของผู้ใช้หรือเวลาที่ใช้งานล่าสุด",
+                    "enableAttachments": "เปิดใช้งานการส่งไฟล์ รูปภาพ และเอกสาร",
+                    "enableFeature": "เปิดใช้งานเพื่อให้สามารถส่งข้อความ แชทกลุ่ม วิดีโอคอล และแชร์ไฟล์ได้",
+                    "readReceipt": "แจ้งผู้ส่งเมื่อข้อความถูกอ่านแล้ว",
+                    "deletionLimit": "ตั้งค่าเวลาสำหรับการลบข้อความที่ส่งแล้ว",
+                    "editLimit": "กำหนดระยะเวลาสำหรับการแก้ไขข้อความหลังส่ง",
+                    "createPrivate": "อนุญาตให้ผู้ใช้เริ่มการสนทนาแบบตัวต่อตัว",
+                    "createGroup": "อนุญาตให้ผู้ใช้สร้างแชทกับผู้เข้าร่วมหลายคน",
+                    "groupPicture": "จำกัดขนาดไฟล์สำหรับรูปโปรไฟล์กลุ่ม",
+                    "groupMembers": "กำหนดจำนวนผู้ใช้สูงสุดต่อกลุ่ม",
+                    "enableRecording": "อนุญาตให้บันทึกการโทรแบบเสียงและวิดีโอคอล",
+                    "enableVideoCall": "เปิดใช้งานฟังก์ชันวิดีโอคอลในฟีเจอร์นี้",
+                    "enableVirtualBackground": "อนุญาตให้ผู้ใช้ตั้งค่าพื้นหลังเสมือนระหว่างการโทรวิดีโอคอล",
+                    "attachmentSize": "กำหนดขนาดสูงสุดสำหรับไฟล์ที่แชร์ในแชท"
+                },
+                "select": {
+                    "deletionLimit": "เวลาจำกัดสำหรับการลบข้อความ",
+                    "deletelimit": {
+                        "zero": "ผู้ใช้ไม่สามารถลบข้อความที่ส่งแล้วได้"
+                    },
+                    "timeLimit": "จำกัดเวลาเป็นนาที",
+                    "zero": {
+                        "editLimit": "ผู้ใช้ไม่สามารถแก้ไขข้อความที่ส่งแล้วได้"
+                    }
+                },
+                "toggle": {
+                    "enableVirtualBackground": "เปิดใช้งานพื้นหลังเสมือน",
+                    "enableFeature": "เปิดใช้งานแชท",
+                    "readReceipt": "แสดงสถานะการอ่าน",
+                    "presence": "แสดงสถานะออนไลน์ของผู้ใช้",
+                    "createPrivate": "ผู้ใช้สามารถเริ่มแชทส่วนตัวใหม่ได้",
+                    "createGroup": "ผู้ใช้สามารถสร้างแชทกลุ่มได้",
+                    "enableVideoCall": "เปิดใช้งานวิดีโอคอล",
+                    "enableRecording": "อนุญาตให้บันทึกการโทร",
+                    "enableAttachments": "ผู้ใช้สามารถอัปโหลดไฟล์แนบได้"
+                },
+                "input": {
+                    "groupMembers": "จำนวนสมาชิกกลุ่มสูงสุด",
+                    "groupPicture": "ขนาดรูปภาพกลุ่มสูงสุด (MB)",
+                    "attachmentSize": "ขนาดไฟล์แนบสูงสุด (MB)"
+                }
+            },
+            "license": {
+                "warning": "การตั้งค่าเหล่านี้ไม่สามารถเปลี่ยนแปลงได้ เนื่องจากใบอนุญาต Chats ของคุณไม่ถูกต้อง",
+                "error": "เกิดข้อผิดพลาดในการดึงข้อมูลใบอนุญาต โปรดลองอีกครั้งในภายหลัง"
+            }
+        }
+    },
+    "accounts": {
+        "phoneNumber": {
+            "tooltip": "อักขระที่อนุญาตคือ เว้นวรรค ตัวเลข และสัญลักษณ์ -+()/,."
+        }
+    },
+    "banner": {
+        "maintenance-expired-description": "สัญญาบำรุงรักษาหมดอายุแล้ว",
+        "maintenance-expired-label": "สัญญาบำรุงรักษาของคุณรองรับ Carbonio เวอร์ชันสูงสุดถึง {{maxCarbonioVersion}} เวอร์ชันที่ติดตั้งอยู่: {{carbonioVersion}}\nโปรดอย่าอัปเกรดเกิน {{maxCarbonioVersion}} เพื่อป้องกันการหยุดชะงักของบริการ\nหากต้องการรับการอัปเดตต่อ โปรดติดต่อผู้ให้บริการใบอนุญาตเพื่อทำการต่ออายุสัญญาบำรุงรักษา\nอัปเดตใบอนุญาตล่าสุด: {{updateTime}}",
+        "maintenance-expiring-description": "สัญญาบำรุงรักษาจะหมดอายุในวันที่ {{maintenanceEndDate}}",
+        "maintenance-expiring-label": "โปรดต่ออายุเพื่อรับการอัปเดตต่อไป\nสัญญาบำรุงรักษาของคุณรองรับการอัปเกรดได้ถึง Carbonio {{maxCarbonioVersion}}\nโปรดติดต่อผู้ให้บริการใบอนุญาตของคุณเพื่อวางแผนการต่ออายุสัญญาบำรุงรักษา\nอัปเดตใบอนุญาตล่าสุด: {{updateTime}}",
+        "maintenance-invalid-description": "สัญญาบำรุงรักษาของคุณไม่รองรับ Carbonio เวอร์ชัน {{carbonioVersion}}",
+        "maintenance-invalid-label": "เวอร์ชันสูงสุดที่รองรับ: {{maxCarbonioVersion}}\nโปรดติดต่อผู้ให้บริการใบอนุญาตของคุณเพื่ออัปเดตหรือต่ออายุสัญญาบำรุงรักษา\nอัปเดตใบอนุญาตล่าสุด: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "ต่ออายุเพื่อรับการอัปเดตต่อไป\nสัญญาบำรุงรักษาของคุณรองรับการอัปเกรดได้ถึง Carbonio ไม่ได้กำหนด\nโปรดติดต่อผู้ให้บริการใบอนุญาตของคุณเพื่อวางแผนการต่ออายุสัญญาบำรุงรักษา\nอัปเดตใบอนุญาตล่าสุด: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "สัญญาบำรุงรักษาของคุณรองรับ Carbonio เวอร์ชันสูงสุดถึง ไม่ได้ระบุไว้ เวอร์ชันที่ติดตั้งอยู่: {{carbonioVersion}}\nอย่าอัปเกรดเกิน ไม่ได้ระบุไว้ เพื่อหลีกเลี่ยงการหยุดชะงักของบริการ\nหากต้องการรับการอัปเดตต่อ โปรดติดต่อผู้ให้บริการใบอนุญาตของคุณเพื่อต่ออายุสัญญาบำรุงรักษา\nอัปเดตใบอนุญาตล่าสุด: {{updateTime}}"
+    },
+    "tooltip": {
+        "add_virtual_host": "พิมพ์ชื่อ Virtual Host ที่ถูกต้องเพื่อเพิ่ม"
     }
 }
