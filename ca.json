@@ -87,7 +87,8 @@
         "manage_no_rights_to_send_mails": "Gestionar (sense dret per enviar correus)",
         "manage_the_aliases_for_this_account": "Gestionar les àlies per a aquest compte",
         "new_alias_name": "Nou nom d'àlies",
-        "notify_changes_by_delegated_access": "Notificar canvis realitzats per comptes delegats"
+        "notify_changes_by_delegated_access": "Notificar canvis realitzats per comptes delegats",
+        "user_password_set": "Contrasenya mòbil establerta correctament."
     },
     "action": {
         "mark_as_non_spam": "No és correu brossa"
