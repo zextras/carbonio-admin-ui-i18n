@@ -2501,7 +2501,8 @@
         "one_or_more_ip_invalid": "एक या एक से ज़्यादा IP अमान्य हैं",
         "invalid_ip_address_error_text": "IPv4 के लिए समर्थित IP प्रारूप ipv4/netmask है और ipv6 के लिए [ipv6]/netmask है",
         "something_went_wrong": "कुछ गड़बड़ हुई",
-        "loading_page": "हमें खेद है, लेकिन इस पृष्ठ को लोड करने का प्रयास करते समय एक त्रुटि हुई।"
+        "loading_page": "हमें खेद है, लेकिन इस पृष्ठ को लोड करने का प्रयास करते समय एक त्रुटि हुई।",
+        "contact_support": "सहायता से संपर्क करें या पृष्ठ को ताज़ा करने का प्रयास करें"
     },
     "action": {
         "click_open": "खोलने के लिए क्लिक करें",
@@ -2648,5 +2649,8 @@
     "create": "बनाएँ",
     "labels": {
         "help_center": "सहायता केंद्र"
+    },
+    "button": {
+        "refresh_page": "ताज़ा करें"
     }
 }
