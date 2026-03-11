@@ -20,7 +20,7 @@
         "configuration": "कॉन्‍फ़िगरेशन",
         "core": "कोर",
         "days": "दिन",
-        "delete": "डिलीट करें",
+        "delete": "मिटाना",
         "description": "विवरण",
         "discard_changes": "बदलाव रद्द करें",
         "external": "एक्सटर्नल",
@@ -1057,7 +1057,7 @@
         "subject": "विषय",
         "to": "प्रति",
         "discard": "छोड़ें",
-        "attachment": "",
+        "attachment": "संलग्नक",
         "attachment_plural": "संलग्नक",
         "attachments_disclaimer": "आप एक अटैच किया मैसेज देख रहे हैं। अटैच मैसेज असली हैं या नहीं यह सत्यापित नहीं किया जा सकता।",
         "select_folder": "फोल्डर सिलेक्ट करें",
@@ -1165,7 +1165,8 @@
         "files_quota_used_gb": "प्रयुक्त फ़ाइल कोटा (GB)",
         "backup_enabled": "बैकअप सक्षम/अक्षम करें",
         "files_quota_used_mb": "प्रयुक्त फ़ाइल कोटा (MB)",
-        "files_quota_mb": "फ़ाइल कोटा (MB)"
+        "files_quota_mb": "फ़ाइल कोटा (MB)",
+        "equipment": "उपकरण"
     },
     "timezone": {
         "asia_tomsk": "{{value}} तोम्स्क",
@@ -1605,6 +1606,9 @@
         "mail_space_quota_threshold_warning": "मेल स्पेस कोटा सीमा (%) चेतावनी",
         "globalSettings": {
             "allowSearchUserFromAllDomains": "सभी डोमेन में उपयोगकर्ताओं की जानकारी खोजने की अनुमति दें"
+        },
+        "accounts": {
+            "allowUsersToConfigure2FAInfo": "उपयोगकर्ता अपनी प्रोफ़ाइल सेटिंग्स से वन-टाइम पासवर्ड (ओटीपी) सेट अप और प्रबंधित करने में सक्षम होंगे।"
         }
     },
     "message": {
