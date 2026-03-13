@@ -2677,7 +2677,9 @@
     "error": {
         "one_or_more_ip_invalid": "Um ou mais IPs são inválidos",
         "invalid_ip_address_error_text": "Formato suportado do IP para IPV4 é IPV4/mascara de rede e para IPV6 é [IPV6]/mascara de rede",
-        "something_went_wrong": "Algo deu errado"
+        "something_went_wrong": "Algo deu errado",
+        "loading_page": "Lamentamos, mas ocorreu um erro ao tentar carregar esta página.",
+        "contact_support": "Contate o suporte ou tente recarregar a página"
     },
     "quarantine": {
         "delete_message": "Apagar mensagem",
@@ -2859,5 +2861,8 @@
     "create": "Criar",
     "labels": {
         "help_center": "Central de ajuda"
+    },
+    "button": {
+        "refresh_page": "ATUALIZAR"
     }
 }
