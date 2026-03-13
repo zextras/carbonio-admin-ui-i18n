@@ -2676,7 +2676,8 @@
     },
     "error": {
         "one_or_more_ip_invalid": "Um ou mais IPs são inválidos",
-        "invalid_ip_address_error_text": "Formato suportado do IP para IPV4 é IPV4/mascara de rede e para IPV6 é [IPV6]/mascara de rede"
+        "invalid_ip_address_error_text": "Formato suportado do IP para IPV4 é IPV4/mascara de rede e para IPV6 é [IPV6]/mascara de rede",
+        "something_went_wrong": "Algo deu errado"
     },
     "quarantine": {
         "delete_message": "Apagar mensagem",
