@@ -1710,7 +1710,10 @@
         "backup_is_enabled_at_startup": "स्टार्टअप पर बैकअप चालू है",
         "backup_is_enable_at_the_startup": "स्टार्टअप पर बैकअप चालू है",
         "local_volume_reload_if_you_changed_this_value": "लोकल वॉल्यूम (यदि आपने इसका मान बदल दिया है तो पुनः लोड करें)",
-        "initialising_backup_check_your_notifications_for_updates": "बैकअप आरंभ हो रहा है... अपडेट के लिए अपनी सूचनाएं जांचें"
+        "initialising_backup_check_your_notifications_for_updates": "बैकअप आरंभ हो रहा है... अपडेट के लिए अपनी सूचनाएं जांचें",
+        "config": {
+            "scheduleBackupPurge": "निर्धारित बैकअप प्रभावी रूप से हटाना"
+        }
     },
     "cos": {
         "calendar_options": "कैलेंडर विकल्प",
