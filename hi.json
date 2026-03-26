@@ -2529,7 +2529,7 @@
         "delete_message": "मैसेज डिलीट करें"
     },
     "search": {
-        "app": "सर्च करें",
+        "app": "खोजें",
         "module": "मॉड्यूल",
         "clear": "सर्च इनपुट साफ करें",
         "start": "सर्च शुरू करें",
@@ -2645,7 +2645,7 @@
         "enable_privacy_setting": "फीडबैक भेजने के लिए प्राइवेसि सेटिंग्स चालू करें"
     },
     "share": {
-        "is_contained_in": "यह इसमें है"
+        "is_contained_in": "में मौजूद है"
     },
     "passwords_recovery_settings": {
         "title": "पासवर्ड रिकवरी अकाउंट सेटिंग्स"
