@@ -627,7 +627,9 @@
         "features": {
             "twoFactorAuthenticator": "Two-Factor authenticator",
             "allowUsersToConfigure2FA": "Allow users to configure 2FA",
-            "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings."
+            "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings.",
+            "enforceOnUntrustedNetworks": "Enforce on Untrusted Networks",
+            "twoFactorAuthSetupEnforcement": "Two-Factor authenticator setup enforcement"
         }
     },
     "create_new_bucket": "NEW BUCKET",
@@ -746,7 +748,9 @@
             "totalAccounts": "Total Accounts",
             "twoFactorAuthenticator": "Two-Factor authenticator",
             "allowUsersToConfigure2FA": "Allow users to configure 2FA",
-            "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings."
+            "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings.",
+            "twoFactorAuthSetupEnforcement": "Two-Factor authenticator setup enforcement",
+            "enforceOnUntrustedNetworks": "Enforce on Untrusted Networks"
         },
         "editAccount": {
             "invalidaEmailError": "One or more email addresses are invalid.",
