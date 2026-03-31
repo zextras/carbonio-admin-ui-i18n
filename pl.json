@@ -468,7 +468,9 @@
             "totalAccounts": "Kont w sumie",
             "twoFactorAuthenticator": "Uwierzytelnianie dwuetapowe",
             "allowUsersToConfigure2FA": "Zezwalaj użytkownikom na konfigurację uwierzytelniania dwuetapowego",
-            "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu."
+            "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu.",
+            "twoFactorAuthSetupEnforcement": "Wymuszanie konfiguracji uwierzytelniania dwuetapowego",
+            "enforceOnUntrustedNetworks": "Wymuszaj w niezaufanych sieciach"
         },
         "editAccount": {
             "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
@@ -477,6 +479,31 @@
         "mailingList": {
             "canReceive": "Może otrzymywać",
             "cantReceive": "Nie może otrzymywać"
+        },
+        "distributionList": {
+            "invalidEmailErrorMsg": "Konto nie istnieje. Sprawdź pisownię i spróbuj ponownie.",
+            "memberAddedSuccessfully": "Członek został dodany",
+            "blankEmailErrorMsg": "Wprowadź min. jeden adres e-mail",
+            "memberDeletedSuccessfully": "Członek został usunięty",
+            "members": {
+                "addMembers": "Dodaj członka",
+                "membersList": "Lista członków",
+                "removeMember": "Usuń członka",
+                "areYouSureDeleteMember": "Czy na pewno chcesz usunąć <bold>{{name}}</bold> z listy członków?"
+            },
+            "NoCancel": "NIE, ANULUJ",
+            "yesRemoveIt": "TAK, USUŃ",
+            "ownerAddedSuccessfully": "Właściciel został dodany",
+            "ownerDeletedSuccessfully": "Właściciel został usunięty",
+            "manageOwners": "Zarządzaj właścicielami",
+            "addOwnersByEmail": "Dodaj właścicieli poprzez adres e-mail",
+            "addOwners": "Dodaj właścicieli",
+            "ownersList": "Lista właścicieli",
+            "owners": {
+                "removeOwner": "Usuń właściciela",
+                "areYouSureDeleteOwner": "Czy na pewno chcesz usunąć <bold>{{name}}</bold> z listy właścicieli?"
+            },
+            "managePermission": "Zarządzaj uprawnieniami"
         }
     },
     "label": {
@@ -2058,7 +2085,9 @@
         "features": {
             "twoFactorAuthenticator": "Uwierzytelnianie dwuetapowe",
             "allowUsersToConfigure2FA": "Zezwalaj użytkownikom na konfigurację uwierzytelniania dwuetapowego",
-            "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu."
+            "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu.",
+            "enforceOnUntrustedNetworks": "Wymuszaj w niezaufanych sieciach",
+            "twoFactorAuthSetupEnforcement": "Wymuszanie konfiguracji uwierzytelniania dwuetapowego"
         }
     },
     "locale": {
