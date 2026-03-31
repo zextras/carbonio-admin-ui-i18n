@@ -759,6 +759,36 @@
         "mailingList": {
             "canReceive": "Can Receive",
             "cantReceive": "Can't Receive"
+        },
+        "distributionList": {
+            "invalidEmailErrorMsg": "The account does not exist. Please check the spelling and try again.",
+            "memberAddedSuccessfully": "Member has been added successfully",
+            "blankEmailErrorMsg": "Please enter at least one email address",
+            "memberDeletedSuccessfully": "Member has been removed successfully",
+            "members": {
+                "addMembers": "Add Member",
+                "membersList": "Members List",
+                "removeMember": "Remove member",
+                "areYouSureDeleteMember": "Are you sure you want to remove <bold>{{name}}</bold> from the members list?"
+            },
+            "NoCancel": "NO, CANCEL",
+            "yesRemoveIt": "YES, REMOVE IT",
+            "ownerAddedSuccessfully": "Owner has been added successfully",
+            "ownerDeletedSuccessfully": "Owner has been removed successfully",
+            "manageOwners": "Manage owners",
+            "addOwnersByEmail": "Add owners by email address",
+            "addOwners": "Add owners",
+            "ownersList": "Owners list",
+            "owners": {
+                "removeOwner": "Remove owner",
+                "areYouSureDeleteOwner": "Are you sure you want to remove <bold>{{name}}</bold> from the owners list?"
+            },
+            "sendAs": "SEND AS",
+            "managePermission": "Manage permissions",
+            "sendTo": "SEND TO",
+            "unsavedChanges": "Unsaved changes",
+            "exitWithoutSave": "EXIT WITHOUT SAVE",
+            "saveAndExit": "SAVE & EXIT"
         }
     },
     "error": {
