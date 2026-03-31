@@ -253,7 +253,37 @@
             "canReceive": "Può ricevere",
             "cantReceive": "Non può ricevere"
         },
-        "jail_duration": "Durata del blocco (ms)"
+        "jail_duration": "Durata del blocco (ms)",
+        "distributionList": {
+            "invalidEmailErrorMsg": "L'account non esiste. Controlla l'ortografia e riprova.",
+            "memberAddedSuccessfully": "L'utente è stato aggiunto con successo",
+            "blankEmailErrorMsg": "Inserisci almeno un indirizzo e-mail",
+            "memberDeletedSuccessfully": "L'utente è stato rimosso con successo",
+            "members": {
+                "addMembers": "Aggiungi membro",
+                "membersList": "Lista membri",
+                "removeMember": "Rimuovi membro",
+                "areYouSureDeleteMember": "Sei sicuro di voler rimuovere <bold>\n{{name}}\n</bold> dall'elenco dei membri?"
+            },
+            "NoCancel": "NO, ANNULLA",
+            "yesRemoveIt": "SI, RIMUOVILO",
+            "ownerAddedSuccessfully": "Il proprietario è stato aggiunto con successo",
+            "ownerDeletedSuccessfully": "Il proprietario è stato rimosso con successo",
+            "manageOwners": "Gestisci proprietari",
+            "addOwnersByEmail": "Aggiungi proprietari tramite indirizzo e-mail",
+            "addOwners": "Aggiungi proprietari",
+            "ownersList": "Lista proprietari",
+            "owners": {
+                "removeOwner": "Rimuovi proprietario",
+                "areYouSureDeleteOwner": "Sei sicuro di voler rimuovere <bold>\n{{name}}</bold> dall'elenco dei proprietari?"
+            },
+            "managePermission": "Gestisci permessi",
+            "sendAs": "INVIA COME",
+            "sendTo": "INVIA A",
+            "unsavedChanges": "Modifiche non salvate",
+            "exitWithoutSave": "ESCI SENZA SALVARE",
+            "saveAndExit": "SALVA ED ESCI"
+        }
     },
     "label": {
         "account": "Account",
