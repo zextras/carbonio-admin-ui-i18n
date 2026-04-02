@@ -629,7 +629,10 @@
             "allowUsersToConfigure2FA": "Allow users to configure 2FA",
             "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings.",
             "enforceOnUntrustedNetworks": "Enforce on Untrusted Networks",
-            "twoFactorAuthSetupEnforcement": "Two-Factor authenticator setup enforcement"
+            "twoFactorAuthSetupEnforcement": "Two-Factor authenticator setup enforcement",
+            "allowSetupDeferralDuringGracePeriod": "Allow setup deferral during grace period",
+            "allowSetupDeferralDuringGracePeriodInfo": "Users can skip the wizard for a limited time. The prompt will reappear at every login until setup is completed or the grace period expires.",
+            "gracePeriodExpirationDate": "Set grace period expiration date"
         }
     },
     "create_new_bucket": "NEW BUCKET",
@@ -750,7 +753,10 @@
             "allowUsersToConfigure2FA": "Allow users to configure 2FA",
             "allowUsersToConfigure2FAInfo": "Users will be able to set up and manage their One-Time Password (OTP) from their profile settings.",
             "twoFactorAuthSetupEnforcement": "Two-Factor authenticator setup enforcement",
-            "enforceOnUntrustedNetworks": "Enforce on Untrusted Networks"
+            "enforceOnUntrustedNetworks": "Enforce on Untrusted Networks",
+            "allowSetupDeferralDuringGracePeriod": "Allow setup deferral during grace period",
+            "allowSetupDeferralDuringGracePeriodInfo": "Users can skip the wizard for a limited time. The prompt will reappear at every login until setup is completed or the grace period expires.",
+            "gracePeriodExpirationDate": "Set grace period expiration date "
         },
         "editAccount": {
             "invalidaEmailError": "One or more email addresses are invalid.",
