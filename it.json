@@ -243,7 +243,10 @@
             "allowUsersToConfigure2FA": "Consenti agli utenti di configurare l'autenticazione a due fattori (2FA)",
             "allowUsersToConfigure2FAInfo": "Gli utenti potranno impostare e gestire la propria password monouso (OTP) dalle impostazioni del proprio profilo.",
             "twoFactorAuthSetupEnforcement": "Abilita l'obbligo di configurazione dell'autenticazione a due fattori",
-            "enforceOnUntrustedNetworks": "Applica su reti non attendibili"
+            "enforceOnUntrustedNetworks": "Applica su reti non attendibili",
+            "allowSetupDeferralDuringGracePeriod": "Consenti il rinvio della configurazione durante il periodo di tolleranza",
+            "allowSetupDeferralDuringGracePeriodInfo": "Gli utenti possono saltare la procedura guidata per un periodo di tempo limitato. Il messaggio ricomparirà ad ogni accesso fino al completamento della configurazione o alla scadenza del periodo di tolleranza.",
+            "gracePeriodExpirationDate": "Imposta la data di scadenza del periodo di tolleranza "
         },
         "editAccount": {
             "otpSentSuccessfully": "L'OTP è stato inviato con successo",
@@ -2106,7 +2109,10 @@
             "allowUsersToConfigure2FA": "Consenti agli utenti di configurare l'autenticazione a due fattori (2FA)",
             "allowUsersToConfigure2FAInfo": "Gli utenti potranno impostare e gestire la propria password monouso (OTP) dalle impostazioni del proprio profilo.",
             "enforceOnUntrustedNetworks": "Applica su reti non attendibili",
-            "twoFactorAuthSetupEnforcement": "Abilita l'obbligo di configurazione dell'autenticazione a due fattori"
+            "twoFactorAuthSetupEnforcement": "Abilita l'obbligo di configurazione dell'autenticazione a due fattori",
+            "allowSetupDeferralDuringGracePeriod": "Consentire il rinvio della configurazione durante il periodo di tolleranza",
+            "allowSetupDeferralDuringGracePeriodInfo": "Gli utenti possono saltare la procedura guidata per un periodo di tempo limitato. Il messaggio ricomparirà ad ogni accesso fino al completamento della configurazione o alla scadenza del periodo di tolleranza.",
+            "gracePeriodExpirationDate": "Imposta la data di scadenza del periodo di tolleranza"
         }
     },
     "accountDetails": {
