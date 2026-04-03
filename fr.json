@@ -1789,7 +1789,10 @@
             "allowUsersToConfigure2FA": "Autoriser les utilisateurs à configurer la 2FA",
             "allowUsersToConfigure2FAInfo": "Les utilisateurs pourront paramétrer et gérer leur OTP depuis les paramètres de leur profil.",
             "twoFactorAuthSetupEnforcement": "Appliquer la configuration de l'authentification à deux facteurs",
-            "enforceOnUntrustedNetworks": "Appliquer sur les réseaux non fiables"
+            "enforceOnUntrustedNetworks": "Appliquer sur les réseaux non fiables",
+            "allowSetupDeferralDuringGracePeriod": "Autoriser le report de la configuration pendant le délai de grâce",
+            "allowSetupDeferralDuringGracePeriodInfo": "Les utilisateurs peuvent ignorer l'assistant pendant une durée limitée. L'invite réapparaîtra à chaque connexion jusqu'à ce que la configuration soit terminée ou que le délai de grâce expire.",
+            "gracePeriodExpirationDate": "Définir la date d'expiration du délai de grâce "
         },
         "editAccount": {
             "invalidaEmailError": "Une ou plusieurs adresses email sont invalides.",
@@ -1798,6 +1801,36 @@
         "mailingList": {
             "canReceive": "Peut recevoir",
             "cantReceive": "Ne peut pas recevoir"
+        },
+        "distributionList": {
+            "invalidEmailErrorMsg": "Ce compte n'existe pas. Merci de vérifier l'orthographe et réessayer.",
+            "memberAddedSuccessfully": "Le membre a été ajouté avec succès",
+            "blankEmailErrorMsg": "Merci de saisir au moins l'adresse email",
+            "memberDeletedSuccessfully": "Le membre a été enlevé avec succès",
+            "members": {
+                "addMembers": "Ajouter un membre",
+                "membersList": "Liste des membres",
+                "removeMember": "Enlever un membre",
+                "areYouSureDeleteMember": "Êtes-vous certain de vouloir enlever <bold>{{name}}</bold> de la liste des membres ?"
+            },
+            "NoCancel": "NON, ANNULER",
+            "yesRemoveIt": "OUI, L'ENLEVER",
+            "ownerAddedSuccessfully": "Le propriétaire a été ajouter avec succès",
+            "ownerDeletedSuccessfully": "Le propriétaire a été enlevé avec succès",
+            "manageOwners": "Gérer les propriétaires",
+            "addOwnersByEmail": "Ajouter les propriétaires par adresse email",
+            "addOwners": "Ajouter des propriétaires",
+            "ownersList": "Liste des propriétaires",
+            "owners": {
+                "removeOwner": "Enlever un propriétaire",
+                "areYouSureDeleteOwner": "Êtes-vous certain de vouloir enlever <bold>{{name}}</bold> de la liste des propriétaires ?"
+            },
+            "managePermission": "Gérer les permissions",
+            "sendAs": "ENVOYER EN TANT QUE",
+            "sendTo": "ENVOYER À",
+            "unsavedChanges": "Modifications non enregistrées",
+            "exitWithoutSave": "SORTIR SANS ENREGISTRER",
+            "saveAndExit": "ENREGISTRER ET SORTIR"
         }
     },
     "commons": {
@@ -2077,7 +2110,10 @@
             "allowUsersToConfigure2FA": "Autoriser les utilisateurs à configurer la 2FA",
             "allowUsersToConfigure2FAInfo": "Les utilisateurs pourront paramétrer et gérer leur OTP depuis les paramètres de leur profil.",
             "enforceOnUntrustedNetworks": "Appliquer sur les réseaux non fiables",
-            "twoFactorAuthSetupEnforcement": "Appliquer la configuration de l'authentification à deux facteur"
+            "twoFactorAuthSetupEnforcement": "Appliquer la configuration de l'authentification à deux facteur",
+            "allowSetupDeferralDuringGracePeriod": "Autoriser le report de la configuration pendant le délai de grâce",
+            "allowSetupDeferralDuringGracePeriodInfo": "Les utilisateurs peuvent ignorer l'assistant pendant une durée limitée. L'invite réapparaîtra à chaque connexion jusqu'à ce que la configuration soit terminée ou que le délai de grâce expire.",
+            "gracePeriodExpirationDate": "Définir la date d'expiration du délai de grâce"
         }
     },
     "create_new_cos": "CRÉER UNE NOUVELLE COS",
