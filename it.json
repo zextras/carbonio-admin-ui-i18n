@@ -1431,7 +1431,7 @@
         "extra_window": {
             "save_to_files_disabled": "Il salvataggio dei file allegati è disponibile solo dalla scheda principale"
         },
-        "only_allow_outbound_disclaimers": "Consenti solo dichiarazioni di non responsabilità in uscita",
+        "only_allow_outbound_disclaimers": "Allega eclusione di responsabilità solo ai messaggi in uscita",
         "quarantine": "Quarantena",
         "virtualhost_avaibility_helpertext": "per rendere disponibile il virtualHost, ricaricare prima la configurazione di nginx su tutti i proxy.",
         "advance_edit_user": "Utente",
