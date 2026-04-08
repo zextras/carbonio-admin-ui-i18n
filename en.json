@@ -1619,7 +1619,7 @@
         "of_unlimited": "of unlimited",
         "on_startup_and_scheduled": "On Startup & Scheduled",
         "on_startup_only": "On Startup Only",
-        "only_allow_outbound_disclaimers": "Only allow outbound disclaimers",
+        "only_allow_outbound_disclaimers": "Attach disclaimer only to outbound emails",
         "only_there_users": "Only these users",
         "open": "Open",
         "operation": {
