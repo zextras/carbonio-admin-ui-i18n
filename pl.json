@@ -503,7 +503,12 @@
                 "removeOwner": "Usuń właściciela",
                 "areYouSureDeleteOwner": "Czy na pewno chcesz usunąć <bold>{{name}}</bold> z listy właścicieli?"
             },
-            "managePermission": "Zarządzaj uprawnieniami"
+            "managePermission": "Zarządzaj uprawnieniami",
+            "sendAs": "WYSYŁANIE JAKO",
+            "sendTo": "WYSYŁANIE DO",
+            "unsavedChanges": "Niezapisane zmiany",
+            "exitWithoutSave": "WYJDŹ BEZ ZAPISYWANIA",
+            "saveAndExit": "ZAPISZ I WYJDŹ"
         }
     },
     "label": {
@@ -644,7 +649,7 @@
         "location": "Lokalizacja",
         "mail": "E-maile",
         "no": "Nie",
-        "owners": "Właściciele",
+        "owners": "WŁAŚCICIELE",
         "password": "Hasło",
         "require_list_owner_approval": "Wymagaj zatwierdzenia przez właściciela listy",
         "resource": "Zasób",
@@ -1646,7 +1651,7 @@
         "mandatory_disclaimer_are_enable_for_all_domain": "Obowiązkowe zastrzeżenia są włączone dla wszystkich domen",
         "mandatory_disclaimer_are_enable_only_for_outbound_deliveries": "Obowiązkowe zastrzeżenia są włączone tylko dla wiadomości wychodzących",
         "mandatory_disclaimer_is_enable_for_this_domain": "Obowiązkowe zastrzeżenia są włączone dla tej domeny",
-        "only_allow_outbound_disclaimers": "Zezwalaj tylko na zastrzeżenia wychodzące",
+        "only_allow_outbound_disclaimers": "Załączaj zastrzeżenie tylko do e-maili wychodzących",
         "retention_period": "Okres retencji (wartość)",
         "rich_text_editor": "Rozbudowany edytor tekstu",
         "score": "Wynik",
