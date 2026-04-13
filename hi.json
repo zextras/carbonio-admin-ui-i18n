@@ -1886,7 +1886,10 @@
         "user_specific_fowarding_addresses": "उपयोगकर्ता द्वारा निर्दिष्ट अग्रेषित ईमेल फ़ील्ड को (अक्षरों में) तक सीमित करें",
         "enable_new_mail_toast_notification": "नई मेल टोस्ट अधिसूचना शुरू करें",
         "upload_max_size_per_file": "प्रत्येक अनुलग्नक के लिए अनुमत अधिकतम आकार (बाइट्स)",
-        "unlimited": "असीमित"
+        "unlimited": "असीमित",
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "उपयोगकर्ता को पढ़े जाने की रसीद मांगने की अनुमति दें।"
+        }
     },
     "accountDetails": {
         "enable_activeSync_remote_access": "ActiveSync रिमोट एक्सेस चालू करें",
