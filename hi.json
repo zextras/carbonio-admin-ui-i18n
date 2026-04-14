@@ -1616,7 +1616,24 @@
             "allowSearchUserFromAllDomains": "सभी डोमेन में उपयोगकर्ताओं की जानकारी खोजने की अनुमति दें"
         },
         "accounts": {
-            "allowUsersToConfigure2FAInfo": "उपयोगकर्ता अपनी प्रोफ़ाइल सेटिंग्स से वन-टाइम पासवर्ड (ओटीपी) सेट अप और प्रबंधित करने में सक्षम होंगे।"
+            "allowUsersToConfigure2FAInfo": "उपयोगकर्ता अपनी प्रोफ़ाइल सेटिंग्स से वन-टाइम पासवर्ड (ओटीपी) सेट अप और प्रबंधित करने में सक्षम होंगे।",
+            "editAccount": {
+                "externalldap": "बाहरी LDAP",
+                "externalldapReferenceForAuthentication": "बाहरी LDAP संदर्भ प्रमाणीकरण के लिए",
+                "allowTheUserToAskForAReadReceipt": "उपयोगकर्ता को पढ़े जाने की रसीद मांगने की अनुमति दें।"
+            }
+        },
+        "authentication": {
+            "search_bind_password": "बाइंड पासवर्ड खोज",
+            "search_bind_user": "खोज बाइंड उपयोगकर्ता",
+            "carbonio_info": "यह विधि स्थानीय एलडीएपी, बाहरी एडी/एलडीएपी, क्रेडेंशियल पासवर्ड और एसएएमएल के उपयोग की अनुमति देती है।"
+        },
+        "mailSpaceQuotaThresholdError": {
+            "description": "मेल स्पेस कोटा सीमा 0 से 100 के बीच होनी चाहिए"
+        },
+        "editAccount": {
+            "invalidaEmailError": "एक या एक से अधिक ईमेल पते अमान्य हैं।",
+            "otpSentSuccessfully": "ओटीपी सफलतापूर्वक भेज दिया गया है"
         }
     },
     "message": {
@@ -1889,6 +1906,9 @@
         "unlimited": "असीमित",
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "उपयोगकर्ता को पढ़े जाने की रसीद मांगने की अनुमति दें।"
+        },
+        "creatCOS": {
+            "cosNameInfo": "COS नाम में केवल छोटे अक्षर होने चाहिए।"
         }
     },
     "accountDetails": {
