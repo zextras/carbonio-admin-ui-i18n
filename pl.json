@@ -363,8 +363,8 @@
             "next_validation_deadline": "Następny ostateczny termin zatwierdzenia",
             "date_end": "Data zakończenia",
             "renew": "ODNÓW",
-            "next_validation_deadline_tooltip": "Ta data oznacza ostatni dzień, w którym licencja będzie w pełni funkcjonalna, jeśli dane o zużyciu nie zostaną wysłane do Usługi Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
-            "last_validation_check_tooltip": "Ta data oznacza ostatni dzień, w którym licencja została zatwierdzona przez Usługę Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawia za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
+            "next_validation_deadline_tooltip": "Ta data oznacza ostatni dzień, w którym licencja będzie w pełni funkcjonalna, jeśli dane o zużyciu nie zostaną wysłane do Usługi Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawiana za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
+            "last_validation_check_tooltip": "Ta data oznacza ostatni dzień, w którym licencja została zatwierdzona przez Usługę Subskrypcji Zextras.\n\nPosiadasz subskrypcję, w której płacisz za bieżące użycie (Per Pay Use). Dlatego system automatycznie zgłasza dane o dziennym zużyciu do Usługi Subskrypcji Zextras. Gdy ta komunikacja działa poprawnie, użytkownik nie musi nic robić. Jeśli systemowi nie udaje się skontaktować z Usługą, zastosowana zostaje 7-dniowa prolongata. Ta prolongata jest automatycznie odnawiana za każdym razem, gdy udaje się pomyślnie skontaktować z Usługą Subskrypcji Zextras.",
             "last_validation_check": "Ostatnie zatwierdzenie",
             "maxCarbonioVersion": "Max. wersja Carbonio",
             "updateTime": "Czas aktualizacji"
@@ -470,7 +470,10 @@
             "allowUsersToConfigure2FA": "Zezwalaj użytkownikom na konfigurację uwierzytelniania dwuetapowego",
             "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu.",
             "twoFactorAuthSetupEnforcement": "Wymuszanie konfiguracji uwierzytelniania dwuetapowego",
-            "enforceOnUntrustedNetworks": "Wymuszaj w niezaufanych sieciach"
+            "enforceOnUntrustedNetworks": "Wymuszaj w niezaufanych sieciach",
+            "allowSetupDeferralDuringGracePeriod": "Zezwalaj na odroczenie konfiguracji podczas okresu odroczenia",
+            "allowSetupDeferralDuringGracePeriodInfo": "Użytkownicy mogą pomijać kreator przez ograniczony czas. Komunikat będzie pojawiał się ponownie przy każdym logowaniu dopóki konfiguracja nie zostanie ukończona lub do końca okresu odroczenia.",
+            "gracePeriodExpirationDate": "Ustaw koniec okresu odroczenia "
         },
         "editAccount": {
             "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
@@ -2092,7 +2095,10 @@
             "allowUsersToConfigure2FA": "Zezwalaj użytkownikom na konfigurację uwierzytelniania dwuetapowego",
             "allowUsersToConfigure2FAInfo": "Użytkownicy będą mogli ustawić i zarządzać swoim hasłem jednorazowym z ich ustawień profilu.",
             "enforceOnUntrustedNetworks": "Wymuszaj w niezaufanych sieciach",
-            "twoFactorAuthSetupEnforcement": "Wymuszanie konfiguracji uwierzytelniania dwuetapowego"
+            "twoFactorAuthSetupEnforcement": "Wymuszanie konfiguracji uwierzytelniania dwuetapowego",
+            "allowSetupDeferralDuringGracePeriod": "Zezwalaj na odroczenie konfiguracji podczas okresu odroczenia",
+            "allowSetupDeferralDuringGracePeriodInfo": "Użytkownicy mogą pomijać kreator przez ograniczony czas. Komunikat będzie pojawiał się ponownie przy każdym logowaniu dopóki konfiguracja nie zostanie ukończona lub do końca okresu odroczenia.",
+            "gracePeriodExpirationDate": "Ustaw koniec okresu odroczenia"
         }
     },
     "locale": {
