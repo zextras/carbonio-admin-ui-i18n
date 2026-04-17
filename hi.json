@@ -1166,7 +1166,12 @@
         "backup_enabled": "बैकअप सक्षम/अक्षम करें",
         "files_quota_used_mb": "प्रयुक्त फ़ाइल कोटा (MB)",
         "files_quota_mb": "फ़ाइल कोटा (MB)",
-        "equipment": "उपकरण"
+        "equipment": "उपकरण",
+        "advance_edit_viewed_name": "प्रदर्शन नाम",
+        "always_allow_address": "<strong>{{values}}</strong> से हमेशा अनुमति दें",
+        "always_allow_domain": "<strong>{{values}}</strong> डोमेन से हमेशा अनुमति दें",
+        "are_you_sure_you_want_to_leave_without_saving_he_changes": "क्या आप बिना बदलाव सहेजे बाहर निकलना चाहते हैं?",
+        "arrival_time": "आगमन समय"
     },
     "timezone": {
         "asia_tomsk": "{{value}} तोम्स्क",
