@@ -2371,7 +2371,8 @@
         "primary_helperText": "प्राइमरी",
         "secondary_helperText": "सेकंडरी",
         "create_storage_volume": "स्टोरेज वॉल्यूम बनाएँ",
-        "running": "चालू है"
+        "running": "चालू है",
+        "not_running": "चल नहीं रहा"
     },
     "click_new_bucket_button_to_create_new_one": "नई बकेट बटन क्लिक करके एक नई बनाएँ।",
     "hsm": {
@@ -2709,7 +2710,27 @@
         "release": "रिलीज़",
         "requeue": "पुनः कतारबद्ध करें",
         "restart_scan": "स्कैन पुनरारंभ",
-        "sas_log_level_for_amavis": "Amavis के लिए SAS लॉग स्तर"
+        "sas_log_level_for_amavis": "Amavis के लिए SAS लॉग स्तर",
+        "scan_completed": "स्कैन पूर्ण",
+        "scan_in_progress": "स्कैन प्रगति में",
+        "select_a_mail_server_to_see_stats": "इसके आँकड़े देखने के लिए एक मेल सर्वर चुनें",
+        "smtp_client_logging_of_tls_activity": "SMTP क्लाइंट लॉगिंग (TLS एक्टिविटी)",
+        "smtpd_not_valid_error": "Smtpd प्रेषक लॉगिन मानचित्र मान्य नहीं है",
+        "smtpd_sender_login_maps": "Smtpd प्रेषक लॉगिन मानचित्र",
+        "space_not_allowed_in_antivirus_mirror": "एंटीवायरस मिरर में स्पेस की अनुमति नहीं है",
+        "spam_to_junk_tolerance": "स्पैम से जंक मेल टॉलारेंस",
+        "three": "3",
+        "tuning": "ट्यूनिंग",
+        "two": "2",
+        "updated_at": "अद्यतन किया गया",
+        "zero": "0",
+        "advanced": {
+            "mail_messages_size": "मेल संदेश आकार",
+            "no_size_limit_for_mail_messages": "मेल संदेशों के लिए कोई आकार सीमा नहीं है",
+            "custom_max_size_mail_message": "कस्टम अधिकतम आकार मेल संदेश (MB)",
+            "max_size_for_mail_messages": "मेल संदेशों का अधिकतम आकार (MB)",
+            "value_0_disables_email_sending": "मान 0 ईमेल भेजना अक्षम करता है: 0 से बड़ा मान दर्ज करें"
+        }
     },
     "mat": {
         "add_here_any_blocked_extension": "यहाँ कोई भी ब्लॉक्ड एक्सटेंशन जोड़ें"
@@ -2736,7 +2757,31 @@
     },
     "quarantine": {
         "message_deleted": "मैसेज डिलीट हो गया",
-        "delete_message": "मैसेज डिलीट करें"
+        "delete_message": "मैसेज डिलीट करें",
+        "attachment_deleted": "संलग्नक हटाया गया",
+        "create_quarantine": "क्वारंटाइन खाता बनाएँ",
+        "delete_and_recrate_quarantine_account_title": "क्वारंटीन खाता हटाएँ और पुनः बनाएँ",
+        "delete_and_recrate_quarantine_account_warning": "क्या आप सुनिश्चित हैं कि आप क्वारंटीन अकाउंट को हटाकर पुनः बनाना चाहते हैं?",
+        "delete_and_recreate_quarantine": "क्वारंटाइन खाता हटाएँ और पुनः बनाएँ",
+        "delete_msg_warning": "क्या आप निश्चित हैं कि आप संदेश को हटाना चाहते हैं?",
+        "deliver": "डिलीवर",
+        "destroy_account_recreate_button": "हाँ, इसे हटाएँ और पुनः बनाएँ।",
+        "download": "डाऊनलोड",
+        "hide_source": "छिपाएँ",
+        "is_content_email_safe": "क्या ईमेल की सामग्री सुरक्षित है?",
+        "message_delivered": "संदेश भेजा गया",
+        "no_cancel": "नहीं, रद्द",
+        "not_quarantine_account": "अभी तक किसी भी डोमेन में कोई क्वारंटीन खाता नहीं है। क्या आप एक सिस्टम क्वारंटीन खाता बनाना चाहते हैं?",
+        "please_note_email_contains_dangerous_file_not_be_delivered": "कृपया ध्यान दें कि यदि ईमेल में अभी भी खतरनाक फ़ाइल है तो इसे डिलीवर नहीं किया जाएगा।",
+        "quarantine": "क्वारंटीन",
+        "quarantine_account": "क्वारंटीन खाता",
+        "quarantine_messages": "क्वारंटीन संदेश",
+        "refresh_list": "सूची रीफ़्रेश",
+        "show_images": "छवियाँ दिखाएँ",
+        "show_source": "स्रोत दिखाएँ",
+        "to_make_changes_restart_the_MTA": "परिवर्तनों को लागू करने हेतु कृपया MTA को पुनः आरंभ करें।",
+        "yes_delete_message": "हाँ, हटाएँ",
+        "yes_deliver": "हां, डिलीवर करें"
     },
     "search": {
         "app": "खोजें",
@@ -2868,6 +2913,97 @@
         "help_center": "सहायता केंद्र"
     },
     "button": {
-        "refresh_page": "ताज़ा करें"
+        "refresh_page": "ताज़ा करें",
+        "view_subscription_details": "सदस्यता विवरण देखें",
+        "remove_selected_items": "चयनित आइटम हटाएँ"
+    },
+    "domains": {
+        "generalSettings": {
+            "AllowSearchUserFromSpecificDomains": "विशिष्ट डोमेन्स से उपयोगकर्ताओं को खोजें"
+        },
+        "GeneralSettings": {
+            "searchDomain": {
+                "label": "डोमेन खोजें",
+                "disabledTooltip": "विशिष्ट डोमेन में उपयोगकर्ताओं को खोजने के लिए, पहले ग्लोबल सेटिंग्स में ‘सभी डोमेन में उपयोगकर्ताओं की जानकारी खोजने की अनुमति दें’ विकल्प को अक्षम करना आवश्यक है।"
+            }
+        }
+    },
+    "legalHold": {
+        "show_only_accounts_on_legal_hold": "केवल लीगल होल्ड पर मौजूद खाते दिखाएँ"
+    },
+    "wsc": {
+        "section": {
+            "header": {
+                "title": {
+                    "chats": "प्राइवेट और ग्रुप चैट्स",
+                    "attachments": "साझा करना एवं संलग्नक",
+                    "messaging": "मैसेजिंग और प्रेज़ेंस",
+                    "videocall": "वीडियो कॉल",
+                    "general": "जनरल सेटिंग्स"
+                },
+                "description": {
+                    "messaging": "चैट्स और उपयोगकर्ता स्थिति की दृश्यता प्रबंधित करें।",
+                    "videocall": "वीडियो कॉल, रिकॉर्डिंग और वर्चुअल बैकग्राउंड कॉन्फ़िगर करें।",
+                    "attachments": "फ़ाइल शेयरिंग और अटैचमेंट सीमाओं को प्रबंधित करें।",
+                    "general": "कोर फीचर्स और एप्लिकेशन की सक्रियता प्रबंधित करें"
+                }
+            },
+            "content": {
+                "description": {
+                    "presence": "उपयोगकर्ताओं की ऑनलाइन स्थिति या अंतिम देखी गई समय दिखाएँ।",
+                    "enableAttachments": "फ़ाइलों, इमेज़ और दस्तावेज़ों को भेजना सक्षम करें।",
+                    "enableFeature": "संदेश, समूह चैट, वीडियो कॉल और फ़ाइल शेयरिंग सक्षम करने के लिए सक्रिय करें।",
+                    "readReceipt": "जब संदेश पढ़े जाएँ तो प्रेषकों को दिखाएँ।",
+                    "deletionLimit": "भेजे गए संदेश को हटाने की समय सीमा सेट करें।",
+                    "editLimit": "भेजने के बाद संदेश को कितने समय तक संपादित किया जा सकता है, निर्धारित करें।",
+                    "createPrivate": "उपयोगकर्ताओं को एक-पर-एक वार्तालाप शुरू करने की अनुमति दें।",
+                    "createGroup": "उपयोगकर्ताओं को एकाधिक प्रतिभागियों के साथ चैट बनाने की अनुमति दें।",
+                    "groupPicture": "समूह प्रोफ़ाइल चित्रों के लिए फ़ाइल आकार सीमित करें।",
+                    "groupMembers": "प्रति समूह अधिकतम उपयोगकर्ता संख्या सेट करें।",
+                    "enableRecording": "ऑडियो और वीडियो कॉलों की रिकॉर्डिंग की अनुमति दें।",
+                    "enableVideoCall": "फ़ीचर में वीडियो कॉल कार्यक्षमता सक्रिय करें।",
+                    "enableVirtualBackground": "उपयोगकर्ताओं को वीडियो कॉल के दौरान वर्चुअल बैकग्राउंड लागू करने की अनुमति दें।",
+                    "attachmentSize": "चैट में साझा फ़ाइलों के अधिकतम आकार को निर्धारित करें।"
+                },
+                "select": {
+                    "deletionLimit": "संदेश हटाने की समय सीमा",
+                    "deletelimit": {
+                        "zero": "उपयोगकर्ता भेजे गए संदेशों को हटाने में असमर्थ है"
+                    },
+                    "timeLimit": "मिनट समय सीमा",
+                    "zero": {
+                        "editLimit": "उपयोगकर्ता भेजे गए संदेशों को संपादित नहीं कर सकता"
+                    }
+                },
+                "toggle": {
+                    "enableVirtualBackground": "वर्चुअल बैकग्राउंड सक्षम करें",
+                    "enableFeature": "चैट सक्षम करें",
+                    "readReceipt": "पढ़ने की रसीदें दिखाएँ",
+                    "presence": "उपयोगकर्ताओं की ऑनलाइन स्थिति दिखाएँ",
+                    "createPrivate": "उपयोगकर्ता नई निजी चैट शुरू कर सकते हैं",
+                    "createGroup": "उपयोगकर्ता ग्रुप चैट बना सकते हैं",
+                    "enableVideoCall": "वीडियो कॉल सक्षम करें",
+                    "enableRecording": "कॉल रिकॉर्डिंग की अनुमति दें",
+                    "enableAttachments": "उपयोगकर्ता संलग्नक अपलोड कर सकते हैं"
+                },
+                "input": {
+                    "groupMembers": "समूह सदस्यों की अधिकतम संख्या",
+                    "groupPicture": "अधिकतम समूह चित्र आकार MB में",
+                    "attachmentSize": "अधिकतम संलग्नक आकार (MB)"
+                }
+            },
+            "license": {
+                "warning": "इन सेटिंग्स को नहीं बदला जा सकता क्योंकि आपका चैट्स लाइसेंस मान्य नहीं है।",
+                "error": "लाइसेंस विवरण प्राप्त करने में त्रुटि। कृपया बाद में पुनः प्रयास करें।"
+            }
+        }
+    },
+    "accounts": {
+        "phoneNumber": {
+            "tooltip": "अनुमत अक्षर हैं: स्पेस, अंक और प्रतीक -+()/,।"
+        }
+    },
+    "banner": {
+        "maintenance-expired-description": "रखरखाव समाप्त हो गया।"
     }
 }
