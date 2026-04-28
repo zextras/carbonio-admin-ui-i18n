@@ -1664,7 +1664,9 @@
             "date_end": "समाप्ति तिथि",
             "last_validation_check_tooltip": "यह दिनांक ज़ेक्सट्रास सदस्यता सेवा द्वारा लाइसेंस के मान्य होने के अंतिम दिन का प्रतिनिधित्व करता है।\n\nचूंकि यह एक पे पर यूज़ (पीपीयू) सदस्यता है, सिस्टम स्वचालित रूप से दैनिक उपयोग डेटा को ज़ेक्सट्रास सदस्यता सेवा में रिपोर्ट करता है। जब तक संचार सही ढंग से काम कर रहा है, तब तक किसी उपयोगकर्ता क्रिया की आवश्यकता नहीं होती है। यदि सिस्टम सेवा से संपर्क करने में असमर्थ होता है, तो 7 दिनों की रियायती अवधि लागू की जाती है। हर बार जब ज़ेक्स्ट्रास सदस्यता सेवा से सफलतापूर्वक संपर्क किया जाता है, यह रियायती अवधि अपने आप नवीनीकृत हो जाती है।",
             "next_validation_deadline_tooltip": "यह तिथि उस अंतिम दिन का प्रतिनिधित्व करती है जब लाइसेंस पूरी तरह से कार्यात्मक रहेगा यदि उपयोग डेटा ज़ेक्स्ट्रास सदस्यता सेवा को नहीं भेजा जाता है।\n\nचूंकि यह एक पे पेर यूज़ (पीपीयू) सदस्यता है, सिस्टम स्वचालित रूप से दैनिक उपयोग डेटा को ज़ेक्स्ट्रास सदस्यता सेवा को रिपोर्ट करता है। जब तक संचार सही ढंग से काम कर रहा है, उपयोगकर्ता द्वारा कोई कार्रवाई करने की आवश्यकता नहीं है। यदि सिस्टम सेवा से संपर्क करने में असमर्थ होता है, तो 7 दिन की ग्रेस अवधि लागू होती है। यह ग्रेस अवधि हर बार जब सिस्टम सफलतापूर्वक ज़ेक्स्ट्रास सदस्यता सेवा से संपर्क करता है, स्वतः नवीनीकृत हो जाती है।",
-            "renew": "नवीनीकरण"
+            "renew": "नवीनीकरण",
+            "maxCarbonioVersion": "Max Carbonio संस्करण",
+            "updateTime": "अपडेट समय"
         }
     },
     "domain": {
@@ -1751,7 +1753,18 @@
                 "externalldap": "बाहरी LDAP",
                 "externalldapReferenceForAuthentication": "बाहरी LDAP संदर्भ प्रमाणीकरण के लिए",
                 "allowTheUserToAskForAReadReceipt": "उपयोगकर्ता को पढ़े जाने की रसीद मांगने की अनुमति दें।"
-            }
+            },
+            "phoneNumber": {
+                "tooltip": "अनुमत अक्षर हैं खाली स्थान, संख्याएँ और प्रतीक -+()/,।"
+            },
+            "totalAccounts": "कुल खाते",
+            "twoFactorAuthenticator": "टू-फ़ैक्टर ऑथेंटिकेटर",
+            "allowUsersToConfigure2FA": "उपयोगकर्ताओं को 2FA कॉन्फ़िगर करने की अनुमति दें",
+            "twoFactorAuthSetupEnforcement": "Two-Factor ऑथेंटिकेटर सेटअप प्रवर्तन",
+            "enforceOnUntrustedNetworks": "अविश्वसनीय नेटवर्क पर लागू करें",
+            "allowSetupDeferralDuringGracePeriod": "ग्रेस अवधि के दौरान सेटअप स्थगन की अनुमति दें",
+            "allowSetupDeferralDuringGracePeriodInfo": "उपयोगकर्ता सीमित समय के लिए wizard को स्किप कर सकते हैं। सेटअप पूरा होने या grace period समाप्त होने तक हर login पर यह prompt फिर दिखेगा।",
+            "gracePeriodExpirationDate": "ग्रेस अवधि समाप्ति तिथि सेट करें "
         },
         "authentication": {
             "search_bind_password": "बाइंड पासवर्ड खोज",
@@ -1764,6 +1777,40 @@
         "editAccount": {
             "invalidaEmailError": "एक या एक से अधिक ईमेल पते अमान्य हैं।",
             "otpSentSuccessfully": "ओटीपी सफलतापूर्वक भेज दिया गया है"
+        },
+        "mailingList": {
+            "canReceive": "प्राप्त कर सकता है",
+            "cantReceive": "पा नहीं सकता"
+        },
+        "distributionList": {
+            "invalidEmailErrorMsg": "खाता मौजूद नहीं है। कृपया वर्तनी जांचें और पुनः प्रयास करें।",
+            "memberAddedSuccessfully": "सदस्य सफलतापूर्वक जोड़ा गया",
+            "blankEmailErrorMsg": "कृपया कम से कम एक ईमेल पता दर्ज करें",
+            "memberDeletedSuccessfully": "सदस्य को सफलतापूर्वक हटा दिया गया है।",
+            "members": {
+                "addMembers": "सदस्य जोड़ें",
+                "membersList": "सदस्य सूची",
+                "removeMember": "मेम्बर को हटाएँ",
+                "areYouSureDeleteMember": "क्या आप सुनिश्चित हैं कि आप <bold>{{name}}</bold> को सदस्य सूची से हटाना चाहते हैं?"
+            },
+            "NoCancel": "नहीं, रद्द",
+            "yesRemoveIt": "हां, इसे हटाएँ",
+            "ownerAddedSuccessfully": "मालिक सफलतापूर्वक जोड़ा गया",
+            "ownerDeletedSuccessfully": "मालिक को सफलतापूर्वक हटाया गया।",
+            "manageOwners": "स्वामियों को प्रबंधित करें",
+            "addOwnersByEmail": "ईमेल पते से मालिक जोड़ें",
+            "addOwners": "मालिक जोड़ें",
+            "ownersList": "मालिकों की सूची",
+            "owners": {
+                "removeOwner": "स्वामी निकालें",
+                "areYouSureDeleteOwner": "क्या आप सुनिश्चित हैं कि आप मालिकों की सूची से <bold>{{name}}</bold> को हटाना चाहते हैं?"
+            },
+            "managePermission": "अनुमतियाँ प्रबंधित करें",
+            "sendAs": "के रूप में भेजें",
+            "sendTo": "भेजें",
+            "unsavedChanges": "असहेजे परिवर्तन",
+            "exitWithoutSave": "बिना सहेजे बाहर निकलें",
+            "saveAndExit": "सहेजें और बाहर निकलें"
         }
     },
     "message": {
@@ -2039,6 +2086,16 @@
         },
         "creatCOS": {
             "cosNameInfo": "COS नाम में केवल छोटे अक्षर होने चाहिए।"
+        },
+        "features": {
+            "twoFactorAuthenticator": "टू-फ़ैक्टर ऑथेंटिकेटर",
+            "allowUsersToConfigure2FA": "उपयोगकर्ताओं को 2FA कॉन्फ़िगर करने की अनुमति दें",
+            "allowUsersToConfigure2FAInfo": "उपयोगकर्ता अपने प्रोफ़ाइल सेटिंग्स से One-Time Password (OTP) सेट अप और प्रबंधित कर सकते हैं।",
+            "enforceOnUntrustedNetworks": "अविश्वसनीय नेटवर्क पर लागू करें",
+            "twoFactorAuthSetupEnforcement": "Two-Factor ऑथेंटिकेटर सेटअप प्रवर्तन",
+            "allowSetupDeferralDuringGracePeriod": "ग्रेस अवधि के दौरान सेटअप स्थगन की अनुमति दें",
+            "allowSetupDeferralDuringGracePeriodInfo": "उपयोगकर्ता सीमित समय के लिए इस सेटअप प्रक्रिया को छोड़ सकते हैं। सेटअप पूरा होने या छूट अवधि समाप्त होने तक प्रत्येक लॉगिन पर यह संदेश फिर से दिखाई देगा।",
+            "gracePeriodExpirationDate": "ग्रेस अवधि समाप्ति तिथि सेट करें"
         }
     },
     "accountDetails": {
@@ -3004,6 +3061,16 @@
         }
     },
     "banner": {
-        "maintenance-expired-description": "रखरखाव समाप्त हो गया।"
+        "maintenance-expired-description": "रखरखाव समाप्त हो गया।",
+        "maintenance-expired-label": "आपका मेंटेनेंस Carbonio संस्करणों का समर्थन {{maxCarbonioVersion}} तक करता है। स्थापित संस्करण: {{carbonioVersion}}।  \nसेवा व्यवधान से बचने के लिए {{maxCarbonioVersion}} से आगे अपग्रेड न करें।  \nअपडेट प्राप्त करने के लिए, कृपया अपने लाइसेंस प्रदाता से संपर्क कर मेंटेनेंस नवीनीकृत करें।  \nअंतिम लाइसेंस अपडेट: {{updateTime}}",
+        "maintenance-expiring-description": "रखरखाव समाप्ति {{maintenanceEndDate}} को।",
+        "maintenance-expiring-label": "अपडेट प्राप्त करने के लिए नवीनीकरण करें।  \nआपका मेंटेनेंस Carbonio {{maxCarbonioVersion}} तक अपग्रेड को सपोर्ट करता है।  \nकृपया अपने लाइसेंसिंग प्रोवाइडर से संपर्क करके मेंटेनेंस नवीनीकरण की योजना बनाएं।  \nअंतिम लाइसेंस अपडेट: {{updateTime}}",
+        "maintenance-invalid-description": "आपका रखरखाव Carbonio संस्करण {{carbonioVersion}} को समर्थन नहीं देता।",
+        "maintenance-invalid-label": "अधिकतम समर्थित संस्करण: {{maxCarbonioVersion}}. कृपया अपडेट या रखरखाव नवीनीकरण के लिए अपने लाइसेंसिंग प्रदाता से संपर्क करें। अंतिम लाइसेंस अपडेट: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "अपडेट प्राप्त करने के लिए नवीनीकरण करें।  \nआपकी मेंटेनेंस **कार्बोनियो नॉट डिफाइंड** तक अपग्रेड का समर्थन करती है।  \nकृपया अपने लाइसेंसिंग प्रदाता से संपर्क कर मेंटेनेंस नवीनीकरण की योजना बनाएँ।  \nअंतिम लाइसेंस अपडेट: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "आपकी मेंटेनेंस नॉट डिफाइंड तक के कार्बोनियो संस्करणों का समर्थन करती है। इंस्टॉल किया गया संस्करण: {{carbonioVersion}}।\nसेवा में बाधा से बचने के लिए **नॉट डिफाइंड** से आगे अपग्रेड न करें।\nअपडेट प्राप्त करना जारी रखने के लिए, अपनी मेंटेनेंस का नवीनीकरण कराने हेतु अपने लाइसेंस प्रदाता से संपर्क करें।\nअंतिम लाइसेंस अपडेट: {{updateTime}}"
+    },
+    "tooltip": {
+        "add_virtual_host": "इसे जोड़ने के लिए एक मान्य **वर्चुअल होस्ट नाम** दर्ज करें।"
     }
 }
