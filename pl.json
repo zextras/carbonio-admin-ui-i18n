@@ -477,7 +477,10 @@
         },
         "editAccount": {
             "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
-            "otpSentSuccessfully": "Hasło jednorazowe zostało wysłane"
+            "otpSentSuccessfully": "Hasło jednorazowe zostało wysłane",
+            "yesRestoreOtpAnyway": "TAK, PRZYWRÓĆ MIMO TO",
+            "restoreOtpInfo": "Przed kontynuowaniem, sprawdź czy użytkownik o to prosił. Jeśli podejrzewasz nieuprawnioną próbę dostępu, nie przywracaj",
+            "restoreOtpQuestion": "Czy na pewno chcesz kontynuować?"
         },
         "mailingList": {
             "canReceive": "Może otrzymywać",
@@ -1814,7 +1817,8 @@
         "certificate_request_success": "Przetwarzanie. O wynikach powiadomieni zostaną odbiorcy globalni i odbiorcy z domeny",
         "dismiss": "ZAMKNIJ",
         "generate": "WYGENERUJ",
-        "certificate_available_after_proxy_restart": "Certyfikat będzie dostępny, gdy proxy zostanie zrestartowane"
+        "certificate_available_after_proxy_restart": "Certyfikat będzie dostępny, gdy proxy zostanie zrestartowane",
+        "otp_restored_successfully": "Hasło jednorazowe zostało przywrócone"
     },
     "message": {
         "snackbar": {
