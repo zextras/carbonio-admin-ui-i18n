@@ -250,7 +250,10 @@
         },
         "editAccount": {
             "otpSentSuccessfully": "L'OTP è stato inviato con successo",
-            "invalidaEmailError": "Uno o più indirizzi email non sono validi."
+            "invalidaEmailError": "Uno o più indirizzi email non sono validi.",
+            "yesRestoreOtpAnyway": "SÌ, RIPRISTINA COMUNQUE",
+            "restoreOtpInfo": "Prima di procedere, verifica che sia stato l'utente a richiederlo. Se sospetti un attacco non autorizzato, non eseguire il ripristino",
+            "restoreOtpQuestion": "Sei sicuro di voler procedere?"
         },
         "mailingList": {
             "canReceive": "Può ricevere",
@@ -1588,7 +1591,8 @@
         "restart_jail": "Riavvio blocco",
         "utility_view": "Visualizzazione utility di test 1",
         "utility_view2": "Visualizzazione utility di test 2",
-        "certificate_request_success": "In elaborazione. I risultati saranno notificati ai destinatari globali e di dominio"
+        "certificate_request_success": "In elaborazione. I risultati saranno notificati ai destinatari globali e di dominio",
+        "otp_restored_successfully": "L'OTP è stato ripristinato con successo"
     },
     "message": {
         "snackbar": {
