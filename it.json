@@ -1589,8 +1589,8 @@
         "no_virtual_hosts": "Aggiungi almeno un Virtual Host",
         "certificate_available_after_proxy_restart": "Il certificato sarà disponibile una volta che il Proxy verrà riavviato",
         "restart_jail": "Riavvio blocco",
-        "utility_view": "Visualizzazione utility di test 1",
-        "utility_view2": "Visualizzazione utility di test 2",
+        "utility_view": "Vista utilità di test 1",
+        "utility_view2": "Vista utility di test 2",
         "certificate_request_success": "In elaborazione. I risultati saranno notificati ai destinatari globali e di dominio",
         "otp_restored_successfully": "L'OTP è stato ripristinato con successo"
     },
@@ -2373,7 +2373,7 @@
         "included_in_backup": "Incluso nel Backup",
         "hidden_in_gal": "Nascondi dalla GAL",
         "ask_read_receipts": "Consenti all'utente di richiedere una ricevuta di lettura",
-        "where_do_we_store_it": "Dove lo archiviamo?"
+        "where_do_we_store_it": "Dove lo memorizziamo?"
     },
     "connection": {
         "access_key": "Chiave d'Accesso",
@@ -2790,7 +2790,8 @@
             "custom_max_size_mail_message": "Dimensione massima delle email personalizzata (MB)",
             "max_size_for_mail_messages": "Dimensione massima per le email (MB)",
             "value_0_disables_email_sending": "Il valore 0 disabilita l'invio delle email: inserisci un valore maggiore di 0"
-        }
+        },
+        "smtpd_sender_login_maps": "Mappe login mittente Smtpd"
     },
     "mat": {
         "add_here_any_blocked_extension": "Aggiungi qui qualsiasi estensione bloccata"
