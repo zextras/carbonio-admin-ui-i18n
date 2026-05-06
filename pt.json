@@ -1110,7 +1110,6 @@
         "total_acc_rights_with_delete_distribution_list_helper_text": "Esta lista tem <bold>{{totalAccRights}}</bold> contas compartilhadas. <br /> Se você a excluir, todos os compartilhamentos serão perdidos.",
         "true": "Verdadeiro",
         "use_https_protocol_message": "Você precisa usar o protocolo HTTPS",
-        "user_agent": "",
         "volume_definition": "DEFINIÇÃO",
         "will_be_centralized_in_helptext": "Será centralizado em",
         "wipe_device_factory_settings": "Redefinir dispositivo para a configuração original",
