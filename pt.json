@@ -2792,7 +2792,7 @@
         }
     },
     "search": {
-        "app": "Busca",
+        "app": "Pesquisar",
         "module": "Módulo",
         "active_input_label": "Separe as palavras-chave pressionando vírgula ou espaço",
         "clear": "Limpar caixa de pesquisa",
@@ -2849,7 +2849,7 @@
         "enable_privacy_setting": "Ativar configurações de privacidade para o envio de feedback"
     },
     "share": {
-        "is_contained_in": "Na pasta"
+        "is_contained_in": "Está contido em"
     },
     "passwords_recovery_settings": {
         "title": "Configurações de recuperação de Senha"
