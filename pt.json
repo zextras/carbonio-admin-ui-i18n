@@ -357,7 +357,15 @@
             "type": "Tipo",
             "valid_until": "Válida até",
             "provider": "Provedor",
-            "refresh_subscription_last_check": "Recarregar subscrição (última verificação)"
+            "refresh_subscription_last_check": "Recarregar subscrição (última verificação)",
+            "date_start": "Data de início",
+            "last_validation_check": "Última verificação de validação",
+            "maintenance_end_date": "Data de término da manutenção",
+            "next_validation_deadline": "Próximo prazo de validação",
+            "date_end": "Data de término",
+            "last_validation_check_tooltip": "Esta data representa o último dia em que a licença foi validada pelo Zextras Subscription Service.\n\nComo esta é uma assinatura Pay Per Use (PPU), o sistema envia automaticamente os dados de uso diário para o Zextras Subscription Service. Nenhuma ação do usuário é necessária enquanto a comunicação estiver funcionando corretamente. Se o sistema não conseguir entrar em contato com o serviço, será aplicado um período de carência de 7 dias. Esse período de carência é renovado automaticamente sempre que o contato com o Zextras Subscription Service for realizado com sucesso.",
+            "next_validation_deadline_tooltip": "Esta data representa o último dia em que a licença permanecerá totalmente funcional caso os dados de uso não sejam enviados ao Zextras Subscription Service.\n\nComo esta é uma assinatura Pay Per Use (PPU), o sistema envia automaticamente os dados de uso diário para o Zextras Subscription Service. Nenhuma ação do usuário é necessária enquanto a comunicação estiver funcionando corretamente. Se o sistema não conseguir entrar em contato com o serviço, será aplicado um período de carência de 7 dias. Esse período de carência é renovado automaticamente sempre que o contato com o Zextras Subscription Service for realizado com sucesso.",
+            "renew": "RENOVAR"
         }
     },
     "domain": {
@@ -1834,7 +1842,10 @@
         "backup_is_enable_at_the_startup": "O backup é ativado na inicialização",
         "backup_is_enabled_at_startup": "O backup é ativado na inicialização",
         "initialising_backup_check_your_notifications_for_updates": "INICIALIZANDO BACKUP...VERIFIQUE AS NOTIFICAÇÕES PARA VER AS ATUALIZAÇÕES",
-        "local_volume_reload_if_you_changed_this_value": "Volume local (recarregar em caso de alteração)"
+        "local_volume_reload_if_you_changed_this_value": "Volume local (recarregar em caso de alteração)",
+        "config": {
+            "scheduleBackupPurge": "Agendar limpeza de backup (Backup Purge)"
+        }
     },
     "cos": {
         "calendar_options": "Opções de calendário",
