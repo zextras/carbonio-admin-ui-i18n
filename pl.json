@@ -473,7 +473,9 @@
             "enforceOnUntrustedNetworks": "Wymuszaj w niezaufanych sieciach",
             "allowSetupDeferralDuringGracePeriod": "Zezwalaj na odroczenie konfiguracji podczas okresu odroczenia",
             "allowSetupDeferralDuringGracePeriodInfo": "Użytkownicy mogą pomijać kreator przez ograniczony czas. Komunikat będzie pojawiał się ponownie przy każdym logowaniu dopóki konfiguracja nie zostanie ukończona lub do końca okresu odroczenia.",
-            "gracePeriodExpirationDate": "Ustaw koniec okresu odroczenia "
+            "gracePeriodExpirationDate": "Ustaw koniec okresu odroczenia ",
+            "allowSetupFromUntrustedNetworks": "Zezwalaj na konfigurację uwierzytelniania dwuetapowego z niezaufanych sieci",
+            "allowSetupFromUntrustedNetworksInfo": "Pozwala użytkownikom bez hasła jednorazowego stworzyć uwierzytelnianie dwuetapowe przy zalogowaniu się z niezaufanej sieci. Wyłącz tę opcję, aby blokować dostęp z niezaufanych sieci dopóki uwierzytelnianie dwuetapowe nie zostanie skonfigurowane."
         },
         "editAccount": {
             "invalidaEmailError": "Co najmniej jeden adres e-mail jest nieprawidłowy.",
@@ -2102,7 +2104,9 @@
             "twoFactorAuthSetupEnforcement": "Wymuszanie konfiguracji uwierzytelniania dwuetapowego",
             "allowSetupDeferralDuringGracePeriod": "Zezwalaj na odroczenie konfiguracji podczas okresu odroczenia",
             "allowSetupDeferralDuringGracePeriodInfo": "Użytkownicy mogą pomijać kreator przez ograniczony czas. Komunikat będzie pojawiał się ponownie przy każdym logowaniu dopóki konfiguracja nie zostanie ukończona lub do końca okresu odroczenia.",
-            "gracePeriodExpirationDate": "Ustaw koniec okresu odroczenia"
+            "gracePeriodExpirationDate": "Ustaw koniec okresu odroczenia",
+            "allowSetupFromUntrustedNetworks": "Zezwalaj na konfigurację uwierzytelniania dwuetapowego z niezaufanych sieci",
+            "allowSetupFromUntrustedNetworksInfo": "Pozwala użytkownikom bez hasła jednorazowego stworzyć uwierzytelnianie dwuetapowe przy zalogowaniu się z niezaufanej sieci. Wyłącz tę opcję, aby blokować dostęp z niezaufanych sieci dopóki uwierzytelnianie dwuetapowe nie zostanie skonfigurowane."
         }
     },
     "locale": {
