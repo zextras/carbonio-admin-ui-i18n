@@ -246,7 +246,9 @@
             "enforceOnUntrustedNetworks": "Applica su reti non attendibili",
             "allowSetupDeferralDuringGracePeriod": "Consenti il rinvio della configurazione durante il periodo di tolleranza",
             "allowSetupDeferralDuringGracePeriodInfo": "Gli utenti possono saltare la procedura guidata per un periodo di tempo limitato. Il messaggio ricomparirà ad ogni accesso fino al completamento della configurazione o alla scadenza del periodo di tolleranza.",
-            "gracePeriodExpirationDate": "Imposta la data di scadenza del periodo di tolleranza "
+            "gracePeriodExpirationDate": "Imposta la data di scadenza del periodo di tolleranza ",
+            "allowSetupFromUntrustedNetworks": "Consenti la configurazione della 2FA da reti non attendibili",
+            "allowSetupFromUntrustedNetworksInfo": "Consente agli utenti sprovvisti di codice OTP di completare la procedura guidata di configurazione della 2FA al momento dell'accesso da reti non attendibili. Disattiva questa opzione per bloccare l'accesso da reti non attendibili finché la 2FA non è stata configurata."
         },
         "editAccount": {
             "otpSentSuccessfully": "L'OTP è stato inviato con successo",
@@ -2116,7 +2118,9 @@
             "twoFactorAuthSetupEnforcement": "Abilita l'obbligo di configurazione dell'autenticazione a due fattori",
             "allowSetupDeferralDuringGracePeriod": "Consentire il rinvio della configurazione durante il periodo di tolleranza",
             "allowSetupDeferralDuringGracePeriodInfo": "Gli utenti possono saltare la procedura guidata per un periodo di tempo limitato. Il messaggio ricomparirà ad ogni accesso fino al completamento della configurazione o alla scadenza del periodo di tolleranza.",
-            "gracePeriodExpirationDate": "Imposta la data di scadenza del periodo di tolleranza"
+            "gracePeriodExpirationDate": "Imposta la data di scadenza del periodo di tolleranza",
+            "allowSetupFromUntrustedNetworks": "Consenti la configurazione della 2FA da reti non attendibili",
+            "allowSetupFromUntrustedNetworksInfo": "Consente agli utenti sprovvisti di codice OTP di completare la procedura guidata di configurazione della 2FA al momento dell'accesso da reti non attendibili. Disattiva questa opzione per bloccare l'accesso da reti non attendibili finché la 2FA non è stata configurata."
         }
     },
     "accountDetails": {
