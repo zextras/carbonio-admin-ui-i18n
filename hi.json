@@ -1289,14 +1289,15 @@
         "help_and_documentation": "सहायता और प्रलेखन",
         "certificate_authority": "प्रमाणपत्र प्राधिकरण",
         "upload_certificate": "प्रमाणपत्र अपलोड करें",
-        "generate_certificate": "सर्टिफिकेट जनरेट करें",
+        "generate_certificate": "प्रमाणपत्र उत्पन्न करें",
         "no_certificate_to_remove": "हटाने के लिए कोई प्रमाणपत्र नहीं है",
         "no_certificate_to_download": "डाउनलोड के लिए कोई प्रमाणपत्र नहीं है",
         "no_virtual_hosts": "आपको कम से कम एक वर्चुअल होस्ट जोड़ना होगा",
         "certificate_request_success": "प्रसंस्करण जारी। परिणाम वैश्विक एवं डोमेन प्राप्तकर्ताओं को सूचित किए जाएंगे।",
         "dismiss": "बंद करें",
         "generate": "जनरेट",
-        "certificate_available_after_proxy_restart": "प्रॉक्सी शुरू कर देने के बाद सर्टिफिकेट उपलब्ध होगा"
+        "certificate_available_after_proxy_restart": "प्रॉक्सी शुरू कर देने के बाद सर्टिफिकेट उपलब्ध होगा",
+        "otp_restored_successfully": "OTP सफलतापूर्वक पुनर्स्थापित किया गया।"
     },
     "timezone": {
         "asia_tomsk": "{{value}} तोम्स्क",
@@ -1665,7 +1666,7 @@
             "last_validation_check_tooltip": "यह दिनांक ज़ेक्सट्रास सदस्यता सेवा द्वारा लाइसेंस के मान्य होने के अंतिम दिन का प्रतिनिधित्व करता है।\n\nचूंकि यह एक पे पर यूज़ (पीपीयू) सदस्यता है, सिस्टम स्वचालित रूप से दैनिक उपयोग डेटा को ज़ेक्सट्रास सदस्यता सेवा में रिपोर्ट करता है। जब तक संचार सही ढंग से काम कर रहा है, तब तक किसी उपयोगकर्ता क्रिया की आवश्यकता नहीं होती है। यदि सिस्टम सेवा से संपर्क करने में असमर्थ होता है, तो 7 दिनों की रियायती अवधि लागू की जाती है। हर बार जब ज़ेक्स्ट्रास सदस्यता सेवा से सफलतापूर्वक संपर्क किया जाता है, यह रियायती अवधि अपने आप नवीनीकृत हो जाती है।",
             "next_validation_deadline_tooltip": "यह तिथि उस अंतिम दिन का प्रतिनिधित्व करती है जब लाइसेंस पूरी तरह से कार्यात्मक रहेगा यदि उपयोग डेटा ज़ेक्स्ट्रास सदस्यता सेवा को नहीं भेजा जाता है।\n\nचूंकि यह एक पे पेर यूज़ (पीपीयू) सदस्यता है, सिस्टम स्वचालित रूप से दैनिक उपयोग डेटा को ज़ेक्स्ट्रास सदस्यता सेवा को रिपोर्ट करता है। जब तक संचार सही ढंग से काम कर रहा है, उपयोगकर्ता द्वारा कोई कार्रवाई करने की आवश्यकता नहीं है। यदि सिस्टम सेवा से संपर्क करने में असमर्थ होता है, तो 7 दिन की ग्रेस अवधि लागू होती है। यह ग्रेस अवधि हर बार जब सिस्टम सफलतापूर्वक ज़ेक्स्ट्रास सदस्यता सेवा से संपर्क करता है, स्वतः नवीनीकृत हो जाती है।",
             "renew": "नवीनीकरण",
-            "maxCarbonioVersion": "Max Carbonio संस्करण",
+            "maxCarbonioVersion": "अधिकतम Carbonio संस्करण",
             "updateTime": "अपडेट समय"
         }
     },
@@ -1748,7 +1749,7 @@
             "allowSearchUserFromAllDomains": "सभी डोमेन में उपयोगकर्ताओं की जानकारी खोजने की अनुमति दें"
         },
         "accounts": {
-            "allowUsersToConfigure2FAInfo": "उपयोगकर्ता अपनी प्रोफ़ाइल सेटिंग्स से वन-टाइम पासवर्ड (ओटीपी) सेट अप और प्रबंधित करने में सक्षम होंगे।",
+            "allowUsersToConfigure2FAInfo": "उपयोगकर्ता अपनी प्रोफ़ाइल सेटिंग्स से वन-टाइम पासवर्ड (OTP) सेट अप और प्रबंधित करने में सक्षम होंगे।",
             "editAccount": {
                 "externalldap": "बाहरी LDAP",
                 "externalldapReferenceForAuthentication": "बाहरी LDAP संदर्भ प्रमाणीकरण के लिए",
@@ -1763,8 +1764,10 @@
             "twoFactorAuthSetupEnforcement": "Two-Factor ऑथेंटिकेटर सेटअप प्रवर्तन",
             "enforceOnUntrustedNetworks": "अविश्वसनीय नेटवर्क पर लागू करें",
             "allowSetupDeferralDuringGracePeriod": "ग्रेस अवधि के दौरान सेटअप स्थगन की अनुमति दें",
-            "allowSetupDeferralDuringGracePeriodInfo": "उपयोगकर्ता सीमित समय के लिए wizard को स्किप कर सकते हैं। सेटअप पूरा होने या grace period समाप्त होने तक हर login पर यह prompt फिर दिखेगा।",
-            "gracePeriodExpirationDate": "ग्रेस अवधि समाप्ति तिथि सेट करें "
+            "allowSetupDeferralDuringGracePeriodInfo": "उपयोगकर्ता सीमित समय के लिए इस सेटअप प्रक्रिया को छोड़ सकते हैं। सेटअप पूरा होने या छूट अवधि समाप्त होने तक प्रत्येक लॉगिन पर यह संदेश फिर से दिखाई देगा।",
+            "gracePeriodExpirationDate": "ग्रेस अवधि समाप्ति तिथि सेट करें ",
+            "allowSetupFromUntrustedNetworks": "अविश्वसनीय नेटवर्क से 2FA सेटअप की अनुमति दें",
+            "allowSetupFromUntrustedNetworksInfo": "अविश्वसनीय नेटवर्क से साइन‑इन पर OTP‑बिना उपयोगकर्ताओं को 2FA सेटअप विज़ार्ड पूरा करने देता है। 2FA कॉन्फ़िगर होने तक अनविश्वसनीय नेटवर्क से पहुँच को ब्लॉक करने हेतु इस विकल्प को निष्क्रिय करें।"
         },
         "authentication": {
             "search_bind_password": "बाइंड पासवर्ड खोज",
@@ -1776,7 +1779,10 @@
         },
         "editAccount": {
             "invalidaEmailError": "एक या एक से अधिक ईमेल पते अमान्य हैं।",
-            "otpSentSuccessfully": "ओटीपी सफलतापूर्वक भेज दिया गया है"
+            "otpSentSuccessfully": "ओटीपी सफलतापूर्वक भेज दिया गया है",
+            "yesRestoreOtpAnyway": "हां, फिर भी पुनर्स्थापित करें",
+            "restoreOtpInfo": "आगे बढ़ने से पहले सुनिश्चित करें कि उपयोगकर्ता ने स्वयं इसका अनुरोध किया है। यदि आपको किसी अनधिकृत हमले का संदेह हो, तो पुनर्स्थापना न करें।",
+            "restoreOtpQuestion": "क्या आप वाकई में आगे बढ़ना चाहते हैं?"
         },
         "mailingList": {
             "canReceive": "प्राप्त कर सकता है",
@@ -1802,7 +1808,7 @@
             "addOwners": "मालिक जोड़ें",
             "ownersList": "मालिकों की सूची",
             "owners": {
-                "removeOwner": "स्वामी निकालें",
+                "removeOwner": "मालिक हटाएँ",
                 "areYouSureDeleteOwner": "क्या आप सुनिश्चित हैं कि आप मालिकों की सूची से <bold>{{name}}</bold> को हटाना चाहते हैं?"
             },
             "managePermission": "अनुमतियाँ प्रबंधित करें",
@@ -2095,7 +2101,9 @@
             "twoFactorAuthSetupEnforcement": "Two-Factor ऑथेंटिकेटर सेटअप प्रवर्तन",
             "allowSetupDeferralDuringGracePeriod": "ग्रेस अवधि के दौरान सेटअप स्थगन की अनुमति दें",
             "allowSetupDeferralDuringGracePeriodInfo": "उपयोगकर्ता सीमित समय के लिए इस सेटअप प्रक्रिया को छोड़ सकते हैं। सेटअप पूरा होने या छूट अवधि समाप्त होने तक प्रत्येक लॉगिन पर यह संदेश फिर से दिखाई देगा।",
-            "gracePeriodExpirationDate": "ग्रेस अवधि समाप्ति तिथि सेट करें"
+            "gracePeriodExpirationDate": "ग्रेस अवधि समाप्ति तिथि सेट करें",
+            "allowSetupFromUntrustedNetworks": "अविश्वसनीय नेटवर्क से 2FA सेटअप की अनुमति दें",
+            "allowSetupFromUntrustedNetworksInfo": "अविश्वसनीय नेटवर्क से साइन‑इन पर OTP‑बिना उपयोगकर्ताओं को 2FA सेटअप विज़ार्ड पूरा करने देता है। 2FA कॉन्फ़िगर होने तक अनविश्वसनीय नेटवर्क से पहुँच को ब्लॉक करने हेतु इस विकल्प को निष्क्रिय करें।"
         }
     },
     "accountDetails": {
@@ -2753,7 +2761,7 @@
         "lmtp_threads": "LMTP थ्रेड्स (मान)",
         "log_level_for_amavis": "Amavis के लिए लॉग स्तर",
         "logging": "लॉगिंग",
-        "mail_queue_flush_successfully": "Mail queue फ़्लश सफलतापूर्वक",
+        "mail_queue_flush_successfully": "मेल कतार सफलतापूर्वक साफ़ कर दी गई है।",
         "max_antivirus_threads": "अधिकतम एंटीवायरस थ्रेड्स (value)",
         "max_size__for_mail_messages": "मेल संदेशों के लिए अधिकतम आकार (MB, 0 = \"no limit\")",
         "milter_threads": "MILTER थ्रेड्स (value)",
@@ -3062,7 +3070,7 @@
     },
     "banner": {
         "maintenance-expired-description": "रखरखाव समाप्त हो गया।",
-        "maintenance-expired-label": "आपका मेंटेनेंस Carbonio संस्करणों का समर्थन {{maxCarbonioVersion}} तक करता है। स्थापित संस्करण: {{carbonioVersion}}।  \nसेवा व्यवधान से बचने के लिए {{maxCarbonioVersion}} से आगे अपग्रेड न करें।  \nअपडेट प्राप्त करने के लिए, कृपया अपने लाइसेंस प्रदाता से संपर्क कर मेंटेनेंस नवीनीकृत करें।  \nअंतिम लाइसेंस अपडेट: {{updateTime}}",
+        "maintenance-expired-label": "आपका मेंटेनेंस Carbonio के {{maxCarbonioVersion}} संस्करण तक समर्थित है। स्थापित संस्करण: {{carbonioVersion}}।\nसेवा में रुकावट से बचने के लिए {{maxCarbonioVersion}} से आगे अपग्रेड न करें।\nअपडेट प्राप्त करना जारी रखने के लिए, कृपया अपने लाइसेंस प्रदाता से संपर्क करें और अपना मेंटेनेंस नवीनीकृत करें।\nअंतिम लाइसेंस अपडेट: {{updateTime}}",
         "maintenance-expiring-description": "रखरखाव समाप्ति {{maintenanceEndDate}} को।",
         "maintenance-expiring-label": "अपडेट प्राप्त करने के लिए नवीनीकरण करें।  \nआपका मेंटेनेंस Carbonio {{maxCarbonioVersion}} तक अपग्रेड को सपोर्ट करता है।  \nकृपया अपने लाइसेंसिंग प्रोवाइडर से संपर्क करके मेंटेनेंस नवीनीकरण की योजना बनाएं।  \nअंतिम लाइसेंस अपडेट: {{updateTime}}",
         "maintenance-invalid-description": "आपका रखरखाव Carbonio संस्करण {{carbonioVersion}} को समर्थन नहीं देता।",
