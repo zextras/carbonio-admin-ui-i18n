@@ -365,7 +365,8 @@
             "date_end": "Data de término",
             "last_validation_check_tooltip": "Esta data representa o último dia em que a licença foi validada pelo Zextras Subscription Service.\n\nComo esta é uma assinatura Pay Per Use (PPU), o sistema envia automaticamente os dados de uso diário para o Zextras Subscription Service. Nenhuma ação do usuário é necessária enquanto a comunicação estiver funcionando corretamente. Se o sistema não conseguir entrar em contato com o serviço, será aplicado um período de carência de 7 dias. Esse período de carência é renovado automaticamente sempre que o contato com o Zextras Subscription Service for realizado com sucesso.",
             "next_validation_deadline_tooltip": "Esta data representa o último dia em que a licença permanecerá totalmente funcional caso os dados de uso não sejam enviados ao Zextras Subscription Service.\n\nComo esta é uma assinatura Pay Per Use (PPU), o sistema envia automaticamente os dados de uso diário para o Zextras Subscription Service. Nenhuma ação do usuário é necessária enquanto a comunicação estiver funcionando corretamente. Se o sistema não conseguir entrar em contato com o serviço, será aplicado um período de carência de 7 dias. Esse período de carência é renovado automaticamente sempre que o contato com o Zextras Subscription Service for realizado com sucesso.",
-            "renew": "RENOVAR"
+            "renew": "RENOVAR",
+            "maxCarbonioVersion": "Versão máxima do Carbonio"
         }
     },
     "domain": {
@@ -445,6 +446,36 @@
         "mail_space_quota_threshold_warning": "Aviso de limite de cota de espaço de e-mail (%)",
         "globalSettings": {
             "allowSearchUserFromAllDomains": "Permitir a busca de informações de usuários em todos os domínios"
+        },
+        "distributionList": {
+            "sendAs": "ENVIAR COMO",
+            "sendTo": "ENVIAR PARA",
+            "unsavedChanges": "Alterações não salvas",
+            "exitWithoutSave": "SAIR SEM SALVAR",
+            "saveAndExit": "SALVAR E SAIR"
+        },
+        "accounts": {
+            "allowSetupDeferralDuringGracePeriod": "Permitir o adiamento da configuração durante o período de carência",
+            "allowSetupDeferralDuringGracePeriodInfo": "Os usuários podem pular o assistente por um tempo limitado. O aviso reaparecerá a cada login até que a configuração seja concluída ou o período de carência expire.",
+            "gracePeriodExpirationDate": "Definir data de expiração do período de carência ",
+            "editAccount": {
+                "externalldap": "LDAP externo",
+                "externalldapReferenceForAuthentication": "Referência LDAP externa para autenticação",
+                "allowTheUserToAskForAReadReceipt": "Permitir que o usuário solicite uma confirmação de leitura"
+            }
+        },
+        "editAccount": {
+            "yesRestoreOtpAnyway": "SIM, RESTAURAR MESMO ASSIM",
+            "restoreOtpInfo": "Antes de prosseguir, verifique se o usuário de fato solicitou isso. Se suspeitar de um ataque não autorizado, não restaure",
+            "restoreOtpQuestion": "Tem certeza de que deseja prosseguir?",
+            "invalidaEmailError": "Um ou mais endereços de e-mail são inválidos.",
+            "otpSentSuccessfully": "O OTP foi enviado com sucesso"
+        },
+        "authentication": {
+            "carbonio_info": "Este método permite a utilização de LDAP local, AD/LDAP externo, senha de credenciais e SAML."
+        },
+        "mailSpaceQuotaThresholdError": {
+            "description": "O limite da cota de espaço de e-mail deve estar entre 0 e 100"
         }
     },
     "label": {
@@ -640,7 +671,7 @@
         "virtual_hosts": "Hosts virtuais",
         "volumes": "Volumes",
         "you_are_deleting": "Você esta excluindo a COS \"{{cosname}}\"",
-        "yes_delete": "Aceitar",
+        "yes_delete": "Sim, excluir",
         "verify_error": "{{name}}",
         "verify_connector_fail": "A VERIFICAÇÃO FALHOU",
         "uuid": "uuid",
@@ -712,7 +743,7 @@
         "bucket_done_button": "Concluído",
         "bucket_need_help_button": "Precisa de ajuda?",
         "class_of_service": "Classe de Serviço",
-        "owners": "Proprietários",
+        "owners": "PROPRIETÁRIOS",
         "password": "Senha",
         "require_list_owner_approval": "Solicitar aprovação do proprietário da lista",
         "resource": "Recurso",
@@ -1565,7 +1596,7 @@
         "delegates_domain_admins": "Administradores de domínios delegados",
         "deliver": "ENTREGAR",
         "dont_save_it": "Não salvar",
-        "only_allow_outbound_disclaimers": "Permitir isenção de responsabilidade apenas para envío externo",
+        "only_allow_outbound_disclaimers": "Anexe o aviso legal apenas aos e-mails enviados",
         "reason": "Motivo",
         "receiver": "Receptor",
         "retention_period": "Período de retenção (valor)",
@@ -1726,7 +1757,27 @@
         "files_quota_used_gb": "Cota de Arquivos Utilizada (GB)",
         "mails_quota_used_gb": "Cota de Emails Utilizada (GB)",
         "mails_quota_used_mb": "Cota de Emails Utilizada (MB)",
-        "files_quota_mb": "Cota de Arquivos (MB)"
+        "files_quota_mb": "Cota de Arquivos (MB)",
+        "one_time_password_management": "Gerenciamento de senhas de uso único (OTP)",
+        "enable_wsc": "Ativar Chat",
+        "allow_restore_message": "Permitir que o usuário restaure mensagens",
+        "add_appointments_when_invited": "Adicionar automaticamente os compromissos quando o usuário for convidado",
+        "wsc": "Chat",
+        "backup_enabled": "Ativar / Desativar Backup",
+        "help_and_documentation": "Ajuda & Documentação",
+        "certificate_authority": "Autoridade Certificadora (CA)",
+        "upload_certificate": "CARREGAR CERTIFICADO",
+        "generate_certificate": "GERAR CERTIFICADO",
+        "no_certificate_to_remove": "Não há certificado para remover",
+        "no_certificate_to_download": "Não há certificado para baixar",
+        "no_virtual_hosts": "Você precisa adicionar pelo menos um Virtual Host",
+        "certificate_request_success": "Processando. Os resultados serão enviados aos destinatários globais e do domínio",
+        "dismiss": "DISPENSAR",
+        "generate": "GERAR",
+        "certificate_available_after_proxy_restart": "O certificado estará disponível assim que o proxy seja reiniciado",
+        "otp_restored_successfully": "OTP foi restaurado com sucesso",
+        "legal_hold": "Retenção Legal",
+        "two_factor_auth": "Segundo Fator de Autenticação"
     },
     "message": {
         "snackbar": {
@@ -2010,7 +2061,18 @@
         "domains_that_use_this_cos": "Domínios que usam este COS",
         "enable_new_mail_toast_notification": "Ativar Notificação de Novos E-mails",
         "upload_max_size_per_file": "Tamanho máximo (bytes) permitido para cada anexo",
-        "unlimited": "Ilimitado"
+        "unlimited": "Ilimitado",
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "Permitir que o usuário solicite uma confirmação de leitura"
+        },
+        "creatCOS": {
+            "cosNameInfo": "O nome COS deve conter apenas letras minúsculas."
+        },
+        "features": {
+            "allowSetupDeferralDuringGracePeriod": "Permitir o adiamento da configuração durante o período de carência",
+            "allowSetupDeferralDuringGracePeriodInfo": "Os usuários podem pular o assistente por um tempo limitado. O aviso reaparecerá a cada login até que a configuração seja concluída ou o período de carência expire.",
+            "gracePeriodExpirationDate": "Defina a data de expiração do período de carência"
+        }
     },
     "welcome_to_carbonio": "Bem-vindo {{adminName}} ao Carbonio {{carbonioVersion}}!",
     "select_section_from_left_menu": "Favor selecionar uma seção do menu da esquerda",
@@ -2679,7 +2741,14 @@
         "space_not_allowed_in_antivirus_mirror": "Espaço não permitido no mirror do Antivírus",
         "requeue": "Reenfileirar",
         "antispam_and_antivirus": "Antispam & Antivírus",
-        "block_spam_tolerance": "Tolerância de Bloqueio de Spam"
+        "block_spam_tolerance": "Tolerância de Bloqueio de Spam",
+        "advanced": {
+            "mail_messages_size": "Tamanho das mensagens de e-mail",
+            "no_size_limit_for_mail_messages": "Sem limite de tamanho para mensagens de e-mail",
+            "custom_max_size_mail_message": "Tamanho máximo personalizado para mensagens de e-mail (MB)",
+            "max_size_for_mail_messages": "Tamanho máximo para mensagens de e-mail (MB)",
+            "value_0_disables_email_sending": "O valor 0 desativa o envio de e-mails: insira um valor maior que 0"
+        }
     },
     "mat": {
         "add_here_any_blocked_extension": "Adicionar extensões bloqueadas"
@@ -2873,6 +2942,94 @@
         "help_center": "Central de ajuda"
     },
     "button": {
-        "refresh_page": "ATUALIZAR"
+        "refresh_page": "ATUALIZAR",
+        "view_subscription_details": "VER DETALHES DA ASSINATURA",
+        "remove_selected_items": "Remover itens selecionados"
+    },
+    "legalHold": {
+        "show_only_accounts_on_legal_hold": "Mostrar apenas contas em Retenção Legal"
+    },
+    "wsc": {
+        "section": {
+            "header": {
+                "title": {
+                    "chats": "Chats privados e em grupo",
+                    "attachments": "Compartilhamento e Anexos",
+                    "messaging": "Mensagens e Presença",
+                    "videocall": "Chamadas de vídeo",
+                    "general": "Configurações Gerais"
+                },
+                "description": {
+                    "messaging": "Gerencie a visibilidade dos chats e o status dos usuários.",
+                    "videocall": "Configure chamadas de vídeo, gravações e fundos virtuais.",
+                    "attachments": "Gerencie o compartilhamento de arquivos e os limites de anexos.",
+                    "general": "Gerenciar a ativação de funcionalidades e aplicativos principais."
+                }
+            },
+            "content": {
+                "description": {
+                    "presence": "Exibir o status online dos usuários ou o horário da última visualização.",
+                    "enableAttachments": "Ative o envio de arquivos, imagens e documentos.",
+                    "enableFeature": "Ative para permitir mensagens, bate-papos em grupo, chamadas de vídeo e compartilhamento de arquivos.",
+                    "readReceipt": "Mostrar aos remetentes quando suas mensagens foram lidas.",
+                    "deletionLimit": "Defina o limite de tempo para excluir uma mensagem enviada.",
+                    "editLimit": "Defina por quanto tempo uma mensagem pode ser editada após o envio.",
+                    "createPrivate": "Permitir que os usuários iniciem conversas individuais.",
+                    "createGroup": "Permitir que os usuários criem chats com vários participantes.",
+                    "groupPicture": "Limite o tamanho do arquivo para fotos de perfil de grupo.",
+                    "groupMembers": "Defina o número máximo de usuários por grupo.",
+                    "enableRecording": "Permitir a gravação de chamadas de áudio e vídeo.",
+                    "enableVideoCall": "Ative a funcionalidade de chamada de vídeo no recurso.",
+                    "enableVirtualBackground": "Permitir que os usuários apliquem fundos virtuais durante chamadas de vídeo.",
+                    "attachmentSize": "Defina o tamanho máximo para arquivos compartilhados em chats."
+                },
+                "select": {
+                    "deletionLimit": "Limite de tempo para exclusão de mensagens",
+                    "deletelimit": {
+                        "zero": "O usuário não pode excluir mensagens enviadas"
+                    },
+                    "timeLimit": "minuto(s) de limite de tempo",
+                    "zero": {
+                        "editLimit": "O usuário não pode editar as mensagens enviadas"
+                    }
+                },
+                "toggle": {
+                    "enableVirtualBackground": "Ativar plano de fundo virtual",
+                    "enableFeature": "Ativar Chat",
+                    "readReceipt": "Mostrar confirmações de leitura",
+                    "presence": "Mostrar o status online dos usuários",
+                    "createPrivate": "Os usuários podem iniciar novos chats privados",
+                    "createGroup": "Os usuários podem criar chats em grupo",
+                    "enableVideoCall": "Ativar chamadas de vídeo",
+                    "enableRecording": "Permitir gravação de chamadas",
+                    "enableAttachments": "Os usuários podem enviar anexos"
+                },
+                "input": {
+                    "groupMembers": "Número máximo de membros do grupo",
+                    "groupPicture": "Tamanho máximo da foto de grupo em MB",
+                    "attachmentSize": "Tamanho máximo do anexo em MB"
+                }
+            },
+            "license": {
+                "warning": "Essas configurações não podem ser alteradas porque sua licença do Chats não é válida.",
+                "error": "Erro ao obter detalhes da licença. Tente novamente mais tarde."
+            }
+        }
+    },
+    "accounts": {
+        "phoneNumber": {
+            "tooltip": "Os caracteres permitidos são espaços em branco, números e símbolos -+()/,."
+        }
+    },
+    "banner": {
+        "maintenance-expired-description": "A manutenção expirou.",
+        "maintenance-expired-label": "Sua manutenção é compatível com versões do Carbonio até {{maxCarbonioVersion}}. Versão instalada: {{carbonioVersion}}.\nNão atualize para uma versão superior a {{maxCarbonioVersion}} para evitar interrupções no serviço.\nPara continuar recebendo atualizações, entre em contato com seu provedor de licenças para renovar sua manutenção.\nÚltima atualização da licença: {{updateTime}}",
+        "maintenance-expiring-description": "A manutenção expira em {{maintenanceEndDate}}.",
+        "maintenance-expiring-label": "Renove para continuar recebendo atualizações.\nSua manutenção inclui atualizações até a versão {{maxCarbonioVersion}} do Carbonio.\nEntre em contato com seu provedor de licenciamento para planejar a renovação da sua manutenção.\nÚltima atualização da licença: {{updateTime}}",
+        "maintenance-invalid-description": "Sua manutenção não é compatível com a versão {{carbonioVersion}} do Carbonio.",
+        "maintenance-invalid-label": "Versão máxima suportada: {{maxCarbonioVersion}}.\nEntre em contato com seu fornecedor de licenças para atualizar ou renovar sua licença de manutenção.\nÚltima atualização da licença: {{updateTime}}"
+    },
+    "tooltip": {
+        "add_virtual_host": "Digite um nome de Virtual Host válido para adicioná-lo"
     }
 }
