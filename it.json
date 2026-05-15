@@ -1070,7 +1070,6 @@
         "example_lbl": "Esempio:",
         "logo_redirection_title": "Cliccando sul logo, l'utente verrà reindirizzato a…",
         "mobile_app": "App Mobile",
-        "quota": "Spazio",
         "quota_used_lbl": "Spazio utilizzato",
         "save_mails_to": "Salva Mail in",
         "sending_options": "Opzioni di invio",
@@ -1594,7 +1593,31 @@
         "utility_view": "Vista utilità di test 1",
         "utility_view2": "Vista utility di test 2",
         "certificate_request_success": "In elaborazione. I risultati saranno notificati ai destinatari globali e di dominio",
-        "otp_restored_successfully": "L'OTP è stato ripristinato con successo"
+        "otp_restored_successfully": "L'OTP è stato ripristinato con successo",
+        "accountQuotaSetting": "Impostazioni quota account",
+        "quota": {
+            "source": {
+                "cos": "Quota ereditata dalla Classe di Servizio assegnata",
+                "domain": "Quota ereditata dalle impostazioni del dominio",
+                "global": "Quota ereditata dalla configurazione globale"
+            }
+        },
+        "storage_usage": "Utilizzo spazio di archiviazione",
+        "account_quota_usage": {
+            "limited": "{{used}} di {{limit}} ({{percentage}}%)"
+        },
+        "accountQuota": {
+            "banner": {
+                "overQuota": "Questo account ha raggiunto il limite di spazio di archiviazione. Aumenta immediatamente la quota o avvisa l'utente di liberare spazio.",
+                "thresholdReached": "Questo account sta raggiungendo il limite di spazio di archiviazione. Aumenta la quota o avvisa l'utente di liberare spazio."
+            }
+        },
+        "total_quota_limit_gb": "Quota totale (GB)",
+        "unlimited_quota": "Quota illimitata",
+        "exceeds_domain_limit": "Questo valore supera il limite del dominio ({{limit}} GB). Inserisci un valore inferiore.",
+        "maximum_allowed_value": "Il valore massimo consentito è {{value}} GB. L'opzione Illimitato non è disponibile.",
+        "max_quota_per_account_in_this_domain": "Quota massima per account in questo dominio (GB)",
+        "gb": "GB"
     },
     "message": {
         "snackbar": {
@@ -2377,7 +2400,8 @@
         "included_in_backup": "Incluso nel Backup",
         "hidden_in_gal": "Nascondi dalla GAL",
         "ask_read_receipts": "Consenti all'utente di richiedere una ricevuta di lettura",
-        "where_do_we_store_it": "Dove lo memorizziamo?"
+        "where_do_we_store_it": "Dove lo memorizziamo?",
+        "unlimited": "Illimitato"
     },
     "connection": {
         "access_key": "Chiave d'Accesso",
@@ -3084,5 +3108,19 @@
     },
     "tooltip": {
         "add_virtual_host": "Scrivi il nome di un Virtual Host valido per aggiungerlo"
+    },
+    "cos_quota": {
+        "click_to_revert": "Clicca per ripristinare il valore ereditato"
+    },
+    "quota": {
+        "account_quota_usage": {
+            "unlimited": "Utilizzati {{used}} di spazio di archiviazione<bold>Illimitato</bold>"
+        },
+        "available": "Disponibile",
+        "module": {
+            "files": "Files",
+            "mailbox": "Mail, Calendari, Contatti",
+            "wsc": "Chats"
+        }
     }
 }
