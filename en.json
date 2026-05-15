@@ -2199,8 +2199,7 @@
         "generate": "GENERATE",
         "certificate_available_after_proxy_restart": "The certificate will be available once the Proxy is restarted",
         "otp_restored_successfully": "OTP has been restored successfully",
-        "accountQuotaSetting": "Account Quota Settings",
-        "files_space_limit_gb": "Files Space Limit (GB)"
+        "accountQuotaSetting": "Account Quota Settings"
     },
     "locale": {
         "English": "English",
