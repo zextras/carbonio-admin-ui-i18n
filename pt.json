@@ -560,7 +560,7 @@
         "timezone": "Fuso horário",
         "unlimited": "Ilimitado",
         "url": "URL",
-        "delete_domain_error_msg": "Você está excluindo o domínio {{domainName}}. Tem certeza que quer continuar?",
+        "delete_domain_error_msg": "Você está excluindo o domínio {{domainName}}. Tem certeza de que quer excluir {{domainName}}?",
         "aggrigated_space_criteria": "Critério de espaço global",
         "change_save_success_msg": "A mudança foi salva com sucesso",
         "active_sync": "ActiveSync",
@@ -1090,7 +1090,7 @@
         "smime": "S/MIME",
         "specified_domain_not_exist": "O domínio especificado não existe",
         "start": "iniciar",
-        "who_needs_receive_this_email": "Insira os endereços de e-mail para envio de notificações",
+        "who_needs_receive_this_email": "Quem precisa receber este e-mail?",
         "DELETE": "EXCLUIR",
         "OTP": "Autenticação em duas etapas - Senha de uso único (OTP)",
         "advanced_lbl": "Avançado",
@@ -1308,7 +1308,6 @@
         "notification_primarybar_tooltip": "Visualizar as <bold>notificações</bold>, marcar como <bold>lidas</bold> ou <bold>copiar</bold> para compartilhá-las.",
         "operation_primarybar_tooltip": "Visualizar e gerenciar as <bold>operações, executá-las, colocá-las na fila</bold> e <bold>encerrá-las</bold>.",
         "privacy_primarybar_tooltip": "Gerenciar as configurações de <bold>privacidade</bold> para os <bold>relatórios de dados, logs de erros</bold> e <bold>pesquisas</bold>.",
-        "quota": "Cota",
         "quota_used_lbl": "Cota utilizada",
         "save_mails_to": "Salvar emails em",
         "sending_options": "Opções de envio",
@@ -1835,7 +1834,7 @@
             "our_interface_does_not_support_tablets_and_smartphones": "Nossa interface não é compatível com tablets e smartphones, o que pode levar a problemas de visualização. Use um desktop ou laptop para obter o melhor desempenho. Estamos trabalhando na compatibilidade com dispositivos móveis para o futuro. Muito obrigado."
         },
         "external_images_blocked": "As imagens externas foram bloqueadas para proteger você ante eventual spam",
-        "reload": "\tQuer recarregar o aplicativo agora para exibir o novo idioma?\nCaso contrário, o novo idioma aparecerá a próxima vez que você fizer login."
+        "reload": "\tGostaria de recarregar o aplicativo agora para exibir o novo idioma?\n(Caso contrário, o novo idioma aparecerá a próxima vez que você fizer login.)"
     },
     "commons": {
         "confirm_connection": "CONFIRMAR CONEXÃO",
@@ -2348,7 +2347,7 @@
         "right_for_selected_user_deleted_successfully": "Permissões do usuário eliminadas corretamente",
         "set_global_config": "Configuração SetGlobal",
         "inherited_value_was": "O valor herdado era",
-        "get_global_config": "GetGlobal config",
+        "get_global_config": "Config GetGlobal",
         "global_administration": "Administração global",
         "send_recipients_see_the_mail": "Enviar {{right}} (os destinatários exibirão o email do remetente {{targetEmail}})",
         "send_as_recipients": "Enviar como (os destinatários exibirão este email do remetente {{targetEmail}})",
@@ -2380,8 +2379,9 @@
         "send_full_error_data_to_zextras": "Enviar erro completo para a Zextras"
     },
     "reminder": {
-        "minute": "{{count}} minuto",
-        "minute_plural": "{{count}} minutos"
+        "minute_0": "{{count}} minuto",
+        "minute_1": "{{count}} minutos",
+        "minute_2": "{{count}} minutos"
     },
     "volume": {
         "new": {
@@ -2577,7 +2577,7 @@
             "started_at": "Iniciou às",
             "stop_operation_btn": "PARAR OPERAÇÃO",
             "submitted_at": "Enviado às",
-            "who_started_it": "Iniciado por:"
+            "who_started_it": "Quem iniciou isso?"
         },
         "operations_list_header": {
             "author": "Autor",
@@ -2868,7 +2868,7 @@
         },
         "out_of_office": {
             "labels": {
-                "start_date": "Data de inicio",
+                "start_date": "Data de Início",
                 "end_date": "Data final",
                 "all_day": "Todo o dia:",
                 "auto_reply_message": "Mensagem de resposta automática:",
@@ -2969,10 +2969,10 @@
         "success": "Agradecemos o seu feedback",
         "user_interface": "Interface de usuário",
         "write_here": "Escreva seu feedback aqui",
-        "write_here_placeholder_text": "Olá! Comece a escrever seus comentários aqui :) \n\n\nO envio será feito de forma anônima, independentemente se se tratar\nde coisas boas ou ruins",
+        "write_here_placeholder_text": "Olá! Comece a escrever seu feedback aqui :)\n\n\nEle será enviado anonimamente, então conte para nós o que fizemos bem\nou o que fizemos de errado, sem filtros",
         "send_feedback": "ENVIAR COMENTÁRIOS",
         "goto_privacy": "Ir para Privacidade",
-        "count_user_in_helper_button_text": "OK",
+        "count_user_in_helper_button_text": "SIM, CONTE COMIGO!",
         "enable_feedback": "Permitir Feedback",
         "enable_privacy_setting": "Ativar configurações de privacidade para o envio de feedback"
     },
