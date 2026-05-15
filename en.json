@@ -1697,7 +1697,13 @@
         "query_is_not_valid": "Query is not valid",
         "queue": "Queue",
         "queued": "Queued",
-        "quota": "Quota",
+        "quota": {
+            "source": {
+                "cos": "Quota inherited from the assigned Class of Service",
+                "domain": "Quota inherited from the domain settings",
+                "global": "Quota inherited from the global configuration"
+            }
+        },
         "quota_mb": "Quota (MB)",
         "quota_used": "Quota / Quota used",
         "quota_used_lbl": "Quota used",
@@ -2199,7 +2205,23 @@
         "generate": "GENERATE",
         "certificate_available_after_proxy_restart": "The certificate will be available once the Proxy is restarted",
         "otp_restored_successfully": "OTP has been restored successfully",
-        "accountQuotaSetting": "Account Quota Settings"
+        "accountQuotaSetting": "Account Quota Settings",
+        "gb": "GB",
+        "storage_usage": "Storage usage",
+        "account_quota_usage": {
+            "limited": "{{used}} of {{limit}} ({{percentage}}%)"
+        },
+        "accountQuota": {
+            "banner": {
+                "overQuota": "This account has reached its storage limit. Increase storage quota immediately or notify the user to free up space.",
+                "thresholdReached": "This account is approaching its storage limit. Increase storage quota or notify the user to free up space."
+            }
+        },
+        "total_quota_limit_gb": "Total quota(GB)",
+        "unlimited_quota": "Unlimited quota",
+        "exceeds_domain_limit": "This value exceeds the domain limit ({{limit}} GB). Please enter a lower value.",
+        "maximum_allowed_value": "The maximum allowed value is {{value}} GB. Unlimited is not available.",
+        "max_quota_per_account_in_this_domain": "Max quota per account in this domain (GB)"
     },
     "locale": {
         "English": "English",
@@ -3101,5 +3123,19 @@
     },
     "tooltip": {
         "add_virtual_host": "Type a valid Virtual Host Name to add it"
+    },
+    "cos_quota": {
+        "click_to_revert": "Click to revert to the inherited value"
+    },
+    "quota": {
+        "account_quota_usage": {
+            "unlimited": "{{used}} of <bold>Unlimited</bold> storage used"
+        },
+        "available": "Available",
+        "module": {
+            "files": "Files",
+            "mailbox": "Mails, Calendars, Contacts",
+            "wsc": "Chats"
+        }
     }
 }
