@@ -366,7 +366,8 @@
             "last_validation_check_tooltip": "Esta data representa o último dia em que a licença foi validada pelo Zextras Subscription Service.\n\nComo esta é uma assinatura Pay Per Use (PPU), o sistema envia automaticamente os dados de uso diário para o Zextras Subscription Service. Nenhuma ação do usuário é necessária enquanto a comunicação estiver funcionando corretamente. Se o sistema não conseguir entrar em contato com o serviço, será aplicado um período de carência de 7 dias. Esse período de carência é renovado automaticamente sempre que o contato com o Zextras Subscription Service for realizado com sucesso.",
             "next_validation_deadline_tooltip": "Esta data representa o último dia em que a licença permanecerá totalmente funcional caso os dados de uso não sejam enviados ao Zextras Subscription Service.\n\nComo esta é uma assinatura Pay Per Use (PPU), o sistema envia automaticamente os dados de uso diário para o Zextras Subscription Service. Nenhuma ação do usuário é necessária enquanto a comunicação estiver funcionando corretamente. Se o sistema não conseguir entrar em contato com o serviço, será aplicado um período de carência de 7 dias. Esse período de carência é renovado automaticamente sempre que o contato com o Zextras Subscription Service for realizado com sucesso.",
             "renew": "RENOVAR",
-            "maxCarbonioVersion": "Versão máxima do Carbonio"
+            "maxCarbonioVersion": "Versão máxima do Carbonio",
+            "updateTime": "Horário da atualização"
         }
     },
     "domain": {
@@ -452,7 +453,30 @@
             "sendTo": "ENVIAR PARA",
             "unsavedChanges": "Alterações não salvas",
             "exitWithoutSave": "SAIR SEM SALVAR",
-            "saveAndExit": "SALVAR E SAIR"
+            "saveAndExit": "SALVAR E SAIR",
+            "invalidEmailErrorMsg": "A conta não existe. Por favor, verifique a ortografia e tente novamente.",
+            "memberAddedSuccessfully": "Membro adicionado com sucesso",
+            "blankEmailErrorMsg": "Por favor, insira pelo menos um endereço de e-mail",
+            "memberDeletedSuccessfully": "Membro removido com sucesso",
+            "members": {
+                "addMembers": "Adicionar membro",
+                "membersList": "Lista de membros",
+                "removeMember": "Remover membro",
+                "areYouSureDeleteMember": "Tem certeza de que deseja remover <bold>{{name}}</bold> da lista de membros?"
+            },
+            "NoCancel": "NÃO, CANCELAR",
+            "yesRemoveIt": "SIM, REMOVER",
+            "ownerAddedSuccessfully": "O proprietário foi adicionado com sucesso",
+            "ownerDeletedSuccessfully": "O proprietário foi removido com sucesso",
+            "manageOwners": "Gerenciar proprietários",
+            "addOwnersByEmail": "Adicionar proprietários por endereço de e-mail",
+            "addOwners": "Adicionar proprietários",
+            "ownersList": "Lista de proprietários",
+            "owners": {
+                "removeOwner": "Remover proprietário",
+                "areYouSureDeleteOwner": "Tem certeza de que deseja remover <bold>{{name}}</bold> da lista de proprietários?"
+            },
+            "managePermission": "Gerenciar permissões"
         },
         "accounts": {
             "allowSetupDeferralDuringGracePeriod": "Permitir o adiamento da configuração durante o período de carência",
@@ -462,7 +486,18 @@
                 "externalldap": "LDAP externo",
                 "externalldapReferenceForAuthentication": "Referência LDAP externa para autenticação",
                 "allowTheUserToAskForAReadReceipt": "Permitir que o usuário solicite uma confirmação de leitura"
-            }
+            },
+            "phoneNumber": {
+                "tooltip": "caracteres permitidos são espaços em branco, números e símbolos -+()/,."
+            },
+            "totalAccounts": "Total de contas",
+            "twoFactorAuthenticator": "Autenticador de dois fatores",
+            "allowUsersToConfigure2FA": "Permitir que os usuários configurem a autenticação de dois fatores (2FA)",
+            "allowUsersToConfigure2FAInfo": "Os usuários poderão configurar e gerenciar sua senha de uso único (OTP) nas configurações do perfil.",
+            "twoFactorAuthSetupEnforcement": "Obrigatoriedade de configuração do autenticador de dois fatores",
+            "enforceOnUntrustedNetworks": "Aplicar em redes não confiáveis",
+            "allowSetupFromUntrustedNetworks": "Permitir a configuração da autenticação de dois fatores (2FA) a partir de redes não confiáveis",
+            "allowSetupFromUntrustedNetworksInfo": "Permite que usuários sem um código OTP concluam o assistente de configuração da autenticação de dois fatores (2FA) ao fazer login em redes não confiáveis. Desative esta opção para bloquear o acesso de redes não confiáveis até que a 2FA esteja configurada."
         },
         "editAccount": {
             "yesRestoreOtpAnyway": "SIM, RESTAURAR MESMO ASSIM",
@@ -472,10 +507,16 @@
             "otpSentSuccessfully": "O OTP foi enviado com sucesso"
         },
         "authentication": {
-            "carbonio_info": "Este método permite a utilização de LDAP local, AD/LDAP externo, senha de credenciais e SAML."
+            "carbonio_info": "Este método permite a utilização de LDAP local, AD/LDAP externo, senha de credenciais e SAML.",
+            "search_bind_password": "Pesquisar senha de conexão",
+            "search_bind_user": "Pesquisar usuário de conexão"
         },
         "mailSpaceQuotaThresholdError": {
             "description": "O limite da cota de espaço de e-mail deve estar entre 0 e 100"
+        },
+        "mailingList": {
+            "canReceive": "Pode receber",
+            "cantReceive": "Não pode receber"
         }
     },
     "label": {
@@ -2071,7 +2112,14 @@
         "features": {
             "allowSetupDeferralDuringGracePeriod": "Permitir o adiamento da configuração durante o período de carência",
             "allowSetupDeferralDuringGracePeriodInfo": "Os usuários podem pular o assistente por um tempo limitado. O aviso reaparecerá a cada login até que a configuração seja concluída ou o período de carência expire.",
-            "gracePeriodExpirationDate": "Defina a data de expiração do período de carência"
+            "gracePeriodExpirationDate": "Defina a data de expiração do período de carência",
+            "twoFactorAuthenticator": "Autenticador de dois fatores",
+            "allowUsersToConfigure2FA": "Permitir que os usuários configurem a autenticação de dois fatores (2FA)",
+            "allowUsersToConfigure2FAInfo": "Os usuários poderão configurar e gerenciar sua senha de uso único (OTP) nas configurações do perfil.",
+            "enforceOnUntrustedNetworks": "Aplicar em redes não confiáveis",
+            "twoFactorAuthSetupEnforcement": "Obrigatoriedade de configuração do autenticador de dois fatores",
+            "allowSetupFromUntrustedNetworks": "Permitir a configuração da autenticação de dois fatores (2FA) a partir de redes não confiáveis",
+            "allowSetupFromUntrustedNetworksInfo": "Permite que usuários sem um código OTP concluam o assistente de configuração da autenticação de dois fatores (2FA) ao fazer login em redes não confiáveis. Desative esta opção para bloquear o acesso de redes não confiáveis até que a 2FA esteja configurada."
         }
     },
     "welcome_to_carbonio": "Bem-vindo {{adminName}} ao Carbonio {{carbonioVersion}}!",
@@ -3027,7 +3075,9 @@
         "maintenance-expiring-description": "A manutenção expira em {{maintenanceEndDate}}.",
         "maintenance-expiring-label": "Renove para continuar recebendo atualizações.\nSua manutenção inclui atualizações até a versão {{maxCarbonioVersion}} do Carbonio.\nEntre em contato com seu provedor de licenciamento para planejar a renovação da sua manutenção.\nÚltima atualização da licença: {{updateTime}}",
         "maintenance-invalid-description": "Sua manutenção não é compatível com a versão {{carbonioVersion}} do Carbonio.",
-        "maintenance-invalid-label": "Versão máxima suportada: {{maxCarbonioVersion}}.\nEntre em contato com seu fornecedor de licenças para atualizar ou renovar sua licença de manutenção.\nÚltima atualização da licença: {{updateTime}}"
+        "maintenance-invalid-label": "Versão máxima suportada: {{maxCarbonioVersion}}.\nEntre em contato com seu fornecedor de licenças para atualizar ou renovar sua licença de manutenção.\nÚltima atualização da licença: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "Renove para continuar recebendo atualizações.\nSua manutenção permite atualizações até o Carbonio Não definido.\nPor favor, entre em contato com seu provedor de licenciamento para planejar a renovação da sua manutenção.\nÚltima atualização da licença: {{updateTime}}",
+        "maintenance-expired-empty-max-version-label": "Sua manutenção oferece suporte a versões do Carbonio até Não definido. Versão instalada: {{carbonioVersion}}.\nNão atualize para uma versão superior a Não definido para evitar interrupções no serviço.\nPara continuar recebendo atualizações, por favor, entre em contato com seu provedor de licenciamento para renovar sua manutenção.\nÚltima atualização da licença: {{updateTime}}"
     },
     "tooltip": {
         "add_virtual_host": "Digite um nome de Virtual Host válido para adicioná-lo"
