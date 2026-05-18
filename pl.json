@@ -1309,7 +1309,6 @@
         "mobile_app": "Aplikacja mobilna",
         "notification_primarybar_tooltip": "Zobacz swoje <bold>powiadomienia</bold> i oznaczaj je jako przeczytane lub kopiuj, aby je udostępnić.",
         "privacy_primarybar_tooltip": "Zarządzaj <bold>ustawieniami prywatności</bold> takimi jak raporty danych, raporty o błędach i ankiety.",
-        "quota": "Limit przestrzeni",
         "quota_used_lbl": "Użyta przestrzeń",
         "save_mails_to": "Zapisuj e-maile do",
         "sending_options": "Możliwości wysyłania",
@@ -1820,7 +1819,31 @@
         "dismiss": "ZAMKNIJ",
         "generate": "WYGENERUJ",
         "certificate_available_after_proxy_restart": "Certyfikat będzie dostępny, gdy proxy zostanie zrestartowane",
-        "otp_restored_successfully": "Hasło jednorazowe zostało przywrócone"
+        "otp_restored_successfully": "Hasło jednorazowe zostało przywrócone",
+        "accountQuotaSetting": "Ustawienia limitu przestrzeni dla konta",
+        "quota": {
+            "source": {
+                "cos": "Limit przestrzeni został odziedziczony z przypisanej klasy usługi",
+                "domain": "Limit przestrzeni został odziedziczony z ustawień domeny",
+                "global": "Limit przestrzeni został odziedziczony z konfiguracji globalnej"
+            }
+        },
+        "storage_usage": "Użycie przestrzeni",
+        "account_quota_usage": {
+            "limited": "{{used}} z {{limit}} ({{percentage}}%)"
+        },
+        "accountQuota": {
+            "banner": {
+                "overQuota": "To konto osiągnęło limit przestrzeni. Zwiększ natychmiast limit przestrzeni lub poproś użytkownika o zwolnienie miejsca.",
+                "thresholdReached": "To konto zbliża się do limitu przestrzeni. Zwiększ limit przestrzeni lub poproś użytkownika o zwolnienie miejsca."
+            }
+        },
+        "total_quota_limit_gb": "Całkowity limit przestrzeni (GB)",
+        "unlimited_quota": "Nielimitowana przestrzeń",
+        "exceeds_domain_limit": "Ta wartość przekracza limit domeny ({{limit}} GB). Wprowadź mniejszą wartość.",
+        "maximum_allowed_value": "Maksymalna dozwolona wartość to {{value}} GB. Nielimitowana przestrzeń jest niedostępna.",
+        "max_quota_per_account_in_this_domain": "Maksymalny limit przestrzeni na konto w tej domenie (GB)",
+        "gb": "GB"
     },
     "message": {
         "snackbar": {
@@ -2363,7 +2386,8 @@
         "included_in_backup": "Uwzględnione w kopii zapasowej",
         "no": "Nie",
         "yes": "Tak",
-        "ask_read_receipts": "Zezwól użytkownikowi na zapytanie o potwierdzenie przeczytania"
+        "ask_read_receipts": "Zezwól użytkownikowi na zapytanie o potwierdzenie przeczytania",
+        "unlimited": "Nielimitowane"
     },
     "privacy": {
         "survey_feedback_sub_1": "Nie martw się, ankiety będą szybkie, proste i bardzo pomogą nam zrozumieć co robimy dobrze a co źle.",
@@ -3084,5 +3108,19 @@
     },
     "tooltip": {
         "add_virtual_host": "Aby dodać, wprowadź prawidłową nazwę wirtualnego hosta"
+    },
+    "cos_quota": {
+        "click_to_revert": "Kliknij, aby powrócić do odziedziczonej wartości"
+    },
+    "quota": {
+        "account_quota_usage": {
+            "unlimited": "Użyto {{used}} z <bold>nielimitowanej</bold> przestrzeni"
+        },
+        "available": "Dostępne",
+        "module": {
+            "files": "Pliki",
+            "mailbox": "E-maile, kalendarze, kontakty",
+            "wsc": "Czaty"
+        }
     }
 }
