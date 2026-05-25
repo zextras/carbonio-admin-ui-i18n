@@ -1,11 +1,13 @@
 {
     "account": {
         "new": {
-            "create_account_wizard": "Assistent de creació de compte"
+            "create_account_wizard": "Assistent de creació de compte",
+            "create_otp_wizard": "Crear contrasenya d'un sol ús"
         }
     },
     "accountDetails": {
-        "force_change_password": "Canvia la contrasenya"
+        "force_change_password": "Canvia la contrasenya",
+        "auto_fill_user_is_disabled": "Emplenament automàtic d'usuari desactivat"
     },
     "account_details": {
         "Chats": "Xat",
@@ -88,7 +90,9 @@
         "manage_the_aliases_for_this_account": "Gestionar les àlies per a aquest compte",
         "new_alias_name": "Nou nom d'àlies",
         "notify_changes_by_delegated_access": "Notificar canvis realitzats per comptes delegats",
-        "user_password_set": "Contrasenya mòbil establerta correctament."
+        "user_password_set": "Contrasenya mòbil establerta correctament.",
+        "DELETE": "Esborra",
+        "NEXT": "Següent"
     },
     "action": {
         "mark_as_non_spam": "No és correu brossa"
@@ -682,7 +686,6 @@
         "private": "Privat",
         "prompt": "Indicació",
         "public": "Públic",
-        "quota": "Espai",
         "quota_used_lbl": "Quota utilitzada",
         "quotas": "Quotes",
         "reason": "Motiu:",
