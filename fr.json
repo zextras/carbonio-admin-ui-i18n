@@ -926,7 +926,6 @@
         "prefix_name": "Préfixe - tous les objets bénéficieront de ce préfixe dans leur nom",
         "privacy_primarybar_tooltip": "Géré les paramètres de <bold>confidentialité</bold> comme <bold>les données de rapport, les logs d'erreur</bold> ainsi que <bold>les sondages</bold>.",
         "private_key_certificate": "Clé privée de certificat",
-        "quota": "Quota",
         "quota_used_lbl": "Quota utilisé",
         "save_mails_to": "Sauver les emails dans",
         "sending_options": "Options d'envoi",
@@ -1444,7 +1443,32 @@
         "certificate_request_success": "Traitement en cours. Les résultats seront communiqués aux destinataires globaux et aux destinataires du domaine",
         "dismiss": "REJETER",
         "generate": "GÉNÉRER",
-        "certificate_available_after_proxy_restart": "Le certificat sera disponible une fois le proxy redémarré"
+        "certificate_available_after_proxy_restart": "Le certificat sera disponible une fois le proxy redémarré",
+        "otp_restored_successfully": "L'OTP a été réactivé avec succès",
+        "accountQuotaSetting": "Paramètres des quotas des comptes",
+        "quota": {
+            "source": {
+                "cos": "Quota hérité de la Classe de Service assignée",
+                "domain": "Quota hérité des paramètres du domaine",
+                "global": "Quota hérité de la configuration globale"
+            }
+        },
+        "storage_usage": "Utilisation du stockage",
+        "account_quota_usage": {
+            "limited": "{{used}} sur {{limit}} ({{percentage}}%)"
+        },
+        "accountQuota": {
+            "banner": {
+                "overQuota": "Ce compte a atteint sa limite de stockage. Augmentez immédiatement le quota de stockage, ou prévenez l'utilisateur afin qu'il libère de l'espace.",
+                "thresholdReached": "Ce compte a presque atteint sa limite de stockage. Augmentez le quota de stockage, ou prévenez l'utilisateur afin qu'il libère de l'espace."
+            }
+        },
+        "unlimited_quota": "Quota illimité",
+        "total_quota_limit_gb": "Quota total (Go)",
+        "exceeds_domain_limit": "Cette valeur dépasse la limite du domaine ({{limit}} Go). Veuillez saisir une valeur inférieure.",
+        "maximum_allowed_value": "La valeur maximum autorisée est {{value}} Go. Le quota illimité n'est pas disponible.",
+        "max_quota_per_account_in_this_domain": "Quota maximum par compte pour ce domaine (Go)",
+        "gb": "Go"
     },
     "message": {
         "snackbar": {
@@ -1792,11 +1816,16 @@
             "enforceOnUntrustedNetworks": "Appliquer sur les réseaux non fiables",
             "allowSetupDeferralDuringGracePeriod": "Autoriser le report de la configuration pendant le délai de grâce",
             "allowSetupDeferralDuringGracePeriodInfo": "Les utilisateurs peuvent ignorer l'assistant pendant une durée limitée. L'invite réapparaîtra à chaque connexion jusqu'à ce que la configuration soit terminée ou que le délai de grâce expire.",
-            "gracePeriodExpirationDate": "Définir la date d'expiration du délai de grâce "
+            "gracePeriodExpirationDate": "Définir la date d'expiration du délai de grâce ",
+            "allowSetupFromUntrustedNetworks": "Autoriser la configuration du 2FA depuis des réseaux non fiables",
+            "allowSetupFromUntrustedNetworksInfo": "Permet aux utilisateurs sans OTP de finaliser la configuration du 2FA lors de leur connexion depuis un réseau non fiable. Désactivez cette option pour bloquer l'accès depuis des réseaux non fiable tant que le 2FA n'est pas configuré."
         },
         "editAccount": {
             "invalidaEmailError": "Une ou plusieurs adresses email sont invalides.",
-            "otpSentSuccessfully": "L'OTP a été envoyé avec succès"
+            "otpSentSuccessfully": "L'OTP a été envoyé avec succès",
+            "yesRestoreOtpAnyway": "OUI, RÉACTIVER QUAND MÊME",
+            "restoreOtpInfo": "Avant de continuer, vérifiez que la demande provient bien de l'utilisateur. Si la demande vous paraît suspecte, ne réactivez pas l'OTP.",
+            "restoreOtpQuestion": "Êtes-vous sûr de vouloir continuer ?"
         },
         "mailingList": {
             "canReceive": "Peut recevoir",
@@ -2113,7 +2142,9 @@
             "twoFactorAuthSetupEnforcement": "Appliquer la configuration de l'authentification à deux facteur",
             "allowSetupDeferralDuringGracePeriod": "Autoriser le report de la configuration pendant le délai de grâce",
             "allowSetupDeferralDuringGracePeriodInfo": "Les utilisateurs peuvent ignorer l'assistant pendant une durée limitée. L'invite réapparaîtra à chaque connexion jusqu'à ce que la configuration soit terminée ou que le délai de grâce expire.",
-            "gracePeriodExpirationDate": "Définir la date d'expiration du délai de grâce"
+            "gracePeriodExpirationDate": "Définir la date d'expiration du délai de grâce",
+            "allowSetupFromUntrustedNetworks": "Autoriser la configuration du 2FA depuis des réseaux non fiables",
+            "allowSetupFromUntrustedNetworksInfo": "Permet aux utilisateurs sans OTP de finaliser la configuration du 2FA lors de leur connexion depuis un réseau non fiable. Désactivez cette option pour bloquer l'accès depuis des réseaux non fiable tant que le 2FA n'est pas configuré."
         }
     },
     "create_new_cos": "CRÉER UNE NOUVELLE COS",
@@ -2354,7 +2385,8 @@
         "included_in_backup": "Inclus dans le Backup",
         "no": "Non",
         "yes": "Oui",
-        "ask_read_receipts": "Autoriser l'utilisateur à demander un accusé de réception"
+        "ask_read_receipts": "Autoriser l'utilisateur à demander un accusé de réception",
+        "unlimited": "Illimité"
     },
     "connection": {
         "access_key": "Clé d’accès",
@@ -3076,5 +3108,19 @@
     },
     "tooltip": {
         "add_virtual_host": "Saisir un nom de Virtual Host valide pour l'ajouter"
+    },
+    "quota": {
+        "module": {
+            "files": "Files",
+            "mailbox": "Emails, Calendriers, Contacts",
+            "wsc": "Chats"
+        },
+        "account_quota_usage": {
+            "unlimited": "{{used}} utilisés sur <bold>stockage illimité</bold>"
+        },
+        "available": "Disponible"
+    },
+    "cos_quota": {
+        "click_to_revert": "Cliquez pour revenir à la valeur héritée"
     }
 }
