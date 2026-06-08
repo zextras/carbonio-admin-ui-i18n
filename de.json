@@ -794,7 +794,6 @@
         "mails": "E-Mails",
         "out_of_the_office_reply": "Abwesenheitsnachricht",
         "tasks": "Aufgaben",
-        "quota": "Kontingent",
         "storage": "Speicher",
         "ADD_NEW": "NEU HINZUFÜGEN",
         "account_password_setting_note_for_external_authentication": "Die nachstehenden Einstellungen ↓ wirken sich nicht auf die Passwörter aus, die von Benutzern in Domänen festgelegt werden, die für die Verwendung externer Authentifizierung konfiguriert sind. Die hier vorgenommenen Änderungen setzen die COS-Einstellungen für das Kennwort und die Sperre für fehlgeschlagene Anmeldungen außer Kraft.",

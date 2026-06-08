@@ -826,7 +826,6 @@
         "query_is_not_valid": "Poizvedba ni veljavna",
         "queue": "Čakalna vrsta",
         "queued": "V čakalni vrsti",
-        "quota": "Kvota",
         "quota_mb": "Kvota (MB)",
         "quota_used": "Kvota / Uporabljena kvota",
         "quota_used_lbl": "Uporabljena kvota",

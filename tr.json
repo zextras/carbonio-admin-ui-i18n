@@ -779,7 +779,6 @@
         "web_feature": "Web Özelliği",
         "backup_primarybar_tooltip": "<bold>Yedekleme servislerinizi</bold> yönetin, <bold>durum bilgilerini</bold> ve <bold>sunucu listesini</bold> görün veya <bold>varolan yedeği içeri aktarın</bold>.",
         "cos_primarybar_tooltip": "<bold>Servis Paket Sınıfları</bold> detaylarını, <bold>özellikleri, Sunucu Gruplarını</bold> ve <bold>Gelişmiş</bold> ayarları görüntüleyin ve yönetin.",
-        "quota": "Kota",
         "save_mails_to": "Postaları Kaydet",
         "Accounts": "Hesaplar",
         "EDIT": "DÜZENLE",

@@ -1257,7 +1257,6 @@
         "delegates": "ผู้รับมอบหมาย",
         "operation_primarybar_tooltip": "ดูและจัดการ<bold>การดำเนินการ, การเรียกใช้งาน, การจัดการ</bold> และ<bold>การสิ้นสุด</bold>",
         "privacy_primarybar_tooltip": "จัดการการตั้งค่า<bold>ความเป็นส่วนตัว</bold> เช่น <bold>รายงานข้อมูล, บันทึกข้อผิดพลาด</bold> และ <bold>แบบสำรวจ</bold>",
-        "quota": "โควตา",
         "quota_used_lbl": "โควตาที่ใช้",
         "sending_options": "ตัวเลือกการส่ง",
         "sharing_options": "ตัวเลือกการแบ่งปัน",

@@ -956,7 +956,6 @@
         "operation_primarybar_tooltip": "Ver y administrar las <bold>operaciones</bold>, ejecutarlas <bold>ponerlas en cola</bold> o <bold>finalizarlas</bold>.",
         "out_of_the_office_reply": "Respuesta automática",
         "privacy_primarybar_tooltip": "Administrar las configuraciones de <bold>Privacidad</bold> para los <bold>reportes de datos, logs de errores</bold> y <bold>encuestas</bold>.",
-        "quota": "Cuota",
         "quota_used_lbl": "Cuota utilizada",
         "save_mails_to": "Guardar mensajes en",
         "sending_options": "Opciones de envío",
