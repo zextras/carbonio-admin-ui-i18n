@@ -3122,5 +3122,24 @@
             "mailbox": "Mail, Calendari, Contatti",
             "wsc": "Chats"
         }
+    },
+    "storages": {
+        "connectNewS3": "Collega un nuovo connettore S3",
+        "s3Connectors": {
+            "proceedWithDeletion": "PROCEDI CON L'ELIMINAZIONE",
+            "deleteConnectorCancel": "NO, ANNULLA",
+            "confirmDelete": "Sono sicuro di voler eliminare questo connettore",
+            "changeImportantInformation": "Modifica informazioni importanti",
+            "deleteConnectors": "ELIMINA CONNETTORE",
+            "verifyProgress": {
+                "verifyingConnectors": "Verifica dei connettori",
+                "description": "Attendere mentre verifichiamo e configuriamo i connettori"
+            },
+            "checkInformation": "CONTROLLA LE INFORMAZIONI",
+            "verifyError": {
+                "somethingWentWrong": "Si è verificato un errore con le informazioni fornite",
+                "checkDetailsBelow": "Controlla i dettagli qui sotto"
+            }
+        }
     }
 }
