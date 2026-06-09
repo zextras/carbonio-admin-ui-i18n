@@ -564,7 +564,7 @@
         "closed": "Wyłączone",
         "configuration": "KONFIGURACJA",
         "domains": "Domeny",
-        "external_active_directory": "Zewnętrzny katalog aktywny",
+        "external_active_directory": "Zewnętrzne Active Directory",
         "external_ldap": "Zewnętrzne LDAP",
         "features": "Funkcje",
         "filter": "Filtr",
@@ -3122,5 +3122,28 @@
             "mailbox": "E-maile, kalendarze, kontakty",
             "wsc": "Czaty"
         }
+    },
+    "storages": {
+        "s3Connectors": {
+            "deleteConnectorWarningWithNameConfirm": "Próbujesz usunąć ${connectorName}, które jest nigdy nie użytym connectorem S3.\\nCzy na pewno chcesz kontynuować?",
+            "deleteConnectorWarningConfirm": "Próbujesz usunąć nigdy nie użyty connector S3.\\nCzy na pewno chcesz kontynuować?",
+            "applyChanges": "ZASTOSUJ ZMIANY",
+            "warning": "Uwaga",
+            "proceedWithDeletion": "USUŃ",
+            "deleteConnectorCancel": "NIE, ANULUJ",
+            "confirmDelete": "Jestem pewien, że chcę usunąć ten connector",
+            "changeImportantInformation": "Zmiana ważnych informacji",
+            "deleteConnectors": "USUŃ CONNECTORY",
+            "verifyProgress": {
+                "verifyingConnectors": "Weryfikacja connectorów",
+                "description": "Poczekaj aż zweryfikujemy i przygotujemy connectory"
+            },
+            "checkInformation": "SPRAWDŹ INFORMACJE",
+            "verifyError": {
+                "somethingWentWrong": "Coś poszło nie tak z informacjami, które podałeś",
+                "checkDetailsBelow": "Sprawdź szczegóły poniżej"
+            }
+        },
+        "connectNewS3": "Połącz się z nowym S3"
     }
 }
