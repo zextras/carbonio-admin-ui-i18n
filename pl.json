@@ -229,10 +229,10 @@
         "connection": {
             "access_key": "Klucz dostępu",
             "notes": "Notatki",
-            "verify_connector": "ZWERYFIKUJ ŁĄCZNIK",
+            "verify_connector": "ZWERYFIKUJ CONNECTOR",
             "secret_key": "Tajny klucz",
             "descriptive_name": "Nazwa opisowa",
-            "create_and_verify_connector": "STWÓRZ I ZWERYFIKUJ ŁĄCZNIK",
+            "create_and_verify_connector": "STWÓRZ I ZWERYFIKUJ CONNECTOR",
             "arn_name": "Arn / Nazwa"
         },
         "new": {
@@ -692,7 +692,7 @@
         "view": "To jest widok",
         "verify_error": "{{name}}",
         "verify_connector_fail": "WERYFIKACJA SIĘ NIE POWIODŁA",
-        "verify_connector": "ZWERYFIKUJ ŁĄCZNIK",
+        "verify_connector": "ZWERYFIKUJ CONNECTOR",
         "uuid": "uuid",
         "utility_view3": "Testuj widok praktyczny 3",
         "utility_view2": "Testuj widok praktyczny 2",
@@ -820,9 +820,9 @@
         "create_button": "STWÓRZ",
         "create_account_list_msg": "Możesz stworzyć nowe konto klikając na przycisk <bold>Stwórz</bold> (lewy górny róg) lub na przycisk Dodaj (<bold>+</bold>) powyżej",
         "cos_name": "Nazwa COS",
-        "connector_is_not_created_and_verification_failed": "ŁĄCZNIK NIE ZOSTAŁ STWORZONY I WERYFIKACJA SIĘ NIE POWIODŁA",
-        "connector_is_create_and_verified": "ŁĄCZNIK ZOSTAŁ STWORZONY I ZWERYFIKOWANY",
-        "connection_is_created_verify_connector_fail": "ŁĄCZNIK ZOSTAŁ STWORZONY, LECZ WERYFIKACJA SIĘ NIE POWIODŁA",
+        "connector_is_not_created_and_verification_failed": "CONNECTOR NIE ZOSTAŁ STWORZONY I WERYFIKACJA SIĘ NIE POWIODŁA",
+        "connector_is_create_and_verified": "CONNECTOR ZOSTAŁ STWORZONY I ZWERYFIKOWANY",
+        "connection_is_created_verify_connector_fail": "CONNECTOR ZOSTAŁ STWORZONY, LECZ WERYFIKACJA SIĘ NIE POWIODŁA",
         "connect_buckets": "Połącz buckety",
         "changes_have_been_saved": "Zmiany zostały zapisane",
         "change_save_success_msg": "Zmiana została zapisana",
@@ -3124,26 +3124,7 @@
         }
     },
     "storages": {
-        "s3Connectors": {
-            "deleteConnectorWarningWithNameConfirm": "Próbujesz usunąć ${connectorName}, które jest nigdy nie użytym connectorem S3.\\nCzy na pewno chcesz kontynuować?",
-            "deleteConnectorWarningConfirm": "Próbujesz usunąć nigdy nie użyty connector S3.\\nCzy na pewno chcesz kontynuować?",
-            "applyChanges": "ZASTOSUJ ZMIANY",
-            "warning": "Uwaga",
-            "proceedWithDeletion": "USUŃ",
-            "deleteConnectorCancel": "NIE, ANULUJ",
-            "confirmDelete": "Jestem pewien, że chcę usunąć ten connector",
-            "changeImportantInformation": "Zmiana ważnych informacji",
-            "deleteConnectors": "USUŃ CONNECTORY",
-            "verifyProgress": {
-                "verifyingConnectors": "Weryfikacja connectorów",
-                "description": "Poczekaj aż zweryfikujemy i przygotujemy connectory"
-            },
-            "checkInformation": "SPRAWDŹ INFORMACJE",
-            "verifyError": {
-                "somethingWentWrong": "Coś poszło nie tak z informacjami, które podałeś",
-                "checkDetailsBelow": "Sprawdź szczegóły poniżej"
-            }
-        },
-        "connectNewS3": "Połącz się z nowym S3"
+        "connectNewS3": "Połącz się z nowym S3",
+        "s3Connectors": "Connectory S3"
     }
 }
