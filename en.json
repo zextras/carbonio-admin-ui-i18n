@@ -3139,26 +3139,7 @@
         }
     },
     "storages": {
-        "s3Connectors": {
-            "deleteConnectorWarningWithNameConfirm": "You are trying to delete ${connectorName} that is a never used S3 connector.\\nAre you sure you want to proceed?",
-            "deleteConnectorWarningConfirm": "You are trying to delete a never used S3 connector.\\nAre you sure you want to proceed?",
-            "applyChanges": "APPLY CHANGES",
-            "warning": "Warning",
-            "changeImportantInformation": "Change important information",
-            "proceedWithDeletion": "PROCEED WITH DELETION",
-            "deleteConnectorCancel": "NO, CANCEL",
-            "confirmDelete": "I am sure I want to delete this connector",
-            "deleteConnectors": "DELETE CONNECTORS",
-            "verifyProgress": {
-                "verifyingConnectors": "Verifying connectors",
-                "description": "Please wait while we verify and set up the connectors"
-            },
-            "checkInformation": "CHECK INFORMATION",
-            "verifyError": {
-                "somethingWentWrong": "Something went wrong with the information you provide",
-                "checkDetailsBelow": "Check the details below"
-            }
-        },
+        "s3Connectors": "S3 connectors",
         "connectNewS3": "Connect a New S3"
     }
 }
