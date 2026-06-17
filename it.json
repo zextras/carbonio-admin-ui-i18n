@@ -3125,6 +3125,9 @@
     },
     "storages": {
         "connectNewS3": "Collega un nuovo connettore S3",
-        "s3Connectors": "Connettori S3"
-    }
+        "s3Connectors": {
+            "title": "Connettori S3"
+        }
+    },
+    "s3connector_list": "Lista connettori S3"
 }
