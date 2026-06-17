@@ -3139,7 +3139,10 @@
         }
     },
     "storages": {
-        "s3Connectors": "S3 connectors",
+        "s3Connectors": {
+            "title": "S3 connectors"
+        },
         "connectNewS3": "Connect a New S3"
-    }
+    },
+    "s3connector_list": "S3 Connector list"
 }
