@@ -3124,26 +3124,10 @@
         "click_to_revert": "Cliquez pour revenir à la valeur héritée"
     },
     "storages": {
+        "connectNewS3": "Connecter un nouveau S3",
         "s3Connectors": {
-            "deleteConnectorWarningWithNameConfirm": "Vous êtes sur le point de supprimer ${connectorName} qui est un connecteur S3 jamais utilisé. Êtes-vous sûr de vouloir continuer ?",
-            "deleteConnectorWarningConfirm": "Vous êtes sur le point de supprimer un connecteur S3 jamais utilisé. Êtes-vous sûr de vouloir continuer ?",
-            "applyChanges": "APPLIQUER LES CHANGEMENTS",
-            "warning": "Attention",
-            "proceedWithDeletion": "PROCÉDER À LA SUPPRESSION",
-            "deleteConnectorCancel": "NON, ANNULER",
-            "confirmDelete": "Je suis sûr de vouloir supprimer ce connecteur",
-            "changeImportantInformation": "Modifier des informations importantes",
-            "deleteConnectors": "SUPPRIMER LES CONNECTEURS",
-            "verifyProgress": {
-                "verifyingConnectors": "Vérification des connecteurs",
-                "description": "Veuillez patienter pendant la vérification et la configuration des connecteurs"
-            },
-            "checkInformation": "VÉRIFIER LES INFORMATIONS",
-            "verifyError": {
-                "somethingWentWrong": "Quelque chose s'est mal passé avec les informations que vous avez fournies",
-                "checkDetailsBelow": "Vérifier les détails ci-dessous"
-            }
-        },
-        "connectNewS3": "Connecter un nouveau S3"
-    }
+            "title": "Connecteurs S3"
+        }
+    },
+    "s3connector_list": "Liste des connecteurs S3"
 }
