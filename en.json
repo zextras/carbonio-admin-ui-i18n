@@ -2221,7 +2221,9 @@
         "unlimited_quota": "Unlimited quota",
         "exceeds_domain_limit": "This value exceeds the domain limit ({{limit}} GB). Please enter a lower value.",
         "maximum_allowed_value": "The maximum allowed value is {{value}} GB. Unlimited is not available.",
-        "max_quota_per_account_in_this_domain": "Max quota per account in this domain (GB)"
+        "max_quota_per_account_in_this_domain": "Max quota per account in this domain (GB)",
+        "set_as_current": "Set as current",
+        "bytes_size_threshold": "Bytes size threshold"
     },
     "locale": {
         "English": "English",
