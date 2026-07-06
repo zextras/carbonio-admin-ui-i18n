@@ -1617,7 +1617,9 @@
         "exceeds_domain_limit": "Questo valore supera il limite del dominio ({{limit}} GB). Inserisci un valore inferiore.",
         "maximum_allowed_value": "Il valore massimo consentito è {{value}} GB. L'opzione Illimitato non è disponibile.",
         "max_quota_per_account_in_this_domain": "Quota massima per account in questo dominio (GB)",
-        "gb": "GB"
+        "gb": "GB",
+        "set_as_current": "Imposta come corrente",
+        "bytes_size_threshold": "Dimensione della soglia in byte"
     },
     "message": {
         "snackbar": {
