@@ -1843,7 +1843,9 @@
         "exceeds_domain_limit": "Ta wartość przekracza limit domeny ({{limit}} GB). Wprowadź mniejszą wartość.",
         "maximum_allowed_value": "Maksymalna dozwolona wartość to {{value}} GB. Nielimitowana przestrzeń jest niedostępna.",
         "max_quota_per_account_in_this_domain": "Maksymalny limit przestrzeni na konto w tej domenie (GB)",
-        "gb": "GB"
+        "gb": "GB",
+        "set_as_current": "Ustaw jako aktualne",
+        "bytes_size_threshold": "Próg rozmiaru w bajtach"
     },
     "message": {
         "snackbar": {
