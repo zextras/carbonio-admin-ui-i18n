@@ -1468,7 +1468,9 @@
         "exceeds_domain_limit": "Cette valeur dépasse la limite du domaine ({{limit}} Go). Veuillez saisir une valeur inférieure.",
         "maximum_allowed_value": "La valeur maximum autorisée est {{value}} Go. Le quota illimité n'est pas disponible.",
         "max_quota_per_account_in_this_domain": "Quota maximum par compte pour ce domaine (Go)",
-        "gb": "Go"
+        "gb": "Go",
+        "set_as_current": "Définir comme actuel",
+        "bytes_size_threshold": "Seuil de taille en octets"
     },
     "message": {
         "snackbar": {
