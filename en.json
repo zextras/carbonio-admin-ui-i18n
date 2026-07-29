@@ -2223,7 +2223,19 @@
         "maximum_allowed_value": "The maximum allowed value is {{value}} GB. Unlimited is not available.",
         "max_quota_per_account_in_this_domain": "Max quota per account in this domain (GB)",
         "set_as_current": "Set as current",
-        "bytes_size_threshold": "Bytes size threshold"
+        "bytes_size_threshold": "Bytes size threshold",
+        "bucket": "BUCKET",
+        "change": "CHANGE",
+        "definition": "DEFINITION",
+        "index_volume_role": "Index Volume",
+        "options": "OPTIONS",
+        "primary_volume_role": "Primary volume",
+        "review_your_selections": "Review your selections",
+        "secondary_volume_role": "Secondary volume",
+        "volume_details": "Volume details",
+        "volume_options": "Volume options",
+        "volume_role": "Volume role",
+        "warning": "Warning"
     },
     "locale": {
         "English": "English",
@@ -3142,9 +3154,49 @@
     },
     "storages": {
         "s3Connectors": {
-            "title": "S3 connectors"
+            "title": "S3 connectors",
+            "deleteConnectorInUseTooltip": "S3 connector is in use and cannot be deleted",
+            "newSecretWillReplaceHint": "The new key will replace the saved one when you verify and save changes.",
+            "prefixImmutableHint": "This prefix can't be changed after creation",
+            "savedSecretTestConnectionHelp": "TEST CONNECTION uses the saved key - you don't need to re-enter it. For security it can't be displayed.",
+            "secretSavedOnServer": "Saved on this server"
         },
-        "connectNewS3": "Connect a New S3"
+        "connectNewS3": "Connect a New S3",
+        "volumeData": {
+            "deleteVolumeInUseTooltip": "Volume is in use and cannot be deleted",
+            "deleteCurrentVolumeTooltip": "You should set a different volume as the current one before deleting it."
+        }
     },
-    "s3connector_list": "S3 Connector list"
+    "s3connector_list": "S3 Connector list",
+    "storage": {
+        "dataVolume": {
+            "indexVolume": "Index volume",
+            "primaryVolume": "Primary volume",
+            "secondaryVolume": "Secondary volume",
+            "s3ConnectorId": "S3 Connector ID"
+        },
+        "dataVolumes": {
+            "amazonStorageDocumentation": "Amazon Storage Class Documentation",
+            "amazonTieringDocumentation": "Amazon Tiering Documentation",
+            "availableS3ConnectorsList": "Available S3 Connectors list",
+            "details": "Details",
+            "errorDetails": {
+                "title": "Something went wrong details"
+            },
+            "volumePathMustExistHint": "The volume path must already exist"
+        },
+        "volume": {
+            "applyChanges": "APPLY CHANGES",
+            "changeImportantInformation": {
+                "confirm": "I am sure I want to apply these changes",
+                "warningBody": "Changing the Volume Prefix or S3 Connector may require transferring existing data to the selected target. Do you want to continue?",
+                "warningLine2": "You are editing this information:"
+            }
+        }
+    },
+    "'storage": {
+        "dataVolumes": {
+            "amazonStorageDocumentation'": "Amazon Storage Class Documentation"
+        }
+    }
 }
