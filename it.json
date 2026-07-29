@@ -1619,7 +1619,19 @@
         "max_quota_per_account_in_this_domain": "Quota massima per account in questo dominio (GB)",
         "gb": "GB",
         "set_as_current": "Imposta come corrente",
-        "bytes_size_threshold": "Dimensione della soglia in byte"
+        "bytes_size_threshold": "Dimensione della soglia in byte",
+        "bucket": "BUCKET",
+        "change": "MODIFICA",
+        "definition": "DEFINIZIONE",
+        "index_volume_role": "Indice dei volumi",
+        "options": "OPZIONI",
+        "primary_volume_role": "Volume primario",
+        "review_your_selections": "Controlla le tue scelte",
+        "secondary_volume_role": "Volume secondario",
+        "volume_details": "Dettagli del volume",
+        "volume_options": "Opzioni del volume",
+        "volume_role": "Ruolo del volume",
+        "warning": "Attenzione"
     },
     "message": {
         "snackbar": {
@@ -3128,8 +3140,47 @@
     "storages": {
         "connectNewS3": "Collega un nuovo connettore S3",
         "s3Connectors": {
-            "title": "Connettori S3"
+            "title": "Connettori S3",
+            "deleteConnectorInUseTooltip": "Il connettore S3 è in uso e non può essere eliminato",
+            "newSecretWillReplaceHint": "La nuova chiave sostituirà quella salvata una volta confermate e salvate le modifiche.",
+            "prefixImmutableHint": "Questo prefisso non può essere modificato dopo la creazione",
+            "savedSecretTestConnectionHelp": "TEST LA CONNESSIONE utilizza la chiave salvata: non è necessario reinserirla. Per motivi di sicurezza, non può essere visualizzata.",
+            "secretSavedOnServer": "Salvato su questo server"
+        },
+        "volumeData": {
+            "deleteVolumeInUseTooltip": "Il volume è in uso e non può essere eliminato",
+            "deleteCurrentVolumeTooltip": "Prima di eliminarlo, è necessario impostare un volume diverso da quello corrente."
         }
     },
-    "s3connector_list": "Lista connettori S3"
+    "s3connector_list": "Lista connettori S3",
+    "storage": {
+        "dataVolume": {
+            "indexVolume": "Volume index",
+            "primaryVolume": "Volume primario",
+            "secondaryVolume": "Volume secondario",
+            "s3ConnectorId": "ID connettore S3"
+        },
+        "dataVolumes": {
+            "amazonStorageDocumentation": "Documentazione sulle classi di archiviazione di Amazon",
+            "availableS3ConnectorsList": "Elenco dei connettori S3 disponibili",
+            "details": "Dettagli",
+            "errorDetails": {
+                "title": "Qualcosa è andato storto"
+            },
+            "volumePathMustExistHint": "Il percorso del volume deve già esistere"
+        },
+        "volume": {
+            "applyChanges": "APPLICA MODIFICHE",
+            "changeImportantInformation": {
+                "confirm": "Sono sicuro di voler applicare queste modifiche",
+                "warningBody": "La modifica del prefisso del volume o del connettore S3 potrebbe richiedere il trasferimento dei dati esistenti alla destinazione selezionata. Vuoi continuare?",
+                "warningLine2": "Stai modificando queste informazioni:"
+            }
+        }
+    },
+    "'storage": {
+        "dataVolumes": {
+            "amazonStorageDocumentation'": "Documentazione delle classi di archiviazione di Amazon"
+        }
+    }
 }
