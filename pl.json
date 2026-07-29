@@ -648,7 +648,7 @@
         "content": "Zawartość",
         "cos": "COS",
         "account_status": "Status konta",
-        "detail": "Szczegóły",
+        "detail": "Szczegół",
         "device": "Urządzenie",
         "edit": "Edytuj",
         "go_back": "Powrót",
@@ -768,7 +768,7 @@
         "list_url": "URL listy dystrybucyjnej",
         "initial_mail_serach": "Rozpocznij wyszukiwanie e-maili",
         "indexer_settings": "Ustawienia indeksowania",
-        "index_volumes": "Indeksuj Woluminy",
+        "index_volumes": "Woluminy indeksu",
         "inbound_smtp_host_name": "Nazwa przychodzącego hosta SMTP",
         "import_an_external_backup": "Importuj zewnętrzną kopię zapasową",
         "i_am_looking_for_this_account": "Wyszukaj konto…",
@@ -1154,7 +1154,7 @@
         "favicon": "Ikonka w karcie przeglądarki (favicon)",
         "favicon_description": "Wklej URL ikonki w karcie przeglądarki (favicon) dla ekranu logowania. Użyj pliku ICO o rozdzielczości 32x32 pikseli.",
         "i_m_looking_for_the_session": "Szukam sesji…",
-        "index_volume": "To jest wolumin indeksowy",
+        "index_volume": "To jest wolumin indeksu",
         "end_user_webapp": "Klient sieciowy dla użytkownika końcowego",
         "ip": "IP",
         "light_mode": "Tryb <bold>jasny</bold>",
@@ -1845,7 +1845,19 @@
         "max_quota_per_account_in_this_domain": "Maksymalny limit przestrzeni na konto w tej domenie (GB)",
         "gb": "GB",
         "set_as_current": "Ustaw jako aktualne",
-        "bytes_size_threshold": "Próg rozmiaru w bajtach"
+        "bytes_size_threshold": "Próg rozmiaru w bajtach",
+        "bucket": "BUCKET",
+        "change": "ZMIEŃ",
+        "definition": "DEFINICJA",
+        "index_volume_role": "Wolumin indeksu",
+        "options": "OPCJE",
+        "primary_volume_role": "Wolumin główny",
+        "review_your_selections": "Sprawdź podane dane",
+        "secondary_volume_role": "Wolumin drugorzędny",
+        "volume_details": "Szczegóły woluminu",
+        "volume_options": "Opcje woluminu",
+        "volume_role": "Rola woluminu",
+        "warning": "Ostrzeżenie"
     },
     "message": {
         "snackbar": {
@@ -2518,7 +2530,7 @@
         "abstract_msg_1": "<strong>{{enables}}{{largerSmaller}}</strong>. To wpłynie na dane przechowywane w <bold>{{previous}}</bold> i w <bold>{{next}}</bold>.",
         "abstract_msg_2": "<bold>{{enables}}{{largerSmaller}}</bold> ,które jest przechowywane w {{source}}, zostanie przeniesione do {{destination}}. To wpłynie na dane przechowywane w <bold>{{previous}}</bold> i w <bold>{{next}}</bold>.",
         "after_date": "Po (data)",
-        "all_primary_volume_used_source_msg": "Wszystkie główne woluminy zostaną domyślnie użyte jako źródło. Możesz też ręcznie wybrać inne woluminy.",
+        "all_primary_volume_used_source_msg": "Wszystkie woluminy główne zostaną domyślnie użyte jako źródło. Możesz też ręcznie wybrać inne woluminy.",
         "all_secondary_volume_used_source_msg": "Aktualny wolumin drugorzędny zostanie użyty jako docelowy. Możesz też ręcznie wybrać inne woluminy.",
         "before_date": "Przed (Data)",
         "bytes": "Bajt (B)",
@@ -3128,8 +3140,48 @@
     "storages": {
         "connectNewS3": "Połącz się z nowym S3",
         "s3Connectors": {
-            "title": "Connector'y S3"
+            "title": "Connector'y S3",
+            "deleteConnectorInUseTooltip": "Connector S3 jest używany i nie może zostać usunięty",
+            "newSecretWillReplaceHint": "Nowy klucz zastąpi ten zapisany kiedy zweryfikujesz i zapiszesz zmiany.",
+            "prefixImmutableHint": "Nie będziesz mógł zmienić tego prefiksu po jego stworzeniu",
+            "savedSecretTestConnectionHelp": "[[[POŁĄCZENIE TESTOWE / TESTUJ POŁĄCZENIE]]] używa zapisanego klucza - nie musisz go ponownie wprowadzać. Ze względów bezpieczeństwa nie jest on wyświetlany.",
+            "secretSavedOnServer": "Zapisane na tym serwerze"
+        },
+        "volumeData": {
+            "deleteVolumeInUseTooltip": "Wolumin jest używany i nie może zostać usunięty",
+            "deleteCurrentVolumeTooltip": "Ustaw inny wolumin jako aktualny zanim usuniesz ten wolumin."
         }
     },
-    "s3connector_list": "Lista connectorów S3"
+    "s3connector_list": "Lista connectorów S3",
+    "storage": {
+        "dataVolume": {
+            "indexVolume": "Wolumin indeksu",
+            "primaryVolume": "Wolumin główny",
+            "secondaryVolume": "Wolumin drugorzędny",
+            "s3ConnectorId": "ID connectora S3"
+        },
+        "dataVolumes": {
+            "amazonStorageDocumentation": "Dokumentacja klas przechowywania Amazon",
+            "amazonTieringDocumentation": "Dokumentacja Amazon Tiering",
+            "availableS3ConnectorsList": "Lista dostępnych connectorów S3",
+            "details": "Szczegóły",
+            "errorDetails": {
+                "title": "Coś poszło nie tak szczegóły"
+            },
+            "volumePathMustExistHint": "Ścieżka woluminu musi już istnieć"
+        },
+        "volume": {
+            "applyChanges": "ZASTOSUJ ZMIANY",
+            "changeImportantInformation": {
+                "confirm": "Jestem pewny, że chcę zastosować te zmiany",
+                "warningBody": "Zmiana connectora S3 lub prefiksu woluminu może wymagać przeniesienia istniejących danych do wybranego miejsca docelowego. Czy chcesz kontynuować?",
+                "warningLine2": "Edytujesz te informacje:"
+            }
+        }
+    },
+    "'storage": {
+        "dataVolumes": {
+            "amazonStorageDocumentation'": "Dokumentacja klas przechowywania Amazon"
+        }
+    }
 }
