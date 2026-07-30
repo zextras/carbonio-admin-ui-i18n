@@ -69,7 +69,37 @@
         "mail_space_quota_threshold": "Schwellenwert für das E-Mail-Speicherplatzkontingent (%)",
         "pop": "POP",
         "receiver_of_quota_warning_email": "Empfänger der Kontingentwarnung (E-Mail)",
-        "administration_rights": "Administrationsrechte"
+        "administration_rights": "Administrationsrechte",
+        "authentication": {
+            "search_bind_password": "Bind-Passwort (Suche)",
+            "search_bind_user": "Bind-User (Suche)",
+            "carbonio_info": "Diese Methode ermöglicht die Verwendung von Local LDAP, External AD/LDAP, Credential Password und SAML."
+        },
+        "certificate_content_error_without_ca_chain": "Domänenzertifikat: Privater Schlüssel ist ungültig",
+        "jail_duration": "Sperrdauer (ms)",
+        "mail_space_quota_threshold_warning": "Warnschwelle für Mail-Speicherquote (%)",
+        "virtual_host_name_error": "Bitte geben Sie einen gültigen virtuellen Hostnamen ein!",
+        "globalSettings": {
+            "allowSearchUserFromAllDomains": "Suche nach Benutzerinformationen in allen Domänen erlauben"
+        },
+        "mailSpaceQuotaThresholdError": {
+            "description": "Die Mail-Speicherquotenschwelle muss zwischen 0 und 100 liegen"
+        },
+        "accounts": {
+            "editAccount": {
+                "externalldap": "Externes LDAP",
+                "externalldapReferenceForAuthentication": "Externe LDAP-Referenz für die Authentifizierung",
+                "allowTheUserToAskForAReadReceipt": "Dem Benutzer erlauben, eine Lesebestätigung anzufordern"
+            },
+            "phoneNumber": {
+                "tooltip": "Erlaubte Zeichen sind Leerzeichen, Zahlen und die Symbole -+()/,."
+            },
+            "totalAccounts": "Gesamtanzahl von Accounts",
+            "twoFactorAuthenticator": "Zwei-Faktor-Authentifikator",
+            "allowUsersToConfigure2FA": "Benutzern erlauben, 2FA zu konfigurieren",
+            "allowUsersToConfigure2FAInfo": "Benutzer können ihr Einmalpasswort (OTP) über ihre Profileinstellungen einrichten und verwalten.",
+            "twoFactorAuthSetupEnforcement": "Erzwingung der Einrichtung des Zwei-Faktor-Authentifikators"
+        }
     },
     "label": {
         "account": "Konto",
@@ -1221,7 +1251,8 @@
         "send_feedback_helperText": "<bold>Möchten Sie eine Änderung vorschlagen oder uns etwas mitteilen?</bold><br /><br />Teilen Sie Ihre Gedanken mit uns und helfen Sie dabei, ein besseres Carbonio CE zu gestalten. Wir freuen uns von Ihnen zu hören!",
         "send_feedback_helperText_carbonio": "<bold>Möchten Sie eine Änderung vorschlagen oder uns etwas mitteilen?</bold><br /><br />Teilen Sie Ihre Gedanken mit uns und helfen Sie dabei, ein besseres {{carbonio}} zu gestalten. Wir freuen uns von Ihnen zu hören!",
         "use_our_forum": "Nutzen Sie stattdessen unser Forum",
-        "equipment": "Ausstattung"
+        "equipment": "Ausstattung",
+        "enable_secure_connection": "Sichere Verbindung aktivieren (StartTLS/SSL)"
     },
     "timezone": {
         "asia_yerevan": "{{value}} Eriwan",
@@ -1851,7 +1882,28 @@
         "user_can_specify_forwarding_address": "Der Benutzer kann eine Weiterleitungsadresse angeben",
         "user_specified_forwarding_addresses_max_number_of_user_specific_forwarding_addresses": "vom Benutzer angegebene Weiterleitungsadressen + maximale Anzahl benutzerspezifischer Weiterleitungsadressen",
         "accounts_that_use_this_cos": "Konten, die diese Serviceklasse nutzen",
-        "domains_that_use_this_cos": "Domänen, die diese Serviceklasse nutzen"
+        "domains_that_use_this_cos": "Domänen, die diese Serviceklasse nutzen",
+        "preferences": {
+            "allowTheUserToAskForAReadReceipt": "Dem Benutzer erlauben, eine Lesebestätigung anzufordern"
+        },
+        "user_specific_fowarding_addresses": "Feld für benutzerdefinierte Weiterleitungsadressen auf (Zeichen) begrenzen",
+        "upload_max_size_per_file": "Maximal zulässige Größe (Byte) pro Anhang",
+        "unlimited": "Unbegrenzt",
+        "creatCOS": {
+            "cosNameInfo": "Der COS-Name darf nur Kleinbuchstaben enthalten."
+        },
+        "features": {
+            "twoFactorAuthenticator": "Zwei-Faktor-Authentifikator",
+            "allowUsersToConfigure2FA": "Benutzern erlauben, 2FA zu konfigurieren",
+            "allowUsersToConfigure2FAInfo": "Benutzer können ihr Einmalpasswort (OTP) über ihre Profileinstellungen einrichten und verwalten.",
+            "enforceOnUntrustedNetworks": "Bei nicht vertrauenswürdigen Netzwerken erzwingen",
+            "twoFactorAuthSetupEnforcement": "Erzwingung der Einrichtung des Zwei-Faktor-Authentifikators",
+            "allowSetupDeferralDuringGracePeriod": "Aufschieben der Einrichtung mit einer Kulanzfrist erlauben",
+            "allowSetupDeferralDuringGracePeriodInfo": "Benutzer können den Assistenten für einen begrenzten Zeitraum überspringen. Die Aufforderung wird bei jeder Anmeldung erneut angezeigt, bis die Einrichtung abgeschlossen ist oder die Kulanzfrist abläuft.",
+            "gracePeriodExpirationDate": "Ablaufdatum der Kulanzfrist festlegen",
+            "allowSetupFromUntrustedNetworks": "2FA-Einrichtung von nicht vertrauenswürdigen Netzwerken erlauben",
+            "allowSetupFromUntrustedNetworksInfo": "Ermöglicht Benutzern ohne OTP, den 2FA-Einrichtungsassistenten bei der Anmeldung von nicht vertrauenswürdigen Netzwerken abzuschließen. Deaktivieren Sie diese Option, um den Zugriff von nicht vertrauenswürdigen Netzwerken zu blockieren, bis die 2FA bereits konfiguriert ist."
+        }
     },
     "locale": {
         "English": "Englisch",
