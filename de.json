@@ -2481,7 +2481,8 @@
     "error": {
         "one_or_more_ip_invalid": "Eine oder mehrere IP-Adressen sind ungültig",
         "contact_support": "Kontaktieren Sie den Support oder versuchen Sie, die Seite neu zu laden",
-        "loading_page": "Es tut uns leid, aber es gab einen Fehler beim Laden dieser Seite."
+        "loading_page": "Es tut uns leid, aber es gab einen Fehler beim Laden dieser Seite.",
+        "something_went_wrong": "Etwas ist schiefgegangen"
     },
     "action": {
         "click_open": "Zum Öffnen anklicken",
