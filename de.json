@@ -1584,7 +1584,11 @@
             "next_validation_deadline_tooltip": "Dieses Datum stellt den letzten Tag dar, an dem die Lizenz noch voll funktionsfähig bleibt, falls keine Nutzungsdaten an den Zextras Subscription Service übermittelt werden.\n\nDa es sich um ein Pay-Per-Use-Abonnement (PPU) handelt, übermittelt das System automatisch täglich Nutzungsdaten an den Zextras Subscription Service. Solange die Kommunikation ordnungsgemäß funktioniert, ist keine Aktion durch den Benutzer erforderlich. Kann das System den Dienst nicht kontaktieren, wird eine Kulanzfrist von 7 Tagen angewendet. Diese Kulanzfrist wird automatisch erneuert, sobald der Zextras Subscription Service wieder erfolgreich kontaktiert werden kann.",
             "renew": "ERNEUERN",
             "maxCarbonioVersion": "Maximale Carbonio-Version",
-            "updateTime": "Zeit der letzten Aktualisierung"
+            "updateTime": "Zeit der letzten Aktualisierung",
+            "date_start": "Startdatum",
+            "last_validation_check": "Letzte Überprüfung der Gültigkeit",
+            "next_validation_deadline": "Nächste Validierungsfrist",
+            "date_end": "Enddatum"
         }
     },
     "message": {
@@ -2475,7 +2479,9 @@
     },
     "this_will_not_affect_data_already_stored": "Bereits gespeicherte Daten sind hiervon nicht betroffen",
     "error": {
-        "one_or_more_ip_invalid": "Eine oder mehrere IP-Adressen sind ungültig"
+        "one_or_more_ip_invalid": "Eine oder mehrere IP-Adressen sind ungültig",
+        "contact_support": "Kontaktieren Sie den Support oder versuchen Sie, die Seite neu zu laden",
+        "loading_page": "Es tut uns leid, aber es gab einen Fehler beim Laden dieser Seite."
     },
     "action": {
         "click_open": "Zum Öffnen anklicken",
@@ -2629,5 +2635,8 @@
             "mailbox": "Mail,Kalender,Kontakte",
             "wsc": "Chats"
         }
+    },
+    "button": {
+        "refresh_page": "SEITE NEU LADEN"
     }
 }
