@@ -1220,7 +1220,8 @@
         "send_feedback": "Feedback abschicken",
         "send_feedback_helperText": "<bold>Möchten Sie eine Änderung vorschlagen oder uns etwas mitteilen?</bold><br /><br />Teilen Sie Ihre Gedanken mit uns und helfen Sie dabei, ein besseres Carbonio CE zu gestalten. Wir freuen uns von Ihnen zu hören!",
         "send_feedback_helperText_carbonio": "<bold>Möchten Sie eine Änderung vorschlagen oder uns etwas mitteilen?</bold><br /><br />Teilen Sie Ihre Gedanken mit uns und helfen Sie dabei, ein besseres {{carbonio}} zu gestalten. Wir freuen uns von Ihnen zu hören!",
-        "use_our_forum": "Nutzen Sie stattdessen unser Forum"
+        "use_our_forum": "Nutzen Sie stattdessen unser Forum",
+        "equipment": "Ausstattung"
     },
     "timezone": {
         "asia_yerevan": "{{value}} Eriwan",
@@ -1578,7 +1579,12 @@
             "modules": "Module",
             "refresh": "Aktualisieren",
             "type": "Typ",
-            "valid_until": "Gültig bis"
+            "valid_until": "Gültig bis",
+            "last_validation_check_tooltip": "Dieses Datum stellt den letzten Tag dar, an dem die Lizenz vom Zextras Subscription Service validiert wurde.\n\nDa es sich um ein Pay-Per-Use-Abonnement (PPU) handelt, übermittelt das System automatisch täglich Nutzungsdaten an den Zextras Subscription Service. Solange die Kommunikation ordnungsgemäß funktioniert, ist keine Aktion durch den Benutzer erforderlich. Kann das System den Dienst nicht kontaktieren, wird eine Kulanzfrist von 7 Tagen angewendet. Diese Kulanzfrist wird automatisch erneuert, sobald der Zextras Subscription Service wieder erfolgreich kontaktiert werden kann.",
+            "next_validation_deadline_tooltip": "Dieses Datum stellt den letzten Tag dar, an dem die Lizenz noch voll funktionsfähig bleibt, falls keine Nutzungsdaten an den Zextras Subscription Service übermittelt werden.\n\nDa es sich um ein Pay-Per-Use-Abonnement (PPU) handelt, übermittelt das System automatisch täglich Nutzungsdaten an den Zextras Subscription Service. Solange die Kommunikation ordnungsgemäß funktioniert, ist keine Aktion durch den Benutzer erforderlich. Kann das System den Dienst nicht kontaktieren, wird eine Kulanzfrist von 7 Tagen angewendet. Diese Kulanzfrist wird automatisch erneuert, sobald der Zextras Subscription Service wieder erfolgreich kontaktiert werden kann.",
+            "renew": "ERNEUERN",
+            "maxCarbonioVersion": "Maximale Carbonio-Version",
+            "updateTime": "Zeit der letzten Aktualisierung"
         }
     },
     "message": {
@@ -1676,7 +1682,12 @@
         "backup_configuration": "Backup-Konfiguration",
         "append_metadata_instead_of_rewrite_faster_but_dangerous": "Metadaten anhängen statt neu schreiben (schneller, aber unsicherer)",
         "backup_is_enable_at_the_startup": "Das Backup wird beim Start aktiviert",
-        "backup_is_enabled_at_startup": "Backup wird beim Start aktiviert"
+        "backup_is_enabled_at_startup": "Backup wird beim Start aktiviert",
+        "initialising_backup_check_your_notifications_for_updates": "BACKUP WIRD INITIALISIERT ... PRÜFEN SIE IHRE BENACHRICHTIGUNGEN FÜR UPDATES",
+        "local_volume_reload_if_you_changed_this_value": "Lokaler Datenträger (neu laden, wenn Sie diesen Wert geändert haben)",
+        "config": {
+            "scheduleBackupPurge": "Backup-Bereinigung planen"
+        }
     },
     "cos": {
         "calendar_options": "Kalenderoptionen",
@@ -1834,7 +1845,9 @@
         "max_user_specific_forwarding_address": "Maximale Anzahl von Weiterleitungsadressen",
         "read_receipt_settings": "Empfangseinstellungen lesen",
         "user_can_specify_forwarding_address": "Der Benutzer kann eine Weiterleitungsadresse angeben",
-        "user_specified_forwarding_addresses_max_number_of_user_specific_forwarding_addresses": "vom Benutzer angegebene Weiterleitungsadressen + maximale Anzahl benutzerspezifischer Weiterleitungsadressen"
+        "user_specified_forwarding_addresses_max_number_of_user_specific_forwarding_addresses": "vom Benutzer angegebene Weiterleitungsadressen + maximale Anzahl benutzerspezifischer Weiterleitungsadressen",
+        "accounts_that_use_this_cos": "Konten, die diese Serviceklasse nutzen",
+        "domains_that_use_this_cos": "Domänen, die diese Serviceklasse nutzen"
     },
     "locale": {
         "English": "Englisch",
@@ -1875,7 +1888,9 @@
         "default_COS": "Standard COS",
         "change_password_for_next_login": "Das Passwort muss beim nächsten Login geändert werden",
         "user_will_change_password_on_next_login": "Benutzer ändert Passwort bei nächster Anmeldung",
-        "force_change_password": "Passwortänderung erzwingen"
+        "force_change_password": "Passwortänderung erzwingen",
+        "auto_fill_username_is_disabled": "Automatisches Ausfüllen des Benutzernamens ist deaktiviert",
+        "auto_fill_user_is_disabled": "Benutzer automatisch ausfüllen ist deaktiviert"
     },
     "account": {
         "new": {
@@ -2076,7 +2091,20 @@
         "set_global_config": "SetGlobal Konfiguration",
         "user_can_specify_forwarding_address": "Der Benutzer kann eine Weiterleitungsadresse angeben",
         "user_can_specify_mail_forwarding_filter": "Der Benutzer kann einen E-Mail-Weiterleitungsfilter festlegen",
-        "abq_status": "ABQ Status"
+        "abq_status": "ABQ Status",
+        "as_new_email_arrives": "Wenn eine neue E-Mail eintrifft",
+        "enable_new_mail_notifications": "Neue-E-Mail-Benachrichtigungen aktivieren",
+        "enable_new_mail_toast_notification": "Toast-Benachrichtigungen für neue E-Mails aktivieren",
+        "files": "Files",
+        "hidden_in_gal": "Vor globaler Adressliste verstecken",
+        "included_in_backup": "In das Backup einschließen",
+        "no": "Nein",
+        "otp_devices": "OTP Geräte",
+        "send_as_recipients": "Senden als (Empfänger sehen diese Absender-E-Mail {{targetEmail}}",
+        "send_recipients_see_the_mail": "{{right}} senden (Empfänger sehen diese Absender-E-Mail {{targetEmail}})",
+        "yes": "Ja",
+        "ask_read_receipts": "Erlauben, dass der Benutzer eine Lesebestätigung anfordern kann",
+        "unlimited": "Unbegrenzt"
     },
     "connection": {
         "access_key": "Access Key",
@@ -2451,7 +2479,8 @@
     },
     "action": {
         "click_open": "Zum Öffnen anklicken",
-        "click_preview": "Klicken zur Vorschau"
+        "click_preview": "Klicken zur Vorschau",
+        "mark_as_non_spam": "Kein Spam"
     },
     "messages": {
         "no_content": "Diese Nachricht hat keinen Textinhalt",
@@ -2593,5 +2622,12 @@
     "labels": {
         "help_center": "Hilfecenter"
     },
-    "create": "Erstellen"
+    "create": "Erstellen",
+    "quota": {
+        "module": {
+            "files": "Dateien (Files)",
+            "mailbox": "Mail,Kalender,Kontakte",
+            "wsc": "Chats"
+        }
+    }
 }
