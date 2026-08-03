@@ -2901,7 +2901,7 @@
     },
     "search": {
         "clear": "Очистить условия поиска",
-        "idle_input_label": "Искать в {{module}}",
+        "idle_input_label": "Поиск в разделе {{module}}",
         "module": "Модуль",
         "app": "Поиск",
         "start": "Начать поиск",
