@@ -1003,7 +1003,7 @@
         "ask_me": "Ρώτησέ με",
         "attachement_unknown": "Άγνωστο <{{mimeType}}>",
         "attachment": "Συνημμένο",
-        "attachment_plural": "προσαρτήσεις",
+        "attachment_plural": "Συνημμένα",
         "attachments_disclaimer": "Προβάλλετε ένα συνημμένο μήνυμα. Η αυθεντικότητα των συνημμένων μηνυμάτων δεν μπορεί να επαληθευτεί.",
         "attribute": "Χαρακτηριστικό",
         "auth_method": "Μέθοδος πιστοποίησης",
