@@ -1,1 +1,151 @@
-{}
+{
+    "commons": {
+        "create_another_account, CREATE ANOTHER ACCOUNT": " ",
+        "close": "დახურვა",
+        "next": "შემდეგი"
+    },
+    "error": {
+        "alreadyInUse": " "
+    },
+    "label": {
+        "create_another_account, CREATE ANOTHER ACCOUNT": " "
+    },
+    "newOtp": {
+        "printPinCodes": " "
+    },
+    "staticOTPCodes": {
+        "print": {
+            "eraseUsedPin": " ",
+            "howToUse": " ",
+            "keepInSafePlace": " ",
+            "login": " ",
+            "title": " ",
+            "typePin": " ",
+            "useOnce": " ",
+            "whenToUse": " "
+        }
+    },
+    "button": {
+        "refresh_page": "განახლება"
+    },
+    "account_details": {
+        "ADD": "დამატება",
+        "Chats": "ჩატები",
+        "DELETE": "წაშლა",
+        "NEXT": "შემდეგი",
+        "SAVE": "შენახვა",
+        "abstract": "აბსტრაქტული",
+        "aliases": "ფსევდონიმები",
+        "as": "როგორც",
+        "calendar": "კალენდარი",
+        "contact": "კონტაქტი",
+        "create": "შექმნა",
+        "domain": "დომენი",
+        "files": "ფაილები",
+        "general": "ზოგადი",
+        "label": "ჭდე",
+        "mail": "ფოსტა",
+        "manuallly": "ხელით",
+        "min_new_check_interval_value": "მნიშვნელობა",
+        "no": "არა",
+        "remove": "წაშლა",
+        "send": "გაგზავნა",
+        "send_check": "გაგზავნა",
+        "services": "სერვისები",
+        "sharing": "გაზიარება",
+        "status": "სტატუსი",
+        "tagging": "ჭდის დადება",
+        "yes": "დიახ",
+        "unlimited": "ულიმიტო"
+    },
+    "backup": {
+        "advanced": "დამატებით",
+        "general": "ზოგადი",
+        "kb": "კბ",
+        "latency": "დაყოვნება",
+        "metadata": "მეტამონაცემები",
+        "ms": "MS",
+        "range": "შუალედი",
+        "running": "გაშვებულია",
+        "schedule": "განრიგი",
+        "stopped": "გაჩერებულია"
+    },
+    "buckets": {
+        "alibaba_regions": {
+            "ap_southeast_1": "სინგაპური"
+        },
+        "connection": {
+            "notes": "შენიშვნები"
+        },
+        "global": "გლობალური",
+        "s3_types": {
+            "ceph": "Ceph",
+            "minio": "MinIO"
+        },
+        "summary": {
+            "notes": "შენიშვნები"
+        }
+    },
+    "connection": {
+        "notes": "შენიშვნები"
+    },
+    "core": {
+        "subscription": {
+            "accounts": "ანგარიშები",
+            "activate": "გააქტიურება",
+            "activation": "აქტივაცია",
+            "bundle": "პაკეტი",
+            "customer": "მომხმარებელი",
+            "deactivate": "დეაქტივაცია",
+            "hide": "დამალვა",
+            "modal": {
+                "cancel": "არა"
+            },
+            "modules": "მოდულები",
+            "provider": "მომწოდებელი",
+            "refresh": "განახლება",
+            "status": "სტატუსი",
+            "token": "ტოკენი",
+            "type": "ტიპი",
+            "valid": "სწორია",
+            "renew": "განახლება"
+        }
+    },
+    "cos": {
+        "active_sync": "ActiveSync",
+        "advanced": "დამატებით",
+        "calendar": "კალენდარი",
+        "chats": "ჩატები",
+        "contacts": "კონტაქტები",
+        "disabled": "გათიშულია",
+        "enabled": "ჩართულია",
+        "files": "ფაილები",
+        "forwarding": "გადაგზავნა",
+        "language": "ენა",
+        "mail": "ფოსტა",
+        "manuallly": "ხელით",
+        "password": "პაროლი",
+        "quotas": "კვოტები",
+        "status": "სტატუსი",
+        "tagging": "ჭდის დადება",
+        "unlimited": "ულიმიტო"
+    },
+    "dashboard": {
+        "carbonio": "Carbonio",
+        "description": "აღწერა"
+    },
+    "domain": {
+        "active_sync": "ActiveSync",
+        "advanced": "დამატებით",
+        "dav": "DAV",
+        "desktop_app": "DesktopSync",
+        "desktop_sync": "DesktopSync",
+        "free_busy": "თავისუფალი/დაკავებული",
+        "gal": "GAL",
+        "gal_change_mode_both": "ორივე",
+        "gal_change_mode_external": "გარე",
+        "gal_change_mode_internal": "შიდა",
+        "imap": "IMAP",
+        "ldap": "LDAP"
+    }
+}
