@@ -1,8 +1,8 @@
 {
     "error": {
         "contact_support": "Επικοινωνήστε με την υποστήριξη ή δοκιμάστε να ανανεώσετε τη σελίδα",
-        "something_went_wrong": "Παρουσιάστηκε κάποιο σφάλμα",
-        "loading_page": "Λυπούμαστε, αλλά παρουσιάστηκε σφάλμα κατά την προσπάθεια φόρτωσης αυτής της σελίδας.",
+        "something_went_wrong": "Κάτι πήγε στραβά",
+        "loading_page": "Λυπούμαστε, αλλά προέκυψε σφάλμα κατά την προσπάθεια φόρτωσης αυτής της σελίδας.",
         "invalid_ip_address_error_text": "Η υποστηριζόμενη μορφή IP για IPv4 είναι ipv4/netmask και για IPv6 είναι [ipv6]/netmask",
         "one_or_more_ip_invalid": "Μία ή περισσότερες διευθύνσεις IP είναι μη έγκυρες"
     },
@@ -980,7 +980,7 @@
         "allowed": "Επιτρέπεται",
         "allowed_sending_addresses": "Επιτρεπόμενες διευθύνσεις αποστολής",
         "always_allow_address": "Να επιτρέπεται πάντα η αποστολή από <strong>{{values}}</strong>",
-        "always_allow_domain": "Να επιτρέπεται πάντα η αποστολή από τον τομέα <strong>{{values}}</strong>",
+        "always_allow_domain": "Να επιτρέπεται πάντα από <strong>{{values}}</strong> domain",
         "always_compose_in_new_window": "Πάντα σύνταξη σε νέο παράθυρο",
         "always_compose_mail_using": "Πάντα σύνταξη μηνυμάτων χρησιμοποιώντας",
         "always_send_read_receipt": "Πάντα αποστολή επιβεβαίωσης ανάγνωσης",
@@ -1004,7 +1004,7 @@
         "attachement_unknown": "Άγνωστο <{{mimeType}}>",
         "attachment": "Συνημμένο",
         "attachment_plural": "Συνημμένα",
-        "attachments_disclaimer": "Προβάλλετε ένα συνημμένο μήνυμα. Η αυθεντικότητα των συνημμένων μηνυμάτων δεν μπορεί να επαληθευτεί.",
+        "attachments_disclaimer": "Βλέπετε ένα συνημμένο μήνυμα. Η αυθεντικότητα των συνημμένων μηνυμάτων δεν μπορεί να επαληθευτεί.",
         "attribute": "Χαρακτηριστικό",
         "auth_method": "Μέθοδος πιστοποίησης",
         "authentication": "Πιστοποίηση",
@@ -1274,7 +1274,7 @@
         "dont_save_a_copy_of_sent_messages": "Να μην αποθηκεύεται αντίγραφο των αποσταλμένων μηνυμάτων",
         "dont_save_it": "Να μην αποθηκευτεί",
         "download": "ΛΗΨΗ",
-        "download_plural": "",
+        "download_plural": "ΛΗΨΕΙΣ",
         "download_pdf": "ΛΗΨΗ PDF",
         "download_quota_Report": "Λήψη αναφοράς ορίου",
         "draft_auto_save_interval": "Διάστημα αυτόματης αποθήκευσης προσχεδίων",
@@ -1618,7 +1618,7 @@
         "number_of_items_to_fetch_when_scrolling": "Αριθμός στοιχείων προς ανάκτηση κατά την κύλιση",
         "object_storage": "Αποθήκευση αντικειμένων",
         "of": "από",
-        "of_unlimited": "of unlimited",
+        "of_unlimited": "απεριόριστο",
         "on_startup_and_scheduled": "Κατά την εκκίνηση και σύμφωνα με το πρόγραμμα",
         "on_startup_only": "Μόνο κατά την εκκίνηση",
         "only_allow_outbound_disclaimers": "Επισύναψη δήλωσης αποποίησης ευθύνης μόνο σε εξερχόμενα μηνύματα ηλεκτρονικού ταχυδρομείου",
@@ -1769,7 +1769,7 @@
         "save_it_only_in_sender_folder": "Αποθήκευσέ το στο {{email}} και στο φάκελο του εξουσιοδοτημένου",
         "save_mails_to": "Αποθήκευση μηνυμάτων σε",
         "save_the_changes": "Αποθήκευση αλλαγών",
-        "save_to_files": "Αποθήκευση σε αρχεία",
+        "save_to_files": "Αποθήκευση στα Αρχεία",
         "save_to_sent_folder": "Αποθήκευση στο φάκελο 'Απεσταλμένα'",
         "schedule_policy": "Ορισμός πολιτικής",
         "scheduled": "Προγραμματισμένο",
@@ -1838,7 +1838,7 @@
         "sharing_options": "Επιλογές κοινοποίησης",
         "show_all": "Εμφάνιση όλων",
         "show_forget_password_link": "Εμφάνιση συνδέσμου \"Ξεχάσατε τον κωδικό πρόσβασης\" στη σελίδα σύνδεσης",
-        "show_quoted_text": "Εμφάνιση κειμένου που έχει αναφερθεί",
+        "show_quoted_text": "Εμφάνιση παρατιθέμενου κειμένου",
         "show_reminder": "Εμφάνιση υπενθύμισης",
         "show_time_zone_list_in_appointment_view": "Εμφάνιση λίστας ζωνών ώρας στην προβολή ραντεβού",
         "showing": "Εμφάνιση",
@@ -1847,7 +1847,7 @@
         "single_server": "Ενιαίος διακομιστής",
         "size_kb": "Μέγεθος (KB)",
         "size_threshold": "Όριο μεγέθους",
-        "smartscan": "Smartscan",
+        "smartscan": "Έξυπνη σάρωση",
         "smime": "S/MIME",
         "snackbar": {
             "share": {
@@ -1912,7 +1912,7 @@
         "this_list_is_member_of": "Αυτή η λίστα αποτελεί μέρος της",
         "this_listcan_receive_email": "Αυτή η λίστα μπορεί να λαμβάνει email",
         "time_window_for_allowed_requests": "Χρονικό παράθυρο για επιτρεπόμενες αιτήσεις (ms)",
-        "time_zone": "Ζώνη ώρας",
+        "time_zone": "Ζώνη Ώρας",
         "timezone": "Ζώνη ώρας",
         "title": "Τίτλος",
         "title_and_copyrights_information": "Πληροφορίες τίτλου και πνευματικών δικαιωμάτων",
@@ -2219,7 +2219,10 @@
         "volume_details": "Λεπτομέρειες τόμου",
         "volume_options": "Επιλογές τόμου",
         "volume_role": "Ρόλος τόμου",
-        "warning": "Προειδοποίηση"
+        "warning": "Προειδοποίηση",
+        "external_account_settings": "Ρυθμίσεις Εξωτερικού Λογαριασμού",
+        "feedback": "Σχόλια",
+        "recipents": "Παραλήπτες"
     },
     "locale": {
         "English": "Αγγλικά",
@@ -2262,29 +2265,29 @@
         "add_here_any_blocked_extension": "Προσθέστε εδώ οποιαδήποτε αποκλεισμένη επέκταση"
     },
     "message": {
-        "external_images_blocked": "Οι εξωτερικές εικόνες έχουν αποκλειστεί για την προστασία σας από πιθανό spam",
+        "external_images_blocked": "Οι εξωτερικές εικόνες έχουν αποκλειστεί για την προστασία σας από πιθανή ανεπιθύμητη αλληλογραφία",
         "snackbar": {
             "all_att_saved": "Τα συνημμένα αποθηκεύτηκαν με επιτυχία στον επιλεγμένο φάκελο",
-            "att_err": "Φαίνεται να υπάρχει πρόβλημα κατά την αποθήκευση, παρακαλώ δοκιμάστε ξανά",
+            "att_err": "Φαίνεται ότι υπάρχει πρόβλημα κατά την αποθήκευση, δοκιμάστε ξανά",
             "att_saved": "Το συνημμένο αποθηκεύτηκε στον επιλεγμένο φάκελο",
             "share": {
-                "accepted": "Έχετε αποδεχτεί το αίτημα κοινοποίησης"
+                "accepted": "Έχετε αποδεχτεί το αίτημα κοινής χρήσης"
             },
-            "some_att_fails": "Φαίνεται να υπάρχει πρόβλημα κατά την αποθήκευση ορισμένων αρχείων, παρακαλώ δοκιμάστε ξανά",
+            "some_att_fails": "Φαίνεται ότι υπάρχει πρόβλημα κατά την αποθήκευση ορισμένων αρχείων, δοκιμάστε ξανά",
             "identities_quota_exceeded": "Δεν ήταν δυνατή η δημιουργία της ταυτότητας, καθώς έχετε υπερβεί το όριο ταυτοτήτων σας",
             "okay_got_it": "Εντάξει, το κατάλαβα",
             "our_interface_does_not_support_tablets_and_smartphones": "Η διεπαφή μας δεν υποστηρίζει tablet και smartphone, κάτι που μπορεί να οδηγήσει σε προβλήματα απεικόνισης. Παρακαλούμε χρησιμοποιήστε επιτραπέζιο ή φορητό υπολογιστή για βέλτιστη απόδοση. Εργαζόμαστε για τη συμβατότητα με κινητές συσκευές στο μέλλον. Σας ευχαριστούμε.",
-            "settings_saved": "Οι αλλαγές αποθηκεύτηκαν με επιτυχία"
+            "settings_saved": "Οι αλλαγές αποθηκεύτηκαν σωστά"
         },
         "reload": "\tΘέλετε να φορτώσετε εκ νέου την εφαρμογή τώρα για να εμφανιστεί η νέα γλώσσα;\n(Διαφορετικά, η νέα γλώσσα θα εμφανιστεί την επόμενη φορά που θα συνδεθείτε.)"
     },
     "messages": {
-        "no_content": "Αυτό το μήνυμα δεν περιέχει κείμενο",
+        "no_content": "Αυτό το μήνυμα δεν έχει περιεχόμενο κειμένου",
         "snackbar": {
-            "marked_as_spam": "Έχετε επισημάνει αυτό το e-mail ως ανεπιθύμητο"
+            "marked_as_spam": "Έχετε επισημάνει αυτό το e-mail ως Ανεπιθύμητο"
         },
         "permanent_delete_body": "Εάν διαγράψετε οριστικά αυτό το Persona, δεν θα μπορείτε να το ανακτήσετε. Θέλετε να συνεχίσετε;",
-        "permanent_delete_title": "Είστε σίγουροι ότι θέλετε να διαγράψετε οριστικά αυτό το στοιχείο;"
+        "permanent_delete_title": "Είστε βέβαιοι ότι θέλετε να διαγράψετε οριστικά αυτό το στοιχείο;"
     },
     "modal": {
         "iscurrent_confirm": {
@@ -2323,7 +2326,7 @@
         "block_spam_tolerance": "Ανοχή αποκλεισμού ανεπιθύμητης αλληλογραφίας",
         "check_client_host_name": "Έλεγχος Hostname",
         "client_must_greet_with_fully_qualified_hostname": "Ο πελάτης πρέπει να διαθέτει qualified hostname",
-        "client_must_greet_with_resolving_hostname": "Ο πελάτης πρέπει να διαθέτει  resolving hostname",
+        "client_must_greet_with_resolving_hostname": "Ο πελάτης πρέπει να διαθέτει resolving hostname",
         "clients_ip_address": "Διεύθυνση IP του πελάτη",
         "command_time_to_live_value": "Διάρκεια ισχύος εντολής (τιμή)",
         "corrupt": "Κατεστραμμένο",
@@ -2410,10 +2413,10 @@
         "reject_emails_from_client_domain_hostname": "Απόρριψη μηνυμάτων από πελάτες των οποίων το όνομα κεντρικού υπολογιστή HELO/EHLO δεν περιέχει πλήρως προσδιορισμένο όνομα τομέα (FQDN)",
         "reject_emails_from_client_hostnames": "Απόρριψη μηνυμάτων από πελάτες με άγνωστα ή μη επιλύσιμα ονόματα κεντρικού υπολογιστή",
         "reject_emails_from_client_with_inresolved_helo_hostnames": "Απόρριψη μηνυμάτων από πελάτες με μη επιλύσιμα HELO/EHLO hostnames",
-        "reject_emails_from_client_with_unknown_unresolvable_reverse_hostname": "Απορρίπτει μηνύματα  από πελάτες με άγνωστα ή μη επιλύσιμα reverse hostnames",
+        "reject_emails_from_client_with_unknown_unresolvable_reverse_hostname": "Απορρίπτει μηνύματα από πελάτες με άγνωστα ή μη επιλύσιμα reverse hostnames",
         "reject_emails_from_unknown_or_unresolvable_sender_domains": "Απορρίπτει μηνύματα ηλεκτρονικού ταχυδρομείου από άγνωστους ή μη επιλύσιμους τομείς αποστολέα",
-        "reject_emails_from_unlisted_senders": "Απόρριψη μηνυμάτων  από αποστολείς που δεν περιλαμβάνονται στη λίστα",
-        "reject_emails_when_sender_login_does_not_match_authenticated_user": "Απόρριψη μηνυμάτων  όταν τα στοιχεία σύνδεσης του αποστολέα δεν ταιριάζουν με τον πιστοποιημένο χρήστη",
+        "reject_emails_from_unlisted_senders": "Απόρριψη μηνυμάτων από αποστολείς που δεν περιλαμβάνονται στη λίστα",
+        "reject_emails_when_sender_login_does_not_match_authenticated_user": "Απόρριψη μηνυμάτων όταν τα στοιχεία σύνδεσης του αποστολέα δεν ταιριάζουν με τον πιστοποιημένο χρήστη",
         "reject_emails_with_an_invalid_or_unresolvable_helo_hostname": "Απόρριψη μηνυμάτων ηλεκτρονικού ταχυδρομείου με μη έγκυρο ή μη επιλύσιμο όνομα κεντρικού υπολογιστή HELO",
         "reject_emails_with_non_fully_qualified_domain_name_sender_address": "Απόρριψη μηνυμάτων με διευθύνσεις αποστολέα που δεν είναι πλήρως προσδιορισμένα ονόματα τομέα (FQDN)",
         "reject_sender_login_mismatch_or_empty": "Απόρριψη λόγω αναντιστοιχίας ή κενής ταυτότητας αποστολέα ",
@@ -2495,7 +2498,7 @@
         "done": "Τέλος",
         "done_panel_heading": "Οι λειτουργίες ολοκληρώθηκαν",
         "label": {
-            "Deep": "Deep",
+            "Deep": "Εκτενής",
             "action(M)": "Ενέργεια (M)",
             "cancel_operation_btn": "ΑΚΥΡΩΣΗ ΛΕΙΤΟΥΡΓΙΑΣ",
             "create_fake_blob": "Δημιουργία ψεύτικου blob",
@@ -2568,7 +2571,7 @@
     },
     "reminder": {
         "minute": "{{count}} λεπτό",
-        "minute_plural": ""
+        "minute_plural": "{{count}} λεπτά"
     },
     "select_bucket_or_create_bucket": "Φαίνεται ότι δεν έχετε ρυθμίσει τύπο bucket. \n Κάντε κλικ στο κουμπί \"ΔΗΜΙΟΥΡΓΙΑ +\" για να δημιουργήσετε ένα νέο.",
     "select_bucket_or_create_new_bucket": "Φαίνεται ότι δεν έχετε ρυθμίσει τύπο bucket. Κάντε κλικ στο κουμπί \"NEW BUCKET\" για να δημιουργήσετε ένα νέο.",
@@ -2616,7 +2619,7 @@
         "america_miquelon": "{{value}} Μικελόν",
         "america_montevideo": "{{value}} Μοντεβιδέο",
         "america_new_york": "{{value}} Ανατολική ώρα ΗΠΑ/Καναδά",
-        "america_phoenix": "{ {value}} Αριζόνα",
+        "america_phoenix": "{{value}} Αριζόνα",
         "america_port-au-prince": "{{value}} Πορτ-ο-Πρενς",
         "america_punta_arenas": "{{value}} Πούντα Αρένας",
         "america_regina": "{{value}} Σασκάτσουαν",
@@ -2632,7 +2635,7 @@
         "asia_bangkok": "{{value}} Μπανγκόκ, Ανόι, Τζακάρτα",
         "asia_barnaul": "{{value}} Μπαρναούλ",
         "asia_beirut": "{{value}} Βηρυτός",
-        "asia_chita": "{ {value}} Τσίτα",
+        "asia_chita": "{{value}}Τσίτα",
         "asia_colombo": "{{value}} Σρι Τζαγιαβαρντενεπούρα Κόττε",
         "asia_damascus": "{{value}} Δαμασκός",
         "asia_dhaka": "{{value}} Ντάκα",
@@ -2643,7 +2646,7 @@
         "asia_jerusalem": "{{value}} Ιερουσαλήμ",
         "asia_kabul": "{{value}} Καμπούλ",
         "asia_kamchatka": "{{value}} Αναδύρ, Πετροπαβλόφσκ-Καμτσάτσκι (RTZ 11)",
-        "asia_karachi": "{ {value}} Ισλαμαμπάντ, Καράτσι",
+        "asia_karachi": "{{value}} Ισλαμαμπάντ, Καράτσι",
         "asia_kathmandu": "{{value}} Κατμαντού",
         "asia_kolkata": "{{value}} Τσενάι, Καλκούτα, Βομβάη, Νέο Δελχί",
         "asia_krasnoyarsk": "{{value}} Κρασνογιάρσκ (RTZ 6)",
@@ -2672,7 +2675,7 @@
         "asia_yekaterinburg": "{{value}} Εκατερίνμπουργκ (RTZ 4)",
         "asia_yerevan": "{{value}} Ερεβάν",
         "atlantic_azores": "{{value}} Αζόρες",
-        "atlantic_cape_verde": "{{value}} Νήσοι Πράσινο Ακρωτήριο",
+        "atlantic_cape_verde": "{{value}} Νήσοι Πράσινο Ακρωτήριο.",
         "atlantic_south_georgia": "{{value}} Μεσοατλαντικός",
         "australia_adelaide": "{{value}} Αδελαΐδα",
         "australia_brisbane": "{{value}} Μπρίσμπεϊν",
@@ -2688,7 +2691,7 @@
         "europe_belgrade": "{{value}} Βελιγράδι, Μπρατισλάβα, Βουδαπέστη, Λιουμπλιάνα, Πράγα",
         "europe_berlin": "{{value}} Άμστερνταμ, Βερολίνο, Βέρνη, Ρώμη, Στοκχόλμη, Βιέννη",
         "europe_brussels": "{{value}} Βρυξέλλες, Κοπεγχάγη, Μαδρίτη, Παρίσι",
-        "europe_bucharest": "{ {value}} Βουκουρέστι",
+        "europe_bucharest": "{{value}}Βουκουρέστι",
         "europe_chisinau": "{{value}} Κισινάου",
         "europe_helsinki": "{{value}} Ελσίνκι, Κίεβο, Ρίγα, Σόφια, Ταλίν, Βίλνιους",
         "europe_istanbul": "{{value}} Κωνσταντινούπολη",
@@ -2735,7 +2738,7 @@
         "brasilia": "{{value}} Μπραζίλια",
         "britain_ireland_portugal": "{{value}} Βρετανία, Ιρλανδία, Πορτογαλία",
         "brussels_copenhagen_madrid_paris ": "{{value}} Βρυξέλλες, Κοπεγχάγη, Μαδρίτη, Παρίσι ",
-        "cape_verde_is": "{{value}} Νήσοι του Πράσινου Ακρωτηρίου",
+        "cape_verde_is": "{{value}} Νήσοι του Πράσινου Ακρωτηρίου.",
         "caracas": "{{value}} Καράκας",
         "casablanca": "{{value}} Καζαμπλάνκα",
         "cayenne_fortaleza": "{{value}} Καγιέν, Φορταλέζα",
@@ -2792,7 +2795,7 @@
         "samoa": "{{value}} Σαμόα",
         "sarajevo_skopje_warsaw_zagreb": "{{value}} Σαράγεβο, Σκόπια, Βαρσοβία, Ζάγκρεμπ",
         "saskatchewan": "{{value}} Σασκάτσουαν",
-        "sri_jayawardenepura_kotte": "{ {value}} Σρι Τζαγιαβαρντενεπούρα Κόττε",
+        "sri_jayawardenepura_kotte": "{{value}} Σρι Τζαγιαβαρντενεπούρα Κόττε",
         "tbilisi": "{{value}} Τιφλίδα",
         "tehran": "{{value}} Τεχεράνη",
         "us_canada_central": "{{value}} Κεντρικές ΗΠΑ/Καναδά",
@@ -2988,7 +2991,7 @@
         "success": "Σας ευχαριστούμε για τα σχόλιά σας",
         "user_interface": "Διεπαφή χρήστη",
         "write_here": "Γράψτε τα σχόλιά σας εδώ",
-        "write_here_placeholder_text": "Γεια σας! Ξεκινήστε να γράφετε εδώ τα σχόλιά σας :) \n\n\nΑυτά θα σταλούν ανώνυμα, οπότε πείτε μας τι κάναμε καλά ή λάθος χωρίς να το φιλτράρετε"
+        "write_here_placeholder_text": "Γεια σας! Ξεκινήστε να γράφετε εδώ τα σχόλιά σας :) \n\n\nΑυτά θα σταλούν ανώνυμα, οπότε πείτε μας τι κάναμε καλά\nή λάθος χωρίς να το φιλτράρετε"
     },
     "labels": {
         "help_center": "Κέντρο βοήθειας"
@@ -3090,12 +3093,12 @@
     },
     "banner": {
         "maintenance-expired-description": "Η περίοδος συντήρησης έχει λήξει.",
-        "maintenance-expired-label": "Η συντήρησή σας υποστηρίζει εκδόσεις Carbonio έως την {{maxCarbonioVersion}}. Εγκατεστημένη έκδοση: {{carbonioVersion}}.\nΜην πραγματοποιήσετε αναβάθμιση πέραν της {{maxCarbonioVersion}} για να αποφύγετε διακοπή της υπηρεσίας.\nΓια να συνεχίσετε να λαμβάνετε ενημερώσεις, επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να ανανεώσετε τη συντήρησή σας. nΤελευταία ενημέρωση άδειας: {{updateTime}}",
+        "maintenance-expired-label": "Η συντήρησή σας υποστηρίζει εκδόσεις Carbonio έως την {{maxCarbonioVersion}}. Εγκατεστημένη έκδοση: {{carbonioVersion}}.\nΜην πραγματοποιήσετε αναβάθμιση πέραν της {{maxCarbonioVersion}} για να αποφύγετε διακοπή της υπηρεσίας.\nΓια να συνεχίσετε να λαμβάνετε ενημερώσεις, επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να ανανεώσετε τη συντήρησή σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}",
         "maintenance-expiring-description": "Η συντήρηση λήγει στις {{maintenanceEndDate}}.",
-        "maintenance-expiring-label": "Ανανεώστε για να συνεχίσετε να λαμβάνετε ενημερώσεις. nΗ συντήρησή σας υποστηρίζει αναβαθμίσεις έως την έκδοση Carbonio {{maxCarbonioVersion}}.\nΠαρακαλούμε επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να προγραμματίσετε την ανανέωση της συντήρησής σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}",
+        "maintenance-expiring-label": "Ανανεώστε για να συνεχίσετε να λαμβάνετε ενημερώσεις.\nΗ συντήρησή σας υποστηρίζει αναβαθμίσεις έως την έκδοση Carbonio {{maxCarbonioVersion}}.\nΠαρακαλούμε επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να προγραμματίσετε την ανανέωση της συντήρησής σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}",
         "maintenance-invalid-description": "Η συντήρησή σας δεν υποστηρίζει την έκδοση Carbonio {{carbonioVersion}}.",
         "maintenance-invalid-label": "Μέγιστη υποστηριζόμενη έκδοση: {{maxCarbonioVersion}}.\nΠαρακαλούμε επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να ενημερώσετε ή να ανανεώσετε τη συντήρησή σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}",
-        "maintenance-expiring-empty-max-version-label": "Ανανεώστε για να συνεχίσετε να λαμβάνετε ενημερώσεις. nΗ συντήρησή σας υποστηρίζει αναβαθμίσεις έως το Carbonio Μη καθορισμένο.\nΠαρακαλούμε επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να προγραμματίσετε την ανανέωση της συντήρησής σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}",
+        "maintenance-expiring-empty-max-version-label": "Ανανεώστε για να συνεχίσετε να λαμβάνετε ενημερώσεις.\nΗ συντήρησή σας υποστηρίζει αναβαθμίσεις έως το Carbonio Μη καθορισμένο.\nΠαρακαλούμε επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να προγραμματίσετε την ανανέωση της συντήρησής σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}",
         "maintenance-expired-empty-max-version-label": "Η συντήρησή σας υποστηρίζει εκδόσεις του Carbonio έως το Μη καθορισμένο. Εγκατεστημένη έκδοση: {{carbonioVersion}}.\nΜην πραγματοποιήσετε αναβάθμιση πέραν του 'Δεν έχει οριστεί' για να αποφύγετε διακοπή της υπηρεσίας.\nΓια να συνεχίσετε να λαμβάνετε ενημερώσεις, επικοινωνήστε με τον πάροχο της άδειας χρήσης σας για να ανανεώσετε τη συντήρησή σας.\nΤελευταία ενημέρωση άδειας: {{updateTime}}"
     },
     "tooltip": {
@@ -3111,7 +3114,7 @@
         "available": "Διαθέσιμο",
         "module": {
             "files": "Αρχεία",
-            "mailbox": "Μηνύματα, Ημερολόγια, Επαφές",
+            "mailbox": "E-mail, Ημερολόγια, Επαφές",
             "wsc": "Συνομιλίες"
         }
     },
