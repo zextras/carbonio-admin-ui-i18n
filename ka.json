@@ -128,7 +128,7 @@
         "enabled": "ჩართულია",
         "equipment": "აღჭურვილობა",
         "error": "{{message}}",
-        "everyone": "ყველა",
+        "everyone": "ყველა მომხმარებელი",
         "ex": "მაგ.",
         "example": "მაგალითი",
         "example_lbl": "მაგალითი:",
@@ -369,7 +369,8 @@
         "change": "შეცვლა",
         "definition": "აღწერა",
         "options": "მორგება",
-        "warning": "გაფრთხილება"
+        "warning": "გაფრთხილება",
+        "clear_search_query": "ძებნის გასუფთავება"
     },
     "newOtp": {
         "printPinCodes": " "
@@ -749,7 +750,8 @@
         "available": "ხელმისაწვდომია",
         "module": {
             "files": "ფაილები",
-            "wsc": "ჩატები"
+            "wsc": "ჩატები",
+            "mailbox": "ელფოსტა, კალენდრები, კონტაქტები"
         }
     },
     "storage": {
