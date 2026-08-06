@@ -734,7 +734,7 @@
         "default_view": {
             "day": "დღის ხედი",
             "list": "სიის ხედი",
-            "month": "თვეის ხედი",
+            "month": "თვის ხედი",
             "week": "კვირის ხედი"
         },
         "delegate_rights": "დელეგატის უფლებები",
@@ -948,7 +948,7 @@
         "default_view": {
             "day": "დღის ხედი",
             "list": "სიის ხედი",
-            "month": "თვეის ხედი",
+            "month": "თვის ხედი",
             "week": "კვირის ხედი"
         },
         "disabling_pool": "პულის გათიშვა",
@@ -1201,7 +1201,12 @@
         "postscreen_tuning": "Postscreen-ის მორგება",
         "protocol_checks": "პროტოკოლის შემოწმებები",
         "queued_messages": "შეტყობინებების რიგი",
-        "relay_host": "რელეური ჰოსტი"
+        "relay_host": "რელეური ჰოსტი",
+        "restart_scan": "სკანირების თავიდან გაშვება",
+        "scan_completed": "სკანირება დასრულდა",
+        "senders_domain": "გამომგზავნის დომენი",
+        "server_name": "სერვერის სახელი",
+        "updated_at": "განახლების დროა"
     },
     "new": "ახალი",
     "new_bucket_connection": "კავშირი",
@@ -1213,7 +1218,9 @@
         "information": "ინფორმაცია",
         "list": "სია",
         "manage": "მართვა",
-        "warning": "გაფრთხილება"
+        "warning": "გაფრთხილება",
+        "notification_details": "გაფრთხილების დეტალები",
+        "notifications_list": "გაფრთხილებების სია"
     },
     "operations": {
         "copy_btn": "კოპირება",
@@ -1223,25 +1230,52 @@
             "Deep": "ღრმა",
             "notifications": "გაფრთხილებები",
             "operation_model_message": "{{OperationMsg}}",
-            "status": "სტატუსი"
+            "status": "სტატუსი",
+            "action(M)": "ქმედება (M)",
+            "cancel_operation_btn": "ოპერაციის გაუქმება",
+            "operation_type": "ოპერაციის ტიპი",
+            "started_at": "დაწყების დრო",
+            "stop_operation_btn": "ოპერაციის გაჩერება",
+            "submitted_at": "გადაცემის დრო"
         },
         "operations_list_header": {
             "author": "ავტორი",
             "operation": "ოპერაცია",
             "server": "სერვერი",
-            "status": "სტატუსი"
+            "status": "სტატუსი",
+            "start_date": "დაწყების თარიღი",
+            "submit_date": "გადაცემის თარიღი"
         },
         "other": "სხვა",
         "queued": "რიგშია",
-        "running": "გაშვებულია"
+        "running": "გაშვებულია",
+        "cancel_opearation_btn": "ოპერაციის გაუქმება",
+        "done_panel_heading": "დასრულებული ოპერაციები",
+        "queued_panel_heading": "ოპერაციები რიგში",
+        "running_panel_heading": "გაშვებული ოპერაციები",
+        "stop_opearation_btn": "ოპერაციის გაჩერება"
     },
     "quarantine": {
         "deliver": "მიწოდება",
         "download": "გადმოწერა",
-        "quarantine": "კარანტინი"
+        "quarantine": "კარანტინი",
+        "attachment_deleted": "მიმაგრებული ფაილი წაიშალა",
+        "delete_message": "შეტყობინების წაშლა",
+        "hide_source": "წყაროს დამალვა",
+        "message_deleted": "შეტყობინება წაიშალა",
+        "message_delivered": "შეტყობინება მიწოდებულია",
+        "no_cancel": "არა, გააუქმე",
+        "quarantine_account": "კარანტინის ანგარიში",
+        "quarantine_messages": "შეტყობინებები კარანტინში",
+        "refresh_list": "სიის განახლება",
+        "show_images": "გამოსახულებების ჩვენება",
+        "show_source": "წყაროს ჩვენება",
+        "yes_delete_message": "დიახ, წაშალე",
+        "yes_deliver": "დიახ, მიაწოდე"
     },
     "virtual_hosts": {
-        "load": "ჩატვირთვა"
+        "load": "ჩატვირთვა",
+        "load_certificate": "სერტიფიკატის ჩატვირთვა"
     },
     "volume": {
         "indexer_helperText": "დამაინდექსებელი",
@@ -1254,25 +1288,30 @@
             "indexer": "დამაინდექსებელი",
             "primary": "ძირითადი",
             "secondary": "დამხმარე",
-            "server": "სერვერი"
+            "server": "სერვერი",
+            "HSM Scheduling": "HSM-ის განრიგი",
+            "server_name": "სერვერის სახელი"
         },
         "volume_allocation_list": {
             "centralized": "ცენტრალიზებული",
             "external": "გარე",
             "local": "ლოკალური",
-            "sproxy": "Sproxy"
+            "sproxy": "Sproxy",
+            "object_storage": "ობიექტური საცავი"
         },
         "volume_config_header": {
             "indexer": "დამაინდექსებელი",
             "name": "სახელი",
-            "status": "სტატუსი"
+            "status": "სტატუსი",
+            "hsm_scheduled": "HSM დაგეგმილია"
         },
         "volume_header": {
             "compression": "შეკუმშვა",
             "current": "მიმდინარე",
             "id": "ID",
             "name": "სახელი",
-            "path": "ბილიკი"
+            "path": "ბილიკი",
+            "storageType": "საცავის ტიპი"
         },
         "volume_indexer_header": {
             "current": "მიმდინარე",
@@ -1284,18 +1323,24 @@
             "index": "ინდექსი",
             "primary": "ძირითადი",
             "secondary": "დამხმარე"
-        }
+        },
+        "not_running": "გაშვებული არაა",
+        "serverName_volumes": "{{serverName}}-ის ტომები"
     },
     "welcome": "მოგესალმებით",
     "create": "შექმნა",
     "feedback": {
         "behaviors": "ქცევები",
         "other": "სხვა",
-        "send": "გაგზავნა"
+        "send": "გაგზავნა",
+        "enable_feedback": "უკუკავშირის ჩართვა",
+        "missing_features": "ნაკლული ფუნქციები",
+        "user_interface": "მომხმარებლის ინტერფეისი"
     },
     "search": {
         "app": "ძებნა",
-        "module": "მოდული"
+        "module": "მოდული",
+        "start": "ძებნის დაწყება"
     },
     "settings": {
         "accounts": "ანგარიშები",
@@ -1310,13 +1355,31 @@
             "account_logout": "გასვლა",
             "theme_auto": "ავტო",
             "theme_disabled": "გათიშულია",
-            "theme_enabled": "ჩართულია"
+            "theme_enabled": "ჩართულია",
+            "dark_mode": "მუქი რეჟიმი",
+            "general": "ზოგადი პარამეტრები",
+            "theme_options": "თემის მორგება"
         },
         "general_tab": "ზოგადი",
         "out_of_office": {
             "status": {
                 "busy": "დაკავებული"
-            }
+            },
+            "headings": {
+                "create_appointment": "კალენდრის შეხვედრა",
+                "time_period": "დროის პერიოდი"
+            },
+            "labels": {
+                "all_day": "მთელი დღე:",
+                "auto_reply_message": "ავტოპასუხი:",
+                "create_appointment": "შეხვედრის შექმნა:",
+                "end_date": "დასრულების თარიღი",
+                "end_time": "დასრულების დრო:",
+                "external_senders": "გარე გამომგზავნები",
+                "start_date": "დაწყების თარიღი",
+                "start_time": "დაწყების დრო:"
+            },
+            "send_auto_replies": "ავტოპასუხების გაგზავნა"
         },
         "timezone_and_language": "ენა"
     },
@@ -1333,7 +1396,12 @@
             "details": "დეტალები"
         },
         "dataVolume": {
-            "secondaryVolume": "დამხმარე ტომი"
+            "secondaryVolume": "დამხმარე ტომი",
+            "indexVolume": "ინდექსის ტომი",
+            "primaryVolume": "ძირითადი ტომი"
+        },
+        "volume": {
+            "applyChanges": "ცვლილებების გადატარება"
         }
     },
     "account": {
@@ -1352,6 +1420,190 @@
     "modal": {
         "iscurrent_confirm": {
             "confirm_label": "კი, გააგრძელე"
+        }
+    },
+    "reminder": {
+        "minute": "{{count}} წუთი",
+        "minute_plural": "{{count}} წუთი"
+    },
+    "timezone": {
+        "africa_cairo": "{{value}} ეგვიპტე",
+        "africa_casablanca": "{{value}} კასაბლანკა",
+        "africa_juba": "{{value}} ჯუბა",
+        "africa_khartoum": "{{value}} ხარტუმი",
+        "africa_monrovia": "{{value}} მონროვია",
+        "africa_nairobi": "{{value}} ნაირობი",
+        "africa_tripoli": "{{value}} ტრიპოლი",
+        "africa_windhoek": "{{value}} ნამიბია",
+        "america_adak": "{{value}} ადაკი",
+        "america_anchorage": "{{value}} ალასკა",
+        "america_araguaina": "{{value}} არაგუაინა",
+        "america_argentina_buenos_aires": "{{value}} არგენტინა",
+        "america_asuncion": "{{value}} ასუნსიონი",
+        "america_bahia": "{{value}} სალვადორი",
+        "america_bogota": "{{value}} კოლომბია",
+        "america_caracas": "{{value}} კარაკასი",
+        "america_cuiaba": "{{value}} კუიაბა",
+        "america_havana": "{{value}} ჰავანა",
+        "america_miquelon": "{{value}} მიკელონი",
+        "america_montevideo": "{{value}} მონტევიდეო",
+        "america_phoenix": "{{value}} არიზონა",
+        "america_port-au-prince": "{{value}} პორტ-ო-პრენსი",
+        "america_punta_arenas": "{{value}} პუნტა-არენასი",
+        "america_regina": "{{value}} სასკაჩევანი",
+        "america_sao_paulo": "{{value}} ბრაზილია",
+        "america_st_johns": "{{value}} ნიუფაუნდლენდი",
+        "america_whitehorse": "{{value}} იუკონი",
+        "asia_almaty": "{{value}} ასტანა",
+        "asia_amman": "{{value}} იორდანია",
+        "asia_baghdad": "{{value}} ერაყი",
+        "asia_baku": "{{value}} ბაქო",
+        "asia_barnaul": "{{value}} ბარნაული",
+        "asia_beirut": "{{value}} ბეირუთი",
+        "asia_chita": "{{value}} ჩიტა",
+        "asia_damascus": "{{value}} დამასკო",
+        "asia_dhaka": "{{value}} დაკა",
+        "asia_gaza": "{{value}} ღაზა",
+        "asia_hovd": "{{value}} ჰოვდი",
+        "asia_jerusalem": "{{value}} იერუსალიმი",
+        "asia_kabul": "{{value}} ქაბული",
+        "asia_kathmandu": "{{value}} კატმანდუ",
+        "asia_magadan": "{{value}} მაგადანი",
+        "asia_omsk": "{{value}} ომსკი",
+        "asia_pyongyang": "{{value}} ფხენიანი",
+        "asia_qyzylorda": "{{value}} ყიზილორდა",
+        "asia_sakhalin": "{{value}} სახალინი",
+        "asia_seoul": "{{value}} კორეა",
+        "asia_singapore": "{{value}} სინგაპური",
+        "asia_taipei": "{{value}} ტაიპეი",
+        "asia_tashkent": "{{value}} ტაშკენტი",
+        "asia_tbilisi": "{{value}} თბილისი",
+        "asia_tehran": "{{value}} თეირანი",
+        "asia_tokyo": "{{value}} იაპონია",
+        "asia_tomsk": "{{value}} ტომსკი",
+        "asia_ulaanbaatar": "{{value}} ულანბატორი",
+        "asia_yangon": "{{value}} იანგონი",
+        "asia_yerevan": "{{value}} ერევანი",
+        "atlantic_azores": "{{value}} აზორის კუნძულები",
+        "atlantic_south_georgia": "{{value}} შუა ატლანტიკის ოკეანე",
+        "australia_adelaide": "{{value}} ადელაიდე",
+        "australia_brisbane": "{{value}} ბრიზბანი",
+        "australia_darwin": "{{value}} დარვინი",
+        "australia_eucla": "{{value}} ეუკლა",
+        "australia_hobart": "{{value}} ჰობარტი",
+        "australia_lord_howe": "{{value}} ჰორდ_ჰაუ",
+        "australia_perth": "{{value}} პერტი",
+        "etc_gmt+12": "{{value}} Dateline",
+        "europe_astrakhan": "{{value}} ასტრახანი",
+        "europe_bucharest": "{{value}} ბუქარესტი",
+        "europe_chisinau": "{{value}} ჩისნაუ",
+        "europe_istanbul": "{{value}} სტამბოლი",
+        "europe_minsk": "{{value}} მინსკი",
+        "europe_saratov": "{{value}} სარატოვი",
+        "europe_volgograd": "{{value}} ვოლგოგრადი",
+        "pacific_apia": "{{value}} სამოა",
+        "pacific_chatham": "{{value}} ჩათამი",
+        "pacific_easter": "{{value}} აღდგომა",
+        "pacific_fiji": "{{value}} ფიჯი",
+        "pacific_honolulu": "{{value}} ჰავაი",
+        "pacific_marquesas": "{{value}} მარკიზი",
+        "pacific_midway": "{{value}} სამოა",
+        "pacific_norfolk": "{{value}} ნორფოლკი",
+        "pacific_tongatapu": "{{value}} ნუკუალოფა",
+        "alaska": "{{value}} ალასკა",
+        "argentina": "{{value}} არგენტინა",
+        "arizona": "{{value}} არიზონა",
+        "asuncion": "{{value}} ასუნსიონი",
+        "azores": "{{value}} აზორის კუნძულები",
+        "baku": "{{value}} ბაქო",
+        "beirut": "{{value}} ბეირუთი",
+        "brasilia": "{{value}} ბრაზილია",
+        "caracas": "{{value}} კარაკასი",
+        "casablanca": "{{value}} კასაბლანკა",
+        "chita": "{{value}} ჩიტა",
+        "colombia": "{{value}} კოლომბია",
+        "cuiaba": "{{value}} კუიაბა",
+        "damascus": "{{value}} დამასკო",
+        "darwin": "{{value}} დარვინი",
+        "dateline": "{{value}} Dateline",
+        "dhaka": "{{value}} დაკა",
+        "egypt": "{{value}} ეგვიპტე",
+        "eucla": "{{value}} ეუკლა",
+        "gmt_02": "{{value}} GMT-02",
+        "gmt_11": "{{value}} GMT-11",
+        "greenland": "{{value}} გრენლანდია",
+        "hawaii": "{{value}} ჰავაი",
+        "iraq": "{{value}} ერაყი",
+        "istanbul": "{{value}} სტამბოლი",
+        "jerusalem": "{{value}} იერუსალიმი",
+        "jordan": "{{value}} იორდანია",
+        "kabul": "{{value}} ქაბული",
+        "kathmandu": "{{value}} კატმანდუ",
+        "korea": "{{value}} კორეა",
+        "magadan": "{{value}} მაგადანი",
+        "manaus": "{{value}} მანაუსი",
+        "mid_atlantic": "{{value}} შუა ატლანტიკის ოკეანე",
+        "minsk": "{{value}} მინსკი",
+        "monrovia": "{{value}} მონროვია",
+        "montevideo": "{{value}} მონტევიდეო",
+        "nairobi": "{{value}} ნაირობი",
+        "namibia": "{{value}} ნამიბია",
+        "newfoundland": "{{value}} ნიუფაუნდლენდი",
+        "nuku_alofa": "{{value}} ნუკუალოფა",
+        "pyongyang": "{{value}} ფხენიანი",
+        "samoa": "{{value}} სამოა",
+        "saskatchewan": "{{value}} სასკაჩევანი",
+        "tbilisi": "{{value}} თბილისი",
+        "tehran": "{{value}} თეირანი",
+        "vladivostok_magadan": "{{value}} ვლადივოსტოკი_მაგადანი_rtz_9",
+        "yangon": "{{value}} იანგონი",
+        "yerevan": "{{value}} ერევანი"
+    },
+    "to_carbonio": "Carbonio-ზე!",
+    "welcome_to_carbonio_display_name": "მოგესალმებით, {{adminName}}!",
+    "domains": {
+        "GeneralSettings": {
+            "searchDomain": {
+                "label": "დომენის ძებნა"
+            }
+        }
+    },
+    "wsc": {
+        "section": {
+            "header": {
+                "title": {
+                    "videocall": "ვიდეოზარები",
+                    "general": "ზოგადი პარამეტრები"
+                }
+            },
+            "content": {
+                "toggle": {
+                    "enableFeature": "ჩატის ჩართვა"
+                }
+            }
+        }
+    },
+    "board": {
+        "close_tab": "ჩანართის დახურვა",
+        "enlarge": "დაფის გადიდება",
+        "hide": "დაფის დამალვა",
+        "reduce": "დაფის შემცირება"
+    },
+    "labels": {
+        "help_center": "დახმარების ცენტრი"
+    },
+    "module": {
+        "app": {
+            "version": "აპლიკაციის ვერსიები"
+        }
+    },
+    "new_tab": "ახალი ჩანართი",
+    "user_quota": {
+        "title": "მომხმარებლის კვოტა"
+    },
+    "storages": {
+        "s3Connectors": {
+            "title": "S3 კონექტორები"
         }
     }
 }
