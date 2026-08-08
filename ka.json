@@ -6,7 +6,8 @@
         "confirm_connection": "კავშირის დადასტურება"
     },
     "error": {
-        "alreadyInUse": " "
+        "alreadyInUse": " ",
+        "something_went_wrong": "რაღაც არასწორად წავიდა"
     },
     "label": {
         "create_another_account, CREATE ANOTHER ACCOUNT": " ",
@@ -677,7 +678,177 @@
         "secondary_volume_role": "დამხმარე ტომი",
         "volume_details": "ტომის დეტალები",
         "volume_options": "ტომის მორგება",
-        "volume_role": "ტომის როლი"
+        "volume_role": "ტომის როლი",
+        "Create_OTP_code": "OTP კოდის შექმნა",
+        "account_quota_gb": "ანგარიშის კვოტა (გბ)",
+        "account_quota_mb": "ანგარიშის კვოტა (მბ)",
+        "accounts_groups": "ანგარიშები / ჯგუფები",
+        "acl_list_name": "ACL-ის სიის სახელი",
+        "activate_and_update": "გააქტიურება და განახლება",
+        "add_administration_rights": "ადმინისტრირების უფლებების დამატება",
+        "admin_help_url": "ადმინისტრატორის დოკუმენტაციის ბმული",
+        "aggregated_space_quota": "აგრეგირებული ადგილის კვოტა",
+        "aggrigated_space_criteria": "აგრეგირებული ადგილის პირობა",
+        "antivirus_and_antispam": "ანტივირუსი და ანტისპამი",
+        "appointments_default_duration": "შეხვედრის ნაგულისხმევი ხანგრძლივობა",
+        "auto_refuse": "გამეორების ავტომატური უარყოფა",
+        "background_login_page": "შესვლის გვერდის ფონი",
+        "backup_at_startup": "მარქაფი გაშვებისას",
+        "can_access_settings": "აქვს წვდომა პარამეტრებთან",
+        "can_receive_email": "შეუძლია ელფოსტის მიღება",
+        "class_of_service": "სერვისის კლასი",
+        "class_of_service_lbl": "<bold>სერვისის კლასი</bold>",
+        "close_the_account": "ანგარიშის დახურვა",
+        "close_the_resource": "რესურსის დახურვა",
+        "create_another_account": "კიდევ ერთი ანგარიშის შექმნა",
+        "create_new_cos": "ახალი COS-ის შექმნა",
+        "create_new_domain": "ახალი დომენის შექმნა",
+        "create_otp_code": "OTP კოდის შექმნა",
+        "date_and_hour": "თარიღი და საათი",
+        "date_time": "თარიღი და დრო",
+        "default_appointment_visibility": "ნაგულისხმევი შეხვედრის ხილვადობა",
+        "default_calendar_view": "ნაგულისხმევი კალენდრის ხედი",
+        "default_font_color": "ნაგულისხმევი ფონტის ფერი",
+        "default_font_family": "ნაგულისხმევი ფონტის ოჯახი",
+        "default_font_size": "ნაგულისხმევი ფონტის ზომა",
+        "delegates_domain_admins": "დელეგირებული დომენის ადმინები",
+        "delet_volume_header": "წაიშალოს {{name}}?",
+        "delete_domain_certificate_header": "წავშალო დომენის სერტიფიკატი?",
+        "destroy_account_button": "დიახ, წაშალე",
+        "disable_the_account": "ანგარიშის გათიშვა",
+        "display_name_auto_fill": "სახელის ჩვენება (ავტოშევსება)",
+        "distribution_list_name": "განაწილების სიის სახელი",
+        "distribution_list_url": "განაწილების სიის ბმული",
+        "domain_certificate_private_key": "დომენის პირადი გასაღები",
+        "domain_quota_settings": "დომენის კვოტის მორგება",
+        "domain_space_accounts": "დომენის ადგილი (ანგარიშები)",
+        "domain_system_notifications": "დომენის სისტემური გაფრთხილებები",
+        "dont_save_it": "არ შეინახო",
+        "download_quota_Report": "კვოტის ანგარიშის გადმოწერა",
+        "empty_all_fields": "ყველა ველის დაცარიელება",
+        "enable_current": "ჩართვა, როგორც მიმდიანრესი",
+        "end_user_webapp": "საბოლოო მომხმარებლის WebApp",
+        "enter_email_address": "შეიყვანეთ ელფოსტის მისამართი",
+        "external_active_directory": "გარე Active Directory",
+        "external_server_address": "გარე სერვერის მისამართი",
+        "filter_account_list": "ანგარიშების სიის გაფილტვრა",
+        "gal_folder_name": "GAL საქაღალდის სახელი",
+        "gal_successfully_re_synced": "GAL-ის თავიდან სინქრონიზაცია წარმატებულია",
+        "generate_sp_certificate": "SP სერტიფიკატის გენერაცია",
+        "global_address_list": "გლობალური მისამართების სია",
+        "global_server_settings": "სერვერის გლობალური პარამეტრები",
+        "hidden_from_gal": "დამალულია GAL-დან",
+        "initial_calendar_view": "კალენდრის საწყისი ხედი",
+        "initial_mail_serach": "ელფოსტაში ძებნის დაწყება",
+        "internal_users_only": "მხოლოდ შიდა მომხმარებლები",
+        "invalid_email_address": "არასწორი ელფოსტის მისამართი",
+        "items_per_page": "ელემენტები გვერდზე",
+        "keep_it_button": "არა, დატოვე",
+        "ldap_search_base": "LDAP-ში ძებნა",
+        "list_name_auto_fill": "სიის სახელი (ავტოშევსება)",
+        "list_url": "დაგზავნის სიის ბმული",
+        "login_is_disabled": "შესვლა გათიშულია",
+        "login_verify_button_title": "შესვლა და გადამოწმება",
+        "logo_for_webapp": "ლოგო WebApp-ისთვის",
+        "logo_url_destination": "ლოგოს ბმულის სამიზნე",
+        "long_and_queues": "ჟურნალი და რიგები",
+        "mail_over_quota_criteria": "ელფოსტის კვოტის გადაჭარბების პირობა",
+        "mail_quota": "ელფოსტის კვოტა (%)",
+        "mail_trans_agent": "ფოსტის ტრანს. აგენტი",
+        "mail_transport_map": "ფოსტის ტრანსპორტის რუკა",
+        "mailing_list_name": "დაგზავნის სიის სახელი",
+        "max_quota_allowed": "მაქს. დაშვებული კვოტა",
+        "maximum_conflict_allowed": "მაქს. დაშვებული კონფლიქტი",
+        "maximum_handled_accounts": "მაქს. დამუშავებული ანგარიში",
+        "measure_unit": "საზომი ერთეული",
+        "mobile_dos_protection": "მობილური DOS-ისგან დაცვა",
+        "mta_primarybar_tooltip": "ფოსტის გადაცემის აგენტი",
+        "name_of_signature": "ხელმოწერის სახელი",
+        "never_logged_in": "არასდროს შესულა",
+        "new_acl_list": "ახალი ACL-ის სია",
+        "new_distribution_list": "ახალი განაწილების სია",
+        "new_mailing_list": "ახალი დაგზავნის სია",
+        "new_security_group": "ახალი უსაფრთხოების ჯგუფი",
+        "new_subscription_requests": "ახალი გამოწერის მოთხოვნები",
+        "no_donot_reset_device": "არა, არ ჩამოყარო",
+        "no_donot_wipe_device": "არა, არ წაშალო",
+        "no_go_back": "არა, დაბრუნდი უკან",
+        "on_startup_only": "მხოლოდ გაშვებისას",
+        "only_there_users": "მხოლოდ ეს მომხმარებლები",
+        "percentage_maximum_conflict": "% მაქს. კონფლიქტი",
+        "prefix_volume": "პრეფიქსი - {{volumePrefix}}",
+        "private_key_certificate": "სერტიფიკატის პირადი გასაღები",
+        "public_service_port": "საჯარო სერვისის პორტი",
+        "public_service_protocol": "საჯარო სერვისის პროტოკოლი",
+        "read_receipt_settings": "წაკითხვის ანგარიშის მორგება",
+        "remove_all_acl": "ყველა ACL-ის <bold>წაშლა</bold>",
+        "restore_data_source": "მონაცემის წყაროს აღდგენა",
+        "restore_deleted_email": "წაშლილი ელფოსტის აღდგენა",
+        "retention_period": "შენარჩუნების პერიოდი (მნიშვნელობა)",
+        "rich_text_editor": "მდიდარი ტექსტური რედაქტორი",
+        "save_and_leave": "შენახვა და გასვლა",
+        "save_mails_to": "ელფოსტის შენახვა სად",
+        "save_the_changes": "ცვლილებების შენახვა",
+        "save_to_files": "ფაილებში შენახვა",
+        "second_name_initials": "შუა სახელის ინიციალები",
+        "security_group_name": "უსაფრთხოების ჯგუფის სახელი",
+        "select_a_server": "აირჩიეთ სერვერი",
+        "select_an_account": "აირჩიეთ ანგარიში",
+        "send_invite_to": "მოსაწვევის გაგზავნა ვისთან",
+        "send_notifications_to": "გაფრთხილებების გაგზავნა ვისთან…",
+        "serverl_and_volumes": "სერვერი და ტომები",
+        "session_end_success": "სესია წარმატებით დასრულდა",
+        "set_as_default": "ნაგულისხმევად დაყენება",
+        "set_as_primary_button": "ძირითადად დაყენება",
+        "set_as_secondary_button": "დამხმარედ დაყენება",
+        "show_quoted_text": "ციტირებული ტექსტის ჩვენება",
+        "sort_by_percentage": "დალაგება პროცენტულობით",
+        "surname_required": "გვარის მითითება აუცილებელია",
+        "trust_ip": "IP-ის ნდობა",
+        "trust_the_device": "მოწყობილობის ნდობა",
+        "type_an_account_dot": "აკრიფეთ ანგარიშის სახელი…",
+        "type_of_volume": "ტომის ტიპი",
+        "use_infraquent_access": "იშვიათი წვდომის გამოყენება",
+        "use_intelligent_tiering": "ჭკვიანი პრიორიტეტიზაციის გამოყენება",
+        "use_intelligent_tiering_helptext": "<underline>Amazon Tiering-ის დოკუმენტაცია</underline>",
+        "user_recovery_email": "მომხმარებლის აღდგენის ელფოსტა",
+        "viewed_name": "ნანახი სახელი (ავტოშევსება)",
+        "viewed_name_auto_fill": "ნანახი სახელი (ავტოშევსება)",
+        "virtual_host_name": "ვირტუალური ჰოსტის სახელი",
+        "volume_as_current": "ტომი როგორც მიმდინარე",
+        "volume_created": "ტომი წარმატებით შეიქმნა",
+        "volume_deleted": "ტომის წაშლა წარმატებულია",
+        "volume_edited": "ტომი წარმატებით ჩასწორდა",
+        "volume_max_quota_allowed": "მაქს. დაშვებული კვოტა",
+        "what_is_a_gal": "რა არის GAL?",
+        "what_to_trust": "რას ვენდო?",
+        "yes_delete_it": "დიახ, წაშალე",
+        "yes_remove_it": "დიახ, წაშალე",
+        "two_factor_auth": "2FA",
+        "add_external_account": "გარე ანგარიშის დამატება",
+        "add_recovery_email": "აღდგენის ელფოსტის დამატება",
+        "carbonio_admin_ui_version": "Carbonio-ის ადმინისტრირების პანელის ვერსია",
+        "carbonio_backend_version": "Carbonio-ის უკანაბოლოს ვერსია",
+        "carbonio_community_edition": "Carbonio Community Edition",
+        "change_pop": "POP-ის პორტის შეცვლა",
+        "choose_account": "ანგარიშის არჩევა",
+        "click_to_copy": "დააწკაპუნეთ დასაკოპირებლად",
+        "download_messages": "შეტყობინებების გადმოწერა სად:",
+        "external_account_settings": "გარე ანგარიშის მორგება",
+        "no_results": "შედეგების გარეშე",
+        "open_a_ticket": "ბილეთის გახსნა",
+        "out_of_office": "ოფისში არ ვარ",
+        "reply_to_field_example": "მაგ: ლესტამბერ ღობეგლეჯიაშვილი",
+        "use_persona": "ამ პიროვნების გამოყენება",
+        "mails_quota_mb": "ელფოსტის კვოტა (მბ)",
+        "mails_quota_gb": "ელფოსტის კვოტა (გბ)",
+        "files_quota_mb": "ფაილების კვოტა (მბ)",
+        "files_quota_gb": "ფაილების კვოტა (გბ)",
+        "help_and_documentation": "დახმარება და დოკუმენტაცია",
+        "accountQuotaSetting": "ანგარიშის კვოტის მორგება",
+        "set_as_current": "მიმდინარეად დაყენება",
+        "bytes_size_threshold": "ბაიტების ზომის ზღვარი",
+        "review_your_selections": "თქვენი არჩევნების მიმოხილვა"
     },
     "newOtp": {
         "printPinCodes": " "
@@ -735,7 +906,8 @@
             "day": "დღის ხედი",
             "list": "სიის ხედი",
             "month": "თვის ხედი",
-            "week": "კვირის ხედი"
+            "week": "კვირის ხედი",
+            "work_week": "სამუშაო კვირის ხედი"
         },
         "delegate_rights": "დელეგატის უფლებები",
         "delegated_administration": "დელიგირებული ადმინისტრირება",
@@ -766,7 +938,30 @@
         "services_passphrase": "სერვისის საკვანძო ფრაზა",
         "set_global_config": "SetGlobal-ის მორგება",
         "set_rights": "უფლებების დაყენება",
-        "sms_reminder": "SMS-ით შეხსენება"
+        "sms_reminder": "SMS-ით შეხსენება",
+        "activesync_remote_access": "ActiveSync დაშორებული წვდომა",
+        "an_existing_group": "არსებული ჯგუფი",
+        "appointments_default_duration": "შეხვედრის ნაგულისხმევი ხანგრძლივობა",
+        "audible_reminder_notification": "ხმოვანი შეხსენების შეტყობინება",
+        "auto_delete_duplicate_messages": "დუბლირებული შეტყობინებების ავტომატური წაშლა",
+        "autocomplete_from_GAL": "ავტოდასრულება GAL-დან",
+        "click_to_revert": "დასაბრუნებლად დააწკაპუნეთ.",
+        "delegate_created_successfully": "დელეგატი წარმატებით შეიქმნა",
+        "distribution_list_folder": "დაგზავნის სიის საქაღალდე",
+        "do_not_save_it": "არ შეინახო",
+        "enable_auto_add_contacts": "კონტაქტების ავტოდამატების ჩართვა",
+        "external_pop_access": "გარე POP წვდომა",
+        "hidden_in_gal": "GAL‑დან დამალვა",
+        "hide_in_gal": "GAL-ში დამალვა",
+        "included_in_backup": "ჩასმულია მარქაფში",
+        "initial_search_preference": "ძებნის საწყისი პარამეტრი",
+        "new_alias_name": "ახალი ფსევდონიმი",
+        "new_mail_notification": "ახალი ელფოსტის გაფრთხილება",
+        "on_behalf_of": "სახელით",
+        "read_write": "წაკითხვა / ჩაწერა",
+        "save_to_sent": "გაგზავნილებში შენახვა",
+        "search_fro_people": "ხალხის ძებნა",
+        "your_available_aliases": "თქვენი ხელმისაწვდომი ფსევდონიმები"
     },
     "backup": {
         "advanced": "დამატებით",
@@ -803,7 +998,27 @@
         "start_service": "სერვისის გაშვება",
         "stop_service": "სერვისის გაჩერება",
         "tuning_options": "მორგების პარამეტრები",
-        "waiting_time": "მოლოდინის დრო"
+        "waiting_time": "მოლოდინის დრო",
+        "data_retention_policies": "მონაცემთა შენარჩუნების პოლიტიკები",
+        "enable_realtime_scanner": "რეალური დროის სკანერის ჩართვა",
+        "include_server_configuration": "სერვერის კონფიგურაციის ჩასმა",
+        "latency_high_threshold": "დაყოვნების მაღალი ზღვარი",
+        "latency_low_threshold": "დაყოვნების დაბალი ზღვარი",
+        "ldap_working_properly": "LDAP სწორად მუშაობს",
+        "local_metadata_threshold": "ლოკალური მეტამონაცემების ზღვარი",
+        "manage_external_volume": "გარე ტომის მართვა",
+        "max_waiting_time": "მაქს. მოლოდინის დრო",
+        "minimum_space_threshold": "მინიმალური ადგილის ზღვარი",
+        "purge_old_configuration": "ძველი კონფიგურაციების წაშლა",
+        "purge_old_configurations": "ძველი კონფიგურაციების წაშლა",
+        "set_external_volume": "გარე ტომის დაყენება",
+        "space_threshold_mb": "ადგილის ზღვარი (მბ)",
+        "the_service_is": "სერვისი არის",
+        "threads_for_account": "ნაკადები ანგარიშისთვის",
+        "threads_for_items": "ნაკადი ელემენტებისთვის",
+        "config": {
+            "scheduleBackupPurge": "მარქაფების წაშლის დაგეგმვა"
+        }
     },
     "buckets": {
         "alibaba_regions": {
@@ -823,14 +1038,18 @@
             "eu_central_1": "გერმანია (ფრანკფორტი)",
             "eu_west_1": "გს (ლონდონი)",
             "me_east_1": "არაბთა გაერთიანებული საამიროები (დუბაი)",
-            "us_east_1": "აშშ (ვირჯინია)"
+            "us_east_1": "აშშ (ვირჯინია)",
+            "ap_southeast_3": "მალაიზია (კუალა ლუმპური)",
+            "cn_hongkong": "ჩინეთი (ჰონგ კონგი)",
+            "us_west_1": "აშშ (სილიკონის ველი)"
         },
         "connection": {
             "notes": "შენიშვნები",
             "access_key": "წვდომის გასაღები",
             "descriptive_name": "აღმწერი სახელი",
             "secret_key": "საიდუმლო გასაღები",
-            "verify_connector": "კონექტორის გადამოწმება"
+            "verify_connector": "კონექტორის გადამოწმება",
+            "arn_name": "ARN / სახელი"
         },
         "global": "გლობალური",
         "s3_types": {
@@ -841,13 +1060,15 @@
             "emc_s3": "EMC S3",
             "openio_s3": "OpenIO S3",
             "scality_s3": "Scality S3",
-            "yandex_s3": "Yandex S3"
+            "yandex_s3": "Yandex S3",
+            "alibaba_cloud_s3": "Alibaba Cloud S3"
         },
         "summary": {
             "notes": "შენიშვნები",
             "access_key": "წვდომის გასაღები",
             "descriptive_name": "აღმწერი სახელი",
-            "secret_key": "საიდუმლო გასაღები"
+            "secret_key": "საიდუმლო გასაღები",
+            "arn_name": "ARN / სახელი"
         },
         "amazon_regions": {
             "ca_central_1": "კანადა (ცენტრალური)",
@@ -859,7 +1080,18 @@
             "eu_south_2": "ეკ (ესპანეთი)",
             "eu_west_1": "ეკ (ირლანდია)",
             "eu_west_2": "ეკ (ლონდონი)",
-            "eu_west_3": "ეკ (პარიზი)"
+            "eu_west_3": "ეკ (პარიზი)",
+            "af_south_1": "აფრიკა (კეიპტაუნი)",
+            "ap_northeast_1": "აზია/წყნარი ოკეანე (ტოკიო)",
+            "ap_northeast_2": "აზია/წყნარი ოკეანე (სეული)",
+            "ap_south_1": "აზია/წყნარი ოკეანე (მუმბაი)",
+            "ap_southeast_1": "აზია/წყნარი ოკეანე (სინგაპური)",
+            "ap_southeast_2": "აზია/წყნარი ოკეანე (სიდნეი)",
+            "govcloud": "AWS GovCloud (აშშ)",
+            "me_south_1": "შუა აზია (ბაჰრეინი)",
+            "us_east_2": "აღმოსავლეთი აშშ (ოჰაიო)",
+            "us_gov_east_1": "AWS GovCloud (აღმ-აშშ)",
+            "us_west_2": "დასავლეთი აშშ (ორეგონი)"
         },
         "bucket_list": "კალათების სია",
         "bucket_type": "კალათის ტიპი",
@@ -870,13 +1102,15 @@
         },
         "serverName#1_volumes": "ServerName#1 ტომები",
         "serverName_volumes": "{{serverName}} ტომები",
-        "servers_list": "სერვერების სია"
+        "servers_list": "სერვერების სია",
+        "filter_buckets_list": "კალათების სიის გაფილტვრა"
     },
     "connection": {
         "notes": "შენიშვნები",
         "access_key": "წვდომის გასაღები",
         "descriptive_name": "აღმწერი სახელი",
-        "secret_key": "საიდუმლო გასაღები"
+        "secret_key": "საიდუმლო გასაღები",
+        "arn_name": "ARN / სახელი"
     },
     "core": {
         "subscription": {
@@ -914,7 +1148,13 @@
             "version": "მოდულის ვერსია",
             "date_start": "დაწყების თარიღი",
             "date_end": "დასრულების თარიღი",
-            "updateTime": "განახლების დრო"
+            "updateTime": "განახლების დრო",
+            "license_activated_successfully": "ლიცენზია წარმატებით გააქტიურდა",
+            "subscription_last_check": "გამოწერის ბოლო შემოწმება",
+            "last_validation_check": "სისწორის ბოლო შემოწმება",
+            "maintenance_end_date": "რემონტის დასრულების თარიღი",
+            "next_validation_deadline": "შემდეგი გადამოწმების ვადა",
+            "maxCarbonioVersion": "Carbonio-ის მაქს. ვერსია"
         }
     },
     "cos": {
@@ -949,7 +1189,8 @@
             "day": "დღის ხედი",
             "list": "სიის ხედი",
             "month": "თვის ხედი",
-            "week": "კვირის ხედი"
+            "week": "კვირის ხედი",
+            "work_week": "სამუშაო კვირის ხედი"
         },
         "disabling_pool": "პულის გათიშვა",
         "display_by": "ჩვენების პირობა",
@@ -975,7 +1216,42 @@
         "yes_disable": "კი, გამორთე",
         "features": {
             "twoFactorAuthenticator": "2FA"
-        }
+        },
+        "activesync_remote_access": "ActiveSync დაშორებული წვდომა",
+        "audible_reminder_notification": "ხმოვანი შეხსენების შეტყობინება",
+        "auth_token_lifetime": "ავთენტიკაციის ტოკენის სიცოცხლის ხანგრძლივობა",
+        "auto_delete_duplicate_messages": "დუბლირებული შეტყობინებების ავტომატური წაშლა",
+        "caldav_polling_interval": "CalDAV-ის გამოკითხვის ინტერვალი",
+        "calendar_polling_interval": "კალენდრის გამოკითხვის ინტერვალი",
+        "distribution_list_folder": "განაწილების სიის საქაღალდე",
+        "email_message_lifetime": "ელფოსტის შეტყობინების სიცოცხლის ხანგრძლივობა",
+        "email_retention_policy": "ელფოსტის შენარჩუნების პოლიტიკა",
+        "enable_auto_add_contacts": "კონტაქტების ავტოდამატების ჩართვა",
+        "enable_keyboard_shortcuts": "კლავიატურის მალსახმობების ჩართვა",
+        "enable_message_deduping": "შეტყობინებების დედუპლიკაციის ჩართვა",
+        "external_pop_access": "გარე წვდომა POP-ზე",
+        "failed_login_policy": "ჩავარდნილი შესვლის პოლიტიკა",
+        "imap_polling_interval": "IMAP-ის გამოკითხვის ინტერვალი",
+        "index_junk_messages": "ნაგავი შეტყობინებების დაინდექსება",
+        "initial_search_preference": "საწყისი ძებნის პარამეტრი",
+        "maximum_password_length": "მაქს. პაროლის სიგრძე",
+        "minimum_numeric_chracters": "მინ. ციფრები",
+        "minimum_password_length": "მინ. პაროლის სიგრძე",
+        "minimum_punctuation_symbols": "მინ. პუნქტუაციის სიმბოლოები",
+        "pop3_polling_interval": "POP3-ის გამოკითხვის ინტერვალი",
+        "proxy_allowed_domains": "პროქსიზე დაშვებული დომენები",
+        "read_receipt_settings": "წაკითხვის ანგარიშის მორგება",
+        "reject_common_passwords": "ცნობილი პაროლების უარყოფა",
+        "rss_polling_interval": "RSS-ის გამოკითხვის ინტერვალი",
+        "save_to_Sent": "გაგზავნილებში შენახვა",
+        "search_for_people": "ხალხის ძებნა",
+        "send_read_receipts": "წაკითხვის დასტურის გაგზავნა",
+        "session_idle_timeout": "სესიის უქმეობის ვადა",
+        "show_search_string": "საძიებო სტრიქონის ჩვენება",
+        "spam_message_lifetime": "სპამის შეტყობინების სიცოცხლის დრო",
+        "standard_html_client": "სტანდარტული (HTML) კლაიენტი",
+        "trashed_message_lifetime": "ნაგავში გადატანილი შეტყობინების სიცოცხლის დრო",
+        "type_of_UI": "ინტერფეისის ტიპი"
     },
     "dashboard": {
         "carbonio": "Carbonio",
@@ -985,7 +1261,9 @@
         "new_notifications": "ახალი გაფრთხილებები",
         "server_ip": "სერვერის IP",
         "server_name": "სერვერის სახელი",
-        "your_notifications": "თქვენი გაფრთხილებები"
+        "your_notifications": "თქვენი გაფრთხილებები",
+        "go_to_notification": "გაფრთხილებაზე გადასვლა",
+        "quick_access_to": "სწრაფი წვდომა"
     },
     "domain": {
         "active_sync": "ActiveSync",
@@ -1051,7 +1329,20 @@
             "sendAs": "გაგზავნა, როგორც",
             "managePermission": "წვდომების მართვა",
             "sendTo": "გაგზავნა ვისთან",
-            "unsavedChanges": "შეუნახავი ცვლილებები"
+            "unsavedChanges": "შეუნახავი ცვლილებები",
+            "yesRemoveIt": "კი, წაშალე",
+            "exitWithoutSave": "გასვლა შენახვის გარეშე",
+            "saveAndExit": "შენახვა და გასვლა"
+        },
+        "aggregated_space_quota": "აგრეგირებული ადგილის კვოტა",
+        "authentication": {
+            "search_bind_password": "მიმაგრების ძებნის პაროლი",
+            "search_bind_user": "მიმაგრების ძებნის მომხმარებელი"
+        },
+        "create_new_domain": "ახალი დომენის შექმნა",
+        "jail_duration": "ხანგრძლივობა პაროლის შეყვანებს შორის (მწმ)",
+        "editAccount": {
+            "yesRestoreOtpAnyway": "კი, მაინც აღადგინე"
         }
     },
     "hsm": {
@@ -1108,7 +1399,13 @@
         "run_all": "ყველას გაშვება",
         "select_volumes": "ტომების არჩევა",
         "smaller_size": "უფრო პატარა (ზომა)",
-        "source_volume": "წყარო ტომი"
+        "source_volume": "წყარო ტომი",
+        "create_new_policy": "ახალი პოლიტიკის შექმნა",
+        "delete_hsm_policy": "წავშალო HSM-ის პოლიტიკა?",
+        "hsm_policies_list": "HSM-ის პოლიტიკების ჩამონათვალი",
+        "minimum_space_threshold": "მინ. ადგილის ზღვარი",
+        "name_hsm_policies": "{{serverName}}-ის HSM პოლიტიკები",
+        "new_policy_summary": "ახალი პოლიტიკის შეჯამება"
     },
     "locale": {
         "English": "ინგლისური",
@@ -1127,7 +1424,21 @@
         "turkish": "თურქული",
         "vietnamese": "ვიეტნამური",
         "chinese_china": "ჩინური (ჩინეთი)",
-        "portuguese_brazil": "პორტუგალიური (ბრაზილია)"
+        "portuguese_brazil": "პორტუგალიური (ბრაზილია)",
+        "label_dutch": "ჰოლანდიური - {{value}}",
+        "label_english": "ინგლისური - {{value}}",
+        "label_french": "ფრანგული - {{value}}",
+        "label_german": "გერმანული - {{value}}",
+        "label_hindi": "ჰინდი - {{value}}",
+        "label_italian": "იტალიური - {{value}}",
+        "label_japanese": "იაპონური - {{value}}",
+        "label_portuguese": "პორტუგალიური - {{value}}",
+        "label_portuguese_brazil": "პორტუგალიური - {{value}}",
+        "label_romanian": "რუმინული - {{value}}",
+        "label_russian": "რუსული - {{value}}",
+        "label_spanish": "ესპანური - {{value}}",
+        "label_thai": "ტაილანდური - {{value}}",
+        "label_turkish": "თურქული - {{value}}"
     },
     "log": "ჟურნალი",
     "mta": {
@@ -1206,7 +1517,33 @@
         "scan_completed": "სკანირება დასრულდა",
         "senders_domain": "გამომგზავნის დომენი",
         "server_name": "სერვერის სახელი",
-        "updated_at": "განახლების დროა"
+        "updated_at": "განახლების დროა",
+        "access_list_path": "წვდომების სიის ბილიკი",
+        "additional_virus_definition": "დამატებითი ვირუსის აღწერები",
+        "antispam_and_antivirus": "ანტისპამი და ანტივირუსი",
+        "antivirus_and_antispam": "ანტივირუსი და ანტისპამი",
+        "block_spam_destiny": "დაბლოკილი სპამის ბედი",
+        "block_spam_tolerance": "სპამის დაშვების დაბლოკვა",
+        "check_client_host_name": "კლიენტის ჰოსტის სახელის შემოწმება",
+        "clients_ip_address": "კლიენტის IP მისამართი",
+        "definition_update_frequency": "აღწერის განახლების სიხშირე",
+        "disable_virus_check": "ვირუსის შემოწმების გამორთვა",
+        "dns_blacklist_action": "DNS-ის შავი სიის ქმედება",
+        "dns_blacklist_sites": "DNS-ის შავი სიის საიტები",
+        "fallback_relay_host": "სარეზერვო რელეური ჰოსტი",
+        "hard_spam_limit": "მყარი სპამის შეზღუდვა",
+        "light_span_limit": "რბილი სპამის ზღვარი",
+        "lmtp_threads": "LMTP-ის ნაკადები (მნიშვნელობა)",
+        "milter_threads": "MILTER-ის ნაკადები (მნიშვნელობა)",
+        "reject_unlisted_recipient": "სიაში არმყოფი მიმღების უარყოფა",
+        "reject_unlisted_sender": "სიაში არმყოფი გამგზავნის უარყოფა",
+        "scan_in_progress": "სკანირება",
+        "smtp_helo_name": "SMTP HELO-ის სახელი",
+        "tls_security_level": "TLS-ის უსაფრთხოების დონე",
+        "verify_dkim_validity": "DKIM-ის სისწორის გადამოწმება",
+        "advanced": {
+            "mail_messages_size": "ელფოსტის შეტყობინების ზომა"
+        }
     },
     "new": "ახალი",
     "new_bucket_connection": "კავშირი",
@@ -1220,7 +1557,10 @@
         "manage": "მართვა",
         "warning": "გაფრთხილება",
         "notification_details": "გაფრთხილების დეტალები",
-        "notifications_list": "გაფრთხილებების სია"
+        "notifications_list": "გაფრთხილებების სია",
+        "copy_notification_successfully": "გაფრთხილება წარმატებით დაკოპირდა",
+        "mark_as_read": "წაკითხულად მონიშვნა",
+        "mark_as_unread": "წაუკითხავად მონიშვნა"
     },
     "operations": {
         "copy_btn": "კოპირება",
@@ -1236,7 +1576,12 @@
             "operation_type": "ოპერაციის ტიპი",
             "started_at": "დაწყების დრო",
             "stop_operation_btn": "ოპერაციის გაჩერება",
-            "submitted_at": "გადაცემის დრო"
+            "submitted_at": "გადაცემის დრო",
+            "create_fake_blob": "ცრუ ბლობის შექმნა",
+            "let_it_run_btn": "გაუშვი",
+            "read_error_threshold": "წაკითხვის შეცდომის ზღვარი",
+            "remote_metadata_upload": "მეტამონაცემების დაშორებული ატვირთვა",
+            "who_started_it": "ვინ გაუშვა?"
         },
         "operations_list_header": {
             "author": "ავტორი",
@@ -1253,7 +1598,9 @@
         "done_panel_heading": "დასრულებული ოპერაციები",
         "queued_panel_heading": "ოპერაციები რიგში",
         "running_panel_heading": "გაშვებული ოპერაციები",
-        "stop_opearation_btn": "ოპერაციის გაჩერება"
+        "stop_opearation_btn": "ოპერაციის გაჩერება",
+        "copy_operation_successfully": "გაფრთხილება წარმატებით დაკოპირდა",
+        "operationname_on_servername": "{{operationName}} {{serverName}}-ზე"
     },
     "quarantine": {
         "deliver": "მიწოდება",
@@ -1297,7 +1644,8 @@
             "external": "გარე",
             "local": "ლოკალური",
             "sproxy": "Sproxy",
-            "object_storage": "ობიექტური საცავი"
+            "object_storage": "ობიექტური საცავი",
+            "local_block_device": "ლოკალური ბლოკური მოწყობილობა"
         },
         "volume_config_header": {
             "indexer": "დამაინდექსებელი",
@@ -1325,7 +1673,11 @@
             "secondary": "დამხმარე"
         },
         "not_running": "გაშვებული არაა",
-        "serverName_volumes": "{{serverName}}-ის ტომები"
+        "serverName_volumes": "{{serverName}}-ის ტომები",
+        "create_storage_volume": "საცავის ტომის შექმნა",
+        "new": {
+            "create_mailstores_volume": "ფოსტის საცავის ტომის შექმნა"
+        }
     },
     "welcome": "მოგესალმებით",
     "create": "შექმნა",
@@ -1335,12 +1687,17 @@
         "send": "გაგზავნა",
         "enable_feedback": "უკუკავშირის ჩართვა",
         "missing_features": "ნაკლული ფუნქციები",
-        "user_interface": "მომხმარებლის ინტერფეისი"
+        "user_interface": "მომხმარებლის ინტერფეისი",
+        "goto_privacy": "კონფიდენციალობაზე გადასვლა",
+        "select_a_module": "მოდულის არჩევა",
+        "select_a_topic": "თემის არჩევა"
     },
     "search": {
         "app": "ძებნა",
         "module": "მოდული",
-        "start": "ძებნის დაწყება"
+        "start": "ძებნის დაწყება",
+        "clear": "საძიებო სტრიქონის გასუფთავება",
+        "idle_input_label": "{{module}}-ში ძებნა"
     },
     "settings": {
         "accounts": "ანგარიშები",
@@ -1406,20 +1763,25 @@
     },
     "account": {
         "new": {
-            "create_otp_wizard": "OTP-ის შექმნა"
+            "create_otp_wizard": "OTP-ის შექმნა",
+            "create_account_wizard": "ანგარიშის შექმნის ოსტატი"
         }
     },
     "accountDetails": {
-        "default_COS": "ნაგულისხმევი COS"
+        "default_COS": "ნაგულისხმევი COS",
+        "force_change_password": "პაროლის ძალით შეცვლა"
     },
     "action": {
-        "mark_as_non_spam": "სპამი არაა"
+        "mark_as_non_spam": "სპამი არაა",
+        "click_open": "დააწკაპუნეთ გასახსნელად",
+        "click_preview": "დააწკაპუნეთ მინიატურისთვის"
     },
     "create_new_bucket": "ახალი კალათა",
     "cumminity_edition": "Community Edition!",
     "modal": {
         "iscurrent_confirm": {
-            "confirm_label": "კი, გააგრძელე"
+            "confirm_label": "კი, გააგრძელე",
+            "secondary_label": "არა, უკან დაბრუნება"
         }
     },
     "reminder": {
@@ -1557,7 +1919,38 @@
         "tehran": "{{value}} თეირანი",
         "vladivostok_magadan": "{{value}} ვლადივოსტოკი_მაგადანი_rtz_9",
         "yangon": "{{value}} იანგონი",
-        "yerevan": "{{value}} ერევანი"
+        "yerevan": "{{value}} ერევანი",
+        "africa_harare": "{{value}} ჰარარე, პრეტორია",
+        "africa_sao_tome": "{{value}} სან-ტომე",
+        "america_cancun": "{{value}} კანკუნი, ჩეტუმალი",
+        "america_cayenne": "{{value}} კაიენა, ფორტალეზა",
+        "america_chicago": "{{value}} აშშ/ცენტრალური კანადა",
+        "america_denver": "{{value}} აშშ/მთიანი კანადა",
+        "america_fort_nelson": "{{value}} ფორტ ნელსონი",
+        "america_guatemala": "{{value}} ცენტრალური ამერიკა",
+        "america_indiana_indianapolis": "{{value}} ინდიანა (აღმოსავლეთი)",
+        "america_los_angeles": "{{value}} აშშ/კანადის წყნარი ოკეანის მხარე",
+        "america_new_york": "{{value}} აშშ/აღმოსავლეთი კანადა",
+        "america_tijuana": "{{value}} ქვემო კალიფორნია (ჩრდილოეთი)",
+        "asia_karachi": "{{value}} ისლამაბადი, კარაჩი",
+        "asia_kuala_lumpur": "{{value}} კუალა ლუმპური",
+        "asia_kuwait": "{{value}} კუვეიტი, ერ-რიადი",
+        "indian_mauritius": "{{value}} პორტ ლუისი",
+        "pacific_auckland": "{{value}} ახალი ზელანდია",
+        "pacific_kiritimati": "{{value}} შობის კუნძული",
+        "baja_california": "{{value}} ქვემო კალიფორნია (ჩრდილოეთი)",
+        "cayenne_fortaleza": "{{value}} კაიენა, ფორტალეზა",
+        "central_america": "{{value}} ცენტრალური ამერიკა",
+        "christmas_island": "{{value}} ქრისტეშობის კუნძული",
+        "harare_pretoria": "{{value}} ჰარარე, პრეტორია",
+        "indiana_east": "{{value}} ინდიანა (აღმოსავლეთი)",
+        "kuwait_riyadh": "{{value}} კუვეიტი, ერ-რიადი",
+        "la_paz": "{{value}} ლა-პასი",
+        "port_louis": "{{value}} პორტ ლუისი",
+        "us_canada_central": "{{value}} აშშ/ცენტრალური კანადა",
+        "us_canada_eastern": "{{value}} აშშ/აღმოსავლეთი კანადა",
+        "us_canada_mountain": "{{value}} აშშ/მთიანი კანადა",
+        "us_canada_pacific": "{{value}} აშშ/კანადის წყნარი ოკეანის მხარე"
     },
     "to_carbonio": "Carbonio-ზე!",
     "welcome_to_carbonio_display_name": "მოგესალმებით, {{adminName}}!",
@@ -1573,12 +1966,21 @@
             "header": {
                 "title": {
                     "videocall": "ვიდეოზარები",
-                    "general": "ზოგადი პარამეტრები"
+                    "general": "ზოგადი პარამეტრები",
+                    "attachments": "გაზიარება & მიმაგრებული ფაილები",
+                    "messaging": "შეტყობინებები და სტატუსი"
                 }
             },
             "content": {
                 "toggle": {
-                    "enableFeature": "ჩატის ჩართვა"
+                    "enableFeature": "ჩატის ჩართვა",
+                    "enableVirtualBackground": "ვირტუალური ფონის ჩართვა",
+                    "readReceipt": "წაკითხვის სტატუსების ჩვენება",
+                    "enableVideoCall": "ვიდეოზარების ჩართვა",
+                    "enableRecording": "ზარის ჩაწერის დაშვება"
+                },
+                "select": {
+                    "timeLimit": "დროის ლიმიტი წუთებში"
                 }
             }
         }
@@ -1587,7 +1989,9 @@
         "close_tab": "ჩანართის დახურვა",
         "enlarge": "დაფის გადიდება",
         "hide": "დაფის დამალვა",
-        "reduce": "დაფის შემცირება"
+        "reduce": "დაფის შემცირება",
+        "open_app": "აპში გახსნა",
+        "show_tabs": "სხვა ჩანართების ჩვენება"
     },
     "labels": {
         "help_center": "დახმარების ცენტრი"
@@ -1605,5 +2009,22 @@
         "s3Connectors": {
             "title": "S3 კონექტორები"
         }
+    },
+    "create_new_cos": "ახალი COS-ის შექმნა",
+    "create_new_domain": "ახალი დომენის შექმნა",
+    "message": {
+        "snackbar": {
+            "okay_got_it": "კარგი, გავიგე",
+            "settings_saved": "ჩასწორებები შენახულია"
+        }
+    },
+    "privacy": {
+        "allow_data_analytics": "მონაცემთა ანალიტიკის დაშვება"
+    },
+    "primary_account": {
+        "title": "ძირითადი ანგარიშის მორგება"
+    },
+    "share": {
+        "is_contained_in": "რა შეიცავს"
     }
 }
