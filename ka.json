@@ -955,7 +955,22 @@
         "you_are_deleting": "თქვენ შლით {{cosname}}-ს",
         "you_are_deleting_ml": "თქვენ წაშლით {{name}}-ს",
         "your_auth_method_is": "თქვენი ავთენტიკაციის მეთოდია",
-        "one_time_password_management": "ერთჯერადი პაროლის მართვა"
+        "one_time_password_management": "ერთჯერადი პაროლის მართვა",
+        "add_new_email": "ახალი ელფოსტის მისამართის დამატება",
+        "email_server": "ელფოსტის სერვერი (მაგ: \"mail.magaliti.ge\")",
+        "feedback_request_data": "საჭირო მონაცემები უკუკავშირისთვის:",
+        "head_to_forum": "ფორუმზე გადასვლა",
+        "passwords_recovery_settings": "პაროლის აღდგენის ანგარიშის მორგება",
+        "settings_sent_messages": "პარამეტრები გაგზავნილი შეტყობინებებისთვის",
+        "use_our_forum": "გამოიყენეთ ჩვენი ფორუმი",
+        "mails_quota_used_mb": "გამოყენებული ფოსტის კვოტა (მბ)",
+        "mails_quota_used_gb": "გამოყენებული ფოსტის კვოტა (გბ)",
+        "files_quota_used_mb": "Files-ის გამოყენებული კვოტა (მბ)",
+        "files_quota_used_gb": "Files-ის გამოყენებული კვოტა (გბ)",
+        "backup_enabled": "მარქაფის ჩართვა/გამორთვა",
+        "account_quota_usage": {
+            "limited": "{{used}} / {{limit}} ({{percentage}}%)"
+        }
     },
     "newOtp": {
         "printPinCodes": " "
@@ -1623,7 +1638,8 @@
         "label_russian": "რუსული - {{value}}",
         "label_spanish": "ესპანური - {{value}}",
         "label_thai": "ტაილანდური - {{value}}",
-        "label_turkish": "თურქული - {{value}}"
+        "label_turkish": "თურქული - {{value}}",
+        "label_chinese": "ჩინური (ჩინეთი) - {{value}}"
     },
     "log": "ჟურნალი",
     "mta": {
@@ -1728,7 +1744,21 @@
         "verify_dkim_validity": "DKIM-ის სისწორის გადამოწმება",
         "advanced": {
             "mail_messages_size": "ელფოსტის შეტყობინების ზომა"
-        }
+        },
+        "add_commonly_blocked_extensions": "ხშირად ბლოკირებული გაფართოებების დამატება",
+        "also_check_outbound_messages": "ასევე შემოწმდეს გამავალი შეტყობინებებიც",
+        "block_also_common_extensions": "ასევე დაიბლოკოს ზოგადი გაფართოებებიც",
+        "dns_blacklist_threshold_value": "DNS-ის შავი სიის ზღვარი (მნიშვნელობა)",
+        "inbound_flow_and_security": "შემომავალი ნაკადი & უსაფრთხოება",
+        "log_level_for_amavis": "ჟურნალის დონე Amavis-ისთვის",
+        "mail_queue_flush_successfully": "ელფოსტის რიგის გასუფთავება წარმატებით დასრულდა",
+        "mail_transfer_agent_mta": "ფოტის გადაცემის აგენტი (MTA)",
+        "max_antivirus_threads": "ანტივირუსის მაქს. ნაკადები (მნიშვნელობა)",
+        "smtpd_sender_login_maps": "Smtpd გამგზავნის შესვლის რუკები",
+        "spam_to_junk_tolerance": "სპამში გადატანის ზღვარი",
+        "tolerance_for_spam_blocking": "სპამის დაბლოკვის ზღვარი",
+        "tolerance_for_spam_delivery": "სპამის მიღების ზღვარი",
+        "virus_block_encrypted_archive": "დაშიფრული არქივი ვირუსის დაბლოკვით"
     },
     "new": "ახალი",
     "new_bucket_connection": "კავშირი",
@@ -1785,7 +1815,11 @@
         "running_panel_heading": "გაშვებული ოპერაციები",
         "stop_opearation_btn": "ოპერაციის გაჩერება",
         "copy_operation_successfully": "გაფრთხილება წარმატებით დაკოპირდა",
-        "operationname_on_servername": "{{operationName}} {{serverName}}-ზე"
+        "operationname_on_servername": "{{operationName}} {{serverName}}-ზე",
+        "cancel_operation_model_title": "აუქმებთ ოპერაციას {{OperationName}}",
+        "cancel_operation_model_title_helperText": "აუქმებთ ოპერაციას {{operationName}}",
+        "stopping_operation_model_title": "აჩერებთ ოპერაციას {{OperationName}}",
+        "stopping_operation_model_title_helperText": "აჩერებთ ოპერაციას {{operationName}}"
     },
     "quarantine": {
         "deliver": "მიწოდება",
@@ -1803,7 +1837,8 @@
         "show_images": "გამოსახულებების ჩვენება",
         "show_source": "წყაროს ჩვენება",
         "yes_delete_message": "დიახ, წაშალე",
-        "yes_deliver": "დიახ, მიაწოდე"
+        "yes_deliver": "დიახ, მიაწოდე",
+        "create_quarantine": "კარანტინის ანგარიშის შექმნა"
     },
     "virtual_hosts": {
         "load": "ჩატვირთვა",
@@ -2138,7 +2173,8 @@
         "us_canada_central": "{{value}} აშშ/ცენტრალური კანადა",
         "us_canada_eastern": "{{value}} აშშ/აღმოსავლეთი კანადა",
         "us_canada_mountain": "{{value}} აშშ/მთიანი კანადა",
-        "us_canada_pacific": "{{value}} აშშ/კანადის წყნარი ოკეანის მხარე"
+        "us_canada_pacific": "{{value}} აშშ/კანადის წყნარი ოკეანის მხარე",
+        "africa_algiers": "{{value}} დასავლეთი ცენტრალური აფრიკა"
     },
     "to_carbonio": "Carbonio-ზე!",
     "welcome_to_carbonio_display_name": "მოგესალმებით, {{adminName}}!",
@@ -2207,7 +2243,9 @@
         }
     },
     "privacy": {
-        "allow_data_analytics": "მონაცემთა ანალიტიკის დაშვება"
+        "allow_data_analytics": "მონაცემთა ანალიტიკის დაშვება",
+        "allow_live_survey_feedbacks": "მცოცხალი კითხვარის უკუკავშირის დაშვება",
+        "send_full_error_data": "შეცდომის სრულ მონაცემების გაგზავნა"
     },
     "primary_account": {
         "title": "ძირითადი ანგარიშის მორგება"
