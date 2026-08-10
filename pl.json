@@ -3144,7 +3144,7 @@
             "deleteConnectorInUseTooltip": "Connector S3 jest używany i nie może zostać usunięty",
             "newSecretWillReplaceHint": "Nowy klucz zastąpi ten zapisany kiedy zweryfikujesz i zapiszesz zmiany.",
             "prefixImmutableHint": "Nie będziesz mógł zmienić tego prefiksu po jego stworzeniu",
-            "savedSecretTestConnectionHelp": "[[[POŁĄCZENIE TESTOWE / TESTUJ POŁĄCZENIE]]] używa zapisanego klucza - nie musisz go ponownie wprowadzać. Ze względów bezpieczeństwa nie jest on wyświetlany.",
+            "savedSecretTestConnectionHelp": "TESTUJ POŁĄCZENIE używa zapisanego klucza - nie musisz go ponownie wprowadzać. Ze względów bezpieczeństwa nie jest on wyświetlany.",
             "secretSavedOnServer": "Zapisane na tym serwerze"
         },
         "volumeData": {
