@@ -1631,7 +1631,44 @@
         "volume_details": "Dettagli del volume",
         "volume_options": "Opzioni del volume",
         "volume_role": "Ruolo del volume",
-        "warning": "Attenzione"
+        "warning": "Attenzione",
+        "ldap_addressbook": "Rubrica LDAP",
+        "ldap_address_book_global_description": "Si applica a livello globale a tutti i domini presenti in questa infrastruttura.",
+        "ldap_address_book_port": "In ricezione sulla porta {{port}}.",
+        "ldap_address_book_running_description": "Le cartelle della rubrica esposte sono accessibili dai client LDAP su ogni dominio.",
+        "ldap_address_book_stopped_description": "I client LDAP non possono eseguire query sulle rubriche accessibili quando il servizio è arrestato.",
+        "ldap_address_book_service_started": "Il servizio ldap-address-book è stato avviato",
+        "ldap_address_book_service_stopped": "Il servizio ldap-address-book si è arrestato",
+        "start_service": "Avvia il servizio",
+        "stop_service": "Interrompi servizio",
+        "stopped": "fermato",
+        "is": "è",
+        "domain_address_book_description": "Account le cui rubriche sono accessibili tramite il servizio Rubrica LDAP per {{domain}}.",
+        "expose_a_new_address_book": "Aggiungi una nuova rubrica",
+        "address_books_to_expose": "Rubriche da rendere pubbliche",
+        "exposed_address_books": "Rubriche accessibili",
+        "address_book_exposed": "Rubrica esposta",
+        "a_specific_address_book": "Una rubrica specifica",
+        "all_address_books": "Tutte le rubriche",
+        "add_address_book": "Aggiungi rubrica",
+        "add_address_books": "Aggiungi rubriche",
+        "select_an_address_book": "Seleziona una rubrica",
+        "select_an_address_book_ellipsis": "Seleziona una rubrica…",
+        "select_a_valid_account_first": "Seleziona prima un account valido",
+        "start_typing_an_account_email": "Inizia a digitare l'indirizzo e-mail dell'account",
+        "search_accounts": "Cerca account",
+        "account_is_required": "L'account è obbligatorio",
+        "enter_a_valid_email_address": "Inserisci un indirizzo e-mail valido",
+        "selected_address_books_ldap_helper": "Le rubriche selezionate diventano ricercabili tramite il servizio Rubrica LDAP.",
+        "no_accounts_or_address_books_match": "Non sono stati trovati account o rubriche corrispondenti a “{{query}}”.",
+        "no_address_book_exposed_for_this_account": "Per questo account non è disponibile alcuna rubrica.",
+        "all_address_books_already_exposed": "Tutte le rubriche di questo account sono già visibili.",
+        "every_address_book_already_exposed": "Tutte le rubriche di questo account sono già state rese pubbliche.",
+        "all_folders": "Tutte le cartelle",
+        "shared": "Condiviso",
+        "remove_exposed_folder": "Rimuovi la cartella visibile",
+        "remove_exposed_folder_confirm": "Rimuovere la cartella visibile \"{{folder}}\" da {{account}}?",
+        "folder_removed_successfully": "La cartella è stata rimossa con successo"
     },
     "message": {
         "snackbar": {
@@ -3167,7 +3204,8 @@
             "errorDetails": {
                 "title": "Qualcosa è andato storto"
             },
-            "volumePathMustExistHint": "Il percorso del volume deve già esistere"
+            "volumePathMustExistHint": "Il percorso del volume deve già esistere",
+            "amazonTieringDocumentation": "Documentazione sui livelli di Amazon"
         },
         "volume": {
             "applyChanges": "APPLICA MODIFICHE",
