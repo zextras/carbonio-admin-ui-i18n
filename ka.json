@@ -1842,7 +1842,8 @@
     },
     "virtual_hosts": {
         "load": "ჩატვირთვა",
-        "load_certificate": "სერტიფიკატის ჩატვირთვა"
+        "load_certificate": "სერტიფიკატის ჩატვირთვა",
+        "load_and_verify_certificate": "სერტიფიკატის ჩატვირთვა და გადამოწმება"
     },
     "volume": {
         "indexer_helperText": "დამაინდექსებელი",
@@ -1897,7 +1898,8 @@
         "create_storage_volume": "საცავის ტომის შექმნა",
         "new": {
             "create_mailstores_volume": "ფოსტის საცავის ტომის შექმნა"
-        }
+        },
+        "serverName_volumes_create_mailstores_volume": "{{serverName}} ელფოსტის საცავის ტომის შექმნა"
     },
     "welcome": "მოგესალმებით",
     "create": "შექმნა",
@@ -1910,7 +1912,9 @@
         "user_interface": "მომხმარებლის ინტერფეისი",
         "goto_privacy": "კონფიდენციალობაზე გადასვლა",
         "select_a_module": "მოდულის არჩევა",
-        "select_a_topic": "თემის არჩევა"
+        "select_a_topic": "თემის არჩევა",
+        "count_user_in_helper_button_text": "კი, მეც მინდა!",
+        "write_here": "დაწერეთ თქვენი გამოხმაურება აქ"
     },
     "search": {
         "app": "ძებნა",
@@ -1944,7 +1948,8 @@
             },
             "headings": {
                 "create_appointment": "კალენდრის შეხვედრა",
-                "time_period": "დროის პერიოდი"
+                "time_period": "დროის პერიოდი",
+                "settings_label": "ოფისში არყოფნის მორგება"
             },
             "labels": {
                 "all_day": "მთელი დღე:",
@@ -1954,9 +1959,14 @@
                 "end_time": "დასრულების დრო:",
                 "external_senders": "გარე გამომგზავნები",
                 "start_date": "დაწყების თარიღი",
-                "start_time": "დაწყების დრო:"
+                "start_time": "დაწყების დრო:",
+                "out_of_office_status": "ოფისში არყოფნის სტატუსი:"
             },
-            "send_auto_replies": "ავტოპასუხების გაგზავნა"
+            "send_auto_replies": "ავტოპასუხების გაგზავნა",
+            "do_not_send_auto_replies": "ავტოპასუხების არგაგზავნა",
+            "external_senders": {
+                "send_standard_auto_reply": "სტანდარტული ავტოპასუხის სეტყობინების გაგზავნა"
+            }
         },
         "timezone_and_language": "ენა"
     },
@@ -1971,7 +1981,12 @@
     "storage": {
         "dataVolumes": {
             "details": "დეტალები",
-            "amazonTieringDocumentation": "Amazon Tiering-ის დოკუმენტაცია"
+            "amazonTieringDocumentation": "Amazon Tiering-ის დოკუმენტაცია",
+            "amazonStorageDocumentation": "Amazon Storage Class-ის დოკუმენტაცია",
+            "availableS3ConnectorsList": "ხელმისაწვდომი S3 კონექტორების სია",
+            "errorDetails": {
+                "title": "რაღაც არასწორად მოხდა, დეტალები"
+            }
         },
         "dataVolume": {
             "secondaryVolume": "დამხმარე ტომი",
@@ -2174,7 +2189,38 @@
         "us_canada_eastern": "{{value}} აშშ/აღმოსავლეთი კანადა",
         "us_canada_mountain": "{{value}} აშშ/მთიანი კანადა",
         "us_canada_pacific": "{{value}} აშშ/კანადის წყნარი ოკეანის მხარე",
-        "africa_algiers": "{{value}} დასავლეთი ცენტრალური აფრიკა"
+        "africa_algiers": "{{value}} დასავლეთი ცენტრალური აფრიკა",
+        "america_halifax": "{{value}} ატლანტიკური დრო (კანადა)",
+        "america_santiago": "{{value}} წყნარი ოკეანე სამხრეთი ამერიკა",
+        "asia_bangkok": "{{value}} ბანკოკი, ჰანოი, ჯაკარტა",
+        "asia_colombo": "{{value}} შრი-ჯაიავარდენეპურა-კოტე",
+        "asia_irkutsk": "{{value}} ირკუტსკი (RTZ 7)",
+        "asia_krasnoyarsk": "{{value}} კრასნოიარსკი (RTZ 6)",
+        "asia_muscat": "{{value}} აბუ დაბი, მუსკატი",
+        "asia_novosibirsk": "{{value}} ნოვოსიბირსკი (RTZ 5)",
+        "asia_srednekolymsk": "{{value}} ჩოკურდახი (RTZ 10)",
+        "asia_yakutsk": "{{value}} იაკუტსკი (RTZ 8)",
+        "asia_yekaterinburg": "{{value}} ეკატერინბურგი (RTZ 4)",
+        "atlantic_cape_verde": "{{value}} კაბო-ვერდეს კუნძ.",
+        "australia_sydney": "{{value}} კანბერა, მელბურნი, სიდნეი",
+        "europe_kaliningrad": "{{value}} კალინიგრადი (RTZ 1)",
+        "europe_london": "{{value}} ბრიტანეთი, ირლანდია, პორტუგალია",
+        "pacific_bougainville": "{{value}} ბუგენვილის სტანდარტული დრო",
+        "pacific_guam": "{{value}} გუამი, პორტ მორესბი",
+        "utc": "{{value}} კოორდინირებული უნივერსალური დრო",
+        "abu_dhabi_muscat": "{{value}} აბუ დაბი, მუსკატი",
+        "atlantic_time_canada": "{{value}} ატლანტიკური დრო (კანადა)",
+        "bangkok_hanoi_jakarta": "{{value}} ბანკოკი, ჰანოი, ჯაკარტა",
+        "britain_ireland_portugal": "{{value}} ბრიტანეთი, ირლანდია, პორტუგალია",
+        "cape_verde_is": "{{value}} კაბო-ვერდეს კუნძ.",
+        "coordinated_universal_time": "{{value}} კოორდინირებული უნივერსალური დრო",
+        "ekaterinburg_rtz_4": "{{value}} ეკატერინბურგი (RTZ 4)",
+        "irkutsk_rtz_7": "{{value}} ირკუტსკი (RTZ 7)",
+        "kaliningrad_rtz_1": "{{value}} კალინიგრადი (RTZ 1)",
+        "krasnoyarsk_rtz_6": "{{value}} კრასნოიარსკი (RTZ 6)",
+        "pacific_south_america": "{{value}} წყნარი ოკეანე სამხრეთი ამერიკა",
+        "sri_jayawardenepura_kotte": "{{value}} შრი-ჯაიავარდენეპურა-კოტე",
+        "west_central_africa": "{{value}} დასავლეთი ცენტრალური აფრიკა"
     },
     "to_carbonio": "Carbonio-ზე!",
     "welcome_to_carbonio_display_name": "მოგესალმებით, {{adminName}}!",
@@ -2192,7 +2238,8 @@
                     "videocall": "ვიდეოზარები",
                     "general": "ზოგადი პარამეტრები",
                     "attachments": "გაზიარება & მიმაგრებული ფაილები",
-                    "messaging": "შეტყობინებები და სტატუსი"
+                    "messaging": "შეტყობინებები და სტატუსი",
+                    "chats": "პირადი და ჯგუფური ჩატები"
                 }
             },
             "content": {
@@ -2201,10 +2248,13 @@
                     "enableVirtualBackground": "ვირტუალური ფონის ჩართვა",
                     "readReceipt": "წაკითხვის სტატუსების ჩვენება",
                     "enableVideoCall": "ვიდეოზარების ჩართვა",
-                    "enableRecording": "ზარის ჩაწერის დაშვება"
+                    "enableRecording": "ზარის ჩაწერის დაშვება",
+                    "presence": "მომხმარებლების ხაზზე ყოფნის სტატუსის ჩვენება",
+                    "enableAttachments": "მომხმარებლებს შეუძლიათ მიმაგრებული ფაილების ატვირთვა"
                 },
                 "select": {
-                    "timeLimit": "დროის ლიმიტი წუთებში"
+                    "timeLimit": "დროის ლიმიტი წუთებში",
+                    "deletionLimit": "შეტყობინების წაშლის დროის ლიმიტი"
                 }
             }
         }
@@ -2215,7 +2265,8 @@
         "hide": "დაფის დამალვა",
         "reduce": "დაფის შემცირება",
         "open_app": "აპში გახსნა",
-        "show_tabs": "სხვა ჩანართების ჩვენება"
+        "show_tabs": "სხვა ჩანართების ჩვენება",
+        "close_tabs": "ყველა თქვენი ჩანართის დახურვა"
     },
     "labels": {
         "help_center": "დახმარების ცენტრი"
@@ -2227,12 +2278,16 @@
     },
     "new_tab": "ახალი ჩანართი",
     "user_quota": {
-        "title": "მომხმარებლის კვოტა"
+        "title": "მომხმარებლის კვოტა",
+        "limited": "გამოყენებულია {{used}} / {{limit}}",
+        "unlimited": "{{used}} შეუზღუდავი ადგილიდან"
     },
     "storages": {
         "s3Connectors": {
-            "title": "S3 კონექტორები"
-        }
+            "title": "S3 კონექტორები",
+            "secretSavedOnServer": "შენახულია ამ სერვერზე"
+        },
+        "connectNewS3": "ახალ S3-თან დაკავშირება"
     },
     "create_new_cos": "ახალი COS-ის შექმნა",
     "create_new_domain": "ახალი დომენის შექმნა",
@@ -2254,7 +2309,17 @@
         "is_contained_in": "რა შეიცავს"
     },
     "banner": {
-        "maintenance-expired-description": "რემონტის ვადა ამოიწურა."
+        "maintenance-expired-description": "რემონტის ვადა ამოიწურა.",
+        "maintenance-expiring-description": "რემონტის ვადაა {{maintenanceEndDate}}."
     },
-    "s3connector_list": "S3-ის კონექტორების სია"
+    "s3connector_list": "S3-ის კონექტორების სია",
+    "welcome_to_carbonio_information": "{{adminName}}, მოგესალმებით Carbonio-ში!",
+    "passwords_recovery_settings": {
+        "title": "პაროლის აღდგენის ანგარიშის მორგება"
+    },
+    "'storage": {
+        "dataVolumes": {
+            "amazonStorageDocumentation'": "Amazon Storage Class-ის დოკუმენტაცია"
+        }
+    }
 }
