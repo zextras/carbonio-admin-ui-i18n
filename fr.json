@@ -159,7 +159,7 @@
         "page ": "Vous avez accepté la demande de partage",
         "page_": "Vous avez accepté la demande de partage",
         "privacy": "Vie privée",
-        "remove": "enlever",
+        "remove": "RETIRER",
         "save": "Sauvegarder",
         "signature_required": "Les informations relatives à la signature sont requises.",
         "snackbar": {
@@ -1470,7 +1470,56 @@
         "max_quota_per_account_in_this_domain": "Quota maximum par compte pour ce domaine (Go)",
         "gb": "Go",
         "set_as_current": "Définir comme actuel",
-        "bytes_size_threshold": "Seuil de taille en octets"
+        "bytes_size_threshold": "Seuil de taille en octets",
+        "bucket": "BUCKET",
+        "change": "CHANGER",
+        "definition": "DÉFINITION",
+        "index_volume_role": "Volume d'index",
+        "options": "OPTIONS",
+        "primary_volume_role": "Volume primaire",
+        "review_your_selections": "Vérifiez vos sélections",
+        "secondary_volume_role": "Volume secondaire",
+        "volume_details": "Détails du volume",
+        "volume_options": "Options du volume",
+        "volume_role": "Rôle du volume",
+        "warning": "Attention",
+        "ldap_addressbook": "Annuaire LDAP",
+        "ldap_address_book_global_description": "S'applique globalement, à tous les domaines de cette infrastructure.",
+        "ldap_address_book_port": "Écoute sur le port {{port}}.",
+        "ldap_address_book_running_description": "Les dossiers de carnet d'adresses exposés sont accessibles par les clients LDAP sur tous les domaines.",
+        "ldap_address_book_stopped_description": "Les clients LDAP ne peuvent pas interroger les carnets d'adresses exposés tant que le service est arrêté.",
+        "ldap_address_book_service_started": "Service annuaire LDAP démarré",
+        "ldap_address_book_service_stopped": "Service annuaire LDAP arrêté",
+        "start_service": "Démarrer le service",
+        "stop_service": "Arrêter le service",
+        "stopped": "arrêté",
+        "is": "est",
+        "domain_address_book_description": "Comptes dont les carnets d'adresses sont exposés via le service LDAP pour {{domain}}.",
+        "expose_a_new_address_book": "Exposer un nouveau carnet d'adresses",
+        "address_books_to_expose": "Carnets d'adresses à exposer",
+        "exposed_address_books": "Carnets d'adresses exposés",
+        "address_book_exposed": "Carnet d'adresses exposé",
+        "a_specific_address_book": "Un carnet d'adresses spécifique",
+        "all_address_books": "Tous les carnets d'adresses",
+        "add_address_book": "Ajouter un carnet d'adresse",
+        "add_address_books": "Ajouter des carnets d'adresses",
+        "select_an_address_book": "Sélectionnez un carnet d'adresse",
+        "select_an_address_book_ellipsis": "Sélectionnez un carnet d'adresse…",
+        "select_a_valid_account_first": "Sélectionnez d'abord un compte valide",
+        "start_typing_an_account_email": "Commencez à saisir l'adresse email d'un compte",
+        "search_accounts": "Rechercher des comptes",
+        "account_is_required": "Le compte est requis",
+        "enter_a_valid_email_address": "Saisissez une adresse email valide",
+        "selected_address_books_ldap_helper": "Les carnets d'adresses sélectionnés deviennent consultables via le service de l'annuaire LDAP.",
+        "no_accounts_or_address_books_match": "Aucun compte ou carnet d'adresses ne correspond à \"{{query}}\".",
+        "no_address_book_exposed_for_this_account": "Aucun carnet d'adresses n'est exposé pour ce compte.",
+        "all_address_books_already_exposed": "Tous les carnets d'adresses de ce compte sont déjà exposés.",
+        "every_address_book_already_exposed": "Chaque carnet d'adresses de ce compte est déjà exposé.",
+        "all_folders": "Tous les dossiers",
+        "shared": "Partagé",
+        "remove_exposed_folder": "Retirer le dossier exposé",
+        "remove_exposed_folder_confirm": "Retirer le dossier exposé \"{{folder}}\" de \"{{account}}\"?",
+        "folder_removed_successfully": "Dossier retiré avec succès"
     },
     "message": {
         "snackbar": {
@@ -3128,8 +3177,48 @@
     "storages": {
         "connectNewS3": "Connecter un nouveau S3",
         "s3Connectors": {
-            "title": "Connecteurs S3"
+            "title": "Connecteurs S3",
+            "deleteConnectorInUseTooltip": "Le connecteur S3 est utilisé et ne peut pas être supprimé",
+            "newSecretWillReplaceHint": "La nouvelle clé remplacera celle enregistrée lorsque vous vérifierez et sauvegarderez les modifications.",
+            "prefixImmutableHint": "Ce préfixe ne peut pas être modifié après la création",
+            "savedSecretTestConnectionHelp": "TESTER LA CONNEXION utilise la clé enregistrée - vous n'avez pas besoin de la ressaisir. Pour des raisons de sécurité, elle ne peut pas être affichée.",
+            "secretSavedOnServer": "Enregistré sur ce serveur"
+        },
+        "volumeData": {
+            "deleteVolumeInUseTooltip": "Le volume est utilisé et ne peut pas être supprimé",
+            "deleteCurrentVolumeTooltip": "Vous devez définir un autre volume comme volume actuel avant de le supprimer."
         }
     },
-    "s3connector_list": "Liste des connecteurs S3"
+    "s3connector_list": "Liste des connecteurs S3",
+    "storage": {
+        "dataVolume": {
+            "indexVolume": "Index du volume",
+            "primaryVolume": "Volume primaire",
+            "secondaryVolume": "Volume secondaire",
+            "s3ConnectorId": "ID du connecteur S3"
+        },
+        "dataVolumes": {
+            "amazonStorageDocumentation": "Documentation sur les classes de stockage Amazon",
+            "amazonTieringDocumentation": "Documentation sur le tiering Amazon",
+            "availableS3ConnectorsList": "Liste des connecteurs S3 disponibles",
+            "details": "Détails",
+            "errorDetails": {
+                "title": "Quelque chose s'est mal passé"
+            },
+            "volumePathMustExistHint": "Le chemin du volume doit déjà exister"
+        },
+        "volume": {
+            "applyChanges": "APPLIQUER LES MODIFICATIONS",
+            "changeImportantInformation": {
+                "confirm": "Je suis sûr de vouloir appliquer ces modifications",
+                "warningBody": "Modifier le préfixe du volume ou le connecteur S3 peut nécessiter le transfert des données existantes vers la cible sélectionnée. Voulez-vous continuer ?",
+                "warningLine2": "Vous êtes en train d'éditer ces informations :"
+            }
+        }
+    },
+    "'storage": {
+        "dataVolumes": {
+            "amazonStorageDocumentation'": "Documentation sur les classes de stockage Amazon"
+        }
+    }
 }
