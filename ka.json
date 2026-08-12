@@ -1036,7 +1036,7 @@
         "logoff_from_every_device": "გასვლა ყველა მოწყობილობიდან",
         "maximum_length_of_mail_signature": "ელფოსტის ხელმოწერის მაქს. სიგრძე",
         "maximum_of_requests_allowed": "დაშვებული მოთხოვნების მაქს. რაოდენობა",
-        "never_send_read_receipt": "წაკითხვის დადასტურების მოთხოვნის არასდროს გაგზავნა",
+        "never_send_read_receipt": "წაკითხვის დადასტურების არასდროს გაგზავნა",
         "new_volumeset_as_primary_button": "ახალი ტომი დაყენებულია ძირითადად",
         "no_virtual_host_msg": "აქ ვირტუალური ჰოსტები არაა.",
         "not_ready_to_be_active": "გასააქტიურებლად მზად არაა",
