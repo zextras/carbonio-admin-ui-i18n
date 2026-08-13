@@ -4,11 +4,14 @@
         "close": "დახურვა",
         "next": "შემდეგი",
         "confirm_connection": "კავშირის დადასტურება",
-        "create_with_there_data": "შექმნა ამ მონაცემებით"
+        "create_with_there_data": "შექმნა ამ მონაცემებით",
+        "data_already_sent_to_the_user": "მონაცემები უკვე გაგზავნილია მომხმარებლისთვის"
     },
     "error": {
         "alreadyInUse": " ",
-        "something_went_wrong": "რაღაც არასწორად წავიდა"
+        "something_went_wrong": "რაღაც არასწორად წავიდა",
+        "one_or_more_ip_invalid": "ერთი, ან მეტი IP არასწორია",
+        "contact_support": "დაუკავშირდით მხარდაჭერის გუნდს, ან სცადეთ გვერდის თავიდან ჩატვირთვა"
     },
     "label": {
         "create_another_account, CREATE ANOTHER ACCOUNT": " ",
@@ -1068,7 +1071,84 @@
         "feedback_helper_text": "მიიღებთ მონაწილეობას?",
         "folder": "საქაღალდე: ახალი გარე ანგარიში 3",
         "thank_you_for_feedback": "მადლობა გამოხმაურებისთვის!",
-        "otp_restored_successfully": "OTP წარმატებით აღდგა"
+        "otp_restored_successfully": "OTP წარმატებით აღდგა",
+        "expose_a_new_address_book": "ახალი მისამართების წიგნის გამოჩენა",
+        "select_a_valid_account_first": "ჯერ აირჩიეთ სწორი ანგარიში",
+        "start_typing_an_account_email": "დაიწყეთ ანგარიშის ელფოსტის აკრეფა",
+        "enter_a_valid_email_address": "შეიყვანეთ სწორი ელფოსტის მისამართი",
+        "This account has Administration rights for": "ამ ანგარიშს აქვს ადმინისტრირების უფლებები",
+        "account_created_successfully": "ანგარიში წარმატებით შეიქმნა",
+        "account_disable_correctly": "ანგარიში ამჟამად გათიშულია.",
+        "account_remove_correctly": "ანგარიში სწორად წაიშალა.",
+        "active_sync_active_paused": "ActiveSync აქტიურია / გათიშულია",
+        "allow_sending_cancellation_email_to_organizer": "ორგანიზატორისთვის გაუქმების ელფოსტის გაგზავნის დაშვება",
+        "allow_sending_email_from_any_address": "ნებისმიერი მისამართიდან ელფოსტის გაგზავნის დაშვება",
+        "app_clicked": "თქვენ დაეთანხმეთ გაზიარების მოთხოვნას",
+        "apply_hsm_policy_after_the_restore": "HSM პოლიტიკების გადატარება აღდგენის შემდეგ",
+        "automatically_add_invites_with_PUBLISH_method": "მოწვევების ავტომატური დამატება PUBLISH მეთოდით",
+        "change_save_success_msg": "ცვლილების შენახვა წარმატებით დასრულდა",
+        "delete_bucket_fail": "{{name}} არ წაშლილა",
+        "delete_cos_succeess": "{{cosname}} წარმატებით წაიშალა",
+        "enable_the_mobile_dos_protection_service": "მობილური DDOS-ისგან დაცვის სერვისის ჩართვა",
+        "filter_by_device_type_account": "გაფილტვრა მოწყობილობის ტიპით, ანგარიშით, სტატუსით",
+        "hey_there_are_unsaved_changes_here": "აქ არსებობს ცვლილებები, რომლებიც შენახული არაა",
+        "i_m_looking_for_the_session": "მე ვეძებ სესიას …",
+        "i_want_to_send_invites_to_resource": "კალენდრის მოსაწვევების გადაგზავნა ამ მისამართებზე",
+        "i_want_to_set_signature": "მე მინდა დავაყენო ხელმოწერა",
+        "move_item_to_a_local_mountpoint": "ელემენტების გადატანა ლოკალურ მიმაგრების წერტილზე",
+        "move_item_to_an_external_bucket": "ელემენტების გადატანა გარე კალათაში",
+        "only_allow_outbound_disclaimers": "ლიცენზიის მიმაგრება განავალ ელფოსტებზე",
+        "page ": "თქვენ დაეთანხმეთ გაზიარების მოთხოვნას",
+        "page_": "თქვენ დაეთანხმეთ გაზიარების მოთხოვნას",
+        "please_select_the_measure_unit": "აირჩიეთ საზომი ერთეული",
+        "quota": {
+            "source": {
+                "domain": "დომენის პარამეტრებიდან მემკვიდრეობით მიღებული კვოტა",
+                "global": "გლობალური კონფიგურაციიდან მემკვიდრეობით მიღებული კვოტა"
+            }
+        },
+        "resource_deleted_successfully": "{{resource_name}} წარმატებით წაიშალა",
+        "resource_disable_successfully": "{{resource_name}} წარმატებით გაითიშა.",
+        "resource_remove_correctly": "{{resource_name}} წარმატებით წაიშალა.",
+        "save_it_only_in_folder": "მისი შენახვა, მხოლოდ, {{email}} საქაღალდეში",
+        "save_it_only_in_owner_folder": "მისი შენახვა, მხოლოდ, {{email}} საქაღალდეში",
+        "snackbar": {
+            "share": {
+                "accepted": "თქვენ დაეთანხმეთ გაზიარების მოთხოვნას"
+            }
+        },
+        "something_wrong_error_msg": "რაღაც არასწორად წავიდა. კიდევ სცადეთ.",
+        "something_wrong_wrror_msg": "რაღაც არასწორად წავიდა. კიდევ სცადეთ.",
+        "storage_hsm_not_licensed": "ოპერაციის დასრულება შეუძლებელია. storages_hsm ლიცენზირებული არაა.",
+        "the_has_been_created_success": "{{name}} წარმატებით შეიქმნა",
+        "this_is_hidden_from_gal": "ეს სია დამალულია GAL-დან",
+        "time_window_for_allowed_requests": "დროის ფანჯარა დაშვებული მოთხოვნებისთვის (მწმ)",
+        "use_the_gal_when_autocompleting_addresses": "GAL-ის გამოყენება მისამართების ავტოდასრულებისას",
+        "volume_created_msg": "ტომი წარმატებით შეიქმნა",
+        "volume_detail_success": "ყველა ცვლილება წარმატებით იქნა შენახული",
+        "want_to_use_this_certifiacte": "მე მინდა ამ სერტიფიკატის გამოყენება",
+        "who_needs_receive_this_email": "ვის სჭირდება ამ ელფოსტის მიღება?",
+        "you_have_generated_the_sp_certificate": "თქვენ დააგენერირეთ SP სერტიფიკატი",
+        "enable_following_permission_to_send_feedback_to_zextras": "უკუკავშირის გასაგზავნად ჩართეთ შემდეგი წვდომები",
+        "no_certificate_to_remove": "წასაშლელი სერტიფიკატების გარეშე",
+        "no_certificate_to_download": "გადმოსაწერი სერტიფიკატის გარეშე",
+        "remove_exposed_folder_confirm": "წაიშალოს გამოჩენილი საქაღალდე \"{{folder}}\" ანგარიშიდან \"{{account}}\"?",
+        "I_want_to_see_this_server_details": "მე მინდა ამ სერვერის დეტალების ნახვა",
+        "accounts_that_are_owners": "ანგარიშები, რომლებიც დაგზავნის სიების მფლობელებია",
+        "admin_logout_redirect_url": "გასვლისას ადმინისტრატორის URL-ზე გადამისამართება",
+        "automatically_add_forwarded_invites_to_calendar": "გადამისამართებული მოწვევების ავტომატური დამატება კალენდარში",
+        "cancel_operation_sucess": "ოპერაცია {{name}} წარმატებით გაუქმდა",
+        "click_to_make_the_button_bar_sticky": "დააწკაპუნეთ ამ ღილაკის წებოვნად გადასაკეთებლად",
+        "connection_is_created_verify_connector_fail": "კონექტორი შეიქმნა, მაგრამ გადამოწმება ჩავარდა",
+        "create_galsync_account_success_msg": "თქვენ შექმენით GALSync-ის ანგარიშის სახელი",
+        "days_hours_minutes_sec": "დღე / საათი / წუთი / წამი",
+        "delete_domain_with_all_resources_pre_msg": "დომენი {{domainName}} ცარიელი არაა და შეიცავს",
+        "domains_that_use_this_cos_as_default": "დომენები, რომლებიც ამ COS-ს ნაგულისხმევად იყენებენ",
+        "dont_save_a_copy_of_sent_messages": "გაგზავნილი შეტყობინებების ასლის არშენახვა",
+        "enable_past_due_reminders": "გამოტოვებული შეხვედრების შეხსენების დამატება",
+        "enable_toaster_notification_for_new_calendar_events": "მცურავი გაფრთხილებების ჩართვა ახალი კალენდრის მოვლენებისთვის",
+        "enduser_logout_redirect_url": "გასვლისას მომხმარებლის გადამისამართება URL-ზე",
+        "external_password_change_listener": "ბოლოწერტილი პაროლის შესაცვლელად"
     },
     "newOtp": {
         "printPinCodes": " "
@@ -1229,7 +1309,30 @@
         "user_can_specify_forwarding_address": "მომხმარებელს შეუძლია გადამისამართების მისამართის მითითება",
         "where_do_we_store_it": "სად ვინახავთ?",
         "where_to_store_sent_emails": "სად შევინახო გაგზავნილი ელფოსტები?",
-        "who_will_be_delegates": "ვინ იქნებიან დელეგატები?"
+        "who_will_be_delegates": "ვინ იქნებიან დელეგატები?",
+        "account_send_rights": "ამ ანგარიშს აქვს <bold>გაგზავნის</bold> უფლება",
+        "auto_decline_if_inviter_is_blacklisted": "ავტოუარყოფა, თუ გამომგზავნი შავ სიაშია",
+        "dont_keep_local_copy_of_messages": "შეტყობინებების ლოკალური ასლის არშენახვა",
+        "forwarding_addresses_hidden_from_the_user": "მომხმარებლისგან დამალული გადამისამართების მისამართები",
+        "forwarding_addresses_specified_by_the_user": "მომხმარებლის მიერ მითითებული გადამისამართების მისამართები",
+        "forwarding_calendar_invitations_to_these_addresses": "კალენდრის მოსაწვევების გადაგზავნა ამ მისამართებზე",
+        "i_want_to_select": "მე მინდა საქაღალდეების არჩევა",
+        "manage_no_rights_to_send_mails": "მართვა (ელფოსტის გაგზავნის უფლების გარეშე)",
+        "manage_the_aliases_for_this_account": "ფსევდონიმების მართვა ამ ანგარიშისთვის",
+        "notify_changes_by_delegated_access": "გაფრთხილება დელეგირებული ანგარიშების მიერ შეტანილი ცვლილებების შესახებ",
+        "offline_support_for_advanced_ajax_client": "ხაზგარეშეობის მხარდაჭერა გაფართოებული (Ajax) კლიენტისთვის",
+        "right_for_selected_user_deleted_successfully": "მონიშნული მომხმარებლის უფლება წარმატებით წაიშალა",
+        "user_can_specify_mail_forwarding_filter": "მომხმარებელს შეუძლია ელფოსტის გადამისამართების ფილტრის მითითება",
+        "what_rights_will_the_delegate_have": "რა უფლებები ექნება დელეგატს?",
+        "account_read_only_rights": "ამ ანგარიშს აქვს ჩართული <bold>მხოლოდ კითხვის </bold> უფლებები",
+        "add_forwarded_invites_to_calendar": "ავტომატურად დაემატოს გადაგზავნილი შეხვედრები კალენდარში",
+        "enable_past_due_reminders": "გამოტოვებული შეხვედრების შეხსენების დამატება",
+        "i_want_to_create_a_delegate_for": "მე მინდა შევქმნა დელეგატი მომხმარებლისთვის",
+        "select_delegate_folder": "აირჩიეთ, რომელი საქაღალდეების ნახვა შეუძლია დელეგატს",
+        "send_mails_only": "მხოლოდ ელფოსტების გაგზავნა (საქაღალდეებთან წვდომის გარეშე)",
+        "this_account_is_a_direct_member_of": "ეს ანგარიში პირდაპირი წევრია",
+        "this_account_is_a_in_direct_member_of": "ეს ანგარიში არაპირდაპირი წევრია",
+        "use_ical_delegation_model_for_shared_calendars": "iCal-ის დელეგაციის მოდელის გამოყენება გაზიარებული კალენდრებისთვის"
     },
     "backup": {
         "advanced": "დამატებით",
@@ -1301,7 +1404,15 @@
         "thread_number_for_accounts": "ნაკადების რაოდენობა ანგარიშებისთვის",
         "thread_number_for_items": "ნაკადების რაოდენობა ელემენტებისთვის",
         "backup_is_enabled_at_startup": "მარქაფი ჩართულია გაშვებისას",
-        "run_smartscan_at_startup": "Smartscan-ის გაშვება ჩატვირთვისას"
+        "run_smartscan_at_startup": "Smartscan-ის გაშვება ჩატვირთვისას",
+        "backup_is_enable_at_the_startup": "მარქაფი გაშვებისას ჩართულია",
+        "keep_delete_accounts_in_backup": "წაშლილი ანგარიშის შენარჩუნება მარქაფში",
+        "keep_deleted_account_in_the_backup": "წაშლილი ანგარიშების შენარჩუნება მარქაფში",
+        "keep_deleted_item_in_backup": "წაშლილი ელემენტების შენარჩუნება მარქაფში",
+        "keep_delted_items_backup": "წაშლილი ელემენტების შენარჩუნება მარქაფში",
+        "run_the_smart_scan_at_the_startup": "Smartscan-ის გაშვება ჩატვირთვისას",
+        "store_server_configurations_in_the_backup": "სერვერის კონფიგურაციის დამახსოვრება მარქაფში",
+        "initialising_backup_check_your_notifications_for_updates": "მიმდინარეობს მარქაფის ინიციალიზაცია... განახლებებისთვის შეამოწმეთ თქვენი გაფრთხილებები"
     },
     "buckets": {
         "alibaba_regions": {
@@ -1394,7 +1505,8 @@
         "servers_list": "სერვერების სია",
         "filter_buckets_list": "კალათების სიის გაფილტვრა",
         "invalid_compression_thresold": "შეკუმშვის ზღვარი აუცილებელია",
-        "invalid_volume_path": "ტომის ბილიკი აუცილებელია"
+        "invalid_volume_path": "ტომის ბილიკი აუცილებელია",
+        "invalid_volume_name": "შეავსეთ ტომის სახელის ველი."
     },
     "connection": {
         "notes": "შენიშვნები",
@@ -1415,7 +1527,8 @@
             "modal": {
                 "cancel": "არა",
                 "deactivate": "დიახ, დეაქტივაცია",
-                "label": "ტოკენის დეაქტივაცია"
+                "label": "ტოკენის დეაქტივაცია",
+                "confirm": "მართლა გნებავთ, გააგრძელოთ?"
             },
             "modules": "მოდულები",
             "provider": "მომწოდებელი",
@@ -1511,7 +1624,9 @@
             "enforceOnUntrustedNetworks": "განხორციელება არასანდო ქსელებზე",
             "twoFactorAuthSetupEnforcement": "2FA ავთენტიკატორის მორგების განხორციელება",
             "allowUsersToConfigure2FA": "მომხმარებლებისთვის 2FA-ის მორგების ნების დართვა",
-            "gracePeriodExpirationDate": "შეღავათიანი პერიოდის ვადის გასვლის თარიღის დაყენება"
+            "gracePeriodExpirationDate": "შეღავათიანი პერიოდის ვადის გასვლის თარიღის დაყენება",
+            "allowSetupDeferralDuringGracePeriod": "საშეღავათო პერიოდში კონფიგურაციის გადავადების ნებართვა",
+            "allowSetupFromUntrustedNetworks": "2FA-ის მორგების დაშვება არასანდო ქსელებიდან"
         },
         "activesync_remote_access": "ActiveSync დაშორებული წვდომა",
         "audible_reminder_notification": "ხმოვანი შეხსენების შეტყობინება",
@@ -1576,7 +1691,36 @@
         "search_class_of_service": "აირჩიეთ სერვისის კლასი",
         "time_to_lockout_account": "ანგარიშის დაბლოკვის დრო",
         "use_quickadd_dialog_in_creation": "QuickAdd დიალოგის გამოყენება დამატებისას",
-        "user_can_specify_forwarding_address": "მომხმარებელს შეუძლია გადამისამართების მისამართის მითითება"
+        "user_can_specify_forwarding_address": "მომხმარებელს შეუძლია გადამისამართების მისამართის მითითება",
+        "auto_decline_if_inviter_is_blacklisted": "ავტოუარყოფა, თუ გამომგზავნი შავ სიაშია",
+        "display_external_images_in_HTML_mail": "გარე გამოსახულებების ჩვენება HTML ფოსტაში",
+        "enable_toaster_notification_for_new_mail": "მცურავი გაფრთხილების ჩართვა ახალი ელფოსტისთვის",
+        "i_want_to_see_this_cos": "მე მინდა, ვნახო ეს COS",
+        "limit_user_specified_forwarding_addresses": "მაქს. სიმბოლოები გადამისამართების მისამართისთვის",
+        "max_contacts_allowed_in_the_folder": "საქაღალდეში დაშვებული მაქსიმალური კონტაქტების რაოდენობა",
+        "minimum_number_of_unique_password_history": "უნიკალური პაროლების ისტორიის მინიმალური რაოდენობა",
+        "minimum_numeric_characters_or_punctuation_symbols": "მინ. ციფრები, ან პუნქტუაციის ნიშნები",
+        "notify_changes_by_delegated_access": "გაფრთხილება დელეგირებული ანგარიშების მიერ შეტანილი ცვლილებების შესახებ",
+        "number_of_consecutive_failed_login_allowed": "დაშვებული ზედიზედ წარუმატებელი შესვლების რაოდენობა",
+        "offline_support_for_advanced_client": "ხაზგარეშეობის მხარდაჭერა გაფართოებული (Ajax) კლიენტისთვის",
+        "user_can_specify_mail_forwarding_filter": "მომხმარებელს შეუძლია ელფოსტის გადამისამართების ფილტრის მითითება",
+        "view_mail_as_html": "ელფოსტის ნახვა HTML-ში (როცა შესაძლებელია)",
+        "add_forwarded_invites_to_calendar": "ავტომატურად დაემატოს გადაგზავნილი შეხვედრები კალენდარში",
+        "days_hours_minutes_sec": "დღე / საათი / წუთი / წამი",
+        "disable_attachment_viewing_from_web_mail_ui": "მიმაგრებული ფაილების ვებინტერფეისიდან ნახვის გამორთვა",
+        "enable_past_due_reminders": "გამოტოვებული შეხვედრების შეხსენების დამატება",
+        "legacy_exchange_dn_attribute": "legacyExchangeDN ატრიბუტში გამოყენებული O და OU",
+        "maximum_number_of_contacts_allowed_in_folder": "საქაღალდეში დაშვებული კონტაქტების მაქსიმალური რაოდენობა",
+        "minimum_duration_of_time_between_quota_warnings": "მინ. დრო კვოტის გაფრთხილებებს შორის",
+        "number_of_items_to_display_per_page": "გვერდზე საჩვენებელი ელემენტების რაოდენობა",
+        "percentage_threshold_for_quota_warning": "პროცენტული ზღვარი კვოტის გაფრთხილების შეტყობინებებისთვის (%)",
+        "shortest_allowed_duration_for_any_polling_interval": "ნებისმიერი პოლინგის ინტერვალის მინიმალური დაშვებული დრო",
+        "use_ical_delegation_model_for_shared_calendars": "iCal-ის დელეგაციის მოდელის გამოყენება გაზიარებული კალენდრებისთვის",
+        "user_specific_fowarding_addresses": "მომხმარებლის მიერ მითითებული გადამისამართების მისამართების შეზღუდვა (სიმბოლოებში)",
+        "upload_max_size_per_file": "თითოეული მიმაგრებული ფაილისთვის დაშვებული მაქს. ზომა (ბაიტი)",
+        "creatCOS": {
+            "cosNameInfo": "COS-ის სახელი, მხოლოდ, მხედრულ ასოებს უნდა შეიცავდეს."
+        }
     },
     "dashboard": {
         "carbonio": "Carbonio",
@@ -1639,7 +1783,9 @@
             "twoFactorAuthSetupEnforcement": "2FA ავთენტიკატორის მორგების განხორციელება",
             "enforceOnUntrustedNetworks": "განხორციელება არასანდო ქსელებზე",
             "allowUsersToConfigure2FA": "მომხმარებლებისთვის 2FA-ის მორგების ნების დართვა",
-            "gracePeriodExpirationDate": "შეღავათიანი პერიოდის ვადის გასვლის თარიღის დაყენება "
+            "gracePeriodExpirationDate": "შეღავათიანი პერიოდის ვადის გასვლის თარიღის დაყენება ",
+            "allowSetupDeferralDuringGracePeriod": "საშეღავათო პერიოდში კონფიგურაციის გადავადების ნებართვა",
+            "allowSetupFromUntrustedNetworks": "2FA-ის მორგების დაშვება არასანდო ქსელებიდან"
         },
         "mailingList": {
             "canReceive": "შეუძლია, მიიღოს",
@@ -1669,7 +1815,8 @@
             "memberDeletedSuccessfully": "წევრი წარმატებით წაიშალა",
             "ownerAddedSuccessfully": "მფლობელი წარმატებით დაემატა",
             "ownerDeletedSuccessfully": "მფლობელი წარმატებით წაიშალა",
-            "addOwnersByEmail": "დაამატეთ მფლობელები მათი ელფოსტის მისამართით"
+            "addOwnersByEmail": "დაამატეთ მფლობელები მათი ელფოსტის მისამართით",
+            "blankEmailErrorMsg": "შეიყვანეთ, სულ ცოტა, ერთი ელფოსტის მისამართი"
         },
         "aggregated_space_quota": "აგრეგირებული ადგილის კვოტა",
         "authentication": {
@@ -1680,7 +1827,9 @@
         "jail_duration": "ხანგრძლივობა პაროლის შეყვანებს შორის (მწმ)",
         "editAccount": {
             "yesRestoreOtpAnyway": "კი, მაინც აღადგინე",
-            "otpSentSuccessfully": "OTP წარმატებით გაიგზავნა"
+            "otpSentSuccessfully": "OTP წარმატებით გაიგზავნა",
+            "invalidaEmailError": "ერთი, ან მეტი ელფოსტის მისამართი არასწორია.",
+            "restoreOtpQuestion": "მართლა გნებავთ, გააგრძელოთ?"
         },
         "certificate_valid": "სერტიფიკატი მოქმედია",
         "internal_gal_received": "შიდა GAL-დან მიღებული შუალედი",
@@ -1696,7 +1845,21 @@
         "mail_space_quota_threshold": "ფოსტის ადგილი კვოტის ზღვარი (%)",
         "receiver_of_quota_warning_email": "კვოტის გაფრთხილების მიმღები (ელფოსტა)",
         "single_account_domain_space_byte": "ერთი ანგარიშის დომენის ადგილი (ბაიტი)",
-        "source_name_internal_gal": "შიდა GAL-ის წყაროს სახელი"
+        "source_name_internal_gal": "შიდა GAL-ის წყაროს სახელი",
+        "domain_certificate_removed": "დომენის სერტიფიკატები წაიშალა",
+        "i_want_to_see_this_domain": "მე მინდა ამ დომენის ნახვა",
+        "mail_space_quota_threshold_warning": "ფოსტის ადგილის კვოტის ზღვრის (%) გაფრთხილება",
+        "most_result_return_gal_search": "GAL-ში ძებნის მიერ დაბრუნებული შედეგების უმრავლესობა",
+        "proceed_without_generating_an_otp_code": "გაგრძელება OTP კოდის გენერაციის გარეშე",
+        "the_account_has_been_successfully_created": "ანგარიში წარმატებით შეიქმნა",
+        "virtual_host_name_error": "შეიყვანეთ სწორი ვირტუალური ჰოსტის სახელი!",
+        "certificate_content_error_without_ca_chain": "დომენის სერტიფიკატი. პირადი გასაღები არასწორია",
+        "certificate_type_use_custom": "მე მინდა ჩემი სერტიფიკატის გამოყენება",
+        "i_want_to_generate_an_otp_code": "მე მინდა OTP კოდის გენერაცია",
+        "private_key_certificate_removed": "სერტიფიკატის პირადი გასაღები წაიშალა",
+        "globalSettings": {
+            "allowSearchUserFromAllDomains": "მომხმარებლის ინფორმაციის ყველა დომენში ძებნის დაშვება"
+        }
     },
     "hsm": {
         "all": "ყველა",
@@ -1768,7 +1931,10 @@
         "hsm_policy_correctly_deleted": "HSM პოლიტიკა სწორად წაიშალა",
         "policies_added_successfully": "პოლიტიკები წარმატებით დაემატა",
         "policies_are_running": "HSM-ის პოლიტიკები გაშვებულია",
-        "policy_is_correctly_running": "პოლიტიკა სწორადაა გაშვებული"
+        "policy_is_correctly_running": "პოლიტიკა სწორადაა გაშვებული",
+        "example_shedule": "მაგ: 0 2 * * 3",
+        "volume_already_selected_in_destination": "ტომი უკვე არჩეულია, როგორც სამიზნე",
+        "volume_already_selected_in_source": "ტომი უკვე არჩეულია, როგორც წყარო"
     },
     "locale": {
         "English": "ინგლისური",
@@ -1906,7 +2072,10 @@
         "tls_security_level": "TLS-ის უსაფრთხოების დონე",
         "verify_dkim_validity": "DKIM-ის სისწორის გადამოწმება",
         "advanced": {
-            "mail_messages_size": "ელფოსტის შეტყობინების ზომა"
+            "mail_messages_size": "ელფოსტის შეტყობინების ზომა",
+            "no_size_limit_for_mail_messages": "ზომის შეზღუდვის მოხსნა ელფოსტის შეტყობინებებისთვის",
+            "custom_max_size_mail_message": "მორგებული მაქს. ზომა ელფოსტის შეტყობინებებისთვის (მბ)",
+            "max_size_for_mail_messages": "მაქს. ზომა ელფოსტის შეტყობინებებისთვის (მბ)"
         },
         "add_commonly_blocked_extensions": "ხშირად ბლოკირებული გაფართოებების დამატება",
         "also_check_outbound_messages": "ასევე შემოწმდეს გამავალი შეტყობინებებიც",
@@ -1932,7 +2101,22 @@
         "notify_users_about_block_extensions": "მომხმარებლების გაფრთხილება დაბლოკილი გაფართოებების შესახებ",
         "reject_emails_from_unlisted_senders": "სიაში არმყოფი გამგზავნების ელფოსტის უარყოფა",
         "remove_virus_difinition_warning_title": "თქვენ შლით <bold>{{name}}</bold>-ის აღწერას",
-        "sas_log_level_for_amavis": "SAS-ის ჟურნალის დონე Amavis-ისთვის"
+        "sas_log_level_for_amavis": "SAS-ის ჟურნალის დონე Amavis-ისთვის",
+        "add_client_ip_to_header": "კლიენტის IP-ის დამატება სათაურში",
+        "client_must_greet_with_fully_qualified_hostname": "კლიენტს სრული დომენური სახელი უნდა ჰქონდეს",
+        "client_must_greet_with_resolving_hostname": "კლიენტს ამოხსნადი ჰოსტის სახელი უნდა ჰქონდეს",
+        "dns_blacklist_time_to_live": "DNS-ის შავი სიის სიცოცხლის დრო (მნიშვნელობა)",
+        "enable_simple_authentication_and_security_layer": "მარტივი ავთენტიკაციისა და უსაფრთხოების ფენის ჩართვა",
+        "lmtp_client_logging_of_tls_activity": "TLS აქტივობის ჟურნალში ჩაწერა LMTP კლიენტისთვის",
+        "notify_external_recipient_about_block_extensions": "გარე მიმღებების გაფრთხილება დაბლოკილი გაფართოებების შესახებ",
+        "reject_concurrent_milter_connection_above": "ერთდროული MILTER-ის კავშირების უარყოფა, თუ მეტია, ვიდრე (მნიშვნელობა)",
+        "reject_emails_addressed_to_unlisted_recipients": "სიაში არმყოფი მიმღებებისთვის განკუთვნილი ელფოსტების უარყოფა",
+        "reject_sender_login_mismatch_or_empty": "უარყოფა, თუ მომხმარებლის სახელი არ ემთხვევა, ან ცარიელია ",
+        "senders_address_must_fully_qualified": "გამომგზავნის მისამართი სრულად კვალიფიცირებული უნდა იყოს",
+        "smtp_client_logging_of_tls_activity": "TLS აქტივობის ჟურნალში ჩაწერა SMTP კლიენტისთვის",
+        "space_not_allowed_in_antivirus_mirror": "ანტივირუსის სარკეში ჰარეები დაუშვებელია",
+        "warn_admins_when_something_quarntined": "ადმინისტრატორების გაფრთხილება, თუ კარანტინში რამეა",
+        "warn_recipients_when_is_quarantined": "მიმღებების გაფრთხილება, თუ კარანტინში რამეა"
     },
     "new": "ახალი",
     "new_bucket_connection": "კავშირი",
@@ -2095,7 +2279,9 @@
         "count_user_in_helper_button_text": "კი, მეც მინდა!",
         "write_here": "დაწერეთ თქვენი გამოხმაურება აქ",
         "send_feedback": "გაგვიზიარეთ თქვენი გამოხმაურება",
-        "success": "მადლობა თქვენი გამოხმაურებისთვის"
+        "success": "მადლობა თქვენი გამოხმაურებისთვის",
+        "enable_privacy_setting": "უკუკავშირის გასაგზავნად ჩართეთ კონფიდენციალობის პარამეტრი",
+        "report_something": "გნებავთ ანგარიშის გაგზავნა რაიმეს შესახებ?"
     },
     "search": {
         "app": "ძებნა",
@@ -2143,7 +2329,8 @@
                 "start_date": "დაწყების თარიღი",
                 "start_time": "დაწყების დრო:",
                 "out_of_office_status": "ოფისში არყოფნის სტატუსი:",
-                "auto_reply_message_external": "ავტოპასუხის შეტყობინება გარე გამომგზავნებისთვის:"
+                "auto_reply_message_external": "ავტოპასუხის შეტყობინება გარე გამომგზავნებისთვის:",
+                "send_auto_reply_period": "ავტოპასუხების გაგზავნა შემდეგი პერიოდის განმავლობაში:"
             },
             "send_auto_replies": "ავტოპასუხების გაგზავნა",
             "do_not_send_auto_replies": "ავტოპასუხების არგაგზავნა",
@@ -2179,7 +2366,8 @@
             "availableS3ConnectorsList": "ხელმისაწვდომი S3 კონექტორების სია",
             "errorDetails": {
                 "title": "რაღაც არასწორად მოხდა, დეტალები"
-            }
+            },
+            "volumePathMustExistHint": "ტომის ბილიკი უკვე უნდა არსებობდეს"
         },
         "dataVolume": {
             "secondaryVolume": "დამხმარე ტომი",
@@ -2205,7 +2393,9 @@
         "force_change_password": "პაროლის ძალით შეცვლა",
         "enable_activeSync_remote_access": "ActiveSync-ის დაშორებული წვდომის ჩართვა",
         "auto_fill_user_is_disabled": "მომხმარებლის ავტოშევსება გათიშულია",
-        "auto_fill_username_is_disabled": "მომხმარებლის სახელის ავტოშევსება გათიშულია"
+        "auto_fill_username_is_disabled": "მომხმარებლის სახელის ავტოშევსება გათიშულია",
+        "change_password_for_next_login": "უნდა შეცვალოს პაროლი შემდეგი შესვლისას",
+        "user_will_change_password_on_next_login": "მომხმარებელი შეცვლის პაროლს შემდეგი შესვლისას"
     },
     "action": {
         "mark_as_non_spam": "სპამი არაა",
@@ -2433,7 +2623,14 @@
         "brussels_copenhagen_madrid_paris ": "{{value}} ბრიუსელი, კოპენჰაგენი, მადრიდი, პარიზი ",
         "chihuahua_la_paz_mazatlan": "{{value}} ჩიუაუა, ლა პასი, მაზატლანი",
         "guadalajara_mexico_city_monterrey ": "{{value}} გვადალახარა, მეხიკო სიტი, მონტერეი ",
-        "sarajevo_skopje_warsaw_zagreb": "{{value}} სარაევო, სკოპიე, ვარშავა, ზაგრები"
+        "sarajevo_skopje_warsaw_zagreb": "{{value}} სარაევო, სკოპიე, ვარშავა, ზაგრები",
+        "asia_hong_kong": "{{value}} პეკინი, ჩუნცინი, ჰონკონგი, ურუმჩი",
+        "asia_kolkata": "{{value}} ჩენაი, კოლკატა, მუმბაი, ახალი დელი",
+        "europe_belgrade": "{{value}} ბელგრადი, ბრატისლავა, ბუდაპეშტი, ლუბლიანა, პრაღა",
+        "pacific_guadalcanal": "{{value}} სოლომონის კუნძულები / ახალი კალედონია",
+        "beijing_chongqing_hong_kong_urumqi": "{{value}} პეკინი, ჩუნცინი, ჰონკონგი, ურუმჩი",
+        "belgrade_bratislava_budapest_ljubljana_prague": "{{value}} ბელგრადი, ბრატისლავა, ბუდაპეშტი, ლუბლიანა, პრაღა",
+        "chennai_kolkata_mumbai_new_delhi": "{{value}} ჩენაი, კოლკატა, მუმბაი, ახალი დელი"
     },
     "to_carbonio": "Carbonio-ზე!",
     "welcome_to_carbonio_display_name": "მოგესალმებით, {{adminName}}!",
@@ -2442,6 +2639,9 @@
             "searchDomain": {
                 "label": "დომენის ძებნა"
             }
+        },
+        "generalSettings": {
+            "AllowSearchUserFromSpecificDomains": "მომხმარებლების ძებნა მითითებულ დომენებში"
         }
     },
     "wsc": {
@@ -2453,6 +2653,9 @@
                     "attachments": "გაზიარება & მიმაგრებული ფაილები",
                     "messaging": "შეტყობინებები და სტატუსი",
                     "chats": "პირადი და ჯგუფური ჩატები"
+                },
+                "description": {
+                    "attachments": "ფაილების გაზიარებისა და მიმაგრებული ფაილების შეზღუდვის მართვა."
                 }
             },
             "content": {
@@ -2464,7 +2667,8 @@
                     "enableRecording": "ზარის ჩაწერის დაშვება",
                     "presence": "მომხმარებლების ხაზზე ყოფნის სტატუსის ჩვენება",
                     "enableAttachments": "მომხმარებლებს შეუძლიათ მიმაგრებული ფაილების ატვირთვა",
-                    "createGroup": "მომხმარებლებს შეუძლიათ ჯგუფური ჩატების შექმნა"
+                    "createGroup": "მომხმარებლებს შეუძლიათ ჯგუფური ჩატების შექმნა",
+                    "createPrivate": "მომხმარებლებს შეუძლიათ პირადი ჩატების დაწყება"
                 },
                 "select": {
                     "timeLimit": "დროის ლიმიტი წუთებში",
@@ -2478,7 +2682,11 @@
                 },
                 "input": {
                     "groupMembers": "ჯგუფის წევრების მაქსიმალური რაოდენობა",
-                    "attachmentSize": "მიმაგრებული ფაილების მაქს. ზომა მბ-ში"
+                    "attachmentSize": "მიმაგრებული ფაილების მაქს. ზომა მბ-ში",
+                    "groupPicture": "მაქს. ჯგუფის სურათის ზომა მბ-ში"
+                },
+                "description": {
+                    "createPrivate": "მომხმარებლებისთვის 1-1 საუბრების ქონის ნების დართვა."
                 }
             }
         }
@@ -2518,13 +2726,18 @@
     "message": {
         "snackbar": {
             "okay_got_it": "კარგი, გავიგე",
-            "settings_saved": "ჩასწორებები შენახულია"
+            "settings_saved": "ჩასწორებები შენახულია",
+            "att_saved": "მიმაგრებული ფაილი შენახულია მონიშნულ საქაღალდეში",
+            "share": {
+                "accepted": "თქვენ დაეთანხმეთ გაზიარების მოთხოვნას"
+            }
         }
     },
     "privacy": {
         "allow_data_analytics": "მონაცემთა ანალიტიკის დაშვება",
         "allow_live_survey_feedbacks": "მცოცხალი კითხვარის უკუკავშირის დაშვება",
-        "send_full_error_data": "შეცდომის სრულ მონაცემების გაგზავნა"
+        "send_full_error_data": "შეცდომის სრულ მონაცემების გაგზავნა",
+        "send_full_error_data_to_zextras": "შეცდომის სრული მონაცემების გაგზავნა Zextras-თან"
     },
     "primary_account": {
         "title": "ძირითადი ანგარიშის მორგება"
@@ -2549,5 +2762,17 @@
     "mat": {
         "add_here_any_blocked_extension": "დამატეთ აქ ნებისმიერი დაბლოკილი გაფართოება"
     },
-    "welcome_to_carbonio": "მოგესალმებით {{adminName}} Carbonio {{carbonioVersion}}‑ში!"
+    "welcome_to_carbonio": "მოგესალმებით {{adminName}} Carbonio {{carbonioVersion}}‑ში!",
+    "messages": {
+        "no_content": "ეს შეტყობინება ტექსტს არ შეიცავს",
+        "snackbar": {
+            "marked_as_spam": "თქვენ ეს ფოსტა სპამად მონიშნეთ"
+        }
+    },
+    "legalHold": {
+        "show_only_accounts_on_legal_hold": "მხოლოდ, იურიდიული პრობლემების მქონე ანგარიშების ჩვენება"
+    },
+    "snackbar": {
+        "error": "რაღაც არასწორად წავიდა. კიდევ სცადეთ"
+    }
 }
