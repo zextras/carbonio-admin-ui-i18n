@@ -1236,7 +1236,41 @@
         "virtual_host_enable_info_msg": "ახლის ჩასართავად დააჭირეთ ღილაკზე 'დამატება'.",
         "use_ssl": "ამ სერვერთან წვდომისას გამოიყენეთ დაშიფრული (SSL) კავშირი",
         "when_composing": "შედგენისას, პასუხისას ან გადაგზავნისას შეტყობინების საქაღალდეებში:",
-        "no_virtual_hosts": "საჭიროა, სულ ცოტა, ერთი ვირტუალური ჰოსტის დამატება"
+        "no_virtual_hosts": "საჭიროა, სულ ცოტა, ერთი ვირტუალური ჰოსტის დამატება",
+        "all_address_books_already_exposed": "ამ ანგარიშის ყველა მისამართების წიგნი უკვე გამოჩენილია.",
+        "every_address_book_already_exposed": "ამ ანგარიშის ყველა მისამართების წიგნი უკვე გამოჩენილია.",
+        "acl_list_already_in_list_error": "ACL-ების სია / მომხმარებელი უკვე სიაშია",
+        "auto_accept_auto_decline_on_conflict": "ავტომატური მიღება, თუ ხელმისაწვდომია. ავტომატური უარყოფა კონფლიქტის შემთხვევაში",
+        "certificate_alert_helperText": "სერტიფიკატი ხელმისაწვდომი გახდება, როცა პროქსის თავდან გაუშვებთ",
+        "click_to_make_the_button_bar_scroll_with_the_page": "დააწკაპუნეთ, რომ ღილაკის ზოლს გვერდთან ერთად გადახვევა აიძულოთ",
+        "copyrights_theme_note": "საავტორო უფლებების შესახებ ინფორმაცია შესვლის ველის ქვედა კოლონტიტულზე გამოჩნდება",
+        "create_delegated_admin_account_domain": "დელეგირებული ადმინის ანგარიშის შექმნა დომენის შექმნისას",
+        "distribution_list_already_in_list_error": "განაწილების სია / მომხმარებელი უკვე სიაშია",
+        "extra_window": {
+            "save_to_files_disabled": "Files-ის მიმაგრებული ფაილები, მხოლოდ, მთავარი ჩანართიდანაა ხელმისაწვდომი"
+        },
+        "logout_redirect_url": "გასვლისას მომხმარებელი ამ URL-ზე გადამისამართდება",
+        "mailing_list_already_in_list_error": "დაგზავნის სია / მომხმარებელი უკვე სიაშია",
+        "manage_external_volume_and_move_all": "გარე ტომის მართვა და ყველა ელემენტის ლოკალურ ბილიკზე გადატანა",
+        "must_change_passowrd": "მომხმარებელმა უნდა შეცვალოს პაროლი შემდეგ შესვლაზე",
+        "note_label": "დაწერეთ რამე, რაც ადვილად გაგახსენებთ ამ ელემენტს",
+        "operation_primarybar_tooltip": "დაათვალიერეთ და მართეთ <bold>ოპერაციები, გაუშვით, მართეთ</bold> და <bold>დაასრულეთ ისინი</bold>.",
+        "reset_whitelabel_settings_content_1": "მართლა გნებავთ თეთრი ჭდის პარამეტრების ჩამოყრა?",
+        "reset_whitelabel_settings_content_2": "თუ დააწკაპუნებთ ღილაკზე 'დიახ', მონაცემები სრულად დაიკარგება.",
+        "save_a_copy_of_sent_messages_only_in_delegateds_send_folder": "გაგზავნილი შეტყობინებების ასლის შენახვა დელეგატის საქაღალდეში 'გაგზავნილები'",
+        "save_a_copy_of_sent_messages_to_delegates_sent_folder": "გაგზავნილი შეტყობინებების ასლის შენახვა დელეგატის საქაღალდეში 'გაგზავნილები'",
+        "save_a_copy_of_sent_messages_to_my_sent_folder": "გაგზავნილი შეტყობინებების ასლის შენახვა ჩემს 'გაგზავნილების' საქაღალდეში",
+        "search_for_user_add_button": "მოძებნეთ მომხმარებელი და დააწკაპუნეთ ღილაკზე 'დამატება'.",
+        "search_for_user_and_clic_to_add": "მოძებნეთ მომხმარებელი და დააწკაპუნეთ ღილაკზე 'დამატება'.",
+        "type_account_name_for_global_address_list": "აკრიფეთ ანგარიშის სახელი გლობალური მისამართების სიისთვის (GAL)",
+        "type_an_account_add_senders_list": "აკრიფეთ მისამართი დაშვებულ გამომგზავნად დამატებისთვის",
+        "use_iCal_delegation_model_for_shared_calendars_for_CalDAV_interface": "iCal-ის დელეგაციის მოდელის გამოყენება CalDAV-ის ინტერფეისის გაზიარებული კალენდრებისთვის",
+        "would_you_like_to_add_ml": "<bold>ვისი დამატება გნებავთ დაგზავნის სიაში?</bold>",
+        "you_have_no_sufficient_administrationr_rights_to_see_this_section": "ამ სექციის სანახავად საკმარისი ადმინისტრირების უფლებები არ გაქვთ",
+        "save_delegate_folder": "გაგზავნილი შეტყობინებების ასლის შენახვა დელეგატის საქაღალდეში 'გაგზავნილები'",
+        "save_to_my_sent_folder": "გაგზავნილი შეტყობინებების ასლის შენახვა ჩემს 'გაგზავნილების' საქაღალდეში",
+        "certificate_request_success": "მიმდინარეობს დამუშავება. შედეგები გაეგზავნება გლობალურ და დომენის მიმღებებს",
+        "certificate_available_after_proxy_restart": "სერტიფიკატი ხელმისაწვდომი გახდება, როცა პროქსის თავდან გაუშვებთ"
     },
     "newOtp": {
         "printPinCodes": " "
@@ -1834,7 +1868,8 @@
         "preferences": {
             "allowTheUserToAskForAReadReceipt": "მომხმარებლისთვის წაკითხვის დადასტურების მოთხოვნის უფლების მიცემა"
         },
-        "user_specified_forwarding_addresses_max_number_of_user_specific_forwarding_addresses": "მომხმარებლის მიერ მითითებული გადამისამართების მისამართები+მომხმარებლის საკუთარი გადამისამართების მისამართების რაოდენობა"
+        "user_specified_forwarding_addresses_max_number_of_user_specific_forwarding_addresses": "მომხმარებლის მიერ მითითებული გადამისამართების მისამართები+მომხმარებლის საკუთარი გადამისამართების მისამართების რაოდენობა",
+        "polling_interval": "გამოთხოვის ინტერვალი (დრო, რომლის შემდეგაც ახალი ელფოსტის შემოწმება მოხდება)"
     },
     "dashboard": {
         "carbonio": "Carbonio",
@@ -1981,7 +2016,12 @@
         "certificate_type_use_letsencrypt": "მე მინდა Let's Encrypt-ის სერტიფიკატის გამოყენება",
         "certificate_type_use_letsencrypt_long_chain": "მე მინდა Let's Encrypt-ის (longChain) სერტიფიკატის გამოყენება",
         "certificate_type_use_letsencrypt_short_chain": "მე მინდა Let's Encrypt-ის (shortChain) სერტიფიკატის გამოყენება",
-        "warn_when_reach_space_quota": "გამაფრთხილეთ, რამდენჯერაც ამ აგრეგირებულ ადგილის კვოტას მივაღწევ"
+        "warn_when_reach_space_quota": "გამაფრთხილეთ, რამდენჯერაც ამ აგრეგირებულ ადგილის კვოტას მივაღწევ",
+        "certificate_content_error": "დომენის სერტიფიკატი, CA ჯაჭვი, ან პირადი გასაღები არასწორია",
+        "certificate_invalid_error": "სერტიფიკატი არასწორია. სცადეთ სხვა",
+        "mailSpaceQuotaThresholdError": {
+            "description": "ელფოსტის ადგილის კვოტის ზღვარი უნდა იყოს შუალედიდან 0-100"
+        }
     },
     "hsm": {
         "all": "ყველა",
@@ -2247,7 +2287,16 @@
         "enable_logging_of_remote_smtp_client_port": "დაშორებული SMTP კლიენტის პორტის ჟურნალში ჩაწერის ჩართვა",
         "reject_emails_from_client_with_inresolved_helo_hostnames": "ელფოსტების უარყოფა არაამოხსნადი HELO/EHLO ჰოსტის სახელების მქონე კლიენტებიდან",
         "reject_emails_from_unknown_or_unresolvable_sender_domains": "ელფოსტების უარყოფა უცნობი, ან არაამოხსნადი გამომგზავნი დომენებიდან",
-        "select_a_mail_server_to_see_stats": "აირჩიეთ ფოსტის სერვერი მისი სტატისტიკის სანახავად"
+        "select_a_mail_server_to_see_stats": "აირჩიეთ ფოსტის სერვერი მისი სტატისტიკის სანახავად",
+        "additional_virus_definition_start_with_http_https": "დამატებითი ვირუსების აღწერა http-ით, ან https-ით უნდა იწყებოდეს",
+        "notify_administrators_of_blocked_file_extension_incoming_emails": "ადმინისტრატორებისთვის შეტყობინება შემომავალ წერილებში დაბლოკილი ფაილის გაფართობების შესახებ",
+        "notify_recipients_of_blocked_file_extension_incoming_emails": "მიმღებების გაფრთხილება დაბლოკილი ფაილის გაფართოებების შესახებ შემომავალ ელფოსტებში",
+        "reject_emails_from_client_hostnames": "უარჰყოფს ელფოსტებს კლიენტებისგან უცნობი, ან ამოუხსნადი ჰოსტის სახელებით",
+        "reject_emails_with_an_invalid_or_unresolvable_helo_hostname": "არასწორი, ან ამოუხსნელი HELO ჰოსტის სახელების მქონე ელფოსტების უარყოფა",
+        "enable_or_disable_authentication_for_email_transfer_agent": "ავთენტიკაციის ჩართვა, ან გამორთვა ფოსტის გადაცემის აგენტისთვის (MTA)",
+        "max_size__for_mail_messages": "ელფოსტის შეტყობინების მაქს. ზომა (მბ. 0 = \"შეზღუდვის გარეშე\")",
+        "reject_emails_from_client_with_unknown_unresolvable_reverse_hostname": "უარყოფს ელფოსტების კლიენტებიდან უცნობი, ან არამოხსნადი რევერსული ჰოსტის სახელებიდან",
+        "remove_virus_difinition_warning_line_2": "მართლა გნებავთ, წაშალოთ <bold>{{name}}</bold>-ის აღწერა?"
     },
     "new": "ახალი",
     "new_bucket_connection": "კავშირი",
@@ -2334,7 +2383,8 @@
         "delete_and_recreate_quarantine": "კარანტინის ანგარიშის წაშლა და თავიდან შექმნა",
         "destroy_account_recreate_button": "დიახ, წაიშალოს და თავიდან შეიქმნას",
         "is_content_email_safe": "ელფოსტის შემცველობა უსაფრთხოა?",
-        "delete_msg_warning": "მართლა გნებავთ შეტყობინების წაშლა?"
+        "delete_msg_warning": "მართლა გნებავთ შეტყობინების წაშლა?",
+        "to_make_changes_restart_the_MTA": "იმისათვის, რომ ცვლილება ძალაში შევიდეს, გაუშვით MTA თავიდან."
     },
     "virtual_hosts": {
         "load": "ჩატვირთვა",
@@ -2424,7 +2474,10 @@
         "clear": "საძიებო სტრიქონის გასუფთავება",
         "idle_input_label": "{{module}}-ში ძებნა",
         "already_clear": "საძიებო სტრიქონის ველი უკვე ცარიელია",
-        "type_to_start_search": "ძებნის დასაწყებად შეიყვანეთ რამდენიმე საკვანძო სიტყვა"
+        "type_to_start_search": "ძებნის დასაწყებად შეიყვანეთ რამდენიმე საკვანძო სიტყვა",
+        "active_input_label": "გამოჰყავით თქვენი საკვანძო სიტყვები მძიმით, ან TAB ღილაკით",
+        "type_or_choose_suggestion": "ძებნის დასაწყებად აკრიფეთ სასურველი სტრიქონი, ან აირჩიეთ საკვანძო სიტყვები",
+        "unable_to_parse_query": "ძებნის დასრულება შეუძლებელია. გაასუფთავეთ ის და კიდევ სცადეთ"
     },
     "settings": {
         "accounts": "ანგარიშები",
@@ -2514,7 +2567,8 @@
         "volume": {
             "applyChanges": "ცვლილებების გადატარება",
             "changeImportantInformation": {
-                "warningLine2": "თქვენ ასწორებთ ამ ინფორმაციას:"
+                "warningLine2": "თქვენ ასწორებთ ამ ინფორმაციას:",
+                "confirm": "დარწმუნებული ვარ, რომ მინდა, გადავატარო ეს ცვლილებები"
             }
         }
     },
@@ -2842,7 +2896,11 @@
                     "readReceipt": "გამომგზავნებისთვის ჩვენება, როცა მათ შეტყობინებებს წაიკითხავენ.",
                     "createGroup": "მომხმარებლებისთვის ერთზე მეტი მონაწილის შემცველი ჩატების შექმნის უფლების მიცემა.",
                     "groupPicture": "ჯგუფის პროფილის სურათების ფაილის ზომის შეზღუდვა.",
-                    "groupMembers": "ჯგუფში მომხმარებლების მაქს. რაოდენობის დაყენება."
+                    "groupMembers": "ჯგუფში მომხმარებლების მაქს. რაოდენობის დაყენება.",
+                    "deletionLimit": "დროის შეზღუდვის დაყენება გაგზავნილი შეტყობინების წაშლისთვის.",
+                    "enableVirtualBackground": "მომხმარებლებისთვის ვიდეოზარებში ვირტუალური ფონის ქონის დაშვება.",
+                    "attachmentSize": "მიუთითეთ მაქს. ზომა ჩატებში გაზიარებული ფაილებისთვის.",
+                    "editLimit": "განსაზღვრეთ, რამდენი ხნის განმავლობაში შეიძლება შეტყობინების ჩასწორება მისი გაგზავნის შემდეგ."
                 }
             },
             "license": {
@@ -2878,7 +2936,8 @@
         "s3Connectors": {
             "title": "S3 კონექტორები",
             "secretSavedOnServer": "შენახულია ამ სერვერზე",
-            "prefixImmutableHint": "ამ პრეფიქსს შექმნის შემდეგ ვერ შეცვლით"
+            "prefixImmutableHint": "ამ პრეფიქსს შექმნის შემდეგ ვერ შეცვლით",
+            "deleteConnectorInUseTooltip": "S3 კონექტორი გამოიყენება და მას ვერ წაშლით"
         },
         "connectNewS3": "ახალ S3-თან დაკავშირება",
         "volumeData": {
@@ -2954,5 +3013,8 @@
         }
     },
     "click_new_bucket_button_to_create_new_one": "ახლის შესაქმნელად დააწკაპუნეთ ღილაკზე 'ახალი კალათა'.",
-    "have_not_setup_bucket_type": "როგორც ჩანს, კალათის ტიპი მორგებული არ გაქვთ"
+    "have_not_setup_bucket_type": "როგორც ჩანს, კალათის ტიპი მორგებული არ გაქვთ",
+    "tooltip": {
+        "add_virtual_host": "დასამატებლად აკრიფეთ სწორი ვირტუალური ჰოსტის სახელი"
+    }
 }
