@@ -3186,7 +3186,7 @@
         },
         "volumeData": {
             "deleteVolumeInUseTooltip": "Le volume est utilisé et ne peut pas être supprimé",
-            "deleteCurrentVolumeTooltip": "Vous devez définir un autre volume comme volume actuel avant de le supprimer."
+            "deleteCurrentVolumeTooltip": "Vous devez définir un autre volume comme volume courant avant de le supprimer."
         }
     },
     "s3connector_list": "Liste des connecteurs S3",
@@ -3203,7 +3203,7 @@
             "availableS3ConnectorsList": "Liste des connecteurs S3 disponibles",
             "details": "Détails",
             "errorDetails": {
-                "title": "Quelque chose s'est mal passé"
+                "title": "Détails de l'erreur"
             },
             "volumePathMustExistHint": "Le chemin du volume doit déjà exister"
         },
