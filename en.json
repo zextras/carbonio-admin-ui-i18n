@@ -2272,7 +2272,8 @@
         "shared": "Shared",
         "remove_exposed_folder": "Remove exposed folder",
         "remove_exposed_folder_confirm": "Remove exposed folder \"{{folder}}\" from {{account}}?",
-        "folder_removed_successfully": "Folder removed successfully"
+        "folder_removed_successfully": "Folder removed successfully",
+        "help_documentation_url_note": "If the URL is not set, the documentation will redirect to the default one."
     },
     "locale": {
         "English": "English",
