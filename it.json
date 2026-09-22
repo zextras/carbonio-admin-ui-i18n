@@ -1668,7 +1668,8 @@
         "shared": "Condiviso",
         "remove_exposed_folder": "Rimuovi la cartella visibile",
         "remove_exposed_folder_confirm": "Rimuovere la cartella visibile \"{{folder}}\" da {{account}}?",
-        "folder_removed_successfully": "La cartella è stata rimossa con successo"
+        "folder_removed_successfully": "La cartella è stata rimossa con successo",
+        "help_documentation_url_note": "Se l'URL non è specificato, la documentazione reindirizzerà a quella predefinita."
     },
     "message": {
         "snackbar": {
