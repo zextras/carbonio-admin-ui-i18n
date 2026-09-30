@@ -1669,7 +1669,10 @@
         "remove_exposed_folder": "Rimuovi la cartella visibile",
         "remove_exposed_folder_confirm": "Rimuovere la cartella visibile \"{{folder}}\" da {{account}}?",
         "folder_removed_successfully": "La cartella è stata rimossa con successo",
-        "help_documentation_url_note": "Se l'URL non è specificato, la documentazione reindirizzerà a quella predefinita."
+        "help_documentation_url_note": "Se l'URL non è specificato, la documentazione reindirizzerà a quella predefinita.",
+        "loading": "Caricamento...",
+        "clear": "Cancella",
+        "toggle_suggestions": "Mostra/nascondi suggerimenti"
     },
     "message": {
         "snackbar": {
@@ -2013,7 +2016,9 @@
         "local_volume_reload_if_you_changed_this_value": "Volume locale (ricaricare se è stato modificato questo valore)",
         "config": {
             "scheduleBackupPurge": "Pianifica Pulizia Backup"
-        }
+        },
+        "keep_deleted_items_warning_message": "Se imposti 0, gli elementi verranno tenuti nel backup per sempre",
+        "keep_deleted_accounts_warning_message": "Se imposti 0, gli account verranno tenuti nel backup per sempre"
     },
     "cos": {
         "maximum_number_of_items_to_display_per_page": "Numero massimo di elementi da visualizzare per pagina",
