@@ -1894,7 +1894,11 @@
         "shared": "Udostępnione",
         "remove_exposed_folder": "Usuń udostępniony folder",
         "remove_exposed_folder_confirm": "Usunąć udostępniony folder \"{{folder}}\" z {{account}}?",
-        "folder_removed_successfully": "Folder został usunięty"
+        "folder_removed_successfully": "Folder został usunięty",
+        "help_documentation_url_note": "Jeśli URL nie zostanie ustawione, dokumentacja będzie przekierowywać na domyślny adres.",
+        "loading": "Ładowanie...",
+        "clear": "Wyczyść",
+        "toggle_suggestions": "Pokaż/ukryj sugestie"
     },
     "message": {
         "snackbar": {
@@ -1917,8 +1921,8 @@
         "backup_path": "Ścieżka kopii zapasowej",
         "backup_purge": "Wyczyszczenie kopii zapasowej",
         "compression_level": "Poziom kompresji",
-        "keep_delete_accounts_in_backup": "Zachowuj usunięte konta w kopii zapasowej",
-        "keep_delted_items_backup": "Zachowuj usunięte pozycje w kopii zapasowej",
+        "keep_delete_accounts_in_backup": "Zachowuj usunięte konta w kopii zapasowej (Dni)",
+        "keep_delted_items_backup": "Zachowuj usunięte elementy w kopii zapasowej (Dni)",
         "ldap_dump": "LDAP Dump",
         "local_metadata_threshold": "Próg lokalnych metadanych",
         "minimum_space_threshold": "Próg minimalnej przestrzeni",
@@ -1945,7 +1949,7 @@
         "force_backup_purge_now": "Wymuś wyczyszczenie kopii zapasowej teraz",
         "general": "Ogólne",
         "initialize_backup": "Inicjalizuj kopię zapasową",
-        "keep_deleted_item_in_backup": "Zachowuj usunięte pozycje w kopii zapasowej",
+        "keep_deleted_item_in_backup": "Zachowuj usunięte elementy w kopii zapasowej (Dni)",
         "max_waiting_time_ms": "Max. czas oczekiwania (ms)",
         "maximum_metadata_size_mb": "Max. rozmiar metadanych (MB)",
         "other_controls": "Inne ustawienia",
@@ -1965,7 +1969,7 @@
         "force_start_smartscan_now": "Wymuś rozpoczęcie SmartScan teraz",
         "include_index": "Uwzględniaj indeks",
         "include_server_configuration": "Uwzględniaj konfigurację serwera",
-        "keep_deleted_account_in_the_backup": "Zachowuj usunięte konto w kopii zapasowej",
+        "keep_deleted_account_in_the_backup": "Zachowuj usunięte konto w kopii zapasowej (Dni)",
         "local_volume": "Lokalny wolumin",
         "maximum_operation_per_account": "Max. ilość operacji na konto",
         "purge_old_configuration": "Wyczyść stare konfiguracje",
@@ -1998,7 +2002,9 @@
         "local_volume_reload_if_you_changed_this_value": "Lokalny wolumin (odśwież jeśli zmieniłeś tę wartość)",
         "config": {
             "scheduleBackupPurge": "Zaplanuj wyczyszczenie kopii zapasowej"
-        }
+        },
+        "keep_deleted_items_warning_message": "Jeśli ustawisz 0, elementy będą przechowywane w kopii zapasowej na zawsze",
+        "keep_deleted_accounts_warning_message": "Jeśli ustawisz 0, konta będą przechowywane w kopii zapasowej na zawsze"
     },
     "cos": {
         "calendar_options": "Ustawienia kalendarza",
