@@ -3253,6 +3253,12 @@
         "select_row": "Wybierz wiersz",
         "peek_details": "Szczegóły: {{title}}",
         "peek_close": "Zamknij szczegóły",
-        "peek_open_full_details": "Otwórz pełne szczegóły"
+        "peek_open_full_details": "Otwórz pełne szczegóły",
+        "peek_hint": "↑ / ↓ zmieniają element docelowy panelu · Esc zamyka",
+        "copied": "Skopiowano",
+        "copy": "Skopiuj {{value}}",
+        "edit": "Edytuj {{column}} dla {{row}}",
+        "row_actions": "Czynności dla {{rowLabel}}",
+        "stale_message": "Dane zostały zmienione na serwerze."
     }
 }
