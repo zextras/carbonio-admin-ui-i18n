@@ -830,7 +830,7 @@
         "cancle_button": "NIE",
         "can_send_receiver": "Może wysyłać i odbierać",
         "can_receive": "Może odbierać",
-        "bulk_actions": "Czynności masowe",
+        "bulk_actions": "Czynności zbiorcze",
         "buckets": "Buckety",
         "bucket_view_details_button": "ZOBACZ SZCZEGÓŁY",
         "bucket_type": "Typ bucketu",
@@ -1120,8 +1120,8 @@
         "background_description": "Wklej URL obrazu ekranu logowania. Użyj pliku JPG lub PNG, o rozdzielczości min. 1280x1080 pikseli oraz o proporcjach 16:9",
         "filter_by_device_type_account": "Filtruj wg typu urządzenia, konta, statusu",
         "owners_description_msg_1": "Właściciele mogą dodawać i usuwać członków, zmieniać wyświetlaną nazwę i opis, zmieniać widoczność listy (np. ukryć ją z GLA), zmieniać właścicieli, modyfikować ustawienia subskrypcji/cofnięcia subskrypcji.",
-        "rest_device_warning_msg_1": "Wyczyszczenie urządzenia przywróci je do ustawień fabrycznych. Czy na pewno chcesz kontynuować? ",
-        "wiping_device_warning_msg_1": "Wyczyszczenie urządzenia cofnie je do ustawień fabrycznych. Czy na pewno chcesz kontynuować?",
+        "rest_device_warning_msg_1": "Zresetowanie wyczyści wszystkie stany synchronizacji i spowoduje ponowną synchronizację urządzenia. Czy na pewno chcesz kontynuować?",
+        "wiping_device_warning_msg_1": "Wyczyszczenie tylko danych konta usuwa e-maile, kalendarze, kontakty i inne dane konta z urządzenia mobilnego. Czy na pewno chcesz kontynuować?",
         "delete_content_is_current": "Próbujesz usunąć {{name}}. Ten wolumin jest ustawiony jako aktualny. Ustaw inny wolumin jako aktualny zanim usuniesz ten.",
         "storage_centralized_helptext": "Zcentralizowane dane przydają się gdy dwa lub więcej serwerów potrzebuje dostępu do tych samych danych.\nTrzymając dane w jednym miejscu, łatwiej jest zarządzać sprzętem jak i danymi. ",
         "aware_of_doing_device_factory_settings": "Chcę zresetować do ustawień fabrycznych",
@@ -1898,7 +1898,9 @@
         "help_documentation_url_note": "Jeśli URL nie zostanie ustawione, dokumentacja będzie przekierowywać na domyślny adres.",
         "loading": "Ładowanie...",
         "clear": "Wyczyść",
-        "toggle_suggestions": "Pokaż/ukryj sugestie"
+        "toggle_suggestions": "Pokaż/ukryj sugestie",
+        "rows_per_page": "Wiersze na stronę",
+        "go_to_page": "Przejdź do strony"
     },
     "message": {
         "snackbar": {
@@ -3226,5 +3228,31 @@
         "dataVolumes": {
             "amazonStorageDocumentation'": "Dokumentacja klas przechowywania Amazon"
         }
+    },
+    "data_table": {
+        "selection_banner_label": "wybrane",
+        "clear_selection": "Wyczyść wszystko",
+        "bulk_confirm_title": "Jesteś pewny?",
+        "bulk_confirm": "Potwierdź",
+        "bulk_confirm_cancel": "Anuluj",
+        "selection_cleared": "Wybór został wyczyszczony",
+        "bulk_confirm_message": "{{action}} {{total}} elementów? Tej czynności nie da się cofnąć.",
+        "undone": "Cofnięto",
+        "bulk_action_failed": "Czynność się nie powiodła. Spróbuj ponownie.",
+        "bulk_actions_toolbar": "Czynności zbiorcze, wybrano {{total}}",
+        "job_cancelled": "Zadanie zostało anulowane - zmiany dotyczące przetworzonych elementów nie zostały cofnięte",
+        "job_cancel": "Anuluj",
+        "job_result": "✓ {{ok}} powiodło się · {{failed}} nie powiodło się",
+        "job_retry_failed": "Ponowna próba nie powiodła się",
+        "job_dismiss": "Odrzuć",
+        "page_selected": "Wybrano wszystkie {{rows}} wierszy na tej stronie.",
+        "select_all_matching": "Wybierz wszystkie {{total}} pasujących",
+        "undo": "Cofnij",
+        "undo_hint": "{{seconds}}s do cofnięcia (⌘Z)",
+        "select_all_page": "Wybierz wszystkie wiersze na tej stronie",
+        "select_row": "Wybierz wiersz",
+        "peek_details": "Szczegóły: {{title}}",
+        "peek_close": "Zamknij szczegóły",
+        "peek_open_full_details": "Otwórz pełne szczegóły"
     }
 }
