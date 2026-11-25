@@ -1679,7 +1679,10 @@
         "go_to_page": "Vai alla pagina",
         "edit_account": "Modifica account",
         "display_name_saved": "Nome visualizzato salvato: {{value}}",
-        "add_account": "Aggiungi account"
+        "add_account": "Aggiungi account",
+        "something_went_wrong": "Qualcosa è andato storto",
+        "could_not_load_accounts": "Impossibile caricare gli account. Riprova.",
+        "retry": "Riprova"
     },
     "message": {
         "snackbar": {
