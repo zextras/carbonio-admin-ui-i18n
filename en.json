@@ -2286,7 +2286,9 @@
         "edit_account": "Edit account",
         "display_name_saved": "Display name saved: {{value}}",
         "add_account": "Add account",
-        "something_went_wrong": "Something went wrong"
+        "something_went_wrong": "Something went wrong",
+        "could_not_load_accounts": "We could not load accounts. Try again.",
+        "retry": "Retry"
     },
     "locale": {
         "English": "English",
