@@ -763,7 +763,9 @@
             "allowSetupDeferralDuringGracePeriodInfo": "Users can skip the wizard for a limited time. The prompt will reappear at every login until setup is completed or the grace period expires.",
             "gracePeriodExpirationDate": "Set grace period expiration date ",
             "allowSetupFromUntrustedNetworks": "Allow 2FA setup from untrusted networks",
-            "allowSetupFromUntrustedNetworksInfo": "Lets users without an OTP complete the 2FA setup wizard at sign-in from untrusted networks. Disable this option to block access from untrusted networks until 2FA is already configured."
+            "allowSetupFromUntrustedNetworksInfo": "Lets users without an OTP complete the 2FA setup wizard at sign-in from untrusted networks. Disable this option to block access from untrusted networks until 2FA is already configured.",
+            "title": "Accounts",
+            "count": "{{count}} accounts"
         },
         "editAccount": {
             "invalidaEmailError": "One or more email addresses are invalid.",
@@ -2280,7 +2282,11 @@
         "clear": "Clear",
         "toggle_suggestions": "Toggle suggestions",
         "rows_per_page": "Rows per page",
-        "go_to_page": "Go to page"
+        "go_to_page": "Go to page",
+        "edit_account": "Edit account",
+        "display_name_saved": "Display name saved: {{value}}",
+        "add_account": "Add account",
+        "something_went_wrong": "Something went wrong"
     },
     "locale": {
         "English": "English",
