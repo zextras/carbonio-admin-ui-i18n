@@ -355,7 +355,7 @@
         "you_are_deleting": "Vous êtes sur le point de supprimer {{cosname}}",
         "yes_delete": "Oui, Supprimer",
         "verify_error": "{{name}}",
-        "verify_connector_fail": "LA VÉRIFICATION A ÉCHOUÉE",
+        "verify_connector_fail": "LA VÉRIFICATION A ÉCHOUÉ",
         "uuid": "uuid",
         "use_the_QuickAdd_dialog_when_creating_new_appointments": "Utiliser l'écran d'ajout rapide lors de la création d'un nouvel évènement",
         "this_list_is_empty": "La liste est vide.",
@@ -2028,8 +2028,8 @@
         "config": {
             "scheduleBackupPurge": "Planifier la purge des sauvegardes"
         },
-        "keep_deleted_items_warning_message": "Si vous définissez la valeur 0, les éléments seront conservés indéfiniment dans la sauvegarde",
-        "keep_deleted_accounts_warning_message": "Si vous définissez la valeur 0, les comptes seront conservés indéfiniment dans la sauvegarde"
+        "keep_deleted_items_warning_message": "Si vous définissez la valeur sur 0, les éléments seront conservés indéfiniment dans la sauvegarde",
+        "keep_deleted_accounts_warning_message": "Si vous définissez la valeur sur 0, les comptes seront conservés indéfiniment dans la sauvegarde"
     },
     "cos": {
         "calendar_options": "Options d’agenda",
@@ -3256,7 +3256,7 @@
         "page_selected": "Les {{rows}} lignes de cette page sont sélectionnées.",
         "select_all_matching": "Sélectionner les {{total}} résultats correspondants",
         "undo": "Annuler",
-        "undo_hint": "{{seconds}} pour annuler",
+        "undo_hint": "{{seconds}} pour annuler (⌘Z)",
         "select_all_page": "Sélectionner toutes les lignes de cette page",
         "select_row": "Sélectionner une ligne",
         "peek_details": "Détails : {{title}}",
